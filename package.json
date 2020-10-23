@@ -1,0 +1,39 @@
+{
+  "name": "@technobuddha/library",
+  "version": "1.0.0",
+  "description": "A small library of miscellaneous functions",
+  "main": "index.js",
+  "types": ".",
+  "scripts": {
+    "prebuild": "rm -rf *.js *.d.ts",
+    "build": "tsc",
+    "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags",
+    "lint": "eslint src --ext '.ts,.tsx,.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technobuddha/library.git"
+  },
+  "keywords": [
+    "miscellaneous"
+  ],
+  "author": "Phil Hill <phil@technobuddha.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technobuddha/library/issues"
+  },
+  "homepage": "https://github.com/technobuddha/library#readme",
+  "dependencies": {
+    "lodash": "^4.17.19"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.159",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-react": "^7.20.5",
+    "typescript": "^4.0.3"
+  }
+}
