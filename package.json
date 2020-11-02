@@ -6,6 +6,7 @@
   "types": ".",
   "scripts": {
     "prebuild": "rm -rf *.js *.d.ts",
+    "clean": "rm -rf *.js *.d.ts",
     "build": "tsc",
     "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
     "version": "npm run build",
@@ -26,14 +27,23 @@
   },
   "homepage": "https://github.com/technobuddha/library#readme",
   "dependencies": {
+    "@types/node": "^14.14.5",
     "lodash": "^4.17.19"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.14",
     "@types/lodash": "^4.14.159",
+    "@types/mocha": "^8.0.3",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
+    "chai": "^4.2.0",
+    "chai-almost": "^1.0.1",
+    "chai-match": "^1.1.1",
     "eslint": "^7.6.0",
     "eslint-plugin-react": "^7.20.5",
+    "mocha": "^8.2.0",
+    "ts-mocha": "^8.0.0",
+    "typedoc": "^0.19.2",
     "typescript": "^4.0.3"
   }
 }

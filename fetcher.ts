@@ -6,10 +6,20 @@ export class TimeoutError extends Error {
     }
 }
 
-export type FetcherOptions      = RequestInit & {timeout?: number};
+type Options      = RequestInit & {timeout?: number};
 
+/**
+ * Fetch a remote resource
+ * 
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+ * @see https://developer.mozilla.org/en-US/docs/Web/API/Request/Request
+ * @param url - The url of a resource that you wish to fetch
+ * @param . - milliseconds before timeout
+ * 
+ * @throws TimeoutError when timeout occurs
+ */
 export async function fetcher(
-    url:    string,
+    url: string,
     {
         body,
         cache           = 'no-store',
@@ -25,7 +35,7 @@ export async function fetcher(
         signal,
         timeout         = 600000,
         window
-    }:  FetcherOptions
+    }: Options = {},
 ){
     const controller    = new AbortController();
     const timer         = setTimeout(() => { controller.abort(); }, timeout);
@@ -37,17 +47,21 @@ export async function fetcher(
     return fetch(
         encodeURI(url),
         { method, headers, body, cache, mode, credentials, redirect, referrer, referrerPolicy, integrity, keepalive, window, signal: controller.signal }
-    ).then(response => {
-        clearTimeout(timer);
-        return response;
-    }).catch(error => {
-        clearTimeout(timer);
-        if(error instanceof DOMException && error.name === 'AbortError') {
-            throw new TimeoutError(url);
+    ).then(
+        response => {
+            clearTimeout(timer);
+            return response;
         }
+    ).catch(
+        error => {
+            clearTimeout(timer);
+            if(error instanceof DOMException && error.name === 'AbortError') {
+                throw new TimeoutError(url);
+            }
 
-        throw error;
-    });
+            throw error;
+        }
+    );
 }
 
 export default fetcher;

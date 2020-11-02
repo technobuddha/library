@@ -1,0 +1,14 @@
+/**
+  * Performs linear interpolation between values a and b. Returns the value
+  * between a and b proportional to x (when x is between 0 and 1. When x is
+  * outside this range, the return value is a linear extrapolation).
+  * @param {number}        a            A number.
+  * @param {number}        b            A number.
+  * @param {number}        proportion    The proportion between a and b.
+  * @returns {number}    The interpolated value between a and b.
+ */
+export function linearInterpolation(a: number, b: number, proportion: number): number {
+    return a + proportion * (b - a);
+}
+
+export default linearInterpolation;
