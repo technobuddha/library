@@ -10,7 +10,7 @@ type Options = {
   * @param input        The string to split
   */
 export function splitWords(input: string, {delimiter = /\s+/}: Options = {}): string[] {
-    if(isWhitespace(input))
+    if(input.length === 0 || isWhitespace(input))
         return [];
     else
         return clean(input, delimiter).split(delimiter);

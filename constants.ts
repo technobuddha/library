@@ -3,6 +3,8 @@ export const space              = ' ';
 export const nbsp               = '\u00A0';
 export const zwsp			    = '\u200B';
 
+export const negativeZero		= -0;
+
 export const ticksPerSecond		= 1000;
 export const secondsPerMinute	=   60;
 export const minutesPerHour		=   60;

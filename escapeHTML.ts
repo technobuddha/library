@@ -15,12 +15,7 @@ type Options = {
 export function escapeHTML(input: string, {mode = 'basic', escapeNonAscii = false}: Options = {}): string {
     let entities = (mode === 'basic') ? entityBasic : entityExtended;
 
-    return build(splitChars(input).map(c => {
-        if((c < '\u0020' || (c > '\u007E' && c < '\u00a0')) || (escapeNonAscii && c > '\u00FF'))
-            return `&#${c.codePointAt(0)};`;
-        else
-            return entities[c] ?? c
-    }));
+    return build(splitChars(input).map(c => entities[c] ?? ((c < '\u0020' || (c > '\u007E' && c < '\u00a0')) || (escapeNonAscii && c > '\u00FF') ? `&#${c.codePointAt(0)};` : c)));
 }
 
 const entityBasic: Record<string, string> = {

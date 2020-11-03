@@ -9,7 +9,7 @@ import isWhitespace from './isWhitespace';
   */
 export function isNumeric(input: any): input is (number | string)
 {
-	return (isNumber(input) && !isNaN(input)) || (isString(input) && !isWhitespace(input) && !isNaN(toNumber(input)));
+	  return (isNumber(input) && !isNaN(input)) || (isString(input) && input.length !== 0 && !isWhitespace(input) && !isNaN(toNumber(input)));
 }
 
 export default isNumeric;

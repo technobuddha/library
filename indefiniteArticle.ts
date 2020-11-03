@@ -14,13 +14,20 @@ const TESTS: [string, RegExp][] = [
     ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/i],
 ]
 
-export function indefiniteArticle(word: string): string {
+type Options = {
+    only?: boolean,
+}
+
+export function indefiniteArticle(word: string, {only = false}: Options = {}): string {
+    let result = 'a';
     for(const [article, rule] of TESTS) {
-        if(rule.test(word))
-            return article;
+        if(rule.test(word)) {
+            result = article;
+            break;
+        }
     }
 
-    return 'a';
+    return only ? result : `${result} ${word}`;
 }
 
 export default indefiniteArticle;
