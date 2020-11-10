@@ -1,7 +1,7 @@
-import isNumber 	from 'lodash/isNumber';
-import isNaN 		from 'lodash/isNaN';
-import isString 	from 'lodash/isString';
-import toNumber 	from 'lodash/toNumber';
+import isNumber     from 'lodash/isNumber';
+import isNaN        from 'lodash/isNaN';
+import isString     from 'lodash/isString';
+import toNumber     from 'lodash/toNumber';
 import isWhitespace from './isWhitespace';
 
 /**

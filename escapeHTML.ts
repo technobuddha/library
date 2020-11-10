@@ -1,5 +1,5 @@
-import build	    from './build';
-import splitChars   from './splitChars';
+import build      from './build';
+import splitChars from './splitChars';
 
 type Options = {
     mode?: 'basic' | 'extended';
@@ -8,9 +8,9 @@ type Options = {
 
 /**
   * Escape a string for use in HTML
-  * @param input			The string to escape
-  * @param mode				'basic' will encode only the basic entitites, 'extended' will encode all entities
-  * @param escapeNonAscii	if true, escape all characters outside the ASCII range
+  * @param input The string to escape
+  * @param mode 'basic' will encode only the basic entitites, 'extended' will encode all entities
+  * @param escapeNonAscii if true, escape all characters outside the ASCII range
   */
 export function escapeHTML(input: string, {mode = 'basic', escapeNonAscii = false}: Options = {}): string {
     const entities = (mode === 'basic') ? entityBasic : entityExtended;

@@ -1,105 +1,105 @@
-import { empty }					from './constants';
-import toBasicLatin					from './toBasicLatin';
-import splitWords					from './splitWords';
+import { empty }    from './constants';
+import toBasicLatin from './toBasicLatin';
+import splitWords   from './splitWords';
 
 //TODO Look at all this commented out code...
 
-//let instructions:	{
-//						affix:	{ expr: RegExp, syllables: number }[],
-//						adjust: { expr: RegExp, syllables: number }[],
-//						irregular: { [key: string]: number },
-//					};
+//let instructions: {
+//      affix: { expr: RegExp, syllables: number }[],
+//      adjust: { expr: RegExp, syllables: number }[],
+//      irregular: { [key: string]: number },
+//     };
 
-//let stripCharacters	= new RegExp('[^\\s' + unicode.Ll + unicode.Lu + ']', 'gu');
+//let stripCharacters = new RegExp('[^\\s' + unicode.Ll + unicode.Lu + ']', 'gu');
 
 //function syllable
-//	(	input: string
-//	):	number
+// ( input: string
+// ): number
 //{
-//	if(input.length <= 3)
-//		return 1;
+// if(input.length <= 3)
+//  return 1;
 
-//	if(input in instructions.irregular)
-//		return instructions.irregular[input];
+// if(input in instructions.irregular)
+//  return instructions.irregular[input];
 
-//	let		count	= 0;
-//	const	inc		= (value: number) => (x: string) => { /*console.log("+", value, x);*/ count += value; return empty; };
-//	let		start	= count;
+// let  count = 0;
+// const inc  = (value: number) => (x: string) => { /*console.log("+", value, x);*/ count += value; return empty; };
+// let  start = count;
 
-//	do
-//	{
-//		start	= count;
-//		for(let affix of instructions.affix)
-//		{
-//			input = input.replace(affix.expr, inc(affix.syllables));
-//			//console.log(count, input);
-//		}
-//	}while(start !== count);
+// do
+// {
+//  start = count;
+//  for(let affix of instructions.affix)
+//  {
+//   input = input.replace(affix.expr, inc(affix.syllables));
+//   //console.log(count, input);
+//  }
+// }while(start !== count);
 
-//	let word = input;
-//	word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, empty).replace(/^y/, empty);
-//	//console.log(word);
-//	//console.log(word.match(/[aeiouy]{1,2}/g)!.length);
+// let word = input;
+// word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, empty).replace(/^y/, empty);
+// //console.log(word);
+// //console.log(word.match(/[aeiouy]{1,2}/g)!.length);
 
-//	//console.log(_.split(input,  /[^aeiouy]+/));
-//	count += sum(map(split(input, /[^aeiouy]+/), part => part.length ? 1 : 0));
-//	//console.log(" ***", count);
+// //console.log(_.split(input,  /[^aeiouy]+/));
+// count += sum(map(split(input, /[^aeiouy]+/), part => part.length ? 1 : 0));
+// //console.log(" ***", count);
 
-//	for(let adjust of instructions.adjust)
-//	{
-//		input = input.replace(adjust.expr, inc(adjust.syllables));
-//		//console.log(count, input);
-//	}
+// for(let adjust of instructions.adjust)
+// {
+//  input = input.replace(adjust.expr, inc(adjust.syllables));
+//  //console.log(count, input);
+// }
 
-//	return count || 1;
+// return count || 1;
 //}
 
 /**
   * Count (approximently) the number of syllables in a string
-  * @param input		The string
+  * @param input  The string
   */
 //function syllables
-//	(	input: string
-//	):	number
+// ( input: string
+// ): number
 //{
-//	if(!instructions)
-//	{
-//		const json	= require('./syllables-data.json') as
-//							{	affix:		{ e: string, s: number }[],
-//								adjust:		{ e: string, s: number }[],
-//								irregular:	{ [key: string]: number },
-//							};
-//		instructions =
-//		{
-//			affix:		map(json.affix,  a => ({ expr: new RegExp(a.e),      syllables: a.s })),
-//			adjust:		map(json.adjust, a => ({ expr: new RegExp(a.e, 'g'), syllables: a.s })),
-//			irregular:	json.irregular
-//		};
-//	}
+// if(!instructions)
+// {
+//  const json = require('./syllables-data.json') as
+//       { affix:  { e: string, s: number }[],
+//        adjust:  { e: string, s: number }[],
+//        irregular: { [key: string]: number },
+//       };
+//  instructions =
+//  {
+//   affix:  map(json.affix,  a => ({ expr: new RegExp(a.e),      syllables: a.s })),
+//   adjust:  map(json.adjust, a => ({ expr: new RegExp(a.e, 'g'), syllables: a.s })),
+//   irregular: json.irregular
+//  };
+// }
 
-//	return sum(map(splitWords(toBasicLatin(input.toLowerCase()).replace(stripCharacters, empty)), syllable));
+// return sum(map(splitWords(toBasicLatin(input.toLowerCase()).replace(stripCharacters, empty)), syllable));
 //}
 
 /**
   * Count (approximently) the number of syllables in a string
-  * @param input		The string
+  * @param input  The string
   */
 export function syllables(input: string): number {
-	return splitWords(toBasicLatin(input.toLowerCase())).reduce(
+    return splitWords(toBasicLatin(input.toLowerCase())).reduce(
         (count, word) => {
-			if(word.length <= 3)
-				count++;
-			else {
-				word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, empty).replace(/^y/, empty);
+            if(word.length <= 3)
+                count++;
+            else {
+                word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, empty).replace(/^y/, empty);
                 
                 const match = word.match(/[aeiouy]{1,2}/g);
                 count += match === null ? 0 : match.length;
-			}
+            }
 
-			return count;
-		},
-		0
-	);
+            return count;
+        },
+        0
+    );
 }
 
 export default syllables;

@@ -8,8 +8,8 @@ type Options = Options1000 & {
 }
 
 type Options1000 = {
-	and?: string;
-    hyphen?: string;    
+    and?: string;
+    hyphen?: string;
 }
 
 const ones  = [ 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine',
@@ -17,8 +17,8 @@ const ones  = [ 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', '
 const tens  = [ 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety' ];
 
 const ZERO              = 0;
-const TEN				= 10;
-const TWENTY			= 20;
+const TEN               = 10;
+const TWENTY            = 20;
 const ONE_HUNDRED       = 100;
 
 export function cardinal(input: number, {groups = Infinity, digits = false, ...options}: Options = {}): string {
@@ -80,7 +80,7 @@ function ordinal1000(input: number, {and, hyphen = space}: Options1000 = {}): st
     const words    = [] as string[];
 
     if(input >= ONE_HUNDRED) {
-		words.push(ones[Math.floor(input / ONE_HUNDRED)], 'hundred');
+        words.push(ones[Math.floor(input / ONE_HUNDRED)], 'hundred');
         input = input % ONE_HUNDRED;
         if(and && input > ZERO) words.push(and);
     }

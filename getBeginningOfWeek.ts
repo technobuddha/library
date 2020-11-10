@@ -1,6 +1,6 @@
-import { daysPerWeek }   from './constants';
-import defaults         from './_defaults';
-import modulo	        from './modulo';
+import { daysPerWeek } from './constants';
+import defaults        from './_defaults';
+import modulo          from './modulo';
 
 type Options = {
     UTC?: boolean;

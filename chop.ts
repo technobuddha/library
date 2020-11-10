@@ -4,9 +4,9 @@ type Options = {
 
 /**
   * Break a string into segments of {@code length} characters
-  * @param input		The string to break apart
-  * @param length		The length of each segment
-  * @returns			Array of segments
+  * @param input The string to break apart
+  * @param length The length of each segment
+  * @returns Array of segments
   */
 export function chop(input: string, length: number, {truncate = false}: Options = {}): string[]
 {

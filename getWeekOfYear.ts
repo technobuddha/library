@@ -1,8 +1,8 @@
-import defaults                        		from './_defaults';
-import { DayOfWeek, ticksPerWeek, month }   from './constants';
-import getBeginningOfDay            		from './getBeginningOfDay';
-import getBeginningOfWeek            		from './getBeginningOfWeek';
-import getWeeksInYear                		from './getWeeksInYear';
+import defaults                           from './_defaults';
+import { DayOfWeek, ticksPerWeek, month } from './constants';
+import getBeginningOfDay                  from './getBeginningOfDay';
+import getBeginningOfWeek                 from './getBeginningOfWeek';
+import getWeeksInYear                     from './getWeeksInYear';
 
 type Options = {
     UTC?: boolean;
@@ -17,10 +17,10 @@ type Options = {
  * @param firstDayOfWeek    The first day of the week (default Monday)
  */
 export function getWeekOfYear(input: Date, {UTC = false, weekOneIncludes = defaults.weekOneIncludes, firstDayOfWeek  = defaults.firstDayOfWeek}: Options = {}): { year: number, week: number } {
-    const bod	= getBeginningOfDay(input, {UTC});
-	const week1 = UTC
-					? getBeginningOfWeek(new Date(Date.UTC(bod.getUTCFullYear(), month.january, weekOneIncludes)), {UTC, firstDayOfWeek})
-					: getBeginningOfWeek(new Date(bod.getFullYear(), month.january, weekOneIncludes), {UTC, firstDayOfWeek});
+    const bod   = getBeginningOfDay(input, {UTC});
+    const week1 = UTC
+                    ? getBeginningOfWeek(new Date(Date.UTC(bod.getUTCFullYear(), month.january, weekOneIncludes)), {UTC, firstDayOfWeek})
+                    : getBeginningOfWeek(new Date(bod.getFullYear(), month.january, weekOneIncludes), {UTC, firstDayOfWeek});
     let week    = 1 + Math.floor((bod.getTime() - week1.getTime()) / ticksPerWeek);
     let year    = UTC ? bod.getUTCFullYear() : input.getFullYear();
 

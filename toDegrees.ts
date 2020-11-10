@@ -1,7 +1,7 @@
 
 /**
   * Convert an angle from radians to degrees
-  * @param radians	Angle in radians
+  * @param radians Angle in radians
   */
 export function toDegrees(angle: number): number
 {

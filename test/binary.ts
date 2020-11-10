@@ -26,7 +26,7 @@ describe(
         );
 
         it(
-			'should handle fractional numbers',
+            'should handle fractional numbers',
             () => {
                 expect(binary(1000000)).to.equal('976.56KiB');
                 expect(binary(1200000)).to.equal('1.14MiB');
@@ -36,7 +36,7 @@ describe(
         );
 
         it(
-			'should handle precision',
+            'should handle precision',
             () => {
                 expect(binary(1000000, { precision: 3 })).to.equal('976.563KiB');
                 expect(binary(1200000, { precision: 3 })).to.equal('1.144MiB');

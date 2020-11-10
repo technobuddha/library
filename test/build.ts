@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import build      from '../build';
 
 describe(
-	'build',
+    'build',
     () => {
         it(
             'should build strings',
