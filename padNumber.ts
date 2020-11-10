@@ -6,7 +6,7 @@ import padStart from 'lodash/padStart';
   * @param input    The number to pad
   * @param length    The minimum length of the resulting string
   */
-export function padNumber(input: number, length: number = 2): string
+export function padNumber(input: number, length = 2): string
 {
     if(isNaN(input) || input === Infinity || input === -Infinity)
         return padStart(input.toString(), length, ' ');

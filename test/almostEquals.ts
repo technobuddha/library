@@ -2,7 +2,6 @@
 import { expect }   from 'chai';
 import almostEquals from '../almostEquals';
 
-
 describe(
 	'almostEquals',
 	() => {

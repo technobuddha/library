@@ -10,10 +10,10 @@ import toPrimitive  from './toPrimitive';
   * @param caseInsesitive    True if strings are to be compared case insensitive (default false)
   * @returns                0 if a == b; -1 if a < b; 1 if a > b
   */
-export function compare(x: unknown, y: unknown, _caseInsensitive: boolean = false): number
+export function compare(x: unknown, y: unknown, _caseInsensitive = false): number
 {
-    let px = toPrimitive(x, 'number');
-    let py = toPrimitive(y, 'number');
+    const px = toPrimitive(x, 'number');
+    const py = toPrimitive(y, 'number');
 
     if(isUndefined(px) && isUndefined(py))
         return 0;
@@ -28,8 +28,8 @@ export function compare(x: unknown, y: unknown, _caseInsensitive: boolean = fals
     else if(isNull(py))
         return 1;
     else if(typeof px !== 'string' && typeof py !== 'string') {
-        let nx = Number(px);
-        let ny = Number(py);
+        const nx = Number(px);
+        const ny = Number(py);
 
         if(isNaN(nx) && isNaN(py))
             return 0;

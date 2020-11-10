@@ -12,10 +12,10 @@ const U = (c: number) => '\\u{' + c.toString(16) + '}';
   * @param input        The string to escape
   */
 export function escapeJS(input: string): string {
-    let output = [] as string[];
+    const output: string[] = [];
     for(let i = 0; i < input.length; ++i) {
-        let u0 = input.codePointAt(i);
-        let u1 = input.codePointAt(i + 1);
+        const u0 = input.codePointAt(i);
+        const u1 = input.codePointAt(i + 1);
 
         if(u0 != undefined) {
             if(u0 < 0x00000020) {

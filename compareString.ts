@@ -29,10 +29,10 @@ export function compareString(text1: string | null, text2: string | null, {caseI
     }
 
     if(version) {
-        let v1 = text1.trim().split('.');
-        let v2 = text2.trim().split('.');
-        let count = Math.max(v1.length, v2.length);
-        let order = 0 as (-1 | 0 | 1);
+        const v1 = text1.trim().split('.');
+        const v2 = text2.trim().split('.');
+        const count = Math.max(v1.length, v2.length);
+        let   order = 0 as (-1 | 0 | 1);
 
         for(let i = 0; order === 0 && i < count; ++i) {
             order = compareString(v1[i], v2[i], { natural: true });

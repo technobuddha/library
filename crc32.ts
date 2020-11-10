@@ -1,6 +1,6 @@
 import isEmpty from 'lodash/isEmpty';
 
-let crcTable = [] as number[];
+const crcTable: number[] = [];
 
 /**
   * Compute the CRC32 checksum for a string

@@ -17,10 +17,10 @@ type Options = {
   * @param input        The string to escape
   */
 export function toFilename(input: string, {maxLength = 64, replacement = '-', disambiguate = 10, separator = '…'}: Options = {}): string {
-    var suffix = empty;
+    let suffix = empty;
     const compress = new RegExp('\\s*' + escapeRegExp(replacement) + '[\\s' + escapeRegExp(replacement) + ']*', 'g');
 
-    input = clean(collapseWhitespace(input.normalize('NFC').replace('\"', '\'').replace(badChars, replacement)).replace(compress, replacement), replacement);
+    input = clean(collapseWhitespace(input.normalize('NFC').replace('"', "'").replace(badChars, replacement)).replace(compress, replacement), replacement);
 
     if(suffix.length === 0 && input.length > maxLength) {
         suffix = input.slice(-disambiguate);

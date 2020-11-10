@@ -42,23 +42,23 @@ const ymString      = re`${yyyy}${sep}${mmm}`;
 const yNumeric      = re`${yyyy}`;
 
 export function parseDate(text: string): Date {
-    let now = new Date();
-    let gmt = now.getTimezoneOffset();
-    let dY  = 0;
-    let dM  = 0;
-    let dD  = 0;
-    let tH  = 0;
-    let tM  = 0;
-    let tS  = 0;
-    let tF  = 0;
-    let xH  = -gmt / 60;
-    let xM  = Math.abs(gmt % 60);
-    let zH  = xH;
-    let zM  = xM;
+    const now = new Date();
+    const gmt = now.getTimezoneOffset();
+    let   dY  = 0;
+    let   dM  = 0;
+    let   dD  = 0;
+    let   tH  = 0;
+    let   tM  = 0;
+    let   tS  = 0;
+    let   tF  = 0;
+    const xH  = -gmt / 60;
+    const xM  = Math.abs(gmt % 60);
+    let   zH  = xH;
+    let   zM  = xM;
 
     text = text.toLowerCase();
 
-    var match;
+    let match: RegExpExecArray | null;
     if((match = mdyNumeric.exec(text)) !== null) {
         dM = Number.parseInt(match[1]) - 1;
         dD = Number.parseInt(match[2]);

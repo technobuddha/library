@@ -18,7 +18,7 @@ export function encodeUTF8(input: string):string {
             if(++i >= input.length)
                 throw new Error('Incomplete surrogate pair @' + i);
 
-            let c1 = input.charCodeAt(i);
+            const c1 = input.charCodeAt(i);
             if(c1 < 0xDC00 || c1 > 0xDFFF)
                 throw new Error('Invalid surrogate pair @' + i);
 

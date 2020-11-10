@@ -43,7 +43,7 @@ export function wordwrap(input: string, {width = 75, separator = '\n', cut = fal
         let currentColumn = 0;
         let result = empty;
 
-        for(let word of splitWords(input)) {
+        for(const word of splitWords(input)) {
             // if adding a space and the next word would cause this line to be longer than width...
             if(word.length + currentColumn > width) {
                 //start a new line if this line is not already empty

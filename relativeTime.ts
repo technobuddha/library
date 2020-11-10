@@ -45,10 +45,10 @@ export function relativeTime(
     }
 
     if(agoFromNow) {
-        let d = Math.floor((diff) / secondsPerDay);
-        let h = Math.floor((diff - d * secondsPerDay) / secondsPerHour);
-        let m = Math.floor((diff - d * secondsPerDay - h * secondsPerHour) / secondsPerMinute);
-        let s = Math.floor((diff - d * secondsPerDay - h * secondsPerHour - m * secondsPerMinute));
+        const d = Math.floor((diff) / secondsPerDay);
+        const h = Math.floor((diff - d * secondsPerDay) / secondsPerHour);
+        const m = Math.floor((diff - d * secondsPerDay - h * secondsPerHour) / secondsPerMinute);
+        const s = Math.floor((diff - d * secondsPerDay - h * secondsPerHour - m * secondsPerMinute));
         if(d > 90) {
             text.push(formatDate(input, ymdFormat));
             sign = 0;

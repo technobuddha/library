@@ -6,7 +6,7 @@ export class TimeoutError extends Error {
     }
 }
 
-type Options      = RequestInit & {timeout?: number};
+export type Options      = RequestInit & {timeout?: number};
 
 /**
  * Fetch a remote resource

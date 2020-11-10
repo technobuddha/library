@@ -11,10 +11,9 @@ type Options = {
   * @param    format:    format specification to pass to {@code _.format},
   * }
   */
-export function binary(input: number, {customFormat, precision = 2}: Options = {}): string
-{
-    return abbreviate
-    (    input,
+export function binary(input: number, {customFormat, precision = 2}: Options = {}): string {
+    return abbreviate(
+        input,
         {
             customFormat,
             macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],

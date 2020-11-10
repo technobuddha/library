@@ -7,7 +7,7 @@ export function dataURL(
 ):  string
 {
     if(typeof window !== 'undefined') {
-        let bytes    = new Uint8Array(input instanceof ArrayBuffer ? input : input.buffer);
+        const bytes = new Uint8Array(input instanceof ArrayBuffer ? input : input.buffer);
 
         return `data:${mimeType};base64,${btoa(build(map(bytes, c => String.fromCharCode(c))))}`;
     }

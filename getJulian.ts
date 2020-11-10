@@ -1,7 +1,4 @@
-import { ticksPerDay }            from './constants';
-
-
-// TODO does this nees a UTC adjustment?
+import { ticksPerDay } from './constants';
 
 export function getJulian(input: Date): number {
     return (input.getTime() / ticksPerDay) + 2440587.5; 

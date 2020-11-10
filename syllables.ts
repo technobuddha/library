@@ -2,6 +2,8 @@ import { empty }					from './constants';
 import toBasicLatin					from './toBasicLatin';
 import splitWords					from './splitWords';
 
+//TODO Look at all this commented out code...
+
 //let instructions:	{
 //						affix:	{ expr: RegExp, syllables: number }[],
 //						adjust: { expr: RegExp, syllables: number }[],
@@ -89,8 +91,9 @@ export function syllables(input: string): number {
 				count++;
 			else {
 				word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, empty).replace(/^y/, empty);
-				var match = word.match(/[aeiouy]{1,2}/g);
-				count += match === null ? 0 : match.length;
+                
+                const match = word.match(/[aeiouy]{1,2}/g);
+                count += match === null ? 0 : match.length;
 			}
 
 			return count;

@@ -11,8 +11,7 @@ export function unescapeHTML(input: string): string {
 			} else if(entity.substr(0, 2) === '&#') {
                 return String.fromCodePoint(Number.parseInt(entity.substr(2, entity.length - 3), 10));
             } else {
-                let name = entity.substr(1, entity.length - 2);
-                return entityDecode[name] ?? entity;
+                return entityDecode[entity.substr(1, entity.length - 2)] ?? entity;
             }
         }
     );

@@ -1,23 +1,20 @@
 import delimited from './delimited';
 
-export namespace QueryString
-{
-    let vars: Record<string, string>;
+let vars: Record<string, string>;
 
-    function init() {
-        if(document.URL?.includes('?')) {
-            vars = Object.fromEntries(
-                delimited(document.URL, '?', 0).split('&').map(hash => hash.split('='))
-            );
-        } else {
-            vars = {};
-        }
-    }
-
-    export function get(name: string) {
-        if(typeof(vars) === 'undefined') init();
-        return vars[name];
+function init() {
+    if(document.URL?.includes('?')) {
+        vars = Object.fromEntries(
+            delimited(document.URL, '?', 0).split('&').map(hash => hash.split('='))
+        );
+    } else {
+        vars = {};
     }
 }
 
-export default QueryString
+export function get(name: string) {
+    if(typeof(vars) === 'undefined') init();
+    return vars[name];
+}
+
+export default {get}

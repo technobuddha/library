@@ -11,16 +11,15 @@ import splitChars   from './splitChars';
   */
 export function cleanEnd(input: string, characters: (string | RegExp | (string | RegExp)[]) = /\s/): string
 {
-    let re = (
-	isString(characters)
-    ?	splitChars(characters).map(escapeRegExp).join('|')
-    :   isRegExp(characters)
-    ?   characters.source
-    :   characters.map(c => isRegExp(c) ? c.source : splitChars(c).map(escapeRegExp).join('|')).join('|')
+    const re = (
+       isString(characters)
+        ?	splitChars(characters).map(escapeRegExp).join('|')
+        : isRegExp(characters)
+        ? characters.source
+        : characters.map(c => isRegExp(c) ? c.source : splitChars(c).map(escapeRegExp).join('|')).join('|')
     );
 
     return input.replace(new RegExp(`(${re})+$`), empty);
 }
-
 
 export default cleanEnd;

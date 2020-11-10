@@ -8,8 +8,8 @@ type Options = {
 const tokenizer    = /\\#|#|./gu;
 
 export function mask(input: string, mask: string, {missing = space}: Options = {}): string {
-    let chars    = splitChars(input);
-    let index    = 0;
+    const chars = splitChars(input);
+    let   index = 0;
 
     return mask.replace(tokenizer, token => token === '\\#' ? '#' : token === '#' ? (chars[index++] ?? missing) : token);
 }

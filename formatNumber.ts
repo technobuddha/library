@@ -19,31 +19,28 @@ type ParseReturn =     {
 };
 
 function parse(mask: string): ParseReturn {
-    let scale           = 1;
-    let beforeDP        = true;
-    let before          = [] as string[];
-    let after           = [] as string[];
-    let group           = false;
-    let commas          = 0;
-    let zeroSeen        = false;
-    let exponent        = 0;
-    let signExponent    = false;
-    let precision       = 0;
+    let   scale            = 1;
+    let   beforeDP         = true;
+    const before: string[] = [];
+    let   after: string[]  = [];
+    let   group            = false;
+    let   commas           = 0;
+    let   zeroSeen         = false;
+    let   exponent         = 0;
+    let   signExponent     = false;
+    let   precision        = 0;
 
-    for(let i = 0; i < mask.length; ++i)
-    {
-        let c = mask.charAt(i);
+    for(let i = 0; i < mask.length; ++i) {
+        const c = mask.charAt(i);
 
-        switch(c)
-        {
+        switch(c) {
             case '"':    //literal string
-            case "'":
-            {
+            case "'": {
                 let s = '"';
 
                 for(++i; i < mask.length; ++i)
                 {
-                    let k = mask.charAt(i);
+                    const k = mask.charAt(i);
 
                     if(c === k) break;
                     s += k;
@@ -53,27 +50,22 @@ function parse(mask: string): ParseReturn {
                 break;
             }
 
-            case '#':
-            {
+            case '#':  {
                 if(beforeDP)
                     before.push(zeroSeen ? '0' : '#');
-                else
-                {
+                else {
                     precision++;
                     after.push('#');
                 }
                 break;
             }
 
-            case '0':
-            {
-                if(beforeDP)
-                {    //If we see a 0 before the decimal point, all following #s are transformed into 0s
+            case '0': {
+                if(beforeDP) {
+                    //If we see a 0 before the decimal point, all following #s are transformed into 0s
                     before.push('0');
                     zeroSeen = true;
-                }
-                else
-                {
+                } else {
                     //if we see a 0 after the decimal point, the proceeding #s are transformed into 0s
                     precision++;
                     after = map(after, a => a === '#' ? '0' : a);
@@ -82,79 +74,65 @@ function parse(mask: string): ParseReturn {
                 break;
             }
 
-            case ',':
-            {
+            case ',': {
                 if(beforeDP)
                     commas++;
                 break;
             }
 
-            case '.':
-            {
+            case '.': {
                 beforeDP = false;
                 break;
             }
 
-            case '%':
-            {
+            case '%': {
                 scale *= 100;
                 (beforeDP ? before : after).push('"' + c);
                 break;
             }
 
-            case '‰':
-            {
+            case '‰': {
                 scale *= 1000;
                 (beforeDP ? before : after).push('"' + c);
                 break;
             }
 
-            case '‱':
-            {
+            case '‱': {
                 scale *= 10000;
                 (beforeDP ? before : after).push('"' + c);
                 break;
             }
 
             case 'e':
-            case 'E':
-            {
+            case 'E': {
                 let signSeen = false;
                 let j = i + 1;
                 let e = 0;
 
-                if(mask.length > j && mask.charAt(j) === '+')
-                {
+                if(mask.length > j && mask.charAt(j) === '+') {
                     j++; 
                     signSeen = true;
-                }
-                else
-                if(mask.length > j && mask.charAt(j) === '-')
-                {
+                } else if(mask.length > j && mask.charAt(j) === '-') {
                     j++;
                 }
 
-                while(mask.length > j && mask.charAt(j) === '0')
-                {    
+                while(mask.length > j && mask.charAt(j) === '0') {    
                     j++;
                     e++;
                 }
 
-                if(e > 0)
-                {
+                if(e > 0) {
                     i = j - 1;
                     exponent = e;
                     signExponent = signSeen;
 
                     (beforeDP ? before : after).push(c);
-                }
-                else
+                } else
                     (beforeDP ? before : after).push('"' + c);
                 break;
             }
 
-            case '\\':
-            {
+            case '\\': {
                 if(i < mask.length - 1)
                     (beforeDP ? before : after).push('"' + mask.charAt(++i));
                 else
@@ -162,15 +140,13 @@ function parse(mask: string): ParseReturn {
                 break;
             }
 
-            default:
-            {
+            default: {
                 (beforeDP ? before : after).push('"' + c);
                 break;
             }
         }
 
-        if(beforeDP && c !== ',')
-        {
+        if(beforeDP && c !== ',') {
             if(commas > 0) group = true;
             commas = 0;
         }
@@ -178,24 +154,24 @@ function parse(mask: string): ParseReturn {
 
     scale = scale / Math.pow(1000, commas);
 
-    return    {
-        aMask:          after,
-        aDigits:        after.reduce(function(acc, val) { return (val === '0' || val === '#') ? acc + 1 : acc; }, 0),
-        bMask:          before,
-        bDigits:        before.reduce(function(acc, val) { return (val === '0' || val === '#') ? acc + 1 : acc; }, 0),
-        scale:          scale,
-        group:          group,
-        exponent:       exponent,
-        signExpoent:    signExponent,
-        precision:      precision,
+    return  {
+        aMask:       after,
+        aDigits:     after.reduce((acc, val) => ((val === '0' || val === '#') ? acc + 1 : acc), 0),
+        bMask:       before,
+        bDigits:     before.reduce((acc, val) => ((val === '0' || val === '#') ? acc + 1 : acc), 0),
+        scale:       scale,
+        group:       group,
+        exponent:    exponent,
+        signExpoent: signExponent,
+        precision:   precision,
     }
 }
 //#endregion
 //#region formatNumber
 export function formatNumber(input: number, mask: string): string {
     if(/^[CDEFGNPRX][0-9]*$/i.test(mask)) {
-        let f = mask.charAt(0);
-        let prec = Number.parseInt(mask.substr(1));
+        const f    = mask.charAt(0);
+        const prec = Number.parseInt(mask.substr(1));
 
         if(f === 'C' || f === 'c') {
             mask = '$#,0.' + repeat('0', defaultTo(prec, 2)) + ';($0.' + '0'.repeat(defaultTo(prec, 2)) + ')';
@@ -206,8 +182,8 @@ export function formatNumber(input: number, mask: string): string {
         } else if(f === 'F' || f === 'f') {
             mask = '0.' + repeat('0', defaultTo(prec, 2));
         } else if(f === 'G' || f === 'g') {
-            let sci = formatNumber(input, '0.' + repeat('#', defaultTo(prec, 15)) + (f === 'G' ? 'E' : 'e') + '00');
-            let fix = formatNumber(input, '0.' + repeat('#', defaultTo(prec, 15)));
+            const sci = formatNumber(input, '0.' + repeat('#', defaultTo(prec, 15)) + (f === 'G' ? 'E' : 'e') + '00');
+            const fix = formatNumber(input, '0.' + repeat('#', defaultTo(prec, 15)));
             return sci.length < fix.length ? sci : fix;
         } else if(f === 'N' || f === 'n') {
             mask = '#,0.' + repeat('0', defaultTo(prec, 2));
@@ -222,7 +198,7 @@ export function formatNumber(input: number, mask: string): string {
                 return num;
             }
         } else if(f === 'X' || f === 'x') {
-            let hex = (input < 0) ? ('ffffffff' + (0xFFFFFFFF + input + 1).toString(16)) : padEnd(input.toString(16), defaultTo(prec, 0), '0');
+            const hex = (input < 0) ? ('ffffffff' + (0xFFFFFFFF + input + 1).toString(16)) : padEnd(input.toString(16), defaultTo(prec, 0), '0');
             if(f === 'X')
                 return hex.toUpperCase();
             else
@@ -230,7 +206,7 @@ export function formatNumber(input: number, mask: string): string {
         }
     }
 
-    let formats = mask.toString().split(';');
+    const formats = mask.toString().split(';');
 
     let fmt = parse(formats[0]);
     if(Number.parseFloat((input * fmt.scale).toFixed(fmt.precision)) === 0)
@@ -244,8 +220,8 @@ export function formatNumber(input: number, mask: string): string {
     let exp = 0;
 
     if(fmt.exponent > 0) {
-        let s1 = input.toExponential(fmt.aDigits + fmt.bDigits - 1).split('e');
-        let s2 = s1[0].split('.');
+        const s1 = input.toExponential(fmt.aDigits + fmt.bDigits - 1).split('e');
+        const s2 = s1[0].split('.');
 
         w = s2[0].split(empty);
         f = s2[1].split(empty);
@@ -292,7 +268,7 @@ export function formatNumber(input: number, mask: string): string {
     let d = 0;
 
     for(let i = fmt.bMask.length - 1; i >= 0; --i) {
-        let x = fmt.bMask[i];
+        const x = fmt.bMask[i];
 
         if(fmt.group && d === 3 && (x === '0' || x === '#')) {
             o = ',' + o;
@@ -316,7 +292,7 @@ export function formatNumber(input: number, mask: string): string {
     }
 
     for(let i = w.length - 1; i >= 0; --i) {
-        let x = w[i];
+        const x = w[i];
 
         if(fmt.group && d === 3 && (x === '0' || x === '#')) {
             o = ',' + o;
@@ -332,7 +308,7 @@ export function formatNumber(input: number, mask: string): string {
         let digits = false;
 
         for(let i = 0; i < fmt.aMask.length; ++i) {
-            let x = fmt.aMask[i];
+            const x = fmt.aMask[i];
 
             if(x === '0') {
                 if(f.length) a = a + f.shift();

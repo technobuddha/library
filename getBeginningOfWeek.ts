@@ -10,8 +10,7 @@ type Options = {
 export function getBeginningOfWeek(input: Date, {UTC = false, firstDayOfWeek = defaults.firstDayOfWeek}: Options = {}): Date {
     if(UTC)
         return new Date(Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), input.getUTCDate() - modulo(input.getUTCDay() - firstDayOfWeek, daysPerWeek)));
-    else
-	    return new Date(input.getFullYear(), input.getMonth(), input.getDate() - modulo(input.getDay() - firstDayOfWeek, daysPerWeek));
+    return new Date(input.getFullYear(), input.getMonth(), input.getDate() - modulo(input.getDay() - firstDayOfWeek, daysPerWeek));
 }
 
 export default getBeginningOfWeek;

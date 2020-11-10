@@ -11,7 +11,7 @@ import splitChars   from './splitChars';
   */
 export function clean(input: string, characters: (string | RegExp | (string | RegExp)[]) = /\s/): string
 {
-    let re = (
+    const re = (
       isString(characters)
       ?    splitChars(characters).map(escapeRegExp).join('|')
       :    isRegExp(characters)

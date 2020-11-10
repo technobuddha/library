@@ -6,7 +6,7 @@ function match(text: string, matchers: ArrayLike<string | RegExp>): boolean {
     text = text.trim().toLowerCase();
 
     for(let i = 0; i < matchers.length; ++i) {
-        let matcher = matchers[i];
+        const matcher = matchers[i];
         if(isNil(matcher)) continue;
         if(isRegExp(matcher) && matcher.test(text)) return true;
         if(isString(matcher) && matcher.toLowerCase() === text) return true;
@@ -30,7 +30,7 @@ const defaultFalse = ['false', 'no',  'n', 'off', '0'];
   * @param falseValues    A list of values that are "false" (default: 'false', 'no', 'off', '0')
   */
 export function toBoolean(input: string, {trueValues = defaultTrue, falseValues = defaultFalse}: Options = {}): boolean | undefined {
-    if(match(input, trueValues)) return true;
+    if(match(input, trueValues))  return true;
     if(match(input, falseValues)) return false;
     return undefined;
 }

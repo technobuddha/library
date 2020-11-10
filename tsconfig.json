@@ -32,6 +32,6 @@
     "esModuleInterop": true,
     "downlevelIteration": true,
   },
-  "include": [ "./*.ts", "./*.tsx" ],
+  "include": [ "./*.ts", "./*.tsx", "math/angleDifference.ts", "math/angleBetweenPoints.ts", "math/almostEquals.ts" ],
   "exclude": [],
 }

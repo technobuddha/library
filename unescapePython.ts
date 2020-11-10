@@ -7,7 +7,7 @@ export function unescapePython(input: string): string {
     return input.replace(
         /\\(([abfnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]+)|(U[0-9a-fA-F]{8})|(u[0-9a-fA-F]{4})|(N\[.*\])|.)/g,
         escape => {
-            let c = escape.charAt(1);
+            const c = escape.charAt(1);
 
             if(c === 'a')
                 return '\x07';

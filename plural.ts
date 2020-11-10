@@ -16,7 +16,7 @@ export function plural(input: string, quantity?: number): string {
     let prefix    = empty;
     let result    = null as string | null;
 
-    for(let p of database.prefixes) {
+    for(const p of database.prefixes) {
         if(lc.startsWith(p)) {
             prefix = p;
             lc = lc.substr(p.length);
@@ -24,7 +24,7 @@ export function plural(input: string, quantity?: number): string {
         }
     }
 
-    for(let s of database.suffixes) {
+    for(const s of database.suffixes) {
         if(lc.endsWith(s)) {
             suffix = s;
             lc = lc.substr(0, lc.length - s.length);
@@ -41,7 +41,7 @@ export function plural(input: string, quantity?: number): string {
     }
 
     if(!result) { 
-        for(let v of database.uncountableRules) {
+        for(const v of database.uncountableRules) {
             if(v.test(lc)) {
                 result = matchCase(prefix + lc + suffix, input);
                 break;
@@ -50,7 +50,7 @@ export function plural(input: string, quantity?: number): string {
     }
 
     if(!result) {
-        for(let v of database.rules) {
+        for(const v of database.rules) {
             if(v[0].test(lc)) {
                 result = matchCase(prefix + lc.replace(v[0], v[1]) + suffix, input);
                 break;
@@ -132,7 +132,6 @@ const database: DBEntry =
 
 [/(fez|qui)z$/i,                                                                                                    "$1zzes"],
 [/z$/i,                                                                                                             "zes"],
-
 
 [/$/i,                                                                                                              "s"],
 ],

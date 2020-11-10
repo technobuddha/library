@@ -8,7 +8,7 @@ const u     = (c: number) => '\\u' + c.toString(16).padStart(4, '0');
   * @param input        The string to escape
   */
 export function escapeJava(input: string): string {
-    let output = [] as string[];
+    const output: string[] = [];
     for(let i = 0; i < input.length; ++i) {
         let u0 = input.codePointAt(i);
         let u1 = input.codePointAt(i + 1);

@@ -5,13 +5,13 @@
   "main": "index.js",
   "types": ".",
   "scripts": {
-    "prebuild": "rm -rf *.js *.d.ts",
-    "clean": "rm -rf *.js *.d.ts",
+    "clean": "rm -rf *.js *.d.ts docs",
     "build": "tsc",
     "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
-    "version": "npm run build",
+    "version": "npm-run-all clean build document",
     "postversion": "git push && git push --tags",
-    "lint": "eslint src --ext '.ts,.tsx,.js'"
+    "lint": "eslint . --ext '.ts,.tsx,.js'",
+    "document": "typedoc --out doc *.ts"
   },
   "repository": {
     "type": "git",
@@ -27,23 +27,24 @@
   },
   "homepage": "https://github.com/technobuddha/library#readme",
   "dependencies": {
-    "@types/node": "^14.14.5",
     "lodash": "^4.17.19"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
-    "@types/lodash": "^4.14.159",
+    "@types/lodash": "^4.14.165",
     "@types/mocha": "^8.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.5.0",
-    "@typescript-eslint/parser": "^4.5.0",
+    "@types/node": "^14.14.6",
+    "@typescript-eslint/eslint-plugin": "^4.6.1",
+    "@typescript-eslint/parser": "^4.6.1",
     "chai": "^4.2.0",
     "chai-almost": "^1.0.1",
     "chai-match": "^1.1.1",
-    "eslint": "^7.6.0",
-    "eslint-plugin-react": "^7.20.5",
-    "mocha": "^8.2.0",
+    "eslint": "^7.13.0",
+    "eslint-plugin-tsdoc": "^0.2.7",
+    "mocha": "^8.2.1",
+    "npm-run-all": "^4.1.5",
     "ts-mocha": "^8.0.0",
-    "typedoc": "^0.19.2",
-    "typescript": "^4.0.3"
+    "typedoc": "^0.20.0-beta.8",
+    "typescript": "^4.0.5"
   }
 }

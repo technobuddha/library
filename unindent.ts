@@ -12,11 +12,11 @@ type Options = {
   * @param pattern        String or RegExp used to determine the indentation character (default: whitespace)
   */
 export function unindent(input: string, {indenter = '\t'}: Options = {}): string {
-    let indent = getIndent(input, { indenter });
+    const indent = getIndent(input, { indenter });
     if(indent === 0)
         return input;
-    else
-        return input.replace(new RegExp('^(' + escapeRegExp(indenter) + '){' + indent + '}', 'gm'), empty);
+        
+    return input.replace(new RegExp('^(' + escapeRegExp(indenter) + '){' + indent + '}', 'gm'), empty);
 }
 
 export default unindent;

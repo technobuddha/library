@@ -18,7 +18,7 @@ type Options = {
  */
 export function getWeekOfYear(input: Date, {UTC = false, weekOneIncludes = defaults.weekOneIncludes, firstDayOfWeek  = defaults.firstDayOfWeek}: Options = {}): { year: number, week: number } {
     const bod	= getBeginningOfDay(input, {UTC});
-	let week1   = UTC
+	const week1 = UTC
 					? getBeginningOfWeek(new Date(Date.UTC(bod.getUTCFullYear(), month.january, weekOneIncludes)), {UTC, firstDayOfWeek})
 					: getBeginningOfWeek(new Date(bod.getFullYear(), month.january, weekOneIncludes), {UTC, firstDayOfWeek});
     let week    = 1 + Math.floor((bod.getTime() - week1.getTime()) / ticksPerWeek);

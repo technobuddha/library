@@ -7,9 +7,8 @@ import isWhitespace from './isWhitespace';
 /**
   * Test an object to see if it a number, or a string which can be converted into a number
   */
-export function isNumeric(input: any): input is (number | string)
-{
-	  return (isNumber(input) && !isNaN(input)) || (isString(input) && input.length !== 0 && !isWhitespace(input) && !isNaN(toNumber(input)));
+export function isNumeric(input: any): input is (number | string) {
+    return (isNumber(input) && !isNaN(input)) || (isString(input) && input.length !== 0 && !isWhitespace(input) && !isNaN(toNumber(input)));
 }
 
 export default isNumeric;

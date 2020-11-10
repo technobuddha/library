@@ -13,7 +13,7 @@ type Options = {
   * @param escapeNonAscii	if true, escape all characters outside the ASCII range
   */
 export function escapeHTML(input: string, {mode = 'basic', escapeNonAscii = false}: Options = {}): string {
-    let entities = (mode === 'basic') ? entityBasic : entityExtended;
+    const entities = (mode === 'basic') ? entityBasic : entityExtended;
 
     return build(splitChars(input).map(c => entities[c] ?? ((c < '\u0020' || (c > '\u007E' && c < '\u00a0')) || (escapeNonAscii && c > '\u00FF') ? `&#${c.codePointAt(0)};` : c)));
 }

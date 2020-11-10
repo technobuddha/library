@@ -28,7 +28,7 @@ export class TimeSpan
                     text    = text.slice(1);
                 }
 
-                var matches = text.match(/^(\d{1,2})(?::(\d\d)(?::(\d\d)(?::(\d\d))?)?)?(?:\.(\d{1,3}))?$/);
+                const matches = text.match(/^(\d{1,2})(?::(\d\d)(?::(\d\d)(?::(\d\d))?)?)?(?:\.(\d{1,3}))?$/);
                 if(matches) {
                     d   = Number(matches[1]);
                     h   = Number(matches[2]);
@@ -116,12 +116,12 @@ export class TimeSpan
 
     public format(mask?: string): string {
         if(mask) {
-            let D       = this.days;
-            let S       = this.seconds;
-            let M       = this.minutes;
-            let H       = this.hours;
-            let L       = this.milliseconds;
-            let flags   =
+            const D       = this.days;
+            const S       = this.seconds;
+            const M       = this.minutes;
+            const H       = this.hours;
+            const L       = this.milliseconds;
+            const flags   =
             {
                 d:  D.toString(),
                 dd: D.toString().padStart(2, '0'),
@@ -142,11 +142,11 @@ export class TimeSpan
                 }
             );
         } else {
-            let D = this.days;
-            let H = this.hours;
-            let M = this.minutes;
-            let S = this.seconds;
-            //let L = this.milliseconds;
+            const D = this.days;
+            const H = this.hours;
+            const M = this.minutes;
+            const S = this.seconds;
+            //const L = this.milliseconds;
 
             if(D > 0)
                 return `${D}.${ H.toString().padStart(2, '0') }:${ M.toString().padStart(2, '0') }:${ S.toString().padStart(2, '0') }`;

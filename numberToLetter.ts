@@ -1,14 +1,19 @@
-const ALPHABET  = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const BASE      = ALPHABET.length;
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-export function numberToLetter(n: number): string {
+type Options = {
+    alphabet?: string;
+}
+
+export function numberToLetter(n: number, {alphabet = ALPHABET}: Options = {}): string {
+    const base = alphabet.length;
+
     return Array.from((function *() {
         do {
             --n;
-            yield ALPHABET[n % BASE];
-            n = Math.floor(n / BASE) 
+            yield alphabet[n % base];
+            n = Math.floor(n / base) 
         } while(n > 0)
     })()).reverse().join('');
-};
+}
 
-export default { numberToLetter };
+export default numberToLetter;
