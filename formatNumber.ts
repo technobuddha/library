@@ -209,10 +209,10 @@ export function formatNumber(input: number, mask: string): string {
     const formats = mask.toString().split(';');
 
     let fmt = parse(formats[0]);
+    console.log(formats, fmt);
     if(Number.parseFloat((input * fmt.scale).toFixed(fmt.precision)) === 0)
         fmt = formats.length < 3 ? fmt : parse(formats[2]);
-    else
-    if(input < 0)
+    else if(input < 0)
         fmt = formats.length < 2 ? parse('-' + formats[0]) : parse(formats[1]);
 
     let w: string[];
@@ -257,10 +257,11 @@ export function formatNumber(input: number, mask: string): string {
                 f.push('0');
             }
         } else {
+            console.log({scaled, aDigits: fmt.aDigits});
             str = (scaled).toFixed(fmt.aDigits);
             split = str.split('.');
             w = split[0].split(empty);    //whole part
-            f = split[1].split(empty);    //fractional
+            f = split.length > 1 ? split[1].split(empty) : [];    //fractional
         }
     }
 

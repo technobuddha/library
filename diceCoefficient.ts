@@ -1,4 +1,4 @@
-import compareString            from './compareString';
+import compareStrings            from './compareStrings';
 
 
 function biGrams(input: string): (string | null)[] {
@@ -15,7 +15,7 @@ type Options = {
 
 export function diceCoefficient(input: string, compareTo: string, {caseInsensitive = false}: Options = {}): number {
     if(input.length <= 1 || compareTo.length <= 1)
-        return compareString(input, compareTo, { caseInsensitive }) === 0 ? 1.0 : 0.0;
+        return compareStrings(input, compareTo, { caseInsensitive }) === 0 ? 1.0 : 0.0;
 
     const bg0   = biGrams(caseInsensitive ? input.toLowerCase()     : input);
     const bg1   = biGrams(caseInsensitive ? compareTo.toLowerCase() : compareTo);

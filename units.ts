@@ -3,11 +3,11 @@ import { formatNumber }         from './formatNumber';
 import isNil                    from 'lodash/isNil';
 import round                    from 'lodash/round';
 
-interface Options {
+export type Options = {
     /**
      * format specification to pass to @link{formatNumber}
      */
-    customFormat?: string,
+    format?: string,
     /**
      * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y'])
      */
@@ -31,10 +31,10 @@ interface Options {
  * @param  input The number to abbreviate
  * @param - {@link Options}
  */
-export function abbreviate(
+export function metricUnits(
     input: number,
     {   
-        customFormat,
+        format,
         macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'],
         micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'],
         unit = 1000,
@@ -58,7 +58,7 @@ export function abbreviate(
         }
     }
 
-    return (isNil(customFormat) ? round(number, precision).toString() : formatNumber(round(number, precision), customFormat)) + suffix;
+    return (isNil(format) ? round(number, precision).toString() : formatNumber(round(number, precision), format)) + suffix;
 }
 
-export default abbreviate;
+export default metricUnits;

@@ -1,4 +1,4 @@
-import abbreviate from './abbreviate';
+import metricUnits from './units';
 
 type Options = {
     customFormat?: string
@@ -12,10 +12,10 @@ type Options = {
   * }
   */
 export function binary(input: number, {customFormat, precision = 2}: Options = {}): string {
-    return abbreviate(
+    return metricUnits(
         input,
         {
-            customFormat,
+            format: customFormat,
             macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
             micro: [],
             unit: 1024,

@@ -98,6 +98,10 @@ export class RGB {
 
         return new XYZ(x,y,z);
     }
+
+    public toLAB(): LAB {
+        return this.toXYZ().toLAB();
+    }
 }
 //#endregion
 //#region HSL
