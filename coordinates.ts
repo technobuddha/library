@@ -1,10 +1,10 @@
 
-export type CartesianCoordinate = {
+export type Cartesian = {
     x: number;
     y: number;
 };
 
-export type PolarCoordinate = {
+export type Polar = {
     radius: number;
     angle: number;
 };

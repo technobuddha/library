@@ -1,6 +1,8 @@
 import isString from 'lodash/isString';
 import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond }    from './constants';
 
+// TODO UNIT tests
+
 export class TimeSpan
 {
     constructor(text: string)

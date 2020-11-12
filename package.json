@@ -5,12 +5,13 @@
   "main": "index.js",
   "types": ".",
   "scripts": {
-    "clean": "rm -rf *.js *.d.ts docs",
+    "clean": "rm -rf *.js *.d.ts doc",
     "build": "tsc",
     "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
     "version": "npm-run-all clean build document",
     "postversion": "git push && git push --tags",
-    "lint": "eslint . --ext '.ts,.tsx,.js'",
+    "tests": "ts-mocha test/*.ts",
+    "lint": "eslint --ext .ts *.ts",
     "document": "typedoc --out doc *.ts"
   },
   "repository": {
@@ -41,6 +42,7 @@
     "chai-match": "^1.1.1",
     "eslint": "^7.13.0",
     "eslint-plugin-tsdoc": "^0.2.7",
+    "jimp": "^0.16.1",
     "mocha": "^8.2.1",
     "npm-run-all": "^4.1.5",
     "ts-mocha": "^8.0.0",
