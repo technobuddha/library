@@ -1,4 +1,4 @@
-import compareStrings            from './compareStrings';
+import {compareStrings} from './compare';
 
 
 function biGrams(input: string): (string | null)[] {

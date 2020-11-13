@@ -1,5 +1,5 @@
 
-type TimeIncrement = {
+export type TimeIncrement = {
     years?: number;
     months?: number;
     days?: number;
@@ -9,6 +9,15 @@ type TimeIncrement = {
     milliseconds?: number;
 }
 
+/**
+ * Add units of time to a Date
+ * 
+ * @remarks Negative values will subtract from the Date
+ * 
+ * @param input Starting date
+ * @param __namedParameters Amount of time to increment
+ * @returns Adjusted date.
+ */
 export function addTime(
     input: Date,
     {   years = 0,

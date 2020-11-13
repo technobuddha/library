@@ -1,7 +1,7 @@
-import escapeRegExp        from 'lodash/escapeRegExp';
-import { empty }           from './constants';
-import clean               from './clean';
-import collapseWhitespace  from './collapseWhitespace';
+import escapeRegExp         from 'lodash/escapeRegExp';
+import { empty }            from './constants';
+import clean                from './clean';
+import {collapseWhitespace} from './collapse';
 
 const badChars = /[/\\:*?<>|.]+/g;
 

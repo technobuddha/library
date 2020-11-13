@@ -5,14 +5,17 @@
   "main": "index.js",
   "types": ".",
   "scripts": {
-    "clean": "rm -rf *.js *.d.ts doc",
+    "clean": "npm-run-all *:clean",
     "build": "tsc",
+    "build:clean": "rm -rf *.js *.d.ts",
     "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
     "version": "npm-run-all clean build document",
     "postversion": "git push && git push --tags",
     "tests": "ts-mocha test/*.ts",
     "lint": "eslint --ext .ts *.ts",
-    "document": "typedoc --out doc *.ts"
+    "document": "npm-run-all document:clean document:generate",
+    "document:clean": "rm -rf doc",
+    "document:generate": "typedoc *.ts"
   },
   "repository": {
     "type": "git",
