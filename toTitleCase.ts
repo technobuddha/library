@@ -1,9 +1,11 @@
 const titles = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
 
 /**
-  * Convert a string to a title, capitalizing each word, except for the small words
-  * @param input        The string to make title case
-  */
+ * Convert a string to a title, capitalizing each word, except for the small words
+ * 
+ * @param input the string to make title case
+ * @return the string in title case
+ */
 export function toTitleCase(input: string): string {
     return input.replace(
         /[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g,

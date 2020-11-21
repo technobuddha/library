@@ -4,7 +4,7 @@ import escapeRegExp from 'lodash/escapeRegExp';
 import { empty }    from './constants';
 import splitChars   from './splitChars';
 
-const trimEquilivalent = /\s\uFEFF\xA0/;
+const trimEquilivalent = /[\s\uFEFF\xA0]/;
 
 /**
  * Remove all occurances of characters from the beginning and end of the string
@@ -12,8 +12,7 @@ const trimEquilivalent = /\s\uFEFF\xA0/;
  * @param input  The string
  * @param characters The characters(s) to remove
  */
-export function clean(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquilivalent): string
-{
+export function clean(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquilivalent): string {
     const re = (
       isString(characters)
       ?    splitChars(characters).map(escapeRegExp).join('|')
@@ -22,7 +21,7 @@ export function clean(input: string, characters: (string | RegExp | (string | Re
       :    characters.map(c => (isRegExp(c) ? c.source : splitChars(c).map(escapeRegExp).join('|'))).join('|')
     );
 
-    return input.replace(new RegExp('^(' + re + ')+|(' + re + ')+$', 'gu'), empty);
+    return input.replace(new RegExp(`^(${re})+|(${re})+$`, 'gu'), empty);
 }
 
 /**
@@ -31,8 +30,7 @@ export function clean(input: string, characters: (string | RegExp | (string | Re
  * @param input  The string
  * @param characters  he characters(s) to remove
  */
- export function cleanEnd(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquilivalent): string
- {
+ export function cleanEnd(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquilivalent): string {
      const re = (
         isString(characters)
          ? splitChars(characters).map(escapeRegExp).join('|')
@@ -50,8 +48,7 @@ export function clean(input: string, characters: (string | RegExp | (string | Re
  * @param input The string
  * @param characters The characters(s) to remove
  */
-export function cleanStart(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquilivalent): string
-{
+export function cleanStart(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquilivalent): string {
     const re = (
         isString(characters)
         ? splitChars(characters).map(escapeRegExp).join('|')

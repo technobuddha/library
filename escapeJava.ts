@@ -1,12 +1,12 @@
-import { empty }                        from './constants';
-
-const oct   = (c: number | undefined) => c !== undefined && (c >= 0x30 && c <= 0x37);
-const u     = (c: number) => '\\u' + c.toString(16).padStart(4, '0');
+import { empty }  from './constants';
+import { oct, u4 } from './_escape';
 
 /**
-  * Escape a string for use in Java
-  * @param input        The string to escape
-  */
+ * Escape a string for use in Java
+ * 
+ * @param input The string to escape
+ * @returns The string escaped for Java
+ */
 export function escapeJava(input: string): string {
     const output: string[] = [];
     for(let i = 0; i < input.length; ++i) {
@@ -28,7 +28,7 @@ export function escapeJava(input: string): string {
                 else if(u0 === 0x0000000d)
                     output.push('\\r');
                 else
-                    output.push(u(u0));
+                    output.push(u4(u0));
             }
             else if(u0 < 0x0000007f) {
                 if(u0 === 0x00000022)
@@ -41,15 +41,15 @@ export function escapeJava(input: string): string {
                     output.push(String.fromCharCode(u0));
             }
             else if(u0 < 0x000000a1)
-                output.push(u(u0));
+                output.push(u4(u0));
             else if(u0 < 0x00000100)
                 output.push(String.fromCharCode(u0));
             else if(u0 < 0x00010000)
-                output.push(u(u0));
+                output.push(u4(u0));
             else {
                 u0 = input.charCodeAt(i);
                 u1 = input.charCodeAt(++i);
-                output.push(u(u0), u(u1));
+                output.push(u4(u0), u4(u1));
             }
         }
     }

@@ -3,14 +3,14 @@ import splitChars from './splitChars';
 import build      from './build';
 
 /**
-  * Change a string to be all from the basic latin unicode plane
-  * @param input        The string
-  */
-export function toBasicLatin(input: string): string {
-    return build(compact(splitChars(input).map(c => convertToLatin[c])));
+ * Change a string to be all from the basic latin unicode plane
+ * @param input        The string
+ */
+export function toASCII(input: string): string {
+    return build(compact(splitChars(input).map(c => convertToASCII[c])));
 }
 
-const convertToLatin: Record<string, string> = {
+const convertToASCII: Record<string, string> = {
     "0": "0",
     "1": "1",
     "2": "2",
@@ -1862,4 +1862,4 @@ const convertToLatin: Record<string, string> = {
     "🄩": "(Z)"
 };
 
-export default toBasicLatin;
+export default toASCII;

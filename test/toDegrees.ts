@@ -1,9 +1,6 @@
 ﻿import 'mocha';
-import { expect, use } from 'chai';
-import chaiAlmost      from 'chai-almost';
-import toDegrees       from '../toDegrees';
-
-use(chaiAlmost());
+import { expect } from 'chai';
+import toDegrees from '../toDegrees';
 
 describe(
     'toDegrees',
@@ -51,4 +48,3 @@ describe(
         );
     }
 );
-

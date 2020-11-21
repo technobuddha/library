@@ -1,7 +1,9 @@
 /**
-  * Unescape a string encodeed in Java style
-  * @param input        The string to unescape
-  */
+ * Unescape a string encodeed in Java style
+ * 
+ * @param input The string to unescape
+ * @returns the string with escapes resolved
+ */
 export function unescapeJava(input: string): string {
     return input.replace(
         /\\(([bfnrt"'\\])|([0-7]{1,3})|(u[0-9a-fA-F]{4}))/g,

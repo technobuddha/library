@@ -1,7 +1,9 @@
 ﻿/**
-  * Unescape a string encodeed in HTML
-  * @param input        The string to unescape
-  */
+ * Unescape a string encodeed in HTML
+ * 
+ * @param input The string to unescape
+ * @returns the string with escapes resolved
+ */
 export function unescapeHTML(input: string): string {
     return input.replace(
         /&((#[0-9]+)|(#x[0-9a-f]+)|([a-z][a-z0-9]+));/gi,

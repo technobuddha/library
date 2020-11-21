@@ -2,9 +2,18 @@ import { month }    from './constants';
 import isLeapYear   from './isLeapYear';
 
 type Options = {
+    /** Use the UTC timezone */
     UTC?: boolean;
 }
 
+/**
+ * Determine the number of days in the month for a date
+ * 
+ * @param input The date
+ * @param __namedParameters see {@link Options}
+ * @default UTC false
+ * @returns The number of days in the specified month
+ */
 export function getDaysInMonth(input: Date, {UTC = false}: Options = {}): number {
     switch(UTC ? input.getUTCMonth() : input.getMonth()) {
         case month.april:

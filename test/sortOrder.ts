@@ -16,9 +16,9 @@ describe(
         );
 
         it(
-            'should support the only ingoreArticles option',
+            'should support the only moveArticles option',
             () => {
-                expect(sortOrder('the beatles', { ignoreArticles: false })).to.equal('the beatles');
+                expect(sortOrder('the beatles', { moveArticles: false })).to.equal('the beatles');
             }
         );
     }

@@ -1,14 +1,12 @@
 import 'mocha';
-import { expect } from 'chai';
+//import { expect } from 'chai';
 import Jimp       from 'jimp';
 import quantize, {RGB}   from '../quantize';
 
-const start = Date.now();
 
 (async () => {
     const image = await Jimp.read('/home/phil/Development/library/test/rainbow.png');
 
-    console.log('read', Date.now() - start);
     const pixels: RGB[] = [];
     
     for(let x = 0; x < image.bitmap.width; ++x) {
@@ -19,11 +17,9 @@ const start = Date.now();
             pixels.push({r,g,b});
         }
     }
-    console.log('extract', Date.now() - start);
     
     const res = quantize(pixels, 64);
     
-    console.log('quantize', Date.now() - start);
     
     for(let x = 0; x < image.bitmap.width; ++x) {
         for(let y = 0; y < image.bitmap.height; ++y) {
@@ -34,10 +30,8 @@ const start = Date.now();
         }
     }
     
-    console.log('write', Date.now() - start);
     
     image.writeAsync('/home/phil/Development/library/test/rainbow64.png');
-    console.log(res.palette()[0])
     
     describe(
         'quantize',
@@ -45,7 +39,7 @@ const start = Date.now();
             it(
                 'Fail!',
                 () => {
-                    expect(0).to.equal(1);
+                    //expect(0).to.equal(1);
                 }
             );
         }

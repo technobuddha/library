@@ -2,25 +2,30 @@ import { empty, space }  from './constants';
 import splitWords        from './splitWords';
 
 type Options = {
+    /** The width to wrap to */
     width?: number,
+    /** Line separator */
     separator?: string,
+    /** If true, dont limit breaks to word boundries */
     cut?: boolean,
+    /** If true, a space is preserved at the end of each line, ignored if cut is true */
     preserveSpaces?: boolean,
+    /** If true, spaces are added to the end of each line to make all lines equal width, ignored if cut or preserveSpaces is true */
     trailingSpaces?: boolean
 }
 
 /**
-  * Wrap text so that it fits within a area of fixed width
-  * @param input        The text to wrap
-  * @param options
-  * {
-  *        width:            The width to wrap to (default 75)
-  *        separator:        Line separator (default \n)
-  *        cut:            If true, dont limit breaks to word boundries (default false)
-  *        preserveSpaces:    If true, a space is preserved at the end of each line (default false - ignored if cut is true)
-  *        trailingSpaces:    If true, spaces are added to the end of each line to make all lines equal width (default false - ignored if cut or preserveSpaces is true)
-  * }
-  */
+ * Wrap text so that it fits within a area of fixed width
+ * 
+ * @param input the text to wrap
+ * @param options
+ * @default width 75
+ * @default separator \n
+ * @default cut default false
+ * @default preserveSpaces  false
+ * @default trailingSpaces false
+ * @returns wrapped text
+ */
 export function wordwrap(input: string, {width = 75, separator = '\n', cut = false, preserveSpaces = false, trailingSpaces = false}: Options = {}): string {
     if(width <= 0)
         return input;

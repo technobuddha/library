@@ -1,24 +1,34 @@
 import { space, ticksPerSecond, secondsPerMinute, secondsPerHour, secondsPerDay } from './constants';
-import isSameDay           from './isSameDay';
-import formatDate          from './formatDate';
-import addTime             from './addTime';
-import plural              from './plural';
+import isSameDay   from './isSameDay';
+import formatDate  from './formatDate';
+import addTime     from './addTime';
+import plural      from './plural';
 
-type Options = {
-    relativeTo?: Date,
-    todayTomorrowYesterday?: boolean,
-    agoFromNow?: boolean,
-    timeFormat?: string,
-    ymdFormat?: string,
-    mdFormat?: string,
+export type Options = {
+    /** Describe the time difference as a time on a nearby day  */
+    todayTomorrowYesterday?: boolean;
+    /** Passed to {@link formatDate} to display a time */
+    timeFormat?: string;
+    /** Passed to {@link formatSate} to display a year, month and day */
+    ymdFormat?: string;
+    /** Passed to {@link formatDate} to dislay a month and day */
+    mdFormat?: string;
 }
 
+
+/**
+ * Describe the difference between two dates in a simpe format
+ * 
+ * @param input The date
+ * @param relativeTo The date to compare to
+ * @param __namedParameters see {@link Options}
+ * @returns string describing the time difference between the two dates
+ */
 export function relativeTime(
     input: Date,
+    relativeTo: Date,
     {
-        relativeTo = new Date(),
         todayTomorrowYesterday = false,
-        agoFromNow = true,
         timeFormat = 'H:mm AMPM',
         ymdFormat = 'MMMM D YYYY',
         mdFormat = 'MMMM D',
@@ -26,10 +36,6 @@ export function relativeTime(
 )
 {
     const text  = [] as string[];
-    let   diff  = (input.getTime() - relativeTo.getTime()) / ticksPerSecond;
-    let   sign  = 1;
-
-    if(diff < 0) { sign = -1; diff = Math.abs(diff) }
 
     if(todayTomorrowYesterday) {
         if(isSameDay(input, relativeTo))
@@ -42,9 +48,12 @@ export function relativeTime(
             text.push(`yesterday, ${formatDate(input, timeFormat)}`);
         else
             text.push(`${formatDate(input, ymdFormat)} ${formatDate(input, timeFormat)}`);
-    }
+    } else {
+        let   diff  = (input.getTime() - relativeTo.getTime()) / ticksPerSecond;
+        let   sign  = 1;
+    
+        if(diff < 0) { sign = -1; diff = Math.abs(diff) }
 
-    if(agoFromNow) {
         const d = Math.floor((diff) / secondsPerDay);
         const h = Math.floor((diff - d * secondsPerDay) / secondsPerHour);
         const m = Math.floor((diff - d * secondsPerDay - h * secondsPerHour) / secondsPerMinute);

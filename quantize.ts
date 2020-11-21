@@ -1,6 +1,9 @@
 import {compareNumbers} from './compare';
 import PriorityQueue    from './priority-queue';
- 
+
+
+// TODO THis needs cleanup, and consolidation of the comments and copyright notices
+
 /*
  * quantize.js Copyright 2008 Nick Rabinowitz
  * Ported to node.js by Olivier Lesnicki
@@ -15,22 +18,8 @@ import PriorityQueue    from './priority-queue';
  * 
  * @author Nick Rabinowitz
  * @example
- 
-// array of pixels as [R,G,B] arrays
-var myPixels = [[190,197,190], [202,204,200], [207,214,210], [211,214,211], [205,207,207]
-                // etc
-                ];
-var maxColors = 4;
- 
-var cmap = MMCQ.quantize(myPixels, maxColors);
-var newPalette = cmap.palette();
-var newPixels = myPixels.map(function(p) { 
-    return cmap.map(p); 
-});
- 
  */
-
-// private constants
+ 
 const SIGNIFICANT_BITS      = 5;
 const SHIFT                 = 8 - SIGNIFICANT_BITS;
 const MAX_ITERATIONS        = 1000;

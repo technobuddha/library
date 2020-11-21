@@ -41,6 +41,15 @@ const myString      = re`${mmm}${sep}${yyyy}`;
 const ymString      = re`${yyyy}${sep}${mmm}`;
 const yNumeric      = re`${yyyy}`;
 
+/**
+ * Parse a string into a Date object
+ * 
+ * @remarks this is a little more generous about what formats it will take for a date, and if it can't match the input to one of it's supported formats it falls
+ * back to new Date(text)
+ * 
+ * @param text The string containing a date
+ * @returns new Date object
+ */
 export function parseDate(text: string): Date {
     const now = new Date();
     const gmt = now.getTimezoneOffset();

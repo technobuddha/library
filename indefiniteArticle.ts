@@ -15,9 +15,23 @@ const TESTS: [string, RegExp][] = [
 ]
 
 type Options = {
+    /** only return the indefinite article, do not combine with the input */
     only?: boolean,
 }
 
+/**
+ * Determine the appropiate indefinite article to use with a word.
+ * 
+ * @remarks The answer is derived from a simple rules engine, it attempts to cover most exceptions
+ * to the rules, but the English language has lots of quirks, and this rules engine can not cover them
+ * all
+ * 
+ * @param word The word
+ * @param __namedParameters see {@link Options}
+ * @default only false
+ * @returns The appropiate indefinite article ("a" or "an") combined with the input word.  If the only
+ * option is used, only the indefinite article is returned.
+ */
 export function indefiniteArticle(word: string, {only = false}: Options = {}): string {
     let result = 'a';
     for(const [article, rule] of TESTS) {
@@ -275,8 +289,5 @@ for(const [a, w] of [
 ['a',  'zoo'],
 ]) {
     const ia = indefiniteArticle(w);
-
-    if(a !== ia)
-        console.log(ia, w, '=>', a, w);
 }
 */

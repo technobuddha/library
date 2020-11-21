@@ -1,9 +1,6 @@
 ﻿import 'mocha';
-import { expect, use } from 'chai';
-import chaiAlmost      from 'chai-almost';
-import toRadians       from '../toRadians';
-
-use(chaiAlmost());
+import { expect } from 'chai';
+import toRadians from '../toRadians';
 
 describe(
     'toRadians',
@@ -39,4 +36,3 @@ describe(
         );
     }
 );
-

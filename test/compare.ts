@@ -114,12 +114,16 @@ describe(
         );
 
         it(
-            'should do compares versions',
+            'should compare versions',
             () => {
                 expect(compareStrings('1.1', '1.1', { version: true })).to.equal(0);
-                expect(compareStrings('1.1', '1.2', { natural: true })).to.equal(-1);
-                expect(compareStrings('1.1', '1.1a', { natural: true })).to.equal(-1);
-                expect(compareStrings('1.1.1.1', '1.1.1a', { natural: true })).to.equal(-1);
+                expect(compareStrings('1.1', '1.2', { version: true })).to.equal(-1);
+                expect(compareStrings('1', '1.1', { version: true })).to.equal(-1);
+                expect(compareStrings('1.1', '1.1a', { version: true })).to.equal(-1);
+                expect(compareStrings('1.1.1.1', '1.1.1a', { version: true })).to.equal(-1);
+
+                expect(compareStrings('1-1', '1-1', { version: true })).to.equal(0);
+                expect(compareStrings('1-1', '1.1', { version: true })).to.equal(0);
             }
         );
     }

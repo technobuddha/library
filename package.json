@@ -11,7 +11,7 @@
     "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
     "version": "npm-run-all clean build document",
     "postversion": "git push && git push --tags",
-    "tests": "ts-mocha test/*.ts",
+    "test": "ts-mocha test/*.ts",
     "lint": "eslint --ext .ts *.ts",
     "document": "npm-run-all document:clean document:generate",
     "document:clean": "rm -rf doc",
@@ -35,6 +35,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
+    "@types/chai-almost": "^1.0.1",
     "@types/lodash": "^4.14.165",
     "@types/mocha": "^8.0.3",
     "@types/node": "^14.14.6",

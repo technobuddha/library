@@ -1,4 +1,4 @@
-import isPrimitive                                                            from './isPrimitive';
+import isPrimitive  from './isPrimitive';
 import isNull from 'lodash/isNull';
 import isUndefined from 'lodash/isUndefined';
 import isString from 'lodash/isString';
@@ -7,10 +7,13 @@ import isBoolean from 'lodash/isBoolean';
 import isSymbol from 'lodash/isSymbol';
 
 /**
-  * Convert an object into its primitive (string, number, etc.) value
-  */
-export function toPrimitive(input: any, hint: ('string' | 'number' | 'default') = 'default'): any
-{
+ * Convert an object into its primitive (string, number, etc.) value
+ * 
+ * @param input the object
+ * @param hint A "hint" as to what the type should be.  "string", "number" or "default"
+ * @returns primitive value
+ */
+export function toPrimitive(input: any, hint: ('string' | 'number' | 'default') = 'default'): any {
     let wrapper = input;
 
     if(isPrimitive(input)) {

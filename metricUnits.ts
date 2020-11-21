@@ -3,7 +3,7 @@ import { formatNumber }         from './formatNumber';
 import isNil                    from 'lodash/isNil';
 import round                    from 'lodash/round';
 
-export type MeticUnitOptions = {
+export type Options = {
     /**
      * format specification to pass to @link{formatNumber}
      */
@@ -40,7 +40,7 @@ export function metricUnits(
         micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'],
         unit = 1000,
         precision = 2,
-    }:  MeticUnitOptions = {},
+    }:  Options = {},
 ):  string
 {
     let number  = Math.abs(input);
@@ -62,25 +62,4 @@ export function metricUnits(
     return (isNil(format) ? round(number, precision).toString() : formatNumber(round(number, precision), format)) + suffix;
 }
 
-export type BinaryUnitsOptions = Omit<MeticUnitOptions, 'macro' | 'micro' | 'unit'>;
-
-/**
-  * Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 => 1K)
-  * @param input The number to abbreviate
-  * @param __namedParameters see {@link BinaryUnitsOptions}
-  * }
-  */
-export function binaryUnits(input: number, {format, precision = 2}: BinaryUnitsOptions = {}): string {
-    return metricUnits(
-        input,
-        {
-            format,
-            macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
-            micro: [],
-            unit: 1024,
-            precision
-        }
-    ) + 'B';
-}
-
-export default {metricUnits, binaryUnits};
+export default metricUnits;

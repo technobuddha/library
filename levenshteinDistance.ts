@@ -1,10 +1,20 @@
-import create2DArray    from './create2DArray';
-import isWhitespace        from "./isWhitespace";
+import create2DArray  from './create2DArray';
+import isWhitespace   from "./isWhitespace";
 
 type Options = {
+    /** The compairson will ignore case */
     caseInsensitive?: boolean;
 }
 
+/**
+ * Compute the levenshtein distance between two strings (similarity)
+ * 
+ * @param input The string
+ * @param comparedTo The string to compare to
+ * @param __namedParameters see {@link Options}
+ * @default caseInsensitive true
+ * @returns the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
+ */
 export function levenshteinDistance(input: string, comparedTo: string, {caseInsensitive = true}: Options = {}):    number {
     if(isWhitespace(input) || isWhitespace(comparedTo))
         return 0.0;

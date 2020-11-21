@@ -1,9 +1,6 @@
 ﻿import 'mocha';
-import { expect, use } from 'chai';
-import chaiAlmost      from 'chai-almost';
-import normalizeAngle  from '../normalizeAngle';
-
-use(chaiAlmost());
+import { expect } from 'chai';
+import normalizeAngle from '../normalizeAngle';
 
 describe(
     'normalizeAngle',
@@ -39,4 +36,3 @@ describe(
         );
     }
 );
-

@@ -30,24 +30,6 @@ describe(
                 expect(escapeHTML('ABCdef[~]')).to.equal('ABCdef[~]');
             }
         );
-
-        it(
-            'should extended entities',
-            () => {
-                expect(escapeHTML('ΑΒΓΔΕΖ')).to.equal('ΑΒΓΔΕΖ');
-                expect(escapeHTML('ΑΒΓΔΕΖ', { mode: 'extended' })).to.equal('&Alpha;&Beta;&Gamma;&Delta;&Epsilon;&Zeta;');
-                expect(escapeHTML('ΑΒЖК', { mode: 'extended' })).to.equal('&Alpha;&Beta;ЖК');
-            }
-        );
-
-        it(
-            'should encode non-ascii',
-            () => {
-                expect(escapeHTML('ΑΒΓΔΕΖ', { escapeNonAscii: true })).to.equal('&#913;&#914;&#915;&#916;&#917;&#918;');
-                expect(escapeHTML('ΑΒΓΔΕΖ', { mode: 'extended', escapeNonAscii: true })).to.equal('&Alpha;&Beta;&Gamma;&Delta;&Epsilon;&Zeta;');
-                expect(escapeHTML('ΑΒЖК', { mode: 'extended', escapeNonAscii: true })).to.equal('&Alpha;&Beta;&#1046;&#1050;');
-            }
-        );
     }
 );
 

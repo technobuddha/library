@@ -1,17 +1,19 @@
 import isNil from 'lodash/isNil';
 
-type Options = {
+export type Options = {
+    /** The refix string to remove */
     prefix?: string;
+    /** The suffix string to remove */
     suffix?: string;
 }
 
 /**
-  * Extract the root word, removing a prefix and/or suffix
-  * @param input        The word, which might have {@code prefix} before it, and {@code suffix} after it.
-  * @param prefix        The prefix
-  * @param suffix        The suffix
-  * @returns            The root word
-  */
+ * Extract the root word, removing a prefix and/or suffix
+ * 
+ * @param input The word, which might have {@code prefix} before it, and {@code suffix} after it.
+ * @param __namedParameters see {@link Options}
+ * @returns The root word
+ */
 export function root(input: string, {prefix, suffix}: Options = {}): string {
     if(!isNil(prefix)) {
         if(input.startsWith(prefix))

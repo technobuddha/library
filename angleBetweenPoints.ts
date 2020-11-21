@@ -1,5 +1,5 @@
+import {Cartesian} from './coordinates';
 import normalizeAngle from './normalizeAngle';
-import {Cartesian}    from './coordinates';
 
 /**
  * Computes the angle between two points (x1,y1) and (x2,y2).

@@ -1,8 +1,10 @@
 
 /**
-  * Unescape a string encodeed in Javascript style
-  * @param input        The string to unescape
-  */
+ * Unescape a string encodeed in Javascript style
+ * 
+ * @param input the string to unescape
+ * @returns the string with escapes resolved
+ */
 export function unescapeJS(input: string): string {
     return input.replace(
         /\\(([bfnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]{2})|(u[0-9a-fA-F]{4})|(u\{[0-9a-fA-F]{1,}\})|.)/g,

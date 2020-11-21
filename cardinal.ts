@@ -2,13 +2,19 @@ import isFinite         from 'lodash/isFinite';
 import isNaN            from 'lodash/isNaN';
 import { empty, space } from './constants';
 
-type Options = Options1000 & {
+export type Options = OptionsCardinal & OptionsIllion;
+
+export type OptionsCardinal = {
+    /** The number of groups to output, each group consists of three digits. */
     groups?: number;
+    /** Use numbers instead of words for the group value, the group name is still output as text */
     digits?: boolean;
 }
 
-type Options1000 = {
+export type OptionsIllion = {
+    /** Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" */
     and?: string;
+    /** Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one" */
     hyphen?: string;
 }
 
@@ -21,6 +27,21 @@ const TEN               = 10;
 const TWENTY            = 20;
 const ONE_HUNDRED       = 100;
 
+/**
+ * Convert a number into text (the cardinal number)
+ * 
+ * @remark There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
+ * up to uncentillions (1e308).
+ * 
+ * @param input The number
+ * @param __namedParameters see {@link Options} 
+ * @returns The number spelled out
+ * 
+ * @default groups Infinity
+ * @default digits false
+ * @default and (empty)
+ * @default hyphen (space)
+ */
 export function cardinal(input: number, {groups = Infinity, digits = false, ...options}: Options = {}): string {
     const words     = [] as (string | string[])[];
 
@@ -76,7 +97,7 @@ function breakdown(value: number, groups: number): {mantissa: string, exponent: 
     return {mantissa, exponent}
 }
 
-function ordinal1000(input: number, {and, hyphen = space}: Options1000 = {}): string[] {
+function ordinal1000(input: number, {and, hyphen = space}: OptionsIllion = {}): string[] {
     const words    = [] as string[];
 
     if(input >= ONE_HUNDRED) {
@@ -106,7 +127,7 @@ type IllionReturn = {
     word: string | null;
 }
 
-export function illion(mantissa: string, exponent: number): IllionReturn {
+function illion(mantissa: string, exponent: number): IllionReturn {
     let factor   = Math.floor((exponent - 3) / 3);
     let quantity = 0;
 
@@ -193,11 +214,34 @@ export function illion(mantissa: string, exponent: number): IllionReturn {
     return { quantity, mantissa, exponent, word };
 }
 
+/**
+ * Get the spelled out word for an exponent
+ * 
+ * @remarks This is only using the exponent, There is no limit to the numbers this function can represents, however Javascript/Typescript can only represent
+ * numbers up to 1e308, which limits the numbers that this method can represent to 10^10^308 which is really really big.
+ * 
+ * @example 6 is "million"
+ * @example 303 is "centillion"
+ * @param exponent The exponent to convert
+ * @returns Order of Magnitude as text
+ */
 export function orderOfMagnitude(exponent: number): string | null {
     return illion('000', exponent).word;
 }
 
-export function summarize(input: number, options: Options1000 = {}): string {
+/**
+ * Get a short description of a number
+ * 
+ * @remarks this is a shortcut to calling cardinal with options {groups: 1, digits: true}
+ * 
+ * @example 1000000 "1 million"
+ * @example 101323847382459 "101 trillion"
+ * 
+ * @param input number to convert
+ * @param options see {@link OptionsIllion}
+ * @return number as text
+ */
+export function summarize(input: number, options: OptionsIllion = {}): string {
     return cardinal(input, {groups: 1, digits: true, ...options})
 }
 

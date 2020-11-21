@@ -9,7 +9,7 @@ describe(
         it(
             'should find the beginning of the week',
             () => {
-                expect(getBeginningOfWeek(new Date('20 Jul 1969 20:18')).toString()).to.equal(new Date('14 Jul 1969').toString());
+                expect(getBeginningOfWeek(new Date('20 Jul 1969 20:18')).toString()).to.equal(new Date('20 Jul 1969').toString());
             }
         );
 
@@ -29,7 +29,7 @@ describe(
         it(
             'should find the UTC beginning of the week',
             () => {
-                expect(getBeginningOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true }).toString()).to.equal(new Date(Date.UTC(1969, month.july, 14)).toString());
+                expect(getBeginningOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true }).toString()).to.equal(new Date(Date.UTC(1969, month.july, 20)).toString());
             }
         );
 

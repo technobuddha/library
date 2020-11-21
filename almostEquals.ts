@@ -11,8 +11,8 @@ export type Options = {
  * @param a First number to compare.
  * @param b Second number to compare.
  * @param __namedParameters see {@link Options}
- * @defaultValue tolerance 0
- * @return true if _a_ and *b* are nearly equal.
+ * @default tolerance 0
+ * @return true if *a* and *b* are nearly equal.
  */
 export function almostEquals(a: number, b: number, {tolerance = 0}: Options = {}): boolean
 {

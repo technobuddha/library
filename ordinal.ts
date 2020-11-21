@@ -10,12 +10,12 @@ import isInteger    from 'lodash/isInteger';
 // thousandth
 // millionth
 
-// TODO this needs an overhaul
+// TODO this needs an overhaul and some documentation
 
 /**
-  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
-  * @param input    The number to convert
-  */
+ * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
+ * @param input    The number to convert
+ */
 export function ordinal(input: number): string
 {
     if(isNaN(input))

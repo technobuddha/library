@@ -1,8 +1,11 @@
 import { empty } from './constants';
 
 /**
-  * Decode a UTF8 encoded string into unicode
-  */
+ * Decode a UTF8 encoded string into unicode
+ * 
+ * @param input the utf encoded string
+ * @returns the decoded strings (which is encoded as UTF-16 by javascript)
+ */
 export function decodeUTF8(input: string): string {
     let result = empty;
 

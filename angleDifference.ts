@@ -3,7 +3,7 @@ import normalizeAngle from './normalizeAngle';
 /**
  * Computes the difference between startAngle and endAngle (angles in radians).
  * 
- * @param  startAngle Start angle in radians.
+ * @param startAngle Start angle in radians.
  * @param endAngle End angle in radians.
  * @returns The number of radians that when added to *startAngle* will result in *endAngle*.
  * 
@@ -22,8 +22,7 @@ import normalizeAngle from './normalizeAngle';
  * 
  * angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
  */
-export function angleDifference(startAngle: number, endAngle: number): number
-{
+export function angleDifference(startAngle: number, endAngle: number): number {
     let d = normalizeAngle(endAngle) - normalizeAngle(startAngle);
     if(d > Math.PI)
         d -= Math.PI * 2;

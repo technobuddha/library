@@ -6,7 +6,10 @@ export class TimeoutError extends Error {
     }
 }
 
-export type Options      = RequestInit & {timeout?: number};
+export type Options = RequestInit & {
+    /** The number of milliseconds before timeout */
+    timeout?: number
+};
 
 /**
  * Fetch a remote resource
@@ -14,7 +17,7 @@ export type Options      = RequestInit & {timeout?: number};
  * @see https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
  * @see https://developer.mozilla.org/en-US/docs/Web/API/Request/Request
  * @param url - The url of a resource that you wish to fetch
- * @param . - milliseconds before timeout
+ * @param __namedParameters see {@link Options}
  * 
  * @throws TimeoutError when timeout occurs
  */

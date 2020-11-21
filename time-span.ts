@@ -1,17 +1,28 @@
 import isString from 'lodash/isString';
-import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond }    from './constants';
+import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond, hoursPerDay, minutesPerHour, secondsPerMinute } from './constants';
 
 // TODO UNIT tests
 
-export class TimeSpan
-{
+/**
+ * Store and manipulate a duration of time
+ */
+export class TimeSpan {
+    /**
+     * 
+     * @param text formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be ommitted
+     * @param ticks the number of ticks (milliseconds)
+     * @param d Days
+     * @param h Hours
+     * @param m minutes
+     * @param s seconds
+     * @param ms milliseconds
+     */
     constructor(text: string)
     constructor(ticks: number)
-    constructor(h: number, m: number, s:number)
+    constructor(h: number, m: number, s: number)
     constructor(d: number, h: number, m: number, s: number)
     constructor(d: number, h: number, m: number, s: number, ms: number)
-    constructor(...args: any[])
-    {
+    constructor(...args: any[]) {
         let sign    = 1;
         let d       = 0;
         let h       = 0;
@@ -72,50 +83,89 @@ export class TimeSpan
 
     private clicks: number;
 
+    /**
+     * Get the days portion
+     */
     public get days(): number {
         return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerDay);
     }
 
+    /**
+     * Get the hours portion
+     */
     public get hours(): number {
-        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerHour) % 24;
+        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerHour) % hoursPerDay;
     }
 
+    /**
+     * Get the minutes portion
+     */
     public get minutes(): number { 
-        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerMinute) % 60; 
+        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerMinute) % minutesPerHour; 
     }
 
+    /**
+     * Get the seconds portion
+     */
     public get seconds(): number {
-        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerSecond) % 60; 
+        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerSecond) % secondsPerMinute; 
     }
 
+    /**
+     * Get the milliseconds portion
+     */
     public get milliseconds(): number {
-        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks)) % 1000;
+        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks)) % ticksPerSecond;
     }
 
+    /** 
+     * Get the total number of ticks (milliseconds)
+     */
     public get ticks(): number {
         return this.clicks;
     }
 
+    /**
+     * Get the total number of days
+     */
     public get totalDays(): number {
         return this.clicks / ticksPerDay;
     }
 
+    /**
+     * Get the total number of hours
+     */
     public get totalHours(): number {
         return this.clicks / ticksPerHour;
     }
 
+    /**
+     * Get the total number of minutes
+     */
     public get totalMinutes(): number {
         return this.clicks / ticksPerMinute;
     }
 
+    /**
+     * Get the total number of seconds
+     */
     public get totalSeconds(): number {
         return this.clicks / ticksPerSecond; 
     }
 
+    /**
+     * Get the total number of milliseconds
+     */
     public get totalMilliseconds(): number {
         return this.clicks;
     }
 
+    /**
+     * Format the timespan using a mask
+     * 
+     * @param mask The mask
+     * @returns the formatted TimeSpan 
+     */
     public format(mask?: string): string {
         if(mask) {
             const D       = this.days;
@@ -160,14 +210,32 @@ export class TimeSpan
         }
     }
 
+    /**
+     * Convert the TimeSpan to a string
+     * 
+     * @returns formatted string
+     */
     public toString(): string {
         return this.format();
     }
 
+    /**
+     * Add two timespans
+     * 
+     * @param other TimeSpan to add to this
+     * @returns a TimeSpan that is the sum of two timespans
+     */
     public add(other: TimeSpan): TimeSpan {
         return new TimeSpan(this.ticks + other.ticks);
     }
 
+    /**
+     * Compare two TimeSpans
+     * 
+     * @param t1 First TimeSpan
+     * @param t2 Second TimeSpan
+     * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the firt is greater
+     */
     public static compare(t1: TimeSpan, t2: TimeSpan): number {
         return t1.ticks === t2.ticks ? 0 : Math.abs(t1.ticks) > Math.abs(t2.ticks) ? 1 : -1;
     }

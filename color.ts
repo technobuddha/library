@@ -1,5 +1,5 @@
-import toRadians                from './toRadians';
-import toDegrees                from './toDegrees';
+import toRadians from './toRadians';
+import toDegrees from './toDegrees';
 
 //#region RGB
 export class RGB {

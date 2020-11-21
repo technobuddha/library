@@ -1,11 +1,13 @@
 
 /**
-  * Unescape a string encodeed in C style
-  * @param input        The string to unescape
-  */
+ * Unescape a string encodeed in C style
+ * 
+ * @param input The string to unescape
+ * @returns the string with escapes resolved
+ */
 export function unescapeC(input: string): string {
     return input.replace(
-        /\\(([abefnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]+)|(U[0-9a-fA-F]{8})|(u[0-9a-fA-F]{4})|.)/g,
+        /\\(([abefnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]+)|(U[0-9a-fA-F]{8})|(u[0-9a-fA-F]{4})|.)/gu,
         escape => {
             const c = escape.charAt(1);
 
@@ -26,7 +28,7 @@ export function unescapeC(input: string): string {
             if(c === 'v')
                 return '\v';
             if(c >= '0' && c <= '7')
-                return String.fromCodePoint(Number.parseInt(escape, 8));
+                return String.fromCodePoint(Number.parseInt(escape.substr(1), 8));
             if(c === 'x')
                 return String.fromCodePoint(Number.parseInt(escape.substr(2), 16));
             if(c === 'U' || c === 'u')

@@ -2,7 +2,6 @@ import isUndefined  from 'lodash/isUndefined';
 import isNil        from 'lodash/isNil';
 import isNull       from 'lodash/isNull';
 import isNaN        from 'lodash/isNaN';
-import defaultTo    from 'lodash/defaultTo';
 import toPrimitive  from './toPrimitive';
 
 /**
@@ -61,6 +60,7 @@ export function compare(x: unknown, y: unknown): number {
 
 /**
  * Compare two numbers
+ * 
  * @param a First object
  * @param b  Second object
  * @returns 0 if a == b; -1 if a < b; 1 if a > b
@@ -74,18 +74,26 @@ export function compare(x: unknown, y: unknown): number {
  }
 
  type Options = {
+    /** if true, strings are to be compared case insensitive */ 
     caseInsensitive?: boolean,
+    /** if true, compare numeric portions of the string as numbers */
     natural?: boolean,
+    /** if true, compare strings as version numbers */
     version?: boolean
 };
 
 /**
-  * Compare two strings
-  * @param a                First object
-  * @param b                Second object
-  * @param caseInsesitive    True if strings are to be compared case insensitive (default false)
-  * @returns                0 if a == b; -1 if a < b; 1 if a > b
-  */
+ * Compare two strings
+ * 
+ * @param a First string
+ * @param b Second string
+ * @param caseInsesitive True if strings are to be compared case insensitive (default false)
+ * @returns 0 if a == b; -1 if a < b; 1 if a > b
+ * 
+ * @default caseInsensitive false
+ * @default natural false
+ * @default version false
+ */
 export function compareStrings(
     text1: string | null,
     text2: string | null,
@@ -102,8 +110,8 @@ export function compareStrings(
     }
 
     if(version) {
-        const v1 = text1.trim().split('.');
-        const v2 = text2.trim().split('.');
+        const v1 = text1.trim().split(/[.-]/);
+        const v2 = text2.trim().split(/[.-]/);
         const count = Math.max(v1.length, v2.length);
         let   order = 0 as (-1 | 0 | 1);
 
@@ -113,8 +121,8 @@ export function compareStrings(
 
         return order || compareNumbers(v1.length, v2.length);
     } else if(natural) {
-        const t1 = defaultTo(text1.match(/(\.\d+|\d+|\D+)/g), []);
-        const t2 = defaultTo(text2.match(/(\.\d+|\d+|\D+)/g), []);
+        const t1 = text1.match(/(\.\d+|\d+|\D+)/g) ?? [];
+        const t2 = text2.match(/(\.\d+|\d+|\D+)/g) ?? [];
         const count = Math.min(t1.length, t2.length);
         let order = 0 as (-1 | 0 | 1);
 

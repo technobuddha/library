@@ -6,11 +6,15 @@ function sameValue(x: any, y: any) {
         return x !== x && y !== y;
 }
 
-export function shallowEquals(
-    objA: Record<string, unknown> | null | undefined,
-    objB: Record<string, unknown> | null | undefined,
-    exclude: string[] = []
-): boolean {
+/**
+ * Compare two object for equality.  Testing goes one level deep.
+ * 
+ * @param objA First object to compare
+ * @param objB Second object to compare
+ * @param exclude Array of key names to exclude from the comparison
+ * @returns true if the two objects have the same members
+ */
+export function shallowEquals(objA: Record<string, unknown> | null | undefined, objB: Record<string, unknown> | null | undefined, exclude: string[] = []): boolean {
     if (sameValue(objA, objB))
         return true;
 
@@ -25,8 +29,7 @@ export function shallowEquals(
     if (keysA.length !== keysB.length)
         return false;
 
-    for (const key of keysA)
-    {
+    for (const key of keysA) {
         if (!Object.prototype.hasOwnProperty.call(objB, key) || !sameValue(objA[key], objB[key]))
             return false;
     }

@@ -4,14 +4,14 @@ import getIndent  from '../getIndent';
 
 
 describe(
-    'getgetIndent',
+    'getIndent',
     () => {
         it(
             'should getIndent lines',
             () => {
                 expect(getIndent('It was the best of times.\nIt was the worst of times.')).to.equal(0);
-                expect(getIndent('\tIt was the best of times.\n\tIt was the worst of times.')).to.equal(1);
-                expect(getIndent('\tIt was the best of times.\n\t\tIt was the worst of times.')).to.equal(1);
+                expect(getIndent(' It was the best of times.\n It was the worst of times.')).to.equal(1);
+                expect(getIndent(' It was the best of times.\n  It was the worst of times.')).to.equal(1);
             }
         );
 

@@ -1,16 +1,14 @@
-import { Dictionary }                       from 'lodash';
 import { secondsPerHour, secondsPerMinute } from './constants';
 import padNumber                            from './padNumber';
 import ordinal                              from './ordinal';
 import getDayOfYear                         from './getDayOfYear';
-import getWeekOfYear                        from './getWeekOfYear';
+import getWeekOfYear                        from './getISOWeekOfYear';
 import getTimezone                          from './getTimezone';
 import getJulian                            from './getJulian';
 import getDayOfWeek                         from './getDayOfWeek';
 
-const tokenizer            = /[hHmfDO]{1,2}|s{1,3}|YYYY|YY|[Md]{1,4}|W([wy]{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|AD|BC|CE|BCE|E{2,3}|J|Q|"[^"]*"|'[^']*'/g;
-const masks: Dictionary<string>    =
-{
+const tokenizer = /[hHmfDO]{1,2}|s{1,3}|YYYY|YY|[Md]{1,4}|W([wy]{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|AD|BC|CE|BCE|E{2,3}|J|Q|"[^"]*"|'[^']*'/g;
+const masks: Readonly<Record<string, string>> = Object.freeze({
     'default':          'YYYY-MM-DD hh:mm:ss.ff GMT',
     'rfc1123':          'ddd, DD MMM YYYY hh:mm:ss GMT',
     'asctime':          'ddd MMM DD hh:mm:ss',
@@ -42,7 +40,7 @@ const masks: Dictionary<string>    =
     'ISOOrdinal':       'YYYY-OO',
 
     'cookie':           'dddd, DD MMM YYYY hh:mm:ss GMT'
-};
+});
 const dayOne        = [ 'u', 'M', 'T', 'W', 'R', 'F', 'S'];
 const dayTwo        = [ 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa' ];
 const dayAbbrev     = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat' ];
@@ -50,23 +48,32 @@ const dayName       = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 
 const monthAbbrev   = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ];
 const monthName     = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ];
 
-type FormatDateOptions = { 
+type Options = {
+    /** Format the date in the UTC timezone */
     UTC?: boolean
 };
 
-export function formatDate(input: Date, mask: string, {UTC = false}: FormatDateOptions = {}): string
+/**
+ * Format a date
+ * 
+ * @param input The date
+ * @param mask The mask
+ * @param __namedParameters see {@link Options}
+ * @default UTC false
+ */
+export function formatDate(input: Date, mask: string, {UTC = false}: Options = {}): string
 {
     mask   = masks[mask] || mask || masks['default'];
 
-    const da    = UTC ? input.getUTCDate()          : input.getDate();
-    const dy    = UTC ? input.getUTCDay()           : input.getDay();
-    const mo    = UTC ? input.getUTCMonth()         : input.getMonth();
-    const yr    = UTC ? input.getUTCFullYear()      : input.getFullYear();
-    const ho    = UTC ? input.getUTCHours()         : input.getHours();
-    const mi    = UTC ? input.getUTCMinutes()       : input.getMinutes();
-    const se    = UTC ? input.getUTCSeconds()       : input.getSeconds();
-    const ms    = UTC ? input.getUTCMilliseconds()  : input.getMilliseconds();
-    const o     = UTC ? 0                           : input.getTimezoneOffset();
+    const da = UTC ? input.getUTCDate()          : input.getDate();
+    const dy = UTC ? input.getUTCDay()           : input.getDay();
+    const mo = UTC ? input.getUTCMonth()         : input.getMonth();
+    const yr = UTC ? input.getUTCFullYear()      : input.getFullYear();
+    const ho = UTC ? input.getUTCHours()         : input.getHours();
+    const mi = UTC ? input.getUTCMinutes()       : input.getMinutes();
+    const se = UTC ? input.getUTCSeconds()       : input.getSeconds();
+    const ms = UTC ? input.getUTCMilliseconds()  : input.getMilliseconds();
+    const o  = UTC ? 0                           : input.getTimezoneOffset();
 
     return mask.replace (
         tokenizer,
@@ -106,16 +113,16 @@ export function formatDate(input: Date, mask: string, {UTC = false}: FormatDateO
                 //TODO the year might shift for ISO formats            WOY:        padNumber(getWeekOfYear(input), 0),        //Week of Year (1-53)    //TODO pad(0) & pad(2) versions
                 case 'TZ':          return getTimezone(o);                            
                 case 'GMT':         return getTimezone(o, { GMT: true });
-                case 'AM':          return ho < 12 ? 'AM'   : '';                    //AM  / --
-                case 'PM':          return ho < 12 ? ''     : 'PM';                //--  / PM
-                case 'T':           return ho < 12 ? 'A'    : 'P';                    //A   / P
-                case 'TT':          return ho < 12 ? 'AM'   : 'PM';                //AM  / PM
-                case 'AD':          return yr < 1 ? ''      : 'AD';                //--  / AD
-                case 'BC':          return yr < 1 ? 'BC'    : '';                    //BC  / --
-                case 'CE':          return yr < 1 ? ''      : 'CE';                //--  / CE
-                case 'BCE':         return yr < 1 ? 'BCE'   : '';                    //BCE / --
-                case 'EE':          return yr < 1 ? 'BC'    : 'AD';                //BC  / AD
-                case 'EEE':         return yr < 1 ? 'BCE'   : 'CE';                //BCE / CE
+                case 'AM':          return ho < 12 ? 'AM'   : '';    //AM  / --
+                case 'PM':          return ho < 12 ? ''     : 'PM';  //--  / PM
+                case 'T':           return ho < 12 ? 'A'    : 'P';   //A   / P
+                case 'TT':          return ho < 12 ? 'AM'   : 'PM';  //AM  / PM
+                case 'AD':          return yr < 1 ? ''      : 'AD';  //--  / AD
+                case 'BC':          return yr < 1 ? 'BC'    : '';    //BC  / --
+                case 'CE':          return yr < 1 ? ''      : 'CE';  //--  / CE
+                case 'BCE':         return yr < 1 ? 'BCE'   : '';    //BCE / --
+                case 'EE':          return yr < 1 ? 'BC'    : 'AD';  //BC  / AD
+                case 'EEE':         return yr < 1 ? 'BCE'   : 'CE';  //BCE / CE
                 case 'J':           return padNumber(Math.floor(getJulian(input)), 0);
                 case 'Q':           return padNumber(Math.floor((mo + 3) / 3), 0);
                 //RM:        Month in roman numerals (UC);

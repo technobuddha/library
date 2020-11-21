@@ -18,7 +18,7 @@ describe(
             () => {
                 expect(escapeJS('\0')).to.equal('\\0');
                 expect(escapeJS('\0X')).to.equal('\\0X');
-                expect(escapeJS('\x000')).to.equal('\\0000');
+                expect(escapeJS('\x000')).to.equal('\\x000');
             }
         );
 

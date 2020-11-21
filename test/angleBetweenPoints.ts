@@ -1,5 +1,5 @@
 ﻿import 'mocha';
-import { expect }         from 'chai';
+import { expect } from 'chai';
 import angleBetweenPoints from '../angleBetweenPoints';
 
 describe(
@@ -28,4 +28,3 @@ describe(
         );
     }
 );
-

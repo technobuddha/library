@@ -1,5 +1,5 @@
-const find                              = /[\u00A0–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/g;
-const replace: Record<string, string>   = {
+const find = /[\u00A0–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/g;
+const replace: Readonly<Record<string, string>>   = Object.freeze({
     "\u00A0": " ",
     "–":      "-",
     "—":      "-",
@@ -26,13 +26,14 @@ const replace: Record<string, string>   = {
     "⇔":     "<=>",
     "☹":     ":(",
     "☺":     ":)"
-};
+});
 
 /**
-  * Microsoft word changes some special characters to make it look better, this will change them back to simple form
-  * @param    input        The mangled string
-  * @returns            {@code input} with special characters replaces
-  */
+ * Correct character sequeces that Microsoft Word changes to make it look prettier
+ * 
+ * @param input The mangled string
+ * @returns string with special characters corrected
+ */
 export function correctMSWord(input: string): string {
     return input.replace(find, a => replace[a] ?? a);
 }

@@ -1,20 +1,22 @@
 import toString         from 'lodash/toString';
 import { space, empty } from './constants';
 
-type Options = { 
+export type Options = { 
+    /** Conjunction to insert in the last position (default 'and') */
     conjunction?: string,
+    /** If true, use the oxford comma */
     oxford?: boolean,
+    /** String used to separate values (default ',') */
     separator?: string
 };
 
 /**
-  * Create a string from an array, separating values and inserting a conjunction
-  * @param input        Array of values
-  * @param conjunction    Conjunction to insert in the last position (default 'and')
-  * @param oxford        If true, use the oxford comma
-  * @param separator    String used to separate values (default ',')
-  */
-export function coordinate<T>(input: ArrayLike<T>, {conjunction = 'and', oxford = true, separator = ','}: Options = {}): string {
+ * Create a string from an array, separating values and inserting a conjunction
+ * 
+ * @param input Array of values
+ * @param __namedParameters see {@link Options}
+ */
+export function coordinate<T = unknown>(input: ArrayLike<T>, {conjunction = 'and', oxford = true, separator = ','}: Options = {}): string {
     if(input.length > 0)
     {
         let text = toString(input[0]);
@@ -27,8 +29,7 @@ export function coordinate<T>(input: ArrayLike<T>, {conjunction = 'and', oxford 
 
         return text;
     }
-    else
-        return empty;
+    return empty;
 }
 
 export default coordinate

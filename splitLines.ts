@@ -1,9 +1,11 @@
 import { empty } from './constants';
 
 /**
-  * Split a string into an array of lines within the string
-  * @param input The string to split
-  */
+ * Split a string into an array of lines
+ * 
+ * @param input The string to split
+ * @returns array of lines
+ */
 export function splitLines(input: string): string[] {
     if(input === empty)
         return [];

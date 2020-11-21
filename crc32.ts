@@ -3,9 +3,11 @@ import isEmpty from 'lodash/isEmpty';
 const crcTable: number[] = [];
 
 /**
-  * Compute the CRC32 checksum for a string
-  * @param input        The string
-  */
+ * Compute the CRC32 checksum for a string
+ * 
+ * @param input The string
+ * @return the CRC32 checksum
+ */
 export function crc32(input: string): number {
     if(isEmpty(crcTable)) {
         for(let n = 0; n < 256; ++n) {

@@ -2,16 +2,16 @@ import { empty }        from './constants';
 import create2DArray    from './create2DArray';
 
 /**
-  * Implementation of Longest Common Substring problem.
-  * https://en.wikipedia.org/wiki/Longest_common_substring_problem
-  *
-  * Returns the longest possible substring that is substring of both of given strings.
-  *
-  * @param array1 First string.
-  * @param array2 Second string.
-  * @returns A string that is common to both strings such that there is no
-  * common substring with size greater than the length of the string.
-  */
+ * Implementation of Longest Common Substring problem.
+ * https://en.wikipedia.org/wiki/Longest_common_substring_problem
+ *
+ * Returns the longest possible substring that is substring of both of given strings.
+ *
+ * @param array1 First string.
+ * @param array2 Second string.
+ * @returns A string that is common to both strings such that there is no
+ * common substring with size greater than the length of the string.
+ */
 export function longestCommonSubstring(string1: string, string2: string): string {
     const comparsions = create2DArray(string1.length + 1, string2.length + 1, 0);
     let maxSubStrLength = 0;

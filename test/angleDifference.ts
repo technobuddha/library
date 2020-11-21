@@ -1,7 +1,6 @@
 ﻿import 'mocha';
-import { expect }      from 'chai';
+import { expect } from 'chai';
 import angleDifference from '../angleDifference';
-
 
 describe(
     'angleDifference',

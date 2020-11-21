@@ -1,16 +1,12 @@
-import { empty }                from './constants';
-
-const oct = (c: number | undefined) => c !== undefined && (c >= 0x30 && c <= 0x37);
-const hex = (c: number | undefined) => c !== undefined && ((c >= 0x30 && c <= 0x39) || (c >= 0x41 && c <= 0x46) || (c >= 0x61 && c <= 0x66));
-
-const x = (c: number) => '\\x' + c.toString(16).padStart(2, '0');
-const u = (c: number) => '\\u' + c.toString(16).padStart(4, '0');
-const U = (c: number) => '\\U' + c.toString(16).padStart(8, '0');
+import { empty }             from './constants';
+import { oct, hex, x2, u4, U8 } from './_escape';
 
 /**
-  * Escape a string for use in C
-  * @param input        The string to escape
-  */
+ * Escape a string for use in C/C++
+ * 
+ * @param input The string to escape
+ * @returns the escaped string
+ */
 export function escapeC(input: string): string {
     const output: string[] = [];
     for(let i = 0; i < input.length; ++i) {
@@ -36,7 +32,7 @@ export function escapeC(input: string): string {
                 else if(u0 === 0x0000000d)
                     output.push('\\r');
                 else
-                    output.push(hex(u1) ? u(u0) : x(u0));
+                    output.push(hex(u1) ? u4(u0) : x2(u0));
             } else if(u0 < 0x0000007f) {
                 if(u0 === 0x00000022)
                     output.push('\\"');
@@ -49,14 +45,14 @@ export function escapeC(input: string): string {
                 else
                     output.push(String.fromCharCode(u0));
             } else if(u0 < 0x000000a1)
-                output.push(hex(u1) ? u(u0) : x(u0));
+                output.push(hex(u1) ? u4(u0) : x2(u0));
             else if(u0 < 0x00000100)
                 output.push(String.fromCharCode(u0));
             else if(u0 < 0x00010000)
-                output.push(u(u0));
+                output.push(u4(u0));
             else {
                 ++i;
-                output.push(U(u0));
+                output.push(U8(u0));
             }
         }
     }
