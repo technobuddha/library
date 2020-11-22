@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import isSameMonth from '../isSameMonth';
-import { month }   from '../constants';
+import isSameMonth from '../src/isSameMonth';
+import { month }   from '../src/constants';
 
 describe(
     'isSameMonth',

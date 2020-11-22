@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import collapseWhitespace from '../collapseWhitespace';
+import collapseWhitespace from '../src/collapseWhitespace';
 
 
 describe(

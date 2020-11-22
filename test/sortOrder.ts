@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import sortOrder  from '../sortOrder';
+import sortOrder  from '../src/sortOrder';
 
 
 describe(

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import {compare, compareNumbers, compareStrings} from '../compare';
+import {compare, compareNumbers, compareStrings} from '../src/compare';
 
 describe(
     'compare',

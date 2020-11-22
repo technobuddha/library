@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import toPascalCase from '../toPascalCase';
+import toPascalCase from '../src/toPascalCase';
 
 describe(
     'toPascalCase',

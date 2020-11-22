@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import isMultipleOf     from '../isMultipleOf';
-import { negativeZero } from '../constants';
+import isMultipleOf     from '../src/isMultipleOf';
+import { negativeZero } from '../src/constants';
 
 describe(
     'isMultipleOf',

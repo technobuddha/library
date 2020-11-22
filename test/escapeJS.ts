@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import escapeJS   from '../escapeJS';
-import { space }  from '../constants';
+import escapeJS   from '../src/escapeJS';
+import { space }  from '../src/constants';
 
 describe(
     'escapeJS',

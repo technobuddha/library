@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import coordinate from '../coordinate';
+import coordinate from '../src/coordinate';
 
 describe(
     'coordinate',

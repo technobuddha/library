@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import {clean, cleanEnd, cleanStart} from '../clean';
-import {empty}    from '../constants';
+import {clean, cleanEnd, cleanStart} from '../src/clean';
+import {empty}    from '../src/constants';
 
 
 describe(

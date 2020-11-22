@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import ordinal          from '../ordinal';
-import { negativeZero } from '../constants';
+import ordinal          from '../src/ordinal';
+import { negativeZero } from '../src/constants';
 
 describe(
     'ordinal',

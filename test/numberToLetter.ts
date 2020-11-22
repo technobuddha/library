@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect }     from 'chai';
-import numberToLetter from '../numberToLetter';
+import numberToLetter from '../src/numberToLetter';
 
 describe(
     'numberToLetter',

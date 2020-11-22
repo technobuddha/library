@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }    from 'chai';
-import unicodeLength from '../unicodeLength';
+import unicodeLength from '../src/unicodeLength';
 
 describe(
     'unicodeLength',

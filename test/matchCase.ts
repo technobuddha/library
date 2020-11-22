@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import matchCase  from '../matchCase';
+import matchCase  from '../src/matchCase';
 
 describe(
     'isUpperCase',

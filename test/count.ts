@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import count      from '../count';
+import count      from '../src/count';
 
 describe(
     'count',

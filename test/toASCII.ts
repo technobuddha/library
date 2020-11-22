@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toASCII    from '../toASCII';
+import toASCII    from '../src/toASCII';
 
 
 describe(

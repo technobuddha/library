@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }         from 'chai';
-import getBeginningOfYear from '../getBeginningOfYear';
-import { month }          from '../constants';
+import getBeginningOfYear from '../src/getBeginningOfYear';
+import { month }          from '../src/constants';
 
 describe(
     'getBeginningOfYear',

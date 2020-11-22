@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import quote      from '../quote';
+import quote      from '../src/quote';
 
 
 describe(

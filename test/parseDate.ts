@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import parseDate  from '../parseDate';
+import parseDate  from '../src/parseDate';
 
 describe(
     'parseDate',

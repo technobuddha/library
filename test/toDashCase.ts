@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toDashCase from '../toDashCase';
+import toDashCase from '../src/toDashCase';
 
 
 describe(

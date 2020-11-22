@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import normalizeAngle from '../normalizeAngle';
+import normalizeAngle from '../src/normalizeAngle';
 
 describe(
     'normalizeAngle',

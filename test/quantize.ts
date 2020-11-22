@@ -1,7 +1,7 @@
 import 'mocha';
 //import { expect } from 'chai';
 import Jimp       from 'jimp';
-import quantize, {RGB}   from '../quantize';
+import quantize, {RGB}   from '../src/quantize';
 
 
 (async () => {

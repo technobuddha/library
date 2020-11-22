@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }        from 'chai';
-import standardDeviation from '../standardDeviation';
+import standardDeviation from '../src/standardDeviation';
 
 describe(
     'standardDeviation',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }        from 'chai';
-import getBeginningOfDay from '../getBeginningOfDay';
+import getBeginningOfDay from '../src/getBeginningOfDay';
 
 describe(
     'getBeginningOfDay',

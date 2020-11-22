@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import getDayOfWeek from '../getDayOfWeek';
-import { day }      from '../constants'; 
+import getDayOfWeek from '../src/getDayOfWeek';
+import { day }      from '../src/constants'; 
 
 describe(
     'getDayOfWeek',

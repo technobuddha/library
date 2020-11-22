@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }               from 'chai';
-import longestCommonSubsequence from '../longestCommonSubsequence';
+import longestCommonSubsequence from '../src/longestCommonSubsequence';
 
 
 describe(

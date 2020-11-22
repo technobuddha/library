@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import syllables  from '../syllables';
+import syllables  from '../src/syllables';
 
 describe(
     'syllables',

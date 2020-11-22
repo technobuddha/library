@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toDegrees from '../toDegrees';
+import toDegrees from '../src/toDegrees';
 
 describe(
     'toDegrees',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import indent     from '../indent';
+import indent     from '../src/indent';
 
 
 describe(

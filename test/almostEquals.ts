@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import almostEquals from '../almostEquals';
+import almostEquals from '../src/almostEquals';
 
 describe(
     'almostEquals',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import isSurrogate from '../isSurrogate';
+import isSurrogate from '../src/isSurrogate';
 
 describe(
     'isSurrogate',

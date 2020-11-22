@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import possessive from '../possessive';
+import possessive from '../src/possessive';
 
 //TODO we need more comprehensive testing
 

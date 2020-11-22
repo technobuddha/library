@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }                     from 'chai';
-import isNumeric                      from '../isNumeric';
-import { empty, space, negativeZero } from '../constants';
+import isNumeric                      from '../src/isNumeric';
+import { empty, space, negativeZero } from '../src/constants';
 
 describe(
     'isNumeric',

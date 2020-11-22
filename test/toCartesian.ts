@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect, use } from 'chai';
 import chaiAlmost      from 'chai-almost';
-import toCartesian     from '../toCartesian';
+import toCartesian     from '../src/toCartesian';
 
 use(chaiAlmost());
 

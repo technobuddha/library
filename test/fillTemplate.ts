@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import fillTemplate from '../fillTemplate';
+import fillTemplate from '../src/fillTemplate';
 
 describe(
     'fillTemplate',

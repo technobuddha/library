@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import toHumanCase from '../toHumanCase';
+import toHumanCase from '../src/toHumanCase';
 
 
 describe(

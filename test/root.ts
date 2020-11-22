@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import root       from '../root';
+import root       from '../src/root';
 
 describe(
     'root',

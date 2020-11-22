@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import unescapeJava from '../unescapeJava';
-import { space }    from '../constants';
+import unescapeJava from '../src/unescapeJava';
+import { space }    from '../src/constants';
 
 describe(
     'unescapeJava',

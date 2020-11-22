@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import mask       from '../mask';
+import mask       from '../src/mask';
 
 describe(
     'mask',

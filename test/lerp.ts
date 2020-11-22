@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect, use }     from 'chai';
 import chaiAlmost          from 'chai-almost';
-import lerp from '../lerp';
+import lerp from '../src/lerp';
 
 use(chaiAlmost());
 

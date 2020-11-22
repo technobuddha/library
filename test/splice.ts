@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import splice     from '../splice';
+import splice     from '../src/splice';
 
 
 describe(

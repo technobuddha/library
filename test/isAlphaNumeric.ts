@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }     from 'chai';
-import isAlphaNumeric from '../isAlphaNumeric';
-import { empty }      from '../constants';
+import isAlphaNumeric from '../src/isAlphaNumeric';
+import { empty }      from '../src/constants';
 
 describe(
     'isAlphaNumeric',

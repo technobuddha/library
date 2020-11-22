@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }    from 'chai';
-import correctMSWord from '../correctMSWord';
+import correctMSWord from '../src/correctMSWord';
 
 describe(
     'correctMSWord',

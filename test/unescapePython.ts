@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }     from 'chai';
-import unescapePython from '../unescapePython';
-import { space }      from '../constants';
+import unescapePython from '../src/unescapePython';
+import { space }      from '../src/constants';
 
 
 describe(

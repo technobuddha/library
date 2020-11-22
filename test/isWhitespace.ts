@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import isWhitespace     from '../isWhitespace';
-import { empty, space } from '../constants';
+import isWhitespace     from '../src/isWhitespace';
+import { empty, space } from '../src/constants';
 
 describe(
     'isWhitespace',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }        from 'chai';
-import toCapitalWordCase from '../toCapitalWordCase';
+import toCapitalWordCase from '../src/toCapitalWordCase';
 
 describe(
     'toCapitalWordCase',

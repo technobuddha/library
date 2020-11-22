@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import dataURL     from '../dataURL';
+import dataURL     from '../src/dataURL';
 
 describe(
     'dataURL',

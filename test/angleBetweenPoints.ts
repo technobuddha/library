@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import angleBetweenPoints from '../angleBetweenPoints';
+import angleBetweenPoints from '../src/angleBetweenPoints';
 
 describe(
     'angleBetweenPoints',

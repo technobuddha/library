@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect, use }     from 'chai';
 import chaiAlmost          from 'chai-almost';
-import levenshteinDistance from '../levenshteinDistance';
+import levenshteinDistance from '../src/levenshteinDistance';
 
 use(chaiAlmost());
 

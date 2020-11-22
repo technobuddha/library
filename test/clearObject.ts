@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import clearObject from '../clearObject';
+import clearObject from '../src/clearObject';
 
 describe(
     'clearObject',

@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import isEven           from '../isEven';
-import { negativeZero } from '../constants';
+import isEven           from '../src/isEven';
+import { negativeZero } from '../src/constants';
 
 
 describe(

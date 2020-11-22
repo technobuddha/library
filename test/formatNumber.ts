@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect }   from 'chai';
-import formatNumber from '../formatNumber';
+import formatNumber from '../src/formatNumber';
 
 describe(
     'formatNumber',

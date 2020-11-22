@@ -6,13 +6,15 @@
   "types": ".",
   "scripts": {
     "clean": "npm-run-all *:clean",
-    "build": "tsc",
-    "build:clean": "rm -rf *.js *.d.ts",
+    "build": "npm-run-all build:clean build:copy build:compile",
+    "build:clean": "rm -rf dist && mkdir dist",
+    "build:copy": "cp package.json LICENSE README.md dist && ln src/* dist",
+    "build:compile": "tsc",
     "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
     "version": "npm-run-all clean build document",
     "postversion": "git push && git push --tags",
     "test": "ts-mocha test/*.ts",
-    "lint": "eslint --ext .ts *.ts",
+    "lint": "eslint --ext .ts src/*.ts test/*.ts",
     "document": "npm-run-all document:clean document:generate",
     "document:clean": "rm -rf doc",
     "document:generate": "typedoc *.ts"

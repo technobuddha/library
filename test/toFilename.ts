@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toFilename from '../toFilename';
+import toFilename from '../src/toFilename';
 
 
 describe(

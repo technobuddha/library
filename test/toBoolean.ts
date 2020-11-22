@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toBoolean  from '../toBoolean';
+import toBoolean  from '../src/toBoolean';
 
 describe(
     'toBoolean',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import floor  from '../floor';
+import floor  from '../src/floor';
 
 
 describe(

@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import isAlpha    from '../isAlpha';
-import { empty }  from '../constants';
+import isAlpha    from '../src/isAlpha';
+import { empty }  from '../src/constants';
 
 describe(
     'isAlpha',

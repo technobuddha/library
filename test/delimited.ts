@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import delimited  from '../delimited';
-import { empty }  from '../constants';
+import delimited  from '../src/delimited';
+import { empty }  from '../src/constants';
 
 describe(
     'delimited',

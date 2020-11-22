@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import binaryUnits from '../binaryUnits';
+import binaryUnits from '../src/binaryUnits';
 
 describe(
     'binaryUnits',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }        from 'chai';
-import indefiniteArticle from '../indefiniteArticle';
+import indefiniteArticle from '../src/indefiniteArticle';
 
 describe(
     'indefiniteArticle',

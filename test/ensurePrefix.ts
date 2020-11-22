@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import ensurePrefix from '../ensurePrefix';
+import ensurePrefix from '../src/ensurePrefix';
 
 
 describe(

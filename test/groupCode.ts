@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import groupCode   from '../groupCode';
+import groupCode   from '../src/groupCode';
 
 
 describe(

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import chop       from '../chop';
+import chop       from '../src/chop';
 
 
 describe(

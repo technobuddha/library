@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }    from 'chai';
-import extractDigits from '../extractDigits';
-import { empty }     from '../constants';
+import extractDigits from '../src/extractDigits';
+import { empty }     from '../src/constants';
 
 describe(
     'extractDigits',

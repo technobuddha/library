@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect, use } from 'chai';
 import chaiAlmost      from 'chai-almost';
-import diceCoefficient from '../diceCoefficient';
+import diceCoefficient from '../src/diceCoefficient';
 
 use(chaiAlmost());
 

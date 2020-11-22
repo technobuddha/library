@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import padNumber        from '../padNumber';
-import { negativeZero } from '../constants';
+import padNumber        from '../src/padNumber';
+import { negativeZero } from '../src/constants';
 
 
 describe(

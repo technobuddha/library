@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import ensureSuffix from '../ensureSuffix';
+import ensureSuffix from '../src/ensureSuffix';
 
 describe(
     'ensureSuffix',

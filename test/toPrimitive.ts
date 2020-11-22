@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import toPrimitive      from '../toPrimitive';
-import { empty, space } from '../constants';
+import toPrimitive      from '../src/toPrimitive';
+import { empty, space } from '../src/constants';
 
 
 describe(

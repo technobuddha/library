@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect }   from 'chai';
-import cardinal, { orderOfMagnitude, summarize}   from '../cardinal';
+import cardinal, { orderOfMagnitude, summarize}   from '../src/cardinal';
 
 describe(
     'cardinal',

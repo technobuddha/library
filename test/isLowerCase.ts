@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import isLowerCase      from '../isLowerCase';
-import { space, empty } from '../constants';
+import isLowerCase      from '../src/isLowerCase';
+import { space, empty } from '../src/constants';
 
 describe(
     'isLowerCase',

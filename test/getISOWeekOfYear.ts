@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }    from 'chai';
-import getISOWeekOfYear from '../getISOWeekOfYear';
-//import { month }     from '../constants';
+import getISOWeekOfYear from '../src/getISOWeekOfYear';
+//import { month }     from '../src/constants';
 
 describe(
     'getISOWeekOfYear',

@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import isValidDate from '../isValidDate';
+import isValidDate from '../src/isValidDate';
 
 
 describe(

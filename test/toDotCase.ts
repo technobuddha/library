@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toDotCase  from '../toDotCase';
+import toDotCase  from '../src/toDotCase';
 
 
 describe(

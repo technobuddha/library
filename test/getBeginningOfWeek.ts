@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }         from 'chai';
-import getBeginningOfWeek from '../getBeginningOfWeek';
-import { month }          from '../constants';
+import getBeginningOfWeek from '../src/getBeginningOfWeek';
+import { month }          from '../src/constants';
 
 describe(
     'getBeginningOfWeek',

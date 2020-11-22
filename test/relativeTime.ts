@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import relativeTime from '../relativeTime';
-import addTime      from '../addTime';
+import relativeTime from '../src/relativeTime';
+import addTime      from '../src/addTime';
 
 describe(
     'relativeTime',

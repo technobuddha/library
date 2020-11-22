@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import encodeUTF8 from '../encodeUTF8';
+import encodeUTF8 from '../src/encodeUTF8';
 
 describe(
     'encodeUTF8',

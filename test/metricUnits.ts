@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import metricUnits from '../metricUnits';
+import metricUnits from '../src/metricUnits';
 
 describe(
     'metricUnits',

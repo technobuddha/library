@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import unquote    from '../unquote';
+import unquote    from '../src/unquote';
 
 describe(
     'unquote',

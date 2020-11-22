@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }   from 'chai';
-import unescapeHTML from '../unescapeHTML';
-import { space }    from '../constants';
+import unescapeHTML from '../src/unescapeHTML';
+import { space }    from '../src/constants';
 
 describe(
     'unescapeHTML',

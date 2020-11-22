@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }     from 'chai';
-import getDaysInMonth from '../getDaysInMonth';
-import { month }      from '../constants';
+import getDaysInMonth from '../src/getDaysInMonth';
+import { month }      from '../src/constants';
 
 describe(
     'getDaysInMonth',

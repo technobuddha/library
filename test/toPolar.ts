@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect, use } from 'chai';
 import chaiAlmost      from 'chai-almost';
-import toPolar         from '../toPolar';
+import toPolar         from '../src/toPolar';
 
 use(chaiAlmost());
 

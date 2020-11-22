@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }  from 'chai';
-import toSmallCase from '../toSmallCase';
+import toSmallCase from '../src/toSmallCase';
 
 
 describe(

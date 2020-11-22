@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import modulo     from '../modulo';
+import modulo     from '../src/modulo';
 
 describe(
     'modulo',

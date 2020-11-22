@@ -19,4 +19,4 @@ export function collapseBreakingspace(input: string, {trim = true}: Options = {}
         return input.replace(/[\t\r\n ]+/g, space);
 }
 
-export default collapseWhitespace;
+export default collapseBreakingspace;

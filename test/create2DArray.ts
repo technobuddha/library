@@ -1,6 +1,6 @@
 import 'mocha';
 import { expect } from 'chai';
-import create2DArray from '../create2DArray';
+import create2DArray from '../src/create2DArray';
 
 describe(
     'create2DArray',

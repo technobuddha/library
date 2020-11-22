@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import splitChars from '../splitChars';
-import { empty }   from '../constants';
+import splitChars from '../src/splitChars';
+import { empty }   from '../src/constants';
 
 describe(
     'splitChars',

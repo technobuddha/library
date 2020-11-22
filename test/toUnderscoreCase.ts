@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect }        from 'chai';
-import toUnderscoreCase  from '../toUnderscoreCase';
+import toUnderscoreCase  from '../src/toUnderscoreCase';
 
 describe(
     'toUnderscoreCase',

@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect }       from 'chai';
-import isPunctuation    from '../isPunctuation';
-import { space, empty } from '../constants';
+import isPunctuation    from '../src/isPunctuation';
+import { space, empty } from '../src/constants';
 
 describe(
     'isPunctuation',

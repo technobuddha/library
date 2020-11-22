@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import toRadians from '../toRadians';
+import toRadians from '../src/toRadians';
 
 describe(
     'toRadians',

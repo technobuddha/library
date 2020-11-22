@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { use, expect } from 'chai';
-import getTimezone     from '../getTimezone';
+import getTimezone     from '../src/getTimezone';
 
 use(require('chai-match'));
 

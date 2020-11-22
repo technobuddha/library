@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import build      from '../build';
+import build      from '../src/build';
 
 describe(
     'build',

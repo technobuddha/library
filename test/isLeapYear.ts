@@ -1,7 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import isLeapYear from '../isLeapYear';
-import { month }  from '../constants';
+import isLeapYear from '../src/isLeapYear';
+import { month }  from '../src/constants';
 
 describe(
     'isLeapYear',
