@@ -44,8 +44,8 @@ export const reviver = function (this: unknown, _key: string, value: unknown) {
             case 'Date':
                 return new Date(jsonValue);
             case 'RegExp': {
-                const [, source, flags] = jsonValue.match(/^\/(.*)\/(.*)$/);
-                return new RegExp(source, flags);
+                const matches = /^\/(.*)\/(.*)$/.exec(jsonValue);
+                return matches ? new RegExp(matches[1], matches[2]) : jsonValue;
             }
             case 'Number':
                 return Number(jsonValue);
