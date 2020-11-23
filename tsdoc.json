@@ -1,7 +1,0 @@
-{
-    "out": "doc/v ",
-    "inputFiles": ["*.ts"],
-    "excludeNotExported": true,
-    "excludePrivate": true,
-    "plugin": true
-}

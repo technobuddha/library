@@ -1,9 +1,21 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.0.0",
-  "description": "A small library of miscellaneous functions",
-  "main": "index.js",
-  "types": ".",
+  "version": "0.9.0",
+  "description": "A large library of useful functions",
+  "keywords": [
+    "miscellaneous"
+  ],
+  "homepage": "https://github.com/technobuddha/library#readme",
+  "bugs": {
+    "url": "https://github.com/technobuddha/library/issues",
+    "email": "phil@technobuddha.com"
+  },
+  "license": "MIT",
+  "author": "Phil Hill <phil@technobuddha.com>",
+  "funding": "",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+
   "scripts": {
     "clean": "npm-run-all *:clean",
     "build": "npm-run-all build:clean build:copy build:compile",
@@ -17,21 +29,8 @@
     "lint": "eslint --ext .ts src/*.ts test/*.ts",
     "document": "npm-run-all document:clean document:generate",
     "document:clean": "rm -rf doc",
-    "document:generate": "typedoc *.ts"
+    "document:generate": "typedoc src/*.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/technobuddha/library.git"
-  },
-  "keywords": [
-    "miscellaneous"
-  ],
-  "author": "Phil Hill <phil@technobuddha.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/technobuddha/library/issues"
-  },
-  "homepage": "https://github.com/technobuddha/library#readme",
   "dependencies": {
     "lodash": "^4.17.19"
   },
