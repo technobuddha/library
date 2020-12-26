@@ -1,4 +1,4 @@
-import {compareStrings} from './compare';
+import {compareStrings} from './compareStrings';
 
 
 type Options = {

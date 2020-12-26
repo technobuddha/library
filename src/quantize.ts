@@ -1,4 +1,4 @@
-import {compareNumbers} from './compare';
+import {compareNumbers} from './compareNumbers';
 import PriorityQueue    from './priority-queue';
 
 
