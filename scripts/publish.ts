@@ -1,3 +1,4 @@
+#!/bin/env ts-node
 import fs from 'fs';
 
 const pj = JSON.parse(fs.readFileSync('package.json').toString());

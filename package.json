@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "0.9.0",
+  "version": "0.9.1-0",
   "description": "A large library of useful functions",
   "keywords": [
     "miscellaneous"
@@ -16,12 +16,14 @@
     "clean": "npm-run-all *:clean",
     "build": "npm-run-all build:clean build:package build:copy build:compile",
     "build:clean": "rm -rf dist && mkdir dist",
-    "build:package": "ts-node publish.ts",
+    "build:package": "scripts/publish.ts",
     "build:copy": "cp LICENSE README.md dist && ln src/* dist",
     "build:compile": "tsc",
-    "xxprepublishOnly": "npm version patch -m 'Publish Release %s'",
-    "version": "npm-run-all clean build document",
-    "postversion": "git push && git push --tags",
+    "pub": "npm-run-all build pub:version pub:publish",
+    "pub:version": "npm --no-tag-git-version version prerelease",
+    "pub:publish": "npm publish",
+    "x-version": "npm-run-all clean build document",
+    "x-postversion": "git push && git push --tags",
     "test": "ts-mocha test/*.ts",
     "lint": "eslint --ext .ts src/*.ts test/*.ts",
     "document": "npm-run-all document:clean document:generate",
