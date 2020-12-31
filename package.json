@@ -21,7 +21,7 @@
     "build:compile": "tsc",
     "pub": "npm-run-all build pub:version pub:publish",
     "pub:version": "npm --no-tag-git-version version prerelease",
-    "pub:publish": "npm publish",
+    "pub:publish": "npm publish dist",
     "x-version": "npm-run-all clean build document",
     "x-postversion": "git push && git push --tags",
     "test": "ts-mocha test/*.ts",
