@@ -160,9 +160,9 @@ export class HSV {
             else              { r = this.v;    g = v1;        b = v2;        }
         }
 
-        r = r * 255;
-        g = g * 255;
-        b = b * 255;
+        r = Math.round(r * 255);
+        g = Math.round(g * 255);
+        b = Math.round(b * 255);
 
         return new RGB(r, g, b);
     }
