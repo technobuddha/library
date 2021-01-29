@@ -15,7 +15,7 @@ type ParseReturn =     {
     scale: number,
     group: boolean,
     exponent: number,
-    signExpoent: boolean,
+    signExponent: boolean,
     precision: number,
 };
 
@@ -163,7 +163,7 @@ function parse(mask: string): ParseReturn {
         scale:       scale,
         group:       group,
         exponent:    exponent,
-        signExpoent: signExponent,
+        signExponent: signExponent,
         precision:   precision,
     }
 }
@@ -172,7 +172,7 @@ function parse(mask: string): ParseReturn {
 function format(input: number, {round, precision, scale, lead = 1, trim = 'none'}: {round?: number, precision?: number, scale?: number, lead?: number, trim?: 'none' | 'front' | 'back' | 'all'} = {}) {
     const sign      = Math.sign(input);
     const [m, e]    = Math.abs(input).toExponential(15).split('e');
-    let   exponent  = Number(e) + 1 // +1 beacuse we store the number without the decimal point
+    let   exponent  = Number(e) + 1 // +1 because we store the number without the decimal point
     const mantissa  = m.replace('.', empty).split(empty);
 
     while(mantissa.length > exponent && mantissa[mantissa.length - 1] === '0')
@@ -434,7 +434,7 @@ export function formatNumber(input: number, mask: string): string {
                 b--;
             }
         } else if(x === 'e' || x === 'E') {
-            o = x + ((fmt.signExpoent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent) + o;
+            o = x + ((fmt.signExponent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent) + o;
         } else {
             o = x.substr(1) + o;
         }
@@ -459,7 +459,7 @@ export function formatNumber(input: number, mask: string): string {
                     digits = true;
                 }
             } else if(x === 'e' || x === 'E') {
-                a = a + x + ((fmt.signExpoent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent);
+                a = a + x + ((fmt.signExponent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent);
             } else
                 a = a + x.substr(1);
 

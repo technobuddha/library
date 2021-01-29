@@ -2,6 +2,7 @@
 import { expect } from 'chai';
 import metricUnits from '../src/metricUnits';
 
+//TODO add tests for 'pad' option
 describe(
     'metricUnits',
     () => {

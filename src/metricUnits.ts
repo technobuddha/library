@@ -9,6 +9,10 @@ export type Options = {
      */
     format?: string,
     /**
+     * left padding to apply to numeric value
+     */
+    pad?: number,
+    /**
      * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y'])
      */
     macro?: ArrayLike<string>,
@@ -36,6 +40,7 @@ export function metricUnits(
     input: number,
     {   
         format,
+        pad,
         macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'],
         micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'],
         unit = 1000,
@@ -59,7 +64,7 @@ export function metricUnits(
         }
     }
 
-    return (isNil(format) ? round(number, precision).toString() : formatNumber(round(number, precision), format)) + suffix;
+    return (isNil(format) ? round(number, precision).toString() : formatNumber(round(number, precision), format)).padStart(pad ?? 0) + suffix;
 }
 
 export default metricUnits;

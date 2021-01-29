@@ -8,11 +8,12 @@ export type Options = Omit<MetricUnitOptions, 'macro' | 'micro' | 'unit'>;
  * @param __namedParameters see {@link BinaryUnitsOptions}
  * }
  */
-export function binaryUnits(input: number, {format, precision = 2}: Options = {}): string {
+export function binaryUnits(input: number, {format, pad, precision = 2}: Options = {}): string {
     return metricUnits(
         input,
         {
             format,
+            pad,
             macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
             micro: [],
             unit: 1024,
