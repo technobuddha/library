@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function sameValue(x: any, y: any) {
     if (x === y)
         return x !== 0 || 1 / x === 1 / y;
