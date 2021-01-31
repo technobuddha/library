@@ -2,7 +2,6 @@
 import { expect }  from 'chai';
 import toHumanCase from '../src/toHumanCase';
 
-
 describe(
     'toHumanCase',
     () => {
@@ -25,4 +24,3 @@ describe(
         );
     }
 );
-

@@ -7,4 +7,3 @@ export type Polar = {
     radius: number;
     angle: number;
 };
-

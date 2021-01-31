@@ -28,12 +28,9 @@ export function longestCommonSubstring(string1: string, string2: string): string
                     comparsions[i][j] = comparsions[i - 1][j - 1] + 1;
                 else
                     comparsions[i][j] = 1;
-            }
-            else
-                comparsions[i][j] = 0;
+            } else { comparsions[i][j] = 0; }
 
-            if(comparsions[i][j] > maxSubStrLength)
-            {
+            if(comparsions[i][j] > maxSubStrLength) {
                 maxSubStrLength = comparsions[i][j];
                 lastMaxSubStrIndex = i;
             }
@@ -42,8 +39,7 @@ export function longestCommonSubstring(string1: string, string2: string): string
 
     if(maxSubStrLength > 0)
         return string1.substr(lastMaxSubStrIndex - maxSubStrLength + 1, maxSubStrLength);
-    else
-        return empty;
+    return empty;
 }
 
 export default longestCommonSubstring;

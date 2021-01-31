@@ -5,7 +5,6 @@ import getJulian       from '../src/getJulian';
 
 use(chaiAlmost());
 
-
 describe(
     'getJulian',
     () => {
@@ -18,7 +17,3 @@ describe(
         );
     }
 );
-
-
-
-

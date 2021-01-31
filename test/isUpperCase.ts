@@ -3,7 +3,6 @@ import { expect }       from 'chai';
 import isUpperCase      from '../src/isUpperCase';
 import { empty, space } from '../src/constants';
 
-
 describe(
     'isUpperCase',
     () => {
@@ -21,4 +20,3 @@ describe(
         );
     }
 );
-

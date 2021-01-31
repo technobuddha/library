@@ -13,12 +13,11 @@ export type Options = {
     ymdFormat?: string;
     /** Passed to {@link formatDate} to dislay a month and day */
     mdFormat?: string;
-}
-
+};
 
 /**
  * Describe the difference between two dates in a simpe format
- * 
+ *
  * @param input The date
  * @param relativeTo The date to compare to
  * @param __namedParameters see {@link Options}
@@ -33,8 +32,7 @@ export function relativeTime(
         ymdFormat = 'MMMM D YYYY',
         mdFormat = 'MMMM D',
     }:  Options = {}
-)
-{
+) {
     const text  = [] as string[];
 
     if(todayTomorrowYesterday) {
@@ -51,8 +49,8 @@ export function relativeTime(
     } else {
         let   diff  = (input.getTime() - relativeTo.getTime()) / ticksPerSecond;
         let   sign  = 1;
-    
-        if(diff < 0) { sign = -1; diff = Math.abs(diff) }
+
+        if(diff < 0) { sign = -1; diff = Math.abs(diff); }
 
         const d = Math.floor((diff) / secondsPerDay);
         const h = Math.floor((diff - d * secondsPerDay) / secondsPerHour);
@@ -76,8 +74,7 @@ export function relativeTime(
             text.push(plural('minute', m));
             if(m < 4 && s > 0)
                 text.push(plural('second', s));
-        } else
-            text.push(plural('second', s));
+        } else { text.push(plural('second', s)); }
 
         if(sign === -1)   text.push('ago');
         if(sign === 1)    text.push('from now');
@@ -87,7 +84,3 @@ export function relativeTime(
 }
 
 export default relativeTime;
-
-
-   
-

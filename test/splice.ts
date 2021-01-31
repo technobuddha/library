@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import splice     from '../src/splice';
 
-
 describe(
     'splice',
     () => {
@@ -12,7 +11,6 @@ describe(
                 expect(splice('abcdefghi', 0, 0, 'foo')).to.equal('fooabcdefghi');
                 expect(splice('abcdefghi', 3, 0, 'foo')).to.equal('abcfoodefghi');
                 expect(splice('abcdefghi', 3, 3, 'foo')).to.equal('abcfooghi');
-                
             }
         );
 
@@ -21,7 +19,6 @@ describe(
             () => {
                 expect(splice('abcdefghi', -1, 0, 'foo')).to.equal('abcdefghifoo');
                 expect(splice('abcdefghi', -2, 0, 'foo')).to.equal('abcdefghfooi');
-                
             }
         );
 
@@ -29,7 +26,6 @@ describe(
             'should handle negative deleteLength',
             () => {
                 expect(splice('abcdefghi', 3, -3, 'foo')).to.equal('abcfoodefghi');
-                
             }
         );
 
@@ -37,10 +33,7 @@ describe(
             'should handle start greater than length',
             () => {
                 expect(splice('abcdefghi', 99, 0, 'foo')).to.equal('abcdefghifoo');
-                
             }
         );
-
     }
 );
-

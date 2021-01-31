@@ -4,7 +4,7 @@ export type Options<T> = {
     /**
      * Function that acts as a custom comparator
      * for the array ojects. Function should return true if objects are equal, otherwise false.
-     * 
+     *
      */
     compare?: (a: T, b: T) => boolean;
     /**
@@ -13,8 +13,8 @@ export type Options<T> = {
      * in the first array and index in the second. The default function returns
      * element from the first array.
      */
-    collect?: (i1: number, i2: number) => T
-}
+    collect?: (i1: number, i2: number) => T;
+};
 
 /**
  * Implementation of Longest Common Subsequence problem.
@@ -31,7 +31,7 @@ export type Options<T> = {
  * such that there is no common subsequence with size greater than the
  * length of the list.
  */
-export function longestCommonSubsequence<T>(array1: ArrayLike<T>, array2: ArrayLike<T>, {compare = (a, b) => a === b, collect = (i1, _i2) => array1[i1]}: Options<T> = {}):    Array<T> {
+export function longestCommonSubsequence<T>(array1: ArrayLike<T>, array2: ArrayLike<T>, { compare = (a, b) => a === b, collect = (i1, _i2) => array1[i1] }: Options<T> = {}):    T[] {
     const l1 = array1.length;
     const l2 = array2.length;
     const c  = create2DArray(l1 + 1, l2 + 1, 0);
@@ -57,12 +57,7 @@ export function longestCommonSubsequence<T>(array1: ArrayLike<T>, array2: ArrayL
             result.unshift(collect(i - 1, j - 1));
             i--;
             j--;
-        } else {
-            if(c[i - 1][j] > c[i][j - 1])
-                i--;
-            else
-                j--;
-        }
+        } else if(c[i - 1][j] > c[i][j - 1]) { i--; } else { j--; }
     }
 
     return result;

@@ -28,26 +28,25 @@ describe(
         it(
             'should handle numeric strings',
             () => {
-                expect(isNumeric("0")).to.equal(true);
-                expect(isNumeric("-0")).to.equal(true);
-                expect(isNumeric("+0")).to.equal(true);
-                expect(isNumeric("1")).to.equal(true);
-                expect(isNumeric("-1")).to.equal(true);
-                expect(isNumeric("+1")).to.equal(true);
-                expect(isNumeric("1e100")).to.equal(true);
-                expect(isNumeric("-1e100")).to.equal(true);
-                expect(isNumeric("+1e100")).to.equal(true);
-                expect(isNumeric("1e-100")).to.equal(true);
-                expect(isNumeric("-1e-100")).to.equal(true);
-                expect(isNumeric("+1e-100")).to.equal(true);
-                expect(isNumeric("1e+100")).to.equal(true);
-                expect(isNumeric("-1e+100")).to.equal(true);
-                expect(isNumeric("+1e+100")).to.equal(true);
-                expect(isNumeric("Infinity")).to.equal(true);
-                expect(isNumeric("-Infinity")).to.equal(true);
-                expect(isNumeric("+Infinity")).to.equal(true);
-                expect(isNumeric("NaN")).to.equal(false);
-
+                expect(isNumeric('0')).to.equal(true);
+                expect(isNumeric('-0')).to.equal(true);
+                expect(isNumeric('+0')).to.equal(true);
+                expect(isNumeric('1')).to.equal(true);
+                expect(isNumeric('-1')).to.equal(true);
+                expect(isNumeric('+1')).to.equal(true);
+                expect(isNumeric('1e100')).to.equal(true);
+                expect(isNumeric('-1e100')).to.equal(true);
+                expect(isNumeric('+1e100')).to.equal(true);
+                expect(isNumeric('1e-100')).to.equal(true);
+                expect(isNumeric('-1e-100')).to.equal(true);
+                expect(isNumeric('+1e-100')).to.equal(true);
+                expect(isNumeric('1e+100')).to.equal(true);
+                expect(isNumeric('-1e+100')).to.equal(true);
+                expect(isNumeric('+1e+100')).to.equal(true);
+                expect(isNumeric('Infinity')).to.equal(true);
+                expect(isNumeric('-Infinity')).to.equal(true);
+                expect(isNumeric('+Infinity')).to.equal(true);
+                expect(isNumeric('NaN')).to.equal(false);
             }
         );
 
@@ -56,14 +55,12 @@ describe(
             () => {
                 expect(isNumeric(empty)).to.equal(false);
                 expect(isNumeric(space)).to.equal(false);
-                expect(isNumeric("abcdef")).to.equal(false);
+                expect(isNumeric('abcdef')).to.equal(false);
                 expect(isNumeric(null)).to.equal(false);
                 expect(isNumeric(undefined)).to.equal(false);
                 expect(isNumeric([])).to.equal(false);
                 expect(isNumeric({})).to.equal(false);
-
             }
         );
     }
 );
-

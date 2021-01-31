@@ -1,8 +1,7 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import {clean, cleanEnd, cleanStart} from '../src/clean';
-import {empty}    from '../src/constants';
-
+import { clean, cleanEnd, cleanStart } from '../src/clean';
+import { empty }    from '../src/constants';
 
 describe(
     'clean',
@@ -27,8 +26,8 @@ describe(
         it(
             'should accept regular expressions',
             () => {
-                expect(clean('@@@a b c d@@@', /@/)).to.equal('a b c d');
-                expect(clean('xyza b c dxyzxyz', /xyz/)).to.equal('a b c d');
+                expect(clean('@@@a b c d@@@', /@/u)).to.equal('a b c d');
+                expect(clean('xyza b c dxyzxyz', /xyz/u)).to.equal('a b c d');
             }
         );
 
@@ -42,14 +41,14 @@ describe(
         it(
             'should accept arrays of regular expressions',
             () => {
-                expect(clean('@%!a b c d!%@', [ /@/, /%|!/ ])).to.equal('a b c d');
+                expect(clean('@%!a b c d!%@', [ /@/u, /%|!/u ])).to.equal('a b c d');
             }
         );
 
         it(
             'should accept mixed arrays of regular expressions',
             () => {
-                expect(clean('@%!a b c d!%@', [ /@/, '%!' ])).to.equal('a b c d');
+                expect(clean('@%!a b c d!%@', [ /@/u, '%!' ])).to.equal('a b c d');
             }
         );
     }
@@ -78,8 +77,8 @@ describe(
         it(
             'should accept regular expressions',
             () => {
-                expect(cleanEnd('@@@a b c d@@@', /@/)).to.equal('@@@a b c d');
-                expect(cleanEnd('xyza b c dxyzxyz', /xyz/)).to.equal('xyza b c d');
+                expect(cleanEnd('@@@a b c d@@@', /@/u)).to.equal('@@@a b c d');
+                expect(cleanEnd('xyza b c dxyzxyz', /xyz/u)).to.equal('xyza b c d');
             }
         );
 
@@ -93,14 +92,14 @@ describe(
         it(
             'should accept arrays of regular expressions',
             () => {
-                expect(cleanEnd('@%!a b c d!%@', [ /@/, /%|!/ ])).to.equal('@%!a b c d');
+                expect(cleanEnd('@%!a b c d!%@', [ /@/u, /%|!/u ])).to.equal('@%!a b c d');
             }
         );
 
         it(
             'should accept mixed arrays of regular expressions',
             () => {
-                expect(cleanEnd('@%!a b c d!%@', [ /@/, '%!' ])).to.equal('@%!a b c d');
+                expect(cleanEnd('@%!a b c d!%@', [ /@/u, '%!' ])).to.equal('@%!a b c d');
             }
         );
     }
@@ -129,8 +128,8 @@ describe(
         it(
             'should accept regular expressions',
             () => {
-                expect(cleanStart('@@@a b c d@@@', /@/)).to.equal('a b c d@@@');
-                expect(cleanStart('xyza b c dxyzxyz', /xyz/)).to.equal('a b c dxyzxyz');
+                expect(cleanStart('@@@a b c d@@@', /@/u)).to.equal('a b c d@@@');
+                expect(cleanStart('xyza b c dxyzxyz', /xyz/u)).to.equal('a b c dxyzxyz');
             }
         );
 
@@ -144,16 +143,15 @@ describe(
         it(
             'should accept arrays of regular expressions',
             () => {
-                expect(cleanStart('@%!a b c d!%@', [ /@/, /%|!/ ])).to.equal('a b c d!%@');
+                expect(cleanStart('@%!a b c d!%@', [ /@/u, /%|!/u ])).to.equal('a b c d!%@');
             }
         );
 
         it(
             'should accept mixed arrays of regular expressions',
             () => {
-                expect(cleanStart('@%!a b c d!%@', [ /@/, '%!' ])).to.equal('a b c d!%@');
+                expect(cleanStart('@%!a b c d!%@', [ /@/u, '%!' ])).to.equal('a b c d!%@');
             }
         );
     }
 );
-

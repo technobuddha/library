@@ -11,9 +11,7 @@ describe(
                 expect(ensureSuffix('bletch', '-foobie')).to.equal('bletch-foobie');
                 expect(ensureSuffix('bletch-foobie', '-foobie')).to.equal('bletch-foobie');
                 expect(ensureSuffix('bletchfoobie', '-foobie')).to.equal('bletchfoobie-foobie');
-
             }
         );
     }
 );
-

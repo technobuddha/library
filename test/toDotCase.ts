@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import toDotCase  from '../src/toDotCase';
 
-
 describe(
     'toDotCase',
     () => {
@@ -23,4 +22,3 @@ describe(
         );
     }
 );
-

@@ -45,7 +45,7 @@ describe(
             () => {
                 expect(escapeJava('¡¢£ýþÿ')).to.equal('¡¢£ýþÿ');
             }
-        )
+        );
 
         it(
             'should unicode escape BMP characters',
@@ -62,4 +62,3 @@ describe(
         );
     }
 );
-

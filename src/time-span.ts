@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/unified-signatures */
 import isString from 'lodash/isString';
 import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond, hoursPerDay, minutesPerHour, secondsPerMinute } from './constants';
 
@@ -8,7 +9,7 @@ import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond, hoursPerDay,
  */
 export class TimeSpan {
     /**
-     * 
+     *
      * @param text formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be ommitted
      * @param ticks the number of ticks (milliseconds)
      * @param d Days
@@ -34,14 +35,14 @@ export class TimeSpan {
             d = h = m = s = ms = 0;
         } else if(args.length === 1) {
             if(isString(args[0])) {
-                let text    = args[0] as string;
+                let text    = args[0]!;
 
-                if(text[0] === '-') {
+                if(text.startsWith('-')) {
                     sign    = -1;
                     text    = text.slice(1);
                 }
 
-                const matches = text.match(/^(\d{1,2})(?::(\d\d)(?::(\d\d)(?::(\d\d))?)?)?(?:\.(\d{1,3}))?$/);
+                const matches = /^(\d{1,2})(?::(\d\d)(?::(\d\d)(?::(\d\d))?)?)?(?:\.(\d{1,3}))?$/u.exec(text);
                 if(matches) {
                     d   = Number(matches[1]);
                     h   = Number(matches[2]);
@@ -55,12 +56,10 @@ export class TimeSpan {
                         h = d;
                         d = 0;
                     }
-                }
-                else {
+                } else {
                     d = h = m = s = ms = 0;
                 }
-            }
-            else {
+            } else {
                 ms    = args[0] as number;
                 d    = h = m = s = 0;
             }
@@ -81,7 +80,7 @@ export class TimeSpan {
         this.clicks = sign * ((d ? d * ticksPerDay : 0) + (h ? h * ticksPerHour : 0) + (m ? m * ticksPerMinute : 0) + (s ? s * ticksPerSecond : 0) + (ms ? ms : 0));
     }
 
-    private clicks: number;
+    private readonly clicks: number;
 
     /**
      * Get the days portion
@@ -100,15 +99,15 @@ export class TimeSpan {
     /**
      * Get the minutes portion
      */
-    public get minutes(): number { 
-        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerMinute) % minutesPerHour; 
+    public get minutes(): number {
+        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerMinute) % minutesPerHour;
     }
 
     /**
      * Get the seconds portion
      */
     public get seconds(): number {
-        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerSecond) % secondsPerMinute; 
+        return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks) / ticksPerSecond) % secondsPerMinute;
     }
 
     /**
@@ -118,7 +117,7 @@ export class TimeSpan {
         return Math.sign(this.clicks) * Math.floor(Math.abs(this.clicks)) % ticksPerSecond;
     }
 
-    /** 
+    /**
      * Get the total number of ticks (milliseconds)
      */
     public get ticks(): number {
@@ -150,7 +149,7 @@ export class TimeSpan {
      * Get the total number of seconds
      */
     public get totalSeconds(): number {
-        return this.clicks / ticksPerSecond; 
+        return this.clicks / ticksPerSecond;
     }
 
     /**
@@ -162,9 +161,9 @@ export class TimeSpan {
 
     /**
      * Format the timespan using a mask
-     * 
+     *
      * @param mask The mask
-     * @returns the formatted TimeSpan 
+     * @returns the formatted TimeSpan
      */
     public format(mask?: string): string {
         if(mask) {
@@ -188,31 +187,29 @@ export class TimeSpan {
             } as {[key: string]: string };
 
             return mask.replace(
-                /[dmhsl]{1,2}|"[^"]*"|'[^']*'/g,
-                function($0) {
+                /[dmhsl]{1,2}|"[^"]*"|'[^']*'/ug,
+                $0 => {
                     return ($0 in flags) ? flags[$0] : $0.slice(1, $0.length - 1);
                 }
             );
-        } else {
-            const D = this.days;
-            const H = this.hours;
-            const M = this.minutes;
-            const S = this.seconds;
-            //const L = this.milliseconds;
-
-            if(D > 0)
-                return `${D}.${ H.toString().padStart(2, '0') }:${ M.toString().padStart(2, '0') }:${ S.toString().padStart(2, '0') }`;
-            else
-            if(H > 0)
-                return `${H}:${ M.toString().padStart(2, '0') }:${ S.toString().padStart(2, '0') }`;
-            else
-                return `${M}:${ S.toString().padStart(2, '0') }`;
         }
+        const D = this.days;
+        const H = this.hours;
+        const M = this.minutes;
+        const S = this.seconds;
+        //const L = this.milliseconds;
+
+        if(D > 0)
+            return `${D}.${H.toString().padStart(2, '0')}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
+        else
+        if(H > 0)
+            return `${H}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
+        return `${M}:${S.toString().padStart(2, '0')}`;
     }
 
     /**
      * Convert the TimeSpan to a string
-     * 
+     *
      * @returns formatted string
      */
     public toString(): string {
@@ -221,7 +218,7 @@ export class TimeSpan {
 
     /**
      * Add two timespans
-     * 
+     *
      * @param other TimeSpan to add to this
      * @returns a TimeSpan that is the sum of two timespans
      */
@@ -231,7 +228,7 @@ export class TimeSpan {
 
     /**
      * Compare two TimeSpans
-     * 
+     *
      * @param t1 First TimeSpan
      * @param t2 Second TimeSpan
      * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the firt is greater

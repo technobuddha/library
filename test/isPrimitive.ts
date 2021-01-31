@@ -2,7 +2,6 @@
 import { expect }  from 'chai';
 import isPrimitive from '../src/isPrimitive';
 
-
 describe(
     'isPrimitive',
     () => {
@@ -11,7 +10,7 @@ describe(
             () => {
                 expect(isPrimitive(null)).to.equal(true);
                 expect(isPrimitive(undefined)).to.equal(true);
-                expect(isPrimitive("jabberwocky")).to.equal(true);
+                expect(isPrimitive('jabberwocky')).to.equal(true);
                 expect(isPrimitive(0)).to.equal(true);
                 expect(isPrimitive(Symbol())).to.equal(true);
                 expect(isPrimitive({})).to.equal(false);
@@ -21,4 +20,3 @@ describe(
         );
     }
 );
-

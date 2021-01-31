@@ -3,7 +3,7 @@ import isMultipleOf from './isMultipleOf';
 
 /**
  * Tests to see if the specified value is an odd integer
- * 
+ *
  * @param input The number to test
  * @returns true if the number is an odd integer
  */

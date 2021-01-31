@@ -8,24 +8,24 @@ export type Options = {
     quote?: string;
     /** Character sequence to replace the quote mark within the text, or function to return the properly escaped text */
     escape?: string | ((input: string) => string);
-}
+};
 
 /**
  * Surround text with quotes
- * 
+ *
  * @param input The text to surround
  * @param __namedParameters see {@link Options}
  * @default quote double-quote (")
  * @deffaultValue escape {@link esapeJs}
  * @returns text surrounded by quotes
  */
-export function quote(input: string, {quote = '"', escape = escapeJS}: Options = {}): string {
+export function quote(input: string, { quote: q = '"', escape = escapeJS }: Options = {}): string {
     if(isFunction(escape))
         input = escape(input);
     else
-        input = input.replace(new RegExp(escapeRegExp(quote), 'g'), escape);
+        input = input.replace(new RegExp(escapeRegExp(q), 'ug'), escape);
 
-    return build(quote, input, quote);
+    return build(q, input, q);
 }
 
 export default quote;

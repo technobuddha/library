@@ -5,7 +5,7 @@ export type BinaryObject = ArrayBuffer | DataView | Int8Array | Uint8Array | Uin
 
 /**
  * Convert any binary object into a data URL
- * 
+ *
  * @param input The binary object
  * @param mimeType The MIME type for the URL
  * @returns The data URL

@@ -3,7 +3,6 @@ import { expect }       from 'chai';
 import isEven           from '../src/isEven';
 import { negativeZero } from '../src/constants';
 
-
 describe(
     'isEven',
     () => {
@@ -35,4 +34,3 @@ describe(
         );
     }
 );
-

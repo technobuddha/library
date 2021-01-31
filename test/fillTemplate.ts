@@ -16,10 +16,10 @@ describe(
         it(
             'should allow different delimiters',
             () => {
+                // eslint-disable-next-line no-template-curly-in-string
                 expect(fillTemplate('The ${object} of ${principle}.', { object: 'Statue', principle: 'Liberty' }, { open: '${', close: '}' }))
                 .to.equal('The Statue of Liberty.');
             }
         );
     }
 );
-

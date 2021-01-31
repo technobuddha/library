@@ -27,7 +27,6 @@ describe(
                 expect(toSmallWordsCase('NOW IS THE time FOR ALL good MEN TO COME TO THE AID OF THEIR COUNTRY.', { upperCase: true }))
                 .to.equal('nOW iS tHE tIME fOR aLL gOOD mEN tO cOME tO tHE aID oF tHEIR cOUNTRY.');
             }
-        )
+        );
     }
 );
-

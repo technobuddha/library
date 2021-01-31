@@ -1,4 +1,5 @@
-import metricUnits, { Options as MetricUnitOptions } from './metricUnits';
+import type { Options as MetricUnitOptions } from './metricUnits';
+import metricUnits from './metricUnits';
 
 export type Options = Omit<MetricUnitOptions, 'macro' | 'micro' | 'unit'>;
 
@@ -8,18 +9,18 @@ export type Options = Omit<MetricUnitOptions, 'macro' | 'micro' | 'unit'>;
  * @param __namedParameters see {@link BinaryUnitsOptions}
  * }
  */
-export function binaryUnits(input: number, {format, pad, precision = 2}: Options = {}): string {
-    return metricUnits(
+export function binaryUnits(input: number, { format, pad, precision = 2 }: Options = {}): string {
+    return `${metricUnits(
         input,
         {
             format,
             pad,
-            macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
+            macro: [ 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi' ],
             micro: [],
             unit: 1024,
-            precision
+            precision,
         }
-    ) + 'B';
+    )}B`;
 }
 
 export default binaryUnits;

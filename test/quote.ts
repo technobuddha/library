@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import quote      from '../src/quote';
 
-
 describe(
     'quote',
     () => {
@@ -28,4 +27,3 @@ describe(
         );
     }
 );
-

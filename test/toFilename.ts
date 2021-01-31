@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import toFilename from '../src/toFilename';
 
-
 describe(
     'toFilename',
     () => {
@@ -24,7 +23,10 @@ describe(
         it(
             'should control the disambiguate',
             () => {
-                expect(toFilename('now is the time for all good men to come to the aid of their country.', { disambiguate: 20 })).to.equal('now is the time for all good men to come to …aid of their country');
+                expect(
+                    toFilename('now is the time for all good men to come to the aid of their country.', { disambiguate: 20 })
+                )
+                .to.equal('now is the time for all good men to come to …aid of their country');
             }
         );
 
@@ -43,4 +45,3 @@ describe(
         );
     }
 );
-

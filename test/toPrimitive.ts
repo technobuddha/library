@@ -3,7 +3,6 @@ import { expect }       from 'chai';
 import toPrimitive      from '../src/toPrimitive';
 import { empty, space } from '../src/constants';
 
-
 describe(
     'toPrimitive',
     () => {
@@ -12,8 +11,8 @@ describe(
             () => {
                 expect(toPrimitive(empty)).to.equal(empty);
                 expect(toPrimitive(space)).to.equal(space);
-                expect(toPrimitive("jabberwocky")).to.equal("jabberwocky");
-                expect(toPrimitive("0")).to.equal('0');
+                expect(toPrimitive('jabberwocky')).to.equal('jabberwocky');
+                expect(toPrimitive('0')).to.equal('0');
             }
         );
 
@@ -25,7 +24,7 @@ describe(
                 expect(toPrimitive(1)).to.equal(1);
                 expect(toPrimitive(Infinity)).to.equal(Infinity);
                 expect(toPrimitive(-Infinity)).to.equal(-Infinity);
-                expect(toPrimitive(NaN)).to.be.NaN;
+                expect(isNaN(toPrimitive(NaN))).to.equal(true);
             }
         );
 
@@ -56,7 +55,7 @@ describe(
             'should handle objects and arrays',
             () => {
                 expect(toPrimitive([])).to.deep.equal([]);
-                expect(toPrimitive([1,2,3])).to.deep.equal([1,2,3]);
+                expect(toPrimitive([ 1, 2, 3 ])).to.deep.equal([ 1, 2, 3 ]);
                 expect(toPrimitive({})).to.deep.equal({});
             }
         );
@@ -70,7 +69,7 @@ describe(
                 expect(toPrimitive(123,                'string')).to.equal('123');
                 expect(toPrimitive(false,              'string')).to.equal('false');
                 expect(toPrimitive(Symbol.toPrimitive, 'string')).to.equal(Symbol.toPrimitive);
-                expect(toPrimitive([1,2,3],            'string')).to.equal('1,2,3');
+                expect(toPrimitive([ 1, 2, 3 ],            'string')).to.equal('1,2,3');
             }
         );
 
@@ -83,7 +82,7 @@ describe(
                 expect(toPrimitive(123,                'number')).to.equal(123);
                 expect(toPrimitive(false,              'number')).to.equal(false);
                 expect(toPrimitive(Symbol.toPrimitive, 'number')).to.equal(Symbol.toPrimitive);
-                expect(toPrimitive([1,2,3],            'number')).to.deep.equal([1,2,3]);
+                expect(toPrimitive([ 1, 2, 3 ],            'number')).to.deep.equal([ 1, 2, 3 ]);
             }
         );
 
@@ -96,9 +95,8 @@ describe(
                 expect(toPrimitive(123,                'default')).to.equal(123);
                 expect(toPrimitive(false,              'default')).to.equal(false);
                 expect(toPrimitive(Symbol.toPrimitive, 'default')).to.equal(Symbol.toPrimitive);
-                expect(toPrimitive([1,2,3],            'default')).to.deep.equal([1,2,3]);
+                expect(toPrimitive([ 1, 2, 3 ],            'default')).to.deep.equal([ 1, 2, 3 ]);
             }
         );
     }
 );
-

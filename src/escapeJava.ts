@@ -3,7 +3,7 @@ import { oct, u4 } from './_escape';
 
 /**
  * Escape a string for use in Java
- * 
+ *
  * @param input The string to escape
  * @returns The string escaped for Java
  */
@@ -13,7 +13,7 @@ export function escapeJava(input: string): string {
         let u0 = input.codePointAt(i);
         let u1 = input.codePointAt(i + 1);
 
-        if(u0 != undefined) {
+        if(u0 !== undefined) {
             if(u0 < 0x00000020) {
                 if(u0 === 0x00000000)
                     output.push(oct(u1) ? '\\000' : '\\0');
@@ -29,8 +29,7 @@ export function escapeJava(input: string): string {
                     output.push('\\r');
                 else
                     output.push(u4(u0));
-            }
-            else if(u0 < 0x0000007f) {
+            } else if(u0 < 0x0000007f) {
                 if(u0 === 0x00000022)
                     output.push('\\"');
                 else if(u0 === 0x00000027)
@@ -39,14 +38,7 @@ export function escapeJava(input: string): string {
                     output.push('\\\\');
                 else
                     output.push(String.fromCharCode(u0));
-            }
-            else if(u0 < 0x000000a1)
-                output.push(u4(u0));
-            else if(u0 < 0x00000100)
-                output.push(String.fromCharCode(u0));
-            else if(u0 < 0x00010000)
-                output.push(u4(u0));
-            else {
+            } else if(u0 < 0x000000a1) { output.push(u4(u0)); } else if(u0 < 0x00000100) { output.push(String.fromCharCode(u0)); } else if(u0 < 0x00010000) { output.push(u4(u0)); } else {
                 u0 = input.charCodeAt(i);
                 u1 = input.charCodeAt(++i);
                 output.push(u4(u0), u4(u1));

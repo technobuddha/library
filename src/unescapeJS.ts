@@ -1,13 +1,12 @@
-
 /**
  * Unescape a string encodeed in Javascript style
- * 
+ *
  * @param input the string to unescape
  * @returns the string with escapes resolved
  */
 export function unescapeJS(input: string): string {
     return input.replace(
-        /\\(([bfnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]{2})|(u[0-9a-fA-F]{4})|(u\{[0-9a-fA-F]{1,}\})|.)/g,
+        /\\(([bfnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]{2})|(u[0-9a-fA-F]{4})|(u\{[0-9a-fA-F]{1,}\})|.)/ug,
         escape => {
             const c = escape.charAt(1);
 
@@ -29,9 +28,8 @@ export function unescapeJS(input: string): string {
                 return String.fromCharCode(Number.parseInt(escape.substr(2), 16));
             if(c === 'u') {
                 if(escape.charAt(2) === '{')
-                    return String.fromCodePoint(Number.parseInt(escape.substr(3, escape.length - 4), 16))
-                else
-                    return String.fromCharCode(Number.parseInt(escape.substr(2), 16));
+                    return String.fromCodePoint(Number.parseInt(escape.substr(3, escape.length - 4), 16));
+                return String.fromCharCode(Number.parseInt(escape.substr(2), 16));
             }
 
             return escape.substr(1);

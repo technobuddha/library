@@ -11,7 +11,7 @@ export class RGB {
         const r      = this.r - that.r;
         const g      = this.g - that.g;
         const b      = this.b - that.b;
-        return Math.sqrt(((2+(rmean/256))*r*r) + (4*g*g) + ((2 + ((255-rmean)/256))*b*b));
+        return Math.sqrt(((2 + (rmean / 256)) * r * r) + (4 * g * g) + ((2 + ((255 - rmean) / 256)) * b * b));
 
         //return this.toXYZ().toLAB().compareTo(that.toXYZ().toLAB());
     }
@@ -20,21 +20,21 @@ export class RGB {
         const r     = this.r / 255;
         const g     = this.g / 255;
         const b     = this.b / 255;
-        const min   = Math.min(r,g,b);
-        const max   = Math.max(r,g,b);
-        const delta = max-min;
+        const min   = Math.min(r, g, b);
+        const max   = Math.max(r, g, b);
+        const delta = max - min;
         let   h     = 0;
         let   s     = 0;
-        const l     = (max+min)/2;
+        const l     = (max + min) / 2;
 
         if(delta !== 0) {       //gray
             //Chromatic
             if(l < 0.5) s = delta / (max + min);
-            else        s = delta / (2 - max - min)
+            else        s = delta / (2 - max - min);
 
-            const deltaR = (((max - r) / 6) + (max / 2 )) / max;
-            const deltaG = (((max - g) / 6) + (max / 2 )) / max;
-            const deltaB = (((max - b) / 6) + (max / 2 )) / max;
+            const deltaR = (((max - r) / 6) + (max / 2)) / max;
+            const deltaG = (((max - g) / 6) + (max / 2)) / max;
+            const deltaB = (((max - b) / 6) + (max / 2)) / max;
 
             if(r === max)
                 h = deltaB - deltaG;
@@ -51,11 +51,11 @@ export class RGB {
     }
 
     public toHSV(): HSV {
-        const r     = (this.r / 255 );
-        const g     = (this.b / 255 );
-        const b     = (this.b / 255 );
-        const min   = Math.min(r,g,b);
-        const max   = Math.max(r,g,b);
+        const r     = (this.r / 255);
+        const g     = (this.b / 255);
+        const b     = (this.b / 255);
+        const min   = Math.min(r, g, b);
+        const max   = Math.max(r, g, b);
         const delta = max - min;
         let   h     = 0;
         let   s     = 0;
@@ -65,19 +65,19 @@ export class RGB {
             //chromatic
             s = delta / max;
 
-            const deltaR = (((max - r) / 6) + (max / 2 )) / max;
-            const deltaG = (((max - g) / 6) + (max / 2 )) / max;
-            const deltaB = (((max - b) / 6) + (max / 2 )) / max;
+            const deltaR = (((max - r) / 6) + (max / 2)) / max;
+            const deltaG = (((max - g) / 6) + (max / 2)) / max;
+            const deltaB = (((max - b) / 6) + (max / 2)) / max;
 
             if(r === max)
                 h = deltaB - deltaG;
-            else if (g === max)
+            else if(g === max)
                 h = deltaR - deltaB + (1 / 3);
-            else if (b === max)
+            else if(b === max)
                 h = deltaG - deltaR + (2 / 3);
 
-            if ( h < 0 ) h += 1;
-            if ( h > 1 ) h -= 1;
+            if(h < 0) h += 1;
+            if(h > 1) h -= 1;
         }
 
         return new HSV(h, s, v);
@@ -88,15 +88,15 @@ export class RGB {
         let g = this.g / 255;
         let b = this.b / 255;
 
-        if(r > 0.04045) r = Math.pow((r + 0.055)/1.055, 2.4) * 100; else r = r / 0.1292;
-        if(g > 0.04045) g = Math.pow((g + 0.055)/1.055, 2.4) * 100; else g = g / 0.1292;
-        if(b > 0.04045) b = Math.pow((b + 0.055)/1.055, 2.4) * 100; else b = b / 0.1292;
+        if(r > 0.04045) r = Math.pow((r + 0.055) / 1.055, 2.4) * 100; else r = r / 0.1292;
+        if(g > 0.04045) g = Math.pow((g + 0.055) / 1.055, 2.4) * 100; else g = g / 0.1292;
+        if(b > 0.04045) b = Math.pow((b + 0.055) / 1.055, 2.4) * 100; else b = b / 0.1292;
 
         const x = (r * 0.4124) + (g * 0.3576) + (b * 0.1805);
         const y = (r * 0.2126) + (g * 0.7152) + (b * 0.0722);
         const z = (r * 0.0193) + (g * 0.1192) + (b * 0.9505);
 
-        return new XYZ(x,y,z);
+        return new XYZ(x, y, z);
     }
 
     public toLAB(): LAB {
@@ -122,9 +122,9 @@ export class HSL {
             const v2 = (this.l < 0.5) ? this.l * (1 + this.s) : (this.l + this.s) - (this.s * this.l);
             const v1 = 2 * this.l - v2;
 
-            r = 255 * hue2RGB(v1, v2, this.h + (1/3));
+            r = 255 * hue2RGB(v1, v2, this.h + (1 / 3));
             g = 255 * hue2RGB(v1, v2, this.h);
-            b = 255 * hue2RGB(v1, v2, this.h - (1/3));
+            b = 255 * hue2RGB(v1, v2, this.h - (1 / 3));
         }
 
         return new RGB(r, g, b);
@@ -152,12 +152,19 @@ export class HSV {
             const v2 = this.v * (1 - this.s * (h - i));
             const v3 = this.v * (1 - this.s * (1 - (h - i)));
 
-            if      (i === 0) { r = this.v;    g = v3;        b = v1;        }
-            else if (i === 1) { r = v2;        g = this.v;    b = v1;        }
-            else if (i === 2) { r = v1;        g = this.v;    b = v3;        }
-            else if (i === 3) { r = v1;        g = v2;        b = this.v;    }
-            else if (i === 4) { r = v3;        g = v1;        b = this.v;    }
-            else              { r = this.v;    g = v1;        b = v2;        }
+            if(i === 0) {
+                r = this.v;    g = v3;        b = v1;
+            } else if(i === 1) {
+                r = v2;        g = this.v;    b = v1;
+            } else if(i === 2) {
+                r = v1;        g = this.v;    b = v3;
+            } else if(i === 3) {
+                r = v1;        g = v2;        b = this.v;
+            } else if(i === 4) {
+                r = v3;        g = v1;        b = this.v;
+            } else {
+                r = this.v;    g = v1;        b = v2;
+            }
         }
 
         r = Math.round(r * 255);
@@ -178,9 +185,9 @@ export class XYZ {
         let y = this.y / 100;
         let z = this.z / 108.883;
 
-        if(x > 0.008856) x = Math.pow(x, 1/3); else x = (7.787 * x) + (16/116);
-        if(y > 0.008856) y = Math.pow(y, 1/3); else y = (7.787 * y) + (16/116);
-        if(z > 0.008856) z = Math.pow(z, 1/3); else z = (7.787 * z) + (16/116);
+        if(x > 0.008856) x = Math.pow(x, 1 / 3); else x = (7.787 * x) + (16 / 116);
+        if(y > 0.008856) y = Math.pow(y, 1 / 3); else y = (7.787 * y) + (16 / 116);
+        if(z > 0.008856) z = Math.pow(z, 1 / 3); else z = (7.787 * z) + (16 / 116);
 
         const l = 116 * y - 16;
         const a = 500 * (x - y);
@@ -230,14 +237,14 @@ export class LAB {
         const wC = 1.00;
         const wH = 1.00;
 
-        const c1 = Math.sqrt((this.a*this.a) + (this.b*this.b));
-        const c2 = Math.sqrt((that.a*that.a) + (that.b*that.b));
+        const c1 = Math.sqrt((this.a * this.a) + (this.b * this.b));
+        const c2 = Math.sqrt((that.a * that.a) + (that.b * that.b));
         let   dl = this.l - that.l;
         let   dc = c1 - c2;
-        const de = Math.sqrt(Math.pow(this.l-that.l, 2) + Math.pow(this.a-that.a, 2) + Math.pow(this.b-that.b, 2));
+        const de = Math.sqrt(Math.pow(this.l - that.l, 2) + Math.pow(this.a - that.a, 2) + Math.pow(this.b - that.b, 2));
         let   dh = (Math.sqrt(de) > (Math.sqrt(Math.abs(dl)) + Math.sqrt(Math.abs(dc))))
-                   ? Math.sqrt((de*de) + (dl*dl) + (dc*dc))
-                   : 0;
+            ? Math.sqrt((de * de) + (dl * dl) + (dc * dc))
+            : 0;
         const sc = 1 + (0.045 * c1);
         const sh = 1 + (0.015 * c1);
 
@@ -245,7 +252,7 @@ export class LAB {
         dc /= wC * sc;
         dh /= wH * sh;
 
-        return Math.sqrt((dl*dl) + (dc*dc) + (dh*dh));
+        return Math.sqrt((dl * dl) + (dc * dc) + (dh * dh));
     }
 
     public deltaE2000(that: LAB) {
@@ -332,18 +339,14 @@ export class LAB {
         const c2$ = Math.sqrt(Math.pow(a2$, 2) + Math.pow(that.b, 2));
 
         let h1$;
-        if(this.b === 0 && a1$ === 0)
-            h1$ = 0;
-        else {
+        if(this.b === 0 && a1$ === 0) { h1$ = 0; } else {
             h1$ = toDegrees(Math.atan2(this.b, a1$));
             if(h1$ < 0)
                 h1$ += 360;
         }
 
         let h2$;
-        if(that.b === 0 && a2$ === 0)
-            h2$ = 0;
-        else {
+        if(that.b === 0 && a2$ === 0) { h2$ = 0; } else {
             h2$ = toDegrees(Math.atan2(that.b, a2$));
             if(h2$ < 0)
                 h2$ += 360;
@@ -354,9 +357,7 @@ export class LAB {
         const dc$ = c2$ - c1$;
 
         let dh$;
-        if((c1$ * c2$) === 0)
-            dh$ = 0;
-        else {
+        if((c1$ * c2$) === 0) { dh$ = 0; } else {
             dh$ = h2$ - h1$;
             if(dh$ < -180)
                 dh$ += 360;
@@ -369,16 +370,10 @@ export class LAB {
         const c_$ = (c1$ + c2$) / 2;
 
         let h_$;
-        if((c1$ * c2$) === 0)
-            h_$ = h1$ + h2$;
-        else if(Math.abs(h1$ - h2$) < 180)
-            h_$ = (h1$ + h2$) / 2;
-        else {
-            if((h1$ + h2$) < 360)
-                h_$ = (h1$ + h2$ + 360)/2;
-            else
-                h_$ = (h1$ + h2$ - 360)/2;
-        }
+        if((c1$ * c2$) === 0)  h_$ = h1$ + h2$;  else if(Math.abs(h1$ - h2$) < 180)  h_$ = (h1$ + h2$) / 2;  else if((h1$ + h2$) < 360)
+            h_$ = (h1$ + h2$ + 360) / 2;
+        else
+            h_$ = (h1$ + h2$ - 360) / 2;
 
         const t  = 1 - (0.17 * Math.cos(h_$ - toRadians(30)))    +
                         (0.24 * Math.cos(toRadians(2 * h_$)))     +
@@ -392,10 +387,10 @@ export class LAB {
         const rt = -Math.sin(toRadians(2 * dt)) * rc;
 
         return Math.sqrt(
-            Math.pow(dl$ / (1.0 /*kL*/ * sl), 2) +
-            Math.pow(dc$ / (1.0 /*kC*/ * sc), 2) +
-            Math.pow(dh$ / (1.0 /*kH*/ * sh), 2) +
-            (rt + (dc$ / (1.0 /*kC*/ * sc)) * (dh$ / (1.0 /*kH*/ * sh)))
+            Math.pow(dl$ / (Number(sl)), 2) +
+            Math.pow(dc$ / (Number(sc)), 2) +
+            Math.pow(dh$ / (Number(sh)), 2) +
+            (rt + (dc$ / (Number(sc))) * (dh$ / (Number(sh))))
         );
     }
 
@@ -404,9 +399,9 @@ export class LAB {
         let x = (this.a / 500) + y;
         let z = y - (this.b / 200);
 
-        if(y*y*y > 0.008856) y = y*y*y; else y = (y - 16/116) / 7.787;
-        if(x*x*x > 0.008856) x = x*x*x; else x = (x - 16/116) / 7.787;
-        if(z*z*z > 0.008856) z = z*z*z; else z = (z - 16/116) / 7.787;
+        if(y * y * y > 0.008856) y = y * y * y; else y = (y - 16 / 116) / 7.787;
+        if(x * x * x > 0.008856) x = x * x * x; else x = (x - 16 / 116) / 7.787;
+        if(z * z * z > 0.008856) z = z * z * z; else z = (z - 16 / 116) / 7.787;
 
         return new XYZ(x * 95.047, y * 100.000, z * 108.883);
     }
@@ -423,5 +418,4 @@ function hue2RGB(v1: number, v2: number, vH: number): number {
 }
 //#endregion
 
-export default {RGB, HSL, HSV, XYZ, LAB};
-
+export default { RGB, HSL, HSV, XYZ, LAB };

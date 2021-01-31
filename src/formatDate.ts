@@ -7,7 +7,7 @@ import getTimezone                          from './getTimezone';
 import getJulian                            from './getJulian';
 import getDayOfWeek                         from './getDayOfWeek';
 
-const tokenizer = /[hHmfDO]{1,2}|s{1,3}|YYYY|YY|[Md]{1,4}|W([wy]{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|AD|BC|CE|BCE|E{2,3}|J|Q|"[^"]*"|'[^']*'/g;
+const tokenizer = /[hHmfDO]{1,2}|s{1,3}|YYYY|YY|[Md]{1,4}|W([wy]{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|AD|BC|CE|BCE|E{2,3}|J|Q|"[^"]*"|'[^']*'/ug;
 const masks: Readonly<Record<string, string>> = Object.freeze({
     'default':          'YYYY-MM-DD hh:mm:ss.ff GMT',
     'rfc1123':          'ddd, DD MMM YYYY hh:mm:ss GMT',
@@ -39,9 +39,9 @@ const masks: Readonly<Record<string, string>> = Object.freeze({
     'ISOWeekFullZone':  'Wyy-"W"Www-Wd"T"hh:mm:ss.ffTZ',
     'ISOOrdinal':       'YYYY-OO',
 
-    'cookie':           'dddd, DD MMM YYYY hh:mm:ss GMT'
+    'cookie':           'dddd, DD MMM YYYY hh:mm:ss GMT',
 });
-const dayOne        = [ 'u', 'M', 'T', 'W', 'R', 'F', 'S'];
+const dayOne        = [ 'u', 'M', 'T', 'W', 'R', 'F', 'S' ];
 const dayTwo        = [ 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa' ];
 const dayAbbrev     = [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat' ];
 const dayName       = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'    ];
@@ -50,20 +50,19 @@ const monthName     = [ 'January', 'February', 'March', 'April', 'May', 'June', 
 
 type Options = {
     /** Format the date in the UTC timezone */
-    UTC?: boolean
+    UTC?: boolean;
 };
 
 /**
  * Format a date
- * 
+ *
  * @param input The date
  * @param mask The mask
  * @param __namedParameters see {@link Options}
  * @default UTC false
  */
-export function formatDate(input: Date, mask: string, {UTC = false}: Options = {}): string
-{
-    mask   = masks[mask] || mask || masks['default'];
+export function formatDate(input: Date, mask: string, { UTC = false }: Options = {}): string {
+    mask   = masks[mask] || mask || masks.default;
 
     const da = UTC ? input.getUTCDate()          : input.getDate();
     const dy = UTC ? input.getUTCDay()           : input.getDay();
@@ -75,9 +74,9 @@ export function formatDate(input: Date, mask: string, {UTC = false}: Options = {
     const ms = UTC ? input.getUTCMilliseconds()  : input.getMilliseconds();
     const o  = UTC ? 0                           : input.getTimezoneOffset();
 
-    return mask.replace (
+    return mask.replace(
         tokenizer,
-        function(token) {
+        token => {
             switch(token) {
                 case 'h':           return padNumber(ho, 0);                                                //Hours (24)
                 case 'hh':          return padNumber(ho, 2);                                                //Hours (24)
@@ -87,13 +86,13 @@ export function formatDate(input: Date, mask: string, {UTC = false}: Options = {
                 case 'mm':          return padNumber(mi, 2);                                                //Minutes
                 case 's':           return padNumber(se, 0);                                                //Seconds
                 case 'ss':          return padNumber(se, 2);                                                //Seconds
-                case 'sss':         return padNumber(ho * secondsPerHour + mi * secondsPerMinute + se, 0);    
+                case 'sss':         return padNumber(ho * secondsPerHour + mi * secondsPerMinute + se, 0);
                 case 'f':           return padNumber(ms, 0);                                                //Milliseconds
                 case 'ff':          return padNumber(ms, 3);                                                //Milliseconds
-                case 'YYYY':        return padNumber(yr<1?-yr+1:yr, 4);                                        //Year
-                case 'YY':          return padNumber((yr<1?-yr+1:yr) % 100, 2);                                //Year
-                case 'M':           return padNumber(mo+1, 0);                                                //Month
-                case 'MM':          return padNumber(mo+1, 2);                                                //Month
+                case 'YYYY':        return padNumber(yr < 1 ? -yr + 1 : yr, 4);                                        //Year
+                case 'YY':          return padNumber((yr < 1 ? -yr + 1 : yr) % 100, 2);                                //Year
+                case 'M':           return padNumber(mo + 1, 0);                                                //Month
+                case 'MM':          return padNumber(mo + 1, 2);                                                //Month
                 case 'MMM':         return monthAbbrev[mo];                                                    //Month
                 case 'MMMM':        return monthName[mo];                                                    //Month
                 case 'D':           return padNumber(da, 0);                                                //Day
@@ -111,7 +110,7 @@ export function formatDate(input: Date, mask: string, {UTC = false}: Options = {
                 case 'Www':         return padNumber(getWeekOfYear(input).week, 0);                            //
                 case 'Wd':          return padNumber(getDayOfWeek(input), 0);
                 //TODO the year might shift for ISO formats            WOY:        padNumber(getWeekOfYear(input), 0),        //Week of Year (1-53)    //TODO pad(0) & pad(2) versions
-                case 'TZ':          return getTimezone(o);                            
+                case 'TZ':          return getTimezone(o);
                 case 'GMT':         return getTimezone(o, { GMT: true });
                 case 'AM':          return ho < 12 ? 'AM'   : '';    //AM  / --
                 case 'PM':          return ho < 12 ? ''     : 'PM';  //--  / PM

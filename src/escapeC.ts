@@ -3,7 +3,7 @@ import { oct, hex, x2, u4, U8 } from './_escape';
 
 /**
  * Escape a string for use in C/C++
- * 
+ *
  * @param input The string to escape
  * @returns the escaped string
  */
@@ -13,7 +13,7 @@ export function escapeC(input: string): string {
         const u0 = input.codePointAt(i);
         const u1 = input.codePointAt(i + 1);
 
-        if(u0 != undefined) {
+        if(u0 !== undefined) {
             if(u0 < 0x00000020) {
                 if(u0 === 0x00000000)
                     output.push(oct(u1) ? '\\000' : '\\0');
@@ -44,13 +44,13 @@ export function escapeC(input: string): string {
                     output.push('\\\\');
                 else
                     output.push(String.fromCharCode(u0));
-            } else if(u0 < 0x000000a1)
+            } else if(u0 < 0x000000a1) {
                 output.push(hex(u1) ? u4(u0) : x2(u0));
-            else if(u0 < 0x00000100)
+            } else if(u0 < 0x00000100) {
                 output.push(String.fromCharCode(u0));
-            else if(u0 < 0x00010000)
+            } else if(u0 < 0x00010000) {
                 output.push(u4(u0));
-            else {
+            } else {
                 ++i;
                 output.push(U8(u0));
             }

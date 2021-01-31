@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import indent     from '../src/indent';
 
-
 describe(
     'indent',
     () => {
@@ -21,4 +20,3 @@ describe(
         );
     }
 );
-

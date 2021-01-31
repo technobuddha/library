@@ -1,7 +1,6 @@
-
 /**
  * Split a string into an array of characters
- * 
+ *
  * @param input The string
  * @returns array of characters
  */

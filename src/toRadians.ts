@@ -1,6 +1,6 @@
 /**
  * Converts degrees to radians.
- * 
+ *
  * @param angle Angle in degrees.
  * @return Angle in radians.
  */

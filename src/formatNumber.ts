@@ -8,15 +8,15 @@ import build        from './build';
 
 //#region parse
 type ParseReturn =     {
-    aMask: string[],
-    aDigits: number,
-    bMask: string[],
-    bDigits: number,
-    scale: number,
-    group: boolean,
-    exponent: number,
-    signExponent: boolean,
-    precision: number,
+    aMask: string[];
+    aDigits: number;
+    bMask: string[];
+    bDigits: number;
+    scale: number;
+    group: boolean;
+    exponent: number;
+    signExponent: boolean;
+    precision: number;
 };
 
 function parse(mask: string): ParseReturn {
@@ -39,8 +39,7 @@ function parse(mask: string): ParseReturn {
             case "'": {
                 let s = '"';
 
-                for(++i; i < mask.length; ++i)
-                {
+                for(++i; i < mask.length; ++i) {
                     const k = mask.charAt(i);
 
                     if(c === k) break;
@@ -52,9 +51,7 @@ function parse(mask: string): ParseReturn {
             }
 
             case '#':  {
-                if(beforeDP)
-                    before.push(zeroSeen ? '0' : '#');
-                else {
+                if(beforeDP) { before.push(zeroSeen ? '0' : '#'); } else {
                     precision++;
                     after.push('#');
                 }
@@ -69,7 +66,7 @@ function parse(mask: string): ParseReturn {
                 } else {
                     //if we see a 0 after the decimal point, the proceeding #s are transformed into 0s
                     precision++;
-                    after = map(after, a => a === '#' ? '0' : a);
+                    after = map(after, a => (a === '#' ? '0' : a));
                     after.push('0');
                 }
                 break;
@@ -88,19 +85,19 @@ function parse(mask: string): ParseReturn {
 
             case '%': {
                 scale *= 100;
-                (beforeDP ? before : after).push('"' + c);
+                (beforeDP ? before : after).push(`"${c}`);
                 break;
             }
 
             case '‰': {
                 scale *= 1000;
-                (beforeDP ? before : after).push('"' + c);
+                (beforeDP ? before : after).push(`"${c}`);
                 break;
             }
 
             case '‱': {
                 scale *= 10000;
-                (beforeDP ? before : after).push('"' + c);
+                (beforeDP ? before : after).push(`"${c}`);
                 break;
             }
 
@@ -111,13 +108,13 @@ function parse(mask: string): ParseReturn {
                 let e = 0;
 
                 if(mask.length > j && mask.charAt(j) === '+') {
-                    j++; 
+                    j++;
                     signSeen = true;
                 } else if(mask.length > j && mask.charAt(j) === '-') {
                     j++;
                 }
 
-                while(mask.length > j && mask.charAt(j) === '0') {    
+                while(mask.length > j && mask.charAt(j) === '0') {
                     j++;
                     e++;
                 }
@@ -128,21 +125,20 @@ function parse(mask: string): ParseReturn {
                     signExponent = signSeen;
 
                     (beforeDP ? before : after).push(c);
-                } else
-                    (beforeDP ? before : after).push('"' + c);
+                } else { (beforeDP ? before : after).push(`"${c}`); }
                 break;
             }
 
             case '\\': {
                 if(i < mask.length - 1)
-                    (beforeDP ? before : after).push('"' + mask.charAt(++i));
+                    (beforeDP ? before : after).push(`"${mask.charAt(++i)}`);
                 else
                     (beforeDP ? before : after).push('"\\');
                 break;
             }
 
             default: {
-                (beforeDP ? before : after).push('"' + c);
+                (beforeDP ? before : after).push(`"${c}`);
                 break;
             }
         }
@@ -165,14 +161,22 @@ function parse(mask: string): ParseReturn {
         exponent:    exponent,
         signExponent: signExponent,
         precision:   precision,
-    }
+    };
 }
 //#endregion
 //#region format
-function format(input: number, {round, precision, scale, lead = 1, trim = 'none'}: {round?: number, precision?: number, scale?: number, lead?: number, trim?: 'none' | 'front' | 'back' | 'all'} = {}) {
+type FormatOptions = {
+    round?: number;
+    precision?: number;
+    scale?: number;
+    lead?: number;
+    trim?: 'none' | 'front' | 'back' | 'all';
+};
+
+function format(input: number, { round, precision, scale, lead = 1, trim = 'none' }: FormatOptions = {}) {
     const sign      = Math.sign(input);
-    const [m, e]    = Math.abs(input).toExponential(15).split('e');
-    let   exponent  = Number(e) + 1 // +1 because we store the number without the decimal point
+    const [ m, e ]    = Math.abs(input).toExponential(15).split('e');
+    let   exponent  = Number(e) + 1; // +1 because we store the number without the decimal point
     const mantissa  = m.replace('.', empty).split(empty);
 
     while(mantissa.length > exponent && mantissa[mantissa.length - 1] === '0')
@@ -201,20 +205,18 @@ function format(input: number, {round, precision, scale, lead = 1, trim = 'none'
                 }
             }
         }
-    }
+    };
 
     if(scale !== undefined)     exponent += scale;
     if(round !== undefined)     rounder(exponent + round);
     if(precision !== undefined) rounder(precision);
 
-    if(lead !== undefined) {
-        let length = Math.min(exponent, mantissa.length);
+    let length = Math.min(exponent, mantissa.length);
 
-        while(length < lead) {
-            mantissa.unshift('0');
-            ++exponent;
-            ++length;
-        }
+    while(length < lead) {
+        mantissa.unshift('0');
+        ++exponent;
+        ++length;
     }
 
     if(trim === 'front' || trim === 'all') {
@@ -225,9 +227,8 @@ function format(input: number, {round, precision, scale, lead = 1, trim = 'none'
     }
 
     if(trim === 'back' || trim === 'all') {
-        while(mantissa.length > exponent && mantissa[mantissa.length - 1] === '0') {
+        while(mantissa.length > exponent && mantissa[mantissa.length - 1] === '0')
             --mantissa.length;
-        }
     }
 
     return new NumberFormatter(sign, mantissa, exponent);
@@ -248,7 +249,7 @@ class NumberFormatter {
     public grouped() {
         //TODO
         const whole = this.mantissa.slice(0, this.exponent);
-        this.output.push(whole.map((c, i) => i > 0 && (whole.length - i) % 3 === 0 ? ',' + c : c));
+        this.output.push(whole.map((c, i) => (i > 0 && (whole.length - i) % 3 === 0 ? `,${c}` : c)));
         return this;
     }
 
@@ -287,40 +288,40 @@ class NumberFormatter {
 //#endregion
 //#region formatNumber
 export function formatNumber(input: number, mask: string): string {
-    if(/^([CDEFGNPX][0-9]*)|R$/i.test(mask)) {
+    if(/^([CDEFGNPX][0-9]*)|R$/ui.test(mask)) {
         const f    = mask.charAt(0);
-        let   prec = Number.parseInt(mask.substr(1));
+        let   prec = Number.parseInt(mask.substr(1), 10);
 
         if(f === 'C' || f === 'c') {
             prec = defaultTo(prec, 2);
 
-            return format(input, {round: prec, lead: 1}).minus('($', '$').grouped().decimal().fraction().minus(')').build();
+            return format(input, { round: prec, lead: 1 }).minus('($', '$').grouped().decimal().fraction().minus(')').build();
         } else if(f === 'D' || f === 'd') {
             prec = defaultTo(prec, 2);
 
-            return format(input, {round: 0, lead: prec}).minus('-').whole().build();
+            return format(input, { round: 0, lead: prec }).minus('-').whole().build();
         } else if(f === 'E' || f === 'e') {
             prec = defaultTo(prec, 6);
 
-            return format(input, {precision: prec+1}).minus('-').scientific(f).build();
+            return format(input, { precision: prec + 1 }).minus('-').scientific(f).build();
         } else if(f === 'F' || f === 'f') {
             prec = defaultTo(prec, 2);
-            return format(input, {round: prec}).minus('-').whole().decimal().fraction().build();
+            return format(input, { round: prec }).minus('-').whole().decimal().fraction().build();
         } else if(f === 'G' || f === 'g') {
             prec = defaultTo(prec, 15);
 
-            const sci = format(input, {precision: prec, trim: 'all'}).minus('-').scientific(f === 'G' ? 'E': 'e').build();
-            const fix = format(input, {precision: prec, trim: 'back'}).minus('-').whole().decimal().fraction().build();
+            const sci = format(input, { precision: prec, trim: 'all' }).minus('-').scientific(f === 'G' ? 'E' : 'e').build();
+            const fix = format(input, { precision: prec, trim: 'back' }).minus('-').whole().decimal().fraction().build();
 
             return sci.length < fix.length ? sci : fix;
         } else if(f === 'N' || f === 'n') {
             prec = defaultTo(prec, 2);
 
-            return format(input, {round: prec}).minus('-').grouped().decimal().fraction().build();
+            return format(input, { round: prec }).minus('-').grouped().decimal().fraction().build();
         } else if(f === 'P' || f === 'p') {
             prec = defaultTo(prec, 2);
 
-            return format(input, {scale: 2, round: prec}).minus('-').whole().decimal().fraction().text(' %').build();
+            return format(input, { scale: 2, round: prec }).minus('-').whole().decimal().fraction().text(' %').build();
         } else if(f === 'R' || f === 'r') {
             for(let i = 1; i < 21; ++i) {
                 const num = input.toPrecision(i);
@@ -345,15 +346,15 @@ export function formatNumber(input: number, mask: string): string {
     if(Number.parseFloat((input * fmt.scale).toFixed(fmt.precision)) === 0)
         fmt = formats.length < 3 ? fmt : parse(formats[2]);
     else if(input < 0)
-        fmt = formats.length < 2 ? parse('-' + formats[0]) : parse(formats[1]);
+        fmt = formats.length < 2 ? parse(`-${formats[0]}`) : parse(formats[1]);
 
     let w: string[];
     let f: string[];
     let exp = 0;
 
     if(fmt.exponent > 0) {
-        const [m, e] = Math.abs(input).toExponential(fmt.aDigits + fmt.bDigits - 1).split('e');
-        ([w, f]      = m.split('.').map(x => x.split(empty)));
+        const [ m, e ] = Math.abs(input).toExponential(fmt.aDigits + fmt.bDigits - 1).split('e');
+        ([ w, f ]      = m.split('.').map(x => x.split(empty)));
 
         exp = Number(e);
 
@@ -404,32 +405,29 @@ export function formatNumber(input: number, mask: string): string {
         const x = fmt.bMask[i];
 
         if(x === '0' || x === '#') {
-
             if(fmt.group && d === 3 && w.length) {
-                o = ',' + o;
+                o = `,${o}`;
                 d = 0;
             }
 
             if(x === '0') {
-                if(w.length) o = w.pop() + o;
-                else o = '0' + o;
+                if(w.length) o = w.pop()! + o;
+                else o = `0${o}`;
                 d++;
                 b--;
-            } else {
-                if(w.length) {
-                    o = w.pop() + o;
-                    d++;
-                    b--;
-                }
+            } else if(w.length) {
+                o = w.pop()! + o;
+                d++;
+                b--;
             }
 
             while(b <= 0 && w.length > 0) {
                 if(fmt.group && d === 3) {
-                    o = ',' + o;
+                    o = `,${o}`;
                     d = 0;
                 }
-    
-                o = w.pop() + o;
+
+                o = w.pop()! + o;
                 d++;
                 b--;
             }
@@ -444,29 +442,24 @@ export function formatNumber(input: number, mask: string): string {
         let a = empty;
         let digits = false;
 
-        for(let i = 0; i < fmt.aMask.length; ++i) {
-            const x = fmt.aMask[i];
-
-
+        for(const x of fmt.aMask) {
             if(x === '0') {
-                if(f.length) a = a + f.shift();
-                else a = a + '0';
+                if(f.length) a = a + f.shift()!;
+                else a = `${a}0`;
 
                 digits = true;
             } else if(x === '#') {
-                if(f.reduce(function(acc, val) { return val === '0' ? acc : true; }, false)) {
-                    a = a + f.shift();
+                if(f.reduce((acc, val) => { return val === '0' ? acc : true; }, false)) {
+                    a = a + f.shift()!;
                     digits = true;
                 }
             } else if(x === 'e' || x === 'E') {
                 a = a + x + ((fmt.signExponent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent);
-            } else
-                a = a + x.substr(1);
-
+            } else { a = a + x.substr(1); }
         }
 
         if(digits)
-            o += '.' + a;
+            o += `.${a}`;
         else
             o += a;
     }
@@ -476,5 +469,3 @@ export function formatNumber(input: number, mask: string): string {
 //#endregion
 
 export default formatNumber;
-
-

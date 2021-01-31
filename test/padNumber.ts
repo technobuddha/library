@@ -3,7 +3,6 @@ import { expect }       from 'chai';
 import padNumber        from '../src/padNumber';
 import { negativeZero } from '../src/constants';
 
-
 describe(
     'padNumber',
     () => {
@@ -57,4 +56,3 @@ describe(
         );
     }
 );
-

@@ -2,7 +2,6 @@
 import { expect }       from 'chai';
 import removeDiacritics from '../src/removeDiacritics';
 
-
 describe(
     'removeDiacritics',
     () => {
@@ -16,4 +15,3 @@ describe(
         );
     }
 );
-

@@ -10,8 +10,7 @@ export function toDateUTCString(entity: unknown): string | null {
         return entity.toUTCString();
     else if(isString(entity) || isNumber(entity))
         return new Date(entity).toUTCString();
-    else
-        return new Date(toString(entity)).toUTCString();
+    return new Date(toString(entity)).toUTCString();
 }
 
 export default toDateUTCString;

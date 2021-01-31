@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import sortOrder  from '../src/sortOrder';
 
-
 describe(
     'sortOrder',
     () => {
@@ -23,4 +22,3 @@ describe(
         );
     }
 );
-

@@ -8,12 +8,12 @@ import isFunction from 'lodash/isFunction';
 type stringy = string | string[];
 /**
  * Concatenates strings and/or arrays of strings
- * 
+ *
  * @param args Concatenates a list of strings, string arrays, or functions that return a string or string array.
  * @returns The concatenation of *args*.
  */
 export function build(...args: (stringy | Generator<stringy> | (() => stringy))[]): string {
-    return compact(args.flatMap(a => isNil(a) ? null : isString(a) || isArray(a) ? a : isFunction(a) ? a() : Array.from(a))).join(empty);
+    return compact(args.flatMap(a => (isNil(a) ? null : isString(a) || isArray(a) ? a : isFunction(a) ? a() : Array.from(a)))).join(empty);
 }
 
 export default build;

@@ -2,7 +2,6 @@
 import { expect }  from 'chai';
 import toSmallCase from '../src/toSmallCase';
 
-
 describe(
     'toSmallCase',
     () => {
@@ -28,7 +27,6 @@ describe(
                 expect(toSmallCase('NOW IS THE time FOR ALL good MEN TO COME TO THE AID OF THEIR COUNTRY.', { upperCase: true }))
                 .to.equal('nOW IS THE TIME FOR ALL GOOD MEN TO COME TO THE AID OF THEIR COUNTRY.');
             }
-        )
+        );
     }
 );
-

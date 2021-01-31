@@ -1,6 +1,6 @@
 ﻿import 'mocha';
 import { expect } from 'chai';
-import addTime    from '../src/addTime'; 
+import addTime    from '../src/addTime';
 
 describe(
     'addTime',
@@ -83,14 +83,15 @@ describe(
         );
 
         it(
-            'should add combinatons',
+            'should add combinations',
             () => {
-                expect(addTime(new Date(2000,  0,  1, 2, 3,  4, 5), { years: 1, months: 2, days: 3, hours: 4, minutes: 5, seconds: 6, milliseconds: 7 }).toString()).to.equal(new Date(2001, 2, 4, 6, 8, 10, 12).toString());
+                expect(
+                    addTime(
+                        new Date(2000,  0,  1, 2, 3,  4, 5),
+                        { years: 1, months: 2, days: 3, hours: 4, minutes: 5, seconds: 6, milliseconds: 7 }
+                    ).toString()
+                ).to.equal(new Date(2001, 2, 4, 6, 8, 10, 12).toString());
             }
         );
     }
 );
-
-
-
-

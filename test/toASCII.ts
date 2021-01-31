@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import toASCII    from '../src/toASCII';
 
-
 describe(
     'toASCII',
     () => {
@@ -16,4 +15,3 @@ describe(
         );
     }
 );
-

@@ -2,7 +2,7 @@ import { empty }                from './constants';
 
 /**
  * Insert a substring into a string
- * 
+ *
  * @param input The string
  * @param start The position which to insert the substring
  * @param deleteCount The number of characters to delete

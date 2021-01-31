@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import toDashCase from '../src/toDashCase';
 
-
 describe(
     'toDashCase',
     () => {
@@ -23,4 +22,3 @@ describe(
         );
     }
 );
-

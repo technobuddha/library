@@ -3,7 +3,6 @@ import { expect } from 'chai';
 import splitLines from '../src/splitLines';
 import { empty }  from '../src/constants';
 
-
 describe(
     'splitLines',
     () => {
@@ -51,4 +50,3 @@ describe(
         );
     }
 );
-

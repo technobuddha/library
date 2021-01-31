@@ -2,7 +2,6 @@
 import { expect }  from 'chai';
 import groupCode   from '../src/groupCode';
 
-
 describe(
     'groupCode',
     () => {
@@ -18,4 +17,3 @@ describe(
         );
     }
 );
-

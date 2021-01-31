@@ -7,27 +7,25 @@ type Options = {
     quote?: string;
     /** Character sequence to replace the quote mark within the text */
     escape?: (string | ((input: string) => string));
-}
+};
 
 /**
  * Remove surrounding quotes from text
- * 
+ *
  * @param input The text to surrounded by quotes
  * @param __namedParameters see {@link Options}
  * @default quote double-quote (")
  * @default escape unescapeJS
  * @returns the unescaped text with quotes removed
  */
-export function unquote(input: string, {quote = '"', escape = unescapeJS}: Options = {}): string {
+export function unquote(input: string, { quote = '"', escape = unescapeJS }: Options = {}): string {
     if(input.startsWith(quote) && input.endsWith(quote)) {
         input = input.slice(quote.length, input.length - quote.length);
         if(isString(escape))
-            return input.replace(new RegExp(escapeRegExp(escape), 'g'), quote);
-        else
-            return escape(input);
+            return input.replace(new RegExp(escapeRegExp(escape), 'gu'), quote);
+        return escape(input);
     }
-    else
-        return input;
+    return input;
 }
 
 export default unquote;

@@ -36,27 +36,27 @@ describe(
         it(
             'should compute weeks in UTC year',
             () => {
-                expect(getISOWeeksInYear(new Date(Date.UTC(2000, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2001, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2002, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2003, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2004, month.january, 1)), {UTC: true})).to.equal(53);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2005, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2006, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2007, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2008, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2009, month.january, 1)), {UTC: true})).to.equal(53);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2010, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2011, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2012, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2013, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2014, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2015, month.january, 1)), {UTC: true})).to.equal(53);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2016, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2017, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2018, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2019, month.january, 1)), {UTC: true})).to.equal(52);
-                expect(getISOWeeksInYear(new Date(Date.UTC(2020, month.january, 1)), {UTC: true})).to.equal(53);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2000, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2001, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2002, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2003, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2004, month.january, 1)), { UTC: true })).to.equal(53);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2005, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2006, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2007, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2008, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2009, month.january, 1)), { UTC: true })).to.equal(53);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2010, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2011, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2012, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2013, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2014, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2015, month.january, 1)), { UTC: true })).to.equal(53);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2016, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2017, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2018, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2019, month.january, 1)), { UTC: true })).to.equal(52);
+                expect(getISOWeeksInYear(new Date(Date.UTC(2020, month.january, 1)), { UTC: true })).to.equal(53);
             }
         );
     }

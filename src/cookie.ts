@@ -6,14 +6,13 @@ let yummy: Record<string, string>;
  * Initialize the cookie system with the browsers cookies
  */
 function init(): void {
-    if(typeof yummy === 'undefined') {
+    if(typeof yummy === 'undefined')
         parse(document.cookie);
-    }
 }
 
 /**
  * Parse a string containing cookies for use by other cookie method
- * 
+ *
  * @param input string to be decoded
  */
 export function parse(input: string): void {
@@ -26,7 +25,7 @@ export function parse(input: string): void {
 
 /**
  * Get the value of a cookie
- * 
+ *
  * @param name name of a cookie
  */
 export function get(name: string): string | undefined {
@@ -36,7 +35,7 @@ export function get(name: string): string | undefined {
 
 /**
  * Get the names of all cookies
- * 
+ *
  * @returns array of cookie names
  */
 export function names(): string[] {
@@ -46,33 +45,33 @@ export function names(): string[] {
 
 /**
  * Add or update a cookie
- * 
+ *
  * @param name name of the cookie
  * @param value value of the cookie
  * @param expires Expiration date
  */
 export function add(name: string, value: string, expires?: string | Date): void {
     init();
-    if(document && document.cookie) {
-        let cookie = name + '=' + encodeURIComponent(value) + '; Path=/';
+    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+    if(document?.cookie) {
+        let cookie = `${name}=${encodeURIComponent(value)}; Path=/`;
 
         if(expires)
-            cookie += '; Expires=' + formatDate(new Date(expires), 'cookie', { UTC: true });
+            cookie += `; Expires=${formatDate(new Date(expires), 'cookie', { UTC: true })}`;
         document.cookie = cookie;
     }
     yummy[name] = value;
 }
 
-/** 
+/**
  * Delete a cookie
- * 
- * @param name 
+ *
+ * @param name
  */
 export function del(name: string): void {
     init();
-    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT';
+    document.cookie = `${name}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT`;
     delete yummy[name];
 }
 
-export default {init, get, names, add, del};
-
+export default { init, get, names, add, del };

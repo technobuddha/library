@@ -29,10 +29,8 @@ describe(
             'should accept alternate delimiters',
             () => {
                 expect(splitWords('*a*b*c*d*', { delimiter: '*' })).to.deep.equal([ 'a', 'b', 'c', 'd' ]);
-                expect(splitWords('@a#b@c#', { delimiter: /@|#/ })).to.deep.equal([ 'a', 'b', 'c' ]);
+                expect(splitWords('@a#b@c#', { delimiter: /@|#/u })).to.deep.equal([ 'a', 'b', 'c' ]);
             }
         );
-
     }
 );
-

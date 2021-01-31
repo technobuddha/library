@@ -32,18 +32,17 @@ describe(
         it(
             'should allow string values',
             () => {
-                expect(toBoolean('Yup', { trueValues: [ 'yup' ] } )).to.equal(true);
-                expect(toBoolean('Nope', { falseValues: [ 'nope' ] })).to.equal(false);
+                expect(toBoolean('Yup', { trueValues: [ 'yup' ]})).to.equal(true);
+                expect(toBoolean('Nope', { falseValues: [ 'nope' ]})).to.equal(false);
             }
         );
 
         it(
             'should allow allow regular expressions',
             () => {
-                expect(toBoolean('Yup', { trueValues: [ /y.*/ ] } )).to.equal(true);
-                expect(toBoolean('Nope', { falseValues: [ /n.*/ ] })).to.equal(false);
+                expect(toBoolean('Yup', { trueValues: [ /y.*/u ]})).to.equal(true);
+                expect(toBoolean('Nope', { falseValues: [ /n.*/u ]})).to.equal(false);
             }
         );
     }
 );
-

@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import getIndent  from '../src/getIndent';
 
-
 describe(
     'getIndent',
     () => {
@@ -25,4 +24,3 @@ describe(
         );
     }
 );
-

@@ -18,10 +18,10 @@ describe(
         it(
             'should check for date similarity',
             () => {
-                expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december, 7)), {UTC:true})).to.equal(true);
-                expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december, 8)), {UTC:true})).to.equal(true);
-                expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1942, month.december, 7)), {UTC:true})).to.equal(false);
-            }      
+                expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december, 7)), { UTC: true })).to.equal(true);
+                expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december, 8)), { UTC: true })).to.equal(true);
+                expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1942, month.december, 7)), { UTC: true })).to.equal(false);
+            }
         );
     }
 );

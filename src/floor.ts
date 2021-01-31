@@ -3,7 +3,7 @@ import lodash_floor from 'lodash/floor';
 type Options = {
     tolerance?: number;
     precision?: number;
-}
+};
 
 /**
  * A tweaked variant of {@code Math.floor} which tolerates if the passed number
@@ -15,7 +15,7 @@ type Options = {
  * @param precision The prevision to round down to.
  * @return The largest integer less than or equal to {@code num}.
  */
-export function floor(input: number, {tolerance = 0, precision = 0}: Options = {}): number {
+export function floor(input: number, { tolerance = 0, precision = 0 }: Options = {}): number {
     return lodash_floor(input + (Math.sign(input) * tolerance) + Number.EPSILON, precision);
 }
 

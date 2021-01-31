@@ -11,7 +11,6 @@ describe(
                 expect(count('foobar foobie-bletch foosball', 'foo')).to.equal(3);
                 expect(count('foofoofoofoofoo', 'foo')).to.equal(5);
                 expect(count('foofoofoofoofoo', 'foofoo')).to.equal(2);
-                
             }
         );
 
@@ -24,4 +23,3 @@ describe(
         );
     }
 );
-

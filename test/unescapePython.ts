@@ -3,7 +3,6 @@ import { expect }     from 'chai';
 import unescapePython from '../src/unescapePython';
 import { space }      from '../src/constants';
 
-
 describe(
     'unescapePython',
     () => {
@@ -86,4 +85,3 @@ describe(
         );
     }
 );
-

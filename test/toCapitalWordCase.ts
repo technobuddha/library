@@ -27,7 +27,6 @@ describe(
                 expect(toCapitalWordCase('now IS the time for ALL good men to come to the AID of their country.', { lowerCase: true }))
                 .to.equal('Now Is The Time For All Good Men To Come To The Aid Of Their Country.');
             }
-        )
+        );
     }
 );
-

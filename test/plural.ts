@@ -10,9 +10,8 @@ describe(
         it(
             'should handle simple plurals',
             () => {
-                expect(plural("book")).to.equal('books');
+                expect(plural('book')).to.equal('books');
             }
         );
     }
 );
-

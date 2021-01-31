@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import collapseWhitespace from '../src/collapseWhitespace';
 
-
 describe(
     'collapseWhitespace',
     () => {

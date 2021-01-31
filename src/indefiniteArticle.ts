@@ -1,40 +1,40 @@
 const TESTS: [string, RegExp][] = [
-    ['an', /^[aefhilmnirsx]([-.]|$|th$)/i],
-    ['a',  /^[bcdgjkpqtuvwyz]([-.]|$|th$)/i],
-    ['an', /^(euler|hour(?!i)|heir|honest|hono)/i],
-    ['an', /^(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]/],
-    ['a',  /^[^aeiouy]/i],
-    ['a',  /^e[uw]/i],
-    ['a',  /^onc?e\b/],
-    ['a',  /^uni([^nmd]|mo)/i],
-    ['an', /^ut[th]/i],
-    ['a',  /^u[bcfhjkqrst][aeiou]/i],
-    ['a',  /^U[NK][AIEO]?/],
-    ['an', /^[aeiou]/i],
-    ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/i],
-]
+    [ 'an', /^[aefhilmnirsx]([-.]|$|th$)/ui ],
+    [ 'a',  /^[bcdgjkpqtuvwyz]([-.]|$|th$)/ui ],
+    [ 'an', /^(euler|hour(?!i)|heir|honest|hono)/ui ],
+    [ 'an', /^(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]/u ],
+    [ 'a',  /^[^aeiouy]/ui ],
+    [ 'a',  /^e[uw]/ui ],
+    [ 'a',  /^onc?e\b/u ],
+    [ 'a',  /^uni([^nmd]|mo)/ui ],
+    [ 'an', /^ut[th]/ui ],
+    [ 'a',  /^u[bcfhjkqrst][aeiou]/ui ],
+    [ 'a',  /^U[NK][AIEO]?/u ],
+    [ 'an', /^[aeiou]/ui ],
+    [ 'an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/ui ],
+];
 
 type Options = {
     /** only return the indefinite article, do not combine with the input */
-    only?: boolean,
-}
+    only?: boolean;
+};
 
 /**
- * Determine the appropiate indefinite article to use with a word.
- * 
+ * Determine the appropriate indefinite article to use with a word.
+ *
  * @remarks The answer is derived from a simple rules engine, it attempts to cover most exceptions
  * to the rules, but the English language has lots of quirks, and this rules engine can not cover them
  * all
- * 
+ *
  * @param word The word
  * @param __namedParameters see {@link Options}
  * @default only false
- * @returns The appropiate indefinite article ("a" or "an") combined with the input word.  If the only
+ * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
  */
-export function indefiniteArticle(word: string, {only = false}: Options = {}): string {
+export function indefiniteArticle(word: string, { only = false }: Options = {}): string {
     let result = 'a';
-    for(const [article, rule] of TESTS) {
+    for(const [ article, rule ] of TESTS) {
         if(rule.test(word)) {
             result = article;
             break;
@@ -271,7 +271,7 @@ for(const [a, w] of [
 ['a',  'viper'],
 ['an', 'X-ray'],
 ['an', 'X.O.'],
-['a',  'XYLAPHONE'],
+['a',  'XYLOPHONE'],
 ['an', 'XY chromosome'],
 ['a',  'xenophobe'],
 ['a',  'Y-shaped pipe'],

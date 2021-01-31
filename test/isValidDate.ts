@@ -2,7 +2,6 @@
 import { expect }  from 'chai';
 import isValidDate from '../src/isValidDate';
 
-
 describe(
     'isValidDate',
     () => {
@@ -17,7 +16,3 @@ describe(
         );
     }
 );
-
-
-
-

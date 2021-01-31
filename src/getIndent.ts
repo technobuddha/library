@@ -4,19 +4,19 @@ import { space }    from './constants';
 
 type Options = {
     /** The indentation character */
-    indenter?: string
-}
+    indenter?: string;
+};
 
 /**
  * Determine the indentation level of text
- * 
+ *
  * @param input The indented text
  * @param __namedParameters see {@link Options}
  * @default indenter space
  * @returns The minimum amount of indentation on each line
  */
-export function getIndent(input: string, {indenter = space}: Options = {}): number {
-    const matches = input.match(new RegExp('^(' + escapeRegExp(indenter) + ')+', 'gm'));
+export function getIndent(input: string, { indenter = space }: Options = {}): number {
+    const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'ugm').exec(input);
     if(isNil(matches))
         return 0;
 

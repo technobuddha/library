@@ -2,7 +2,6 @@
 import { expect }    from 'chai';
 import toCapitalCase from '../src/toCapitalCase';
 
-
 describe(
     'toCapitalCase',
     () => {
@@ -28,7 +27,6 @@ describe(
                 expect(toCapitalCase('now IS the time for ALL good men to come to the AID of their country.', { lowerCase: true }))
                 .to.equal('Now is the time for all good men to come to the aid of their country.');
             }
-        )
+        );
     }
 );
-

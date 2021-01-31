@@ -8,9 +8,9 @@ describe(
         it(
             'should handle positive dividend and divisors',
             () => {
-                expect(modulo( 1,  3)).to.equal(1);
-                expect(modulo( 2,  3)).to.equal(2);
-                expect(modulo( 3,  3)).to.equal(0);
+                expect(modulo(1,  3)).to.equal(1);
+                expect(modulo(2,  3)).to.equal(2);
+                expect(modulo(3,  3)).to.equal(0);
             }
         );
 
@@ -20,17 +20,15 @@ describe(
                 expect(modulo(-1, 3)).to.equal(2);
                 expect(modulo(-2, 3)).to.equal(1);
                 expect(modulo(-3, 3)).to.equal(0);
-
             }
         );
 
         it(
             'should handle positive dividend and negative divisor',
             () => {
-                expect(modulo( 1, -3)).to.equal(-2);
-                expect(modulo( 2, -3)).to.equal(-1);
-                expect(modulo( 3, -3)).to.equal(0);
-
+                expect(modulo(1, -3)).to.equal(-2);
+                expect(modulo(2, -3)).to.equal(-1);
+                expect(modulo(3, -3)).to.equal(0);
             }
         );
 
@@ -46,11 +44,10 @@ describe(
         it(
             'should handle zero divisor',
             () => {
-                expect(modulo( 1,  0)).to.be.NaN;
-                expect(modulo( 2,  0)).to.be.NaN;
-                expect(modulo( 3,  0)).to.be.NaN;
+                expect(isNaN(modulo(1,  0))).to.equal(true);
+                expect(isNaN(modulo(2,  0))).to.equal(true);
+                expect(isNaN(modulo(3,  0))).to.equal(true);
             }
         );
     }
 );
-

@@ -11,9 +11,8 @@ describe(
             () => {
                 expect(splitChars('abcdefghi')).to.deep.equal([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]);
                 expect(splitChars(empty)).to.deep.equal([]);
-                expect(splitChars('⒜⒝⒞⒟')).to.deep.equal(['⒜','⒝','⒞','⒟']);
+                expect(splitChars('⒜⒝⒞⒟')).to.deep.equal([ '⒜', '⒝', '⒞', '⒟' ]);
             }
         );
     }
 );
-

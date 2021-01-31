@@ -19,15 +19,11 @@ describe(
         it(
             'should check for date similarity',
             () => {
-                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december,  7)), {UTC:true})).to.equal(true);
-                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december,  8)), {UTC:true})).to.equal(true);
-                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.november, 26)), {UTC:true})).to.equal(true);
-                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1945, month.august,   14)), {UTC:true})).to.equal(false);
+                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december,  7)), { UTC: true })).to.equal(true);
+                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december,  8)), { UTC: true })).to.equal(true);
+                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.november, 26)), { UTC: true })).to.equal(true);
+                expect(isSameYear(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1945, month.august,   14)), { UTC: true })).to.equal(false);
             }
         );
     }
 );
-
-
-
-

@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import chop       from '../src/chop';
 
-
 describe(
     'chop',
     () => {
@@ -31,4 +30,3 @@ describe(
         );
     }
 );
-

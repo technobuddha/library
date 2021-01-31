@@ -10,7 +10,7 @@ describe(
             () => {
                 expect(formatNumber(123.456, 'C')).to.equal('$123.46');
                 expect(formatNumber(123.456, 'C2')).to.equal('$123.46');
-                expect(formatNumber(.456, 'C')).to.equal('$0.46');
+                expect(formatNumber(0.456, 'C')).to.equal('$0.46');
                 expect(formatNumber(1234.5678, 'C')).to.equal('$1,234.57');
                 expect(formatNumber(-123.456, 'C3')).to.equal('($123.456)');
                 expect(formatNumber(-1234.5678, 'C3')).to.equal('($1,234.568)');
@@ -70,8 +70,8 @@ describe(
                 expect(formatNumber(-1.234567890e-25, 'G')).to.equal('-1.23456789E-25');
                 expect(formatNumber(12345.6789, 'G')).to.equal('12345.6789');
                 expect(formatNumber(12345.6789, 'G7')).to.equal('12345.68');
-                expect(formatNumber(.0000023, 'G')).to.equal('2.3E-06');
-                expect(formatNumber(.0023, 'G')).to.equal('0.0023');
+                expect(formatNumber(0.0000023, 'G')).to.equal('2.3E-06');
+                expect(formatNumber(0.0023, 'G')).to.equal('0.0023');
                 expect(formatNumber(1234, 'G2')).to.equal('1200');
                 expect(formatNumber(Math.PI, 'G5')).to.equal('3.1416');
             }
@@ -94,15 +94,15 @@ describe(
             () => {
                 expect(formatNumber(1, 'P')).to.equal('100.00 %');
                 expect(formatNumber(-0.39678, 'P1')).to.equal('-39.7 %');
-                expect(formatNumber(.2468013, 'P')).to.equal('24.68 %');
-                expect(formatNumber(.2468013, 'P1')).to.equal('24.7 %');
+                expect(formatNumber(0.2468013, 'P')).to.equal('24.68 %');
+                expect(formatNumber(0.2468013, 'P1')).to.equal('24.7 %');
             }
         );
 
         it(
             'should support the R (Round-trip) format',
             () => {
-                expect(formatNumber( 123456789.12345678, 'R')).to.equal('123456789.12345678');
+                expect(formatNumber(123456789.12345678, 'R')).to.equal('123456789.12345678');
                 expect(formatNumber(-123456789.12345678, 'R')).to.equal('-123456789.12345678');
                 expect(formatNumber(0.6822871999174, 'R')).to.equal('0.6822871999174');
             }
@@ -131,7 +131,7 @@ describe(
                 expect(formatNumber(123, '00000')).to.equal('00123');
                 expect(formatNumber(1.2, '0.00')).to.equal('1.20');
                 expect(formatNumber(1.2, '00.00')).to.equal('01.20');
-                expect(formatNumber(.56, '0.0')).to.equal('0.6');
+                expect(formatNumber(0.56, '0.0')).to.equal('0.6');
                 expect(formatNumber(1234567890, '0,0')).to.equal('1,234,567,890');
                 expect(formatNumber(1234.567890, '0,0.00')).to.equal('1,234.57');
             }
@@ -156,7 +156,7 @@ describe(
                 expect(formatNumber(0.45678, '0.00')).to.equal('0.46');
                 expect(formatNumber(1.2, '0.00')).to.equal('1.20');
                 expect(formatNumber(1.2, '00.00')).to.equal('01.20');
-                expect(formatNumber(.086, '#0.##%')).to.equal('8.6%');
+                expect(formatNumber(0.086, '#0.##%')).to.equal('8.6%');
                 expect(formatNumber(86000, '0.###E+0')).to.equal('8.6E+4');
             }
         );
@@ -214,10 +214,10 @@ describe(
             () => {
                 expect(formatNumber(68, "# 'degrees'")).to.equal('68 degrees');
                 expect(formatNumber(68, "#' degrees'")).to.equal('68 degrees');
-                expect(formatNumber(123.8, "#,##0.0K")).to.equal('123.8K');
-                expect(formatNumber(9.3, "##.0\\%")).to.equal('9.3%');
+                expect(formatNumber(123.8, '#,##0.0K')).to.equal('123.8K');
+                expect(formatNumber(9.3, '##.0\\%')).to.equal('9.3%');
                 expect(formatNumber(9.3, "\\'##\\'")).to.equal("'9'");
-                expect(formatNumber(9.3, "\\\\##\\\\")).to.equal('\\9\\');
+                expect(formatNumber(9.3, '\\\\##\\\\')).to.equal('\\9\\');
                 expect(formatNumber(9.3, "##.0'%'")).to.equal('9.3%');
                 expect(formatNumber(9.3, "'\\'##'\\'")).to.equal('\\9\\');
             }
@@ -226,15 +226,15 @@ describe(
         it(
             'should support the Section separator',
             () => {
-                expect(formatNumber(12.345, "#0.0#;(#0.0#);-\\0-")).to.equal('12.35');
-                expect(formatNumber(0, "#0.0#;(#0.0#);-\\0-")).to.equal('-0-');
-                expect(formatNumber(-12.345, "#0.0#;(#0.0#);-\\0-")).to.equal('(12.35)');
-                expect(formatNumber(12.345, "#0.0#;(#0.0#)")).to.equal('12.35');
-                expect(formatNumber(0, "#0.0#;(#0.0#)")).to.equal('0.0');
-                expect(formatNumber(-12.345, "#0.0#;(#0.0#)")).to.equal('(12.35)');
-                expect(formatNumber(1234, "##;(##);**Zero**")).to.equal('1234');
-                expect(formatNumber(-1234, "##;(##);**Zero**")).to.equal('(1234)');
-                expect(formatNumber(0, "##;(##);**Zero**")).to.equal('**Zero**');
+                expect(formatNumber(12.345, '#0.0#;(#0.0#);-\\0-')).to.equal('12.35');
+                expect(formatNumber(0, '#0.0#;(#0.0#);-\\0-')).to.equal('-0-');
+                expect(formatNumber(-12.345, '#0.0#;(#0.0#);-\\0-')).to.equal('(12.35)');
+                expect(formatNumber(12.345, '#0.0#;(#0.0#)')).to.equal('12.35');
+                expect(formatNumber(0, '#0.0#;(#0.0#)')).to.equal('0.0');
+                expect(formatNumber(-12.345, '#0.0#;(#0.0#)')).to.equal('(12.35)');
+                expect(formatNumber(1234, '##;(##);**Zero**')).to.equal('1234');
+                expect(formatNumber(-1234, '##;(##);**Zero**')).to.equal('(1234)');
+                expect(formatNumber(0, '##;(##);**Zero**')).to.equal('**Zero**');
             }
         );
 
@@ -246,4 +246,3 @@ describe(
         );
     }
 );
-

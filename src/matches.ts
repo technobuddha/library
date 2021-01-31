@@ -1,15 +1,15 @@
 import isRegExp from 'lodash/isRegExp';
 import isString from 'lodash/isString';
 
-export function matches(text: string, matches: string | RegExp | Iterable<string | RegExp>): boolean {
+export function matches(text: string, match: string | RegExp | Iterable<string | RegExp>): boolean {
     text = text.trim().toLowerCase();
 
-    if(isRegExp(matches)) return matches.test(text);
-    if(isString(matches)) return matches.toLowerCase() === text;
+    if(isRegExp(match)) return match.test(text);
+    if(isString(match)) return match.toLowerCase() === text;
 
-    for(const match of matches) {
-        if(isRegExp(match)) if(match.test(text)) return true;
-        if(isString(match)) if(match.toLowerCase() === text) return true;
+    for(const m of match) {
+        if(isRegExp(m)) if(m.test(text)) return true;
+        if(isString(m)) if(m.toLowerCase() === text) return true;
     }
 
     return false;

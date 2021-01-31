@@ -14,7 +14,7 @@ export class PriorityQueue<T> {
         this.sorted   = false;
     }
 
-    private contents:   T[];
+    private readonly contents:   T[];
     private sorted:     boolean;
 
     private sort() {
@@ -33,7 +33,7 @@ export class PriorityQueue<T> {
 
     /**
      * Return and remove the highest priority item from the queue
-     * 
+     *
      * @returns queue element
      */
     public pop() {
@@ -43,17 +43,17 @@ export class PriorityQueue<T> {
 
     /**
      * Iterate through all elements in the queue
-     * 
+     *
      * @returns generator function
      */
     public *[Symbol.iterator]() {
         if(!this.sorted) this.sort();
-        yield* this.contents;
-    } 
+        yield *this.contents;
+    }
 
     /**
      * Determine the number of items in the queue
-     * 
+     *
      * @returns number of element in the queue
      */
     public get size() {
@@ -62,7 +62,7 @@ export class PriorityQueue<T> {
 
     /**
      * Transform all elements in the ueueue
-     * 
+     *
      * @param f Function to transforme each element of the queue
      * @returns array of transformed queue elements
      */
@@ -73,7 +73,7 @@ export class PriorityQueue<T> {
 
     /**
      * Change the function used to order the queue
-     * 
+     *
      * @param newComparator function to compare elements of the queue
      */
     public reorder(newComparator: (a: T, b: T) => number) {

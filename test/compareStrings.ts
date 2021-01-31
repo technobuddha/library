@@ -37,7 +37,7 @@ describe(
             () => {
                 expect(compareStrings('Page 2', 'Page 2', { natural: true })).to.equal(0);
                 expect(compareStrings('Page 2', 'Page 10', { natural: true })).to.equal(-1);
-                expect(compareStrings('Page 10', 'Page 2', { natural: true }) ).to.equal(1);
+                expect(compareStrings('Page 10', 'Page 2', { natural: true })).to.equal(1);
             }
         );
 

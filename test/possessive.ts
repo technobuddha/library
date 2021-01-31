@@ -10,10 +10,9 @@ describe(
         it(
             'should handle simple possessives',
             () => {
-                expect(possessive("Phil")).to.equal("Phil's");
-                expect(possessive("Chris")).to.equal("Chris'");
+                expect(possessive('Phil')).to.equal("Phil's");
+                expect(possessive('Chris')).to.equal("Chris'");
             }
         );
     }
 );
-

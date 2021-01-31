@@ -25,7 +25,7 @@
     "x-version": "npm-run-all clean build document",
     "x-postversion": "git push && git push --tags",
     "test": "ts-mocha test/*.ts",
-    "lint": "eslint --ext .ts src/*.ts test/*.ts",
+    "lint": "LINT_LEVEL=1 eslint --ext .ts src/*.ts test/*.ts --fix",
     "document": "npm-run-all document:clean document:generate",
     "document:clean": "rm -rf doc",
     "document:generate": "typedoc src/*.ts"
@@ -36,21 +36,22 @@
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/chai-almost": "^1.0.1",
-    "@types/lodash": "^4.14.165",
-    "@types/mocha": "^8.0.3",
-    "@types/node": "^14.14.6",
-    "@typescript-eslint/eslint-plugin": "^4.6.1",
-    "@typescript-eslint/parser": "^4.6.1",
+    "@types/lodash": "^4.14.168",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
     "chai": "^4.2.0",
     "chai-almost": "^1.0.1",
     "chai-match": "^1.1.1",
-    "eslint": "^7.13.0",
-    "eslint-plugin-tsdoc": "^0.2.7",
+    "eslint": "^7.19.0",
+    "eslint-plugin-chai-expect": "^2.2.0",
+    "eslint-plugin-tsdoc": "^0.2.11",
     "jimp": "^0.16.1",
     "mocha": "^8.2.1",
     "npm-run-all": "^4.1.5",
     "ts-mocha": "^8.0.0",
-    "typedoc": "^0.20.0-beta.8",
-    "typescript": "^4.0.5"
+    "typedoc": "^0.20.19",
+    "typescript": "^4.1.3"
   }
 }

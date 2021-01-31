@@ -2,7 +2,6 @@
 import { expect } from 'chai';
 import isOdd      from '../src/isOdd';
 
-
 describe(
     'isOdd',
     () => {
@@ -23,4 +22,3 @@ describe(
         );
     }
 );
-

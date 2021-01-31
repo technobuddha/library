@@ -3,22 +3,22 @@ import { empty }            from './constants';
 import collapseWhitespace   from './collapseWhitespace';
 import clean                from './clean';
 
-const badChars = /[/\\:*?<>|.]+/g;
+const badChars = /[/\\:*?<>|.]+/ug;
 
 export type Options = {
     /** the file name will be truncated to this length */
-    maxLength?: number,
+    maxLength?: number;
     /** character to use to replace "bad" characters */
-    replacement?: string,
+    replacement?: string;
     /** number of characters to presere at the end of the filename when truncated (for disambiguation) */
-    disambiguate?: number,
+    disambiguate?: number;
     /** string to seperate the main section from the disambiguated section */
-    separator?: string
-}
+    separator?: string;
+};
 
 /**
  * Convert a string so that it can be used as a filename
- * 
+ *
  * @param input The string to escape
  * @param __namedParameters see {@link Options}
  * @default maxLength 64
@@ -27,9 +27,9 @@ export type Options = {
  * @default separator … (ellipsis)
  * @returns the tfile name
  */
-export function toFilename(input: string, {maxLength = 64, replacement = '-', disambiguate = 10, separator = '…'}: Options = {}): string {
+export function toFilename(input: string, { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: Options = {}): string {
     let suffix = empty;
-    const compress = new RegExp('\\s*' + escapeRegExp(replacement) + '[\\s' + escapeRegExp(replacement) + ']*', 'g');
+    const compress = new RegExp(`\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`, 'ug');
 
     input = clean(collapseWhitespace(input.normalize('NFC').replace('"', "'").replace(badChars, replacement)).replace(compress, replacement), replacement);
 
@@ -51,8 +51,7 @@ export function toFilename(input: string, {maxLength = 64, replacement = '-', di
 
     if(suffix.length > 0)
         return input + separator + suffix;
-    else
-        return input;
+    return input;
 }
 
 export default toFilename;
