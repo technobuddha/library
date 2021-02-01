@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-require-imports */
+const path = require('path');
+
 const lintLevel         = parseInt(process.env.LINT_LEVEL ?? '0', 10);
 const usingTypechecking = lintLevel >= 1;
 
@@ -12,7 +16,7 @@ module.exports = {
     'root': true,
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
-        ...(usingTypechecking ? { 'project': [ './tsconfig.lint.json' ]} : null),
+        ...(usingTypechecking ? { 'project': [ path.join(__dirname, './tsconfig.lint.json') ]} : null),
         'sourceType':       'module',
         'impliedStrict':    true,
     },
