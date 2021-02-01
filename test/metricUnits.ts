@@ -27,8 +27,9 @@ describe(
             'should handle numbers less than 1',
             () => {
                 expect(metricUnits(0.1)).to.equal('0.1');
-                expect(metricUnits(0.01)).to.equal('0.01');
+                expect(metricUnits(0.01)).to.equal('10m');
                 expect(metricUnits(0.001)).to.equal('1m');
+                expect(metricUnits(0.0001)).to.equal('0.1m');
                 expect(metricUnits(0.000001)).to.equal('1µ');
                 expect(metricUnits(0.000000001)).to.equal('1n');
                 expect(metricUnits(0.000000000001)).to.equal('1p');
@@ -82,7 +83,7 @@ describe(
             'should handle micro',
             () => {
                 expect(metricUnits(0.1, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).to.equal('0.1');
-                expect(metricUnits(0.01, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).to.equal('0.01');
+                expect(metricUnits(0.01, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).to.equal('10A');
                 expect(metricUnits(0.001, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).to.equal('1A');
                 expect(metricUnits(0.000001, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).to.equal('1B');
                 expect(metricUnits(0.000000001, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).to.equal('1C');

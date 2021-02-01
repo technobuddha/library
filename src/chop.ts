@@ -14,7 +14,8 @@ export type Options = {
  * @returns Array of segments
  */
 export function chop(input: string, length: number, { truncate = false }: Options = {}): string[] {
-    return length > 0 && isFinite(length) ? new RegExp(`.{${truncate ? empty : '1,'}${length}}`, 'gu').exec(input) as string[] : [ input ];
+    // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
+    return length > 0 && isFinite(length) ? input.match(new RegExp(`.{${truncate ? empty : '1,'}${length}}`, 'gu')) as string[] : [ input ];
 }
 
 export default chop;

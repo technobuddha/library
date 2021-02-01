@@ -18,7 +18,8 @@ type Options = {
  * @return template with values replaced
  */
 export function fillTemplate(input: string, values: Record<string, string | undefined>, { open = '{{', close = '}}' }: Options = {}): string {
-    for(const match of new RegExp(`${escapeRegExp(open)}(.+?)${escapeRegExp(close)}`, 'ug').exec(input) ?? []) {
+    // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
+    for(const match of input.match(new RegExp(`${escapeRegExp(open)}(.+?)${escapeRegExp(close)}`, 'ug')) ?? []) {
         const key = match.substring(open.length, match.length - close.length).trim();
         input = input.replace(match, values[key] ?? empty);
     }

@@ -52,7 +52,7 @@ export function metricUnits(
     let index   = 0;
 
     if(number < 1) {
-        while((number - Number.EPSILON) <= 1 / unit && index < micro.length) {
+        while((number - Number.EPSILON) < (1 / (unit / 10)) && index < micro.length) {
             suffix = micro[index++];
             number = number * unit;
         }
