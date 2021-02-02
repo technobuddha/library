@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import count      from '../src/count';
 
 describe(
@@ -8,17 +7,17 @@ describe(
         it(
             'should count substrings',
             () => {
-                expect(count('foobar foobie-bletch foosball', 'foo')).to.equal(3);
-                expect(count('foofoofoofoofoo', 'foo')).to.equal(5);
-                expect(count('foofoofoofoofoo', 'foofoo')).to.equal(2);
+                expect(count('foobar foobie-bletch foosball', 'foo')).toBe(3);
+                expect(count('foofoofoofoofoo', 'foo')).toBe(5);
+                expect(count('foofoofoofoofoo', 'foofoo')).toBe(2);
             }
         );
 
         it(
             'should support overlap mode',
             () => {
-                expect(count('foofoofoofoofoo', 'foo', { overlap: true })).to.equal(5);
-                expect(count('foofoofoofoofoo', 'foofoo', { overlap: true })).to.equal(4);
+                expect(count('foofoofoofoofoo', 'foo', { overlap: true })).toBe(5);
+                expect(count('foofoofoofoofoo', 'foofoo', { overlap: true })).toBe(4);
             }
         );
     }

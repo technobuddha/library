@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }       from 'chai';
+import expect from '../util/expect';
 import isUpperCase      from '../src/isUpperCase';
 import { empty, space } from '../src/constants';
 
@@ -9,13 +8,13 @@ describe(
         it(
             'should detect lower case',
             () => {
-                expect(isUpperCase('ABCDEF')).to.equal(true);
-                expect(isUpperCase('ABCdef')).to.equal(false);
-                expect(isUpperCase('abcdef')).to.equal(false);
-                expect(isUpperCase(space)).to.equal(false);
-                expect(isUpperCase(empty)).to.equal(false);
-                expect(isUpperCase('ABC.DEF')).to.equal(false);
-                expect(isUpperCase('$')).to.equal(false);
+                expect(isUpperCase('ABCDEF')).toBe(true);
+                expect(isUpperCase('ABCdef')).toBe(false);
+                expect(isUpperCase('abcdef')).toBe(false);
+                expect(isUpperCase(space)).toBe(false);
+                expect(isUpperCase(empty)).toBe(false);
+                expect(isUpperCase('ABC.DEF')).toBe(false);
+                expect(isUpperCase('$')).toBe(false);
             }
         );
     }

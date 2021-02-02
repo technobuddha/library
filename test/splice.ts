@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import splice     from '../src/splice';
 
 describe(
@@ -8,31 +7,31 @@ describe(
         it(
             'should splice substrings',
             () => {
-                expect(splice('abcdefghi', 0, 0, 'foo')).to.equal('fooabcdefghi');
-                expect(splice('abcdefghi', 3, 0, 'foo')).to.equal('abcfoodefghi');
-                expect(splice('abcdefghi', 3, 3, 'foo')).to.equal('abcfooghi');
+                expect(splice('abcdefghi', 0, 0, 'foo')).toBe('fooabcdefghi');
+                expect(splice('abcdefghi', 3, 0, 'foo')).toBe('abcfoodefghi');
+                expect(splice('abcdefghi', 3, 3, 'foo')).toBe('abcfooghi');
             }
         );
 
         it(
             'should handle negative start',
             () => {
-                expect(splice('abcdefghi', -1, 0, 'foo')).to.equal('abcdefghifoo');
-                expect(splice('abcdefghi', -2, 0, 'foo')).to.equal('abcdefghfooi');
+                expect(splice('abcdefghi', -1, 0, 'foo')).toBe('abcdefghifoo');
+                expect(splice('abcdefghi', -2, 0, 'foo')).toBe('abcdefghfooi');
             }
         );
 
         it(
             'should handle negative deleteLength',
             () => {
-                expect(splice('abcdefghi', 3, -3, 'foo')).to.equal('abcfoodefghi');
+                expect(splice('abcdefghi', 3, -3, 'foo')).toBe('abcfoodefghi');
             }
         );
 
         it(
             'should handle start greater than length',
             () => {
-                expect(splice('abcdefghi', 99, 0, 'foo')).to.equal('abcdefghifoo');
+                expect(splice('abcdefghi', 99, 0, 'foo')).toBe('abcdefghifoo');
             }
         );
     }

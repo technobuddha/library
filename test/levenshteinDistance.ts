@@ -1,9 +1,5 @@
-﻿import 'mocha';
-import { expect, use }     from 'chai';
-import chaiAlmost          from 'chai-almost';
+import expect from '../util/expect';
 import levenshteinDistance from '../src/levenshteinDistance';
-
-use(chaiAlmost());
 
 describe(
     'levenshteinDistance',
@@ -11,7 +7,7 @@ describe(
         it(
             'Detect difference between two strings',
             () => {
-                expect(levenshteinDistance('Drink Coca Cola', 'Drink Pepsi Cola')).to.almost.equal(0.6875);
+                expect(levenshteinDistance('Drink Coca Cola', 'Drink Pepsi Cola')).toBeCloseTo(0.6875);
             }
         );
     }

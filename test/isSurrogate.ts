@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }  from 'chai';
+import expect from '../util/expect';
 import isSurrogate from '../src/isSurrogate';
 
 describe(
@@ -8,19 +7,19 @@ describe(
         it(
             'should detect surrogates',
             () => {
-                expect(isSurrogate('a')).to.equal(false);
-                expect(isSurrogate('\uD800')).to.equal(true);
-                expect(isSurrogate('\uDC00')).to.equal(true);
+                expect(isSurrogate('a')).toBe(false);
+                expect(isSurrogate('\uD800')).toBe(true);
+                expect(isSurrogate('\uDC00')).toBe(true);
             }
         );
 
         it(
             'should detect high and low',
             () => {
-                expect(isSurrogate('\uD800', { high: false })).to.equal(false);
-                expect(isSurrogate('\uDC00', { high: false })).to.equal(true);
-                expect(isSurrogate('\uD800', { low: false })).to.equal(true);
-                expect(isSurrogate('\uDC00', { low: false })).to.equal(false);
+                expect(isSurrogate('\uD800', { high: false })).toBe(false);
+                expect(isSurrogate('\uDC00', { high: false })).toBe(true);
+                expect(isSurrogate('\uD800', { low: false })).toBe(true);
+                expect(isSurrogate('\uDC00', { low: false })).toBe(false);
             }
         );
     }

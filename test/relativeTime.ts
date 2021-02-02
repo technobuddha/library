@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }   from 'chai';
+import expect from '../util/expect';
 import relativeTime from '../src/relativeTime';
 import addTime      from '../src/addTime';
 
@@ -11,7 +10,7 @@ describe(
             () => {
                 const now = new Date();
 
-                expect(relativeTime(addTime(now, { hours: 2, minutes: 30 }), now)).to.equal('2 hours 30 minutes from now');
+                expect(relativeTime(addTime(now, { hours: 2, minutes: 30 }), now)).toBe('2 hours 30 minutes from now');
             }
         );
     }

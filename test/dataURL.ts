@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }  from 'chai';
+import expect from '../util/expect';
 import dataURL     from '../src/dataURL';
 
 describe(
@@ -8,7 +7,7 @@ describe(
         it(
             'should create dataURLs',
             () => {
-                expect(dataURL(new Int8Array(5), 'image/jpeg')).to.equal('data:image/jpeg;base64,AAAAAAA=');
+                expect(dataURL(new Int8Array(5), 'image/jpeg')).toBe('data:image/jpeg;base64,AAAAAAA=');
             }
         );
     }

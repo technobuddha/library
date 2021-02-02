@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }       from 'chai';
+import expect from '../util/expect';
 import removeDiacritics from '../src/removeDiacritics';
 
 describe(
@@ -8,9 +7,9 @@ describe(
         it(
             'should bad characters to be replaces',
             () => {
-                expect(removeDiacritics('crème brûlée')).to.equal('creme brulee');
-                expect(removeDiacritics('ＡＢＣＤ')).to.equal('ＡＢＣＤ');
-                expect(removeDiacritics('⒜⒝⒞⒟')).to.equal('⒜⒝⒞⒟');
+                expect(removeDiacritics('crème brûlée')).toBe('creme brulee');
+                expect(removeDiacritics('ＡＢＣＤ')).toBe('ＡＢＣＤ');
+                expect(removeDiacritics('⒜⒝⒞⒟')).toBe('⒜⒝⒞⒟');
             }
         );
     }

@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }  from 'chai';
+import expect from '../util/expect';
 import isPrimitive from '../src/isPrimitive';
 
 describe(
@@ -8,14 +7,14 @@ describe(
         it(
             'should detect primitives',
             () => {
-                expect(isPrimitive(null)).to.equal(true);
-                expect(isPrimitive(undefined)).to.equal(true);
-                expect(isPrimitive('jabberwocky')).to.equal(true);
-                expect(isPrimitive(0)).to.equal(true);
-                expect(isPrimitive(Symbol())).to.equal(true);
-                expect(isPrimitive({})).to.equal(false);
-                expect(isPrimitive([])).to.equal(false);
-                expect(isPrimitive(new Date())).to.equal(false);
+                expect(isPrimitive(null)).toBe(true);
+                expect(isPrimitive(undefined)).toBe(true);
+                expect(isPrimitive('jabberwocky')).toBe(true);
+                expect(isPrimitive(0)).toBe(true);
+                expect(isPrimitive(Symbol())).toBe(true);
+                expect(isPrimitive({})).toBe(false);
+                expect(isPrimitive([])).toBe(false);
+                expect(isPrimitive(new Date())).toBe(false);
             }
         );
     }

@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import possessive from '../src/possessive';
 
 //TODO we need more comprehensive testing
@@ -10,8 +9,8 @@ describe(
         it(
             'should handle simple possessives',
             () => {
-                expect(possessive('Phil')).to.equal("Phil's");
-                expect(possessive('Chris')).to.equal("Chris'");
+                expect(possessive('Phil')).toBe("Phil's");
+                expect(possessive('Chris')).toBe("Chris'");
             }
         );
     }

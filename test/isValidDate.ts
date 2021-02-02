@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }  from 'chai';
+import expect from '../util/expect';
 import isValidDate from '../src/isValidDate';
 
 describe(
@@ -8,10 +7,10 @@ describe(
         it(
             'should detect invalid dates',
             () => {
-                expect(isValidDate(new Date())).to.equal(true);
-                expect(isValidDate(new Date('Jan 1 1970'))).to.equal(true);
-                expect(isValidDate(new Date('not a date'))).to.equal(false);
-                expect(isValidDate(new Date(NaN))).to.equal(false);
+                expect(isValidDate(new Date())).toBe(true);
+                expect(isValidDate(new Date('Jan 1 1970'))).toBe(true);
+                expect(isValidDate(new Date('not a date'))).toBe(false);
+                expect(isValidDate(new Date(NaN))).toBe(false);
             }
         );
     }

@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }   from 'chai';
+import expect from '../util/expect';
 import ensurePrefix from '../src/ensurePrefix';
 
 describe(
@@ -8,9 +7,9 @@ describe(
         it(
             'should add prefixes when needed',
             () => {
-                expect(ensurePrefix('bletch', 'foobie-')).to.equal('foobie-bletch');
-                expect(ensurePrefix('foobie-bletch', 'foobie-')).to.equal('foobie-bletch');
-                expect(ensurePrefix('foobiebletch', 'foobie-')).to.equal('foobie-foobiebletch');
+                expect(ensurePrefix('bletch', 'foobie-')).toBe('foobie-bletch');
+                expect(ensurePrefix('foobie-bletch', 'foobie-')).toBe('foobie-bletch');
+                expect(ensurePrefix('foobiebletch', 'foobie-')).toBe('foobie-foobiebletch');
             }
         );
     }

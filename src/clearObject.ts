@@ -1,7 +1,7 @@
 /**
  * Delete all own enumerable string properties from an object
  *
- * @remark The input argument is mutated in plae
+ * @remark The input argument is mutated in place
  *
  * @typeParam T Type of values within the object
  * @param input Object to clear all properties

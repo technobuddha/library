@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }   from 'chai';
+import expect from '../util/expect';
 import toTitleCase  from '../src/toTitleCase';
 
 describe(
@@ -8,8 +7,7 @@ describe(
         it(
             'should sentences',
             () => {
-                expect(toTitleCase('now is the time for all good men to come to the aid of their country.'))
-                .to.equal('Now Is the Time for All Good Men to Come to the Aid of Their Country.');
+                expect(toTitleCase('now is the time for all good men to come to the aid of their country.')).toBe('Now Is the Time for All Good Men to Come to the Aid of Their Country.');
             }
         );
     }

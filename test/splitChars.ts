@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import splitChars from '../src/splitChars';
 import { empty }   from '../src/constants';
 
@@ -9,9 +8,9 @@ describe(
         it(
             'should split strings',
             () => {
-                expect(splitChars('abcdefghi')).to.deep.equal([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]);
-                expect(splitChars(empty)).to.deep.equal([]);
-                expect(splitChars('⒜⒝⒞⒟')).to.deep.equal([ '⒜', '⒝', '⒞', '⒟' ]);
+                expect(splitChars('abcdefghi')).toEqual([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]);
+                expect(splitChars(empty)).toEqual([]);
+                expect(splitChars('⒜⒝⒞⒟')).toEqual([ '⒜', '⒝', '⒞', '⒟' ]);
             }
         );
     }

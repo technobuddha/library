@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }  from 'chai';
+import expect from '../util/expect';
 import groupCode   from '../src/groupCode';
 
 describe(
@@ -8,11 +7,11 @@ describe(
         it(
             'should add select the proper sort order',
             () => {
-                expect(groupCode('pink floyd')).to.equal('P');
-                expect(groupCode('the beatles')).to.equal('B');
-                expect(groupCode('"wierd" al yankovic')).to.equal('W');
-                expect(groupCode('101 string')).to.equal('#');
-                expect(groupCode('[Various Artists]')).to.equal('[]');
+                expect(groupCode('pink floyd')).toBe('P');
+                expect(groupCode('the beatles')).toBe('B');
+                expect(groupCode('"wierd" al yankovic')).toBe('W');
+                expect(groupCode('101 string')).toBe('#');
+                expect(groupCode('[Various Artists]')).toBe('[]');
             }
         );
     }

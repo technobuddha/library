@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }                     from 'chai';
+import expect from '../util/expect';
 import isNumeric                      from '../src/isNumeric';
 import { empty, space, negativeZero } from '../src/constants';
 
@@ -9,57 +8,57 @@ describe(
         it(
             'should handle numbers',
             () => {
-                expect(isNumeric(-1)).to.equal(true);
-                expect(isNumeric(0)).to.equal(true);
-                expect(isNumeric(1)).to.equal(true);
+                expect(isNumeric(-1)).toBe(true);
+                expect(isNumeric(0)).toBe(true);
+                expect(isNumeric(1)).toBe(true);
             }
         );
 
         it(
             'should handle special numbers',
             () => {
-                expect(isNumeric(negativeZero)).to.equal(true);
-                expect(isNumeric(NaN)).to.equal(false);
-                expect(isNumeric(Infinity)).to.equal(true);
-                expect(isNumeric(-Infinity)).to.equal(true);
+                expect(isNumeric(negativeZero)).toBe(true);
+                expect(isNumeric(NaN)).toBe(false);
+                expect(isNumeric(Infinity)).toBe(true);
+                expect(isNumeric(-Infinity)).toBe(true);
             }
         );
 
         it(
             'should handle numeric strings',
             () => {
-                expect(isNumeric('0')).to.equal(true);
-                expect(isNumeric('-0')).to.equal(true);
-                expect(isNumeric('+0')).to.equal(true);
-                expect(isNumeric('1')).to.equal(true);
-                expect(isNumeric('-1')).to.equal(true);
-                expect(isNumeric('+1')).to.equal(true);
-                expect(isNumeric('1e100')).to.equal(true);
-                expect(isNumeric('-1e100')).to.equal(true);
-                expect(isNumeric('+1e100')).to.equal(true);
-                expect(isNumeric('1e-100')).to.equal(true);
-                expect(isNumeric('-1e-100')).to.equal(true);
-                expect(isNumeric('+1e-100')).to.equal(true);
-                expect(isNumeric('1e+100')).to.equal(true);
-                expect(isNumeric('-1e+100')).to.equal(true);
-                expect(isNumeric('+1e+100')).to.equal(true);
-                expect(isNumeric('Infinity')).to.equal(true);
-                expect(isNumeric('-Infinity')).to.equal(true);
-                expect(isNumeric('+Infinity')).to.equal(true);
-                expect(isNumeric('NaN')).to.equal(false);
+                expect(isNumeric('0')).toBe(true);
+                expect(isNumeric('-0')).toBe(true);
+                expect(isNumeric('+0')).toBe(true);
+                expect(isNumeric('1')).toBe(true);
+                expect(isNumeric('-1')).toBe(true);
+                expect(isNumeric('+1')).toBe(true);
+                expect(isNumeric('1e100')).toBe(true);
+                expect(isNumeric('-1e100')).toBe(true);
+                expect(isNumeric('+1e100')).toBe(true);
+                expect(isNumeric('1e-100')).toBe(true);
+                expect(isNumeric('-1e-100')).toBe(true);
+                expect(isNumeric('+1e-100')).toBe(true);
+                expect(isNumeric('1e+100')).toBe(true);
+                expect(isNumeric('-1e+100')).toBe(true);
+                expect(isNumeric('+1e+100')).toBe(true);
+                expect(isNumeric('Infinity')).toBe(true);
+                expect(isNumeric('-Infinity')).toBe(true);
+                expect(isNumeric('+Infinity')).toBe(true);
+                expect(isNumeric('NaN')).toBe(false);
             }
         );
 
         it(
             'should handle non-numbers',
             () => {
-                expect(isNumeric(empty)).to.equal(false);
-                expect(isNumeric(space)).to.equal(false);
-                expect(isNumeric('abcdef')).to.equal(false);
-                expect(isNumeric(null)).to.equal(false);
-                expect(isNumeric(undefined)).to.equal(false);
-                expect(isNumeric([])).to.equal(false);
-                expect(isNumeric({})).to.equal(false);
+                expect(isNumeric(empty)).toBe(false);
+                expect(isNumeric(space)).toBe(false);
+                expect(isNumeric('abcdef')).toBe(false);
+                expect(isNumeric(null)).toBe(false);
+                expect(isNumeric(undefined)).toBe(false);
+                expect(isNumeric([])).toBe(false);
+                expect(isNumeric({})).toBe(false);
             }
         );
     }

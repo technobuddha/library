@@ -1,9 +1,5 @@
-﻿import 'mocha';
-import { expect, use } from 'chai';
-import chaiAlmost      from 'chai-almost';
+import expect from '../util/expect';
 import diceCoefficient from '../src/diceCoefficient';
-
-use(chaiAlmost());
 
 describe(
     'diceCoefficient',
@@ -11,7 +7,7 @@ describe(
         it(
             'Detect difference between two strings',
             () => {
-                expect(diceCoefficient('Drink Coca Cola', 'Drink Pepsi Cola')).to.almost.equal(0.6206896551724138);
+                expect(diceCoefficient('Drink Coca Cola', 'Drink Pepsi Cola')).toBeCloseTo(0.6206896551724138);
             }
         );
     }

@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import toBoolean  from '../src/toBoolean';
 
 describe(
@@ -8,40 +7,40 @@ describe(
         it(
             'should convert basic boolean values',
             () => {
-                expect(toBoolean('true')).to.equal(true);
-                expect(toBoolean('false')).to.equal(false);
-                expect(toBoolean('yes')).to.equal(true);
-                expect(toBoolean('no')).to.equal(false);
-                expect(toBoolean('y')).to.equal(true);
-                expect(toBoolean('n')).to.equal(false);
-                expect(toBoolean('on')).to.equal(true);
-                expect(toBoolean('off')).to.equal(false);
-                expect(toBoolean('1')).to.equal(true);
-                expect(toBoolean('0')).to.equal(false);
+                expect(toBoolean('true')).toBe(true);
+                expect(toBoolean('false')).toBe(false);
+                expect(toBoolean('yes')).toBe(true);
+                expect(toBoolean('no')).toBe(false);
+                expect(toBoolean('y')).toBe(true);
+                expect(toBoolean('n')).toBe(false);
+                expect(toBoolean('on')).toBe(true);
+                expect(toBoolean('off')).toBe(false);
+                expect(toBoolean('1')).toBe(true);
+                expect(toBoolean('0')).toBe(false);
             }
         );
 
         it(
             'should ignore case',
             () => {
-                expect(toBoolean('True')).to.equal(true);
-                expect(toBoolean('False')).to.equal(false);
+                expect(toBoolean('True')).toBe(true);
+                expect(toBoolean('False')).toBe(false);
             }
         );
 
         it(
             'should allow string values',
             () => {
-                expect(toBoolean('Yup', { trueValues: [ 'yup' ]})).to.equal(true);
-                expect(toBoolean('Nope', { falseValues: [ 'nope' ]})).to.equal(false);
+                expect(toBoolean('Yup', { trueValues: [ 'yup' ]})).toBe(true);
+                expect(toBoolean('Nope', { falseValues: [ 'nope' ]})).toBe(false);
             }
         );
 
         it(
             'should allow allow regular expressions',
             () => {
-                expect(toBoolean('Yup', { trueValues: [ /y.*/u ]})).to.equal(true);
-                expect(toBoolean('Nope', { falseValues: [ /n.*/u ]})).to.equal(false);
+                expect(toBoolean('Yup', { trueValues: [ /y.*/u ]})).toBe(true);
+                expect(toBoolean('Nope', { falseValues: [ /n.*/u ]})).toBe(false);
             }
         );
     }

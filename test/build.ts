@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import build      from '../src/build';
 
 describe(
@@ -8,13 +7,13 @@ describe(
         it(
             'should build strings',
             () => {
-                expect(build()).to.equal('');
-                expect(build('a')).to.equal('a');
-                expect(build('a', 'b', 'c')).to.equal('abc');
-                expect(build([ 'a', 'b', 'c' ])).to.equal('abc');
-                expect(build(() => 'a')).to.equal('a');
-                expect(build('a', [ 'b', 'c' ], 'd')).to.equal('abcd');
-                expect(build(() => 'a', () => [ 'b', 'c' ], [ 'd', 'e' ], 'f')).to.equal('abcdef');
+                expect(build()).toBe('');
+                expect(build('a')).toBe('a');
+                expect(build('a', 'b', 'c')).toBe('abc');
+                expect(build([ 'a', 'b', 'c' ])).toBe('abc');
+                expect(build(() => 'a')).toBe('a');
+                expect(build('a', [ 'b', 'c' ], 'd')).toBe('abcd');
+                expect(build(() => 'a', () => [ 'b', 'c' ], [ 'd', 'e' ], 'f')).toBe('abcdef');
             }
         );
     }

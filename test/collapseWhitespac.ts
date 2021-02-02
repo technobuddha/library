@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import collapseWhitespace from '../src/collapseWhitespace';
 
 describe(
@@ -8,14 +7,14 @@ describe(
         it(
             'should collapse whitespace',
             () => {
-                expect(collapseWhitespace('   now   is the\r\t\f\v\ntime      for \tall   good men   ')).to.equal('now is the time for all good men');
+                expect(collapseWhitespace('   now   is the\r\t\f\v\ntime      for \tall   good men   ')).toBe('now is the time for all good men');
             }
         );
 
         it(
             'should support the trim option',
             () => {
-                expect(collapseWhitespace('   now   is the\r\t\f\v\ntime      for \tall   good men   ', { trim: false })).to.equal(' now is the time for all good men ');
+                expect(collapseWhitespace('   now   is the\r\t\f\v\ntime      for \tall   good men   ', { trim: false })).toBe(' now is the time for all good men ');
             }
         );
     }

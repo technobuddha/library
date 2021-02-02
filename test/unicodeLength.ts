@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect }    from 'chai';
+import expect from '../util/expect';
 import unicodeLength from '../src/unicodeLength';
 
 describe(
@@ -8,8 +7,8 @@ describe(
         it(
             'should detect surrogates',
             () => {
-                expect('😀😁😂😺😸😹'.length).to.equal(12);
-                expect(unicodeLength('😀😁😂😺😸😹')).to.equal(6);
+                expect('😀😁😂😺😸😹'.length).toBe(12);
+                expect(unicodeLength('😀😁😂😺😸😹')).toBe(6);
             }
         );
     }

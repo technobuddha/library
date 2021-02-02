@@ -1,5 +1,4 @@
-﻿import 'mocha';
-import { expect } from 'chai';
+import expect from '../util/expect';
 import matchCase  from '../src/matchCase';
 
 describe(
@@ -8,14 +7,14 @@ describe(
         it(
             'should match case',
             () => {
-                expect(matchCase('abc', 'xyz')).to.equal('abc');
-                expect(matchCase('abc', 'XYZ')).to.equal('ABC');
-                expect(matchCase('abc', 'Xyz')).to.equal('Abc');
-                expect(matchCase('abc', 'xYZ')).to.equal('aBC');
-                expect(matchCase('ABC', 'xyz')).to.equal('abc');
-                expect(matchCase('ABC', 'XYZ')).to.equal('ABC');
-                expect(matchCase('ABC', 'Xyz')).to.equal('Abc');
-                expect(matchCase('ABC', 'xYZ')).to.equal('aBC');
+                expect(matchCase('abc', 'xyz')).toBe('abc');
+                expect(matchCase('abc', 'XYZ')).toBe('ABC');
+                expect(matchCase('abc', 'Xyz')).toBe('Abc');
+                expect(matchCase('abc', 'xYZ')).toBe('aBC');
+                expect(matchCase('ABC', 'xyz')).toBe('abc');
+                expect(matchCase('ABC', 'XYZ')).toBe('ABC');
+                expect(matchCase('ABC', 'Xyz')).toBe('Abc');
+                expect(matchCase('ABC', 'xYZ')).toBe('aBC');
             }
         );
     }
