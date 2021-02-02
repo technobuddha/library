@@ -22,7 +22,7 @@ module.exports = {
     },
     'plugins': [
         '@typescript-eslint',
-        //'eslint-plugin-tsdoc',
+        'eslint-plugin-tsdoc',
         'chai-expect',
     ],
     'extends': [
