@@ -20,7 +20,7 @@ describe(
                 const proto = { d: 4, e: 5, f: 6 };
                 Object.setPrototypeOf(obj, proto);
                 expect(clearObject(obj)).toEqual({ });
-                expect(Object.getPrototypeOf(obj)).toEqual({ d: 4, e: 5, f: 6 })
+                expect(Object.getPrototypeOf(obj)).toEqual({ d: 4, e: 5, f: 6 });
                 expect(obj).toEqual({ });
                 expect(proto).toEqual({ d: 4, e: 5, f: 6 });
             }

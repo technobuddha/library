@@ -8,7 +8,7 @@ describe(
             'converts positive angles',
             () => {
                 expect(toDegrees(0 * Math.PI / 4)).toBeCloseTo(0.0);
-                expect(toDegrees(1 * Math.PI / 4)).toBeCloseTo(45.0);
+                expect(toDegrees(Number(Math.PI) / 4)).toBeCloseTo(45.0);
                 expect(toDegrees(2 * Math.PI / 4)).toBeCloseTo(90.0);
                 expect(toDegrees(3 * Math.PI / 4)).toBeCloseTo(135.0);
                 expect(toDegrees(4 * Math.PI / 4)).toBeCloseTo(180.0);
