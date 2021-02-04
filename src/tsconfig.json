@@ -6,6 +6,7 @@
       "declaration": true,
       "outDir": "../dist",
       "rootDir": ".",
+      "downlevelIteration": true,
       "types": [ "jest", "node" ],
     },
     "include": [ "*.ts" ],
