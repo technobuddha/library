@@ -4,14 +4,14 @@ import mask       from '../src/mask';
 describe(
     'mask',
     () => {
-        it(
+        test(
             'should mask strings',
             () => {
                 expect(mask('123456789', '###-##-####')).toBe('123-45-6789');
             }
         );
 
-        it(
+        test(
             'should allow for short strings',
             () => {
                 expect(mask('1234567', '###-##-####')).toBe('123-45-67  ');
@@ -19,7 +19,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should allow escapes',
             () => {
                 expect(mask('123456789', '###-\\#\\#-####')).toBe('123-##-4567');

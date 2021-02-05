@@ -5,7 +5,7 @@ import { space, empty } from '../src/constants';
 describe(
     'isLowerCase',
     () => {
-        it(
+        test(
             'should detect lower case',
             () => {
                 expect(isLowerCase('abcdef')).toBe(true);

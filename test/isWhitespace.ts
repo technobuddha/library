@@ -5,14 +5,14 @@ import { empty, space } from '../src/constants';
 describe(
     'isWhitespace',
     () => {
-        it(
+        test(
             'should handle empty strings',
             () => {
                 expect(isWhitespace(empty)).toBe(false);
             }
         );
 
-        it(
+        test(
             'should handle whitespace characters',
             () => {
                 expect(isWhitespace(space)).toBe(true);
@@ -43,14 +43,14 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle whitespace strings',
             () => {
                 expect(isWhitespace(' \t\r\n\v\f ')).toBe(true);
             }
         );
 
-        it(
+        test(
             'should reject other strings',
             () => {
                 expect(isWhitespace('    a    ')).toBe(false);

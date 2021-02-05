@@ -5,7 +5,7 @@ import { empty }      from '../src/constants';
 describe(
     'isAlphaNumeric',
     () => {
-        it(
+        test(
             'should detect alphanumeric strings',
             () => {
                 expect(isAlphaNumeric('AEIOU')).toBe(true);

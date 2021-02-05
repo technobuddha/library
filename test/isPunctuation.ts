@@ -5,7 +5,7 @@ import { space, empty } from '../src/constants';
 describe(
     'isPunctuation',
     () => {
-        it(
+        test(
             'should detect punctuation',
             () => {
                 expect(isPunctuation('.')).toBe(true);

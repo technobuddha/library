@@ -4,7 +4,7 @@ import isValidDate from '../src/isValidDate';
 describe(
     'isValidDate',
     () => {
-        it(
+        test(
             'should detect invalid dates',
             () => {
                 expect(isValidDate(new Date())).toBe(true);

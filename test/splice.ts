@@ -4,7 +4,7 @@ import splice     from '../src/splice';
 describe(
     'splice',
     () => {
-        it(
+        test(
             'should splice substrings',
             () => {
                 expect(splice('abcdefghi', 0, 0, 'foo')).toBe('fooabcdefghi');
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle negative start',
             () => {
                 expect(splice('abcdefghi', -1, 0, 'foo')).toBe('abcdefghifoo');
@@ -21,14 +21,14 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle negative deleteLength',
             () => {
                 expect(splice('abcdefghi', 3, -3, 'foo')).toBe('abcfoodefghi');
             }
         );
 
-        it(
+        test(
             'should handle start greater than length',
             () => {
                 expect(splice('abcdefghi', 99, 0, 'foo')).toBe('abcdefghifoo');

@@ -4,7 +4,7 @@ import standardDeviation from '../src/standardDeviation';
 describe(
     'standardDeviation',
     () => {
-        it(
+        test(
             'should compute standardDeviation',
             () => {
                 expect(standardDeviation(0,   1,   2,   3,   4,   5,   6,   7,   8,   9,  10)).toBe(Math.sqrt(11));
@@ -14,7 +14,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle edge cases',
             () => {
                 expect(isNaN(standardDeviation())).toBe(true);

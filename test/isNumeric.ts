@@ -5,7 +5,7 @@ import { empty, space, negativeZero } from '../src/constants';
 describe(
     'isNumeric',
     () => {
-        it(
+        test(
             'should handle numbers',
             () => {
                 expect(isNumeric(-1)).toBe(true);
@@ -14,7 +14,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle special numbers',
             () => {
                 expect(isNumeric(negativeZero)).toBe(true);
@@ -24,7 +24,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle numeric strings',
             () => {
                 expect(isNumeric('0')).toBe(true);
@@ -49,7 +49,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle non-numbers',
             () => {
                 expect(isNumeric(empty)).toBe(false);

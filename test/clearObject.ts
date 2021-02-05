@@ -4,7 +4,7 @@ import clearObject from '../src/clearObject';
 describe(
     'clearObject',
     () => {
-        it(
+        test(
             'should clear objects',
             () => {
                 const obj = { a: 1, b: 2, c: 3 };
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should not clear the prototype',
             () => {
                 const obj   = { a: 1, b: 2, c: 3 };

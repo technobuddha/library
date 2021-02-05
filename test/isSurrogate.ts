@@ -4,7 +4,7 @@ import isSurrogate from '../src/isSurrogate';
 describe(
     'isSurrogate',
     () => {
-        it(
+        test(
             'should detect surrogates',
             () => {
                 expect(isSurrogate('a')).toBe(false);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should detect high and low',
             () => {
                 expect(isSurrogate('\uD800', { high: false })).toBe(false);

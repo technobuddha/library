@@ -5,7 +5,7 @@ import { month }  from '../src/constants';
 describe(
     'isSameWeek',
     () => {
-        it(
+        test(
             'should check for date similarity',
             () => {
                 expect(isSameWeek(new Date('7 Dec 1941 07:55'), new Date('7  Dec 1941'))).toBe(true);
@@ -14,7 +14,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should check for date similarity',
             () => {
                 expect(isSameWeek(new Date(Date.UTC(1941, month.december, 7, 7, 55)), new Date(Date.UTC(1941, month.december, 7)), { UTC: true })).toBe(true);

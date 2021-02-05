@@ -4,7 +4,7 @@ import isOdd      from '../src/isOdd';
 describe(
     'isOdd',
     () => {
-        it(
+        test(
             'should handle testing for odd numbers',
             () => {
                 expect(isOdd(-3)).toBe(true);

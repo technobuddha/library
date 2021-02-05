@@ -4,7 +4,7 @@ import ensurePrefix from '../src/ensurePrefix';
 describe(
     'ensurePrefix',
     () => {
-        it(
+        test(
             'should add prefixes when needed',
             () => {
                 expect(ensurePrefix('bletch', 'foobie-')).toBe('foobie-bletch');

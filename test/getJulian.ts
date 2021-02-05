@@ -4,7 +4,7 @@ import getJulian       from '../src/getJulian';
 describe(
     'getJulian',
     () => {
-        it(
+        test(
             'should convert to Julian dates',
             () => {
                 expect(getJulian(new Date('13 September 1999 00:00 UTC'))).toBeCloseTo(2451434.5);

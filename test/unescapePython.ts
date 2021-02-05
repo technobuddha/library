@@ -5,21 +5,21 @@ import { space }      from '../src/constants';
 describe(
     'unescapePython',
     () => {
-        it(
+        test(
             'should unescape standard sequences',
             () => {
                 expect(unescapePython('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"')).toBe('\x07\b\f\n\r\t\v\\\'"');
             }
         );
 
-        it(
+        test(
             'should upport non-standard sequenes',
             () => {
                 expect(unescapePython('\\j\\q\\z')).toBe('\\j\\q\\z');
             }
         );
 
-        it(
+        test(
             'should unescape octal',
             () => {
                 expect(unescapePython('\\0')).toBe('\0');
@@ -29,7 +29,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape hex',
             () => {
                 expect(unescapePython('\\x0')).toBe('\0');
@@ -53,7 +53,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape unicode',
             () => {
                 expect(unescapePython('\\u0000')).toBe('\0');
@@ -62,7 +62,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape exended unicode',
             () => {
                 expect(unescapePython('\\U00000000')).toBe('\0');
@@ -71,7 +71,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should return ASCII, Latin1, BMP and ASTRAL as-is',
             () => {
                 expect(unescapePython(space)).toBe(space);

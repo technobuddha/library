@@ -4,7 +4,7 @@ import angleDifference from '../src/angleDifference';
 describe(
     'angleDifference',
     () => {
-        it(
+        test(
             'should compute positive angles',
             () => {
                 expect(angleDifference(0 * Math.PI / 4, 0 * Math.PI / 4)).toBe(0 * Math.PI / 4);

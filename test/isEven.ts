@@ -5,7 +5,7 @@ import { negativeZero } from '../src/constants';
 describe(
     'isEven',
     () => {
-        it(
+        test(
             'should work with numbers',
             () => {
                 expect(isEven(-3)).toBe(false);
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should work with special numbers',
             () => {
                 expect(isEven(negativeZero)).toBe(true);

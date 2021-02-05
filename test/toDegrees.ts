@@ -4,7 +4,7 @@ import toDegrees from '../src/toDegrees';
 describe(
     'toDegrees',
     () => {
-        it(
+        test(
             'converts positive angles',
             () => {
                 expect(toDegrees(0 * Math.PI / 4)).toBeCloseTo(0.0);
@@ -18,7 +18,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts negative angles',
             () => {
                 expect(toDegrees(-0 * Math.PI / 4)).toBeCloseTo(-0.0);
@@ -32,7 +32,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts positive angles greater than full',
             () => {
                 expect(toDegrees(8 * Math.PI / 4)).toBeCloseTo(360.0);

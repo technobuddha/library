@@ -4,7 +4,7 @@ import angleBetweenPoints from '../src/angleBetweenPoints';
 describe(
     'angleBetweenPoints',
     () => {
-        it(
+        test(
             'call with objects',
             () => {
                 expect(angleBetweenPoints({ x:   0, y:   0 }, { x:  10, y:   0 })).toBe(0 * Math.PI / 4);

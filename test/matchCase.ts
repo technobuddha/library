@@ -4,7 +4,7 @@ import matchCase  from '../src/matchCase';
 describe(
     'isUpperCase',
     () => {
-        it(
+        test(
             'should match case',
             () => {
                 expect(matchCase('abc', 'xyz')).toBe('abc');

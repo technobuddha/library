@@ -5,7 +5,7 @@ import { empty }    from '../src/constants';
 describe(
     'clean',
     () => {
-        it(
+        test(
             'should trim whitespace',
             () => {
                 expect(clean(empty)).toBe(empty);
@@ -14,7 +14,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept string characters',
             () => {
                 expect(clean('***a b c d***', '*')).toBe('a b c d');
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept regular expressions',
             () => {
                 expect(clean('@@@a b c d@@@', /@/u)).toBe('a b c d');
@@ -30,21 +30,21 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept arrays of strings',
             () => {
                 expect(clean('@%!a b c d!%@', [ '@', '%!' ])).toBe('a b c d');
             }
         );
 
-        it(
+        test(
             'should accept arrays of regular expressions',
             () => {
                 expect(clean('@%!a b c d!%@', [ /@/u, /%|!/u ])).toBe('a b c d');
             }
         );
 
-        it(
+        test(
             'should accept mixed arrays of regular expressions',
             () => {
                 expect(clean('@%!a b c d!%@', [ /@/u, '%!' ])).toBe('a b c d');
@@ -56,7 +56,7 @@ describe(
 describe(
     'cleanEnd',
     () => {
-        it(
+        test(
             'should trim whitespace',
             () => {
                 expect(cleanEnd(empty)).toBe(empty);
@@ -65,7 +65,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept string characters',
             () => {
                 expect(cleanEnd('***a b c d***', '*')).toBe('***a b c d');
@@ -73,7 +73,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept regular expressions',
             () => {
                 expect(cleanEnd('@@@a b c d@@@', /@/u)).toBe('@@@a b c d');
@@ -81,21 +81,21 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept arrays of strings',
             () => {
                 expect(cleanEnd('@%!a b c d!%@', [ '@', '%!' ])).toBe('@%!a b c d');
             }
         );
 
-        it(
+        test(
             'should accept arrays of regular expressions',
             () => {
                 expect(cleanEnd('@%!a b c d!%@', [ /@/u, /%|!/u ])).toBe('@%!a b c d');
             }
         );
 
-        it(
+        test(
             'should accept mixed arrays of regular expressions',
             () => {
                 expect(cleanEnd('@%!a b c d!%@', [ /@/u, '%!' ])).toBe('@%!a b c d');
@@ -107,7 +107,7 @@ describe(
 describe(
     'cleanStart',
     () => {
-        it(
+        test(
             'should trim whitespace',
             () => {
                 expect(cleanStart(empty)).toBe(empty);
@@ -116,7 +116,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept string characters',
             () => {
                 expect(cleanStart('***a b c d***', '*')).toBe('a b c d***');
@@ -124,7 +124,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept regular expressions',
             () => {
                 expect(cleanStart('@@@a b c d@@@', /@/u)).toBe('a b c d@@@');
@@ -132,21 +132,21 @@ describe(
             }
         );
 
-        it(
+        test(
             'should accept arrays of strings',
             () => {
                 expect(cleanStart('@%!a b c d!%@', [ '@', '%!' ])).toBe('a b c d!%@');
             }
         );
 
-        it(
+        test(
             'should accept arrays of regular expressions',
             () => {
                 expect(cleanStart('@%!a b c d!%@', [ /@/u, /%|!/u ])).toBe('a b c d!%@');
             }
         );
 
-        it(
+        test(
             'should accept mixed arrays of regular expressions',
             () => {
                 expect(cleanStart('@%!a b c d!%@', [ /@/u, '%!' ])).toBe('a b c d!%@');

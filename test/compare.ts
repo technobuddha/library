@@ -4,7 +4,7 @@ import { compare } from '../src/compare';
 describe(
     'compare',
     () => {
-        it(
+        test(
             'should compare strings',
             () => {
                 expect(compare('a', 'a')).toBe(0);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compare numbers',
             () => {
                 expect(compare(0, 0)).toBe(0);
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should coerce boolean to number',
             () => {
                 expect(compare(false, false)).toBe(0);
@@ -35,7 +35,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should coerce object to number',
             () => {
                 expect(compare(new Date(1900, 1, 0), new Date(1900, 1, 0))).toBe(0);

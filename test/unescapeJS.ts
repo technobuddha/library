@@ -5,21 +5,21 @@ import { space }  from '../src/constants';
 describe(
     'unescapeJS',
     () => {
-        it(
+        test(
             'should unescape standard sequences',
             () => {
                 expect(unescapeJS('\\b\\f\\n\\r\\t\\v\\\\\\\'\\"')).toBe('\b\f\n\r\t\v\\\'"');
             }
         );
 
-        it(
+        test(
             'should upport non-standard sequenes',
             () => {
                 expect(unescapeJS('\\j\\q\\z')).toBe('jqz');
             }
         );
 
-        it(
+        test(
             'should unescape octal',
             () => {
                 expect(unescapeJS('\\0')).toBe('\0');
@@ -29,7 +29,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape hex',
             () => {
                 expect(unescapeJS('\\x00')).toBe('\0');
@@ -37,7 +37,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape unicode',
             () => {
                 expect(unescapeJS('\\u0000')).toBe('\0');
@@ -46,7 +46,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape exended unicode',
             () => {
                 expect(unescapeJS('\\u{0}')).toBe('\0');
@@ -55,7 +55,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should return ASCII, Latin1, BMP and ASTRAL as-is',
             () => {
                 expect(unescapeJS(space)).toBe(space);

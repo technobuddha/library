@@ -4,7 +4,7 @@ import sortOrder  from '../src/sortOrder';
 describe(
     'sortOrder',
     () => {
-        it(
+        test(
             'should add select the proper sort order',
             () => {
                 expect(sortOrder('pink floyd')).toBe('pink floyd');
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the only moveArticles option',
             () => {
                 expect(sortOrder('the beatles', { moveArticles: false })).toBe('the beatles');

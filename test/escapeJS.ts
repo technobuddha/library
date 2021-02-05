@@ -5,14 +5,14 @@ import { space }  from '../src/constants';
 describe(
     'escapeJS',
     () => {
-        it(
+        test(
             'should escape standard sequences',
             () => {
                 expect(escapeJS('\b\f\n\r\t\v\\\'"')).toBe('\\b\\f\\n\\r\\t\\v\\\\\\\'\\"');
             }
         );
 
-        it(
+        test(
             'should escape nul as \\0, unless followed by an octal digit',
             () => {
                 expect(escapeJS('\0')).toBe('\\0');
@@ -21,7 +21,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should not escape most ascii',
             () => {
                 expect(escapeJS(space)).toBe(space);
@@ -29,7 +29,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should escape non printables as \\xnn unless followed by a hex digit',
             () => {
                 expect(escapeJS('\x01')).toBe('\\x01');
@@ -47,21 +47,21 @@ describe(
             }
         );
 
-        it(
+        test(
             'should mot escape latin-1 characters',
             () => {
                 expect(escapeJS('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
             }
         );
 
-        it(
+        test(
             'should unicode escape BMP characters',
             () => {
                 expect(escapeJS('ΑΒΓΔΕΖ')).toBe('\\u0391\\u0392\\u0393\\u0394\\u0395\\u0396');
             }
         );
 
-        it(
+        test(
             'should encode astral characters',
             () => {
                 expect(escapeJS('😀😁😂😺😸😹')).toBe('\\u{1f600}\\u{1f601}\\u{1f602}\\u{1f63a}\\u{1f638}\\u{1f639}');

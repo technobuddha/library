@@ -5,7 +5,7 @@ import metricUnits from '../src/metricUnits';
 describe(
     'metricUnits',
     () => {
-        it(
+        test(
             'should handle numbers greater than 1',
             () => {
                 expect(metricUnits(1)).toBe('1');
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle numbers less than 1',
             () => {
                 expect(metricUnits(0.1)).toBe('100m');
@@ -39,7 +39,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle fractional numbers',
             () => {
                 expect(metricUnits(1000000)).toBe('1M');
@@ -50,7 +50,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle precision',
             () => {
                 expect(metricUnits(1000000, { precision: 3 })).toBe('1M');
@@ -61,7 +61,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle macro',
             () => {
                 expect(metricUnits(1, { macro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('1');
@@ -78,7 +78,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle micro',
             () => {
                 expect(metricUnits(0.1, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('100A');
@@ -94,7 +94,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle unit',
             () => {
                 expect(metricUnits(2, { unit: 2000 })).toBe('2');
@@ -111,7 +111,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should respect format',
             () => {
                 expect(metricUnits(1, { format: '000' })).toBe('001');

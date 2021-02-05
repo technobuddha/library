@@ -4,7 +4,7 @@ import longestCommonSubstring from '../src/longestCommonSubstring';
 describe(
     'longestCommonSubstring',
     () => {
-        it(
+        test(
             'should handle basic functionality',
             () => {
                 expect(longestCommonSubstring("Phil Hill's Greatest Hits", "The Hill's Greatest Hits (1959-2018)")).toBe(" Hill's Greatest Hits");

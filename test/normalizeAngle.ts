@@ -4,7 +4,7 @@ import normalizeAngle from '../src/normalizeAngle';
 describe(
     'normalizeAngle',
     () => {
-        it(
+        test(
             'converts positive angles',
             () => {
                 expect(normalizeAngle(0 * Math.PI / 2)).toBe(0 * Math.PI / 2);
@@ -19,7 +19,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts negative angles',
             () => {
                 expect(normalizeAngle(-0 * Math.PI / 2)).toBe(-0 * Math.PI / 2);

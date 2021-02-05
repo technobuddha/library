@@ -1,10 +1,10 @@
-import expect from '../util/expect';
-import addTime    from '../src/addTime';
+import expect  from '../util/expect';
+import addTime from '../src/addTime';
 
 describe(
     'addTime',
     () => {
-        it(
+        test(
             'should add years',
             () => {
                 expect(addTime(new Date(2000, 0, 1, 2, 3, 4, 5), { years: 1 }).toString()).toBe(new Date(2001, 0, 1, 2, 3, 4, 5).toString());
@@ -15,7 +15,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add months',
             () => {
                 expect(addTime(new Date(2000, 0, 1, 2, 3, 4, 5), { months: 1 }).toString()).toBe(new Date(2000, 1, 1, 2, 3, 4, 5).toString());
@@ -26,7 +26,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add days',
             () => {
                 expect(addTime(new Date(2000, 0, 1, 2, 3, 4, 5), { days: 1 }).toString()).toBe(new Date(2000, 0, 2, 2, 3, 4, 5).toString());
@@ -37,7 +37,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add hours',
             () => {
                 expect(addTime(new Date(2000, 0, 1, 2, 3, 4, 5), { hours: 1 }).toString()).toBe(new Date(2000, 0, 1, 3, 3, 4, 5).toString());
@@ -48,7 +48,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add minutes',
             () => {
                 expect(addTime(new Date(2000,  0,  1,  2,  3, 4, 5), { minutes:  1 }).toString()).toBe(new Date(2000,  0,  1,  2,  4, 4, 5).toString());
@@ -59,7 +59,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add seconds',
             () => {
                 expect(addTime(new Date(2000,  0,  1,  2,  3,  4, 5), { seconds:  1 }).toString()).toBe(new Date(2000,  0,  1,  2,  3,  5, 5).toString());
@@ -70,7 +70,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add milliseconds',
             () => {
                 expect(addTime(new Date(2000,  0,  1,  2,  3,  4,   5), { milliseconds:  1 }).toString()).toBe(new Date(2000,  0,  1,  2,  3,  4,   6).toString());
@@ -81,7 +81,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should add combinations',
             () => {
                 expect(

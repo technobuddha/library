@@ -4,7 +4,7 @@ import root       from '../src/root';
 describe(
     'root',
     () => {
-        it(
+        test(
             'should extract root word',
             () => {
                 expect(root('abc')).toBe('abc');

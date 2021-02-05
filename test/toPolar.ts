@@ -5,7 +5,7 @@ import toPolar         from '../src/toPolar';
 describe(
     'toPolar',
     () => {
-        it(
+        test(
             'converts positive angles',
             () => {
                 expect(toPolar({ x:  10,              y:   0              })).toBeDeepCloseTo({ radius: 10, angle:  0 * Math.PI / 4 });

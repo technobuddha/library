@@ -5,7 +5,7 @@ import { month }      from '../src/constants';
 describe(
     'getISOWeeksInYear',
     () => {
-        it(
+        test(
             'should compute weeks in year',
             () => {
                 expect(getISOWeeksInYear(new Date('1 Jan 2000'))).toBe(52);
@@ -32,7 +32,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compute weeks in UTC year',
             () => {
                 expect(getISOWeeksInYear(new Date(Date.UTC(2000, month.january, 1)), { UTC: true })).toBe(52);

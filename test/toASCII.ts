@@ -4,7 +4,7 @@ import toASCII    from '../src/toASCII';
 describe(
     'toASCII',
     () => {
-        it(
+        test(
             'should bad characters to be replaces',
             () => {
                 expect(toASCII('crème brûlée')).toBe('creme brulee');

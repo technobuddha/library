@@ -5,7 +5,7 @@ import toCartesian from '../src/toCartesian';
 describe(
     'toCartesian',
     () => {
-        it(
+        test(
             'converts positive angles',
             () => {
                 expect(toCartesian({ radius: 10, angle:  0 * Math.PI / 4 })).toBeDeepCloseTo({ x:  10,              y:   0              });
@@ -19,7 +19,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts negative angles',
             () => {
                 expect(toCartesian({ radius: 10, angle:  -0 * Math.PI / 4 })).toBeDeepCloseTo({ x:  10,              y:   0              });
@@ -33,7 +33,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts positive angles greater than full',
             () => {
                 expect(toCartesian({ radius: 10, angle:  8 * Math.PI / 4 })).toBeDeepCloseTo({ x:  10,              y:   0              });

@@ -5,7 +5,7 @@ import addTime      from '../src/addTime';
 describe(
     'relativeTime',
     () => {
-        it(
+        test(
             'should detect invalid dates',
             () => {
                 const now = new Date();

@@ -5,7 +5,7 @@ import { negativeZero } from '../src/constants';
 describe(
     'isMultipleOf',
     () => {
-        it(
+        test(
             'should work with numbers',
             () => {
                 expect(isMultipleOf(-6, 3)).toBe(true);
@@ -40,7 +40,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should work with special numbers',
             () => {
                 expect(isMultipleOf(negativeZero, 1)).toBe(true);

@@ -4,7 +4,7 @@ import numberToLetter from '../src/numberToLetter';
 describe(
     'numberToLetter',
     () => {
-        it(
+        test(
             'should convert numbers',
             () => {
                 expect(numberToLetter(1)).toBe('A');
@@ -15,7 +15,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should work with alternate alphbets',
             () => {
                 expect(numberToLetter(1, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('Α');

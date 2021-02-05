@@ -5,14 +5,14 @@ import { space }    from '../src/constants';
 describe(
     'unescapeHTML',
     () => {
-        it(
+        test(
             'should unescape basic characters',
             () => {
                 expect(unescapeHTML('&quot;&amp;&apos;&lt;&gt;')).toBe('"&\'<>');
             }
         );
 
-        it(
+        test(
             'should unescape control characters',
             () => {
                 expect(unescapeHTML('&#0;')).toBe('\0');
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape hex control characters',
             () => {
                 expect(unescapeHTML('&#x0;')).toBe('\0');
@@ -32,7 +32,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should not unescape most ascii',
             () => {
                 expect(unescapeHTML(space)).toBe(space);
@@ -40,7 +40,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should extended entities',
             () => {
                 expect(unescapeHTML('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');

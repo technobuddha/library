@@ -4,7 +4,7 @@ import almostEquals from '../src/almostEquals';
 describe(
     'almostEquals',
     () => {
-        it(
+        test(
             'should handle numbers within EPSILON distance',
             () => {
                 expect(almostEquals(1, 1 + Number(Number.EPSILON))).toBe(true);
@@ -14,7 +14,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should allow specification of tolerance',
             () => {
                 expect(almostEquals(1, 1.001, { tolerance: 0.001 })).toBe(true);

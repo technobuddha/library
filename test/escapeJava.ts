@@ -5,14 +5,14 @@ import { space }  from '../src/constants';
 describe(
     'escapeJava',
     () => {
-        it(
+        test(
             'should escape standard sequences',
             () => {
                 expect(escapeJava('\b\f\n\r\t\\\'"')).toBe('\\b\\f\\n\\r\\t\\\\\\\'\\"');
             }
         );
 
-        it(
+        test(
             'should escape nul as \\0, unless followed by an octal digit',
             () => {
                 expect(escapeJava('\0')).toBe('\\0');
@@ -21,7 +21,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should not escape most ascii',
             () => {
                 expect(escapeJava(space)).toBe(space);
@@ -29,7 +29,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should escape non printables as \\unnnn',
             () => {
                 expect(escapeJava('\x01')).toBe('\\u0001');
@@ -39,21 +39,21 @@ describe(
             }
         );
 
-        it(
+        test(
             'should mot escape latin-1 characters',
             () => {
                 expect(escapeJava('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
             }
         );
 
-        it(
+        test(
             'should unicode escape BMP characters',
             () => {
                 expect(escapeJava('ΑΒΓΔΕΖ')).toBe('\\u0391\\u0392\\u0393\\u0394\\u0395\\u0396');
             }
         );
 
-        it(
+        test(
             'should encode astral characters should be UTF-16 encoded',
             () => {
                 expect(escapeJava('😀😁😂😺😸😹')).toBe(

@@ -4,7 +4,7 @@ import formatNumber from '../src/formatNumber';
 describe(
     'formatNumber',
     () => {
-        it(
+        test(
             'should support the C (Currency) format',
             () => {
                 expect(formatNumber(123.456, 'C')).toBe('$123.46');
@@ -19,7 +19,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the D (Decimal) format',
             () => {
                 expect(formatNumber(1234, 'D')).toBe('1234');
@@ -32,7 +32,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the E (Exponential) format',
             () => {
                 expect(formatNumber(1052.0329112756, 'E')).toBe('1.052033E+003');
@@ -44,7 +44,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the F (Fixed) format',
             () => {
                 expect(formatNumber(1234.567, 'F')).toBe('1234.57');
@@ -63,7 +63,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the G (General) format',
             () => {
                 expect(formatNumber(-123.456, 'G')).toBe('-123.456');
@@ -78,7 +78,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the N (Number) format',
             () => {
                 expect(formatNumber(1234.567, 'N')).toBe('1,234.57');
@@ -90,7 +90,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the P (Percent) format',
             () => {
                 expect(formatNumber(1, 'P')).toBe('100.00 %');
@@ -100,7 +100,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the R (Round-trip) format',
             () => {
                 expect(formatNumber(123456789.12345678, 'R')).toBe('123456789.12345678');
@@ -109,7 +109,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the X (Hexadecimal) format',
             () => {
                 expect(formatNumber(255, 'X')).toBe('FF');
@@ -124,7 +124,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Zero placeholder',
             () => {
                 expect(formatNumber(1234.5678, '00000')).toBe('01235');
@@ -138,7 +138,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Digit placeholder',
             () => {
                 expect(formatNumber(1234.5678, '#####')).toBe('1235');
@@ -151,7 +151,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Decimal Point',
             () => {
                 expect(formatNumber(0.45678, '0.00')).toBe('0.46');
@@ -162,7 +162,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Group Separator',
             () => {
                 expect(formatNumber(2147483647, '##,#')).toBe('2,147,483,647');
@@ -172,7 +172,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Percentage Placeholder',
             () => {
                 expect(formatNumber(0.3697, '%#0.00')).toBe('%36.97');
@@ -181,7 +181,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Per mille Placeholder',
             () => {
                 expect(formatNumber(0.03697, '#0.00‰')).toBe('36.97‰');
@@ -189,7 +189,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Exponential',
             () => {
                 expect(formatNumber(987654, '#0.0e0')).toBe('98.8e4');
@@ -201,7 +201,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Escape Character',
             () => {
                 expect(formatNumber(987654, '\\###00\\#')).toBe('#987654#');
@@ -210,7 +210,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Literal String delimiter',
             () => {
                 expect(formatNumber(68, "# 'degrees'")).toBe('68 degrees');
@@ -224,7 +224,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Section separator',
             () => {
                 expect(formatNumber(12.345, '#0.0#;(#0.0#);-\\0-')).toBe('12.35');
@@ -239,7 +239,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the Other characters',
             () => {
                 expect(formatNumber(68, '# °')).toBe('68 °');

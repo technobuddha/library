@@ -5,7 +5,7 @@ import { negativeZero } from '../src/constants';
 describe(
     'ordinal',
     () => {
-        it(
+        test(
             'should handle positive numbers',
             () => {
                 expect(ordinal(0)).toBe('0th');
@@ -37,7 +37,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle negative numbers',
             () => {
                 expect(ordinal(-0)).toBe('0th');
@@ -69,7 +69,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle non integers',
             () => {
                 expect(ordinal(0.1)).toBe('0.1th');
@@ -80,7 +80,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle exponential number',
             () => {
                 expect(ordinal(1e100)).toBe('1e+100th');
@@ -92,7 +92,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle special numbers',
             () => {
                 expect(ordinal(negativeZero)).toBe('0th');

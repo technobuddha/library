@@ -5,7 +5,7 @@ import { empty }  from '../src/constants';
 describe(
     'isAlpha',
     () => {
-        it(
+        test(
             'should detect alphabetic strings',
             () => {
                 expect(isAlpha('AEIOU')).toBe(true);

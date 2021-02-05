@@ -5,7 +5,7 @@ import { empty }  from '../src/constants';
 describe(
     'splitWords',
     () => {
-        it(
+        test(
             'should split on whitespace',
             () => {
                 expect(splitWords(empty)).toEqual([]);
@@ -17,14 +17,14 @@ describe(
             }
         );
 
-        it(
+        test(
             'should ignore leading and trailing whitespace',
             () => {
                 expect(splitWords('  a   b   c   d  ')).toEqual([ 'a', 'b', 'c', 'd' ]);
             }
         );
 
-        it(
+        test(
             'should accept alternate delimiters',
             () => {
                 expect(splitWords('*a*b*c*d*', { delimiter: '*' })).toEqual([ 'a', 'b', 'c', 'd' ]);

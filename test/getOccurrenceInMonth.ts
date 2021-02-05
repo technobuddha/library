@@ -5,7 +5,7 @@ import { day }             from '../src/constants';
 describe(
     'getOccurrenceInMonth',
     () => {
-        it(
+        test(
             'should find the occurrences of a day in a month',
             () => {
                 expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.sunday,    1)!.toString()).toBe(new Date('05 Aug 2018').toString());
@@ -46,7 +46,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should find the occurrences of a day in a UTC month',
             () => {
                 expect(getOccurrenceInMonth(new Date('31 Jul 2018 22:00 GMT-04:00'), day.sunday,    1, { UTC: true })!.toString()).toBe(new Date('05 Aug 2018 UTC').toString());
@@ -87,7 +87,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should check for out of range',
             () => {
                 expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.sunday,    0)).toBe(null);
@@ -95,7 +95,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should find the last occurrence of a day in a month',
             () => {
                 expect(getOccurrenceInMonth(new Date('1 Jul 2018'), day.sunday,    'last')!.toString()).toBe(new Date('29 Jul 2018').toString());
@@ -108,7 +108,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should find the last occurrence of a day in a UTC month',
             () => {
                 expect(getOccurrenceInMonth(new Date('30 Jun 2018 22:00 GMT-4:00'), day.sunday,    'last', { UTC: true })!.toUTCString()).toBe(new Date('29 Jul 2018 UTC').toUTCString());

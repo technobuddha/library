@@ -4,7 +4,7 @@ import coordinate from '../src/coordinate';
 describe(
     'coordinate',
     () => {
-        it(
+        test(
             'should handle basic functionality',
             () => {
                 expect(coordinate([])).toBe('');
@@ -15,7 +15,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle oxford commas',
             () => {
                 expect(coordinate([], { oxford: false })).toBe('');
@@ -26,7 +26,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle conjunctions',
             () => {
                 expect(coordinate([], { conjunction: 'or' })).toBe('');
@@ -37,7 +37,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle separators',
             () => {
                 expect(coordinate([], { separator: ';' })).toBe('');

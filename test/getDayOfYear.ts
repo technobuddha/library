@@ -5,7 +5,7 @@ import { month }    from '../src/constants';
 describe(
     'getDayOfYear',
     () => {
-        it(
+        test(
             'should convert to day of year',
             () => {
                 expect(getDayOfYear(new Date('1 Mar 2004'))).toBe(61);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should convert to UTC day of year',
             () => {
                 expect(getDayOfYear(new Date(Date.UTC(2004, month.march, 1)), { UTC: true })).toBe(61);

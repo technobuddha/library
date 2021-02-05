@@ -5,21 +5,21 @@ import { space }    from '../src/constants';
 describe(
     'unescapeJava',
     () => {
-        it(
+        test(
             'should unescape standard sequences',
             () => {
                 expect(unescapeJava('\\b\\n\\r\\t\\\\\\\'\\"')).toBe('\b\n\r\t\\\'"');
             }
         );
 
-        it(
+        test(
             'should upport non-standard sequenes',
             () => {
                 expect(unescapeJava('\\j\\q\\z')).toBe('\\j\\q\\z');
             }
         );
 
-        it(
+        test(
             'should unescape octal',
             () => {
                 expect(unescapeJava('\\0')).toBe('\0');
@@ -29,7 +29,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should unescape unicode',
             () => {
                 expect(unescapeJava('\\u0000')).toBe('\0');
@@ -38,7 +38,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should return ASCII, Latin1, BMP and ASTRAL as-is',
             () => {
                 expect(unescapeJava(space)).toBe(space);

@@ -5,7 +5,7 @@ import { negativeZero } from '../src/constants';
 describe(
     'padNumber',
     () => {
-        it(
+        test(
             'should handle positive numbers',
             () => {
                 expect(padNumber(0)).toBe('00');
@@ -15,7 +15,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle negative numbers',
             () => {
                 expect(padNumber(-0)).toBe('00');
@@ -25,7 +25,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle different lengths',
             () => {
                 expect(padNumber(0, 10)).toBe('0000000000');
@@ -39,7 +39,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle special numbers',
             () => {
                 expect(padNumber(negativeZero)).toBe('00');

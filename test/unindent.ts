@@ -4,7 +4,7 @@ import unindent   from '../src/unindent';
 describe(
     'unindent',
     () => {
-        it(
+        test(
             'should unindent lines',
             () => {
                 expect(unindent('It was the best of times.\nIt was the worst of times.')).toBe('It was the best of times.\nIt was the worst of times.');
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should allow to specify indenter',
             () => {
                 expect(unindent('It was the best of times.\nIt was the worst of times.', { indenter: '* ' })).toBe('It was the best of times.\nIt was the worst of times.');

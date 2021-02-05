@@ -4,7 +4,7 @@ import toBoolean  from '../src/toBoolean';
 describe(
     'toBoolean',
     () => {
-        it(
+        test(
             'should convert basic boolean values',
             () => {
                 expect(toBoolean('true')).toBe(true);
@@ -20,7 +20,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should ignore case',
             () => {
                 expect(toBoolean('True')).toBe(true);
@@ -28,7 +28,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should allow string values',
             () => {
                 expect(toBoolean('Yup', { trueValues: [ 'yup' ]})).toBe(true);
@@ -36,7 +36,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should allow allow regular expressions',
             () => {
                 expect(toBoolean('Yup', { trueValues: [ /y.*/u ]})).toBe(true);

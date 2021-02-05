@@ -5,7 +5,7 @@ import { empty }     from '../src/constants';
 describe(
     'extractDigits',
     () => {
-        it(
+        test(
             'should add Suffixes when needed',
             () => {
                 expect(extractDigits('abcdef')).toBe(empty);

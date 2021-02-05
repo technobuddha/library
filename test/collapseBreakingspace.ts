@@ -4,14 +4,14 @@ import collapseBreakingspace from '../src/collapseBreakingspace';
 describe(
     'collapseBreakingspace',
     () => {
-        it(
+        test(
             'should collapse Breakingspace',
             () => {
                 expect(collapseBreakingspace('   now   is the\r\t\f\v\ntime      for \tall   good men   ')).toBe('now is the \f\v time for all good men');
             }
         );
 
-        it(
+        test(
             'should support the trim option',
             () => {
                 expect(collapseBreakingspace('   now   is the\r\t\f\v\ntime      for \tall   good men   ', { trim: false })).toBe(' now is the \f\v time for all good men ');

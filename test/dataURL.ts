@@ -4,7 +4,7 @@ import dataURL     from '../src/dataURL';
 describe(
     'dataURL',
     () => {
-        it(
+        test(
             'should create dataURLs',
             () => {
                 expect(dataURL(new Int8Array(5), 'image/jpeg')).toBe('data:image/jpeg;base64,AAAAAAA=');

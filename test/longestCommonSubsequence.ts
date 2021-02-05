@@ -4,7 +4,7 @@ import longestCommonSubsequence from '../src/longestCommonSubsequence';
 describe(
     'longestCommonSubsequence',
     () => {
-        it(
+        test(
             'should handle basic functionality',
             () => {
                 expect(longestCommonSubsequence([ 'a', 'b', 'c', ' ', 'd', 'e', 'f' ], [ 'a', 'c', ' ', 'd', 'e', 'c' ])).toEqual([ 'a', 'c', ' ', 'd', 'e' ]);

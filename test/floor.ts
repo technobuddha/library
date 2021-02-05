@@ -4,7 +4,7 @@ import floor  from '../src/floor';
 describe(
     'floor',
     () => {
-        it(
+        test(
             'should handle positive numbers',
             () => {
                 expect(floor(1 - Number.EPSILON)).toBe(1);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle negative numbers',
             () => {
                 expect(floor(-1 - Number.EPSILON)).toBe(-1);
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle tolerance',
             () => {
                 expect(floor(5.9, { tolerance: 0.1 })).toBe(6);
@@ -30,7 +30,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle precision',
             () => {
                 expect(floor(6.01 - Number.EPSILON, { precision:  2 })).toBe(6.01);

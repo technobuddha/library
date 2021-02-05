@@ -5,7 +5,7 @@ import getISOWeekOfYear from '../src/getISOWeekOfYear';
 describe(
     'getISOWeekOfYear',
     () => {
-        it(
+        test(
             'should compute the week of the year',
             () => {
                 // expect(getISOWeekOfYear(new Date('29 Dec 1999'))).to.deep.equal({ year: 1999, week: 52 });
@@ -85,7 +85,7 @@ describe(
             }
         );
 
-        // it(
+        // test(
         //     'should compute the week of the UTC year',
         //     () => {
         //         expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 29)), {UTC: true})).to.deep.equal({ year: 1999, week: 52 });

@@ -5,14 +5,14 @@ import { space }  from '../src/constants';
 describe(
     'escapeHTML',
     () => {
-        it(
+        test(
             'should escape basic characters',
             () => {
                 expect(escapeHTML('"&\'<>')).toBe('&quot;&amp;&apos;&lt;&gt;');
             }
         );
 
-        it(
+        test(
             'should escape control characters',
             () => {
                 expect(escapeHTML('\0')).toBe('&#0;');
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should not escape most ascii',
             () => {
                 expect(escapeHTML(space)).toBe(space);

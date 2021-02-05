@@ -5,14 +5,14 @@ import { month }          from '../src/constants';
 describe(
     'getBeginningOfWeek',
     () => {
-        it(
+        test(
             'should find the beginning of the week',
             () => {
                 expect(getBeginningOfWeek(new Date('20 Jul 1969 20:18')).toString()).toBe(new Date('20 Jul 1969').toString());
             }
         );
 
-        it(
+        test(
             'should accept alternate start of week',
             () => {
                 expect(getBeginningOfWeek(new Date('20 Jul 1969 20:18'), { firstDayOfWeek: 0 }).toString()).toBe(new Date('20 Jul 1969').toString());
@@ -25,14 +25,14 @@ describe(
             }
         );
 
-        it(
+        test(
             'should find the UTC beginning of the week',
             () => {
                 expect(getBeginningOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true }).toString()).toBe(new Date(Date.UTC(1969, month.july, 20)).toString());
             }
         );
 
-        it(
+        test(
             'should accept alternate start of week',
             () => {
                 expect(getBeginningOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true, firstDayOfWeek: 0 }).toString()).toBe(new Date(Date.UTC(1969, month.july, 20)).toString());

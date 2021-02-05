@@ -4,7 +4,7 @@ import groupCode   from '../src/groupCode';
 describe(
     'groupCode',
     () => {
-        it(
+        test(
             'should add select the proper sort order',
             () => {
                 expect(groupCode('pink floyd')).toBe('P');

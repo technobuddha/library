@@ -4,7 +4,7 @@ import lerp from '../src/lerp';
 describe(
     'lerp',
     () => {
-        it(
+        test(
             'converts left to right range',
             () => {
                 expect(lerp(0, 10, 0.0)).toBeCloseTo(0);
@@ -21,7 +21,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts right to left range',
             () => {
                 expect(lerp(0, -10, 0.0)).toBeCloseTo(-0);
@@ -38,7 +38,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts negative portion',
             () => {
                 expect(lerp(0, 10, -0.0)).toBeCloseTo(-0);
@@ -55,7 +55,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'zero width range',
             () => {
                 expect(lerp(0, 0, 0.0)).toBeCloseTo(0);

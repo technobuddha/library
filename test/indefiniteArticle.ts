@@ -4,7 +4,7 @@ import indefiniteArticle from '../src/indefiniteArticle';
 describe(
     'indefiniteArticle',
     () => {
-        it(
+        test(
             'should add select the proper indefinite article',
             () => {
                 expect(indefiniteArticle('boy')).toBe('a boy');
@@ -261,7 +261,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support the only option',
             () => {
                 expect(indefiniteArticle('boy', { only: true })).toBe('a');
@@ -269,7 +269,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should should work with made up words',
             () => {
                 expect(indefiniteArticle('aqk')).toBe('an aqk');

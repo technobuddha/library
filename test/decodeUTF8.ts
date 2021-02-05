@@ -4,7 +4,7 @@ import decodeUTF8 from '../src/decodeUTF8';
 describe(
     'decodeUTF8',
     () => {
-        it(
+        test(
             'should not change ASCII',
             () => {
                 expect(decodeUTF8('abcdef')).toBe('abcdef');
@@ -12,7 +12,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should decode codepoints < 0x8000',
             () => {
                 expect(decodeUTF8('\xC2\xBC\xC2\xBD\xC2\xBE')).toBe('¼½¾');
@@ -20,7 +20,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should use decode non astral codepoints ',
             () => {
                 expect(decodeUTF8('\xE2\x99\x80\xE2\x99\x82')).toBe('♀♂');
@@ -28,7 +28,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should should decode astral codepoints',
             () => {
                 expect(decodeUTF8('\xF0\x9F\x98\x80\xF0\x9F\x98\x81\xF0\x9F\x98\x82')).toBe('😀😁😂');
@@ -36,7 +36,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should trap bad surrogate pairs',
             () => {
                 expect(() => decodeUTF8('\xC0')).toThrowError();

@@ -34,7 +34,7 @@ import expect from '../util/expect';
 describe(
     'quantize',
     () => {
-        it('Fail!', () => {
+        test('Fail!', () => {
             expect(1 + 0).toBe(1);
         });
     }

@@ -4,7 +4,7 @@ import { compareStrings } from '../src/compareStrings';
 describe(
     'compareStrings',
     () => {
-        it(
+        test(
             'should compare strings',
             () => {
                 expect(compareStrings('a', 'a')).toBe(0);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compare strings',
             () => {
                 expect(compareStrings(null, null)).toBe(0);
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should do case insensitive compares',
             () => {
                 expect(compareStrings('A', 'a', { caseInsensitive: true })).toBe(0);
@@ -31,7 +31,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should do natural compares',
             () => {
                 expect(compareStrings('Page 2', 'Page 2', { natural: true })).toBe(0);
@@ -40,7 +40,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compare versions',
             () => {
                 expect(compareStrings('1.1', '1.1', { version: true })).toBe(0);

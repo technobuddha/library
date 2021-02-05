@@ -4,7 +4,7 @@ import binaryUnits from '../src/binaryUnits';
 describe(
     'binaryUnits',
     () => {
-        it(
+        test(
             'should handle whole numbers than 1',
             () => {
                 expect(binaryUnits(1)).toBe('1B');
@@ -22,7 +22,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle fractional numbers',
             () => {
                 expect(binaryUnits(1000000)).toBe('976.56KiB');
@@ -32,7 +32,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle precision',
             () => {
                 expect(binaryUnits(1000000, { precision: 3 })).toBe('976.563KiB');

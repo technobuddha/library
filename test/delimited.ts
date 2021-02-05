@@ -5,7 +5,7 @@ import { empty }  from '../src/constants';
 describe(
     'delimited',
     () => {
-        it(
+        test(
             'should extract from delimited string',
             () => {
                 expect(delimited('a*b*c*d', '*', 0)).toBe('a');
@@ -15,7 +15,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle index <= 0',
             () => {
                 expect(delimited('a*b*c*d', '*', -1)).toBe('d');
@@ -25,7 +25,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should use counts',
             () => {
                 expect(delimited('a*b*c*d', '*', 0, 1)).toBe('a');
@@ -35,7 +35,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle counts with index < 0',
             () => {
                 expect(delimited('a*b*c*d', '*', -4, 1)).toBe('a');
@@ -45,7 +45,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle index out of bounds',
             () => {
                 expect(delimited('a*b*c*d', '*', 4)).toBe(empty);
@@ -53,7 +53,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle counts out of range',
             () => {
                 expect(delimited('a*b*c*d', '*', 0, 5)).toBe('a*b*c*d');

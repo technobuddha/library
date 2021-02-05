@@ -5,7 +5,7 @@ import { month }      from '../src/constants';
 describe(
     'getDaysInMonth',
     () => {
-        it(
+        test(
             'should convert to day of year',
             () => {
                 expect(getDaysInMonth(new Date('1 Jan 2000'))).toBe(31);
@@ -24,7 +24,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compute the days in a UTC month',
             () => {
                 expect(getDaysInMonth(new Date(Date.UTC(2000, month.january,   1)), { UTC: true })).toBe(31);

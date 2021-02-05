@@ -4,7 +4,7 @@ import cardinal, { orderOfMagnitude, summarize }   from '../src/cardinal';
 describe(
     'cardinal',
     () => {
-        it(
+        test(
             'should handle simple numbers',
             () => {
                 expect(cardinal(0)).toBe('zero');
@@ -30,7 +30,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle unusual numbers',
             () => {
                 expect(cardinal(Infinity)).toBe('infinity');
@@ -38,7 +38,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle negative numbers',
             () => {
                 expect(cardinal(-123)).toBe('negative one hundred twenty three');
@@ -46,7 +46,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle large numbers',
             () => {
                 expect(cardinal(1e100)).toBe('ten duotrigintillion');
@@ -75,7 +75,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should process the "and" and "hyphen" options',
             () => {
                 expect(cardinal(100)).toBe('one hundred');
@@ -90,7 +90,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should honor the digits option',
             () => {
                 expect(cardinal(1e6, { digits: true })).toBe('1 million');
@@ -98,7 +98,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should limit groups',
             () => {
                 expect(cardinal(1, { groups: 1 })).toBe('one');
@@ -119,7 +119,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should round groups',
             () => {
                 expect(cardinal(9, { groups: 1 })).toBe('nine');
@@ -149,7 +149,7 @@ describe(
 describe(
     'orderOfMagnitude',
     () => {
-        it(
+        test(
             'should describe orders of magnitude',
             () => {
                 expect(orderOfMagnitude(0)).toBe(null);
@@ -167,7 +167,7 @@ describe(
 describe(
     'summarize',
     () => {
-        it(
+        test(
             'should generate a short numeric description',
             () => {
                 expect(summarize(Number.MAX_SAFE_INTEGER)).toBe('9 quadrillion');

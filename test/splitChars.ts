@@ -5,7 +5,7 @@ import { empty }   from '../src/constants';
 describe(
     'splitChars',
     () => {
-        it(
+        test(
             'should split strings',
             () => {
                 expect(splitChars('abcdefghi')).toEqual([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]);

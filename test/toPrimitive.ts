@@ -5,7 +5,7 @@ import { empty, space } from '../src/constants';
 describe(
     'toPrimitive',
     () => {
-        it(
+        test(
             'should convert strings',
             () => {
                 expect(toPrimitive(empty)).toBe(empty);
@@ -15,7 +15,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle numbers',
             () => {
                 expect(toPrimitive(0)).toBe(0);
@@ -27,7 +27,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle booleans',
             () => {
                 expect(toPrimitive(true)).toBe(true);
@@ -35,7 +35,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle null and undefined',
             () => {
                 expect(toPrimitive(null)).toBe(null);
@@ -43,14 +43,14 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle symbols',
             () => {
                 expect(toPrimitive(Symbol.toPrimitive)).toBe(Symbol.toPrimitive);
             }
         );
 
-        it(
+        test(
             'should handle objects and arrays',
             () => {
                 expect(toPrimitive([])).toEqual([]);
@@ -59,7 +59,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle hint of string',
             () => {
                 expect(toPrimitive(undefined,          'string')).toBeUndefined();
@@ -72,7 +72,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle hint of number',
             () => {
                 expect(toPrimitive(undefined,          'number')).toBeUndefined();
@@ -85,7 +85,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle hint of default',
             () => {
                 expect(toPrimitive(undefined,          'default')).toBeUndefined();

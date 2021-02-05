@@ -4,7 +4,7 @@ import unicodeLength from '../src/unicodeLength';
 describe(
     'unicodeLength',
     () => {
-        it(
+        test(
             'should detect surrogates',
             () => {
                 expect('😀😁😂😺😸😹'.length).toBe(12);

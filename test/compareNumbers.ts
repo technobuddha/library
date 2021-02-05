@@ -4,7 +4,7 @@ import { compareNumbers } from '../src/compareNumbers';
 describe(
     'compareNumbers',
     () => {
-        it(
+        test(
             'should compare strings',
             () => {
                 expect(compareNumbers(1, 1)).toBe(0);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle nulls',
             () => {
                 expect(compareNumbers(null, null)).toBe(0);

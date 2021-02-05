@@ -4,7 +4,7 @@ import removeDiacritics from '../src/removeDiacritics';
 describe(
     'removeDiacritics',
     () => {
-        it(
+        test(
             'should bad characters to be replaces',
             () => {
                 expect(removeDiacritics('crème brûlée')).toBe('creme brulee');

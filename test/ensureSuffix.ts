@@ -4,7 +4,7 @@ import ensureSuffix from '../src/ensureSuffix';
 describe(
     'ensureSuffix',
     () => {
-        it(
+        test(
             'should add Suffixes when needed',
             () => {
                 expect(ensureSuffix('bletch', '-foobie')).toBe('bletch-foobie');

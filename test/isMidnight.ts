@@ -4,7 +4,7 @@ import isMidnight from '../src/isMidnight';
 describe(
     'isMidnight',
     () => {
-        it(
+        test(
             'should detect midnight',
             () => {
                 expect(isMidnight(new Date('2018 Jul 4'))).toBe(true);
@@ -12,7 +12,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should detect midnight UTC',
             () => {
                 expect(isMidnight(new Date('2018 Jul 3 20:00 GMT-04:00'), { UTC: true })).toBe(true);

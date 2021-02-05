@@ -5,14 +5,14 @@ import { day }      from '../src/constants';
 describe(
     'getDayOfWeek',
     () => {
-        it(
+        test(
             'should detect weekday',
             () => {
                 expect(getDayOfWeek(new Date('4 Jul 2018'))).toBe(3);
             }
         );
 
-        it(
+        test(
             'should accept alternate start of week',
             () => {
                 expect(getDayOfWeek(new Date('4 Jul 2018'), { startOfWeek: day.sunday    })).toBe(3);
@@ -25,14 +25,14 @@ describe(
             }
         );
 
-        it(
+        test(
             'should detect UTC weekday',
             () => {
                 expect(getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true })).toBe(3);
             }
         );
 
-        it(
+        test(
             'should accept UTC alternate start of week',
             () => {
                 expect(getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.sunday        })).toBe(3);

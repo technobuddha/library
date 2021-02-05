@@ -4,7 +4,7 @@ import build      from '../src/build';
 describe(
     'build',
     () => {
-        it(
+        test(
             'should build strings',
             () => {
                 expect(build()).toBe('');

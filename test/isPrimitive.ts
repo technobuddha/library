@@ -4,7 +4,7 @@ import isPrimitive from '../src/isPrimitive';
 describe(
     'isPrimitive',
     () => {
-        it(
+        test(
             'should detect primitives',
             () => {
                 expect(isPrimitive(null)).toBe(true);

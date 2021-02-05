@@ -4,7 +4,7 @@ import syllables  from '../src/syllables';
 describe(
     'syllables',
     () => {
-        it(
+        test(
             'should count syllables',
             () => {
                 expect(syllables('now is the time for all good men to come to the aid of their country')).toBe(17);

@@ -5,7 +5,7 @@ import { month }  from '../src/constants';
 describe(
     'isLeapYear',
     () => {
-        it(
+        test(
             'should compute test dates',
             () => {
                 expect(isLeapYear(new Date('1 Jan 2000'))).toBe(true);
@@ -32,7 +32,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compute test numbers',
             () => {
                 expect(isLeapYear(2000)).toBe(true);
@@ -59,7 +59,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compute test UTC dates',
             () => {
                 expect(isLeapYear(new Date(Date.UTC(2000, month.january, 1)), { UTC: true })).toBe(true);
@@ -86,7 +86,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should compute test UTC numbers',
             () => {
                 expect(isLeapYear(2000, { UTC: true })).toBe(true);

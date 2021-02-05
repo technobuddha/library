@@ -4,7 +4,7 @@ import count      from '../src/count';
 describe(
     'count',
     () => {
-        it(
+        test(
             'should count substrings',
             () => {
                 expect(count('foobar foobie-bletch foosball', 'foo')).toBe(3);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should support overlap mode',
             () => {
                 expect(count('foofoofoofoofoo', 'foo', { overlap: true })).toBe(5);

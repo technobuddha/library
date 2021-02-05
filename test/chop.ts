@@ -4,7 +4,7 @@ import chop       from '../src/chop';
 describe(
     'chop',
     () => {
-        it(
+        test(
             'should chop string in to blocks',
             () => {
                 expect(chop('abc', 1)).toEqual([ 'a', 'b', 'c' ]);
@@ -12,7 +12,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should handle lengths <= 0',
             () => {
                 expect(chop('abc', 0)).toEqual([ 'abc' ]);
@@ -20,7 +20,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should respect the truncate option',
             () => {
                 expect(chop('abcdefg', 2)).toEqual([ 'ab', 'cd', 'ef', 'g' ]);

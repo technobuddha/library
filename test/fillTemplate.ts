@@ -4,14 +4,14 @@ import fillTemplate from '../src/fillTemplate';
 describe(
     'fillTemplate',
     () => {
-        it(
+        test(
             'should handle templates',
             () => {
                 expect(fillTemplate('A sunny {{day}} in {{month}}.', { day: 'Monday', month: 'June' })).toBe('A sunny Monday in June.');
             }
         );
 
-        it(
+        test(
             'should allow different delimiters',
             () => {
                 // eslint-disable-next-line no-template-curly-in-string

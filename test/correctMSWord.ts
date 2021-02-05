@@ -4,7 +4,7 @@ import correctMSWord from '../src/correctMSWord';
 describe(
     'correctMSWord',
     () => {
-        it(
+        test(
             'should handle whole numbers than 1',
             () => {
                 expect(correctMSWord('\u00A0')).toBe(' ');

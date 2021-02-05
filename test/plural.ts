@@ -6,7 +6,7 @@ import plural     from '../src/plural';
 describe(
     'plural',
     () => {
-        it(
+        test(
             'should handle simple plurals',
             () => {
                 expect(plural('book')).toBe('books');

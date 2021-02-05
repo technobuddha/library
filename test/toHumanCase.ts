@@ -4,7 +4,7 @@ import toHumanCase from '../src/toHumanCase';
 describe(
     'toHumanCase',
     () => {
-        it(
+        test(
             'should sentences',
             () => {
                 expect(toHumanCase('now is the time for all good men to come to the aid of their country')).toBe('Now is the time for all good men to come to the aid of their country');

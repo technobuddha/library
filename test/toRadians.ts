@@ -4,7 +4,7 @@ import toRadians from '../src/toRadians';
 describe(
     'toRadians',
     () => {
-        it(
+        test(
             'converts positive angles',
             () => {
                 expect(toRadians(0)).toBe(0 * Math.PI / 2);
@@ -19,7 +19,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'converts negative angles',
             () => {
                 expect(toRadians(-0)).toBe(-0 * Math.PI / 2);

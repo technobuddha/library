@@ -5,7 +5,7 @@ import { negativeZero } from '../src/constants';
 describe(
     'isNegativeZero',
     () => {
-        it(
+        test(
             'should handle testing for negative zero',
             () => {
                 expect(isNegativeZero(-3)).toBe(false);

@@ -4,7 +4,7 @@ import getIndent  from '../src/getIndent';
 describe(
     'getIndent',
     () => {
-        it(
+        test(
             'should getIndent lines',
             () => {
                 expect(getIndent('It was the best of times.\nIt was the worst of times.')).toBe(0);
@@ -13,7 +13,7 @@ describe(
             }
         );
 
-        it(
+        test(
             'should allow to specify indenter',
             () => {
                 expect(getIndent('It was the best of times.\nIt was the worst of times.', { indenter: '* ' })).toBe(0);
