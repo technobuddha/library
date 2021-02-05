@@ -66,7 +66,6 @@ for(const file of glob.sync('dist/*.js')) {
     const dest = path.join(dir, name);
 
     fs.mkdirSync(dest);
-    pj.name         = `${pjName}/${name}`;
     pj.main         = `./${name}.cjs`;
     pj.module       = `./${name}.mjs`;
     pj.browser      = `./${name}.cjs`;

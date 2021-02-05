@@ -13,8 +13,9 @@
   "license": "MIT",
   "author": "Phil Hill <phil@technobuddha.com>",
   "scripts": {
-    "build": "scripts/build.ts",
-    "postbuild": "../../scripts/bootstrap.ts @technobuddha/library",
+    "build": "npm run compile",
+    "postbuild": "../../scripts/bootstrap.ts --update @technobuddha/library",
+    "compile": "scripts/build.ts",
     "test": "jest",
     "lint": "LINT_LEVEL=1 eslint --ext .ts src/*.ts test/*.ts --fix",
 
