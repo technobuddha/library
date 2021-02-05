@@ -25,10 +25,10 @@ describe(
         it(
             'should handle numbers less than 1',
             () => {
-                expect(metricUnits(0.1)).toBe('0.1');
+                expect(metricUnits(0.1)).toBe('100m');
                 expect(metricUnits(0.01)).toBe('10m');
                 expect(metricUnits(0.001)).toBe('1m');
-                expect(metricUnits(0.0001)).toBe('0.1m');
+                expect(metricUnits(0.0001)).toBe('100µ');
                 expect(metricUnits(0.000001)).toBe('1µ');
                 expect(metricUnits(0.000000001)).toBe('1n');
                 expect(metricUnits(0.000000000001)).toBe('1p');
@@ -81,7 +81,7 @@ describe(
         it(
             'should handle micro',
             () => {
-                expect(metricUnits(0.1, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('0.1');
+                expect(metricUnits(0.1, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('100A');
                 expect(metricUnits(0.01, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('10A');
                 expect(metricUnits(0.001, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('1A');
                 expect(metricUnits(0.000001, { micro: [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H' ]})).toBe('1B');

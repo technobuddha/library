@@ -8,6 +8,7 @@
       "rootDir": ".",
       "downlevelIteration": true,
       "types": [ "jest", "node" ],
+      "resolveJsonModule": false,
     },
     "include": [ "*.ts" ],
   }
