@@ -13,16 +13,17 @@
   "license": "MIT",
   "author": "Phil Hill <phil@technobuddha.com>",
   "scripts": {
-    "clean": "npm-run-all *:clean",
     "build": "scripts/build.ts",
     "postbuild": "../../scripts/bootstrap.ts @technobuddha/library",
+    "test": "jest",
+    "lint": "LINT_LEVEL=1 eslint --ext .ts src/*.ts test/*.ts --fix",
+
     "pub": "npm-run-all clean build:compile pub:version build:copy build:package pub:publish",
     "pub:version": "npm --no-tag-git-version version prerelease",
     "pub:publish": "npm publish dist",
+    "clean": "npm-run-all *:clean",
     "x-version": "npm-run-all clean build document",
     "x-postversion": "git push && git push --tags",
-    "test": "jest",
-    "lint": "LINT_LEVEL=1 eslint --ext .ts src/*.ts test/*.ts --fix",
     "document": "npm-run-all document:clean document:generate",
     "document:clean": "rm -rf doc",
     "document:generate": "typedoc src/*.ts"
