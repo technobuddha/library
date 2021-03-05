@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.0.1-6",
+  "version": "1.0.1",
   "description": "A large library of useful functions",
   "keywords": [
     "miscellaneous"
@@ -18,7 +18,6 @@
     "compile": "scripts/build.ts",
     "test": "jest",
     "lint": "LINT_LEVEL=1 eslint --ext .ts src/*.ts test/*.ts --fix",
-
     "pub": "npm-run-all clean build:compile pub:version build:copy build:package pub:publish",
     "pub:version": "npm --no-tag-git-version version prerelease",
     "pub:publish": "npm publish dist",
