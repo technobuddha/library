@@ -58,29 +58,29 @@ export type MonthOfYear         = (0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 
 
 export const month = Object.freeze({
     january:     0,
-    jan:   0,
+    jan:         0,
     february:    1,
-    feb:   1,
+    feb:         1,
     march:       2,
-    mar:   2,
+    mar:         2,
     april:       3,
-    apr:   3,
+    apr:         3,
     may:         4,
     june:        5,
-    jun:   5,
+    jun:         5,
     july:        6,
-    jul:   6,
+    jul:         6,
     august:      7,
-    aug:   7,
+    aug:         7,
     september:   8,
-    sept:  8,
-    sep: 8,
+    sept:        8,
+    sep:         8,
     october:     9,
-    oct:   9,
+    oct:         9,
     november:   10,
-    nov:  10,
+    nov:        10,
     december:   11,
-    dec:  11,
+    dec:        11,
 } as Record<string, MonthOfYear>);
 
 export const charcode = Object.freeze({
@@ -182,9 +182,9 @@ export const charcode = Object.freeze({
 });
 
 export const mouseButton = Object.freeze({
-    left:   1,
-    middle: 2,
-    right:  3,
+    left:   0,
+    middle: 1,
+    right:  2,
 });
 
 export const keycode = Object.freeze({
