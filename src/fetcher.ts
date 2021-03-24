@@ -1,6 +1,6 @@
 export class TimeoutError extends Error {
-    constructor(message: string) {
-        super(message);
+    constructor() {
+        super('Request Timeout');
         this.name = 'TimeoutError';
     }
 }
@@ -57,7 +57,7 @@ export async function fetcher(
         error => {
             clearTimeout(timer);
             if(error instanceof DOMException && error.name === 'AbortError')
-                throw new TimeoutError(url);
+                throw new TimeoutError();
 
             throw error;
         }
