@@ -1,10 +1,8 @@
 import defaultTo    from 'lodash/defaultTo';
 import map          from 'lodash/map';
-//import repeat       from 'lodash/repeat';
 import { empty }    from './constants';
 import padNumber    from './padNumber';
 import build        from './build';
-//import isNegativeZero from './isNegativeZero';
 
 //#region parse
 type ParseReturn =     {
@@ -247,7 +245,6 @@ class NumberFormatter {
     }
 
     public grouped() {
-        //TODO
         const whole = this.mantissa.slice(0, this.exponent);
         this.output.push(whole.map((c, i) => (i > 0 && (whole.length - i) % 3 === 0 ? `,${c}` : c)));
         return this;

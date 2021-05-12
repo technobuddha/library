@@ -2,9 +2,9 @@ import isNaN        from 'lodash/isNaN';
 import isInteger    from 'lodash/isInteger';
 
 //const ones      = [ 'zero', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth',
-//                  'tenth', 'eleventh', 'twelveth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth' ];
+//                  'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth' ];
 //const tens      = [ 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety' ];
-// twentieth thirtieth fortieth fifieth sixtieth seventieth eightieth ninetieth
+// twentieth thirtieth fortieth fiftieth sixtieth seventieth eightieth ninetieth
 // hundredth
 // thousandth
 // millionth

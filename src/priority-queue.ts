@@ -1,11 +1,11 @@
 // TODO this needs unit tests
 
 /**
- * A simple primority queue
+ * A simple priority queue
  */
 export class PriorityQueue<T> {
     /**
-     * @param comparator Function to compare two elements and puts them in primotiry order.  Takes two elements as arguments and returns a number greater, less
+     * @param comparator Function to compare two elements and puts them in priority order.  Takes two elements as arguments and returns a number greater, less
      * then or equal to zero.
      * @param contents Initial contents of the queue
      */
@@ -61,7 +61,7 @@ export class PriorityQueue<T> {
     }
 
     /**
-     * Transform all elements in the ueueue
+     * Transform all elements in the queue
      *
      * @param f Function to transforme each element of the queue
      * @returns array of transformed queue elements

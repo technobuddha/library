@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "A large library of useful functions",
   "keywords": [
     "miscellaneous"
@@ -45,7 +45,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-tsdoc": "^0.2.11",
     "expect": "^26.6.2",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^10.0.0",
     "glob": "^7.1.6",
     "jest": "^26.6.3",
     "jest-matcher-deep-close-to": "^2.0.1",

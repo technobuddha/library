@@ -10,7 +10,7 @@ import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond, hoursPerDay,
 export class TimeSpan {
     /**
      *
-     * @param text formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be ommitted
+     * @param text formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be omitted
      * @param ticks the number of ticks (milliseconds)
      * @param d Days
      * @param h Hours
@@ -231,7 +231,7 @@ export class TimeSpan {
      *
      * @param t1 First TimeSpan
      * @param t2 Second TimeSpan
-     * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the firt is greater
+     * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
      */
     public static compare(t1: TimeSpan, t2: TimeSpan): number {
         return t1.ticks === t2.ticks ? 0 : Math.abs(t1.ticks) > Math.abs(t2.ticks) ? 1 : -1;
