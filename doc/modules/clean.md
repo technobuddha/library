@@ -37,7 +37,7 @@ Remove all occurrences of characters from the beginning and end of the string
 
 **Returns:** *string*
 
-Defined in: [src/clean.ts:15](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/clean.ts#L15)
+Defined in: [src/clean.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/clean.ts#L15)
 
 ___
 
@@ -56,7 +56,7 @@ Remove all occurrences of characters from the end of the string
 
 **Returns:** *string*
 
-Defined in: [src/clean.ts:33](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/clean.ts#L33)
+Defined in: [src/clean.ts:33](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/clean.ts#L33)
 
 ___
 
@@ -75,4 +75,4 @@ Remove all occurrences of characters from the start of the string
 
 **Returns:** *string*
 
-Defined in: [src/clean.ts:51](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/clean.ts#L51)
+Defined in: [src/clean.ts:51](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/clean.ts#L51)

@@ -39,4 +39,4 @@ Determine the last day of the year containing a date
 
 Midnight of the last day of the year containing the input date
 
-Defined in: [src/getEndOfYear.ts:17](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/getEndOfYear.ts#L17)
+Defined in: [src/getEndOfYear.ts:17](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getEndOfYear.ts#L17)

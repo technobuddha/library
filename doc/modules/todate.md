@@ -32,4 +32,4 @@ Renames and exports: [toDate](todate.md#todate)
 
 **Returns:** Date
 
-Defined in: [src/toDate.ts:1](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toDate.ts#L1)
+Defined in: [src/toDate.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toDate.ts#L1)

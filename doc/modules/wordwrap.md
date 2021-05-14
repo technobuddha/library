@@ -47,4 +47,4 @@ Wrap text so that it fits within a area of fixed width
 
 wrapped text
 
-Defined in: [src/wordwrap.ts:29](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/wordwrap.ts#L29)
+Defined in: [src/wordwrap.ts:29](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/wordwrap.ts#L29)

@@ -36,7 +36,7 @@
 
 **Returns:** [*XYZ*](color.xyz.md)
 
-Defined in: [src/color.ts:179](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/color.ts#L179)
+Defined in: [src/color.ts:179](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/color.ts#L179)
 
 ## Properties
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*LAB*](color.lab.md)
 
-Defined in: [src/color.ts:183](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/color.ts#L183)
+Defined in: [src/color.ts:183](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/color.ts#L183)

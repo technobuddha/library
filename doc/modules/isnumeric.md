@@ -36,4 +36,4 @@ Test an object to see if it a number, or a string which can be converted into a 
 
 true, if the object is a number, or can be converted to a number
 
-Defined in: [src/isNumeric.ts:13](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/isNumeric.ts#L13)
+Defined in: [src/isNumeric.ts:13](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isNumeric.ts#L13)

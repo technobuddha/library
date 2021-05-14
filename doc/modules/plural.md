@@ -37,4 +37,4 @@ Return the plural version of the input string
 
 The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
 
-Defined in: [src/plural.ts:12](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/plural.ts#L12)
+Defined in: [src/plural.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/plural.ts#L12)

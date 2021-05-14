@@ -39,4 +39,4 @@ Renames and exports: [shuffle](shuffle.md#shuffle)
 
 **Returns:** T[]
 
-Defined in: [src/shuffle.ts:1](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/shuffle.ts#L1)
+Defined in: [src/shuffle.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/shuffle.ts#L1)

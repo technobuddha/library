@@ -37,4 +37,4 @@ Add a suffix to a string, if it does not already have the suffix
 
 The string followed by the suffix
 
-Defined in: [src/ensureSuffix.ts:8](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/ensureSuffix.ts#L8)
+Defined in: [src/ensureSuffix.ts:8](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/ensureSuffix.ts#L8)

@@ -39,4 +39,4 @@ back to new Date(text)
 
 new Date object
 
-Defined in: [src/parseDate.ts:54](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/parseDate.ts#L54)
+Defined in: [src/parseDate.ts:54](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/parseDate.ts#L54)

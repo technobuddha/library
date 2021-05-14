@@ -36,4 +36,4 @@ Split a string into an array of lines
 
 array of lines
 
-Defined in: [src/splitLines.ts:9](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/splitLines.ts#L9)
+Defined in: [src/splitLines.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/splitLines.ts#L9)

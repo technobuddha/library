@@ -42,4 +42,4 @@ Fill a template with supplies values
 
 template with values replaced
 
-Defined in: [src/fillTemplate.ts:20](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/fillTemplate.ts#L20)
+Defined in: [src/fillTemplate.ts:20](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/fillTemplate.ts#L20)

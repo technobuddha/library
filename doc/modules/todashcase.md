@@ -36,4 +36,4 @@ Convert an identifier string to a dash form
 
 the ientifier in dash form
 
-Defined in: [src/toDashCase.ts:7](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toDashCase.ts#L7)
+Defined in: [src/toDashCase.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toDashCase.ts#L7)

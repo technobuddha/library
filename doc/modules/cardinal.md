@@ -32,7 +32,7 @@ Renames and exports: [cardinal](cardinal.md#cardinal)
 
 Ƭ **Options**: [*OptionsCardinal*](cardinal.md#optionscardinal) & [*OptionsIllion*](cardinal.md#optionsillion)
 
-Defined in: [src/cardinal.ts:5](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cardinal.ts#L5)
+Defined in: [src/cardinal.ts:5](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cardinal.ts#L5)
 
 ___
 
@@ -47,7 +47,7 @@ ___
 | `digits?` | *boolean* | Use numbers instead of words for the group value, the group name is still output as text |
 | `groups?` | *number* | The number of groups to output, each group consists of three digits. |
 
-Defined in: [src/cardinal.ts:7](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cardinal.ts#L7)
+Defined in: [src/cardinal.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cardinal.ts#L7)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 | `and?` | *string* | Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" |
 | `hyphen?` | *string* | Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one" |
 
-Defined in: [src/cardinal.ts:14](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cardinal.ts#L14)
+Defined in: [src/cardinal.ts:14](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cardinal.ts#L14)
 
 ## Functions
 
@@ -94,7 +94,7 @@ up to uncentillions (1e308).
 
 The number spelled out
 
-Defined in: [src/cardinal.ts:63](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cardinal.ts#L63)
+Defined in: [src/cardinal.ts:63](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cardinal.ts#L63)
 
 ___
 
@@ -121,7 +121,7 @@ numbers up to 1e308, which limits the numbers that this method can represent to 
 
 Order of Magnitude as text
 
-Defined in: [src/cardinal.ts:244](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cardinal.ts#L244)
+Defined in: [src/cardinal.ts:244](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cardinal.ts#L244)
 
 ___
 
@@ -148,4 +148,4 @@ Get a short description of a number
 
 number as text
 
-Defined in: [src/cardinal.ts:260](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cardinal.ts#L260)
+Defined in: [src/cardinal.ts:260](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cardinal.ts#L260)

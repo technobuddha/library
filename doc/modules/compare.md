@@ -37,4 +37,4 @@ Compare two objects
 
 0 if a == b; -1 if a < b; 1 if a > b
 
-Defined in: [src/compare.ts:13](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/compare.ts#L13)
+Defined in: [src/compare.ts:13](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/compare.ts#L13)

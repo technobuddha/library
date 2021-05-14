@@ -42,4 +42,4 @@ Determine if two dates occur in the same week
 
 true, if the two dates occur in the same week
 
-Defined in: [src/isSameWeek.ts:22](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/isSameWeek.ts#L22)
+Defined in: [src/isSameWeek.ts:22](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isSameWeek.ts#L22)

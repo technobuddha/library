@@ -38,4 +38,4 @@ Compute the dice coefficient measure of similarity between two strings
 
 a number from 0 (not similar) to 1 (equal) measuring the similarity
 
-Defined in: [src/diceCoefficient.ts:16](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/diceCoefficient.ts#L16)
+Defined in: [src/diceCoefficient.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/diceCoefficient.ts#L16)

@@ -37,4 +37,4 @@ Compare two numbers
 
 0 if a == b; -1 if a < b; 1 if a > b
 
-Defined in: [src/compareNumbers.ts:10](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/compareNumbers.ts#L10)
+Defined in: [src/compareNumbers.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/compareNumbers.ts#L10)

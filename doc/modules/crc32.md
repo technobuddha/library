@@ -36,4 +36,4 @@ Compute the CRC32 checksum for a string
 
 the CRC32 checksum
 
-Defined in: [src/crc32.ts:11](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/crc32.ts#L11)
+Defined in: [src/crc32.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/crc32.ts#L11)

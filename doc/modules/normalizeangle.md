@@ -37,4 +37,4 @@ be normalized to be the equivalent angle with that range.
 
 Standardized angle.
 
-Defined in: [src/normalizeAngle.ts:9](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/normalizeAngle.ts#L9)
+Defined in: [src/normalizeAngle.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/normalizeAngle.ts#L9)

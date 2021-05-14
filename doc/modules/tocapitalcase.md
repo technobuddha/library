@@ -34,7 +34,7 @@ Renames and exports: [toCapitalCase](tocapitalcase.md#tocapitalcase)
 | :------ | :------ | :------ |
 | `lowerCase?` | *boolean* | Convert the rest of the string to lower case |
 
-Defined in: [src/toCapitalCase.ts:1](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toCapitalCase.ts#L1)
+Defined in: [src/toCapitalCase.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toCapitalCase.ts#L1)
 
 ## Functions
 
@@ -55,4 +55,4 @@ Capitalize the first letter of a string
 
 **Returns:** *string*
 
-Defined in: [src/toCapitalCase.ts:12](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toCapitalCase.ts#L12)
+Defined in: [src/toCapitalCase.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toCapitalCase.ts#L12)

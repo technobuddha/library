@@ -50,7 +50,7 @@ Add or update a cookie
 
 **Returns:** *void*
 
-Defined in: [src/cookie.ts:53](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cookie.ts#L53)
+Defined in: [src/cookie.ts:53](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cookie.ts#L53)
 
 ___
 
@@ -68,7 +68,7 @@ Delete a cookie
 
 **Returns:** *void*
 
-Defined in: [src/cookie.ts:71](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cookie.ts#L71)
+Defined in: [src/cookie.ts:71](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cookie.ts#L71)
 
 ___
 
@@ -86,7 +86,7 @@ Get the value of a cookie
 
 **Returns:** *string* \| *undefined*
 
-Defined in: [src/cookie.ts:31](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cookie.ts#L31)
+Defined in: [src/cookie.ts:31](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cookie.ts#L31)
 
 ___
 
@@ -100,7 +100,7 @@ Get the names of all cookies
 
 array of cookie names
 
-Defined in: [src/cookie.ts:41](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cookie.ts#L41)
+Defined in: [src/cookie.ts:41](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cookie.ts#L41)
 
 ___
 
@@ -118,4 +118,4 @@ Parse a string containing cookies for use by other cookie method
 
 **Returns:** *void*
 
-Defined in: [src/cookie.ts:18](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/cookie.ts#L18)
+Defined in: [src/cookie.ts:18](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/cookie.ts#L18)

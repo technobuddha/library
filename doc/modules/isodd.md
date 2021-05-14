@@ -36,4 +36,4 @@ Tests to see if the specified value is an odd integer
 
 true if the number is an odd integer
 
-Defined in: [src/isOdd.ts:10](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/isOdd.ts#L10)
+Defined in: [src/isOdd.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isOdd.ts#L10)

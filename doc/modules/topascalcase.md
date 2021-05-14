@@ -36,4 +36,4 @@ Convert an identifier string to pascal case
 
 the identifier in pasca case
 
-Defined in: [src/toPascalCase.ts:9](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toPascalCase.ts#L9)
+Defined in: [src/toPascalCase.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toPascalCase.ts#L9)

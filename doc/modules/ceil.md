@@ -38,4 +38,4 @@ details.
 
 The smallest integer greater than or equal to {@code input}.
 
-Defined in: [src/ceil.ts:15](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/ceil.ts#L15)
+Defined in: [src/ceil.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/ceil.ts#L15)

@@ -36,4 +36,4 @@ Determine if a date is valid
 
 true, if the date is valid
 
-Defined in: [src/isValidDate.ts:10](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/isValidDate.ts#L10)
+Defined in: [src/isValidDate.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isValidDate.ts#L10)

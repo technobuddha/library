@@ -36,4 +36,4 @@ Split a string into an array of characters
 
 array of characters
 
-Defined in: [src/splitChars.ts:7](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/splitChars.ts#L7)
+Defined in: [src/splitChars.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/splitChars.ts#L7)

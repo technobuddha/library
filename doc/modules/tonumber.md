@@ -32,4 +32,4 @@ Renames and exports: [toNumber](tonumber.md#tonumber)
 
 **Returns:** *number*
 
-Defined in: [src/toNumber.ts:5](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toNumber.ts#L5)
+Defined in: [src/toNumber.ts:5](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toNumber.ts#L5)

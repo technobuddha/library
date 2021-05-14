@@ -41,4 +41,4 @@ Remove surrounding quotes from text
 
 the unescaped text with quotes removed
 
-Defined in: [src/unquote.ts:21](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/unquote.ts#L21)
+Defined in: [src/unquote.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unquote.ts#L21)

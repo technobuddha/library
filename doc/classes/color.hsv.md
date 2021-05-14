@@ -36,7 +36,7 @@
 
 **Returns:** [*HSV*](color.hsv.md)
 
-Defined in: [src/color.ts:135](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/color.ts#L135)
+Defined in: [src/color.ts:135](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/color.ts#L135)
 
 ## Properties
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*RGB*](color.rgb.md)
 
-Defined in: [src/color.ts:139](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/color.ts#L139)
+Defined in: [src/color.ts:139](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/color.ts#L139)

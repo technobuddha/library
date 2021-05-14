@@ -39,4 +39,4 @@ Insert a substring into a string
 
 The modified strings
 
-Defined in: [src/splice.ts:12](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/splice.ts#L12)
+Defined in: [src/splice.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/splice.ts#L12)

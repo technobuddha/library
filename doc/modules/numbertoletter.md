@@ -33,4 +33,4 @@ Renames and exports: [numberToLetter](numbertoletter.md#numbertoletter)
 
 **Returns:** *string*
 
-Defined in: [src/numberToLetter.ts:11](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/numberToLetter.ts#L11)
+Defined in: [src/numberToLetter.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/numberToLetter.ts#L11)

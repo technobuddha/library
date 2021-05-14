@@ -43,4 +43,4 @@ Convert a string to a boolean value
 
 true, false or undefined if the string doesn't match
 
-Defined in: [src/toEnumeration.ts:12](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toEnumeration.ts#L12)
+Defined in: [src/toEnumeration.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toEnumeration.ts#L12)

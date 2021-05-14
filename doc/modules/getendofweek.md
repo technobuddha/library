@@ -41,4 +41,4 @@ Determine the last day of the week containing a date
 
 Midnight of the last day of the week containing the input date
 
-Defined in: [src/getEndOfWeek.ts:21](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/getEndOfWeek.ts#L21)
+Defined in: [src/getEndOfWeek.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getEndOfWeek.ts#L21)

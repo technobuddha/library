@@ -39,4 +39,4 @@ Split a string into an array of words
 
 array of words
 
-Defined in: [src/splitWords.ts:17](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/splitWords.ts#L17)
+Defined in: [src/splitWords.ts:17](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/splitWords.ts#L17)

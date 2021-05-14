@@ -35,7 +35,7 @@ Renames and exports: [quote](quote.md#quote)
 | `escape?` | *string* \| (`input`: *string*) => *string* | Character sequence to replace the quote mark within the text, or function to return the properly escaped text |
 | `quote?` | *string* | The quote character(s) to use |
 
-Defined in: [src/quote.ts:6](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/quote.ts#L6)
+Defined in: [src/quote.ts:6](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/quote.ts#L6)
 
 ## Functions
 
@@ -60,4 +60,4 @@ Surround text with quotes
 
 text surrounded by quotes
 
-Defined in: [src/quote.ts:22](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/quote.ts#L22)
+Defined in: [src/quote.ts:22](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/quote.ts#L22)

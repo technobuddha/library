@@ -22,7 +22,7 @@
 | `x` | *number* |
 | `y` | *number* |
 
-Defined in: [src/coordinates.ts:1](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/coordinates.ts#L1)
+Defined in: [src/coordinates.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/coordinates.ts#L1)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 | `angle` | *number* |
 | `radius` | *number* |
 
-Defined in: [src/coordinates.ts:6](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/coordinates.ts#L6)
+Defined in: [src/coordinates.ts:6](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/coordinates.ts#L6)

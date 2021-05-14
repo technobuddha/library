@@ -36,4 +36,4 @@ Escape a string for use in Python
 
 the string escapes for use in python
 
-Defined in: [src/escapePython.ts:10](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/escapePython.ts#L10)
+Defined in: [src/escapePython.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapePython.ts#L10)

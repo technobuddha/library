@@ -41,4 +41,4 @@ Determine the day of the week for a specific date
 
 The date value for midnight on the first day of the specified year
 
-Defined in: [src/getDayOfWeek.ts:21](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/getDayOfWeek.ts#L21)
+Defined in: [src/getDayOfWeek.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getDayOfWeek.ts#L21)

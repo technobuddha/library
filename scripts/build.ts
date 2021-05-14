@@ -105,19 +105,19 @@ finish();
 
 start('Generating', 'doc');
 run(shell.exec('npx typedoc > /dev/null'));
-const readme        = splitLines(fs.readFileSync('doc/README.md', { encoding: 'utf8' }));
-const toc: string[] = [];
+const readme = splitLines(fs.readFileSync('doc/README.md', { encoding: 'utf8' }));
+const modules: string[] = [];
 
 readme.splice(0, 8);
 
-toc.push(
+modules.push(
     '[@technobuddha/library](../README.md) / Modules',
     empty,
     '## Table of contents',
     ...readme.sort((a, b) => compareStrings(a, b, { caseInsensitive: true })),
     empty
 );
-fs.writeFileSync('doc/Modules.md', toc.join('\n'));
+fs.writeFileSync('doc/Modules.md', modules.join('\n'));
 fs.unlinkSync('doc/README.md');
 
 for(const file of glob.sync('doc/*/*.md')) {
@@ -130,6 +130,15 @@ for(const file of glob.sync('doc/*/*.md')) {
         )
     );
 }
+
+const npmReadme = fs.readFileSync('README.md', { encoding: 'utf8' });
+fs.writeFileSync(
+    '.github/README.md',
+    npmReadme.replace(
+        'https://github.com/technobuddha/hill.software/tree/main/packages/library/doc/Modules.md',
+        '../doc/Modules.md'
+    )
+);
 
 finish();
 

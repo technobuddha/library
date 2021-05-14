@@ -39,4 +39,4 @@ Determine the number of days in the month for a date
 
 The number of days in the specified month
 
-Defined in: [src/getDaysInMonth.ts:17](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/getDaysInMonth.ts#L17)
+Defined in: [src/getDaysInMonth.ts:17](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getDaysInMonth.ts#L17)

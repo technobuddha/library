@@ -52,4 +52,4 @@ angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
 
 The number of radians that when added to *startAngle* will result in *endAngle*.
 
-Defined in: [src/angleDifference.ts:25](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/angleDifference.ts#L25)
+Defined in: [src/angleDifference.ts:25](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/angleDifference.ts#L25)

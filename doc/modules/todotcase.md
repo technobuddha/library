@@ -36,4 +36,4 @@ Convert an identifier string to a dot form
 
 the identifier in dot form
 
-Defined in: [src/toDotCase.ts:7](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/toDotCase.ts#L7)
+Defined in: [src/toDotCase.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toDotCase.ts#L7)

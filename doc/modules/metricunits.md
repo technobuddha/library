@@ -39,7 +39,7 @@ Renames and exports: [metricUnits](metricunits.md#metricunits)
 | `precision?` | *number* | Number of digits after the decimal point to display |
 | `unit?` | *number* | Multiplier for each level of suffixes (default: 1000) |
 
-Defined in: [src/metricUnits.ts:6](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/metricUnits.ts#L6)
+Defined in: [src/metricUnits.ts:6](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/metricUnits.ts#L6)
 
 ## Functions
 
@@ -58,4 +58,4 @@ Abbreviate a number by adding a suffix for metric units (i.e. 1000 => 1K, .0001 
 
 **Returns:** *string*
 
-Defined in: [src/metricUnits.ts:39](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/metricUnits.ts#L39)
+Defined in: [src/metricUnits.ts:39](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/metricUnits.ts#L39)

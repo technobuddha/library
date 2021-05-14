@@ -29,4 +29,4 @@
 
 **Returns:** T
 
-Defined in: [src/randomPick.ts:1](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/randomPick.ts#L1)
+Defined in: [src/randomPick.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/randomPick.ts#L1)

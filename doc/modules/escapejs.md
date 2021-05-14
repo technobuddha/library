@@ -36,4 +36,4 @@ Escape a string for use in Javascript
 
 Sting escaped for Javascript
 
-Defined in: [src/escapeJS.ts:10](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/escapeJS.ts#L10)
+Defined in: [src/escapeJS.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapeJS.ts#L10)

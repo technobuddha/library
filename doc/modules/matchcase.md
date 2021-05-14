@@ -43,4 +43,4 @@ Attempt to convert the input string into the same case as the target string
 
 The input in the case case as the target string
 
-Defined in: [src/matchCase.ts:19](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/matchCase.ts#L19)
+Defined in: [src/matchCase.ts:19](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/matchCase.ts#L19)

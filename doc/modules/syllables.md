@@ -36,4 +36,4 @@ Approximate the number of syllables in a string
 
 the number of syllables
 
-Defined in: [src/syllables.ts:11](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/syllables.ts#L11)
+Defined in: [src/syllables.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/syllables.ts#L11)
