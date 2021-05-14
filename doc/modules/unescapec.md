@@ -36,4 +36,4 @@ Unescape a string encodeed in C style
 
 the string with escapes resolved
 
-Defined in: [src/unescapeC.ts:7](../../src/unescapeC.ts#L7)
+Defined in: [unescapeC.ts:7](../../src/unescapeC.ts#L7)

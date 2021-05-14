@@ -32,4 +32,4 @@ Renames and exports: [toTimestamp](totimestamp.md#totimestamp)
 
 **Returns:** *number*
 
-Defined in: [src/toTimestamp.ts:1](../../src/toTimestamp.ts#L1)
+Defined in: [toTimestamp.ts:1](../../src/toTimestamp.ts#L1)

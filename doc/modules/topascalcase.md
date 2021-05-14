@@ -36,4 +36,4 @@ Convert an identifier string to pascal case
 
 the identifier in pasca case
 
-Defined in: [src/toPascalCase.ts:9](../../src/toPascalCase.ts#L9)
+Defined in: [toPascalCase.ts:9](../../src/toPascalCase.ts#L9)

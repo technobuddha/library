@@ -37,4 +37,4 @@ Capitalize the first letter of each word in a string
 
 **Returns:** *string*
 
-Defined in: [src/toCapitalWordCase.ts:13](../../src/toCapitalWordCase.ts#L13)
+Defined in: [toCapitalWordCase.ts:13](../../src/toCapitalWordCase.ts#L13)

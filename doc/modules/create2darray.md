@@ -44,4 +44,4 @@ Create a two dimensional array with all elements initialized
 
 **Returns:** T[][]
 
-Defined in: [src/create2DArray.ts:12](../../src/create2DArray.ts#L12)
+Defined in: [create2DArray.ts:12](../../src/create2DArray.ts#L12)

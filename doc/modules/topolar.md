@@ -36,4 +36,4 @@ Convert ccartesian coordinates to polar
 
 polar coordinated
 
-Defined in: [src/toPolar.ts:10](../../src/toPolar.ts#L10)
+Defined in: [toPolar.ts:10](../../src/toPolar.ts#L10)

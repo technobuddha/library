@@ -34,7 +34,7 @@ Renames and exports: [toSmallCase](tosmallcase.md#tosmallcase)
 | :------ | :------ | :------ |
 | `upperCase?` | *boolean* | Convert other characters in the string to upper case |
 
-Defined in: [src/toSmallCase.ts:1](../../src/toSmallCase.ts#L1)
+Defined in: [toSmallCase.ts:1](../../src/toSmallCase.ts#L1)
 
 ## Functions
 
@@ -57,4 +57,4 @@ Convert the first letter of a string to lower case
 
 the string in small case
 
-Defined in: [src/toSmallCase.ts:13](../../src/toSmallCase.ts#L13)
+Defined in: [packages/library/src/toSmallCase.ts:13](../../src/toSmallCase.ts#L13)

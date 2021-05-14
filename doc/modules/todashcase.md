@@ -36,4 +36,4 @@ Convert an identifier string to a dash form
 
 the ientifier in dash form
 
-Defined in: [src/toDashCase.ts:7](../../src/toDashCase.ts#L7)
+Defined in: [toDashCase.ts:7](../../src/toDashCase.ts#L7)

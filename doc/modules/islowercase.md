@@ -36,4 +36,4 @@ Test a string for all lower case characters
 
 true, if all characters in the string are lower case
 
-Defined in: [src/isLowerCase.ts:9](../../src/isLowerCase.ts#L9)
+Defined in: [isLowerCase.ts:9](../../src/isLowerCase.ts#L9)

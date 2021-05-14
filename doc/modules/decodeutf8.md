@@ -36,4 +36,4 @@ Decode a UTF8 encoded string into unicode
 
 the decoded strings (which is encoded as UTF-16 by javascript)
 
-Defined in: [src/decodeUTF8.ts:9](../../src/decodeUTF8.ts#L9)
+Defined in: [decodeUTF8.ts:9](../../src/decodeUTF8.ts#L9)

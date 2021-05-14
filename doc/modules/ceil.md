@@ -38,4 +38,4 @@ details.
 
 The smallest integer greater than or equal to {@code input}.
 
-Defined in: [src/ceil.ts:15](../../src/ceil.ts#L15)
+Defined in: [ceil.ts:15](../../src/ceil.ts#L15)

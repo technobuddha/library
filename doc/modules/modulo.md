@@ -43,4 +43,4 @@ calculating an offset index in a circular list.
 a % b where the result is between 0 and b (either 0 <= x < b
 or b < x <= 0, depending on the sign of b).
 
-Defined in: [src/modulo.ts:14](../../src/modulo.ts#L14)
+Defined in: [modulo.ts:14](../../src/modulo.ts#L14)

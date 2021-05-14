@@ -36,4 +36,4 @@ Determine if a date is valid
 
 true, if the date is valid
 
-Defined in: [src/isValidDate.ts:10](../../src/isValidDate.ts#L10)
+Defined in: [isValidDate.ts:10](../../src/isValidDate.ts#L10)

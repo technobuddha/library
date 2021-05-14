@@ -39,4 +39,4 @@ Determine the indentation level of text
 
 The minimum amount of indentation on each line
 
-Defined in: [src/getIndent.ts:18](../../src/getIndent.ts#L18)
+Defined in: [getIndent.ts:18](../../src/getIndent.ts#L18)

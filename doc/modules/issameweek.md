@@ -42,4 +42,4 @@ Determine if two dates occur in the same week
 
 true, if the two dates occur in the same week
 
-Defined in: [src/isSameWeek.ts:22](../../src/isSameWeek.ts#L22)
+Defined in: [isSameWeek.ts:22](../../src/isSameWeek.ts#L22)

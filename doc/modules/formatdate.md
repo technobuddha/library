@@ -38,4 +38,4 @@ Format a date
 
 **Returns:** *string*
 
-Defined in: [src/formatDate.ts:64](../../src/formatDate.ts#L64)
+Defined in: [formatDate.ts:64](../../src/formatDate.ts#L64)

@@ -36,7 +36,7 @@ Renames and exports: [quantize](quantize.md#quantize)
 | `g` | *number* |
 | `r` | *number* |
 
-Defined in: [src/quantize.ts:28](../../src/quantize.ts#L28)
+Defined in: [quantize.ts:28](../../src/quantize.ts#L28)
 
 ## Functions
 
@@ -53,4 +53,4 @@ Defined in: [src/quantize.ts:28](../../src/quantize.ts#L28)
 
 **Returns:** *undefined* \| *ColorMap*
 
-Defined in: [src/quantize.ts:293](../../src/quantize.ts#L293)
+Defined in: [packages/library/src/quantize.ts:293](../../src/quantize.ts#L293)

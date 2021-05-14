@@ -51,7 +51,7 @@ A simple priority queue
 
 **Returns:** [*PriorityQueue*](priority_queue.priorityqueue.md)<T\>
 
-Defined in: [src/priority-queue.ts:6](../../src/priority-queue.ts#L6)
+Defined in: [priority-queue.ts:6](../../src/priority-queue.ts#L6)
 
 ## Accessors
 
@@ -65,7 +65,7 @@ Determine the number of items in the queue
 
 number of element in the queue
 
-Defined in: [src/priority-queue.ts:59](../../src/priority-queue.ts#L59)
+Defined in: [packages/library/src/priority-queue.ts:59](../../src/priority-queue.ts#L59)
 
 ## Methods
 
@@ -79,7 +79,7 @@ Iterate through all elements in the queue
 
 generator function
 
-Defined in: [src/priority-queue.ts:49](../../src/priority-queue.ts#L49)
+Defined in: [packages/library/src/priority-queue.ts:49](../../src/priority-queue.ts#L49)
 
 ___
 
@@ -105,7 +105,7 @@ Transform all elements in the queue
 
 array of transformed queue elements
 
-Defined in: [src/priority-queue.ts:69](../../src/priority-queue.ts#L69)
+Defined in: [packages/library/src/priority-queue.ts:69](../../src/priority-queue.ts#L69)
 
 ___
 
@@ -119,7 +119,7 @@ Return and remove the highest priority item from the queue
 
 queue element
 
-Defined in: [src/priority-queue.ts:39](../../src/priority-queue.ts#L39)
+Defined in: [packages/library/src/priority-queue.ts:39](../../src/priority-queue.ts#L39)
 
 ___
 
@@ -137,7 +137,7 @@ Add an element to the queue
 
 **Returns:** *void*
 
-Defined in: [src/priority-queue.ts:29](../../src/priority-queue.ts#L29)
+Defined in: [packages/library/src/priority-queue.ts:29](../../src/priority-queue.ts#L29)
 
 ___
 
@@ -155,4 +155,4 @@ Change the function used to order the queue
 
 **Returns:** *void*
 
-Defined in: [src/priority-queue.ts:79](../../src/priority-queue.ts#L79)
+Defined in: [packages/library/src/priority-queue.ts:79](../../src/priority-queue.ts#L79)

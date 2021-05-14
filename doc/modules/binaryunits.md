@@ -28,7 +28,7 @@ Renames and exports: [binaryUnits](binaryunits.md#binaryunits)
 
 Ƭ **Options**: *Omit*<[*Options*](metricunits.md#options), ``"macro"`` \| ``"micro"`` \| ``"unit"``\>
 
-Defined in: [src/binaryUnits.ts:4](../../src/binaryUnits.ts#L4)
+Defined in: [binaryUnits.ts:4](../../src/binaryUnits.ts#L4)
 
 ## Functions
 
@@ -47,4 +47,4 @@ Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 => 1K)
 
 **Returns:** *string*
 
-Defined in: [src/binaryUnits.ts:12](../../src/binaryUnits.ts#L12)
+Defined in: [packages/library/src/binaryUnits.ts:12](../../src/binaryUnits.ts#L12)

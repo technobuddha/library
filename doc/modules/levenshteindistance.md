@@ -40,4 +40,4 @@ Compute the levenshtein distance between two strings (similarity)
 
 the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
 
-Defined in: [src/levenshteinDistance.ts:18](../../src/levenshteinDistance.ts#L18)
+Defined in: [levenshteinDistance.ts:18](../../src/levenshteinDistance.ts#L18)

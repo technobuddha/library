@@ -44,4 +44,4 @@ Compare two strings
 
 0 if a == b; -1 if a < b; 1 if a > b
 
-Defined in: [src/compareStrings.ts:26](../../src/compareStrings.ts#L26)
+Defined in: [compareStrings.ts:26](../../src/compareStrings.ts#L26)

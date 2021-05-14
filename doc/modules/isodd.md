@@ -36,4 +36,4 @@ Tests to see if the specified value is an odd integer
 
 true if the number is an odd integer
 
-Defined in: [src/isOdd.ts:10](../../src/isOdd.ts#L10)
+Defined in: [isOdd.ts:10](../../src/isOdd.ts#L10)

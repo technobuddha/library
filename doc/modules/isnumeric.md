@@ -36,4 +36,4 @@ Test an object to see if it a number, or a string which can be converted into a 
 
 true, if the object is a number, or can be converted to a number
 
-Defined in: [src/isNumeric.ts:13](../../src/isNumeric.ts#L13)
+Defined in: [isNumeric.ts:13](../../src/isNumeric.ts#L13)

@@ -38,4 +38,4 @@ Compare two object for equality.  Testing goes one level deep.
 
 true if the two objects have the same members
 
-Defined in: [src/shallowEquals.ts:16](../../src/shallowEquals.ts#L16)
+Defined in: [shallowEquals.ts:16](../../src/shallowEquals.ts#L16)

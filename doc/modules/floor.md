@@ -41,4 +41,4 @@ Math.LN10) == 2}, not 3 as one would expect.
 
 The largest integer less than or equal to {@code num}.
 
-Defined in: [src/floor.ts:18](../../src/floor.ts#L18)
+Defined in: [floor.ts:18](../../src/floor.ts#L18)

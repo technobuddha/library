@@ -44,4 +44,4 @@ all
 The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
 option is used, only the indefinite article is returned.
 
-Defined in: [src/indefiniteArticle.ts:35](../../src/indefiniteArticle.ts#L35)
+Defined in: [indefiniteArticle.ts:35](../../src/indefiniteArticle.ts#L35)

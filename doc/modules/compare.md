@@ -37,4 +37,4 @@ Compare two objects
 
 0 if a == b; -1 if a < b; 1 if a > b
 
-Defined in: [src/compare.ts:13](../../src/compare.ts#L13)
+Defined in: [compare.ts:13](../../src/compare.ts#L13)

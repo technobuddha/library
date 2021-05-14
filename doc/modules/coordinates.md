@@ -22,7 +22,7 @@
 | `x` | *number* |
 | `y` | *number* |
 
-Defined in: [src/coordinates.ts:1](../../src/coordinates.ts#L1)
+Defined in: [coordinates.ts:1](../../src/coordinates.ts#L1)
 
 ___
 
@@ -37,4 +37,4 @@ ___
 | `angle` | *number* |
 | `radius` | *number* |
 
-Defined in: [src/coordinates.ts:6](../../src/coordinates.ts#L6)
+Defined in: [packages/library/src/coordinates.ts:6](../../src/coordinates.ts#L6)

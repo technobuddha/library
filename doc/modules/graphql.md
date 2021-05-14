@@ -33,7 +33,7 @@ Renames and exports: [graphQL](graphql.md#graphql)
 
 **Returns:** *string*
 
-Defined in: [src/graphQL.ts:15](../../src/graphQL.ts#L15)
+Defined in: [graphQL.ts:15](../../src/graphQL.ts#L15)
 
 ▸ **graphQL**(`arg`: GraphQLValue): *string*
 
@@ -45,4 +45,4 @@ Defined in: [src/graphQL.ts:15](../../src/graphQL.ts#L15)
 
 **Returns:** *string*
 
-Defined in: [src/graphQL.ts:16](../../src/graphQL.ts#L16)
+Defined in: [packages/library/src/graphQL.ts:16](../../src/graphQL.ts#L16)

@@ -39,4 +39,4 @@ Determine the number of ISO weeks within a year
 
 The number of weeks in the year (52 or 53)
 
-Defined in: [src/getISOWeeksInYear.ts:21](../../src/getISOWeeksInYear.ts#L21)
+Defined in: [getISOWeeksInYear.ts:21](../../src/getISOWeeksInYear.ts#L21)

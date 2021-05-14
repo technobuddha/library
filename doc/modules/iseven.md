@@ -36,4 +36,4 @@ Tests to see if the specified value is an even integer
 
 true if the number is an even integer
 
-Defined in: [src/isEven.ts:10](../../src/isEven.ts#L10)
+Defined in: [isEven.ts:10](../../src/isEven.ts#L10)

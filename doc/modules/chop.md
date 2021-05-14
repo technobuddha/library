@@ -34,7 +34,7 @@ Renames and exports: [chop](chop.md#chop)
 | :------ | :------ | :------ |
 | `truncate?` | *boolean* | If true, the last block will be omitted if has insufficient characters |
 
-Defined in: [src/chop.ts:4](../../src/chop.ts#L4)
+Defined in: [chop.ts:4](../../src/chop.ts#L4)
 
 ## Functions
 
@@ -56,4 +56,4 @@ Break a string into equal sized segments of characters
 
 Array of segments
 
-Defined in: [src/chop.ts:16](../../src/chop.ts#L16)
+Defined in: [packages/library/src/chop.ts:16](../../src/chop.ts#L16)

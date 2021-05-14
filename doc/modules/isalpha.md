@@ -36,4 +36,4 @@ Test a string for all alphaetic characters
 
 true, if all characters in the string are alphabetic
 
-Defined in: [src/isAlpha.ts:9](../../src/isAlpha.ts#L9)
+Defined in: [isAlpha.ts:9](../../src/isAlpha.ts#L9)

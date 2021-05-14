@@ -36,4 +36,4 @@ Test a string for all upper case characters
 
 true, if all characters in the string are upper case
 
-Defined in: [src/isUpperCase.ts:9](../../src/isUpperCase.ts#L9)
+Defined in: [isUpperCase.ts:9](../../src/isUpperCase.ts#L9)

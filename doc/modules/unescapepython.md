@@ -36,4 +36,4 @@ Unescape a string encodeed in Python style
 
 the string with escapes resolved
 
-Defined in: [src/unescapePython.ts:7](../../src/unescapePython.ts#L7)
+Defined in: [unescapePython.ts:7](../../src/unescapePython.ts#L7)

@@ -39,4 +39,4 @@ Determine the start of the month for a dateDetermine the start of the month for 
 
 The date value for midnight on the first day of the specified month
 
-Defined in: [src/getBeginningOfMonth.ts:14](../../src/getBeginningOfMonth.ts#L14)
+Defined in: [getBeginningOfMonth.ts:14](../../src/getBeginningOfMonth.ts#L14)

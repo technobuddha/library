@@ -37,7 +37,7 @@ Renames and exports: [toFilename](tofilename.md#tofilename)
 | `replacement?` | *string* | character to use to replace "bad" characters |
 | `separator?` | *string* | string to seperate the main section from the disambiguated section |
 
-Defined in: [src/toFilename.ts:8](../../src/toFilename.ts#L8)
+Defined in: [toFilename.ts:8](../../src/toFilename.ts#L8)
 
 ## Functions
 
@@ -66,4 +66,4 @@ Convert a string so that it can be used as a filename
 
 the tfile name
 
-Defined in: [src/toFilename.ts:30](../../src/toFilename.ts#L30)
+Defined in: [packages/library/src/toFilename.ts:30](../../src/toFilename.ts#L30)

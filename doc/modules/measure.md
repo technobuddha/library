@@ -33,7 +33,7 @@ Renames and exports: [measure](measure.md#measure)
 | `scrollbarHeight` | *number* |
 | `scrollbarWidth` | *number* |
 
-Defined in: [src/measure.ts:8](../../src/measure.ts#L8)
+Defined in: [measure.ts:8](../../src/measure.ts#L8)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 **Returns:** Size
 
-Defined in: [src/measure.ts:21](../../src/measure.ts#L21)
+Defined in: [packages/library/src/measure.ts:21](../../src/measure.ts#L21)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 **Returns:** Size
 
-Defined in: [src/measure.ts:25](../../src/measure.ts#L25)
+Defined in: [packages/library/src/measure.ts:25](../../src/measure.ts#L25)

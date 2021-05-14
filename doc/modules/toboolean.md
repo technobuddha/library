@@ -41,4 +41,4 @@ Convert a string to a boolean value
 
 **Returns:** *boolean* \| *undefined*
 
-Defined in: [src/toBoolean.ts:21](../../src/toBoolean.ts#L21)
+Defined in: [toBoolean.ts:21](../../src/toBoolean.ts#L21)

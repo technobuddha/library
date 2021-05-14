@@ -40,4 +40,4 @@ Determine if two dates occur in the same year
 
 true, if the two dates occur in the same year
 
-Defined in: [src/isSameYear.ts:15](../../src/isSameYear.ts#L15)
+Defined in: [isSameYear.ts:15](../../src/isSameYear.ts#L15)

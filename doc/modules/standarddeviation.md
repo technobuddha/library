@@ -39,4 +39,4 @@ The sample standard deviation of the arguments (0 if fewer
 than two samples were provided, or NaN if any of the samples is
 not a valid number).
 
-Defined in: [src/standardDeviation.ts:12](../../src/standardDeviation.ts#L12)
+Defined in: [standardDeviation.ts:12](../../src/standardDeviation.ts#L12)

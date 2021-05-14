@@ -36,4 +36,4 @@ Unescape a string encodeed in Java style
 
 the string with escapes resolved
 
-Defined in: [src/unescapeJava.ts:7](../../src/unescapeJava.ts#L7)
+Defined in: [unescapeJava.ts:7](../../src/unescapeJava.ts#L7)

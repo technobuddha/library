@@ -33,4 +33,4 @@ Renames and exports: [numberToLetter](numbertoletter.md#numbertoletter)
 
 **Returns:** *string*
 
-Defined in: [src/numberToLetter.ts:11](../../src/numberToLetter.ts#L11)
+Defined in: [numberToLetter.ts:11](../../src/numberToLetter.ts#L11)

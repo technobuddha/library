@@ -41,4 +41,4 @@ Determine the day of the week for a specific date
 
 The date value for midnight on the first day of the specified year
 
-Defined in: [src/getDayOfWeek.ts:21](../../src/getDayOfWeek.ts#L21)
+Defined in: [getDayOfWeek.ts:21](../../src/getDayOfWeek.ts#L21)

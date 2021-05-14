@@ -33,4 +33,4 @@ Renames and exports: [matches](matches.md#matches)
 
 **Returns:** *boolean*
 
-Defined in: [src/matches.ts:4](../../src/matches.ts#L4)
+Defined in: [matches.ts:4](../../src/matches.ts#L4)

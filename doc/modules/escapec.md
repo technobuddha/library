@@ -36,4 +36,4 @@ Escape a string for use in C/C++
 
 the escaped string
 
-Defined in: [src/escapeC.ts:10](../../src/escapeC.ts#L10)
+Defined in: [escapeC.ts:10](../../src/escapeC.ts#L10)

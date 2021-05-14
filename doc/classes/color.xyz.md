@@ -36,7 +36,7 @@
 
 **Returns:** [*XYZ*](color.xyz.md)
 
-Defined in: [src/color.ts:179](../../src/color.ts#L179)
+Defined in: [color.ts:179](../../src/color.ts#L179)
 
 ## Properties
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*LAB*](color.lab.md)
 
-Defined in: [src/color.ts:183](../../src/color.ts#L183)
+Defined in: [packages/library/src/color.ts:183](../../src/color.ts#L183)

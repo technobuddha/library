@@ -36,4 +36,4 @@ Convert an identifier string to underscore case
 
 the identifier in underscore case
 
-Defined in: [src/toUnderscoreCase.ts:7](../../src/toUnderscoreCase.ts#L7)
+Defined in: [toUnderscoreCase.ts:7](../../src/toUnderscoreCase.ts#L7)

@@ -43,4 +43,4 @@ Convert a string to a boolean value
 
 true, false or undefined if the string doesn't match
 
-Defined in: [src/toEnumeration.ts:12](../../src/toEnumeration.ts#L12)
+Defined in: [toEnumeration.ts:12](../../src/toEnumeration.ts#L12)

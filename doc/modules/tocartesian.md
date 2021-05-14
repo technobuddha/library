@@ -36,4 +36,4 @@ Convert polar coordinates to cartesian
 
 Object containing the X and Y-distance for the angle and radius.
 
-Defined in: [src/toCartesian.ts:9](../../src/toCartesian.ts#L9)
+Defined in: [toCartesian.ts:9](../../src/toCartesian.ts#L9)

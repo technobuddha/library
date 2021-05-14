@@ -34,7 +34,7 @@ Renames and exports: [count](count.md#count)
 | :------ | :------ | :------ |
 | `overlap?` | *boolean* | if true, counts overlapping strings |
 
-Defined in: [src/count.ts:1](../../src/count.ts#L1)
+Defined in: [count.ts:1](../../src/count.ts#L1)
 
 ## Functions
 
@@ -56,4 +56,4 @@ Compute the number of times a substring occors within a string
 
 number of times *substring* occurs within *input*
 
-Defined in: [src/count.ts:14](../../src/count.ts#L14)
+Defined in: [packages/library/src/count.ts:14](../../src/count.ts#L14)

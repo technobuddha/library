@@ -36,4 +36,4 @@ Split a string into an array of lines
 
 array of lines
 
-Defined in: [src/splitLines.ts:9](../../src/splitLines.ts#L9)
+Defined in: [splitLines.ts:9](../../src/splitLines.ts#L9)

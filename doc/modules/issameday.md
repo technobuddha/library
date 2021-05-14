@@ -40,4 +40,4 @@ Determine if two dates occur on the same day
 
 true, if the two dates fall on the same day
 
-Defined in: [src/isSameDay.ts:17](../../src/isSameDay.ts#L17)
+Defined in: [isSameDay.ts:17](../../src/isSameDay.ts#L17)

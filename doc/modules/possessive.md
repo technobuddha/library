@@ -36,4 +36,4 @@ Determine the possessive form of a word
 
 the posessive form of the word
 
-Defined in: [src/possessive.ts:10](../../src/possessive.ts#L10)
+Defined in: [possessive.ts:10](../../src/possessive.ts#L10)

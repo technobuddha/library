@@ -41,4 +41,4 @@ Determine the last day of the week containing a date
 
 Midnight of the last day of the week containing the input date
 
-Defined in: [src/getEndOfWeek.ts:21](../../src/getEndOfWeek.ts#L21)
+Defined in: [getEndOfWeek.ts:21](../../src/getEndOfWeek.ts#L21)

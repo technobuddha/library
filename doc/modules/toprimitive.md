@@ -37,4 +37,4 @@ Convert an object into its primitive (string, number, etc.) value
 
 primitive value
 
-Defined in: [src/toPrimitive.ts:16](../../src/toPrimitive.ts#L16)
+Defined in: [toPrimitive.ts:16](../../src/toPrimitive.ts#L16)

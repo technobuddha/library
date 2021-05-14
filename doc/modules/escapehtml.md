@@ -35,4 +35,4 @@ Escape a string for use in HTML
 
 **Returns:** *string*
 
-Defined in: [src/escapeHTML.ts:15](../../src/escapeHTML.ts#L15)
+Defined in: [escapeHTML.ts:15](../../src/escapeHTML.ts#L15)

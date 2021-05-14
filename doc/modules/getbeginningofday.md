@@ -39,4 +39,4 @@ Determine the start of the day for a date
 
 The date value for midnight on the specified day
 
-Defined in: [src/getBeginningOfDay.ts:14](../../src/getBeginningOfDay.ts#L14)
+Defined in: [getBeginningOfDay.ts:14](../../src/getBeginningOfDay.ts#L14)
