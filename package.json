@@ -1,10 +1,14 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A large library of useful functions",
   "keywords": [
     "miscellaneous"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technobuddha/hill.software.git"
+  },
   "homepage": "https://github.com/technobuddha/hill.software/tree/main/packages/library#technobuddhalibrary",
   "bugs": {
     "url": "https://github.com/technobuddha/hill.software/issues",
@@ -56,7 +60,7 @@
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.19",
     "typedoc-plugin-markdown": "^3.8.1",
-    "typescript": "^4.1.3"
+    "typescript": "^4.2.4"
   },
   "publishConfig": {
     "cache": "~/.npm",

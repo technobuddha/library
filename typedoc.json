@@ -3,7 +3,7 @@
     "exclude": [ "tests", "doc", "src/.*.ts" ],
     "tsconfig": "src/tsconfig.json",
     "out": "doc",
-    "readme": "README.md",
+    "readme": "none",
     "excludePrivate": true,
     "plugin": true
 }

@@ -1,0 +1,39 @@
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isAlpha
+
+# Module: isAlpha
+
+## Table of contents
+
+### References
+
+- [default](isalpha.md#default)
+
+### Functions
+
+- [isAlpha](isalpha.md#isalpha)
+
+## References
+
+### default
+
+Renames and exports: [isAlpha](isalpha.md#isalpha)
+
+## Functions
+
+### isAlpha
+
+▸ **isAlpha**(`input`: *string*): *boolean*
+
+Test a string for all alphaetic characters
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | *string* | string to test |
+
+**Returns:** *boolean*
+
+true, if all characters in the string are alphabetic
+
+Defined in: [src/isAlpha.ts:9](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/isAlpha.ts#L9)

@@ -1,0 +1,39 @@
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / build
+
+# Module: build
+
+## Table of contents
+
+### References
+
+- [default](build.md#default)
+
+### Functions
+
+- [build](build.md#build)
+
+## References
+
+### default
+
+Renames and exports: [build](build.md#build)
+
+## Functions
+
+### build
+
+▸ **build**(...`args`: (stringy \| *Generator*<stringy\> \| () => stringy)[]): *string*
+
+Concatenates strings and/or arrays of strings
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `...args` | (stringy \| *Generator*<stringy\> \| () => stringy)[] | Concatenates a list of strings, string arrays, or functions that return a string or string array. |
+
+**Returns:** *string*
+
+The concatenation of *args*.
+
+Defined in: [src/build.ts:15](https://github.com/technobuddha/hill.software/blob/65b5e5d/packages/library/src/build.ts#L15)

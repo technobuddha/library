@@ -105,25 +105,32 @@ finish();
 
 start('Generating', 'doc');
 run(shell.exec('npx typedoc > /dev/null'));
-const readme        = splitLines(fs.readFileSync('doc/modules.md', { encoding: 'utf8' }));
+const readme        = splitLines(fs.readFileSync('doc/README.md', { encoding: 'utf8' }));
 const toc: string[] = [];
 
 readme.splice(0, 8);
 
 toc.push(
-    '[@technobuddha/library](README.md) / Exports',
+    '[@technobuddha/library](../README.md) / Modules',
     empty,
     '## Table of contents',
-    empty,
-    '### Modules',
     ...readme.sort((a, b) => compareStrings(a, b, { caseInsensitive: true })),
     empty
 );
-fs.writeFileSync('dist/modules.md', toc.join('\n'));
-shell.mv('-f', [ 'doc/modules', 'doc/classes' ], 'dist');
-fs.copyFileSync('LICENSE',   'dist/LICENSE');
-fs.copyFileSync('README.md', 'dist/README.md');
-shell.rm('-rf', 'doc');
+fs.writeFileSync('doc/Modules.md', toc.join('\n'));
+fs.unlinkSync('doc/README.md');
+
+for(const file of glob.sync('doc/*/*.md')) {
+    const contents = fs.readFileSync(file, { encoding: 'utf8' });
+    fs.writeFileSync(
+        file,
+        contents.replace(
+            '[@technobuddha/library](../README.md)',
+            '[@technobuddha/library](../../README.md) / [Modules](../Modules.md)'
+        )
+    );
+}
+
 finish();
 
 start('Building', 'dist');
@@ -135,4 +142,7 @@ delete pj.esnext;
 delete pj.typescript;
 delete pj.types;
 fs.writeFileSync('dist/package.json', JSON.stringify(pj, null, 2), 'utf8');
+
+fs.copyFileSync('LICENSE',   'dist/LICENSE');
+fs.copyFileSync('README.md', 'dist/README.md');
 finish();
