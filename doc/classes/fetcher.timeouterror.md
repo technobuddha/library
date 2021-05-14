@@ -38,7 +38,7 @@
 
 Overrides: Error.constructor
 
-Defined in: [src/fetcher.ts:1](../src/fetcher.ts#L1)
+Defined in: [src/fetcher.ts:1](../../src/fetcher.ts#L1)
 
 ## Properties
 

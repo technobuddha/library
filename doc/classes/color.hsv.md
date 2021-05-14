@@ -36,7 +36,7 @@
 
 **Returns:** [*HSV*](color.hsv.md)
 
-Defined in: [src/color.ts:135](../src/color.ts#L135)
+Defined in: [src/color.ts:135](../../src/color.ts#L135)
 
 ## Properties
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*RGB*](color.rgb.md)
 
-Defined in: [src/color.ts:139](../src/color.ts#L139)
+Defined in: [src/color.ts:139](../../src/color.ts#L139)

@@ -41,4 +41,4 @@ Deterimine is a character is a surrogate
 
 trus if the specified character is a unicode surrogate
 
-Defined in: [src/isSurrogate.ts:17](../src/isSurrogate.ts#L17)
+Defined in: [src/isSurrogate.ts:17](../../src/isSurrogate.ts#L17)

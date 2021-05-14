@@ -39,4 +39,4 @@ Renames and exports: [shuffle](shuffle.md#shuffle)
 
 **Returns:** T[]
 
-Defined in: [src/shuffle.ts:1](../src/shuffle.ts#L1)
+Defined in: [src/shuffle.ts:1](../../src/shuffle.ts#L1)

@@ -32,4 +32,4 @@ Renames and exports: [toDateLocaleString](todatelocalestring.md#todatelocalestri
 
 **Returns:** *string* \| ``null``
 
-Defined in: [src/toDateLocaleString.ts:6](../src/toDateLocaleString.ts#L6)
+Defined in: [src/toDateLocaleString.ts:6](../../src/toDateLocaleString.ts#L6)

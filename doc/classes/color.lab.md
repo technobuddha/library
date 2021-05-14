@@ -40,7 +40,7 @@
 
 **Returns:** [*LAB*](color.lab.md)
 
-Defined in: [src/color.ts:201](../src/color.ts#L201)
+Defined in: [src/color.ts:201](../../src/color.ts#L201)
 
 ## Properties
 
@@ -74,7 +74,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/color.ts:216](../src/color.ts#L216)
+Defined in: [src/color.ts:216](../../src/color.ts#L216)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/color.ts:231](../src/color.ts#L231)
+Defined in: [src/color.ts:231](../../src/color.ts#L231)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/color.ts:235](../src/color.ts#L235)
+Defined in: [src/color.ts:235](../../src/color.ts#L235)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/color.ts:258](../src/color.ts#L258)
+Defined in: [src/color.ts:258](../../src/color.ts#L258)
 
 ___
 
@@ -132,4 +132,4 @@ ___
 
 **Returns:** [*XYZ*](color.xyz.md)
 
-Defined in: [src/color.ts:397](../src/color.ts#L397)
+Defined in: [src/color.ts:397](../../src/color.ts#L397)

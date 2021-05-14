@@ -39,4 +39,4 @@ Determine the last day of the month containing the input date
 
 Midnight on the last day of the month corresponding to the input date
 
-Defined in: [src/getEndOfMonth.ts:16](../src/getEndOfMonth.ts#L16)
+Defined in: [src/getEndOfMonth.ts:16](../../src/getEndOfMonth.ts#L16)

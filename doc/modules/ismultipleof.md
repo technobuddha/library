@@ -37,4 +37,4 @@ Tests to see if the specified value is an multiple of *multipler*
 
 true, if the number is a multiple
 
-Defined in: [src/isMultipleOf.ts:10](../src/isMultipleOf.ts#L10)
+Defined in: [src/isMultipleOf.ts:10](../../src/isMultipleOf.ts#L10)

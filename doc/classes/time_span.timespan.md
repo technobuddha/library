@@ -47,7 +47,7 @@ Store and manipulate a duration of time
 
 **Returns:** [*TimeSpan*](time_span.timespan.md)
 
-Defined in: [src/time-span.ts:10](../src/time-span.ts#L10)
+Defined in: [src/time-span.ts:10](../../src/time-span.ts#L10)
 
 \+ **new TimeSpan**(`ticks`: *number*): [*TimeSpan*](time_span.timespan.md)
 
@@ -59,7 +59,7 @@ Defined in: [src/time-span.ts:10](../src/time-span.ts#L10)
 
 **Returns:** [*TimeSpan*](time_span.timespan.md)
 
-Defined in: [src/time-span.ts:21](../src/time-span.ts#L21)
+Defined in: [src/time-span.ts:21](../../src/time-span.ts#L21)
 
 \+ **new TimeSpan**(`h`: *number*, `m`: *number*, `s`: *number*): [*TimeSpan*](time_span.timespan.md)
 
@@ -73,7 +73,7 @@ Defined in: [src/time-span.ts:21](../src/time-span.ts#L21)
 
 **Returns:** [*TimeSpan*](time_span.timespan.md)
 
-Defined in: [src/time-span.ts:22](../src/time-span.ts#L22)
+Defined in: [src/time-span.ts:22](../../src/time-span.ts#L22)
 
 \+ **new TimeSpan**(`d`: *number*, `h`: *number*, `m`: *number*, `s`: *number*): [*TimeSpan*](time_span.timespan.md)
 
@@ -88,7 +88,7 @@ Defined in: [src/time-span.ts:22](../src/time-span.ts#L22)
 
 **Returns:** [*TimeSpan*](time_span.timespan.md)
 
-Defined in: [src/time-span.ts:23](../src/time-span.ts#L23)
+Defined in: [src/time-span.ts:23](../../src/time-span.ts#L23)
 
 \+ **new TimeSpan**(`d`: *number*, `h`: *number*, `m`: *number*, `s`: *number*, `ms`: *number*): [*TimeSpan*](time_span.timespan.md)
 
@@ -104,7 +104,7 @@ Defined in: [src/time-span.ts:23](../src/time-span.ts#L23)
 
 **Returns:** [*TimeSpan*](time_span.timespan.md)
 
-Defined in: [src/time-span.ts:24](../src/time-span.ts#L24)
+Defined in: [src/time-span.ts:24](../../src/time-span.ts#L24)
 
 ## Accessors
 
@@ -116,7 +116,7 @@ Get the days portion
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:88](../src/time-span.ts#L88)
+Defined in: [src/time-span.ts:88](../../src/time-span.ts#L88)
 
 ___
 
@@ -128,7 +128,7 @@ Get the hours portion
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:95](../src/time-span.ts#L95)
+Defined in: [src/time-span.ts:95](../../src/time-span.ts#L95)
 
 ___
 
@@ -140,7 +140,7 @@ Get the milliseconds portion
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:116](../src/time-span.ts#L116)
+Defined in: [src/time-span.ts:116](../../src/time-span.ts#L116)
 
 ___
 
@@ -152,7 +152,7 @@ Get the minutes portion
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:102](../src/time-span.ts#L102)
+Defined in: [src/time-span.ts:102](../../src/time-span.ts#L102)
 
 ___
 
@@ -164,7 +164,7 @@ Get the seconds portion
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:109](../src/time-span.ts#L109)
+Defined in: [src/time-span.ts:109](../../src/time-span.ts#L109)
 
 ___
 
@@ -176,7 +176,7 @@ Get the total number of ticks (milliseconds)
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:123](../src/time-span.ts#L123)
+Defined in: [src/time-span.ts:123](../../src/time-span.ts#L123)
 
 ___
 
@@ -188,7 +188,7 @@ Get the total number of days
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:130](../src/time-span.ts#L130)
+Defined in: [src/time-span.ts:130](../../src/time-span.ts#L130)
 
 ___
 
@@ -200,7 +200,7 @@ Get the total number of hours
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:137](../src/time-span.ts#L137)
+Defined in: [src/time-span.ts:137](../../src/time-span.ts#L137)
 
 ___
 
@@ -212,7 +212,7 @@ Get the total number of milliseconds
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:158](../src/time-span.ts#L158)
+Defined in: [src/time-span.ts:158](../../src/time-span.ts#L158)
 
 ___
 
@@ -224,7 +224,7 @@ Get the total number of minutes
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:144](../src/time-span.ts#L144)
+Defined in: [src/time-span.ts:144](../../src/time-span.ts#L144)
 
 ___
 
@@ -236,7 +236,7 @@ Get the total number of seconds
 
 **Returns:** *number*
 
-Defined in: [src/time-span.ts:151](../src/time-span.ts#L151)
+Defined in: [src/time-span.ts:151](../../src/time-span.ts#L151)
 
 ## Methods
 
@@ -256,7 +256,7 @@ Add two timespans
 
 a TimeSpan that is the sum of two timespans
 
-Defined in: [src/time-span.ts:225](../src/time-span.ts#L225)
+Defined in: [src/time-span.ts:225](../../src/time-span.ts#L225)
 
 ___
 
@@ -276,7 +276,7 @@ Format the timespan using a mask
 
 the formatted TimeSpan
 
-Defined in: [src/time-span.ts:168](../src/time-span.ts#L168)
+Defined in: [src/time-span.ts:168](../../src/time-span.ts#L168)
 
 ___
 
@@ -290,7 +290,7 @@ Convert the TimeSpan to a string
 
 formatted string
 
-Defined in: [src/time-span.ts:215](../src/time-span.ts#L215)
+Defined in: [src/time-span.ts:215](../../src/time-span.ts#L215)
 
 ___
 
@@ -311,4 +311,4 @@ Compare two TimeSpans
 
 -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
 
-Defined in: [src/time-span.ts:236](../src/time-span.ts#L236)
+Defined in: [src/time-span.ts:236](../../src/time-span.ts#L236)

@@ -37,4 +37,4 @@ Add a prefix to a string, if it does not already have the prefix
 
 The prefix followed by the string
 
-Defined in: [src/ensurePrefix.ts:8](../src/ensurePrefix.ts#L8)
+Defined in: [src/ensurePrefix.ts:8](../../src/ensurePrefix.ts#L8)

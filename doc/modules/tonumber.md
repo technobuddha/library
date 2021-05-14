@@ -32,4 +32,4 @@ Renames and exports: [toNumber](tonumber.md#tonumber)
 
 **Returns:** *number*
 
-Defined in: [src/toNumber.ts:5](../src/toNumber.ts#L5)
+Defined in: [src/toNumber.ts:5](../../src/toNumber.ts#L5)

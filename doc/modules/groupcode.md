@@ -40,4 +40,4 @@ under #.
 
 The group code
 
-Defined in: [src/groupCode.ts:14](../src/groupCode.ts#L14)
+Defined in: [src/groupCode.ts:14](../../src/groupCode.ts#L14)

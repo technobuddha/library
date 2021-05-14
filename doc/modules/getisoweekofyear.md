@@ -46,4 +46,4 @@ Determine the ISO week number for a given date
 
 the week number (1-53)
 
-Defined in: [src/getISOWeekOfYear.ts:25](../src/getISOWeekOfYear.ts#L25)
+Defined in: [src/getISOWeekOfYear.ts:25](../../src/getISOWeekOfYear.ts#L25)

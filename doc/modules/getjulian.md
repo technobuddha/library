@@ -38,4 +38,4 @@ Get the Julian date (number of days since noon on Monday, Janurary 1 4713 BCE)
 
 The julian date.
 
-Defined in: [src/getJulian.ts:11](../src/getJulian.ts#L11)
+Defined in: [src/getJulian.ts:11](../../src/getJulian.ts#L11)

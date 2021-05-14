@@ -39,4 +39,4 @@ Determine the start of the year for a date
 
 The date value for midnight on the first day of the specified year
 
-Defined in: [src/getBeginningOfYear.ts:16](../src/getBeginningOfYear.ts#L16)
+Defined in: [src/getBeginningOfYear.ts:16](../../src/getBeginningOfYear.ts#L16)

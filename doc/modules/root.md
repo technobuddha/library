@@ -35,7 +35,7 @@ Renames and exports: [root](root.md#root)
 | `prefix?` | *string* | The refix string to remove |
 | `suffix?` | *string* | The suffix string to remove |
 
-Defined in: [src/root.ts:3](../src/root.ts#L3)
+Defined in: [src/root.ts:3](../../src/root.ts#L3)
 
 ## Functions
 
@@ -56,4 +56,4 @@ Extract the root word, removing a prefix and/or suffix
 
 The root word
 
-Defined in: [src/root.ts:17](../src/root.ts#L17)
+Defined in: [src/root.ts:17](../../src/root.ts#L17)

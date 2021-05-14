@@ -38,4 +38,4 @@ Compute the dice coefficient measure of similarity between two strings
 
 a number from 0 (not similar) to 1 (equal) measuring the similarity
 
-Defined in: [src/diceCoefficient.ts:16](../src/diceCoefficient.ts#L16)
+Defined in: [src/diceCoefficient.ts:16](../../src/diceCoefficient.ts#L16)

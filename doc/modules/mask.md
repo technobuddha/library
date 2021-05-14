@@ -43,4 +43,4 @@ are output as-is, to output a '#' use '\#'
 
 The mask filled with characters from the string
 
-Defined in: [src/mask.ts:23](../src/mask.ts#L23)
+Defined in: [src/mask.ts:23](../../src/mask.ts#L23)

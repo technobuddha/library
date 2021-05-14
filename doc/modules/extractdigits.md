@@ -36,4 +36,4 @@ Remove all non-digit characters from a string
 
 digits from the string
 
-Defined in: [src/extractDigits.ts:9](../src/extractDigits.ts#L9)
+Defined in: [src/extractDigits.ts:9](../../src/extractDigits.ts#L9)

@@ -36,4 +36,4 @@ Convert an identifier string to human readable form
 
 the identifier in human readable form
 
-Defined in: [src/toHumanCase.ts:12](../src/toHumanCase.ts#L12)
+Defined in: [src/toHumanCase.ts:12](../../src/toHumanCase.ts#L12)

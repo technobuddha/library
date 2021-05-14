@@ -39,4 +39,4 @@ Split a string into an array of words
 
 array of words
 
-Defined in: [src/splitWords.ts:17](../src/splitWords.ts#L17)
+Defined in: [src/splitWords.ts:17](../../src/splitWords.ts#L17)

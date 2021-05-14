@@ -41,4 +41,4 @@ Remove surrounding quotes from text
 
 the unescaped text with quotes removed
 
-Defined in: [src/unquote.ts:21](../src/unquote.ts#L21)
+Defined in: [src/unquote.ts:21](../../src/unquote.ts#L21)

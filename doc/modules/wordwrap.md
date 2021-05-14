@@ -47,4 +47,4 @@ Wrap text so that it fits within a area of fixed width
 
 wrapped text
 
-Defined in: [src/wordwrap.ts:29](../src/wordwrap.ts#L29)
+Defined in: [src/wordwrap.ts:29](../../src/wordwrap.ts#L29)

@@ -36,4 +36,4 @@ Return the number of unicode code points in a string
 
 the number of code points
 
-Defined in: [src/unicodeLength.ts:9](../src/unicodeLength.ts#L9)
+Defined in: [src/unicodeLength.ts:9](../../src/unicodeLength.ts#L9)

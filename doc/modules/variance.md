@@ -39,4 +39,4 @@ The unbiased sample variance of the arguments (0 if fewer
 than two samples were provided, or {@code NaN} if any of the samples is
 not a valid number).
 
-Defined in: [src/variance.ts:13](../src/variance.ts#L13)
+Defined in: [src/variance.ts:13](../../src/variance.ts#L13)

@@ -37,4 +37,4 @@ Determine if a year is a leap year
 
 true, if the specified year is a leap year
 
-Defined in: [src/isLeapYear.ts:15](../src/isLeapYear.ts#L15)
+Defined in: [src/isLeapYear.ts:15](../../src/isLeapYear.ts#L15)

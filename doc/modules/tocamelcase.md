@@ -36,4 +36,4 @@ Convert an idenfifer string to a camel case
 
 string in cemal case
 
-Defined in: [src/toCamelCase.ts:9](../src/toCamelCase.ts#L9)
+Defined in: [src/toCamelCase.ts:9](../../src/toCamelCase.ts#L9)

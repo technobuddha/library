@@ -36,4 +36,4 @@ Escape a string for use in Java
 
 The string escaped for Java
 
-Defined in: [src/escapeJava.ts:10](../src/escapeJava.ts#L10)
+Defined in: [src/escapeJava.ts:10](../../src/escapeJava.ts#L10)

@@ -36,4 +36,4 @@ Unescape a string encodeed in HTML
 
 the string with escapes resolved
 
-Defined in: [src/unescapeHTML.ts:7](../src/unescapeHTML.ts#L7)
+Defined in: [src/unescapeHTML.ts:7](../../src/unescapeHTML.ts#L7)

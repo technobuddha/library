@@ -36,4 +36,4 @@ Converts degrees to radians.
 
 Angle in radians.
 
-Defined in: [src/toRadians.ts:7](../src/toRadians.ts#L7)
+Defined in: [src/toRadians.ts:7](../../src/toRadians.ts#L7)

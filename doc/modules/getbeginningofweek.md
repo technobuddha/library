@@ -41,4 +41,4 @@ Determine the start of the week for a date
 
 The date value for midnight on the first day of the specified week
 
-Defined in: [src/getBeginningOfWeek.ts:21](../src/getBeginningOfWeek.ts#L21)
+Defined in: [src/getBeginningOfWeek.ts:21](../../src/getBeginningOfWeek.ts#L21)

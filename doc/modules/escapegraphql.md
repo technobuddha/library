@@ -36,4 +36,4 @@ Escape a string for use in GraphQL
 
 the escaped string
 
-Defined in: [src/escapeGraphQL.ts:10](../src/escapeGraphQL.ts#L10)
+Defined in: [src/escapeGraphQL.ts:10](../../src/escapeGraphQL.ts#L10)

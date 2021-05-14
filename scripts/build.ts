@@ -130,20 +130,10 @@ for(const file of glob.sync('doc/*/*.md')) {
         )
         .replace(
             /https:\/\/github.com\/technobuddha\/hill\.software\/blob\/[0-9a-f]+\/packages\/library/ug,
-            '..'
+            '../..'
         )
     );
 }
-
-const npmReadme = fs.readFileSync('README.md', { encoding: 'utf8' });
-fs.writeFileSync(
-    '.github/README.md',
-    npmReadme.replace(
-        'https://github.com/technobuddha/hill.software/tree/main/packages/library/doc/Modules.md',
-        '../doc/Modules.md'
-    )
-);
-
 finish();
 
 start('Building', 'dist');

@@ -38,4 +38,4 @@ Surround text with an HTML tag
 
 HTML tag with text
 
-Defined in: [src/tag.ts:13](../src/tag.ts#L13)
+Defined in: [src/tag.ts:13](../../src/tag.ts#L13)

@@ -37,4 +37,4 @@ Determine if a date is at midnight
 
 true, if the date is at midnight
 
-Defined in: [src/isMidnight.ts:13](../src/isMidnight.ts#L13)
+Defined in: [src/isMidnight.ts:13](../../src/isMidnight.ts#L13)

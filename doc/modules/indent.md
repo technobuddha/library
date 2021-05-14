@@ -39,4 +39,4 @@ Indent each line of a string
 
 string with each line indented
 
-Defined in: [src/indent.ts:14](../src/indent.ts#L14)
+Defined in: [src/indent.ts:14](../../src/indent.ts#L14)

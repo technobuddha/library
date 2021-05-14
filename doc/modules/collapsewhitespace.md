@@ -34,7 +34,7 @@ Renames and exports: [collapseWhitespace](collapsewhitespace.md#collapsewhitespa
 | :------ | :------ | :------ |
 | `trim?` | *boolean* | If true, trim |
 
-Defined in: [src/collapseWhitespace.ts:4](../src/collapseWhitespace.ts#L4)
+Defined in: [src/collapseWhitespace.ts:4](../../src/collapseWhitespace.ts#L4)
 
 ## Functions
 
@@ -53,4 +53,4 @@ Replace all whitespace within a string with a single space
 
 **Returns:** *string*
 
-Defined in: [src/collapseWhitespace.ts:15](../src/collapseWhitespace.ts#L15)
+Defined in: [src/collapseWhitespace.ts:15](../../src/collapseWhitespace.ts#L15)

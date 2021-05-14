@@ -34,4 +34,4 @@ Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 
 **Returns:** *string*
 
-Defined in: [src/ordinal.ts:18](../src/ordinal.ts#L18)
+Defined in: [src/ordinal.ts:18](../../src/ordinal.ts#L18)

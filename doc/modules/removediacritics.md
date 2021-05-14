@@ -36,4 +36,4 @@ Remove all diacritics from a string
 
 string with diacritics removed
 
-Defined in: [src/removeDiacritics.ts:11](../src/removeDiacritics.ts#L11)
+Defined in: [src/removeDiacritics.ts:11](../../src/removeDiacritics.ts#L11)

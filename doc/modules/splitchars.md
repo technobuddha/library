@@ -36,4 +36,4 @@ Split a string into an array of characters
 
 array of characters
 
-Defined in: [src/splitChars.ts:7](../src/splitChars.ts#L7)
+Defined in: [src/splitChars.ts:7](../../src/splitChars.ts#L7)

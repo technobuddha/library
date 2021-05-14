@@ -33,4 +33,4 @@ Renames and exports: [getDayOfYear](getdayofyear.md#getdayofyear)
 
 **Returns:** *number*
 
-Defined in: [src/getDayOfYear.ts:9](../src/getDayOfYear.ts#L9)
+Defined in: [src/getDayOfYear.ts:9](../../src/getDayOfYear.ts#L9)

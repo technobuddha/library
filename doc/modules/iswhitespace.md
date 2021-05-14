@@ -36,4 +36,4 @@ Test a string for all white space characters
 
 true, if all characters in the string are white space
 
-Defined in: [src/isWhitespace.ts:7](../src/isWhitespace.ts#L7)
+Defined in: [src/isWhitespace.ts:7](../../src/isWhitespace.ts#L7)

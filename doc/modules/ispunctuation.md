@@ -36,4 +36,4 @@ Test a string for all punctuation characters
 
 true, if all characters in the string are punctuation
 
-Defined in: [src/isPunctuation.ts:9](../src/isPunctuation.ts#L9)
+Defined in: [src/isPunctuation.ts:9](../../src/isPunctuation.ts#L9)

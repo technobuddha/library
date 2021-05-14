@@ -40,4 +40,4 @@ Determine if two dates occur in the same month
 
 true, if the two dates occur in the same month
 
-Defined in: [src/isSameMonth.ts:17](../src/isSameMonth.ts#L17)
+Defined in: [src/isSameMonth.ts:17](../../src/isSameMonth.ts#L17)

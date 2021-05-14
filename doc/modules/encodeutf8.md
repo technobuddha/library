@@ -36,4 +36,4 @@ Encode a unicode (UTF-16 encoded javascript) string into UTF8
 
 The UTF-8 encoded string
 
-Defined in: [src/encodeUTF8.ts:9](../src/encodeUTF8.ts#L9)
+Defined in: [src/encodeUTF8.ts:9](../../src/encodeUTF8.ts#L9)

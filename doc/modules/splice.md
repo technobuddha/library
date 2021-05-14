@@ -39,4 +39,4 @@ Insert a substring into a string
 
 The modified strings
 
-Defined in: [src/splice.ts:12](../src/splice.ts#L12)
+Defined in: [src/splice.ts:12](../../src/splice.ts#L12)

@@ -39,4 +39,4 @@ Convert a string into a sortable string
 
 sortable string
 
-Defined in: [src/sortOrder.ts:18](../src/sortOrder.ts#L18)
+Defined in: [src/sortOrder.ts:18](../../src/sortOrder.ts#L18)

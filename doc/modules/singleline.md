@@ -33,4 +33,4 @@ Renames and exports: [singleline](singleline.md#singleline)
 
 **Returns:** *string*
 
-Defined in: [src/singleline.ts:4](../src/singleline.ts#L4)
+Defined in: [src/singleline.ts:4](../../src/singleline.ts#L4)

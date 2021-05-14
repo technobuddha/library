@@ -37,4 +37,4 @@ Add a suffix to a string, if it does not already have the suffix
 
 The string followed by the suffix
 
-Defined in: [src/ensureSuffix.ts:8](../src/ensureSuffix.ts#L8)
+Defined in: [src/ensureSuffix.ts:8](../../src/ensureSuffix.ts#L8)

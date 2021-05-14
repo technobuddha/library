@@ -37,4 +37,4 @@ Return a field from a delimited string
 
 **Returns:** *string*
 
-Defined in: [src/delimited.ts:11](../src/delimited.ts#L11)
+Defined in: [src/delimited.ts:11](../../src/delimited.ts#L11)

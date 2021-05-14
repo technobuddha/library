@@ -33,4 +33,4 @@ Renames and exports: [formatNumber](formatnumber.md#formatnumber)
 
 **Returns:** *string*
 
-Defined in: [src/formatNumber.ts:287](../src/formatNumber.ts#L287)
+Defined in: [src/formatNumber.ts:287](../../src/formatNumber.ts#L287)

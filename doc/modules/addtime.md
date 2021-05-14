@@ -40,7 +40,7 @@ Renames and exports: [addTime](addtime.md#addtime)
 | `seconds?` | *number* |
 | `years?` | *number* |
 
-Defined in: [src/addTime.ts:1](../src/addTime.ts#L1)
+Defined in: [src/addTime.ts:1](../../src/addTime.ts#L1)
 
 ## Functions
 
@@ -63,4 +63,4 @@ Add units of time to a Date
 
 Adjusted date.
 
-Defined in: [src/addTime.ts:20](../src/addTime.ts#L20)
+Defined in: [src/addTime.ts:20](../../src/addTime.ts#L20)

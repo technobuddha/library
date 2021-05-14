@@ -34,4 +34,4 @@ Change a string to be all from the basic latin unicode plane
 
 **Returns:** *string*
 
-Defined in: [src/toASCII.ts:9](../src/toASCII.ts#L9)
+Defined in: [src/toASCII.ts:9](../../src/toASCII.ts#L9)

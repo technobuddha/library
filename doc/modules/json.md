@@ -47,7 +47,7 @@ Used with JSON.stringify to encode a wider range of objects into strings that ca
 
 the encoded value
 
-Defined in: [src/json.ts:16](../src/json.ts#L16)
+Defined in: [src/json.ts:16](../../src/json.ts#L16)
 
 ___
 
@@ -68,4 +68,4 @@ Used with JSON.parse to decode objected encoded by [replacer](json.md#replacer)
 
 the decoded value
 
-Defined in: [src/json.ts:38](../src/json.ts#L38)
+Defined in: [src/json.ts:38](../../src/json.ts#L38)

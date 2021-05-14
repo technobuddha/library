@@ -36,4 +36,4 @@ Unescape a string encodeed in Javascript style
 
 the string with escapes resolved
 
-Defined in: [src/unescapeJS.ts:7](../src/unescapeJS.ts#L7)
+Defined in: [src/unescapeJS.ts:7](../../src/unescapeJS.ts#L7)

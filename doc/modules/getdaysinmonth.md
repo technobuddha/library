@@ -39,4 +39,4 @@ Determine the number of days in the month for a date
 
 The number of days in the specified month
 
-Defined in: [src/getDaysInMonth.ts:17](../src/getDaysInMonth.ts#L17)
+Defined in: [src/getDaysInMonth.ts:17](../../src/getDaysInMonth.ts#L17)

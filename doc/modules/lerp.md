@@ -40,4 +40,4 @@ outside this range, the return value is a linear extrapolation).
 
 The interpolated value between a and b.
 
-Defined in: [src/lerp.ts:11](../src/lerp.ts#L11)
+Defined in: [src/lerp.ts:11](../../src/lerp.ts#L11)

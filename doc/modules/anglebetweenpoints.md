@@ -39,4 +39,4 @@ direction (down) and from there we grow clockwise towards PI*2 radians.
 
 Standardized angle in radians of the vector from *a* to *b*.
 
-Defined in: [src/angleBetweenPoints.ts:13](../src/angleBetweenPoints.ts#L13)
+Defined in: [src/angleBetweenPoints.ts:13](../../src/angleBetweenPoints.ts#L13)

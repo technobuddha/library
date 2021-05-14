@@ -36,7 +36,7 @@
 
 validate an valid email address
 
-Defined in: [src/regexp.ts:9](../src/regexp.ts#L9)
+Defined in: [src/regexp.ts:9](../../src/regexp.ts#L9)
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 validate a ISO formatted date
 
-Defined in: [src/regexp.ts:3](../src/regexp.ts#L3)
+Defined in: [src/regexp.ts:3](../../src/regexp.ts#L3)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 validate a valid number
 
-Defined in: [src/regexp.ts:6](../src/regexp.ts#L6)
+Defined in: [src/regexp.ts:6](../../src/regexp.ts#L6)

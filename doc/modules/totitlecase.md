@@ -36,4 +36,4 @@ Convert a string to a title, capitalizing each word, except for the small words
 
 the string in title case
 
-Defined in: [src/toTitleCase.ts:9](../src/toTitleCase.ts#L9)
+Defined in: [src/toTitleCase.ts:9](../../src/toTitleCase.ts#L9)

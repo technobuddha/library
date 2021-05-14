@@ -32,7 +32,7 @@ Renames and exports: [fetcher](fetcher.md#fetcher)
 
 Ƭ **Options**: RequestInit & { `timeout?`: *number*  }
 
-Defined in: [src/fetcher.ts:8](../src/fetcher.ts#L8)
+Defined in: [src/fetcher.ts:8](../../src/fetcher.ts#L8)
 
 ## Functions
 
@@ -57,4 +57,4 @@ Fetch a remote resource
 
 **Returns:** *Promise*<Response\>
 
-Defined in: [src/fetcher.ts:23](../src/fetcher.ts#L23)
+Defined in: [src/fetcher.ts:23](../../src/fetcher.ts#L23)
