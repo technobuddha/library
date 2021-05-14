@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unquote
+[@technobuddha/library](../..) / [Modules](../Modules.md) / unquote
 
 # Module: unquote
 
@@ -41,4 +41,4 @@ Remove surrounding quotes from text
 
 the unescaped text with quotes removed
 
-Defined in: [src/unquote.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unquote.ts#L21)
+Defined in: [src/unquote.ts:21](../src/unquote.ts#L21)

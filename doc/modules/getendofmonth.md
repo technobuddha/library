@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getEndOfMonth
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getEndOfMonth
 
 # Module: getEndOfMonth
 
@@ -39,4 +39,4 @@ Determine the last day of the month containing the input date
 
 Midnight on the last day of the month corresponding to the input date
 
-Defined in: [src/getEndOfMonth.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getEndOfMonth.ts#L16)
+Defined in: [src/getEndOfMonth.ts:16](../src/getEndOfMonth.ts#L16)

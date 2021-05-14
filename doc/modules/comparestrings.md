@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / compareStrings
+[@technobuddha/library](../..) / [Modules](../Modules.md) / compareStrings
 
 # Module: compareStrings
 
@@ -44,4 +44,4 @@ Compare two strings
 
 0 if a == b; -1 if a < b; 1 if a > b
 
-Defined in: [src/compareStrings.ts:26](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/compareStrings.ts#L26)
+Defined in: [src/compareStrings.ts:26](../src/compareStrings.ts#L26)

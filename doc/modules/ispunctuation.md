@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isPunctuation
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isPunctuation
 
 # Module: isPunctuation
 
@@ -36,4 +36,4 @@ Test a string for all punctuation characters
 
 true, if all characters in the string are punctuation
 
-Defined in: [src/isPunctuation.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isPunctuation.ts#L9)
+Defined in: [src/isPunctuation.ts:9](../src/isPunctuation.ts#L9)

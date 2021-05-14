@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / floor
+[@technobuddha/library](../..) / [Modules](../Modules.md) / floor
 
 # Module: floor
 
@@ -41,4 +41,4 @@ Math.LN10) == 2}, not 3 as one would expect.
 
 The largest integer less than or equal to {@code num}.
 
-Defined in: [src/floor.ts:18](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/floor.ts#L18)
+Defined in: [src/floor.ts:18](../src/floor.ts#L18)

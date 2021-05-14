@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [MersenneTwister](../modules/mersennetwister.md) / MersenneTwister
+[@technobuddha/library](../..) / [Modules](../Modules.md) / [MersenneTwister](../modules/mersennetwister.md) / MersenneTwister
 
 # Class: MersenneTwister
 
@@ -40,7 +40,7 @@
 
 **Returns:** [*MersenneTwister*](mersennetwister.mersennetwister-1.md)
 
-Defined in: [src/MersenneTwister.ts:63](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L63)
+Defined in: [src/MersenneTwister.ts:63](../src/MersenneTwister.ts#L63)
 
 ## Properties
 
@@ -48,7 +48,7 @@ Defined in: [src/MersenneTwister.ts:63](https://github.com/technobuddha/hill.sof
 
 • **mt**: *Uint32Array*
 
-Defined in: [src/MersenneTwister.ts:63](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L63)
+Defined in: [src/MersenneTwister.ts:63](../src/MersenneTwister.ts#L63)
 
 ## Methods
 
@@ -58,7 +58,7 @@ Defined in: [src/MersenneTwister.ts:63](https://github.com/technobuddha/hill.sof
 
 **Returns:** *number*
 
-Defined in: [src/MersenneTwister.ts:145](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L145)
+Defined in: [src/MersenneTwister.ts:145](../src/MersenneTwister.ts#L145)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/MersenneTwister.ts:113](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L113)
+Defined in: [src/MersenneTwister.ts:113](../src/MersenneTwister.ts#L113)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/MersenneTwister.ts:150](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L150)
+Defined in: [src/MersenneTwister.ts:150](../src/MersenneTwister.ts#L150)
 
 ___
 
@@ -88,7 +88,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/MersenneTwister.ts:156](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L156)
+Defined in: [src/MersenneTwister.ts:156](../src/MersenneTwister.ts#L156)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/MersenneTwister.ts:162](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L162)
+Defined in: [src/MersenneTwister.ts:162](../src/MersenneTwister.ts#L162)
 
 ___
 
@@ -108,7 +108,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [src/MersenneTwister.ts:168](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L168)
+Defined in: [src/MersenneTwister.ts:168](../src/MersenneTwister.ts#L168)
 
 ___
 
@@ -124,7 +124,7 @@ ___
 
 **Returns:** *void*
 
-Defined in: [src/MersenneTwister.ts:91](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L91)
+Defined in: [src/MersenneTwister.ts:91](../src/MersenneTwister.ts#L91)
 
 ___
 
@@ -140,7 +140,7 @@ ___
 
 **Returns:** *void*
 
-Defined in: [src/MersenneTwister.ts:77](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L77)
+Defined in: [src/MersenneTwister.ts:77](../src/MersenneTwister.ts#L77)
 
 ___
 
@@ -156,4 +156,4 @@ ___
 
 **Returns:** *void*
 
-Defined in: [src/MersenneTwister.ts:69](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/MersenneTwister.ts#L69)
+Defined in: [src/MersenneTwister.ts:69](../src/MersenneTwister.ts#L69)

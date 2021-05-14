@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / dataURL
+[@technobuddha/library](../..) / [Modules](../Modules.md) / dataURL
 
 # Module: dataURL
 
@@ -28,7 +28,7 @@ Renames and exports: [dataURL](dataurl.md#dataurl)
 
 Ƭ **BinaryObject**: ArrayBuffer \| DataView \| Int8Array \| Uint8Array \| Uint8ClampedArray \| Int16Array \| Uint16Array \| Int32Array \| Uint32Array \| Float32Array \| Float64Array
 
-Defined in: [src/dataURL.ts:4](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/dataURL.ts#L4)
+Defined in: [src/dataURL.ts:4](../src/dataURL.ts#L4)
 
 ## Functions
 
@@ -49,4 +49,4 @@ Convert any binary object into a data URL
 
 The data URL
 
-Defined in: [src/dataURL.ts:24](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/dataURL.ts#L24)
+Defined in: [src/dataURL.ts:24](../src/dataURL.ts#L24)

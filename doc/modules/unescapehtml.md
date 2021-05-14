@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unescapeHTML
+[@technobuddha/library](../..) / [Modules](../Modules.md) / unescapeHTML
 
 # Module: unescapeHTML
 
@@ -36,4 +36,4 @@ Unescape a string encodeed in HTML
 
 the string with escapes resolved
 
-Defined in: [src/unescapeHTML.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unescapeHTML.ts#L7)
+Defined in: [src/unescapeHTML.ts:7](../src/unescapeHTML.ts#L7)

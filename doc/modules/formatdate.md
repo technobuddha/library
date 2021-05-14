@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / formatDate
+[@technobuddha/library](../..) / [Modules](../Modules.md) / formatDate
 
 # Module: formatDate
 
@@ -38,4 +38,4 @@ Format a date
 
 **Returns:** *string*
 
-Defined in: [src/formatDate.ts:64](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/formatDate.ts#L64)
+Defined in: [src/formatDate.ts:64](../src/formatDate.ts#L64)

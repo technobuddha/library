@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getDayOfYear
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getDayOfYear
 
 # Module: getDayOfYear
 
@@ -33,4 +33,4 @@ Renames and exports: [getDayOfYear](getdayofyear.md#getdayofyear)
 
 **Returns:** *number*
 
-Defined in: [src/getDayOfYear.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getDayOfYear.ts#L9)
+Defined in: [src/getDayOfYear.ts:9](../src/getDayOfYear.ts#L9)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toDate
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toDate
 
 # Module: toDate
 
@@ -32,4 +32,4 @@ Renames and exports: [toDate](todate.md#todate)
 
 **Returns:** Date
 
-Defined in: [src/toDate.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toDate.ts#L1)
+Defined in: [src/toDate.ts:1](../src/toDate.ts#L1)

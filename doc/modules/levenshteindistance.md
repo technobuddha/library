@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / levenshteinDistance
+[@technobuddha/library](../..) / [Modules](../Modules.md) / levenshteinDistance
 
 # Module: levenshteinDistance
 
@@ -40,4 +40,4 @@ Compute the levenshtein distance between two strings (similarity)
 
 the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
 
-Defined in: [src/levenshteinDistance.ts:18](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/levenshteinDistance.ts#L18)
+Defined in: [src/levenshteinDistance.ts:18](../src/levenshteinDistance.ts#L18)

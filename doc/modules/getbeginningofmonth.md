@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getBeginningOfMonth
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getBeginningOfMonth
 
 # Module: getBeginningOfMonth
 
@@ -39,4 +39,4 @@ Determine the start of the month for a dateDetermine the start of the month for 
 
 The date value for midnight on the first day of the specified month
 
-Defined in: [src/getBeginningOfMonth.ts:14](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getBeginningOfMonth.ts#L14)
+Defined in: [src/getBeginningOfMonth.ts:14](../src/getBeginningOfMonth.ts#L14)

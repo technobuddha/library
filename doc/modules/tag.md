@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / tag
+[@technobuddha/library](../..) / [Modules](../Modules.md) / tag
 
 # Module: tag
 
@@ -38,4 +38,4 @@ Surround text with an HTML tag
 
 HTML tag with text
 
-Defined in: [src/tag.ts:13](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/tag.ts#L13)
+Defined in: [src/tag.ts:13](../src/tag.ts#L13)

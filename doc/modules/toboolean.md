@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toBoolean
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toBoolean
 
 # Module: toBoolean
 
@@ -41,4 +41,4 @@ Convert a string to a boolean value
 
 **Returns:** *boolean* \| *undefined*
 
-Defined in: [src/toBoolean.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toBoolean.ts#L21)
+Defined in: [src/toBoolean.ts:21](../src/toBoolean.ts#L21)

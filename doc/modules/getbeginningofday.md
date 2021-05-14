@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getBeginningOfDay
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getBeginningOfDay
 
 # Module: getBeginningOfDay
 
@@ -39,4 +39,4 @@ Determine the start of the day for a date
 
 The date value for midnight on the specified day
 
-Defined in: [src/getBeginningOfDay.ts:14](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getBeginningOfDay.ts#L14)
+Defined in: [src/getBeginningOfDay.ts:14](../src/getBeginningOfDay.ts#L14)

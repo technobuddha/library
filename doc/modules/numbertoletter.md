@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / numberToLetter
+[@technobuddha/library](../..) / [Modules](../Modules.md) / numberToLetter
 
 # Module: numberToLetter
 
@@ -33,4 +33,4 @@ Renames and exports: [numberToLetter](numbertoletter.md#numbertoletter)
 
 **Returns:** *string*
 
-Defined in: [src/numberToLetter.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/numberToLetter.ts#L11)
+Defined in: [src/numberToLetter.ts:11](../src/numberToLetter.ts#L11)

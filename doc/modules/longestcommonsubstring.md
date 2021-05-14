@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / longestCommonSubstring
+[@technobuddha/library](../..) / [Modules](../Modules.md) / longestCommonSubstring
 
 # Module: longestCommonSubstring
 
@@ -41,4 +41,4 @@ Returns the longest possible substring that is substring of both of given string
 A string that is common to both strings such that there is no
 common substring with size greater than the length of the string.
 
-Defined in: [src/longestCommonSubstring.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/longestCommonSubstring.ts#L15)
+Defined in: [src/longestCommonSubstring.ts:15](../src/longestCommonSubstring.ts#L15)

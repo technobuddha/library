@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toTitleCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toTitleCase
 
 # Module: toTitleCase
 
@@ -36,4 +36,4 @@ Convert a string to a title, capitalizing each word, except for the small words
 
 the string in title case
 
-Defined in: [src/toTitleCase.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toTitleCase.ts#L9)
+Defined in: [src/toTitleCase.ts:9](../src/toTitleCase.ts#L9)

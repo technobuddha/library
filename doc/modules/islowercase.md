@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isLowerCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isLowerCase
 
 # Module: isLowerCase
 
@@ -36,4 +36,4 @@ Test a string for all lower case characters
 
 true, if all characters in the string are lower case
 
-Defined in: [src/isLowerCase.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isLowerCase.ts#L9)
+Defined in: [src/isLowerCase.ts:9](../src/isLowerCase.ts#L9)

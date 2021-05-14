@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / build
+[@technobuddha/library](../..) / [Modules](../Modules.md) / build
 
 # Module: build
 
@@ -36,4 +36,4 @@ Concatenates strings and/or arrays of strings
 
 The concatenation of *args*.
 
-Defined in: [src/build.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/build.ts#L15)
+Defined in: [src/build.ts:15](../src/build.ts#L15)

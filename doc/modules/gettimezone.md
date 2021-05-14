@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getTimezone
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getTimezone
 
 # Module: getTimezone
 
@@ -35,7 +35,7 @@ Renames and exports: [getTimezone](gettimezone.md#gettimezone)
 | `GMT?` | *boolean* | Display 'GMT' in time zones |
 | `Z?` | *boolean* | Display 'Z' for the GMT time zone |
 
-Defined in: [src/getTimezone.ts:5](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getTimezone.ts#L5)
+Defined in: [src/getTimezone.ts:5](../src/getTimezone.ts#L5)
 
 ## Functions
 
@@ -63,4 +63,4 @@ Determine the correct timezone string for a specified date using a local timezon
 the timezone offset formatted like '±hh:mm' the string is prefixed by 'GMT' if the option is set.  If the Z option is set 'Z' is returned for the
 GMT+00:00 timezone
 
-Defined in: [src/getTimezone.ts:23](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getTimezone.ts#L23)
+Defined in: [src/getTimezone.ts:23](../src/getTimezone.ts#L23)

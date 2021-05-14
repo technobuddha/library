@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unescapeC
+[@technobuddha/library](../..) / [Modules](../Modules.md) / unescapeC
 
 # Module: unescapeC
 
@@ -36,4 +36,4 @@ Unescape a string encodeed in C style
 
 the string with escapes resolved
 
-Defined in: [src/unescapeC.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unescapeC.ts#L7)
+Defined in: [src/unescapeC.ts:7](../src/unescapeC.ts#L7)

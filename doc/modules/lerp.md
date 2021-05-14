@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / lerp
+[@technobuddha/library](../..) / [Modules](../Modules.md) / lerp
 
 # Module: lerp
 
@@ -40,4 +40,4 @@ outside this range, the return value is a linear extrapolation).
 
 The interpolated value between a and b.
 
-Defined in: [src/lerp.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/lerp.ts#L11)
+Defined in: [src/lerp.ts:11](../src/lerp.ts#L11)

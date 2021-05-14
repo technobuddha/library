@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapeGraphQL
+[@technobuddha/library](../..) / [Modules](../Modules.md) / escapeGraphQL
 
 # Module: escapeGraphQL
 
@@ -36,4 +36,4 @@ Escape a string for use in GraphQL
 
 the escaped string
 
-Defined in: [src/escapeGraphQL.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapeGraphQL.ts#L10)
+Defined in: [src/escapeGraphQL.ts:10](../src/escapeGraphQL.ts#L10)

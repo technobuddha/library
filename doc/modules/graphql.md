@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / graphQL
+[@technobuddha/library](../..) / [Modules](../Modules.md) / graphQL
 
 # Module: graphQL
 
@@ -33,7 +33,7 @@ Renames and exports: [graphQL](graphql.md#graphql)
 
 **Returns:** *string*
 
-Defined in: [src/graphQL.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/graphQL.ts#L15)
+Defined in: [src/graphQL.ts:15](../src/graphQL.ts#L15)
 
 ▸ **graphQL**(`arg`: GraphQLValue): *string*
 
@@ -45,4 +45,4 @@ Defined in: [src/graphQL.ts:15](https://github.com/technobuddha/hill.software/bl
 
 **Returns:** *string*
 
-Defined in: [src/graphQL.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/graphQL.ts#L16)
+Defined in: [src/graphQL.ts:16](../src/graphQL.ts#L16)

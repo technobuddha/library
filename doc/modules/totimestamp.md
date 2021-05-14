@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toTimestamp
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toTimestamp
 
 # Module: toTimestamp
 
@@ -32,4 +32,4 @@ Renames and exports: [toTimestamp](totimestamp.md#totimestamp)
 
 **Returns:** *number*
 
-Defined in: [src/toTimestamp.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toTimestamp.ts#L1)
+Defined in: [src/toTimestamp.ts:1](../src/toTimestamp.ts#L1)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / decodeUTF8
+[@technobuddha/library](../..) / [Modules](../Modules.md) / decodeUTF8
 
 # Module: decodeUTF8
 
@@ -36,4 +36,4 @@ Decode a UTF8 encoded string into unicode
 
 the decoded strings (which is encoded as UTF-16 by javascript)
 
-Defined in: [src/decodeUTF8.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/decodeUTF8.ts#L9)
+Defined in: [src/decodeUTF8.ts:9](../src/decodeUTF8.ts#L9)

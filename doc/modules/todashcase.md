@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toDashCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toDashCase
 
 # Module: toDashCase
 
@@ -36,4 +36,4 @@ Convert an identifier string to a dash form
 
 the ientifier in dash form
 
-Defined in: [src/toDashCase.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toDashCase.ts#L7)
+Defined in: [src/toDashCase.ts:7](../src/toDashCase.ts#L7)

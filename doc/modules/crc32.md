@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / crc32
+[@technobuddha/library](../..) / [Modules](../Modules.md) / crc32
 
 # Module: crc32
 
@@ -36,4 +36,4 @@ Compute the CRC32 checksum for a string
 
 the CRC32 checksum
 
-Defined in: [src/crc32.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/crc32.ts#L11)
+Defined in: [src/crc32.ts:11](../src/crc32.ts#L11)

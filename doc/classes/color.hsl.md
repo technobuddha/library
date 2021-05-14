@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [color](../modules/color.md) / HSL
+[@technobuddha/library](../..) / [Modules](../Modules.md) / [color](../modules/color.md) / HSL
 
 # Class: HSL
 
@@ -36,7 +36,7 @@
 
 **Returns:** [*HSL*](color.hsl.md)
 
-Defined in: [src/color.ts:108](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/color.ts#L108)
+Defined in: [src/color.ts:108](../src/color.ts#L108)
 
 ## Properties
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*RGB*](color.rgb.md)
 
-Defined in: [src/color.ts:112](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/color.ts#L112)
+Defined in: [src/color.ts:112](../src/color.ts#L112)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getBeginningOfWeek
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getBeginningOfWeek
 
 # Module: getBeginningOfWeek
 
@@ -41,4 +41,4 @@ Determine the start of the week for a date
 
 The date value for midnight on the first day of the specified week
 
-Defined in: [src/getBeginningOfWeek.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getBeginningOfWeek.ts#L21)
+Defined in: [src/getBeginningOfWeek.ts:21](../src/getBeginningOfWeek.ts#L21)

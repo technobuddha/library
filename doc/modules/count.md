@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / count
+[@technobuddha/library](../..) / [Modules](../Modules.md) / count
 
 # Module: count
 
@@ -34,7 +34,7 @@ Renames and exports: [count](count.md#count)
 | :------ | :------ | :------ |
 | `overlap?` | *boolean* | if true, counts overlapping strings |
 
-Defined in: [src/count.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/count.ts#L1)
+Defined in: [src/count.ts:1](../src/count.ts#L1)
 
 ## Functions
 
@@ -56,4 +56,4 @@ Compute the number of times a substring occors within a string
 
 number of times *substring* occurs within *input*
 
-Defined in: [src/count.ts:14](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/count.ts#L14)
+Defined in: [src/count.ts:14](../src/count.ts#L14)

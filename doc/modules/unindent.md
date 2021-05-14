@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unindent
+[@technobuddha/library](../..) / [Modules](../Modules.md) / unindent
 
 # Module: unindent
 
@@ -34,7 +34,7 @@ Renames and exports: [unindent](unindent.md#unindent)
 | :------ | :------ | :------ |
 | `indenter?` | *string* | the indentation character |
 
-Defined in: [src/unindent.ts:5](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unindent.ts#L5)
+Defined in: [src/unindent.ts:5](../src/unindent.ts#L5)
 
 ## Functions
 
@@ -53,4 +53,4 @@ Remove indentation from text
 
 **Returns:** *string*
 
-Defined in: [src/unindent.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unindent.ts#L16)
+Defined in: [src/unindent.ts:16](../src/unindent.ts#L16)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [fetcher](../modules/fetcher.md) / TimeoutError
+[@technobuddha/library](../..) / [Modules](../Modules.md) / [fetcher](../modules/fetcher.md) / TimeoutError
 
 # Class: TimeoutError
 
@@ -38,7 +38,7 @@
 
 Overrides: Error.constructor
 
-Defined in: [src/fetcher.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/fetcher.ts#L1)
+Defined in: [src/fetcher.ts:1](../src/fetcher.ts#L1)
 
 ## Properties
 

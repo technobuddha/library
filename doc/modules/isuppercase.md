@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isUpperCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isUpperCase
 
 # Module: isUpperCase
 
@@ -36,4 +36,4 @@ Test a string for all upper case characters
 
 true, if all characters in the string are upper case
 
-Defined in: [src/isUpperCase.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isUpperCase.ts#L9)
+Defined in: [src/isUpperCase.ts:9](../src/isUpperCase.ts#L9)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / matches
+[@technobuddha/library](../..) / [Modules](../Modules.md) / matches
 
 # Module: matches
 
@@ -33,4 +33,4 @@ Renames and exports: [matches](matches.md#matches)
 
 **Returns:** *boolean*
 
-Defined in: [src/matches.ts:4](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/matches.ts#L4)
+Defined in: [src/matches.ts:4](../src/matches.ts#L4)

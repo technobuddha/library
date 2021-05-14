@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / binaryUnits
+[@technobuddha/library](../..) / [Modules](../Modules.md) / binaryUnits
 
 # Module: binaryUnits
 
@@ -28,7 +28,7 @@ Renames and exports: [binaryUnits](binaryunits.md#binaryunits)
 
 Ƭ **Options**: *Omit*<[*Options*](metricunits.md#options), ``"macro"`` \| ``"micro"`` \| ``"unit"``\>
 
-Defined in: [src/binaryUnits.ts:4](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/binaryUnits.ts#L4)
+Defined in: [src/binaryUnits.ts:4](../src/binaryUnits.ts#L4)
 
 ## Functions
 
@@ -47,4 +47,4 @@ Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 => 1K)
 
 **Returns:** *string*
 
-Defined in: [src/binaryUnits.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/binaryUnits.ts#L12)
+Defined in: [src/binaryUnits.ts:12](../src/binaryUnits.ts#L12)

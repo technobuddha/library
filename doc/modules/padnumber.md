@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / padNumber
+[@technobuddha/library](../..) / [Modules](../Modules.md) / padNumber
 
 # Module: padNumber
 
@@ -37,4 +37,4 @@ Add leading zeros to a number to ensure a string of a minimum length
 
 number as a string with leading zeros as needed
 
-Defined in: [src/padNumber.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/padNumber.ts#L10)
+Defined in: [src/padNumber.ts:10](../src/padNumber.ts#L10)

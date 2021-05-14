@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unescapeJava
+[@technobuddha/library](../..) / [Modules](../Modules.md) / unescapeJava
 
 # Module: unescapeJava
 
@@ -36,4 +36,4 @@ Unescape a string encodeed in Java style
 
 the string with escapes resolved
 
-Defined in: [src/unescapeJava.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unescapeJava.ts#L7)
+Defined in: [src/unescapeJava.ts:7](../src/unescapeJava.ts#L7)

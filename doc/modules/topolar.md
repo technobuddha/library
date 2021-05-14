@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toPolar
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toPolar
 
 # Module: toPolar
 
@@ -36,4 +36,4 @@ Convert ccartesian coordinates to polar
 
 polar coordinated
 
-Defined in: [src/toPolar.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toPolar.ts#L10)
+Defined in: [src/toPolar.ts:10](../src/toPolar.ts#L10)

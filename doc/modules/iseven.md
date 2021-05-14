@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isEven
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isEven
 
 # Module: isEven
 
@@ -36,4 +36,4 @@ Tests to see if the specified value is an even integer
 
 true if the number is an even integer
 
-Defined in: [src/isEven.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isEven.ts#L10)
+Defined in: [src/isEven.ts:10](../src/isEven.ts#L10)

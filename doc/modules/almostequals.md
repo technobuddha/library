@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / almostEquals
+[@technobuddha/library](../..) / [Modules](../Modules.md) / almostEquals
 
 # Module: almostEquals
 
@@ -34,7 +34,7 @@ Renames and exports: [almostEquals](almostequals.md#almostequals)
 | :------ | :------ | :------ |
 | `tolerance?` | *number* | Tolerance range. If specified, should be greater than 0. |
 
-Defined in: [src/almostEquals.ts:1](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/almostEquals.ts#L1)
+Defined in: [src/almostEquals.ts:1](../src/almostEquals.ts#L1)
 
 ## Functions
 
@@ -59,4 +59,4 @@ tolerance, taking into account floating point errors (numbers within EPSILON).
 
 true if *a* and *b* are nearly equal.
 
-Defined in: [src/almostEquals.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/almostEquals.ts#L16)
+Defined in: [src/almostEquals.ts:16](../src/almostEquals.ts#L16)

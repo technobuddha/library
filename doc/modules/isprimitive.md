@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isPrimitive
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isPrimitive
 
 # Module: isPrimitive
 
@@ -36,4 +36,4 @@ Check to see if an object is a primitive
 
 true, if the object is a c
 
-Defined in: [src/isPrimitive.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isPrimitive.ts#L7)
+Defined in: [src/isPrimitive.ts:7](../src/isPrimitive.ts#L7)

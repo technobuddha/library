@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / json
+[@technobuddha/library](../..) / [Modules](../Modules.md) / json
 
 # Module: json
 
@@ -47,7 +47,7 @@ Used with JSON.stringify to encode a wider range of objects into strings that ca
 
 the encoded value
 
-Defined in: [src/json.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/json.ts#L16)
+Defined in: [src/json.ts:16](../src/json.ts#L16)
 
 ___
 
@@ -68,4 +68,4 @@ Used with JSON.parse to decode objected encoded by [replacer](json.md#replacer)
 
 the decoded value
 
-Defined in: [src/json.ts:38](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/json.ts#L38)
+Defined in: [src/json.ts:38](../src/json.ts#L38)

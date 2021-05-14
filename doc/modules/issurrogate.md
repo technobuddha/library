@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isSurrogate
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isSurrogate
 
 # Module: isSurrogate
 
@@ -41,4 +41,4 @@ Deterimine is a character is a surrogate
 
 trus if the specified character is a unicode surrogate
 
-Defined in: [src/isSurrogate.ts:17](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isSurrogate.ts#L17)
+Defined in: [src/isSurrogate.ts:17](../src/isSurrogate.ts#L17)

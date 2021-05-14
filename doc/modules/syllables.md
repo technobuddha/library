@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / syllables
+[@technobuddha/library](../..) / [Modules](../Modules.md) / syllables
 
 # Module: syllables
 
@@ -36,4 +36,4 @@ Approximate the number of syllables in a string
 
 the number of syllables
 
-Defined in: [src/syllables.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/syllables.ts#L11)
+Defined in: [src/syllables.ts:11](../src/syllables.ts#L11)

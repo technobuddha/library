@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / matchCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / matchCase
 
 # Module: matchCase
 
@@ -43,4 +43,4 @@ Attempt to convert the input string into the same case as the target string
 
 The input in the case case as the target string
 
-Defined in: [src/matchCase.ts:19](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/matchCase.ts#L19)
+Defined in: [src/matchCase.ts:19](../src/matchCase.ts#L19)

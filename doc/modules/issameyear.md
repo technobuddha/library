@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isSameYear
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isSameYear
 
 # Module: isSameYear
 
@@ -40,4 +40,4 @@ Determine if two dates occur in the same year
 
 true, if the two dates occur in the same year
 
-Defined in: [src/isSameYear.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isSameYear.ts#L15)
+Defined in: [src/isSameYear.ts:15](../src/isSameYear.ts#L15)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / time-span
+[@technobuddha/library](../..) / [Modules](../Modules.md) / time-span
 
 # Module: time-span
 

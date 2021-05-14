@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toPascalCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toPascalCase
 
 # Module: toPascalCase
 
@@ -36,4 +36,4 @@ Convert an identifier string to pascal case
 
 the identifier in pasca case
 
-Defined in: [src/toPascalCase.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toPascalCase.ts#L9)
+Defined in: [src/toPascalCase.ts:9](../src/toPascalCase.ts#L9)

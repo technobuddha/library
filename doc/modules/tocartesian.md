@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toCartesian
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toCartesian
 
 # Module: toCartesian
 
@@ -36,4 +36,4 @@ Convert polar coordinates to cartesian
 
 Object containing the X and Y-distance for the angle and radius.
 
-Defined in: [src/toCartesian.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toCartesian.ts#L9)
+Defined in: [src/toCartesian.ts:9](../src/toCartesian.ts#L9)

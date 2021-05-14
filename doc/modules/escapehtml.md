@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapeHTML
+[@technobuddha/library](../..) / [Modules](../Modules.md) / escapeHTML
 
 # Module: escapeHTML
 
@@ -35,4 +35,4 @@ Escape a string for use in HTML
 
 **Returns:** *string*
 
-Defined in: [src/escapeHTML.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapeHTML.ts#L15)
+Defined in: [src/escapeHTML.ts:15](../src/escapeHTML.ts#L15)

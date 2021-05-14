@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toDateLocaleString
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toDateLocaleString
 
 # Module: toDateLocaleString
 
@@ -32,4 +32,4 @@ Renames and exports: [toDateLocaleString](todatelocalestring.md#todatelocalestri
 
 **Returns:** *string* \| ``null``
 
-Defined in: [src/toDateLocaleString.ts:6](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toDateLocaleString.ts#L6)
+Defined in: [src/toDateLocaleString.ts:6](../src/toDateLocaleString.ts#L6)

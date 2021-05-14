@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toHumanCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toHumanCase
 
 # Module: toHumanCase
 
@@ -36,4 +36,4 @@ Convert an identifier string to human readable form
 
 the identifier in human readable form
 
-Defined in: [src/toHumanCase.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toHumanCase.ts#L12)
+Defined in: [src/toHumanCase.ts:12](../src/toHumanCase.ts#L12)

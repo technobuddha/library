@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toRadians
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toRadians
 
 # Module: toRadians
 
@@ -36,4 +36,4 @@ Converts degrees to radians.
 
 Angle in radians.
 
-Defined in: [src/toRadians.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toRadians.ts#L7)
+Defined in: [src/toRadians.ts:7](../src/toRadians.ts#L7)

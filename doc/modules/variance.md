@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / variance
+[@technobuddha/library](../..) / [Modules](../Modules.md) / variance
 
 # Module: variance
 
@@ -39,4 +39,4 @@ The unbiased sample variance of the arguments (0 if fewer
 than two samples were provided, or {@code NaN} if any of the samples is
 not a valid number).
 
-Defined in: [src/variance.ts:13](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/variance.ts#L13)
+Defined in: [src/variance.ts:13](../src/variance.ts#L13)

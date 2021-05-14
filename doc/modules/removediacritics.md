@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / removeDiacritics
+[@technobuddha/library](../..) / [Modules](../Modules.md) / removeDiacritics
 
 # Module: removeDiacritics
 
@@ -36,4 +36,4 @@ Remove all diacritics from a string
 
 string with diacritics removed
 
-Defined in: [src/removeDiacritics.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/removeDiacritics.ts#L11)
+Defined in: [src/removeDiacritics.ts:11](../src/removeDiacritics.ts#L11)

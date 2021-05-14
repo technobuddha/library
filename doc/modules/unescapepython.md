@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unescapePython
+[@technobuddha/library](../..) / [Modules](../Modules.md) / unescapePython
 
 # Module: unescapePython
 
@@ -36,4 +36,4 @@ Unescape a string encodeed in Python style
 
 the string with escapes resolved
 
-Defined in: [src/unescapePython.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/unescapePython.ts#L7)
+Defined in: [src/unescapePython.ts:7](../src/unescapePython.ts#L7)

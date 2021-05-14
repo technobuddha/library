@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / measure
+[@technobuddha/library](../..) / [Modules](../Modules.md) / measure
 
 # Module: measure
 
@@ -33,7 +33,7 @@ Renames and exports: [measure](measure.md#measure)
 | `scrollbarHeight` | *number* |
 | `scrollbarWidth` | *number* |
 
-Defined in: [src/measure.ts:8](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/measure.ts#L8)
+Defined in: [src/measure.ts:8](../src/measure.ts#L8)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 **Returns:** Size
 
-Defined in: [src/measure.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/measure.ts#L21)
+Defined in: [src/measure.ts:21](../src/measure.ts#L21)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 **Returns:** Size
 
-Defined in: [src/measure.ts:25](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/measure.ts#L25)
+Defined in: [src/measure.ts:25](../src/measure.ts#L25)

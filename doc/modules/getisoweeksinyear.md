@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getISOWeeksInYear
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getISOWeeksInYear
 
 # Module: getISOWeeksInYear
 
@@ -39,4 +39,4 @@ Determine the number of ISO weeks within a year
 
 The number of weeks in the year (52 or 53)
 
-Defined in: [src/getISOWeeksInYear.ts:21](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getISOWeeksInYear.ts#L21)
+Defined in: [src/getISOWeeksInYear.ts:21](../src/getISOWeeksInYear.ts#L21)

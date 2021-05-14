@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / extractDigits
+[@technobuddha/library](../..) / [Modules](../Modules.md) / extractDigits
 
 # Module: extractDigits
 
@@ -36,4 +36,4 @@ Remove all non-digit characters from a string
 
 digits from the string
 
-Defined in: [src/extractDigits.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/extractDigits.ts#L9)
+Defined in: [src/extractDigits.ts:9](../src/extractDigits.ts#L9)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / encodeUTF8
+[@technobuddha/library](../..) / [Modules](../Modules.md) / encodeUTF8
 
 # Module: encodeUTF8
 
@@ -36,4 +36,4 @@ Encode a unicode (UTF-16 encoded javascript) string into UTF8
 
 The UTF-8 encoded string
 
-Defined in: [src/encodeUTF8.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/encodeUTF8.ts#L9)
+Defined in: [src/encodeUTF8.ts:9](../src/encodeUTF8.ts#L9)

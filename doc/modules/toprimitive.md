@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toPrimitive
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toPrimitive
 
 # Module: toPrimitive
 
@@ -37,4 +37,4 @@ Convert an object into its primitive (string, number, etc.) value
 
 primitive value
 
-Defined in: [src/toPrimitive.ts:16](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toPrimitive.ts#L16)
+Defined in: [src/toPrimitive.ts:16](../src/toPrimitive.ts#L16)

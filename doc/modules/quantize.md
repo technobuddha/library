@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / quantize
+[@technobuddha/library](../..) / [Modules](../Modules.md) / quantize
 
 # Module: quantize
 
@@ -36,7 +36,7 @@ Renames and exports: [quantize](quantize.md#quantize)
 | `g` | *number* |
 | `r` | *number* |
 
-Defined in: [src/quantize.ts:28](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/quantize.ts#L28)
+Defined in: [src/quantize.ts:28](../src/quantize.ts#L28)
 
 ## Functions
 
@@ -53,4 +53,4 @@ Defined in: [src/quantize.ts:28](https://github.com/technobuddha/hill.software/b
 
 **Returns:** *undefined* \| *ColorMap*
 
-Defined in: [src/quantize.ts:293](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/quantize.ts#L293)
+Defined in: [src/quantize.ts:293](../src/quantize.ts#L293)

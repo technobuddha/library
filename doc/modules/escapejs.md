@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapeJS
+[@technobuddha/library](../..) / [Modules](../Modules.md) / escapeJS
 
 # Module: escapeJS
 
@@ -36,4 +36,4 @@ Escape a string for use in Javascript
 
 Sting escaped for Javascript
 
-Defined in: [src/escapeJS.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapeJS.ts#L10)
+Defined in: [src/escapeJS.ts:10](../src/escapeJS.ts#L10)

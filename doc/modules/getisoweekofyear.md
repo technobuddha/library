@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getISOWeekOfYear
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getISOWeekOfYear
 
 # Module: getISOWeekOfYear
 
@@ -46,4 +46,4 @@ Determine the ISO week number for a given date
 
 the week number (1-53)
 
-Defined in: [src/getISOWeekOfYear.ts:25](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getISOWeekOfYear.ts#L25)
+Defined in: [src/getISOWeekOfYear.ts:25](../src/getISOWeekOfYear.ts#L25)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / relativeTime
+[@technobuddha/library](../..) / [Modules](../Modules.md) / relativeTime
 
 # Module: relativeTime
 
@@ -37,7 +37,7 @@ Renames and exports: [relativeTime](relativetime.md#relativetime)
 | `todayTomorrowYesterday?` | *boolean* | Describe the time difference as a time on a nearby day |
 | `ymdFormat?` | *string* | Passed to {@link formatSate} to display a year, month and day |
 
-Defined in: [src/relativeTime.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/relativeTime.ts#L7)
+Defined in: [src/relativeTime.ts:7](../src/relativeTime.ts#L7)
 
 ## Functions
 
@@ -59,4 +59,4 @@ Describe the difference between two dates in a simpe format
 
 string describing the time difference between the two dates
 
-Defined in: [src/relativeTime.ts:26](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/relativeTime.ts#L26)
+Defined in: [src/relativeTime.ts:26](../src/relativeTime.ts#L26)

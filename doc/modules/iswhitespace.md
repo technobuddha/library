@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isWhitespace
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isWhitespace
 
 # Module: isWhitespace
 
@@ -36,4 +36,4 @@ Test a string for all white space characters
 
 true, if all characters in the string are white space
 
-Defined in: [src/isWhitespace.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isWhitespace.ts#L7)
+Defined in: [src/isWhitespace.ts:7](../src/isWhitespace.ts#L7)

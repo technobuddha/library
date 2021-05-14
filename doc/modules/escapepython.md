@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapePython
+[@technobuddha/library](../..) / [Modules](../Modules.md) / escapePython
 
 # Module: escapePython
 
@@ -36,4 +36,4 @@ Escape a string for use in Python
 
 the string escapes for use in python
 
-Defined in: [src/escapePython.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapePython.ts#L10)
+Defined in: [src/escapePython.ts:10](../src/escapePython.ts#L10)

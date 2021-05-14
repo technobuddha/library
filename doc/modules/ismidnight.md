@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isMidnight
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isMidnight
 
 # Module: isMidnight
 
@@ -37,4 +37,4 @@ Determine if a date is at midnight
 
 true, if the date is at midnight
 
-Defined in: [src/isMidnight.ts:13](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isMidnight.ts#L13)
+Defined in: [src/isMidnight.ts:13](../src/isMidnight.ts#L13)

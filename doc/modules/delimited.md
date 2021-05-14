@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / delimited
+[@technobuddha/library](../..) / [Modules](../Modules.md) / delimited
 
 # Module: delimited
 
@@ -37,4 +37,4 @@ Return a field from a delimited string
 
 **Returns:** *string*
 
-Defined in: [src/delimited.ts:11](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/delimited.ts#L11)
+Defined in: [src/delimited.ts:11](../src/delimited.ts#L11)

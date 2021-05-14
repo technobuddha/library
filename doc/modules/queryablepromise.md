@@ -1,3 +1,3 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / queryablePromise
+[@technobuddha/library](../..) / [Modules](../Modules.md) / queryablePromise
 
 # Module: queryablePromise

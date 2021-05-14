@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / indent
+[@technobuddha/library](../..) / [Modules](../Modules.md) / indent
 
 # Module: indent
 
@@ -39,4 +39,4 @@ Indent each line of a string
 
 string with each line indented
 
-Defined in: [src/indent.ts:14](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/indent.ts#L14)
+Defined in: [src/indent.ts:14](../src/indent.ts#L14)

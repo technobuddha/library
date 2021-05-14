@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isLeapYear
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isLeapYear
 
 # Module: isLeapYear
 
@@ -37,4 +37,4 @@ Determine if a year is a leap year
 
 true, if the specified year is a leap year
 
-Defined in: [src/isLeapYear.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isLeapYear.ts#L15)
+Defined in: [src/isLeapYear.ts:15](../src/isLeapYear.ts#L15)

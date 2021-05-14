@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / splitLines
+[@technobuddha/library](../..) / [Modules](../Modules.md) / splitLines
 
 # Module: splitLines
 
@@ -36,4 +36,4 @@ Split a string into an array of lines
 
 array of lines
 
-Defined in: [src/splitLines.ts:9](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/splitLines.ts#L9)
+Defined in: [src/splitLines.ts:9](../src/splitLines.ts#L9)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / correctMSWord
+[@technobuddha/library](../..) / [Modules](../Modules.md) / correctMSWord
 
 # Module: correctMSWord
 
@@ -36,4 +36,4 @@ Correct character sequeces that Microsoft Word changes to make it look prettier
 
 string with special characters corrected
 
-Defined in: [src/correctMSWord.ts:37](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/correctMSWord.ts#L37)
+Defined in: [src/correctMSWord.ts:37](../src/correctMSWord.ts#L37)

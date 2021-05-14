@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / groupCode
+[@technobuddha/library](../..) / [Modules](../Modules.md) / groupCode
 
 # Module: groupCode
 
@@ -40,4 +40,4 @@ under #.
 
 The group code
 
-Defined in: [src/groupCode.ts:14](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/groupCode.ts#L14)
+Defined in: [src/groupCode.ts:14](../src/groupCode.ts#L14)

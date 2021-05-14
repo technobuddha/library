@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / create2DArray
+[@technobuddha/library](../..) / [Modules](../Modules.md) / create2DArray
 
 # Module: create2DArray
 
@@ -44,4 +44,4 @@ Create a two dimensional array with all elements initialized
 
 **Returns:** T[][]
 
-Defined in: [src/create2DArray.ts:12](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/create2DArray.ts#L12)
+Defined in: [src/create2DArray.ts:12](../src/create2DArray.ts#L12)

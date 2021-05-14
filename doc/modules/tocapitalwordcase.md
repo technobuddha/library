@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toCapitalWordCase
+[@technobuddha/library](../..) / [Modules](../Modules.md) / toCapitalWordCase
 
 # Module: toCapitalWordCase
 
@@ -37,4 +37,4 @@ Capitalize the first letter of each word in a string
 
 **Returns:** *string*
 
-Defined in: [src/toCapitalWordCase.ts:13](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/toCapitalWordCase.ts#L13)
+Defined in: [src/toCapitalWordCase.ts:13](../src/toCapitalWordCase.ts#L13)

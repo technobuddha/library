@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / indefiniteArticle
+[@technobuddha/library](../..) / [Modules](../Modules.md) / indefiniteArticle
 
 # Module: indefiniteArticle
 
@@ -44,4 +44,4 @@ all
 The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
 option is used, only the indefinite article is returned.
 
-Defined in: [src/indefiniteArticle.ts:35](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/indefiniteArticle.ts#L35)
+Defined in: [src/indefiniteArticle.ts:35](../src/indefiniteArticle.ts#L35)

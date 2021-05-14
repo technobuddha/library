@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / singleline
+[@technobuddha/library](../..) / [Modules](../Modules.md) / singleline
 
 # Module: singleline
 
@@ -33,4 +33,4 @@ Renames and exports: [singleline](singleline.md#singleline)
 
 **Returns:** *string*
 
-Defined in: [src/singleline.ts:4](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/singleline.ts#L4)
+Defined in: [src/singleline.ts:4](../src/singleline.ts#L4)

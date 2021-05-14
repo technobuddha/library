@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / collapseBreakingspace
+[@technobuddha/library](../..) / [Modules](../Modules.md) / collapseBreakingspace
 
 # Module: collapseBreakingspace
 
@@ -34,7 +34,7 @@ Renames and exports: [collapseBreakingspace](collapsebreakingspace.md#collapsebr
 | :------ | :------ | :------ |
 | `trim?` | *boolean* | If true, trim |
 
-Defined in: [src/collapseBreakingspace.ts:4](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/collapseBreakingspace.ts#L4)
+Defined in: [src/collapseBreakingspace.ts:4](../src/collapseBreakingspace.ts#L4)
 
 ## Functions
 
@@ -53,4 +53,4 @@ Replace all breaking space (space, tab, carriage return, new line) with a single
 
 **Returns:** *string*
 
-Defined in: [src/collapseBreakingspace.ts:15](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/collapseBreakingspace.ts#L15)
+Defined in: [src/collapseBreakingspace.ts:15](../src/collapseBreakingspace.ts#L15)

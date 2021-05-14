@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getIndent
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getIndent
 
 # Module: getIndent
 
@@ -39,4 +39,4 @@ Determine the indentation level of text
 
 The minimum amount of indentation on each line
 
-Defined in: [src/getIndent.ts:18](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getIndent.ts#L18)
+Defined in: [src/getIndent.ts:18](../src/getIndent.ts#L18)

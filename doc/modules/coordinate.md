@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / coordinate
+[@technobuddha/library](../..) / [Modules](../Modules.md) / coordinate
 
 # Module: coordinate
 
@@ -36,7 +36,7 @@ Renames and exports: [coordinate](coordinate.md#coordinate)
 | `oxford?` | *boolean* | If true, use the oxford comma |
 | `separator?` | *string* | String used to separate values (default ',') |
 
-Defined in: [src/coordinate.ts:4](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/coordinate.ts#L4)
+Defined in: [src/coordinate.ts:4](../src/coordinate.ts#L4)
 
 ## Functions
 
@@ -61,4 +61,4 @@ Create a string from an array, separating values and inserting a conjunction
 
 **Returns:** *string*
 
-Defined in: [src/coordinate.ts:19](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/coordinate.ts#L19)
+Defined in: [src/coordinate.ts:19](../src/coordinate.ts#L19)

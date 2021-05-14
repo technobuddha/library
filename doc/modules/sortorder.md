@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / sortOrder
+[@technobuddha/library](../..) / [Modules](../Modules.md) / sortOrder
 
 # Module: sortOrder
 
@@ -39,4 +39,4 @@ Convert a string into a sortable string
 
 sortable string
 
-Defined in: [src/sortOrder.ts:18](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/sortOrder.ts#L18)
+Defined in: [src/sortOrder.ts:18](../src/sortOrder.ts#L18)

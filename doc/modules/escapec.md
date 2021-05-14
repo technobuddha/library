@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapeC
+[@technobuddha/library](../..) / [Modules](../Modules.md) / escapeC
 
 # Module: escapeC
 
@@ -36,4 +36,4 @@ Escape a string for use in C/C++
 
 the escaped string
 
-Defined in: [src/escapeC.ts:10](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/escapeC.ts#L10)
+Defined in: [src/escapeC.ts:10](../src/escapeC.ts#L10)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isNegativeZero
+[@technobuddha/library](../..) / [Modules](../Modules.md) / isNegativeZero
 
 # Module: isNegativeZero
 
@@ -36,4 +36,4 @@ Tests to see if the specified value is negative zero
 
 true is the number is negative zero
 
-Defined in: [src/isNegativeZero.ts:7](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/isNegativeZero.ts#L7)
+Defined in: [src/isNegativeZero.ts:7](../src/isNegativeZero.ts#L7)

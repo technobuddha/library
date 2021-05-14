@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getOccurrenceInMonth
+[@technobuddha/library](../..) / [Modules](../Modules.md) / getOccurrenceInMonth
 
 # Module: getOccurrenceInMonth
 
@@ -41,4 +41,4 @@ Determine the date of an occurrence of a weekday within a month
 
 A date object corresponding to the occurrence requested, or null if no such date exists in the month
 
-Defined in: [src/getOccurrenceInMonth.ts:23](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/getOccurrenceInMonth.ts#L23)
+Defined in: [src/getOccurrenceInMonth.ts:23](../src/getOccurrenceInMonth.ts#L23)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / formatNumber
+[@technobuddha/library](../..) / [Modules](../Modules.md) / formatNumber
 
 # Module: formatNumber
 
@@ -33,4 +33,4 @@ Renames and exports: [formatNumber](formatnumber.md#formatnumber)
 
 **Returns:** *string*
 
-Defined in: [src/formatNumber.ts:287](https://github.com/technobuddha/hill.software/blob/693f679/packages/library/src/formatNumber.ts#L287)
+Defined in: [src/formatNumber.ts:287](../src/formatNumber.ts#L287)

@@ -126,7 +126,11 @@ for(const file of glob.sync('doc/*/*.md')) {
         file,
         contents.replace(
             '[@technobuddha/library](../README.md)',
-            '[@technobuddha/library](../../README.md) / [Modules](../Modules.md)'
+            '[@technobuddha/library](../..) / [Modules](../Modules.md)'
+        )
+        .replace(
+            /https:\/\/github.com\/technobuddha\/hill\.software\/blob\/[0-9a-f]+\/packages\/library/ug,
+            '..'
         )
     );
 }
