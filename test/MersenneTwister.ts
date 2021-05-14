@@ -1,5 +1,5 @@
 import expect from '../util/expect';
-import MersenneTwister  from '../src/mersenne-twister';
+import MersenneTwister  from '../src/MersenneTwister';
 
 describe(
     'MersenneTwister',
