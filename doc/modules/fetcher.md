@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / fetcher
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / fetcher
 
 # Module: fetcher
 
@@ -57,4 +57,4 @@ Fetch a remote resource
 
 **Returns:** *Promise*<Response\>
 
-Defined in: [packages/library/src/fetcher.ts:23](../../src/fetcher.ts#L23)
+Defined in: [fetcher.ts:23](../../src/fetcher.ts#L23)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / ensureSuffix
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / ensureSuffix
 
 # Module: ensureSuffix
 

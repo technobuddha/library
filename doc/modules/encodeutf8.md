@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / encodeUTF8
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / encodeUTF8
 
 # Module: encodeUTF8
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / escapeGraphQL
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapeGraphQL
 
 # Module: escapeGraphQL
 

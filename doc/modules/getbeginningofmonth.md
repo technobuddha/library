@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / getBeginningOfMonth
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getBeginningOfMonth
 
 # Module: getBeginningOfMonth
 

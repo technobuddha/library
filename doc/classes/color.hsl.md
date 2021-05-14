@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / [color](../modules/color.md) / HSL
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [color](../modules/color.md) / HSL
 
 # Class: HSL
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*RGB*](color.rgb.md)
 
-Defined in: [packages/library/src/color.ts:112](../../src/color.ts#L112)
+Defined in: [color.ts:112](../../src/color.ts#L112)

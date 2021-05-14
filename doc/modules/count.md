@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / count
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / count
 
 # Module: count
 
@@ -56,4 +56,4 @@ Compute the number of times a substring occors within a string
 
 number of times *substring* occurs within *input*
 
-Defined in: [packages/library/src/count.ts:14](../../src/count.ts#L14)
+Defined in: [count.ts:14](../../src/count.ts#L14)

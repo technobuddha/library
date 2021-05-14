@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / clearObject
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / clearObject
 
 # Module: clearObject
 

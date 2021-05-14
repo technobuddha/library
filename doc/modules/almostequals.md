@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / almostEquals
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / almostEquals
 
 # Module: almostEquals
 
@@ -59,4 +59,4 @@ tolerance, taking into account floating point errors (numbers within EPSILON).
 
 true if *a* and *b* are nearly equal.
 
-Defined in: [packages/library/src/almostEquals.ts:16](../../src/almostEquals.ts#L16)
+Defined in: [almostEquals.ts:16](../../src/almostEquals.ts#L16)

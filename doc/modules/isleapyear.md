@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / isLeapYear
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isLeapYear
 
 # Module: isLeapYear
 

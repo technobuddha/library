@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / splitWords
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / splitWords
 
 # Module: splitWords
 

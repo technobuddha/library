@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / [fetcher](../modules/fetcher.md) / TimeoutError
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [fetcher](../modules/fetcher.md) / TimeoutError
 
 # Class: TimeoutError
 

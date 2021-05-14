@@ -2,10 +2,9 @@
     "extends": "../tsconfig.json",
     "compilerOptions": {
       "target": "esnext",
-      "lib": [ "dom", "esnext" ],
-      "noEmit": true,     
+      "lib": [ "esnext" ],
+      "noEmit": true,
       "types": [ "node" ],
     },
     "include": [ "*.ts" ],
 }
-  

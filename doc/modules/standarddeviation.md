@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / standardDeviation
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / standardDeviation
 
 # Module: standardDeviation
 

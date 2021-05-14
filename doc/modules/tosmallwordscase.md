@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toSmallWordsCase
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toSmallWordsCase
 
 # Module: toSmallWordsCase
 
@@ -57,4 +57,4 @@ Convert the first letter of each word in a string to lower case
 
 string in small case
 
-Defined in: [packages/library/src/toSmallWordsCase.ts:13](../../src/toSmallWordsCase.ts#L13)
+Defined in: [toSmallWordsCase.ts:13](../../src/toSmallWordsCase.ts#L13)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / json
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / json
 
 # Module: json
 
@@ -68,4 +68,4 @@ Used with JSON.parse to decode objected encoded by [replacer](json.md#replacer)
 
 the decoded value
 
-Defined in: [packages/library/src/json.ts:38](../../src/json.ts#L38)
+Defined in: [json.ts:38](../../src/json.ts#L38)

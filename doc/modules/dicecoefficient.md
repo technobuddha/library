@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / diceCoefficient
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / diceCoefficient
 
 # Module: diceCoefficient
 

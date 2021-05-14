@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / [color](../modules/color.md) / XYZ
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [color](../modules/color.md) / XYZ
 
 # Class: XYZ
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*LAB*](color.lab.md)
 
-Defined in: [packages/library/src/color.ts:183](../../src/color.ts#L183)
+Defined in: [color.ts:183](../../src/color.ts#L183)

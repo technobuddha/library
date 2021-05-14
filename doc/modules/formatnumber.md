@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / formatNumber
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / formatNumber
 
 # Module: formatNumber
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / plural
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / plural
 
 # Module: plural
 

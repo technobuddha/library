@@ -10,5 +10,5 @@
       "types": [ "jest", "node" ],
       "resolveJsonModule": false,
     },
-    "include": [ "*.ts", ".escape.ts" ],
+    "include": [ "*.ts", "_escape.ts" ],
   }

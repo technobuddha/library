@@ -1,6 +1,6 @@
 {
     "entryPoints": "src",
-    "exclude": [ "tests", "doc", "src/.*.ts" ],
+    "exclude": [ "tests", "doc", "src/_*.ts", "src/index.ts" ],
     "tsconfig": "src/tsconfig.json",
     "out": "doc",
     "readme": "none",

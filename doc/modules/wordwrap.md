@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / wordwrap
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / wordwrap
 
 # Module: wordwrap
 

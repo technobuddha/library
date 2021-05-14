@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / quantize
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / quantize
 
 # Module: quantize
 
@@ -53,4 +53,4 @@ Defined in: [quantize.ts:28](../../src/quantize.ts#L28)
 
 **Returns:** *undefined* \| *ColorMap*
 
-Defined in: [packages/library/src/quantize.ts:293](../../src/quantize.ts#L293)
+Defined in: [quantize.ts:293](../../src/quantize.ts#L293)

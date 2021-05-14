@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toTimestamp
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toTimestamp
 
 # Module: toTimestamp
 

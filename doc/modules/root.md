@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / root
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / root
 
 # Module: root
 
@@ -56,4 +56,4 @@ Extract the root word, removing a prefix and/or suffix
 
 The root word
 
-Defined in: [packages/library/src/root.ts:17](../../src/root.ts#L17)
+Defined in: [root.ts:17](../../src/root.ts#L17)

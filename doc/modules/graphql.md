@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / graphQL
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / graphQL
 
 # Module: graphQL
 
@@ -45,4 +45,4 @@ Defined in: [graphQL.ts:15](../../src/graphQL.ts#L15)
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/graphQL.ts:16](../../src/graphQL.ts#L16)
+Defined in: [graphQL.ts:16](../../src/graphQL.ts#L16)

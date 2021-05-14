@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / collapseBreakingspace
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / collapseBreakingspace
 
 # Module: collapseBreakingspace
 
@@ -53,4 +53,4 @@ Replace all breaking space (space, tab, carriage return, new line) with a single
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/collapseBreakingspace.ts:15](../../src/collapseBreakingspace.ts#L15)
+Defined in: [collapseBreakingspace.ts:15](../../src/collapseBreakingspace.ts#L15)

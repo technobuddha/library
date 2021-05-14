@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / getDayOfWeek
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getDayOfWeek
 
 # Module: getDayOfWeek
 

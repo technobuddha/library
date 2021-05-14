@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / color
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / color
 
 # Module: color
 

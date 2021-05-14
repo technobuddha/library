@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / cookie
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / cookie
 
 # Module: cookie
 
@@ -68,7 +68,7 @@ Delete a cookie
 
 **Returns:** *void*
 
-Defined in: [packages/library/src/cookie.ts:71](../../src/cookie.ts#L71)
+Defined in: [cookie.ts:71](../../src/cookie.ts#L71)
 
 ___
 
@@ -86,7 +86,7 @@ Get the value of a cookie
 
 **Returns:** *string* \| *undefined*
 
-Defined in: [packages/library/src/cookie.ts:31](../../src/cookie.ts#L31)
+Defined in: [cookie.ts:31](../../src/cookie.ts#L31)
 
 ___
 
@@ -100,7 +100,7 @@ Get the names of all cookies
 
 array of cookie names
 
-Defined in: [packages/library/src/cookie.ts:41](../../src/cookie.ts#L41)
+Defined in: [cookie.ts:41](../../src/cookie.ts#L41)
 
 ___
 
@@ -118,4 +118,4 @@ Parse a string containing cookies for use by other cookie method
 
 **Returns:** *void*
 
-Defined in: [packages/library/src/cookie.ts:18](../../src/cookie.ts#L18)
+Defined in: [cookie.ts:18](../../src/cookie.ts#L18)

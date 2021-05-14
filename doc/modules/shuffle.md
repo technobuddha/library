@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / shuffle
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / shuffle
 
 # Module: shuffle
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / getEndOfYear
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getEndOfYear
 
 # Module: getEndOfYear
 

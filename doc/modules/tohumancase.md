@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toHumanCase
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toHumanCase
 
 # Module: toHumanCase
 

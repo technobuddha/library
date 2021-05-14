@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / possessive
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / possessive
 
 # Module: possessive
 

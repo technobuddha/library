@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / ensurePrefix
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / ensurePrefix
 
 # Module: ensurePrefix
 

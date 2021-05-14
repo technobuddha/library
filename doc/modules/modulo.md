@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / modulo
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / modulo
 
 # Module: modulo
 

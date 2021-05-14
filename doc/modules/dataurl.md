@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / dataURL
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / dataURL
 
 # Module: dataURL
 
@@ -49,4 +49,4 @@ Convert any binary object into a data URL
 
 The data URL
 
-Defined in: [packages/library/src/dataURL.ts:24](../../src/dataURL.ts#L24)
+Defined in: [dataURL.ts:24](../../src/dataURL.ts#L24)

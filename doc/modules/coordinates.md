@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / coordinates
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / coordinates
 
 # Module: coordinates
 
@@ -37,4 +37,4 @@ ___
 | `angle` | *number* |
 | `radius` | *number* |
 
-Defined in: [packages/library/src/coordinates.ts:6](../../src/coordinates.ts#L6)
+Defined in: [coordinates.ts:6](../../src/coordinates.ts#L6)

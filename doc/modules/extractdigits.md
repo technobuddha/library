@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / extractDigits
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / extractDigits
 
 # Module: extractDigits
 

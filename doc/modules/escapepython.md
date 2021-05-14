@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / escapePython
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / escapePython
 
 # Module: escapePython
 

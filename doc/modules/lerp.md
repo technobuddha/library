@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / lerp
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / lerp
 
 # Module: lerp
 

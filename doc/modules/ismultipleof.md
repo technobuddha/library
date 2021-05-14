@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / isMultipleOf
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isMultipleOf
 
 # Module: isMultipleOf
 

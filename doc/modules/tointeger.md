@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toInteger
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toInteger
 
 # Module: toInteger
 

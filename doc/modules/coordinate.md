@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / coordinate
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / coordinate
 
 # Module: coordinate
 
@@ -61,4 +61,4 @@ Create a string from an array, separating values and inserting a conjunction
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/coordinate.ts:19](../../src/coordinate.ts#L19)
+Defined in: [coordinate.ts:19](../../src/coordinate.ts#L19)

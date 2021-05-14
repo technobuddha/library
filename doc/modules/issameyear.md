@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / isSameYear
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isSameYear
 
 # Module: isSameYear
 

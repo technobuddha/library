@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / MersenneTwister
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / MersenneTwister
 
 # Module: MersenneTwister
 

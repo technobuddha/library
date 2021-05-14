@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / unicodeLength
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unicodeLength
 
 # Module: unicodeLength
 

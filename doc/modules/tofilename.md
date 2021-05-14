@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toFilename
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toFilename
 
 # Module: toFilename
 
@@ -66,4 +66,4 @@ Convert a string so that it can be used as a filename
 
 the tfile name
 
-Defined in: [packages/library/src/toFilename.ts:30](../../src/toFilename.ts#L30)
+Defined in: [toFilename.ts:30](../../src/toFilename.ts#L30)

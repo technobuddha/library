@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / getISOWeekOfYear
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getISOWeekOfYear
 
 # Module: getISOWeekOfYear
 

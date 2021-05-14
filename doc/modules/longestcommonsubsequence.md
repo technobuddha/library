@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / longestCommonSubsequence
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / longestCommonSubsequence
 
 # Module: longestCommonSubsequence
 
@@ -78,4 +78,4 @@ A list of objects that are common to both arrays
 such that there is no common subsequence with size greater than the
 length of the list.
 
-Defined in: [packages/library/src/longestCommonSubsequence.ts:34](../../src/longestCommonSubsequence.ts#L34)
+Defined in: [longestCommonSubsequence.ts:34](../../src/longestCommonSubsequence.ts#L34)

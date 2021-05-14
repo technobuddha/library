@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / [color](../modules/color.md) / RGB
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [color](../modules/color.md) / RGB
 
 # Class: RGB
 
@@ -74,7 +74,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [packages/library/src/color.ts:9](../../src/color.ts#L9)
+Defined in: [color.ts:9](../../src/color.ts#L9)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 **Returns:** [*HSL*](color.hsl.md)
 
-Defined in: [packages/library/src/color.ts:19](../../src/color.ts#L19)
+Defined in: [color.ts:19](../../src/color.ts#L19)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 **Returns:** [*HSV*](color.hsv.md)
 
-Defined in: [packages/library/src/color.ts:53](../../src/color.ts#L53)
+Defined in: [color.ts:53](../../src/color.ts#L53)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 **Returns:** [*LAB*](color.lab.md)
 
-Defined in: [packages/library/src/color.ts:102](../../src/color.ts#L102)
+Defined in: [color.ts:102](../../src/color.ts#L102)
 
 ___
 
@@ -114,4 +114,4 @@ ___
 
 **Returns:** [*XYZ*](color.xyz.md)
 
-Defined in: [packages/library/src/color.ts:86](../../src/color.ts#L86)
+Defined in: [color.ts:86](../../src/color.ts#L86)

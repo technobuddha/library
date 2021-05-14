@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / [color](../modules/color.md) / HSV
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [color](../modules/color.md) / HSV
 
 # Class: HSV
 
@@ -64,4 +64,4 @@ ___
 
 **Returns:** [*RGB*](color.rgb.md)
 
-Defined in: [packages/library/src/color.ts:139](../../src/color.ts#L139)
+Defined in: [color.ts:139](../../src/color.ts#L139)

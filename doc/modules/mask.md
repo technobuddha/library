@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / mask
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / mask
 
 # Module: mask
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toCapitalCase
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toCapitalCase
 
 # Module: toCapitalCase
 
@@ -55,4 +55,4 @@ Capitalize the first letter of a string
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/toCapitalCase.ts:12](../../src/toCapitalCase.ts#L12)
+Defined in: [toCapitalCase.ts:12](../../src/toCapitalCase.ts#L12)

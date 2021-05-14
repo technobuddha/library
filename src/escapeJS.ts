@@ -1,5 +1,5 @@
 import build from './build';
-import { oct, hex, x2, u4, UU } from './.escape';
+import { oct, hex, x2, u4, UU } from './_escape';
 
 /**
  * Escape a string for use in Javascript

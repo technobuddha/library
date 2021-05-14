@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / crc32
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / crc32
 
 # Module: crc32
 

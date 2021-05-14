@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / normalizeAngle
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / normalizeAngle
 
 # Module: normalizeAngle
 

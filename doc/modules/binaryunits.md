@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / binaryUnits
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / binaryUnits
 
 # Module: binaryUnits
 
@@ -47,4 +47,4 @@ Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 => 1K)
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/binaryUnits.ts:12](../../src/binaryUnits.ts#L12)
+Defined in: [binaryUnits.ts:12](../../src/binaryUnits.ts#L12)

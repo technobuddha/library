@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / [color](../modules/color.md) / LAB
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / [color](../modules/color.md) / LAB
 
 # Class: LAB
 
@@ -74,7 +74,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [packages/library/src/color.ts:216](../../src/color.ts#L216)
+Defined in: [color.ts:216](../../src/color.ts#L216)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [packages/library/src/color.ts:231](../../src/color.ts#L231)
+Defined in: [color.ts:231](../../src/color.ts#L231)
 
 ___
 
@@ -106,7 +106,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [packages/library/src/color.ts:235](../../src/color.ts#L235)
+Defined in: [color.ts:235](../../src/color.ts#L235)
 
 ___
 
@@ -122,7 +122,7 @@ ___
 
 **Returns:** *number*
 
-Defined in: [packages/library/src/color.ts:258](../../src/color.ts#L258)
+Defined in: [color.ts:258](../../src/color.ts#L258)
 
 ___
 
@@ -132,4 +132,4 @@ ___
 
 **Returns:** [*XYZ*](color.xyz.md)
 
-Defined in: [packages/library/src/color.ts:397](../../src/color.ts#L397)
+Defined in: [color.ts:397](../../src/color.ts#L397)

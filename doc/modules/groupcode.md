@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / groupCode
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / groupCode
 
 # Module: groupCode
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / randomPick
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / randomPick
 
 # Module: randomPick
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / removeDiacritics
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / removeDiacritics
 
 # Module: removeDiacritics
 

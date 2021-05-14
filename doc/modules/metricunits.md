@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / metricUnits
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / metricUnits
 
 # Module: metricUnits
 
@@ -58,4 +58,4 @@ Abbreviate a number by adding a suffix for metric units (i.e. 1000 => 1K, .0001 
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/metricUnits.ts:39](../../src/metricUnits.ts#L39)
+Defined in: [metricUnits.ts:39](../../src/metricUnits.ts#L39)

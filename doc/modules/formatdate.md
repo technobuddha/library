@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / formatDate
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / formatDate
 
 # Module: formatDate
 

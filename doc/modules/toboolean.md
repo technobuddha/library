@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toBoolean
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toBoolean
 
 # Module: toBoolean
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / angleBetweenPoints
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / angleBetweenPoints
 
 # Module: angleBetweenPoints
 

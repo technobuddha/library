@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toDateLocaleString
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toDateLocaleString
 
 # Module: toDateLocaleString
 

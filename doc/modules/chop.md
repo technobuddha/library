@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / chop
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / chop
 
 # Module: chop
 
@@ -56,4 +56,4 @@ Break a string into equal sized segments of characters
 
 Array of segments
 
-Defined in: [packages/library/src/chop.ts:16](../../src/chop.ts#L16)
+Defined in: [chop.ts:16](../../src/chop.ts#L16)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / correctMSWord
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / correctMSWord
 
 # Module: correctMSWord
 

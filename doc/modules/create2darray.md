@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / create2DArray
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / create2DArray
 
 # Module: create2DArray
 

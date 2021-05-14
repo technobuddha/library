@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / clean
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / clean
 
 # Module: clean
 
@@ -56,7 +56,7 @@ Remove all occurrences of characters from the end of the string
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/clean.ts:33](../../src/clean.ts#L33)
+Defined in: [clean.ts:33](../../src/clean.ts#L33)
 
 ___
 
@@ -75,4 +75,4 @@ Remove all occurrences of characters from the start of the string
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/clean.ts:51](../../src/clean.ts#L51)
+Defined in: [clean.ts:51](../../src/clean.ts#L51)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / measure
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / measure
 
 # Module: measure
 
@@ -49,7 +49,7 @@ ___
 
 **Returns:** Size
 
-Defined in: [packages/library/src/measure.ts:21](../../src/measure.ts#L21)
+Defined in: [measure.ts:21](../../src/measure.ts#L21)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 **Returns:** Size
 
-Defined in: [packages/library/src/measure.ts:25](../../src/measure.ts#L25)
+Defined in: [measure.ts:25](../../src/measure.ts#L25)

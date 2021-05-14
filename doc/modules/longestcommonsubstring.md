@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / longestCommonSubstring
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / longestCommonSubstring
 
 # Module: longestCommonSubstring
 

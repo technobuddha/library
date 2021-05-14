@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toASCII
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toASCII
 
 # Module: toASCII
 

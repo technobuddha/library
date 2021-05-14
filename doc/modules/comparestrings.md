@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / compareStrings
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / compareStrings
 
 # Module: compareStrings
 

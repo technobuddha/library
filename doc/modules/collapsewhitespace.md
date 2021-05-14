@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / collapseWhitespace
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / collapseWhitespace
 
 # Module: collapseWhitespace
 
@@ -53,4 +53,4 @@ Replace all whitespace within a string with a single space
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/collapseWhitespace.ts:15](../../src/collapseWhitespace.ts#L15)
+Defined in: [collapseWhitespace.ts:15](../../src/collapseWhitespace.ts#L15)

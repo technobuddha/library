@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / getDaysInMonth
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / getDaysInMonth
 
 # Module: getDaysInMonth
 

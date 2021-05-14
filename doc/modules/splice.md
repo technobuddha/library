@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / splice
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / splice
 
 # Module: splice
 

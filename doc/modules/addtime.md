@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / addTime
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / addTime
 
 # Module: addTime
 
@@ -63,4 +63,4 @@ Add units of time to a Date
 
 Adjusted date.
 
-Defined in: [packages/library/src/addTime.ts:20](../../src/addTime.ts#L20)
+Defined in: [addTime.ts:20](../../src/addTime.ts#L20)

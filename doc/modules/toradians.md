@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toRadians
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toRadians
 
 # Module: toRadians
 

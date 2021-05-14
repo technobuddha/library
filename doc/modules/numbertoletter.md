@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / numberToLetter
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / numberToLetter
 
 # Module: numberToLetter
 

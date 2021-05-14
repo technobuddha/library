@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / relativeTime
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / relativeTime
 
 # Module: relativeTime
 
@@ -59,4 +59,4 @@ Describe the difference between two dates in a simpe format
 
 string describing the time difference between the two dates
 
-Defined in: [packages/library/src/relativeTime.ts:26](../../src/relativeTime.ts#L26)
+Defined in: [relativeTime.ts:26](../../src/relativeTime.ts#L26)

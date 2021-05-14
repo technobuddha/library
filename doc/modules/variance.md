@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / variance
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / variance
 
 # Module: variance
 

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / unindent
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / unindent
 
 # Module: unindent
 
@@ -53,4 +53,4 @@ Remove indentation from text
 
 **Returns:** *string*
 
-Defined in: [packages/library/src/unindent.ts:16](../../src/unindent.ts#L16)
+Defined in: [unindent.ts:16](../../src/unindent.ts#L16)

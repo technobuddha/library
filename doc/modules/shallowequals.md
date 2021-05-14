@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / shallowEquals
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / shallowEquals
 
 # Module: shallowEquals
 

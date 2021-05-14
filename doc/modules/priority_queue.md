@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / priority-queue
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / priority-queue
 
 # Module: priority-queue
 

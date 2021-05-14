@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / levenshteinDistance
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / levenshteinDistance
 
 # Module: levenshteinDistance
 

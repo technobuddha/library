@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / isWhitespace
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / isWhitespace
 
 # Module: isWhitespace
 

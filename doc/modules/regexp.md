@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / regexp
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / regexp
 
 # Module: regexp
 
@@ -46,7 +46,7 @@ ___
 
 validate a ISO formatted date
 
-Defined in: [packages/library/src/regexp.ts:3](../../src/regexp.ts#L3)
+Defined in: [regexp.ts:3](../../src/regexp.ts#L3)
 
 ___
 
@@ -56,4 +56,4 @@ ___
 
 validate a valid number
 
-Defined in: [packages/library/src/regexp.ts:6](../../src/regexp.ts#L6)
+Defined in: [regexp.ts:6](../../src/regexp.ts#L6)

@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / toDashCase
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / toDashCase
 
 # Module: toDashCase
 

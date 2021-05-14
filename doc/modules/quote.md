@@ -1,4 +1,4 @@
-[@technobuddha/library](../..) / [Modules](../Modules.md) / quote
+[@technobuddha/library](../../README.md) / [Modules](../Modules.md) / quote
 
 # Module: quote
 
@@ -60,4 +60,4 @@ Surround text with quotes
 
 text surrounded by quotes
 
-Defined in: [packages/library/src/quote.ts:22](../../src/quote.ts#L22)
+Defined in: [quote.ts:22](../../src/quote.ts#L22)
