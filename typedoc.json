@@ -1,6 +1,9 @@
 {
-    "exclude": ["tests", "doc"],
+    "entryPoints": "src",
+    "exclude": [ "tests", "doc", "src/.*.ts" ],
+    "tsconfig": "src/tsconfig.json",
     "out": "doc",
+    "readme": "README.md",
     "excludePrivate": true,
     "plugin": true
 }

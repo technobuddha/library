@@ -1,13 +1,13 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "A large library of useful functions",
   "keywords": [
     "miscellaneous"
   ],
-  "homepage": "https://github.com/technobuddha/library#readme",
+  "homepage": "https://github.com/technobuddha/hill.software/tree/main/packages/library#technobuddhalibrary",
   "bugs": {
-    "url": "https://github.com/technobuddha/library/issues",
+    "url": "https://github.com/technobuddha/hill.software/issues",
     "email": "phil@technobuddha.com"
   },
   "license": "MIT",
@@ -55,6 +55,7 @@
     "ts-jest": "^26.5.0",
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.19",
+    "typedoc-plugin-markdown": "^3.8.1",
     "typescript": "^4.1.3"
   },
   "publishConfig": {

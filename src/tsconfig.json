@@ -2,7 +2,7 @@
     "extends": "../tsconfig.json",
     "compilerOptions": {
       "target": "esnext",
-      "lib": [ "dom", "esnext" ],     
+      "lib": [ "dom", "esnext" ],
       "declaration": true,
       "outDir": "../dist",
       "rootDir": ".",
@@ -10,6 +10,5 @@
       "types": [ "jest", "node" ],
       "resolveJsonModule": false,
     },
-    "include": [ "*.ts" ],
+    "include": [ "*.ts", ".escape.ts" ],
   }
-  

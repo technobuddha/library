@@ -2,6 +2,9 @@
 import process                      from 'process';
 import chalk                        from 'chalk';
 import shell                        from 'shelljs';
+import { empty }                    from '../src/constants';
+import splitLines                   from '../src/splitLines';
+import compareStrings               from '../src/compareStrings';
 import metricUnits                  from '../src/metricUnits';
 import glob                         from 'glob';
 import path                         from 'path';
@@ -47,7 +50,9 @@ function finish() {
     out(chalk.cyanBright(`${metricUnits(clock, { format: '##0.00', pad: 6 })}s\n`));
 }
 
-const pj     = JSON.parse(fs.readFileSync('package.json').toString()) as PackageJson;
+type PackageJsonTypescript = PackageJson & { typescript?: string };
+
+const pj     = JSON.parse(fs.readFileSync('package.json').toString()) as PackageJsonTypescript;
 const pjName = pj.name ?? '@technobuddha/library';
 
 pj.scripts = {};
@@ -55,8 +60,8 @@ delete pj.devDependencies;
 delete pj.publishConfig;
 
 start('Cleaning');
-run(shell.rm('-rf', 'dist'));
-run(shell.mkdir('dist'));
+run(shell.rm('-rf', 'dist', 'doc'));
+run(shell.mkdir('dist', 'doc'));
 finish();
 
 start('Compiling', 'es5');
@@ -98,6 +103,29 @@ for(const file of glob.sync('dist/**/*.*s')) {
 }
 finish();
 
+start('Generating', 'doc');
+run(shell.exec('npx typedoc > /dev/null'));
+const readme        = splitLines(fs.readFileSync('doc/modules.md', { encoding: 'utf8' }));
+const toc: string[] = [];
+
+readme.splice(0, 8);
+
+toc.push(
+    '[@technobuddha/library](README.md) / Exports',
+    empty,
+    '## Table of contents',
+    empty,
+    '### Modules',
+    ...readme.sort((a, b) => compareStrings(a, b, { caseInsensitive: true })),
+    empty
+);
+fs.writeFileSync('dist/modules.md', toc.join('\n'));
+shell.mv('-f', [ 'doc/modules', 'doc/classes' ], 'dist');
+fs.copyFileSync('LICENSE',   'dist/LICENSE');
+fs.copyFileSync('README.md', 'dist/README.md');
+shell.rm('-rf', 'doc');
+finish();
+
 start('Building', 'dist');
 pj.name = pjName;
 delete pj.main;
@@ -107,7 +135,4 @@ delete pj.esnext;
 delete pj.typescript;
 delete pj.types;
 fs.writeFileSync('dist/package.json', JSON.stringify(pj, null, 2), 'utf8');
-
-fs.copyFileSync('README.md', 'dist/README.ms');
-fs.copyFileSync('LICENSE', 'dist/LICENSE');
 finish();

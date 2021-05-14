@@ -1,5 +1,5 @@
 import build from './build';
-import { oct, hex, x2, u4, U8 } from './_escape';
+import { oct, hex, x2, u4, U8 } from './.escape';
 
 /**
  * Escape a string for use in Python
