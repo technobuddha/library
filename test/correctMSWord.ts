@@ -5,7 +5,7 @@ describe(
     'correctMSWord',
     () => {
         test(
-            'should handle whole numbers than 1',
+            'should handle special characters',
             () => {
                 expect(correctMSWord('\u00A0')).toBe(' ');
                 expect(correctMSWord('–—')).toBe('--');
@@ -27,6 +27,13 @@ describe(
                 expect(correctMSWord('⇔')).toBe('<=>');
                 expect(correctMSWord('☹')).toBe(':(');
                 expect(correctMSWord('☺')).toBe(':)');
+            }
+        );
+
+        test(
+            'should handle normal characters',
+            () => {
+                expect(correctMSWord('normal')).toBe('normal');
             }
         );
     }

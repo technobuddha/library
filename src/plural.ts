@@ -61,7 +61,7 @@ export function plural(input: string, quantity?: number): string {
     }
 
     if(!result)
-        result = matchCase(prefix + lc + suffix, input);
+        result = matchCase(`${prefix}${lc}s${suffix}`, input);
 
     return isUndefined(quantity) ? result : (quantity.toString() + space + result);
 }
@@ -134,8 +134,6 @@ const database: DBEntry =
 
         [ /(fez|qui)z$/ui,                                                                                                   '$1zzes' ],
         [ /z$/ui,                                                                                                            'zes' ],
-
-        [ /$/ui,                                                                                                             's' ],
     ],
     'uncountableRules': [
         /(adult|child)hood$/ui,
@@ -447,6 +445,18 @@ const database: DBEntry =
         '-in-law',
         '-in-trade',
     ],
-    'prefixes': [],
+    'prefixes': [
+        'anti-',
+        'bi-',
+        'co-',
+        'semi-',
+        'mal-',
+        'ex-',
+        'sub-',
+        'dis-',
+        'non-',
+        'un-',
+        'over-',
+    ],
 };
 export default plural;

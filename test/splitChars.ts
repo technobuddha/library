@@ -11,6 +11,7 @@ describe(
                 expect(splitChars('abcdefghi')).toEqual([ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i' ]);
                 expect(splitChars(empty)).toEqual([]);
                 expect(splitChars('⒜⒝⒞⒟')).toEqual([ '⒜', '⒝', '⒞', '⒟' ]);
+                expect(splitChars('😀😁😂😺😸😹')).toEqual([ '😀', '😁', '😂', '😺', '😸', '😹' ]);
             }
         );
     }

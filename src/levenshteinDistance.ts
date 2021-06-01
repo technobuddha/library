@@ -1,5 +1,4 @@
 import create2DArray  from './create2DArray';
-import isWhitespace   from './isWhitespace';
 
 type Options = {
     /** The compairson will ignore case */
@@ -15,9 +14,9 @@ type Options = {
  * @default caseInsensitive true
  * @returns the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
  */
-export function levenshteinDistance(input: string, comparedTo: string, { caseInsensitive = true }: Options = {}):    number {
-    if(isWhitespace(input) || isWhitespace(comparedTo))
-        return 0.0;
+export function levenshteinDistance(input: string, comparedTo: string, { caseInsensitive = true }: Options = {}): number {
+    if(input.length === 0 || comparedTo.length === 0)
+        return Math.max(input.length, comparedTo.length);
 
     if(caseInsensitive) {
         input       = input.toLowerCase();
@@ -54,7 +53,7 @@ export function levenshteinDistance(input: string, comparedTo: string, { caseIns
         }
     }
 
-    return 1.0 - matrix[inputLen - 1][comparedToLen - 1] / Math.max(inputLen, comparedToLen);
+    return matrix[inputLen - 1][comparedToLen - 1];
 }
 
 export default levenshteinDistance;

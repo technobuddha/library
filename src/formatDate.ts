@@ -7,16 +7,16 @@ import getTimezone                          from './getTimezone';
 import getJulian                            from './getJulian';
 import getDayOfWeek                         from './getDayOfWeek';
 
-const tokenizer = /[hHmfDO]{1,2}|s{1,3}|YYYY|YY|[Md]{1,4}|W([wy]{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|AD|BC|CE|BCE|E{2,3}|J|Q|"[^"]*"|'[^']*'/ug;
+const tokenizer = /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/ug;
 const masks: Readonly<Record<string, string>> = Object.freeze({
-    'default':          'YYYY-MM-DD hh:mm:ss.ff GMT',
+    'default':          'YYYY-MM-DD hh:mm:ss.ff',
     'rfc1123':          'ddd, DD MMM YYYY hh:mm:ss GMT',
     'asctime':          'ddd MMM DD hh:mm:ss',
 
     'shortDate':        'M/D/YY',
     'mediumDate':       'MMM D, YYYY',
     'longDate':         'MMMM D, YYYY',
-    'fullDate':         'dddd, MMMM D, yyyy',
+    'fullDate':         'dddd, MMMM D, YYYY',
     'shortTime':        'H:mm TT',
     'shortDateTime':    'M/D/YYYY H:mm TT',
     'mediumTime':       'H:mm:ss TT',
@@ -29,14 +29,14 @@ const masks: Readonly<Record<string, string>> = Object.freeze({
     'ISODateTimeZone':  'YYYY-MM-DD"T"hh:mm:ssTZ',
     'ISODateFullZone':  'YYYY-MM-DD"T"hh:mm:ss.ffTZ',
     'ISOTime':          'hh:mm:ss',
-    'ISOFull':          'hh:mm:ss.ff',
+    'ISOTimeFull':      'hh:mm:ss.ff',
     'ISOTimeZone':      'hh:mm:ssTZ',
     'ISOFullZone':      'hh:mm:ss.ffTZ',
-    'ISOWeek':          'Wyy-"W"Www-Wd',
-    'ISOWeekTime':      'Wyy-"W"Www-Wd"T"hh:mm:ss',
-    'ISOWeekFull':      'Wyy-"W"Www-Wd"T"hh:mm:ss.ff',
-    'ISOWeekTimeZone':  'Wyy-"W"Www-Wd"T"hh:mm:ss.ff',
-    'ISOWeekFullZone':  'Wyy-"W"Www-Wd"T"hh:mm:ss.ffTZ',
+    'ISOWeek':          'Wy"W"Www-Wd',
+    'ISOWeekTime':      'Wy"W"Www-Wd"T"hh:mm:ss',
+    'ISOWeekFull':      'Wy"W"Www-Wd"T"hh:mm:ss.ff',
+    'ISOWeekTimeZone':  'Wy"W"Www-Wd"T"hh:mm:ssTZ',
+    'ISOWeekFullZone':  'Wy"W"Www-Wd"T"hh:mm:ss.ffTZ',
     'ISOOrdinal':       'YYYY-OO',
 
     'cookie':           'dddd, DD MMM YYYY hh:mm:ss GMT',
@@ -61,8 +61,8 @@ type Options = {
  * @param __namedParameters see {@link Options}
  * @default UTC false
  */
-export function formatDate(input: Date, mask: string, { UTC = false }: Options = {}): string {
-    mask   = masks[mask] || mask || masks.default;
+export function formatDate(input: Date, mask?: string, { UTC = false }: Options = {}): string {
+    mask   = mask ? (mask in masks ? masks[mask] : mask) : masks.default;
 
     const da = UTC ? input.getUTCDate()          : input.getDate();
     const dy = UTC ? input.getUTCDay()           : input.getDay();
@@ -102,13 +102,12 @@ export function formatDate(input: Date, mask: string, { UTC = false }: Options =
                 case 'dd':          return dayTwo[dy];
                 case 'ddd':         return dayAbbrev[dy];                                                   //WeekDay
                 case 'dddd':        return dayName[dy];
-                case 'O':           return padNumber(getDayOfYear(input), 0);                               //Day of Year (1-366)
-                case 'OO':          return padNumber(getDayOfYear(input), 3);                               //Day of Year (1-366)
-                case 'Wy':          return padNumber(getWeekOfYear(input).year, 0);
-                case 'Wyy':         return padNumber(getWeekOfYear(input).year, 4);
-                case 'Ww':          return padNumber(getWeekOfYear(input).week, 0);                         //Week of Year (1-53)
-                case 'Www':         return padNumber(getWeekOfYear(input).week, 0);                         //
-                case 'Wd':          return padNumber(getDayOfWeek(input), 0);
+                case 'O':           return padNumber(getDayOfYear(input, { UTC }), 0);                               //Day of Year (1-366)
+                case 'OO':          return padNumber(getDayOfYear(input, { UTC }), 3);                               //Day of Year (1-366)
+                case 'Wy':          return padNumber(getWeekOfYear(input, { UTC }).year, 0);
+                case 'Ww':          return padNumber(getWeekOfYear(input, { UTC }).week, 0);                         //Week of Year (1-53)
+                case 'Www':         return padNumber(getWeekOfYear(input, { UTC }).week, 2);                         //
+                case 'Wd':          return padNumber(getDayOfWeek(input, { UTC }), 0);
                 case 'TZ':          return getTimezone(o);
                 case 'GMT':         return getTimezone(o, { GMT: true });
                 case 'AM':          return ho < 12 ? 'AM'   : '';                                           //AM  / --

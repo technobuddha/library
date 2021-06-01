@@ -23,13 +23,9 @@ export type BinaryObject =
  */
 export function dataURL(input: BinaryObject, mimeType: string):  string {
     const buffer = input instanceof ArrayBuffer ? input : input.buffer;
-
-    if(typeof btoa !== 'undefined') {
-        const bytes = new Uint8Array(buffer);
-
-        return `data:${mimeType};base64,${btoa(build(map(bytes, c => String.fromCharCode(c))))}`;
-    }
-    return `data:${mimeType};base64,${Buffer.from(buffer).toString('base64')}`;
+    const bytes = new Uint8Array(buffer);
+    return `data:${mimeType};base64,${btoa(build(map(bytes, c => String.fromCharCode(c))))}`;
+    //return `data:${mimeType};base64,${Buffer.from(buffer).toString('base64')}`;
 }
 
 export default dataURL;

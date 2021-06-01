@@ -13,7 +13,7 @@ describe(
         );
 
         test(
-            'should upport non-standard sequenes',
+            'should support non-standard sequences',
             () => {
                 expect(unescapePython('\\j\\q\\z')).toBe('\\j\\q\\z');
             }
@@ -63,7 +63,7 @@ describe(
         );
 
         test(
-            'should unescape exended unicode',
+            'should unescape extended unicode',
             () => {
                 expect(unescapePython('\\U00000000')).toBe('\0');
                 expect(unescapePython('\\U000000000')).toBe('\x000');
@@ -80,6 +80,13 @@ describe(
                 expect(unescapePython('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
                 expect(unescapePython('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
                 expect(unescapePython('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
+            }
+        );
+
+        test(
+            'does not support N',
+            () => {
+                expect(() => unescapePython('\\N')).toThrow('N escape is not supported.');
             }
         );
     }

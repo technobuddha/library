@@ -1,5 +1,9 @@
-import { empty }        from './constants';
 import create2DArray    from './create2DArray';
+
+type Options = {
+    /** compare the two strings in case insensitive mode */
+    caseInsensitive?: boolean;
+};
 
 /**
  * Implementation of Longest Common Substring problem.
@@ -12,16 +16,19 @@ import create2DArray    from './create2DArray';
  * @returns A string that is common to both strings such that there is no
  * common substring with size greater than the length of the string.
  */
-export function longestCommonSubstring(string1: string, string2: string): string {
-    const comparsions = create2DArray(string1.length + 1, string2.length + 1, 0);
+export function longestCommonSubstring(string1: string, string2: string, { caseInsensitive = false }: Options = {}): string {
+    const ci1 = caseInsensitive ? string1.toLowerCase() : string1;
+    const ci2 = caseInsensitive ? string2.toLowerCase() : string2;
+
+    const comparsions = create2DArray(ci1.length + 1, ci2.length + 1, 0);
     let maxSubStrLength = 0;
     let lastMaxSubStrIndex = -1;
 
-    for(let i = 0; i < string1.length; ++i) {
-        const c1 = string1.charAt(i);
+    for(let i = 0; i < ci1.length; ++i) {
+        const c1 = ci1.charAt(i);
 
-        for(let j = 0; j < string2.length; ++j) {
-            const c2 = string2.charAt(j);
+        for(let j = 0; j < ci2.length; ++j) {
+            const c2 = ci2.charAt(j);
 
             if(c1 === c2) {
                 if(i > 0 && j > 0)
@@ -37,9 +44,7 @@ export function longestCommonSubstring(string1: string, string2: string): string
         }
     }
 
-    if(maxSubStrLength > 0)
-        return string1.substr(lastMaxSubStrIndex - maxSubStrLength + 1, maxSubStrLength);
-    return empty;
+    return string1.substr(lastMaxSubStrIndex - maxSubStrLength + 1, maxSubStrLength);
 }
 
 export default longestCommonSubstring;

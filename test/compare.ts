@@ -47,5 +47,32 @@ describe(
                 expect(compare(new Date(1999, 1, 0), -2206378800000)).toBe(1);
             }
         );
+
+        test(
+            'should compare undefined',
+            () => {
+                expect(compare(undefined, undefined)).toBe(0);
+                expect(compare(undefined, 0)).toBe(-1);
+                expect(compare(0, undefined)).toBe(1);
+            }
+        );
+
+        test(
+            'should compare null',
+            () => {
+                expect(compare(null, null)).toBe(0);
+                expect(compare(null, 0)).toBe(-1);
+                expect(compare(0, null)).toBe(1);
+            }
+        );
+
+        test(
+            'should compare NaN',
+            () => {
+                expect(compare(NaN, NaN)).toBe(0);
+                expect(compare(NaN, 0)).toBe(-1);
+                expect(compare(0, NaN)).toBe(1);
+            }
+        );
     }
 );

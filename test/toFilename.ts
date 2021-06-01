@@ -25,6 +25,9 @@ describe(
                 expect(
                     toFilename('now is the time for all good men to come to the aid of their country.', { disambiguate: 20 })
                 ).toBe('now is the time for all good men to come to …aid of their country');
+                expect(
+                    toFilename('now is the time for all good men to come to the aid of their country.', { maxLength: 15, disambiguate: 20 })
+                ).toBe('-…aid of their co');
             }
         );
 

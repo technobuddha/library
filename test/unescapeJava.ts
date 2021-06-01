@@ -8,12 +8,12 @@ describe(
         test(
             'should unescape standard sequences',
             () => {
-                expect(unescapeJava('\\b\\n\\r\\t\\\\\\\'\\"')).toBe('\b\n\r\t\\\'"');
+                expect(unescapeJava('\\b\\f\\n\\r\\t\\\\\\\'\\"')).toBe('\b\f\n\r\t\\\'"');
             }
         );
 
         test(
-            'should upport non-standard sequenes',
+            'should support non-standard sequences',
             () => {
                 expect(unescapeJava('\\j\\q\\z')).toBe('\\j\\q\\z');
             }

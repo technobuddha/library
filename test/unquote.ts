@@ -24,5 +24,12 @@ describe(
                 expect(unquote('"My favorite color is ""blue."""', { escape: '""' })).toBe('My favorite color is "blue."');
             }
         );
+
+        test(
+            'return unquoted',
+            () => {
+                expect(unquote('phil')).toBe('phil');
+            }
+        );
     }
 );

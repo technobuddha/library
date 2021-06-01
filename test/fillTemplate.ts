@@ -18,5 +18,20 @@ describe(
                 expect(fillTemplate('The ${object} of ${principle}.', { object: 'Statue', principle: 'Liberty' }, { open: '${', close: '}' })).toBe('The Statue of Liberty.');
             }
         );
+
+        test(
+            'should not modify strings without delimiters',
+            () => {
+                expect(fillTemplate('A cat and a dog.', {  })).toBe('A cat and a dog.');
+            }
+        );
+
+        test(
+            'should remove delimiters without value',
+            () => {
+                expect(fillTemplate('Kiss a {{froggy}}.', { frog: 'prince' })).toBe('Kiss a .');
+            }
+        );
+
     }
 );

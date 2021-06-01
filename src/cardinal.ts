@@ -112,7 +112,7 @@ function breakdown(value: number, groups: number): { mantissa: string; exponent:
     return { mantissa, exponent };
 }
 
-function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion = {}): string[] {
+function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion): string[] {
     const words    = [] as string[];
 
     if(input >= ONE_HUNDRED) {
@@ -169,29 +169,29 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         // hundreds
         // eslint-disable-next-line default-case
         switch(factor2) {
-            case 1: word = `centi${word}`; a = true; s = false; x = true;  m = false; n = true;  break;
-            case 2: word = `ducenti${word}`; a = true; s = false; x = false; m = false; n = true;  break;
-            case 3: word = `trecenti${word}`; a = true; s = true;  x = false; m = false; n = true;  break;
+            case 1: word = `centi${word}`;        a = true; s = false; x = true;  m = false; n = true;  break;
+            case 2: word = `ducenti${word}`;      a = true; s = false; x = false; m = false; n = true;  break;
+            case 3: word = `trecenti${word}`;     a = true; s = true;  x = false; m = false; n = true;  break;
             case 4: word = `quadringenti${word}`; a = true; s = true;  x = false; m = false; n = true;  break;
-            case 5: word = `quingenti${word}`; a = true; s = true;  x = false; m = false; n = true;  break;
-            case 6: word = `sescenti${word}`; a = true; s = false; x = false; m = false; n = true;  break;
-            case 7: word = `septingenti${word}`; a = true; s = false; x = false; m = false; n = true;  break;
-            case 8: word = `octingenti${word}`; a = true; s = false; x = true;  m = true;  n = false; break;
-            case 9: word = `nongenti${word}`; a = true; s = false; x = false; m = false; n = false; break;
+            case 5: word = `quingenti${word}`;    a = true; s = true;  x = false; m = false; n = true;  break;
+            case 6: word = `sescenti${word}`;     a = true; s = false; x = false; m = false; n = true;  break;
+            case 7: word = `septingenti${word}`;  a = true; s = false; x = false; m = false; n = true;  break;
+            case 8: word = `octingenti${word}`;   a = true; s = false; x = true;  m = true;  n = false; break;
+            case 9: word = `nongenti${word}`;     a = true; s = false; x = false; m = false; n = false; break;
         }
 
         // tens
         // eslint-disable-next-line default-case
         switch(factor1) {
-            case 1: word = `deci${word}`; a = true; s = false; x = false; m = false; n = true;  break;
-            case 2: word = `viginti${word}`; a = true; s = true;  x = false; m = true;  n = false; break;
+            case 1: word = `deci${word}`;                                a = true; s = false; x = false; m = false; n = true;  break;
+            case 2: word = `viginti${word}`;                             a = true; s = true;  x = false; m = true;  n = false; break;
             case 3: word = (a ? 'triginta'     : 'triginti')     + word; a = true; s = true;  x = false; m = false; n = true;  break;
             case 4: word = (a ? 'quadraginta'  : 'quadraginti')  + word; a = true; s = true;  x = false; m = false; n = true;  break;
             case 5: word = (a ? 'quinquaginta' : 'quinquaginti') + word; a = true; s = true;  x = false; m = false; n = true;  break;
             case 6: word = (a ? 'sexaginta'    : 'sexaginti')    + word; a = true; s = false; x = false; m = false; n = false; break;
             case 7: word = (a ? 'septuaginta'  : 'septuaginti')  + word; a = true; s = false; x = false; m = false; n = true;  break;
             case 8: word = (a ? 'octoginta'    : 'octoginti')    + word; a = true; s = false; x = true;  m = true;  n = false; break;
-            case 9: word = (a ? 'nonaginta'    : 'nonginti')    + word; a = true; s = false; x = false; m = false; n = false; break;
+            case 9: word = (a ? 'nonaginta'    : 'nonginti')     + word; a = true; s = false; x = false; m = false; n = false; break;
         }
 
         // ones

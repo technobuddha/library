@@ -48,5 +48,12 @@ describe(
                 expect(unescapeHTML('&Alpha;&Beta;ЖК')).toBe('ΑΒЖК');
             }
         );
+
+        test(
+            'should leave unknown entities',
+            () => {
+                expect(unescapeHTML('&unknown;')).toBe('&unknown;');
+            }
+        );
     }
 );

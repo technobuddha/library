@@ -18,6 +18,7 @@ describe(
             () => {
                 expect(splice('abcdefghi', -1, 0, 'foo')).toBe('abcdefghifoo');
                 expect(splice('abcdefghi', -2, 0, 'foo')).toBe('abcdefghfooi');
+                expect(splice('abcdefghi', -100, 0, 'foo')).toBe('fooabcdefghi');
             }
         );
 

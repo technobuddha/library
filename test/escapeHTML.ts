@@ -29,5 +29,23 @@ describe(
                 expect(escapeHTML('ABCdef[~]')).toBe('ABCdef[~]');
             }
         );
+
+        test(
+            'should not escape Latin-1, BMP or astral',
+            () => {
+                expect(escapeHTML('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+                expect(escapeHTML('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
+                expect(escapeHTML('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
+            }
+        );
+
+        test(
+            'should escape Latin-1, BMP or astral when escapeNonAscii is set',
+            () => {
+                expect(escapeHTML('¡¢£ýþÿ', { escapeNonAscii: true })).toBe('&#161;&#162;&#163;&#253;&#254;&#255;');
+                expect(escapeHTML('ΑΒΓΔΕΖ', { escapeNonAscii: true })).toBe('&#913;&#914;&#915;&#916;&#917;&#918;');
+                expect(escapeHTML('😀😁😂😺😸😹', { escapeNonAscii: true })).toBe('&#128512;&#128513;&#128514;&#128570;&#128568;&#128569;');
+            }
+        );
     }
 );

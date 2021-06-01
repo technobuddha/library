@@ -52,6 +52,7 @@ describe(
                 expect(() => decodeUTF8('\xF0\x00\x80')).toThrowError();
                 expect(() => decodeUTF8('\xF0\x80\x80\x00')).toThrowError();
                 expect(() => decodeUTF8('\xF4\xBF\xBF\xBF')).toThrowError();
+                expect(() => decodeUTF8('\xF9')).toThrowError();
             }
         );
     }

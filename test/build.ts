@@ -16,5 +16,17 @@ describe(
                 expect(build(() => 'a', () => [ 'b', 'c' ], [ 'd', 'e' ], 'f')).toBe('abcdef');
             }
         );
+
+        test(
+            'should handle generators',
+            () => {
+                function *gen(): Generator<string> {
+                    yield '1';
+                    yield '2';
+                    yield '3';
+                }
+                expect(build(gen())).toBe('123');
+            }
+        );
     }
 );

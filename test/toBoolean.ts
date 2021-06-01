@@ -29,6 +29,14 @@ describe(
         );
 
         test(
+            'should treat unknowns as undefined',
+            () => {
+                expect(toBoolean('truthy')).toBeUndefined();
+                expect(toBoolean('falsy')).toBeUndefined();
+            }
+        );
+
+        test(
             'should allow string values',
             () => {
                 expect(toBoolean('Yup', { trueValues: [ 'yup' ]})).toBe(true);

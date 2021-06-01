@@ -16,6 +16,13 @@ describe(
         );
 
         test(
+            'should default to first',
+            () => {
+                expect(delimited('a*b*c*d', '*')).toBe('a');
+            }
+        );
+
+        test(
             'should handle index <= 0',
             () => {
                 expect(delimited('a*b*c*d', '*', -1)).toBe('d');

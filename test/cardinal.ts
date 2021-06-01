@@ -11,10 +11,16 @@ describe(
                 expect(cardinal(1)).toBe('one');
                 expect(cardinal(10)).toBe('ten');
                 expect(cardinal(11)).toBe('eleven');
+                expect(cardinal(100)).toBe('one hundred');
+                expect(cardinal(101)).toBe('one hundred one');
                 expect(cardinal(123)).toBe('one hundred twenty three');
+                expect(cardinal(1000)).toBe('one thousand');
+                expect(cardinal(1001)).toBe('one thousand one');
                 expect(cardinal(1234)).toBe('one thousand two hundred thirty four');
                 expect(cardinal(12345)).toBe('twelve thousand three hundred forty five');
                 expect(cardinal(123456)).toBe('one hundred twenty three thousand four hundred fifty six');
+                expect(cardinal(1000000)).toBe('one million');
+                expect(cardinal(1000001)).toBe('one million one');
                 expect(cardinal(12345678)).toBe(
                     'twelve million three hundred forty five thousand six hundred seventy eight'
                 );
@@ -55,7 +61,6 @@ describe(
                 expect(cardinal(1e303)).toBe('one centillion');
                 expect(
                     cardinal(Number.MAX_SAFE_INTEGER)
-                // eslint-disable-next-line max-len
                 ).toBe(
                     'nine quadrillion seven trillion one hundred ninety nine billion two hundred fifty four million seven hundred forty thousand nine hundred ninety one'
                 );
@@ -63,7 +68,6 @@ describe(
                 expect(
                     cardinal(Number.MAX_VALUE)
                 ).toBe(
-                    // eslint-disable-next-line max-len
                     'one hundred seventy nine uncentillion seven hundred sixty nine centillion three hundred thirteen novenongintillion four hundred eighty six octonongintillion two hundred thirty one septenongintillion six senongintillion'
                 );
                 //Avogadro's Number
@@ -143,6 +147,21 @@ describe(
                 expect(cardinal(999999999, { groups: 2 })).toBe('one billion');
             }
         );
+
+        test(
+            'should handle illions',
+            () => {
+                expect(cardinal(9)).toBe('nine');
+                expect(cardinal(99, { groups: 2 })).toBe('ninety nine');
+                expect(cardinal(999, { groups: 2 })).toBe('nine hundred ninety nine');
+                expect(cardinal(9999, { groups: 2 })).toBe('nine thousand nine hundred ninety nine');
+                expect(cardinal(99999, { groups: 2 })).toBe('ninety nine thousand nine hundred ninety nine');
+                expect(cardinal(999999, { groups: 2 })).toBe('nine hundred ninety nine thousand nine hundred ninety nine');
+                expect(cardinal(9999999, { groups: 2 })).toBe('ten million');
+                expect(cardinal(99999999, { groups: 2 })).toBe('one hundred million');
+                expect(cardinal(999999999, { groups: 2 })).toBe('one billion');
+            }
+        );
     }
 );
 
@@ -155,7 +174,60 @@ describe(
                 expect(orderOfMagnitude(0)).toBe(null);
                 expect(orderOfMagnitude(3)).toBe('thousand');
                 expect(orderOfMagnitude(6)).toBe('million');
+                expect(orderOfMagnitude(9)).toBe('billion');
+                expect(orderOfMagnitude(12)).toBe('trillion');
+                expect(orderOfMagnitude(15)).toBe('quadrillion');
+                expect(orderOfMagnitude(18)).toBe('qunitillion');
+                expect(orderOfMagnitude(21)).toBe('sextillion');
+                expect(orderOfMagnitude(24)).toBe('septillion');
+                expect(orderOfMagnitude(27)).toBe('octillion');
+                expect(orderOfMagnitude(30)).toBe('nonillion');
+                expect(orderOfMagnitude(33)).toBe('decillion');
+                expect(orderOfMagnitude(63)).toBe('vigintillion');
+                expect(orderOfMagnitude(66)).toBe('unvigintillion');
+                expect(orderOfMagnitude(69)).toBe('duovigintillion');
+                expect(orderOfMagnitude(72)).toBe('tresvigintillion');
+                expect(orderOfMagnitude(75)).toBe('quattuorvigintillion');
+                expect(orderOfMagnitude(78)).toBe('quinquavigintillion');
+                expect(orderOfMagnitude(81)).toBe('sesvigintillion');
+                expect(orderOfMagnitude(84)).toBe('septemvigintillion');
+                expect(orderOfMagnitude(87)).toBe('octovigintillion');
+                expect(orderOfMagnitude(90)).toBe('novemvigintillion');
+                expect(orderOfMagnitude(93)).toBe('trigintillion');
+                expect(orderOfMagnitude(123)).toBe('quadragintillion');
+                expect(orderOfMagnitude(153)).toBe('quinquagintillion');
+                expect(orderOfMagnitude(183)).toBe('sexagintillion');
+                expect(orderOfMagnitude(213)).toBe('septuagintillion');
+                expect(orderOfMagnitude(243)).toBe('octogintillion');
+                expect(orderOfMagnitude(273)).toBe('nongintillion');
                 expect(orderOfMagnitude(303)).toBe('centillion');
+                expect(orderOfMagnitude(306)).toBe('uncentillion');
+                expect(orderOfMagnitude(309)).toBe('duocentillion');
+                expect(orderOfMagnitude(312)).toBe('trescentillion');
+                expect(orderOfMagnitude(315)).toBe('quattuorcentillion');
+                expect(orderOfMagnitude(318)).toBe('quinquacentillion');
+                expect(orderOfMagnitude(321)).toBe('sexcentillion');
+                expect(orderOfMagnitude(324)).toBe('septencentillion');
+                expect(orderOfMagnitude(327)).toBe('octocentillion');
+                expect(orderOfMagnitude(330)).toBe('novencentillion');
+                expect(orderOfMagnitude(333)).toBe('decicentillion');
+                expect(orderOfMagnitude(363)).toBe('viginticentillion');
+                expect(orderOfMagnitude(393)).toBe('trigintacentillion');
+                expect(orderOfMagnitude(423)).toBe('quadragintacentillion');
+                expect(orderOfMagnitude(453)).toBe('quinquagintacentillion');
+                expect(orderOfMagnitude(483)).toBe('sexagintacentillion');
+                expect(orderOfMagnitude(513)).toBe('septuagintacentillion');
+                expect(orderOfMagnitude(543)).toBe('octogintacentillion');
+                expect(orderOfMagnitude(573)).toBe('nonagintacentillion');
+                expect(orderOfMagnitude(603)).toBe('ducentillion');
+                expect(orderOfMagnitude(903)).toBe('trecentillion');
+                expect(orderOfMagnitude(1203)).toBe('quadringentillion');
+                expect(orderOfMagnitude(1503)).toBe('quingentillion');
+                expect(orderOfMagnitude(1803)).toBe('sescentillion');
+                expect(orderOfMagnitude(2103)).toBe('septingentillion');
+                expect(orderOfMagnitude(2403)).toBe('octingentillion');
+                expect(orderOfMagnitude(2703)).toBe('nongentillion');
+                expect(orderOfMagnitude(3003)).toBe('millinillion');
                 expect(orderOfMagnitude(Number.MAX_SAFE_INTEGER)).toBe(
                     'trillibillinovenonagintatrecentilliunquinquagintaseptingentillioctogintaquingentillinovemvigintitrecentillion'
                 );

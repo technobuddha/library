@@ -2,7 +2,7 @@ import expect from '../util/expect';
 import matchCase  from '../src/matchCase';
 
 describe(
-    'isUpperCase',
+    'matchCase',
     () => {
         test(
             'should match case',
@@ -15,6 +15,14 @@ describe(
                 expect(matchCase('ABC', 'XYZ')).toBe('ABC');
                 expect(matchCase('ABC', 'Xyz')).toBe('Abc');
                 expect(matchCase('ABC', 'xYZ')).toBe('aBC');
+            }
+        );
+
+        test(
+            'should handle empty string',
+            () => {
+                expect(matchCase('abc', '')).toBe('abc');
+                expect(matchCase('ABC', '')).toBe('ABC');
             }
         );
     }

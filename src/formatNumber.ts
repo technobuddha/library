@@ -2,6 +2,7 @@ import defaultTo    from 'lodash/defaultTo';
 import map          from 'lodash/map';
 import { empty }    from './constants';
 import padNumber    from './padNumber';
+import splitChars   from './splitChars';
 import build        from './build';
 
 //#region parse
@@ -29,8 +30,9 @@ function parse(mask: string): ParseReturn {
     let   signExponent     = false;
     let   precision        = 0;
 
-    for(let i = 0; i < mask.length; ++i) {
-        const c = mask.charAt(i);
+    const m = splitChars(mask);
+    for(let i = 0; i < m.length; ++i) {
+        const c = m[i];
 
         switch(c) {
             case '"':    //literal string
@@ -49,7 +51,9 @@ function parse(mask: string): ParseReturn {
             }
 
             case '#':  {
-                if(beforeDP) { before.push(zeroSeen ? '0' : '#'); } else {
+                if(beforeDP) {
+                    before.push(zeroSeen ? '0' : '#');
+                } else {
                     precision++;
                     after.push('#');
                 }
@@ -123,7 +127,9 @@ function parse(mask: string): ParseReturn {
                     signExponent = signSeen;
 
                     (beforeDP ? before : after).push(c);
-                } else { (beforeDP ? before : after).push(`"${c}`); }
+                } else {
+                    (beforeDP ? before : after).push(`"${c}`);
+                }
                 break;
             }
 
@@ -171,7 +177,7 @@ type FormatOptions = {
     trim?: 'none' | 'front' | 'back' | 'all';
 };
 
-function format(input: number, { round, precision, scale, lead = 1, trim = 'none' }: FormatOptions = {}) {
+function format(input: number, { round, precision, scale, lead = 1, trim = 'none' }: FormatOptions) {
     const sign      = Math.sign(input);
     const [ m, e ]    = Math.abs(input).toExponential(15).split('e');
     let   exponent  = Number(e) + 1; // +1 because we store the number without the decimal point
@@ -189,6 +195,11 @@ function format(input: number, { round, precision, scale, lead = 1, trim = 'none
 
             if(c > '4') {
                 for(;;) {
+                    if(n < 0) {
+                        mantissa.unshift('0');
+                        ++exponent;
+                        n = 1;
+                    }
                     const d = mantissa[--n];
                     if(d === '0') { mantissa[n] = '1'; break; }
                     if(d === '1') { mantissa[n] = '2'; break; }
@@ -199,7 +210,9 @@ function format(input: number, { round, precision, scale, lead = 1, trim = 'none
                     if(d === '6') { mantissa[n] = '7'; break; }
                     if(d === '7') { mantissa[n] = '8'; break; }
                     if(d === '8') { mantissa[n] = '9'; break; }
-                    if(d === '9') { mantissa[n] = '0'; if(n === 0) { mantissa.unshift('1'); ++exponent; break; } }
+                    if(d === '9') { mantissa[n] = '0'; mantissa.unshift('1'); ++exponent; break; }
+
+                    process.stderr.write(`"${d}"${n}"`);
                 }
             }
         }
@@ -273,7 +286,7 @@ class NumberFormatter {
         return this;
     }
 
-    public scientific(e = 'e') {
+    public scientific(e: string) {
         this.output.push(this.mantissa[0], '.', this.mantissa.slice(1), e, this.exponent > 0 ? '+' : empty, padNumber(this.exponent - 1, 3));
         return this;
     }
@@ -325,16 +338,14 @@ export function formatNumber(input: number, mask: string): string {
                 if(Number.parseFloat(num) === input)
                     return num;
             }
-            return input.toString();
-        } else if(f === 'X' || f === 'x') {
-            prec = defaultTo(prec, 0);
-
-            let hex = (input >>> 0).toString(16);
-            hex = hex.padStart(prec, '0');
-            if(f === 'X') hex = hex.toUpperCase();
-
-            return hex;
         }
+        prec = defaultTo(prec, 0);
+
+        let hex = (input >>> 0).toString(16);
+        hex = hex.padStart(prec, '0');
+        if(f === 'X') hex = hex.toUpperCase();
+
+        return hex;
     }
 
     const formats = mask.toString().split(';');
@@ -429,7 +440,7 @@ export function formatNumber(input: number, mask: string): string {
                 b--;
             }
         } else if(x === 'e' || x === 'E') {
-            o = x + ((fmt.signExponent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent) + o;
+            o = `${x}-${padNumber(Math.abs(exp), fmt.exponent)}${o}`;
         } else {
             o = x.substr(1) + o;
         }
@@ -441,8 +452,7 @@ export function formatNumber(input: number, mask: string): string {
 
         for(const x of fmt.aMask) {
             if(x === '0') {
-                if(f.length) a = a + f.shift()!;
-                else a = `${a}0`;
+                a = a + f.shift()!;
 
                 digits = true;
             } else if(x === '#') {

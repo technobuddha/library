@@ -20,7 +20,7 @@ export function getIndent(input: string, { indenter = space }: Options = {}): nu
     if(isNil(matches))
         return 0;
 
-    return (Math.min(...matches.map(m => m.length)) || 0) / indenter.length;
+    return (Math.min(...matches.map(m => m.length))) / indenter.length;
 }
 
 export default getIndent;

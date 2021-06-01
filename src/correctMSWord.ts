@@ -1,5 +1,5 @@
 const find = /[\u00A0–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/ug;
-const replace: Readonly<Record<string, string | undefined>> = Object.freeze({
+const replace: Readonly<Record<string, string>> = Object.freeze({
     '\u00A0': ' ',
     '–':      '-',
     '—':      '-',
@@ -29,13 +29,13 @@ const replace: Readonly<Record<string, string | undefined>> = Object.freeze({
 });
 
 /**
- * Correct character sequeces that Microsoft Word changes to make it look prettier
+ * Correct character sequences that Microsoft Word changes to make it look prettier
  *
  * @param input The mangled string
  * @returns string with special characters corrected
  */
 export function correctMSWord(input: string): string {
-    return input.replace(find, a => replace[a] ?? a);
+    return input.replace(find, a => replace[a]);
 }
 
 export default correctMSWord;

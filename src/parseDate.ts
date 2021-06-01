@@ -1,17 +1,15 @@
 import isNil        from 'lodash/isNil';
 import compact      from 'lodash/compact';
-import isRegExp     from 'lodash/isRegExp';
 import zip          from 'lodash/zip';
 import build        from './build';
 import { month }      from './constants';
-import isWhitespace from './isWhitespace';
 
-function re(template: TemplateStringsArray, ...args: (string | RegExp)[]): RegExp {
+function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
     return new RegExp(
         build(
             pre.source,
             compact(
-                zip(template, args.map(a => (isRegExp(a) ? a.source : a))).flat()
+                zip(template, args.map(a => a.source)).flat()
             ),
             post.source
         ),
@@ -26,8 +24,8 @@ const mm            = /([0][1-9]|[1][012])/u;
 const mmm           = /(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|sept|september|oct|october|nov|november|dec|december)/u;
 const dd            = /([0][1-9]|[12][0-9]|[3][01])/u;
 const yyyy          = /(\d{4})/u;
-const time          = /(?:(?:\s+|\s*t\s*)(?:(\d{1,2}):(\d{2})(?:[:](\d{1,2})(?:[.,](\d+))?)(?:\s*(a|p)(?:m)?)?))?/u;
-const zone          = /(?:\s*(?:(Z)|(?:gmt)?(?:([+-]\d{1,2})(?:[:](\d{2}))?)))?/u;
+const time          = /(?:(?:\s+|\s*t\s*)(?:(\d{1,2}):(\d{2})(?:[:](\d{1,2})(?:[.,](\d+))?)?(?:\s*(a|p)(?:m)?)?))?/ui;
+const zone          = /(?:\s*(?:(z|gmt)(?:([+-]\d{1,2})(?:[:](\d{2}))?)?))?/ui;
 const mdyNumeric    = re`${mm}${sep}${dd}${sep}${yyyy}${time}${zone}`;
 const ymdNumeric    = re`${yyyy}${sep}${mm}${sep}${dd}${time}${zone}`;
 const mdyString     = re`${mmm}${sep}${dd}${sep}${yyyy}${time}${zone}`;
@@ -53,7 +51,6 @@ const yNumeric      = re`${yyyy}`;
  */
 export function parseDate(text: string): Date {
     const now = new Date();
-    const gmt = now.getTimezoneOffset();
     let   dY  = 0;
     let   dM  = 0;
     let   dD  = 0;
@@ -61,10 +58,8 @@ export function parseDate(text: string): Date {
     let   tM  = 0;
     let   tS  = 0;
     let   tF  = 0;
-    const xH  = -gmt / 60;
-    const xM  = Math.abs(gmt % 60);
-    let   zH  = xH;
-    let   zM  = xM;
+    let   zH  = null as number | null;
+    let   zM  = null as number | null;
 
     text = text.toLowerCase();
 
@@ -129,18 +124,18 @@ export function parseDate(text: string): Date {
             return new Date(Date.parse(text));
         }
     } else {
-        tH = (isNil(match[4]) || isWhitespace(match[4])) ? 0 : Number.parseInt(match[4], 10);
-        tM = (isNil(match[5]) || isWhitespace(match[5])) ? 0 : Number.parseInt(match[5], 10);
-        tS = (isNil(match[6]) || isWhitespace(match[6])) ? 0 : Number.parseInt(match[6], 10);
-        tF = (isNil(match[7]) || isWhitespace(match[7])) ? 0 : Number.parseFloat(`0.${match[7]}`) * 1000;
-        if(match[8] === 'p' && tH !== 12)
+        tH = isNil(match[4]) ? 0 : Number.parseInt(match[4], 10);
+        tM = isNil(match[5]) ? 0 : Number.parseInt(match[5], 10);
+        tS = isNil(match[6]) ? 0 : Number.parseInt(match[6], 10);
+        tF = isNil(match[7]) ? 0 : Number.parseFloat(`0.${match[7]}`) * 1000;
+        if(!isNil(match[8]) && match[8].toLowerCase() === 'p' && tH !== 12)
             tH += 12;
-        else if(match[8] === 'a' && tH === 12)
+        else if(!isNil(match[8]) && match[8].toLowerCase() === 'a' && tH === 12)
             tH -= 12;
 
-        if(match[9] !== 'z') {
-            zH = (isNil(match[10]) || isWhitespace(match[10])) ? xH : Number.parseInt(match[10], 10);
-            zM = (isNil(match[11]) || isWhitespace(match[11])) ? xM : Number.parseInt(match[11], 10);
+        if(!isNil(match[9])) {
+            zH = isNil(match[10]) ? 0 : Number.parseInt(match[10], 10);
+            zM = isNil(match[11]) ? 0 : Number.parseInt(match[11], 10);
         }
     }
 
@@ -152,22 +147,15 @@ export function parseDate(text: string): Date {
     now.setSeconds(tS);
     now.setMilliseconds(tF);
 
-    if(
-        now.getFullYear()       !== dY ||
-        now.getMonth()          !== dM ||
-        now.getDate()           !== dD ||
-        now.getHours()          !== tH ||
-        now.getMinutes()        !== tM ||
-        now.getSeconds()        !== tS ||
-        now.getMilliseconds()   !== tF
-    )
-        return new Date(NaN);
+    if(!isNil(zH) && !isNil(zM)) {
+        zH += now.getTimezoneOffset() / 60;
 
-    now.setMinutes(
-        now.getMinutes()    -
-            (xH < 0 ? (xH * 60 - xM) : (xH * 60 + xM))    +
-            (zH < 0 ? (zH * 60 - zM) : (zH * 60 + zM))
-    );    //Adjust the time zone
+        now.setMinutes(
+            now.getMinutes() -
+                (zH < 0 ? (zH * 60 - zM) : (zH * 60 + zM))
+        );    //Adjust the time zone
+    }
+
     return now;
 }
 

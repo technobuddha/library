@@ -33,11 +33,6 @@ export function getISOWeekOfYear(input: Date, { UTC = false, weekOneIncludes = d
     let   year    = UTC ? bow.getUTCFullYear() : bow.getFullYear();
     const weeks   = getISOWeeksInYear(year, { UTC, weekOneIncludes });
 
-    if(week < 1) {
-        year -= 1;
-        week += weeks;
-    }
-
     if(week > weeks) {
         year += 1;
         week  = 1;

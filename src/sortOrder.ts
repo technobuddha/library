@@ -19,8 +19,14 @@ export function sortOrder(input: string, { ignoreQuotes = true, moveArticles = t
     input = clean(input);
 
     if(ignoreQuotes) {
-        if(input.startsWith('"'))
-            input = input.substr(1);
+        if(input.startsWith('"')) {
+            const quote = input.slice(0, 1);
+            input = input.slice(1);
+
+            const index = input.indexOf(quote, 1);
+            if(index >= 0)
+                input = input.slice(0, index) + input.slice(index + 1);
+        }
     }
 
     const lc    = input.toLowerCase();

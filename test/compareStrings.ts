@@ -41,6 +41,17 @@ describe(
         );
 
         test(
+            'should do natural compares w/o numbers',
+            () => {
+                expect(compareStrings('a', 'a', { natural: true })).toBe(0);
+                expect(compareStrings('a', 'b', { natural: true })).toBe(-1);
+                expect(compareStrings('b', 'a', { natural: true })).toBe(1);
+                expect(compareStrings('', 'a', { natural: true })).toBe(-1);
+                expect(compareStrings('a', '', { natural: true })).toBe(1);
+            }
+        );
+
+        test(
             'should compare versions',
             () => {
                 expect(compareStrings('1.1', '1.1', { version: true })).toBe(0);

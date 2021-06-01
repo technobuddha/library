@@ -26,8 +26,6 @@ export function angleDifference(startAngle: number, endAngle: number): number {
     let d = normalizeAngle(endAngle) - normalizeAngle(startAngle);
     if(d > Math.PI)
         d -= Math.PI * 2;
-    else if(d < -Math.PI)
-        d += Math.PI * 2;
 
     return d;
 }
