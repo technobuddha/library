@@ -24,7 +24,7 @@ Renames and exports: [correctMSWord](correctmsword.md#correctmsword)
 
 ▸ **correctMSWord**(`input`: *string*): *string*
 
-Correct character sequeces that Microsoft Word changes to make it look prettier
+Correct character sequences that Microsoft Word changes to make it look prettier
 
 #### Parameters
 

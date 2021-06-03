@@ -8,6 +8,11 @@
 
 - [default](json.md#default)
 
+### Variables
+
+- [specialBegin](json.md#specialbegin)
+- [specialFinish](json.md#specialfinish)
+
 ### Functions
 
 - [replacer](json.md#replacer)
@@ -25,6 +30,22 @@
 | :------ | :------ |
 | `replacer` | (`key`: *string*, `value`: *unknown*) => *unknown* |
 | `reviver` | (`_key`: *string*, `value`: *unknown*) => *unknown* |
+
+## Variables
+
+### specialBegin
+
+• `Const` **specialBegin**: ``"﴾"``= '﴾'
+
+Defined in: [json.ts:4](../../src/json.ts#L4)
+
+___
+
+### specialFinish
+
+• `Const` **specialFinish**: ``"﴿"``= '﴿'
+
+Defined in: [json.ts:5](../../src/json.ts#L5)
 
 ## Functions
 

@@ -22,7 +22,7 @@ Renames and exports: [longestCommonSubstring](longestcommonsubstring.md#longestc
 
 ### longestCommonSubstring
 
-▸ **longestCommonSubstring**(`string1`: *string*, `string2`: *string*): *string*
+▸ **longestCommonSubstring**(`string1`: *string*, `string2`: *string*, `__namedParameters?`: Options): *string*
 
 Implementation of Longest Common Substring problem.
 https://en.wikipedia.org/wiki/Longest_common_substring_problem
@@ -31,14 +31,15 @@ Returns the longest possible substring that is substring of both of given string
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `string1` | *string* |
-| `string2` | *string* |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `string1` | *string* | - |
+| `string2` | *string* | - |
+| `__namedParameters` | Options | {} |
 
 **Returns:** *string*
 
 A string that is common to both strings such that there is no
 common substring with size greater than the length of the string.
 
-Defined in: [longestCommonSubstring.ts:15](../../src/longestCommonSubstring.ts#L15)
+Defined in: [longestCommonSubstring.ts:19](../../src/longestCommonSubstring.ts#L19)

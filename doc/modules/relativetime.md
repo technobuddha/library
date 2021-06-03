@@ -37,7 +37,7 @@ Renames and exports: [relativeTime](relativetime.md#relativetime)
 | `todayTomorrowYesterday?` | *boolean* | Describe the time difference as a time on a nearby day |
 | `ymdFormat?` | *string* | Passed to {@link formatSate} to display a year, month and day |
 
-Defined in: [relativeTime.ts:7](../../src/relativeTime.ts#L7)
+Defined in: [relativeTime.ts:8](../../src/relativeTime.ts#L8)
 
 ## Functions
 
@@ -45,7 +45,7 @@ Defined in: [relativeTime.ts:7](../../src/relativeTime.ts#L7)
 
 ▸ **relativeTime**(`input`: Date, `relativeTo`: Date, `__namedParameters?`: [*Options*](relativetime.md#options)): *string*
 
-Describe the difference between two dates in a simpe format
+Describe the difference between two dates in a simple format
 
 #### Parameters
 
@@ -59,4 +59,4 @@ Describe the difference between two dates in a simpe format
 
 string describing the time difference between the two dates
 
-Defined in: [relativeTime.ts:26](../../src/relativeTime.ts#L26)
+Defined in: [relativeTime.ts:27](../../src/relativeTime.ts#L27)

@@ -13,8 +13,8 @@
 - [add](cookie.md#add)
 - [del](cookie.md#del)
 - [get](cookie.md#get)
+- [init](cookie.md#init)
 - [names](cookie.md#names)
-- [parse](cookie.md#parse)
 
 ## Properties
 
@@ -29,7 +29,7 @@
 | `add` | (`name`: *string*, `value`: *string*, `expires?`: *string* \| Date) => *void* |
 | `del` | (`name`: *string*) => *void* |
 | `get` | (`name`: *string*) => *string* \| *undefined* |
-| `init` | () => *void* |
+| `init` | (`input`: *string*) => *void* |
 | `names` | () => *string*[] |
 
 ## Functions
@@ -50,7 +50,7 @@ Add or update a cookie
 
 **Returns:** *void*
 
-Defined in: [cookie.ts:53](../../src/cookie.ts#L53)
+Defined in: [cookie.ts:46](../../src/cookie.ts#L46)
 
 ___
 
@@ -68,7 +68,7 @@ Delete a cookie
 
 **Returns:** *void*
 
-Defined in: [cookie.ts:71](../../src/cookie.ts#L71)
+Defined in: [cookie.ts:61](../../src/cookie.ts#L61)
 
 ___
 
@@ -86,7 +86,26 @@ Get the value of a cookie
 
 **Returns:** *string* \| *undefined*
 
-Defined in: [cookie.ts:31](../../src/cookie.ts#L31)
+Defined in: [cookie.ts:24](../../src/cookie.ts#L24)
+
+___
+
+### init
+
+▸ **init**(`input?`: *string*): *void*
+
+Initialize the cookie system with the browsers cookies
+Parse a string containing cookies for use by other cookie method
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | *string* | string to be decoded |
+
+**Returns:** *void*
+
+Defined in: [cookie.ts:11](../../src/cookie.ts#L11)
 
 ___
 
@@ -100,22 +119,4 @@ Get the names of all cookies
 
 array of cookie names
 
-Defined in: [cookie.ts:41](../../src/cookie.ts#L41)
-
-___
-
-### parse
-
-▸ **parse**(`input`: *string*): *void*
-
-Parse a string containing cookies for use by other cookie method
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | *string* | string to be decoded |
-
-**Returns:** *void*
-
-Defined in: [cookie.ts:18](../../src/cookie.ts#L18)
+Defined in: [cookie.ts:34](../../src/cookie.ts#L34)

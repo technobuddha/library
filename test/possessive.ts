@@ -1,8 +1,6 @@
 import expect from '../util/expect';
 import possessive from '../src/possessive';
 
-//TODO we need more comprehensive testing
-
 describe(
     'possessive',
     () => {

@@ -32,8 +32,6 @@ Wrap text so that it fits within a area of fixed width
 
 **`default`** cut default false
 
-**`default`** preserveSpaces  false
-
 **`default`** trailingSpaces false
 
 #### Parameters
@@ -47,4 +45,4 @@ Wrap text so that it fits within a area of fixed width
 
 wrapped text
 
-Defined in: [wordwrap.ts:29](../../src/wordwrap.ts#L29)
+Defined in: [wordwrap.ts:26](../../src/wordwrap.ts#L26)

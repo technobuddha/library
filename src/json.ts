@@ -1,8 +1,8 @@
 import isNaN    from 'lodash/isNaN';
 import isFinite from 'lodash/isFinite';
 
-const specialBegin  = '﴾';
-const specialFinish = '﴿';
+export const specialBegin  = '﴾';
+export const specialFinish = '﴿';
 
 /**
  * Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with {@link revive}
@@ -42,8 +42,8 @@ export function reviver(this: unknown, _key: string, value: unknown) {
             case 'Date':
                 return new Date(jsonValue);
             case 'RegExp': {
-                const matches = /^\/(.*)\/(.*)$/u.exec(jsonValue);
-                return matches ? new RegExp(matches[1], matches[2]) : jsonValue;
+                const matches = /^\/(.*)\/([a-z]*)$/u.exec(jsonValue);
+                return matches ? new RegExp(matches[1], matches[2]) : new RegExp(jsonValue, 'u');
             }
             case 'Number':
                 return Number(jsonValue);

@@ -22,7 +22,7 @@ Renames and exports: [randomPick](randompick.md#randompick)
 
 ### randomPick
 
-▸ **randomPick**<T\>(`list`: T[], `random?`: () => *number*): T
+▸ **randomPick**<T\>(`list`: T[], `random?`: () => *number*): T \| *undefined*
 
 Pick a random items from a list.
 
@@ -30,9 +30,9 @@ Pick a random items from a list.
 
 #### Type parameters
 
-| Name |
-| :------ |
-| `T` |
+| Name | Default |
+| :------ | :------ |
+| `T` | *unknown* |
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Pick a random items from a list.
 | `list` | T[] | Array of items to pick from |
 | `random` | () => *number* | Random number generator |
 
-**Returns:** T
+**Returns:** T \| *undefined*
 
 Randomly selected item
 

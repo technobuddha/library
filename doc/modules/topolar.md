@@ -24,7 +24,7 @@ Renames and exports: [toPolar](topolar.md#topolar)
 
 ▸ **toPolar**(`__namedParameters`: [*Cartesian*](coordinates.md#cartesian)): [*Polar*](coordinates.md#polar)
 
-Convert ccartesian coordinates to polar
+Convert cartesian coordinates to polar
 
 #### Parameters
 

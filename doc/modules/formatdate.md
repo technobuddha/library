@@ -22,7 +22,7 @@ Renames and exports: [formatDate](formatdate.md#formatdate)
 
 ### formatDate
 
-▸ **formatDate**(`input`: Date, `mask`: *string*, `__namedParameters?`: Options): *string*
+▸ **formatDate**(`input`: Date, `mask?`: *string*, `__namedParameters?`: Options): *string*
 
 Format a date
 
@@ -33,7 +33,7 @@ Format a date
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
 | `input` | Date | - | The date |
-| `mask` | *string* | - | The mask |
+| `mask?` | *string* | - | The mask |
 | `__namedParameters` | Options | {} | see [Options](almostequals.md#options) |
 
 **Returns:** *string*

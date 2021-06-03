@@ -2,7 +2,7 @@ import { normalizeAngle } from './normalizeAngle';
 import type { Cartesian, Polar } from './coordinates';
 
 /**
- * Convert ccartesian coordinates to polar
+ * Convert cartesian coordinates to polar
  *
  * @param __namedParameters see {@link Cartesian}
  * @returns polar coordinated

@@ -56,7 +56,7 @@ export async function fetcher(
     ).catch(
         error => {
             clearTimeout(timer);
-            if(error instanceof DOMException && error.name === 'AbortError')
+            if(!signal && error.name === 'AbortError')
                 throw new TimeoutError();
 
             throw error;

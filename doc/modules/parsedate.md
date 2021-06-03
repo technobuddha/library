@@ -39,4 +39,4 @@ back to new Date(text)
 
 new Date object
 
-Defined in: [parseDate.ts:54](../../src/parseDate.ts#L54)
+Defined in: [parseDate.ts:52](../../src/parseDate.ts#L52)

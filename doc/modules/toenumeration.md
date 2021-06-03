@@ -24,23 +24,19 @@ Renames and exports: [toEnumeration](toenumeration.md#toenumeration)
 
 ▸ **toEnumeration**(`input`: *string*, ...`tests`: (*Iterable*<string \| RegExp\> \| *string* \| RegExp)[]): *number* \| *undefined*
 
-Convert a string to a boolean value
+Convert a string to a numeric value
 
 **`parm`** __namedParameters see [Options](almostequals.md#options)
-
-**`defaults`** trueValues 'true', 'yes', 'y', 'on', or '1'
-
-**`defaults`** falseValues 'false', 'no', 'n', 'off', '0'
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `input` | *string* | The string to convert |
-| `...tests` | (*Iterable*<string \| RegExp\> \| *string* \| RegExp)[] | - |
+| `...tests` | (*Iterable*<string \| RegExp\> \| *string* \| RegExp)[] | Array of tests (string value or regular expressions) |
 
 **Returns:** *number* \| *undefined*
 
-true, false or undefined if the string doesn't match
+The index of the first test to match the input string
 
-Defined in: [toEnumeration.ts:12](../../src/toEnumeration.ts#L12)
+Defined in: [toEnumeration.ts:11](../../src/toEnumeration.ts#L11)

@@ -2,8 +2,6 @@
 import isString from 'lodash/isString';
 import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond, hoursPerDay, minutesPerHour, secondsPerMinute } from './constants';
 
-// TODO UNIT tests
-
 /**
  * Store and manipulate a duration of time
  */
@@ -18,11 +16,12 @@ export class TimeSpan {
      * @param s seconds
      * @param ms milliseconds
      */
-    constructor(text: string)
+    constructor()
     constructor(ticks: number)
     constructor(h: number, m: number, s: number)
     constructor(d: number, h: number, m: number, s: number)
     constructor(d: number, h: number, m: number, s: number, ms: number)
+    constructor(text: string)
     constructor(...args: any[]) {
         let sign    = 1;
         let d       = 0;
@@ -48,7 +47,7 @@ export class TimeSpan {
                     h   = Number(matches[2]);
                     m   = Number(matches[3]);
                     s   = Number(matches[4]);
-                    ms  = Number(matches[5]);
+                    ms  = matches[5] ? Math.floor(Number(`0.${matches[5]}`) * 1000) : NaN;
 
                     while(Number.isNaN(s)) {
                         s = m;
@@ -60,21 +59,21 @@ export class TimeSpan {
                     d = h = m = s = ms = 0;
                 }
             } else {
-                ms    = args[0] as number;
+                ms   = args[0] as number;
                 d    = h = m = s = 0;
             }
         } else if(args.length === 3) {
             d   = 0;
-            h   = args[0] ?? 0;
-            m   = args[1] ?? 0;
-            s   = args[2] ?? 0;
+            h   = args[0];
+            m   = args[1];
+            s   = args[2];
             ms  = 0;
         } else {
-            d   = args[0] ?? 0;
-            h   = args[1] ?? 0;
-            m   = args[2] ?? 0;
-            s   = args[3] ?? 0;
-            ms  = args[4] ?? 0;
+            d   = args[0];
+            h   = args[1];
+            m   = args[2];
+            s   = args[3];
+            ms  = args[4];
         }
 
         this.clicks = sign * ((d ? d * ticksPerDay : 0) + (h ? h * ticksPerHour : 0) + (m ? m * ticksPerMinute : 0) + (s ? s * ticksPerSecond : 0) + (ms ? ms : 0));
@@ -171,7 +170,7 @@ export class TimeSpan {
             const S       = this.seconds;
             const M       = this.minutes;
             const H       = this.hours;
-            const L       = this.milliseconds;
+            const F       = this.milliseconds;
             const flags   =
             {
                 d:  D.toString(),
@@ -182,12 +181,12 @@ export class TimeSpan {
                 hh: H.toString().padStart(2, '0'),
                 s:  S.toString(),
                 ss: S.toString().padStart(2, '0'),
-                l:  L.toString(),
-                ll: L.toString().padStart(3, '0'),
+                f:  F.toString().padStart(3, '0'),
+                ff: F.toString().padStart(3, '0'),
             } as {[key: string]: string };
 
             return mask.replace(
-                /[dmhsl]{1,2}|"[^"]*"|'[^']*'/ug,
+                /[dmhsf]{1,2}|"[^"]*"|'[^']*'/ug,
                 $0 => {
                     return ($0 in flags) ? flags[$0] : $0.slice(1, $0.length - 1);
                 }
@@ -197,14 +196,18 @@ export class TimeSpan {
         const H = this.hours;
         const M = this.minutes;
         const S = this.seconds;
-        //const L = this.milliseconds;
+        const F = this.milliseconds;
 
-        if(D > 0)
-            return `${D}.${H.toString().padStart(2, '0')}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
+        let str: string;
+        if(D !== 0)
+            str = `${D}d${H.toString().padStart(2, '0')}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
+        else if(H !== 0)
+            str = `${H}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
         else
-        if(H > 0)
-            return `${H}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
-        return `${M}:${S.toString().padStart(2, '0')}`;
+            str = `${M}:${S.toString().padStart(2, '0')}`;
+        if(F)
+            str += `.${F.toString().padStart(3, '0')}`;
+        return str;
     }
 
     /**

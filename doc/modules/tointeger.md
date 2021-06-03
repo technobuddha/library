@@ -32,4 +32,4 @@ Renames and exports: [toInteger](tointeger.md#tointeger)
 
 **Returns:** *number*
 
-Defined in: [toInteger.ts:4](../../src/toInteger.ts#L4)
+Defined in: [toInteger.ts:5](../../src/toInteger.ts#L5)

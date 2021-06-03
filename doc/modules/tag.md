@@ -32,7 +32,7 @@ Surround text with an HTML tag
 | :------ | :------ | :------ | :------ |
 | `input` | *string* | - | The text to surround |
 | `tagName` | *string* | 'span' | The name of the tag |
-| `attributes` | *Record*<string, string\> | {} | A dictionary of name value pairs to use for attribues |
+| `attributes` | *Record*<string, string\> | {} | A dictionary of name value pairs to use for attributes |
 
 **Returns:** *string*
 

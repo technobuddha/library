@@ -32,4 +32,4 @@ Renames and exports: [toDate](todate.md#todate)
 
 **Returns:** Date
 
-Defined in: [toDate.ts:1](../../src/toDate.ts#L1)
+Defined in: [toDate.ts:6](../../src/toDate.ts#L6)

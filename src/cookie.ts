@@ -4,18 +4,11 @@ let yummy: Record<string, string>;
 
 /**
  * Initialize the cookie system with the browsers cookies
- */
-function init(): void {
-    if(typeof yummy === 'undefined')
-        parse(document.cookie);
-}
-
-/**
  * Parse a string containing cookies for use by other cookie method
  *
  * @param input string to be decoded
  */
-export function parse(input: string): void {
+export function init(input = document.cookie): void {
     if(typeof yummy === 'undefined') {
         yummy =  Object.fromEntries(input.split(';').map(
             cookie => cookie.split('=').map(crumb => decodeURIComponent(crumb.trim()))
@@ -52,14 +45,11 @@ export function names(): string[] {
  */
 export function add(name: string, value: string, expires?: string | Date): void {
     init();
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-    if(document?.cookie) {
-        let cookie = `${name}=${encodeURIComponent(value)}; Path=/`;
+    let cookie = `${name}=${encodeURIComponent(value)}; Path=/`;
 
-        if(expires)
-            cookie += `; Expires=${formatDate(new Date(expires), 'cookie', { UTC: true })}`;
-        document.cookie = cookie;
-    }
+    if(expires)
+        cookie += `; Expires=${formatDate(new Date(expires), 'cookie', { UTC: true })}`;
+    document.cookie = cookie;
     yummy[name] = value;
 }
 

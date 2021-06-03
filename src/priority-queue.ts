@@ -1,5 +1,3 @@
-// TODO this needs unit tests
-
 /**
  * A simple priority queue
  */
@@ -15,7 +13,7 @@ export class PriorityQueue<T> {
     }
 
     private readonly contents:   T[];
-    private sorted:     boolean;
+    private sorted:  boolean;
 
     private sort() {
         this.contents.sort(this.comparator);

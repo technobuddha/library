@@ -39,7 +39,7 @@ Renames and exports: [longestCommonSubsequence](longestcommonsubsequence.md#long
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `collect?` | (`i1`: *number*, `i2`: *number*) => T | Function used to decide what to return as a result subsequence. It accepts 2 arguments: index of common element in the first array and index in the second. The default function returns element from the first array. |
-| `compare?` | (`a`: T, `b`: T) => *boolean* | Function that acts as a custom comparator for the array ojects. Function should return true if objects are equal, otherwise false. |
+| `compare?` | (`a`: T, `b`: T) => *boolean* | Function that acts as a custom comparator for the array objects. Function should return true if objects are equal, otherwise false. |
 
 Defined in: [longestCommonSubsequence.ts:3](../../src/longestCommonSubsequence.ts#L3)
 
