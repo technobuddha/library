@@ -49,7 +49,7 @@ ___
 
 **Returns:** Size
 
-Defined in: [measure.ts:21](../../src/measure.ts#L21)
+Defined in: [measure.ts:22](../../src/measure.ts#L22)
 
 ___
 
@@ -59,4 +59,4 @@ ___
 
 **Returns:** Size
 
-Defined in: [measure.ts:25](../../src/measure.ts#L25)
+Defined in: [measure.ts:26](../../src/measure.ts#L26)

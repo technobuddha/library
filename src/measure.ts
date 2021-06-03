@@ -7,6 +7,7 @@ type Size = {
 
 export function getScrollbarSize() {
     const node = document.createElement('div');
+
     node.setAttribute('style', 'width: 100px; height: 100px; position: absolute; top: -1000000px; overflow: scroll;');
     document.body.appendChild(node);
 
