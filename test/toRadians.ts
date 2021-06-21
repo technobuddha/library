@@ -33,5 +33,17 @@ describe(
                 expect(toRadians(-720)).toBe(-8 * Math.PI / 2);
             }
         );
+
+        test(
+            'accepts units',
+            () => {
+                expect(toRadians(90,            'degrees')).toBeCloseTo(Math.PI / 2);
+                expect(toRadians(Math.PI / 2,   'radians')).toBeCloseTo(Math.PI / 2);
+                expect(toRadians(Math.PI / 2,   'rads')).toBeCloseTo(Math.PI / 2);
+                expect(toRadians(100,           'gradians')).toBeCloseTo(Math.PI / 2);
+                expect(toRadians(100,           'grads')).toBeCloseTo(Math.PI / 2);
+                expect(toRadians(1 / 4,         'turns')).toBeCloseTo(Math.PI / 2);
+            }
+        );
     }
 );

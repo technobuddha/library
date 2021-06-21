@@ -36,4 +36,4 @@ Compute the hypotenuse of a (multi-dimensional) right triangle
 
 The hypotenuse
 
-Defined in: [hypot.ts:8](../../src/hypot.ts#L8)
+Defined in: [hypot.ts:7](../../src/hypot.ts#L7)

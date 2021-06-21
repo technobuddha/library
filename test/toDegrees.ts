@@ -45,5 +45,17 @@ describe(
                 expect(toDegrees(15 * Math.PI / 4)).toBeCloseTo(675.0);
             }
         );
+
+        test(
+            'accepts units',
+            () => {
+                expect(toDegrees(90,            'degrees')).toBeCloseTo(90);
+                expect(toDegrees(Math.PI / 2,   'radians')).toBeCloseTo(90);
+                expect(toDegrees(Math.PI / 2,   'rads')).toBeCloseTo(90);
+                expect(toDegrees(100,           'gradians')).toBeCloseTo(90);
+                expect(toDegrees(100,           'grads')).toBeCloseTo(90);
+                expect(toDegrees(1 / 4,         'turns')).toBeCloseTo(90);
+            }
+        );
     }
 );

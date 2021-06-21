@@ -22,18 +22,19 @@ Renames and exports: [toRadians](toradians.md#toradians)
 
 ### toRadians
 
-▸ **toRadians**(`angle`: *number*): *number*
+▸ **toRadians**(`angle`: *number*, `unit?`: AngleUnit): *number*
 
 Converts degrees to radians.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `angle` | *number* | Angle in degrees. |
+| Name | Type | Default value | Description |
+| :------ | :------ | :------ | :------ |
+| `angle` | *number* | - | Angle in degrees. |
+| `unit` | AngleUnit | 'degrees' | - |
 
 **Returns:** *number*
 
 Angle in radians.
 
-Defined in: [toRadians.ts:7](../../src/toRadians.ts#L7)
+Defined in: [toRadians.ts:10](../../src/toRadians.ts#L10)
