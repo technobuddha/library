@@ -64,7 +64,6 @@
 - [getTimezone](modules/gettimezone.md)
 - [graphQL](modules/graphql.md)
 - [groupCode](modules/groupcode.md)
-- [hypot](modules/hypot.md)
 - [indefiniteArticle](modules/indefinitearticle.md)
 - [indent](modules/indent.md)
 - [isAlpha](modules/isalpha.md)
