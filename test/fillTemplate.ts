@@ -32,6 +32,5 @@ describe(
                 expect(fillTemplate('Kiss a {{froggy}}.', { frog: 'prince' })).toBe('Kiss a .');
             }
         );
-
     }
 );

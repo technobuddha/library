@@ -1,5 +1,5 @@
 import expect from '../util/expect';
-import { Cartesian, Polar } from '../src/coordinates';
+import type { Cartesian, Polar } from '../src/coordinates';
 
 describe(
     'coordinates',

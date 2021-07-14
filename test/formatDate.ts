@@ -370,7 +370,6 @@ describe(
             }
         );
 
-
         test(
             'support default',
             () => {

@@ -32,7 +32,8 @@ describe(
                         weightLevenshteinDistance: 0,
                         weightDiceCoefficient: 0,
                         weightLongestCommonSubstring: 0,
-                    })).toBe(0);
+                    }
+                )).toBe(0);
             }
         );
 

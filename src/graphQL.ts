@@ -8,7 +8,7 @@ import isArrayLike       from 'lodash/isArrayLike';
 import isString          from 'lodash/isString';
 import escapeGraphQL     from './escapeGraphQL';
 
-type GraphQLObject    = {[Key in string]: GraphQLValue};
+type GraphQLObject    = {[Key in string]: GraphQLValue };
 type GraphQLArray     = GraphQLValue[];
 type GraphQLValue     = number | string | null | boolean | GraphQLArray | GraphQLObject;
 
