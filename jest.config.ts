@@ -6,7 +6,7 @@ export default async (): Promise<Config.InitialOptions> => {
         //verbose: true,
         testMatch: [ '**/test/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)' ],
         preset: 'ts-jest',
-        //testEnvironment: 'node',
+        testEnvironment: 'jsdom',
         globals: {
             'ts-jest': {
                 tsconfig: './test/tsconfig.json',
