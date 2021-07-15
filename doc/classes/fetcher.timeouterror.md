@@ -95,7 +95,7 @@ Optional override for formatting stack traces
 
 Inherited from: Error.prepareStackTrace
 
-Defined in: packages/library/node_modules/@types/node/globals.d.ts:11
+Defined in: node_modules/@types/node/globals.d.ts:11
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 Inherited from: Error.stackTraceLimit
 
-Defined in: packages/library/node_modules/@types/node/globals.d.ts:13
+Defined in: node_modules/@types/node/globals.d.ts:13
 
 ## Methods
 
@@ -126,4 +126,4 @@ Create .stack property on a target object
 
 Inherited from: Error.captureStackTrace
 
-Defined in: packages/library/node_modules/@types/node/globals.d.ts:4
+Defined in: node_modules/@types/node/globals.d.ts:4

@@ -32,10 +32,6 @@
     "document:clean": "rm -rf doc",
     "document:generate": "typedoc src/*.ts"
   },
-  "devDependencies": {
-    "@types/node-fetch": "^2.5.10",
-    "node-fetch": "^2.6.1"
-  },
   "publishConfig": {
     "cache": "~/.npm",
     "directory": "dist"
