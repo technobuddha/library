@@ -22,7 +22,7 @@ Renames and exports: [possessive](possessive.md#possessive)
 
 ### possessive
 
-▸ **possessive**(`input`: *string*): *string*
+▸ **possessive**(`input`): `string`
 
 Determine the possessive form of a word
 
@@ -30,10 +30,14 @@ Determine the possessive form of a word
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | the word |
+| `input` | `string` | the word |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 the posessive form of the word
 
-Defined in: [possessive.ts:10](../../src/possessive.ts#L10)
+#### Defined in
+
+[possessive.ts:10](../../src/possessive.ts#L10)

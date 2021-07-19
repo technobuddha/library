@@ -22,7 +22,7 @@ Renames and exports: [mask](mask.md#mask)
 
 ### mask
 
-▸ **mask**(`input`: *string*, `maskStr`: *string*, `__namedParameters?`: Options): *string*
+▸ **mask**(`input`, `maskStr`, `__namedParameters?`): `string`
 
 Use a simple mask to display a string
 
@@ -33,14 +33,18 @@ are output as-is, to output a '#' use '\#'
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The string |
-| `maskStr` | *string* | - | - |
-| `__namedParameters` | Options | {} | see [Options](almostequals.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The string |
+| `maskStr` | `string` | - |
+| `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 The mask filled with characters from the string
 
-Defined in: [mask.ts:23](../../src/mask.ts#L23)
+#### Defined in
+
+[mask.ts:23](../../src/mask.ts#L23)

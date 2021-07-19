@@ -22,7 +22,7 @@ Renames and exports: [ordinal](ordinal.md#ordinal)
 
 ### ordinal
 
-▸ **ordinal**(`input`: *number*): *string*
+▸ **ordinal**(`input`): `string`
 
 Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 
@@ -30,8 +30,12 @@ Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *number* | The number to convert |
+| `input` | `number` | The number to convert |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [ordinal.ts:18](../../src/ordinal.ts#L18)
+`string`
+
+#### Defined in
+
+[ordinal.ts:18](../../src/ordinal.ts#L18)

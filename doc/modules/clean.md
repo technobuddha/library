@@ -24,7 +24,7 @@ Renames and exports: [clean](clean.md#clean)
 
 ### clean
 
-▸ **clean**(`input`: *string*, `characters?`: *string* \| RegExp \| (*string* \| RegExp)[]): *string*
+▸ **clean**(`input`, `characters?`): `string`
 
 Remove all occurrences of characters from the beginning and end of the string
 
@@ -32,18 +32,22 @@ Remove all occurrences of characters from the beginning and end of the string
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | The string |
-| `characters` | *string* \| RegExp \| (*string* \| RegExp)[] | The characters(s) to remove |
+| `input` | `string` | The string |
+| `characters` | `string` \| `RegExp` \| (`string` \| `RegExp`)[] | The characters(s) to remove |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [clean.ts:15](../../src/clean.ts#L15)
+`string`
+
+#### Defined in
+
+[clean.ts:15](../../src/clean.ts#L15)
 
 ___
 
 ### cleanEnd
 
-▸ **cleanEnd**(`input`: *string*, `characters?`: *string* \| RegExp \| (*string* \| RegExp)[]): *string*
+▸ **cleanEnd**(`input`, `characters?`): `string`
 
 Remove all occurrences of characters from the end of the string
 
@@ -51,18 +55,22 @@ Remove all occurrences of characters from the end of the string
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | The string |
-| `characters` | *string* \| RegExp \| (*string* \| RegExp)[] | he characters(s) to remove |
+| `input` | `string` | The string |
+| `characters` | `string` \| `RegExp` \| (`string` \| `RegExp`)[] | he characters(s) to remove |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [clean.ts:33](../../src/clean.ts#L33)
+`string`
+
+#### Defined in
+
+[clean.ts:33](../../src/clean.ts#L33)
 
 ___
 
 ### cleanStart
 
-▸ **cleanStart**(`input`: *string*, `characters?`: *string* \| RegExp \| (*string* \| RegExp)[]): *string*
+▸ **cleanStart**(`input`, `characters?`): `string`
 
 Remove all occurrences of characters from the start of the string
 
@@ -70,9 +78,13 @@ Remove all occurrences of characters from the start of the string
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | The string |
-| `characters` | *string* \| RegExp \| (*string* \| RegExp)[] | The characters(s) to remove |
+| `input` | `string` | The string |
+| `characters` | `string` \| `RegExp` \| (`string` \| `RegExp`)[] | The characters(s) to remove |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [clean.ts:51](../../src/clean.ts#L51)
+`string`
+
+#### Defined in
+
+[clean.ts:51](../../src/clean.ts#L51)

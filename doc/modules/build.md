@@ -22,7 +22,7 @@ Renames and exports: [build](build.md#build)
 
 ### build
 
-▸ **build**(...`args`: (stringy \| *Generator*<stringy\> \| () => stringy)[]): *string*
+▸ **build**(...`args`): `string`
 
 Concatenates strings and/or arrays of strings
 
@@ -30,10 +30,14 @@ Concatenates strings and/or arrays of strings
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...args` | (stringy \| *Generator*<stringy\> \| () => stringy)[] | Concatenates a list of strings, string arrays, or functions that return a string or string array. |
+| `...args` | (`stringy` \| `Generator`<`stringy`\> \| () => `stringy`)[] | Concatenates a list of strings, string arrays, or functions that return a string or string array. |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 The concatenation of *args*.
 
-Defined in: [build.ts:14](../../src/build.ts#L14)
+#### Defined in
+
+[build.ts:14](../../src/build.ts#L14)

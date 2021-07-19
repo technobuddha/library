@@ -18,42 +18,48 @@
 
 ### default
 
-• **default**: *object*
+• **default**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `email` | *RegExp* |
-| `isoDate` | *RegExp* |
-| `numberString` | *RegExp* |
+| `email` | `RegExp` |
+| `isoDate` | `RegExp` |
+| `numberString` | `RegExp` |
 
 ## Variables
 
 ### email
 
-• `Const` **email**: *RegExp*
+• `Const` **email**: `RegExp`
 
 validate an valid email address
 
-Defined in: [regexp.ts:9](../../src/regexp.ts#L9)
+#### Defined in
+
+[regexp.ts:9](../../src/regexp.ts#L9)
 
 ___
 
 ### isoDate
 
-• `Const` **isoDate**: *RegExp*
+• `Const` **isoDate**: `RegExp`
 
 validate a ISO formatted date
 
-Defined in: [regexp.ts:3](../../src/regexp.ts#L3)
+#### Defined in
+
+[regexp.ts:3](../../src/regexp.ts#L3)
 
 ___
 
 ### numberString
 
-• `Const` **numberString**: *RegExp*
+• `Const` **numberString**: `RegExp`
 
 validate a valid number
 
-Defined in: [regexp.ts:6](../../src/regexp.ts#L6)
+#### Defined in
+
+[regexp.ts:6](../../src/regexp.ts#L6)

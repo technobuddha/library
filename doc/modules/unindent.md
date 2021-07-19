@@ -26,31 +26,37 @@ Renames and exports: [unindent](unindent.md#unindent)
 
 ### Options
 
-Ƭ **Options**: *object*
+Ƭ **Options**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `indenter?` | *string* | the indentation character |
+| `indenter?` | `string` | the indentation character |
 
-Defined in: [unindent.ts:5](../../src/unindent.ts#L5)
+#### Defined in
+
+[unindent.ts:5](../../src/unindent.ts#L5)
 
 ## Functions
 
 ### unindent
 
-▸ **unindent**(`input`: *string*, `__namedParameters?`: [*Options*](unindent.md#options)): *string*
+▸ **unindent**(`input`, `__namedParameters?`): `string`
 
 Remove indentation from text
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The indented text |
-| `__namedParameters` | [*Options*](unindent.md#options) | {} | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The indented text |
+| `__namedParameters` | [`Options`](unindent.md#options) | - |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [unindent.ts:16](../../src/unindent.ts#L16)
+`string`
+
+#### Defined in
+
+[unindent.ts:16](../../src/unindent.ts#L16)

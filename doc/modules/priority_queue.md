@@ -10,10 +10,10 @@
 
 ### Classes
 
-- [PriorityQueue](../classes/priority_queue.priorityqueue.md)
+- [PriorityQueue](../classes/priority_queue.PriorityQueue.md)
 
 ## References
 
 ### default
 
-Renames and exports: [PriorityQueue](../classes/priority_queue.priorityqueue.md)
+Renames and exports: [PriorityQueue](../classes/priority_queue.PriorityQueue.md)

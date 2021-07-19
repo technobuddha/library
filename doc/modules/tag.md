@@ -22,7 +22,7 @@ Renames and exports: [tag](tag.md#tag)
 
 ### tag
 
-▸ **tag**(`input`: *string*, `tagName?`: *string*, `attributes?`: *Record*<string, string\>): *string*
+▸ **tag**(`input`, `tagName?`, `attributes?`): `string`
 
 Surround text with an HTML tag
 
@@ -30,12 +30,16 @@ Surround text with an HTML tag
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The text to surround |
-| `tagName` | *string* | 'span' | The name of the tag |
-| `attributes` | *Record*<string, string\> | {} | A dictionary of name value pairs to use for attributes |
+| `input` | `string` | `undefined` | The text to surround |
+| `tagName` | `string` | `'span'` | The name of the tag |
+| `attributes` | `Record`<`string`, `string`\> | `{}` | A dictionary of name value pairs to use for attributes |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 HTML tag with text
 
-Defined in: [tag.ts:13](../../src/tag.ts#L13)
+#### Defined in
+
+[tag.ts:13](../../src/tag.ts#L13)

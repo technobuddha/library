@@ -22,7 +22,7 @@ Renames and exports: [compare](compare.md#compare)
 
 ### compare
 
-▸ **compare**(`x`: *unknown*, `y`: *unknown*): *number*
+▸ **compare**(`x`, `y`): `number`
 
 Compare two objects
 
@@ -30,11 +30,15 @@ Compare two objects
 
 | Name | Type |
 | :------ | :------ |
-| `x` | *unknown* |
-| `y` | *unknown* |
+| `x` | `unknown` |
+| `y` | `unknown` |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 0 if a == b; -1 if a < b; 1 if a > b
 
-Defined in: [compare.ts:13](../../src/compare.ts#L13)
+#### Defined in
+
+[compare.ts:13](../../src/compare.ts#L13)

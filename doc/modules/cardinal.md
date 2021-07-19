@@ -30,45 +30,51 @@ Renames and exports: [cardinal](cardinal.md#cardinal)
 
 ### Options
 
-Ƭ **Options**: [*OptionsCardinal*](cardinal.md#optionscardinal) & [*OptionsIllion*](cardinal.md#optionsillion)
+Ƭ **Options**: [`OptionsCardinal`](cardinal.md#optionscardinal) & [`OptionsIllion`](cardinal.md#optionsillion)
 
-Defined in: [cardinal.ts:5](../../src/cardinal.ts#L5)
+#### Defined in
+
+[cardinal.ts:5](../../src/cardinal.ts#L5)
 
 ___
 
 ### OptionsCardinal
 
-Ƭ **OptionsCardinal**: *object*
+Ƭ **OptionsCardinal**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `digits?` | *boolean* | Use numbers instead of words for the group value, the group name is still output as text |
-| `groups?` | *number* | The number of groups to output, each group consists of three digits. |
+| `digits?` | `boolean` | Use numbers instead of words for the group value, the group name is still output as text |
+| `groups?` | `number` | The number of groups to output, each group consists of three digits. |
 
-Defined in: [cardinal.ts:7](../../src/cardinal.ts#L7)
+#### Defined in
+
+[cardinal.ts:7](../../src/cardinal.ts#L7)
 
 ___
 
 ### OptionsIllion
 
-Ƭ **OptionsIllion**: *object*
+Ƭ **OptionsIllion**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `and?` | *string* | Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" |
-| `hyphen?` | *string* | Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one" |
+| `and?` | `string` | Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" |
+| `hyphen?` | `string` | Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one" |
 
-Defined in: [cardinal.ts:14](../../src/cardinal.ts#L14)
+#### Defined in
+
+[cardinal.ts:14](../../src/cardinal.ts#L14)
 
 ## Functions
 
 ### cardinal
 
-▸ **cardinal**(`input`: *number*, `__namedParameters?`: [*Options*](cardinal.md#options)): *string*
+▸ **cardinal**(`input`, `__namedParameters?`): `string`
 
 Convert a number into text (the cardinal number)
 
@@ -85,22 +91,26 @@ up to uncentillions (1e308).
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *number* | - | The number |
-| `__namedParameters` | [*Options*](cardinal.md#options) | {} | see [Options](cardinal.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `number` | The number |
+| `__namedParameters` | [`Options`](cardinal.md#options) | see [Options](cardinal.md#options) |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 The number spelled out
 
-Defined in: [cardinal.ts:63](../../src/cardinal.ts#L63)
+#### Defined in
+
+[cardinal.ts:63](../../src/cardinal.ts#L63)
 
 ___
 
 ### orderOfMagnitude
 
-▸ **orderOfMagnitude**(`exponent`: *number*): *string* \| ``null``
+▸ **orderOfMagnitude**(`exponent`): `string` \| ``null``
 
 Get the spelled out word for an exponent
 
@@ -115,19 +125,23 @@ numbers up to 1e308, which limits the numbers that this method can represent to 
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `exponent` | *number* | The exponent to convert |
+| `exponent` | `number` | The exponent to convert |
 
-**Returns:** *string* \| ``null``
+#### Returns
+
+`string` \| ``null``
 
 Order of Magnitude as text
 
-Defined in: [cardinal.ts:244](../../src/cardinal.ts#L244)
+#### Defined in
+
+[cardinal.ts:244](../../src/cardinal.ts#L244)
 
 ___
 
 ### summarize
 
-▸ **summarize**(`input`: *number*, `options?`: [*OptionsIllion*](cardinal.md#optionsillion)): *string*
+▸ **summarize**(`input`, `options?`): `string`
 
 Get a short description of a number
 
@@ -139,13 +153,17 @@ Get a short description of a number
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *number* | - | number to convert |
-| `options` | [*OptionsIllion*](cardinal.md#optionsillion) | {} | see [OptionsIllion](cardinal.md#optionsillion) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `number` | number to convert |
+| `options` | [`OptionsIllion`](cardinal.md#optionsillion) | see [OptionsIllion](cardinal.md#optionsillion) |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 number as text
 
-Defined in: [cardinal.ts:260](../../src/cardinal.ts#L260)
+#### Defined in
+
+[cardinal.ts:260](../../src/cardinal.ts#L260)

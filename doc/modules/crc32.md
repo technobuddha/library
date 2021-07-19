@@ -22,7 +22,7 @@ Renames and exports: [crc32](crc32.md#crc32)
 
 ### crc32
 
-▸ **crc32**(`input`: *string*): *number*
+▸ **crc32**(`input`): `number`
 
 Compute the CRC32 checksum for a string
 
@@ -30,10 +30,14 @@ Compute the CRC32 checksum for a string
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | The string |
+| `input` | `string` | The string |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 the CRC32 checksum
 
-Defined in: [crc32.ts:11](../../src/crc32.ts#L11)
+#### Defined in
+
+[crc32.ts:11](../../src/crc32.ts#L11)

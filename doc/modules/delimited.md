@@ -22,7 +22,7 @@ Renames and exports: [delimited](delimited.md#delimited)
 
 ### delimited
 
-▸ **delimited**(`input`: *string*, `delimiter`: *string*, `index?`: *number*, `count?`: *number*): *string*
+▸ **delimited**(`input`, `delimiter`, `index?`, `count?`): `string`
 
 Return a field from a delimited string
 
@@ -30,11 +30,15 @@ Return a field from a delimited string
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The delimited string |
-| `delimiter` | *string* | - | The delimiter string |
-| `index` | *number* | 0 | The position of the desired field, 0 is the first field, negative numbers count backwards from the end (default 0) |
-| `count` | *number* | 1 | The number of fields to return (default 1) |
+| `input` | `string` | `undefined` | The delimited string |
+| `delimiter` | `string` | `undefined` | The delimiter string |
+| `index` | `number` | `0` | The position of the desired field, 0 is the first field, negative numbers count backwards from the end (default 0) |
+| `count` | `number` | `1` | The number of fields to return (default 1) |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [delimited.ts:11](../../src/delimited.ts#L11)
+`string`
+
+#### Defined in
+
+[delimited.ts:11](../../src/delimited.ts#L11)

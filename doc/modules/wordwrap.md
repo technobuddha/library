@@ -22,7 +22,7 @@ Renames and exports: [wordwrap](wordwrap.md#wordwrap)
 
 ### wordwrap
 
-▸ **wordwrap**(`input`: *string*, `__namedParameters?`: Options): *string*
+▸ **wordwrap**(`input`, `__namedParameters?`): `string`
 
 Wrap text so that it fits within a area of fixed width
 
@@ -36,13 +36,17 @@ Wrap text so that it fits within a area of fixed width
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | the text to wrap |
-| `__namedParameters` | Options | {} | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | the text to wrap |
+| `__namedParameters` | `Options` | - |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 wrapped text
 
-Defined in: [wordwrap.ts:26](../../src/wordwrap.ts#L26)
+#### Defined in
+
+[wordwrap.ts:26](../../src/wordwrap.ts#L26)

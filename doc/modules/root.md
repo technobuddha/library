@@ -26,34 +26,40 @@ Renames and exports: [root](root.md#root)
 
 ### Options
 
-Ƭ **Options**: *object*
+Ƭ **Options**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `prefix?` | *string* | The refix string to remove |
-| `suffix?` | *string* | The suffix string to remove |
+| `prefix?` | `string` | The refix string to remove |
+| `suffix?` | `string` | The suffix string to remove |
 
-Defined in: [root.ts:3](../../src/root.ts#L3)
+#### Defined in
+
+[root.ts:3](../../src/root.ts#L3)
 
 ## Functions
 
 ### root
 
-▸ **root**(`input`: *string*, `__namedParameters?`: [*Options*](root.md#options)): *string*
+▸ **root**(`input`, `__namedParameters?`): `string`
 
 Extract the root word, removing a prefix and/or suffix
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The word, which might have {@code prefix} before it, and {@code suffix} after it. |
-| `__namedParameters` | [*Options*](root.md#options) | {} | see [Options](root.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The word, which might have {@code prefix} before it, and {@code suffix} after it. |
+| `__namedParameters` | [`Options`](root.md#options) | see [Options](root.md#options) |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 The root word
 
-Defined in: [root.ts:17](../../src/root.ts#L17)
+#### Defined in
+
+[root.ts:17](../../src/root.ts#L17)

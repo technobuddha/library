@@ -10,7 +10,7 @@
 
 ### Classes
 
-- [TimeoutError](../classes/fetcher.timeouterror.md)
+- [TimeoutError](../classes/fetcher.TimeoutError.md)
 
 ### Type aliases
 
@@ -30,15 +30,17 @@ Renames and exports: [fetcher](fetcher.md#fetcher)
 
 ### Options
 
-Ƭ **Options**: RequestInit & { `timeout?`: *number*  }
+Ƭ **Options**: `RequestInit` & { `timeout?`: `number`  }
 
-Defined in: [fetcher.ts:8](../../src/fetcher.ts#L8)
+#### Defined in
+
+[fetcher.ts:8](../../src/fetcher.ts#L8)
 
 ## Functions
 
 ### fetcher
 
-▸ **fetcher**(`url`: *string*, `__namedParameters?`: [*Options*](fetcher.md#options)): *Promise*<Response\>
+▸ **fetcher**(`url`, `__namedParameters?`): `Promise`<`Response`\>
 
 Fetch a remote resource
 
@@ -50,11 +52,15 @@ Fetch a remote resource
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `url` | *string* | - | The url of a resource that you wish to fetch |
-| `__namedParameters` | [*Options*](fetcher.md#options) | {} | see [Options](fetcher.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `url` | `string` | The url of a resource that you wish to fetch |
+| `__namedParameters` | [`Options`](fetcher.md#options) | see [Options](fetcher.md#options) |
 
-**Returns:** *Promise*<Response\>
+#### Returns
 
-Defined in: [fetcher.ts:23](../../src/fetcher.ts#L23)
+`Promise`<`Response`\>
+
+#### Defined in
+
+[fetcher.ts:23](../../src/fetcher.ts#L23)

@@ -24,39 +24,51 @@ Renames and exports: [measure](measure.md#measure)
 
 ### getScrollbarSize
 
-▸ **getScrollbarSize**(): *object*
+▸ **getScrollbarSize**(): `Object`
 
-**Returns:** *object*
+#### Returns
+
+`Object`
 
 | Name | Type |
 | :------ | :------ |
-| `scrollbarHeight` | *number* |
-| `scrollbarWidth` | *number* |
+| `scrollbarHeight` | `number` |
+| `scrollbarWidth` | `number` |
 
-Defined in: [measure.ts:8](../../src/measure.ts#L8)
+#### Defined in
+
+[measure.ts:8](../../src/measure.ts#L8)
 
 ___
 
 ### measure
 
-▸ **measure**(`element`: HTMLElement): Size
+▸ **measure**(`element`): `Size`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `element` | HTMLElement |
+| `element` | `HTMLElement` |
 
-**Returns:** Size
+#### Returns
 
-Defined in: [measure.ts:22](../../src/measure.ts#L22)
+`Size`
+
+#### Defined in
+
+[measure.ts:22](../../src/measure.ts#L22)
 
 ___
 
 ### measureWindow
 
-▸ **measureWindow**(): Size
+▸ **measureWindow**(): `Size`
 
-**Returns:** Size
+#### Returns
 
-Defined in: [measure.ts:26](../../src/measure.ts#L26)
+`Size`
+
+#### Defined in
+
+[measure.ts:26](../../src/measure.ts#L26)

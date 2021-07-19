@@ -10,10 +10,10 @@
 
 ### Classes
 
-- [TimeSpan](../classes/time_span.timespan.md)
+- [TimeSpan](../classes/time_span.TimeSpan.md)
 
 ## References
 
 ### default
 
-Renames and exports: [TimeSpan](../classes/time_span.timespan.md)
+Renames and exports: [TimeSpan](../classes/time_span.TimeSpan.md)

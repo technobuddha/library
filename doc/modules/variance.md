@@ -22,7 +22,7 @@ Renames and exports: [variance](variance.md#variance)
 
 ### variance
 
-▸ **variance**(...`datapoints`: *number*[]): *number*
+▸ **variance**(...`datapoints`): `number`
 
 Returns the unbiased sample variance of the arguments. For a definition,
 see http://en.wikipedia.org/wiki/Variance
@@ -31,12 +31,16 @@ see http://en.wikipedia.org/wiki/Variance
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `...datapoints` | *number*[] | Number samples to analyze. |
+| `...datapoints` | `number`[] | Number samples to analyze. |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 The unbiased sample variance of the arguments (0 if fewer
 than two samples were provided, or {@code NaN} if any of the samples is
 not a valid number).
 
-Defined in: [variance.ts:13](../../src/variance.ts#L13)
+#### Defined in
+
+[variance.ts:13](../../src/variance.ts#L13)

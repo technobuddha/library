@@ -26,22 +26,24 @@ Renames and exports: [quote](quote.md#quote)
 
 ### Options
 
-Ƭ **Options**: *object*
+Ƭ **Options**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `escape?` | *string* \| (`input`: *string*) => *string* | Character sequence to replace the quote mark within the text, or function to return the properly escaped text |
-| `quote?` | *string* | The quote character(s) to use |
+| `escape?` | `string` \| (`input`: `string`) => `string` | Character sequence to replace the quote mark within the text, or function to return the properly escaped text |
+| `quote?` | `string` | The quote character(s) to use |
 
-Defined in: [quote.ts:6](../../src/quote.ts#L6)
+#### Defined in
+
+[quote.ts:6](../../src/quote.ts#L6)
 
 ## Functions
 
 ### quote
 
-▸ **quote**(`input`: *string*, `__namedParameters?`: [*Options*](quote.md#options)): *string*
+▸ **quote**(`input`, `__namedParameters?`): `string`
 
 Surround text with quotes
 
@@ -51,13 +53,17 @@ Surround text with quotes
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The text to surround |
-| `__namedParameters` | [*Options*](quote.md#options) | {} | see [Options](quote.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The text to surround |
+| `__namedParameters` | [`Options`](quote.md#options) | see [Options](quote.md#options) |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 text surrounded by quotes
 
-Defined in: [quote.ts:22](../../src/quote.ts#L22)
+#### Defined in
+
+[quote.ts:22](../../src/quote.ts#L22)

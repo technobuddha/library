@@ -22,7 +22,7 @@ Renames and exports: [syllables](syllables.md#syllables)
 
 ### syllables
 
-▸ **syllables**(`input`: *string*): *number*
+▸ **syllables**(`input`): `number`
 
 Approximate the number of syllables in a string
 
@@ -30,10 +30,14 @@ Approximate the number of syllables in a string
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | The string |
+| `input` | `string` | The string |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 the number of syllables
 
-Defined in: [syllables.ts:11](../../src/syllables.ts#L11)
+#### Defined in
+
+[syllables.ts:11](../../src/syllables.ts#L11)

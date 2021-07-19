@@ -22,7 +22,7 @@ Renames and exports: [modulo](modulo.md#modulo)
 
 ### modulo
 
-▸ **modulo**(`dividend`: *number*, `divisor`: *number*): *number*
+▸ **modulo**(`dividend`, `divisor`): `number`
 
 The % operator in JavaScript returns the remainder of a / b, but differs from
 some other languages in that the result will have the same sign as the
@@ -35,12 +35,16 @@ calculating an offset index in a circular list.
 
 | Name | Type |
 | :------ | :------ |
-| `dividend` | *number* |
-| `divisor` | *number* |
+| `dividend` | `number` |
+| `divisor` | `number` |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 a % b where the result is between 0 and b (either 0 <= x < b
 or b < x <= 0, depending on the sign of b).
 
-Defined in: [modulo.ts:14](../../src/modulo.ts#L14)
+#### Defined in
+
+[modulo.ts:14](../../src/modulo.ts#L14)

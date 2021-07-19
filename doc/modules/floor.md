@@ -22,7 +22,7 @@ Renames and exports: [floor](floor.md#floor)
 
 ### floor
 
-▸ **floor**(`input`: *number*, `__namedParameters?`: Options): *number*
+▸ **floor**(`input`, `__namedParameters?`): `number`
 
 A tweaked variant of {@code Math.floor} which tolerates if the passed number
 is infinitesimally smaller than the closest integer. It often happens with
@@ -32,13 +32,17 @@ Math.LN10) == 2}, not 3 as one would expect.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *number* | - | A number. |
-| `__namedParameters` | Options | {} | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `number` | A number. |
+| `__namedParameters` | `Options` | - |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 The largest integer less than or equal to {@code num}.
 
-Defined in: [floor.ts:18](../../src/floor.ts#L18)
+#### Defined in
+
+[floor.ts:18](../../src/floor.ts#L18)

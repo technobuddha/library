@@ -22,7 +22,7 @@ Renames and exports: [unquote](unquote.md#unquote)
 
 ### unquote
 
-▸ **unquote**(`input`: *string*, `__namedParameters?`: Options): *string*
+▸ **unquote**(`input`, `__namedParameters?`): `string`
 
 Remove surrounding quotes from text
 
@@ -32,13 +32,17 @@ Remove surrounding quotes from text
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The text to surrounded by quotes |
-| `__namedParameters` | Options | {} | see [Options](almostequals.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The text to surrounded by quotes |
+| `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 the unescaped text with quotes removed
 
-Defined in: [unquote.ts:21](../../src/unquote.ts#L21)
+#### Defined in
+
+[unquote.ts:21](../../src/unquote.ts#L21)

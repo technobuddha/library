@@ -26,39 +26,45 @@ Renames and exports: [coordinate](coordinate.md#coordinate)
 
 ### Options
 
-Ƭ **Options**: *object*
+Ƭ **Options**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `conjunction?` | *string* | Conjunction to insert in the last position (default 'and') |
-| `oxford?` | *boolean* | If true, use the oxford comma |
-| `separator?` | *string* | String used to separate values (default ',') |
+| `conjunction?` | `string` | Conjunction to insert in the last position (default 'and') |
+| `oxford?` | `boolean` | If true, use the oxford comma |
+| `separator?` | `string` | String used to separate values (default ',') |
 
-Defined in: [coordinate.ts:4](../../src/coordinate.ts#L4)
+#### Defined in
+
+[coordinate.ts:4](../../src/coordinate.ts#L4)
 
 ## Functions
 
 ### coordinate
 
-▸ **coordinate**<T\>(`input`: *ArrayLike*<T\>, `__namedParameters?`: [*Options*](coordinate.md#options)): *string*
+▸ **coordinate**<`T`\>(`input`, `__namedParameters?`): `string`
 
 Create a string from an array, separating values and inserting a conjunction
 
 #### Type parameters
 
-| Name | Default |
+| Name | Type |
 | :------ | :------ |
-| `T` | *unknown* |
+| `T` | `unknown` |
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *ArrayLike*<T\> | - | Array of values |
-| `__namedParameters` | [*Options*](coordinate.md#options) | {} | see [Options](coordinate.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `ArrayLike`<`T`\> | Array of values |
+| `__namedParameters` | [`Options`](coordinate.md#options) | see [Options](coordinate.md#options) |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [coordinate.ts:19](../../src/coordinate.ts#L19)
+`string`
+
+#### Defined in
+
+[coordinate.ts:19](../../src/coordinate.ts#L19)

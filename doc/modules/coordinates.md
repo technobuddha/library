@@ -13,28 +13,32 @@
 
 ### Cartesian
 
-Ƭ **Cartesian**: *object*
+Ƭ **Cartesian**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `x` | *number* |
-| `y` | *number* |
+| `x` | `number` |
+| `y` | `number` |
 
-Defined in: [coordinates.ts:1](../../src/coordinates.ts#L1)
+#### Defined in
+
+[coordinates.ts:1](../../src/coordinates.ts#L1)
 
 ___
 
 ### Polar
 
-Ƭ **Polar**: *object*
+Ƭ **Polar**: `Object`
 
 #### Type declaration
 
 | Name | Type |
 | :------ | :------ |
-| `angle` | *number* |
-| `radius` | *number* |
+| `angle` | `number` |
+| `radius` | `number` |
 
-Defined in: [coordinates.ts:6](../../src/coordinates.ts#L6)
+#### Defined in
+
+[coordinates.ts:6](../../src/coordinates.ts#L6)

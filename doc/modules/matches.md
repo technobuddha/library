@@ -22,15 +22,19 @@ Renames and exports: [matches](matches.md#matches)
 
 ### matches
 
-▸ **matches**(`text`: *string*, `match`: *string* \| RegExp \| *Iterable*<string \| RegExp\>): *boolean*
+▸ **matches**(`text`, `match`): `boolean`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `text` | *string* |
-| `match` | *string* \| RegExp \| *Iterable*<string \| RegExp\> |
+| `text` | `string` |
+| `match` | `string` \| `RegExp` \| `Iterable`<`string` \| `RegExp`\> |
 
-**Returns:** *boolean*
+#### Returns
 
-Defined in: [matches.ts:4](../../src/matches.ts#L4)
+`boolean`
+
+#### Defined in
+
+[matches.ts:4](../../src/matches.ts#L4)

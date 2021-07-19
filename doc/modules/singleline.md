@@ -22,15 +22,19 @@ Renames and exports: [singleline](singleline.md#singleline)
 
 ### singleline
 
-▸ **singleline**(`template`: TemplateStringsArray, ...`args`: *any*[]): *string*
+▸ **singleline**(`template`, ...`args`): `string`
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `template` | TemplateStringsArray |
-| `...args` | *any*[] |
+| `template` | `TemplateStringsArray` |
+| `...args` | `any`[] |
 
-**Returns:** *string*
+#### Returns
 
-Defined in: [singleline.ts:4](../../src/singleline.ts#L4)
+`string`
+
+#### Defined in
+
+[singleline.ts:4](../../src/singleline.ts#L4)

@@ -22,20 +22,24 @@ Renames and exports: [ceil](ceil.md#ceil)
 
 ### ceil
 
-▸ **ceil**(`input`: *number*, `__namedParameters?`: Options): *number*
+▸ **ceil**(`input`, `__namedParameters?`): `number`
 
 A tweaked variant of {@code Math.ceil}. See {@code goog.math.safeFloor} for
 details.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *number* | - | A number. |
-| `__namedParameters` | Options | {} | - |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `number` | A number. |
+| `__namedParameters` | `Options` | - |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 The smallest integer greater than or equal to {@code input}.
 
-Defined in: [ceil.ts:15](../../src/ceil.ts#L15)
+#### Defined in
+
+[ceil.ts:15](../../src/ceil.ts#L15)

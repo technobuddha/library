@@ -22,7 +22,7 @@ Renames and exports: [splice](splice.md#splice)
 
 ### splice
 
-▸ **splice**(`input`: *string*, `start`: *number*, `deleteCount`: *number*, ...`items`: *string*[]): *string*
+▸ **splice**(`input`, `start`, `deleteCount`, ...`items`): `string`
 
 Insert a substring into a string
 
@@ -30,13 +30,17 @@ Insert a substring into a string
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | *string* | The string |
-| `start` | *number* | The position which to insert the substring |
-| `deleteCount` | *number* | The number of characters to delete |
-| `...items` | *string*[] | The substring(s) to insert |
+| `input` | `string` | The string |
+| `start` | `number` | The position which to insert the substring |
+| `deleteCount` | `number` | The number of characters to delete |
+| `...items` | `string`[] | The substring(s) to insert |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 The modified strings
 
-Defined in: [splice.ts:12](../../src/splice.ts#L12)
+#### Defined in
+
+[splice.ts:12](../../src/splice.ts#L12)

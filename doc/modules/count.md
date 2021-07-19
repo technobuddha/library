@@ -26,34 +26,40 @@ Renames and exports: [count](count.md#count)
 
 ### Options
 
-Ƭ **Options**: *object*
+Ƭ **Options**: `Object`
 
 #### Type declaration
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `overlap?` | *boolean* | if true, counts overlapping strings |
+| `overlap?` | `boolean` | if true, counts overlapping strings |
 
-Defined in: [count.ts:1](../../src/count.ts#L1)
+#### Defined in
+
+[count.ts:1](../../src/count.ts#L1)
 
 ## Functions
 
 ### count
 
-▸ **count**(`input`: *string*, `substring`: *string*, `__namedParameters?`: [*Options*](count.md#options)): *number*
+▸ **count**(`input`, `substring`, `__namedParameters?`): `number`
 
 Compute the number of times a substring occors within a string
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The string |
-| `substring` | *string* | - | - |
-| `__namedParameters` | [*Options*](count.md#options) | {} | see [Options](count.md#options) |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The string |
+| `substring` | `string` | - |
+| `__namedParameters` | [`Options`](count.md#options) | see [Options](count.md#options) |
 
-**Returns:** *number*
+#### Returns
+
+`number`
 
 number of times *substring* occurs within *input*
 
-Defined in: [count.ts:14](../../src/count.ts#L14)
+#### Defined in
+
+[count.ts:14](../../src/count.ts#L14)

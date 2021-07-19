@@ -22,7 +22,7 @@ Renames and exports: [indent](indent.md#indent)
 
 ### indent
 
-▸ **indent**(`input`: *string*, `__namedParameters?`: Options): *string*
+▸ **indent**(`input`, `__namedParameters?`): `string`
 
 Indent each line of a string
 
@@ -30,13 +30,17 @@ Indent each line of a string
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | *string* | - | The string to indent |
-| `__namedParameters` | Options | {} | see {@Options} |
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `input` | `string` | The string to indent |
+| `__namedParameters` | `Options` | see {@Options} |
 
-**Returns:** *string*
+#### Returns
+
+`string`
 
 string with each line indented
 
-Defined in: [indent.ts:14](../../src/indent.ts#L14)
+#### Defined in
+
+[indent.ts:14](../../src/indent.ts#L14)
