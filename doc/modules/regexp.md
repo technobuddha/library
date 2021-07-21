@@ -10,9 +10,16 @@
 
 ### Variables
 
+- [domain](regexp.md#domain)
 - [email](regexp.md#email)
+- [ipV4](regexp.md#ipv4)
+- [ipV4Local](regexp.md#ipv4local)
 - [isoDate](regexp.md#isodate)
-- [numberString](regexp.md#numberstring)
+- [numeric](regexp.md#numeric)
+
+### Functions
+
+- [re](regexp.md#re)
 
 ## Properties
 
@@ -24,21 +31,56 @@
 
 | Name | Type |
 | :------ | :------ |
+| `domain` | `RegExp` |
 | `email` | `RegExp` |
+| `ipV4` | `RegExp` |
+| `ipV4Local` | `RegExp` |
 | `isoDate` | `RegExp` |
-| `numberString` | `RegExp` |
+| `numeric` | `RegExp` |
 
 ## Variables
+
+### domain
+
+• `Const` **domain**: `RegExp`
+
+#### Defined in
+
+[regexp.ts:66](../../src/regexp.ts#L66)
+
+___
 
 ### email
 
 • `Const` **email**: `RegExp`
 
-validate an valid email address
+#### Defined in
+
+[regexp.ts:73](../../src/regexp.ts#L73)
+
+___
+
+### ipV4
+
+• `Const` **ipV4**: `RegExp`
+
+validate an IPv4 address
 
 #### Defined in
 
-[regexp.ts:9](../../src/regexp.ts#L9)
+[regexp.ts:38](../../src/regexp.ts#L38)
+
+___
+
+### ipV4Local
+
+• `Const` **ipV4Local**: `RegExp`
+
+determine if Ipv4 address is local
+
+#### Defined in
+
+[regexp.ts:44](../../src/regexp.ts#L44)
 
 ___
 
@@ -46,20 +88,39 @@ ___
 
 • `Const` **isoDate**: `RegExp`
 
-validate a ISO formatted date
-
 #### Defined in
 
-[regexp.ts:3](../../src/regexp.ts#L3)
+[regexp.ts:59](../../src/regexp.ts#L59)
 
 ___
 
-### numberString
+### numeric
 
-• `Const` **numberString**: `RegExp`
+• `Const` **numeric**: `RegExp`
 
 validate a valid number
 
 #### Defined in
 
-[regexp.ts:6](../../src/regexp.ts#L6)
+[regexp.ts:62](../../src/regexp.ts#L62)
+
+## Functions
+
+### re
+
+▸ **re**(`template`, ...`args`): `RegExp`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `template` | `TemplateStringsArray` |
+| `...args` | `RegExp`[] |
+
+#### Returns
+
+`RegExp`
+
+#### Defined in
+
+[regexp.ts:8](../../src/regexp.ts#L8)

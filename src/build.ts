@@ -4,7 +4,7 @@ import isString   from 'lodash/isString';
 import isArray    from 'lodash/isArray';
 import isFunction from 'lodash/isFunction';
 
-type stringy = string | string[];
+type stringy = string | string[] | IterableIterator<string>;
 /**
  * Concatenates strings and/or arrays of strings
  *
