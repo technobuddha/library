@@ -24,7 +24,7 @@ A simple priority queue
 
 ### Methods
 
-- [[Symbol.iterator]](priority_queue.PriorityQueue.md#[symbol.iterator])
+- [[iterator]](priority_queue.PriorityQueue.md#[iterator])
 - [map](priority_queue.PriorityQueue.md#map)
 - [pop](priority_queue.PriorityQueue.md#pop)
 - [push](priority_queue.PriorityQueue.md#push)
@@ -73,9 +73,9 @@ number of element in the queue
 
 ## Methods
 
-### [Symbol.iterator]
+### [iterator]
 
-▸ **[Symbol.iterator]**(): `Generator`<`T`, `void`, `undefined`\>
+▸ **[iterator]**(): `Generator`<`T`, `void`, `undefined`\>
 
 Iterate through all elements in the queue
 
