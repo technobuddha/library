@@ -34,8 +34,7 @@ export function graphQL(template: any, ...args: GraphQLValue[]):                
         return template ? 'true' : 'false';
     if(isArray(template))
         return `[ ${template.map(a => graphQL(a)).join(', ')} ]`;
-    // eslint-disable-next-line array-bracket-spacing
-    return `{ ${Object.entries(template as Record<string, GraphQLValue>).map(([ key, value]) => `${key}: ${graphQL(value)}`).join(', ')} }`;
+    return `{ ${Object.entries(template as Record<string, GraphQLValue>).map(([ key, value ]) => `${key}: ${graphQL(value)}`).join(', ')} }`;
 }
 
 export default graphQL;

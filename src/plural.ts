@@ -37,6 +37,7 @@ export function plural(input: string, quantity?: number): string {
     if(database.uncountableWords.includes(lc))
         result = matchCase(prefix + lc + suffix, input);
 
+    // eslint-disable-next-line sonarjs/no-collapsible-if
     if(!result) {
         if(lc in database.irregulars)
             result = matchCase(prefix + database.irregulars[lc] + suffix, input);
@@ -77,6 +78,7 @@ type DBEntry =  {
 
 const database: DBEntry =
 {
+    /* cspell:disable */
     'rules': [
         [ /(stig|sto|dog|sche|anathe)ma$/ui,                                                                                 '$1mata' ],
         [ /(alumn|alg|antenn|ecclesi|faun|formul|larv|nebul|vertebr)a$/ui,                                                   '$1ae' ],
@@ -160,6 +162,7 @@ const database: DBEntry =
         /moose$/ui,
         /trout$/ui,
     ],
+    /* cspell: enable */
     'uncountableWords': [
         'abroad',
         'acoustics',
@@ -439,6 +442,7 @@ const database: DBEntry =
         'die':          'dice',
         'ox':           'oxen',
     },
+    /* cspell: disable */
     'suffixes': [
         '-up',
         '-out',
@@ -458,5 +462,6 @@ const database: DBEntry =
         'un-',
         'over-',
     ],
+    /* cspell: enable */
 };
 export default plural;

@@ -7,10 +7,8 @@ export function matches(text: string, match: string | RegExp | Iterable<string |
     if(isRegExp(match)) return match.test(text);
     if(isString(match)) return match.toLowerCase() === text;
 
-    for(const m of match) {
-        if(isRegExp(m)) if(m.test(text)) return true;
-        if(isString(m)) if(m.toLowerCase() === text) return true;
-    }
+    for(const m of match)
+        if((isRegExp(m) && m.test(text)) || (isString(m) && m.toLowerCase() === text)) return true;
 
     return false;
 }
