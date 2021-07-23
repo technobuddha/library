@@ -1,4 +1,3 @@
-/* eslint-disable no-implicit-coercion */
 import expect from '../util/expect';
 import toPolar         from '../src/toPolar';
 

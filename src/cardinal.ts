@@ -142,7 +142,6 @@ function illion(mantissa: string, exponent: number): IllionReturn {
     let factor   = Math.floor((exponent - 3) / 3);
     let quantity = 0;
 
-    // eslint-disable-next-line default-case
     switch(exponent - ((factor * 3) + 3)) {
         case 0:  quantity = parseInt(mantissa.slice(0, 1), 10); mantissa = mantissa.slice(1); exponent -= 1; break;
         case 1:  quantity = parseInt(mantissa.slice(0, 2), 10); mantissa = mantissa.slice(2); exponent -= 2; break;
@@ -167,7 +166,6 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         word = `lli${word}`;
 
         // hundreds
-        // eslint-disable-next-line default-case
         switch(factor2) {
             case 1: word = `centi${word}`;        a = true; s = false; x = true;  m = false; n = true;  break;
             case 2: word = `ducenti${word}`;      a = true; s = false; x = false; m = false; n = true;  break;
@@ -181,7 +179,6 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         }
 
         // tens
-        // eslint-disable-next-line default-case
         switch(factor1) {
             case 1: word = `deci${word}`;                                a = true; s = false; x = false; m = false; n = true;  break;
             case 2: word = `viginti${word}`;                             a = true; s = true;  x = false; m = true;  n = false; break;
@@ -196,7 +193,6 @@ function illion(mantissa: string, exponent: number): IllionReturn {
 
         // ones
         if(a) {
-            // eslint-disable-next-line default-case
             switch(factor0) {
                 case 1: word = `un${word}`; break;
                 case 2: word = `duo${word}`; break;
@@ -209,7 +205,6 @@ function illion(mantissa: string, exponent: number): IllionReturn {
                 case 9: word = (n ? 'noven'  : m ? 'novem'  : 'nove')  + word; break;
             }
         } else {
-            // eslint-disable-next-line default-case
             switch(factor0) {
                 case 0: word = `ni${word}`; break;
                 case 1: word = `mi${word}`; break;
