@@ -135,6 +135,7 @@
 - [toDegrees](modules/toDegrees.md)
 - [toDotCase](modules/toDotCase.md)
 - [toEnumeration](modules/toEnumeration.md)
+- [toError](modules/toError.md)
 - [toFilename](modules/toFilename.md)
 - [toHumanCase](modules/toHumanCase.md)
 - [toInteger](modules/toInteger.md)

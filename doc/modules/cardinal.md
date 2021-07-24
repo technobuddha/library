@@ -135,7 +135,7 @@ Order of Magnitude as text
 
 #### Defined in
 
-[cardinal.ts:244](../../src/cardinal.ts#L244)
+[cardinal.ts:239](../../src/cardinal.ts#L239)
 
 ___
 
@@ -166,4 +166,4 @@ number as text
 
 #### Defined in
 
-[cardinal.ts:260](../../src/cardinal.ts#L260)
+[cardinal.ts:255](../../src/cardinal.ts#L255)
