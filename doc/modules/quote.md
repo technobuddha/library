@@ -49,7 +49,7 @@ Surround text with quotes
 
 **`default`** quote double-quote (")
 
-**`deffaultvalue`** escape {@link esapeJs}
+**`deffaultvalue`** escape {@link escapeJs}
 
 #### Parameters
 

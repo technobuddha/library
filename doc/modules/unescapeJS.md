@@ -24,7 +24,7 @@ Renames and exports: [unescapeJS](unescapeJS.md#unescapejs)
 
 ▸ **unescapeJS**(`input`): `string`
 
-Unescape a string encodeed in Javascript style
+Unescape a string encoded in Javascript style
 
 #### Parameters
 

@@ -28,7 +28,7 @@ Deterimine is a character is a surrogate
 
 **`default`** high true
 
-**`defailtvalue`** low true
+**`defaultvalue`** low true
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Deterimine is a character is a surrogate
 
 `boolean`
 
-trus if the specified character is a unicode surrogate
+true if the specified character is a unicode surrogate
 
 #### Defined in
 

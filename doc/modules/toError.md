@@ -36,4 +36,4 @@ Renames and exports: [toError](toError.md#toerror)
 
 #### Defined in
 
-packages/library/src/toError.ts:4
+[toError.ts:4](../../src/toError.ts#L4)

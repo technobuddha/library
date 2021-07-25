@@ -35,7 +35,7 @@ Renames and exports: [toFilename](toFilename.md#tofilename)
 | `disambiguate?` | `number` | number of characters to presere at the end of the filename when truncated (for disambiguation) |
 | `maxLength?` | `number` | the file name will be truncated to this length |
 | `replacement?` | `string` | character to use to replace "bad" characters |
-| `separator?` | `string` | string to seperate the main section from the disambiguated section |
+| `separator?` | `string` | string to separate the main section from the disambiguated section |
 
 #### Defined in
 
@@ -68,7 +68,7 @@ Convert a string so that it can be used as a filename
 
 `string`
 
-the tfile name
+the file name
 
 #### Defined in
 

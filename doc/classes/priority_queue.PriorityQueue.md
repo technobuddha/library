@@ -141,7 +141,7 @@ ___
 
 ### push
 
-▸ **push**(`o`): `void`
+▸ **push**(...`o`): `void`
 
 Add an element to the queue
 
@@ -149,7 +149,7 @@ Add an element to the queue
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `o` | `T` | element to be added |
+| `...o` | `T`[] | element to be added |
 
 #### Returns
 
@@ -179,4 +179,4 @@ Change the function used to order the queue
 
 #### Defined in
 
-[priority-queue.ts:77](../../src/priority-queue.ts#L77)
+[priority-queue.ts:78](../../src/priority-queue.ts#L78)

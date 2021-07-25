@@ -26,7 +26,7 @@ Renames and exports: [groupCode](groupCode.md#groupcode)
 
 Determine the group code (A-Z, [] or #) to place an item under
 
-**`remarks`** The group code is made by taking the first letter of the *desription*.  As a special
+**`remarks`** The group code is made by taking the first letter of the *description*.  As a special
 case descriptions starting with '[' are grouped under [] and anything that isn't a letter is grouped
 under #.
 

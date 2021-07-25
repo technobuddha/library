@@ -54,7 +54,7 @@ Add or update a cookie
 
 #### Defined in
 
-[cookie.ts:46](../../src/cookie.ts#L46)
+[cookie.ts:47](../../src/cookie.ts#L47)
 
 ___
 
@@ -76,7 +76,7 @@ Delete a cookie
 
 #### Defined in
 
-[cookie.ts:61](../../src/cookie.ts#L61)
+[cookie.ts:62](../../src/cookie.ts#L62)
 
 ___
 
@@ -98,7 +98,7 @@ Get the value of a cookie
 
 #### Defined in
 
-[cookie.ts:24](../../src/cookie.ts#L24)
+[cookie.ts:25](../../src/cookie.ts#L25)
 
 ___
 
@@ -121,7 +121,7 @@ Parse a string containing cookies for use by other cookie method
 
 #### Defined in
 
-[cookie.ts:11](../../src/cookie.ts#L11)
+[cookie.ts:12](../../src/cookie.ts#L12)
 
 ___
 
@@ -139,4 +139,4 @@ array of cookie names
 
 #### Defined in
 
-[cookie.ts:34](../../src/cookie.ts#L34)
+[cookie.ts:35](../../src/cookie.ts#L35)

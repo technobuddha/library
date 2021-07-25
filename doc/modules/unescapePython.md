@@ -24,7 +24,7 @@ Renames and exports: [unescapePython](unescapePython.md#unescapepython)
 
 ▸ **unescapePython**(`input`): `string`
 
-Unescape a string encodeed in Python style
+Unescape a string encoded in Python style
 
 #### Parameters
 

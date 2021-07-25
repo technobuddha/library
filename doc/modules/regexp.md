@@ -46,7 +46,7 @@
 
 #### Defined in
 
-[regexp.ts:66](../../src/regexp.ts#L66)
+[regexp.ts:67](../../src/regexp.ts#L67)
 
 ___
 
@@ -56,7 +56,7 @@ ___
 
 #### Defined in
 
-[regexp.ts:73](../../src/regexp.ts#L73)
+[regexp.ts:74](../../src/regexp.ts#L74)
 
 ___
 
@@ -68,7 +68,7 @@ validate an IPv4 address
 
 #### Defined in
 
-[regexp.ts:38](../../src/regexp.ts#L38)
+[regexp.ts:39](../../src/regexp.ts#L39)
 
 ___
 
@@ -80,7 +80,7 @@ determine if Ipv4 address is local
 
 #### Defined in
 
-[regexp.ts:44](../../src/regexp.ts#L44)
+[regexp.ts:45](../../src/regexp.ts#L45)
 
 ___
 
@@ -90,7 +90,7 @@ ___
 
 #### Defined in
 
-[regexp.ts:59](../../src/regexp.ts#L59)
+[regexp.ts:60](../../src/regexp.ts#L60)
 
 ___
 
@@ -102,7 +102,7 @@ validate a valid number
 
 #### Defined in
 
-[regexp.ts:62](../../src/regexp.ts#L62)
+[regexp.ts:63](../../src/regexp.ts#L63)
 
 ## Functions
 
@@ -123,4 +123,4 @@ validate a valid number
 
 #### Defined in
 
-[regexp.ts:8](../../src/regexp.ts#L8)
+[regexp.ts:9](../../src/regexp.ts#L9)

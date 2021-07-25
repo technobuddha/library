@@ -24,7 +24,7 @@ Renames and exports: [unescapeHTML](unescapeHTML.md#unescapehtml)
 
 ▸ **unescapeHTML**(`input`): `string`
 
-Unescape a string encodeed in HTML
+Unescape a string encoded in HTML
 
 #### Parameters
 

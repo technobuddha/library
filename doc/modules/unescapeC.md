@@ -24,7 +24,7 @@ Renames and exports: [unescapeC](unescapeC.md#unescapec)
 
 ▸ **unescapeC**(`input`): `string`
 
-Unescape a string encodeed in C style
+Unescape a string encoded in C style
 
 #### Parameters
 

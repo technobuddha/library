@@ -24,7 +24,7 @@ Renames and exports: [unescapeJava](unescapeJava.md#unescapejava)
 
 ▸ **unescapeJava**(`input`): `string`
 
-Unescape a string encodeed in Java style
+Unescape a string encoded in Java style
 
 #### Parameters
 

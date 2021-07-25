@@ -48,4 +48,4 @@ Compare two strings
 
 #### Defined in
 
-[compareStrings.ts:26](../../src/compareStrings.ts#L26)
+[compareStrings.ts:25](../../src/compareStrings.ts#L25)
