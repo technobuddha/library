@@ -57,7 +57,7 @@ describe(
         test(
             'NaN == NaN',
             () => {
-                expect(shallowEquals({ q: NaN }, { q: NaN })).toBe(true);
+                expect(shallowEquals({ q: Number.NaN }, { q: Number.NaN })).toBe(true);
             }
         );
 

@@ -23,7 +23,7 @@ describe(
                 expect(toPrimitive(1)).toBe(1);
                 expect(toPrimitive(Infinity)).toBe(Infinity);
                 expect(toPrimitive(-Infinity)).toBe(-Infinity);
-                expect(isNaN(toPrimitive(NaN))).toBe(true);
+                expect(Number.isNaN(toPrimitive(Number.NaN))).toBe(true);
             }
         );
 

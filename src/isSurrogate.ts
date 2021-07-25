@@ -1,7 +1,7 @@
 type Options = {
     /** test for high surrogates (D800-DBFF) */
     high?: boolean;
-    /** test for low surrigates (DC00-DFFF) */
+    /** test for low surrogates (DC00-DFFF) */
     low?: boolean;
 };
 
@@ -11,8 +11,8 @@ type Options = {
  * @param input the character to test
  * @param __namedParameters see {@link Options}
  * @default high true
- * @defailtValue low true
- * @returns trus if the specified character is a unicode surrogate
+ * @defaultValue low true
+ * @returns true if the specified character is a unicode surrogate
  */
 export function isSurrogate(input: string, { high = true, low = true }: Options = {}): boolean {
     const cc = input.charCodeAt(0);

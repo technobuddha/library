@@ -36,7 +36,7 @@ function biGrams(input: string): (string | null)[] {
     const biGram = [] as string[];
 
     for(let i = 0; i < input.length - 1; ++i)
-        biGram.push(input.substr(i, 2));
+        biGram.push(input.slice(i, i + 2));
     return biGram;
 }
 

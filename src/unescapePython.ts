@@ -1,11 +1,12 @@
 /**
- * Unescape a string encodeed in Python style
+ * Unescape a string encoded in Python style
  *
  * @param input The string to unescape
  * @returns the string with escapes resolved
  */
 export function unescapePython(input: string): string {
     return input.replace(
+        // cspell:disable-next-line
         /\\(([abfnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]+)|(U[0-9a-fA-F]{8})|(u[0-9a-fA-F]{4})|(N\[.*\])|.)/ug,
         escape => {
             const c = escape.charAt(1);
@@ -35,9 +36,9 @@ export function unescapePython(input: string): string {
             if(c >= '0' && c <= '7')
                 return String.fromCharCode(Number.parseInt(escape, 8));
             if(c === 'x')
-                return String.fromCharCode(Number.parseInt(escape.substr(2), 16));
+                return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
             if(c === 'U' || c === 'u')
-                return String.fromCharCode(Number.parseInt(escape.substr(2), 16));
+                return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
 
             return escape;
         }

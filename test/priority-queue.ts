@@ -9,9 +9,7 @@ describe(
             'should create a queue',
             () => {
                 const q = new PriorityQueue<number>(compareNumbers);
-                q.push(1);
-                q.push(3);
-                q.push(2);
+                q.push(1, 3, 2);
                 expect(q.pop()).toBe(1);
                 expect(q.pop()).toBe(2);
                 expect(q.pop()).toBe(3);
@@ -22,9 +20,7 @@ describe(
             'should iterate',
             () => {
                 const q = new PriorityQueue<number>(compareNumbers);
-                q.push(1);
-                q.push(3);
-                q.push(2);
+                q.push(1, 3, 2);
                 let i = 0;
                 for(const pq of q)
                     expect(pq).toBe(++i);
@@ -39,9 +35,7 @@ describe(
             'should return size',
             () => {
                 const q = new PriorityQueue<number>(compareNumbers);
-                q.push(1);
-                q.push(3);
-                q.push(2);
+                q.push(1, 3, 2);
                 expect(q.size).toBe(3);
             }
         );
@@ -50,9 +44,7 @@ describe(
             'should return map values',
             () => {
                 const q = new PriorityQueue<number>(compareNumbers);
-                q.push(1);
-                q.push(3);
-                q.push(2);
+                q.push(1, 3, 2);
                 expect(q.map(f => f * 2)).toEqual([ 2, 4, 6 ]);
                 // mapping should not change contents
                 expect(q.map(f => f * 2)).toEqual([ 2, 4, 6 ]);
@@ -63,9 +55,7 @@ describe(
             'should reorder the queue',
             () => {
                 const q = new PriorityQueue<number>(compareNumbers);
-                q.push(1);
-                q.push(3);
-                q.push(2);
+                q.push(1, 3, 2);
 
                 q.reorder((a, b) => compareNumbers(b, a));
 

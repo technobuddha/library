@@ -96,7 +96,7 @@ describe(
             'should handle special numbers',
             () => {
                 expect(ordinal(negativeZero)).toBe('0th');
-                expect(ordinal(NaN)).toBe('NaN');
+                expect(ordinal(Number.NaN)).toBe('NaN');
                 expect(ordinal(Infinity)).toBe('Infinityth');
                 expect(ordinal(-Infinity)).toBe('-Infinityth');
             }

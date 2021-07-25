@@ -16,10 +16,10 @@ export function toTitleCase(input: string): string {
                 title.charAt(index - 1).search(/[^\s-]/u) < 0)
                 return match.toLowerCase();
 
-            if(match.substr(1).search(/[A-Z]|\../u) > -1)
+            if(match.slice(1).search(/[A-Z]|\../u) > -1)
                 return match;
 
-            return match.charAt(0).toUpperCase() + match.substr(1);
+            return match.charAt(0).toUpperCase() + match.slice(1);
         }
     );
 }

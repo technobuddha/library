@@ -21,9 +21,9 @@ export function matchCase(input: string, target: string): string {
         return input.toLowerCase();
     else if(isUpperCase(target))
         return input.toUpperCase();
-    else if(target.length > 1 && isUpperCase(target[0]) && isLowerCase(target.substr(1)))
+    else if(target.length > 1 && isUpperCase(target[0]) && isLowerCase(target.slice(1)))
         return toCapitalCase(input, { lowerCase: true });
-    else if(target.length > 1 && isLowerCase(target[0]) && isUpperCase(target.substr(1)))
+    else if(target.length > 1 && isLowerCase(target[0]) && isUpperCase(target.slice(1)))
         return toSmallCase(input, { upperCase: true });
     return input;
 }

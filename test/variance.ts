@@ -17,8 +17,8 @@ describe(
         test(
             'should handle edge cases',
             () => {
-                expect(isNaN(variance())).toBe(true);
-                expect(isNaN(variance(1))).toBe(true);
+                expect(Number.isNaN(variance())).toBe(true);
+                expect(Number.isNaN(variance(1))).toBe(true);
             }
         );
     }

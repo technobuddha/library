@@ -1,5 +1,4 @@
 import isNil          from 'lodash/isNil';
-import isNaN          from 'lodash/isNaN';
 import compareNumbers from './compareNumbers';
 
 type Options = {
@@ -59,10 +58,7 @@ export function compareStrings(
                 const n1 = Number.parseFloat(t1[i]);
                 const n2 = Number.parseFloat(t2[i]);
 
-                if(isNaN(n1) || isNaN(n2))
-                    order = compareStrings(t1[i], t2[i]);
-                else
-                    order = compareNumbers(n1, n2);
+                order = Number.isNaN(n1) || Number.isNaN(n2) ? compareStrings(t1[i], t2[i]) : compareNumbers(n1, n2);
             }
         }
 

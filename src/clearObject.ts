@@ -8,7 +8,7 @@
  * @return Original {@code input} with all properties deleted.
  */
 export function clearObject<T = unknown>(input: Record<string | number | symbol, T>): Record<string | number | symbol, T> {
-    Object.keys(input).forEach(key => delete input[key]);
+    for(const key of Object.keys(input))  delete input[key];
     return input;
 }
 

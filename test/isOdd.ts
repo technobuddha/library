@@ -14,7 +14,7 @@ describe(
                 expect(isOdd(1)).toBe(true);
                 expect(isOdd(2)).toBe(false);
                 expect(isOdd(3)).toBe(true);
-                expect(isOdd(NaN)).toBe(false);
+                expect(isOdd(Number.NaN)).toBe(false);
                 expect(isOdd(Infinity)).toBe(false);
                 expect(isOdd(-Infinity)).toBe(false);
             }

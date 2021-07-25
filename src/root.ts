@@ -16,10 +16,10 @@ export type Options = {
  */
 export function root(input: string, { prefix, suffix }: Options = {}): string {
     if(!isNil(prefix) && input.startsWith(prefix))
-        input = input.substr(prefix.length);
+        input = input.slice(prefix.length);
 
     if(!isNil(suffix) && input.endsWith(suffix))
-        input = input.substr(0, input.length - suffix.length);
+        input = input.slice(0, Math.max(0, input.length - suffix.length));
 
     return input;
 }

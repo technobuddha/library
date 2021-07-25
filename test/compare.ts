@@ -69,9 +69,9 @@ describe(
         test(
             'should compare NaN',
             () => {
-                expect(compare(NaN, NaN)).toBe(0);
-                expect(compare(NaN, 0)).toBe(-1);
-                expect(compare(0, NaN)).toBe(1);
+                expect(compare(Number.NaN, Number.NaN)).toBe(0);
+                expect(compare(Number.NaN, 0)).toBe(-1);
+                expect(compare(0, Number.NaN)).toBe(1);
             }
         );
     }

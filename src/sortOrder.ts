@@ -30,13 +30,13 @@ export function sortOrder(input: string, { ignoreQuotes = true, moveArticles = t
     const lc    = input.toLowerCase();
     if(moveArticles) {
         if(lc.startsWith('a '))
-            input = `${input.substr(2)}, ${input.substr(0, 1)}`;
+            input = `${input.slice(2)}, ${input.slice(0, 1)}`;
         else
         if(lc.startsWith('an '))
-            input = `${input.substr(3)}, ${input.substr(0, 2)}`;
+            input = `${input.slice(3)}, ${input.slice(0, 2)}`;
         else
         if(lc.startsWith('the '))
-            input = `${input.substr(4)}, ${input.substr(0, 3)}`;
+            input = `${input.slice(4)}, ${input.slice(0, 3)}`;
     }
 
     return input;

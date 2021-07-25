@@ -5,7 +5,7 @@ import toString from 'lodash/toString';
 
 export function toDate(entity: unknown): Date {
     if(entity === null || entity === undefined)
-        return new Date(NaN);
+        return new Date(Number.NaN);
     else if(isDate(entity))
         return entity;
     else if(isString(entity) || isNumber(entity))

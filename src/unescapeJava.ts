@@ -1,11 +1,12 @@
 /**
- * Unescape a string encodeed in Java style
+ * Unescape a string encoded in Java style
  *
  * @param input The string to unescape
  * @returns the string with escapes resolved
  */
 export function unescapeJava(input: string): string {
     return input.replace(
+        // cspell:disable-next-line
         /\\(([bfnrt"'\\])|([0-7]{1,3})|(u[0-9a-fA-F]{4}))/ug,
         escape => {
             const c = escape.charAt(1);
@@ -21,11 +22,11 @@ export function unescapeJava(input: string): string {
             if(c === 't')
                 return '\t';
             if(c >= '0' && c <= '7')
-                return String.fromCharCode(Number.parseInt(escape.substr(1), 8));
+                return String.fromCharCode(Number.parseInt(escape.slice(1), 8));
             if(c === 'u')
-                return String.fromCharCode(Number.parseInt(escape.substr(2), 16));
+                return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
 
-            return escape.substring(1);
+            return escape.slice(1);
         }
     );
 }

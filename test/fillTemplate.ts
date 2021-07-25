@@ -22,7 +22,7 @@ describe(
         test(
             'should not modify strings without delimiters',
             () => {
-                expect(fillTemplate('A cat and a dog.', {  })).toBe('A cat and a dog.');
+                expect(fillTemplate('A cat and a dog.', {})).toBe('A cat and a dog.');
             }
         );
 

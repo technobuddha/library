@@ -18,7 +18,7 @@ describe(
             'should handle special numbers',
             () => {
                 expect(isNumeric(negativeZero)).toBe(true);
-                expect(isNumeric(NaN)).toBe(false);
+                expect(isNumeric(Number.NaN)).toBe(false);
                 expect(isNumeric(Infinity)).toBe(true);
                 expect(isNumeric(-Infinity)).toBe(true);
             }

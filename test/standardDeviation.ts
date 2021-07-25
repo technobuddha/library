@@ -17,8 +17,8 @@ describe(
         test(
             'should handle edge cases',
             () => {
-                expect(isNaN(standardDeviation())).toBe(true);
-                expect(isNaN(standardDeviation(1))).toBe(true);
+                expect(Number.isNaN(standardDeviation())).toBe(true);
+                expect(Number.isNaN(standardDeviation(1))).toBe(true);
             }
         );
     }

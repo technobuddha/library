@@ -1,5 +1,5 @@
 ﻿/**
- * Unescape a string encodeed in HTML
+ * Unescape a string encoded in HTML
  *
  * @param input The string to unescape
  * @returns the string with escapes resolved
@@ -8,17 +8,18 @@ export function unescapeHTML(input: string): string {
     return input.replace(
         /&((#[0-9]+)|(#x[0-9a-f]+)|([a-z][a-z0-9]+));/ugi,
         entity => {
-            if(entity.substr(0, 3) === '&#x')
-                return String.fromCodePoint(Number.parseInt(entity.substr(3, entity.length - 4), 16));
-            else if(entity.substr(0, 2) === '&#')
-                return String.fromCodePoint(Number.parseInt(entity.substr(2, entity.length - 3), 10));
+            if(entity.startsWith('&#x'))
+                return String.fromCodePoint(Number.parseInt(entity.slice(3, -1), 16));
+            else if(entity.startsWith('&#'))
+                return String.fromCodePoint(Number.parseInt(entity.slice(2, -1), 10));
 
-            return entityDecode[entity.substr(1, entity.length - 2)] ?? entity;
+            return entityDecode[entity.slice(1, -1)] ?? entity;
         }
     );
 }
 
 const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze({
+    // cspell:disable
     'Aacute': 'Á',
     'aacute': 'á',
     'Abreve': 'Ă',
@@ -2144,6 +2145,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
     'zscr': '𝓏',
     'zwj': '‍',
     'zwnj': '‌',
+    // cspell:enable
 } as Record<string, string>);
 
 export default unescapeHTML;

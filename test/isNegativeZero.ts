@@ -18,7 +18,7 @@ describe(
                 expect(isNegativeZero(3)).toBe(false);
                 expect(isNegativeZero(Number.MAX_VALUE)).toBe(false);
                 expect(isNegativeZero(Number.MIN_VALUE)).toBe(false);
-                expect(isNegativeZero(NaN)).toBe(false);
+                expect(isNegativeZero(Number.NaN)).toBe(false);
                 expect(isNegativeZero(Infinity)).toBe(false);
                 expect(isNegativeZero(-Infinity)).toBe(false);
             }

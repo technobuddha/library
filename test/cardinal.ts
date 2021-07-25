@@ -40,7 +40,7 @@ describe(
             'should handle unusual numbers',
             () => {
                 expect(cardinal(Infinity)).toBe('infinity');
-                expect(cardinal(NaN)).toBe('not a number');
+                expect(cardinal(Number.NaN)).toBe('not a number');
             }
         );
 

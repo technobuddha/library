@@ -20,7 +20,7 @@ type Options = {
 export function fillTemplate(input: string, values: Record<string, string | undefined>, { open = '{{', close = '}}' }: Options = {}): string {
     // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
     for(const match of input.match(new RegExp(`${escapeRegExp(open)}(.+?)${escapeRegExp(close)}`, 'ug')) ?? []) {
-        const key = match.substring(open.length, match.length - close.length).trim();
+        const key = match.slice(open.length, -close.length).trim();
         input = input.replace(match, values[key] ?? empty);
     }
     return input;

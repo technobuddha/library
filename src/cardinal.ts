@@ -75,7 +75,7 @@ export function cardinal(input: number, { groups = Infinity, digits = false, ...
             } else {
                 let { mantissa, exponent } = breakdown(input, groups);
 
-                while(parseInt(mantissa, 10) > 0 && exponent >= 0 && groups-- > 0) {
+                while(Number.parseInt(mantissa, 10) > 0 && exponent >= 0 && groups-- > 0) {
                     let word: string | null;
                     let quantity: number;
                     ({ quantity, mantissa, exponent, word } = illion(mantissa, exponent));
@@ -98,7 +98,7 @@ export function cardinal(input: number, { groups = Infinity, digits = false, ...
 function breakdown(value: number, groups: number): { mantissa: string; exponent: number } {
     let   [ m, e ]     = value.toExponential(15).split('e');    // - 1 because toExponential returns 1 digit before the decimal point
     let   mantissa   = m.replace('.', empty);
-    let   exponent   = parseInt(e, 10);                          // number of digits = (exponent + 1)
+    let   exponent   = Number.parseInt(e, 10);                          // number of digits = (exponent + 1)
     const groupCount = Math.floor(exponent / 3) + 1;
 
     if(groupCount > groups) {
@@ -106,7 +106,7 @@ function breakdown(value: number, groups: number): { mantissa: string; exponent:
         if(digits < 16) {
             ([ m, e ]  = value.toExponential(digits - 2).split('e'));
             mantissa = m.replace('.', empty);
-            exponent = parseInt(e, 10);
+            exponent = Number.parseInt(e, 10);
         }
     }
     return { mantissa, exponent };
@@ -143,9 +143,9 @@ function illion(mantissa: string, exponent: number): IllionReturn {
     let quantity = 0;
 
     switch(exponent - ((factor * 3) + 3)) {
-        case 0:  quantity = parseInt(mantissa.slice(0, 1), 10); mantissa = mantissa.slice(1); exponent -= 1; break;
-        case 1:  quantity = parseInt(mantissa.slice(0, 2), 10); mantissa = mantissa.slice(2); exponent -= 2; break;
-        case 2:  quantity = parseInt(mantissa.slice(0, 3), 10); mantissa = mantissa.slice(3); exponent -= 3; break;
+        case 0:  quantity = Number.parseInt(mantissa.slice(0, 1), 10); mantissa = mantissa.slice(1); exponent -= 1; break;
+        case 1:  quantity = Number.parseInt(mantissa.slice(0, 2), 10); mantissa = mantissa.slice(2); exponent -= 2; break;
+        case 2:  quantity = Number.parseInt(mantissa.slice(0, 3), 10); mantissa = mantissa.slice(3); exponent -= 3; break;
     }
 
     if(factor <    0)       return { quantity, mantissa, exponent, word: null };

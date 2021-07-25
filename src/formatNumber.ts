@@ -300,44 +300,64 @@ class NumberFormatter {
 export function formatNumber(input: number, mask: string): string {
     if(/^([CDEFGNPX][0-9]*)|R$/ui.test(mask)) {
         const f    = mask.charAt(0);
-        let   prec = Number.parseInt(mask.substr(1), 10);
+        let   prec = Number.parseInt(mask.slice(1), 10);
 
-        if(f === 'C' || f === 'c') {
-            prec = defaultTo(prec, 2);
+        switch(f) {
+            case 'C':
+            case 'c': {
+                prec = defaultTo(prec, 2);
 
-            return format(input, { round: prec, lead: 1 }).minus('($', '$').grouped().decimal().fraction().minus(')').build();
-        } else if(f === 'D' || f === 'd') {
-            prec = defaultTo(prec, 2);
-
-            return format(input, { round: 0, lead: prec }).minus('-').whole().build();
-        } else if(f === 'E' || f === 'e') {
-            prec = defaultTo(prec, 6);
-
-            return format(input, { precision: prec + 1 }).minus('-').scientific(f).build();
-        } else if(f === 'F' || f === 'f') {
-            prec = defaultTo(prec, 2);
-            return format(input, { round: prec }).minus('-').whole().decimal().fraction().build();
-        } else if(f === 'G' || f === 'g') {
-            prec = defaultTo(prec, 15);
-
-            const sci = format(input, { precision: prec, trim: 'all' }).minus('-').scientific(f === 'G' ? 'E' : 'e').build();
-            const fix = format(input, { precision: prec, trim: 'back' }).minus('-').whole().decimal().fraction().build();
-
-            return sci.length < fix.length ? sci : fix;
-        } else if(f === 'N' || f === 'n') {
-            prec = defaultTo(prec, 2);
-
-            return format(input, { round: prec }).minus('-').grouped().decimal().fraction().build();
-        } else if(f === 'P' || f === 'p') {
-            prec = defaultTo(prec, 2);
-
-            return format(input, { scale: 2, round: prec }).minus('-').whole().decimal().fraction().text(' %').build();
-        } else if(f === 'R' || f === 'r') {
-            for(let i = 1; i < 21; ++i) {
-                const num = input.toPrecision(i);
-                if(Number.parseFloat(num) === input)
-                    return num;
+                return format(input, { round: prec, lead: 1 }).minus('($', '$').grouped().decimal().fraction().minus(')').build();
             }
+            case 'D':
+            case 'd': {
+                prec = defaultTo(prec, 2);
+
+                return format(input, { round: 0, lead: prec }).minus('-').whole().build();
+            }
+            case 'E':
+            case 'e': {
+                prec = defaultTo(prec, 6);
+
+                return format(input, { precision: prec + 1 }).minus('-').scientific(f).build();
+            }
+            case 'F':
+            case 'f': {
+                prec = defaultTo(prec, 2);
+                return format(input, { round: prec }).minus('-').whole().decimal().fraction().build();
+            }
+            case 'G':
+            case 'g': {
+                prec = defaultTo(prec, 15);
+
+                const sci = format(input, { precision: prec, trim: 'all' }).minus('-').scientific(f === 'G' ? 'E' : 'e').build();
+                const fix = format(input, { precision: prec, trim: 'back' }).minus('-').whole().decimal().fraction().build();
+
+                return sci.length < fix.length ? sci : fix;
+            }
+            case 'N':
+            case 'n': {
+                prec = defaultTo(prec, 2);
+
+                return format(input, { round: prec }).minus('-').grouped().decimal().fraction().build();
+            }
+            case 'P':
+            case 'p': {
+                prec = defaultTo(prec, 2);
+
+                return format(input, { scale: 2, round: prec }).minus('-').whole().decimal().fraction().text(' %').build();
+            }
+            case 'R':
+            case 'r': {
+                for(let i = 1; i < 21; ++i) {
+                    const num = input.toPrecision(i);
+                    if(Number.parseFloat(num) === input)
+                        return num;
+                }
+
+                break;
+            }
+        // No default
         }
         prec = defaultTo(prec, 0);
 
@@ -403,7 +423,7 @@ export function formatNumber(input: number, mask: string): string {
         }
     }
 
-    while(w.length && w[0] === '0') w.shift();
+    while(w.length > 0 && w[0] === '0') w.shift();
 
     let o = empty;
     let d = 0;
@@ -413,17 +433,16 @@ export function formatNumber(input: number, mask: string): string {
         const x = fmt.bMask[i];
 
         if(x === '0' || x === '#') {
-            if(fmt.group && d === 3 && w.length) {
+            if(fmt.group && d === 3 && w.length > 0) {
                 o = `,${o}`;
                 d = 0;
             }
 
             if(x === '0') {
-                if(w.length) o = w.pop()! + o;
-                else o = `0${o}`;
+                o = w.length > 0 ? w.pop()! + o : `0${o}`;
                 d++;
                 b--;
-            } else if(w.length) {
+            } else if(w.length > 0) {
                 o = w.pop()! + o;
                 d++;
                 b--;
@@ -442,33 +461,42 @@ export function formatNumber(input: number, mask: string): string {
         } else if(x === 'e' || x === 'E') {
             o = `${x}-${padNumber(Math.abs(exp), fmt.exponent)}${o}`;
         } else {
-            o = x.substr(1) + o;
+            o = x.slice(1) + o;
         }
     }
 
-    if(fmt.aMask.length) {
+    if(fmt.aMask.length > 0) {
         let a = empty;
         let digits = false;
 
         for(const x of fmt.aMask) {
-            if(x === '0') {
-                a = a + f.shift()!;
-
-                digits = true;
-            } else if(x === '#') {
-                if(f.reduce((acc, val) => { return val === '0' ? acc : true; }, false)) {
+            switch(x) {
+                case '0': {
                     a = a + f.shift()!;
+
                     digits = true;
+
+                    break;
                 }
-            } else if(x === 'e' || x === 'E') {
-                a = a + x + ((fmt.signExponent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent);
-            } else { a = a + x.substr(1); }
+                case '#': {
+                    if(f.reduce((acc, val) => { return val === '0' ? acc : true; }, false)) {
+                        a = a + f.shift()!;
+                        digits = true;
+                    }
+
+                    break;
+                }
+                case 'e':
+                case 'E': {
+                    a = a + x + ((fmt.signExponent || exp < 0) ? (exp < 0 ? '-' : '+') : empty) + padNumber(Math.abs(exp), fmt.exponent);
+
+                    break;
+                }
+                default: { a = a + x.slice(1); }
+            }
         }
 
-        if(digits)
-            o += `.${a}`;
-        else
-            o += a;
+        o += digits ? `.${a}` : a;
     }
 
     return o;

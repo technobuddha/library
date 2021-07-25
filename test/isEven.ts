@@ -16,7 +16,7 @@ describe(
                 expect(isEven(2)).toBe(true);
                 expect(isEven(3)).toBe(false);
                 expect(isEven(negativeZero)).toBe(true);
-                expect(isEven(NaN)).toBe(false);
+                expect(isEven(Number.NaN)).toBe(false);
                 expect(isEven(Infinity)).toBe(false);
                 expect(isEven(-Infinity)).toBe(false);
             }
@@ -26,7 +26,7 @@ describe(
             'should work with special numbers',
             () => {
                 expect(isEven(negativeZero)).toBe(true);
-                expect(isEven(NaN)).toBe(false);
+                expect(isEven(Number.NaN)).toBe(false);
                 expect(isEven(Infinity)).toBe(false);
                 expect(isEven(-Infinity)).toBe(false);
             }

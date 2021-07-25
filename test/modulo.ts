@@ -43,9 +43,9 @@ describe(
         test(
             'should handle zero divisor',
             () => {
-                expect(isNaN(modulo(1,  0))).toBe(true);
-                expect(isNaN(modulo(2,  0))).toBe(true);
-                expect(isNaN(modulo(3,  0))).toBe(true);
+                expect(Number.isNaN(modulo(1,  0))).toBe(true);
+                expect(Number.isNaN(modulo(2,  0))).toBe(true);
+                expect(Number.isNaN(modulo(3,  0))).toBe(true);
             }
         );
     }

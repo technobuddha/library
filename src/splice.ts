@@ -15,7 +15,7 @@ export function splice(input: string, start: number, deleteCount: number, ...ite
         if(start < 0) start = 0;
     }
 
-    return input.slice(0, start) + items.join(empty) + input.substr(start + (deleteCount < 0 ? 0 : deleteCount));
+    return input.slice(0, start) + items.join(empty) + input.slice(start + (deleteCount < 0 ? 0 : deleteCount));
 }
 
 export default splice;

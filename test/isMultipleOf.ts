@@ -46,9 +46,9 @@ describe(
                 expect(isMultipleOf(negativeZero, 1)).toBe(true);
                 expect(isMultipleOf(1, negativeZero)).toBe(false);
                 expect(isMultipleOf(negativeZero, negativeZero)).toBe(true);
-                expect(isMultipleOf(NaN, 1)).toBe(false);
-                expect(isMultipleOf(1, NaN)).toBe(false);
-                expect(isMultipleOf(NaN, NaN)).toBe(false);
+                expect(isMultipleOf(Number.NaN, 1)).toBe(false);
+                expect(isMultipleOf(1, Number.NaN)).toBe(false);
+                expect(isMultipleOf(Number.NaN, Number.NaN)).toBe(false);
                 expect(isMultipleOf(Infinity, 1)).toBe(false);
                 expect(isMultipleOf(1, Infinity)).toBe(false);
                 expect(isMultipleOf(Infinity, Infinity)).toBe(false);

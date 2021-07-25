@@ -24,8 +24,8 @@ export class PriorityQueue<T> {
      * Add an element to the queue
      * @param o element to be added
      */
-    public push(o: T) {
-        this.contents.push(o);
+    public push(...o: T[]) {
+        this.contents.push(...o);
         this.sorted = false;
     }
 
@@ -66,6 +66,7 @@ export class PriorityQueue<T> {
      */
     public map<S>(f: (value: T, index: number, array: T[]) => S) {
         if(!this.sorted) this.sort();
+        // eslint-disable-next-line unicorn/no-array-callback-reference
         return this.contents.map(f);
     }
 

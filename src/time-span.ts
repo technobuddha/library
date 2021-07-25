@@ -30,50 +30,61 @@ export class TimeSpan {
         let s       = 0;
         let ms      = 0;
 
-        if(args.length === 0) {
-            d = h = m = s = ms = 0;
-        } else if(args.length === 1) {
-            if(isString(args[0])) {
-                let text    = args[0]!;
+        switch(args.length) {
+            case 0: {
+                d = h = m = s = ms = 0;
 
-                if(text.startsWith('-')) {
-                    sign    = -1;
-                    text    = text.slice(1);
-                }
+                break;
+            }
+            case 1: {
+                if(isString(args[0])) {
+                    let text    = args[0]!;
 
-                const matches = /^(\d{1,2})(?::(\d\d)(?::(\d\d)(?::(\d\d))?)?)?(?:\.(\d{1,3}))?$/u.exec(text);
-                if(matches) {
-                    d   = Number(matches[1]);
-                    h   = Number(matches[2]);
-                    m   = Number(matches[3]);
-                    s   = Number(matches[4]);
-                    ms  = matches[5] ? Math.floor(Number(`0.${matches[5]}`) * 1000) : NaN;
+                    if(text.startsWith('-')) {
+                        sign    = -1;
+                        text    = text.slice(1);
+                    }
 
-                    while(Number.isNaN(s)) {
-                        s = m;
-                        m = h;
-                        h = d;
-                        d = 0;
+                    const matches = /^(\d{1,2})(?::(\d\d)(?::(\d\d)(?::(\d\d))?)?)?(?:\.(\d{1,3}))?$/u.exec(text);
+                    if(matches) {
+                        d   = Number(matches[1]);
+                        h   = Number(matches[2]);
+                        m   = Number(matches[3]);
+                        s   = Number(matches[4]);
+                        ms  = matches[5] ? Math.floor(Number(`0.${matches[5]}`) * 1000) : Number.NaN;
+
+                        while(Number.isNaN(s)) {
+                            s = m;
+                            m = h;
+                            h = d;
+                            d = 0;
+                        }
+                    } else {
+                        d = h = m = s = ms = 0;
                     }
                 } else {
-                    d = h = m = s = ms = 0;
+                    ms   = args[0] as number;
+                    d    = h = m = s = 0;
                 }
-            } else {
-                ms   = args[0] as number;
-                d    = h = m = s = 0;
+
+                break;
             }
-        } else if(args.length === 3) {
-            d   = 0;
-            h   = args[0];
-            m   = args[1];
-            s   = args[2];
-            ms  = 0;
-        } else {
-            d   = args[0];
-            h   = args[1];
-            m   = args[2];
-            s   = args[3];
-            ms  = args[4];
+            case 3: {
+                d   = 0;
+                h   = args[0];
+                m   = args[1];
+                s   = args[2];
+                ms  = 0;
+
+                break;
+            }
+            default: {
+                d   = args[0];
+                h   = args[1];
+                m   = args[2];
+                s   = args[3];
+                ms  = args[4];
+            }
         }
 
         this.clicks = sign * ((d ? d * ticksPerDay : 0) + (h ? h * ticksPerHour : 0) + (m ? m * ticksPerMinute : 0) + (s ? s * ticksPerSecond : 0) + (ms ? ms : 0));
@@ -188,7 +199,7 @@ export class TimeSpan {
             return mask.replace(
                 /[dmhsf]{1,2}|"[^"]*"|'[^']*'/ug,
                 $0 => {
-                    return ($0 in flags) ? flags[$0] : $0.slice(1, $0.length - 1);
+                    return ($0 in flags) ? flags[$0] : $0.slice(1, -1);
                 }
             );
         }

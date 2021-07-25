@@ -4,7 +4,7 @@ import sortOrder      from './sortOrder';
 /**
  * Determine the group code (A-Z, [] or #) to place an item under
  *
- * @remarks The group code is made by taking the first letter of the *desription*.  As a special
+ * @remarks The group code is made by taking the first letter of the *description*.  As a special
  * case descriptions starting with '[' are grouped under [] and anything that isn't a letter is grouped
  * under #.
  *
@@ -12,7 +12,7 @@ import sortOrder      from './sortOrder';
  * @returns The group code
  */
 export function groupCode(input: string): string {
-    const group = toASCII(sortOrder(input).substr(0, 1)).toUpperCase();
+    const group = toASCII(sortOrder(input).slice(0, 1)).toUpperCase();
 
     if(group >= 'A' && group <= 'Z')
         return group;

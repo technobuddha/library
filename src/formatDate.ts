@@ -124,7 +124,7 @@ export function formatDate(input: Date, mask?: string, { UTC = false }: Options 
                 case 'Q':           return padNumber(Math.floor((mo + 3) / 3), 0);
                 //RM:        Month in roman numerals (UC);
                 //rm:        Month in roman numerals (LC);
-                default:            return token.slice(1, token.length - 1);
+                default:            return token.slice(1, -1);
             }
         }
     );

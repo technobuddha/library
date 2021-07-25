@@ -9,7 +9,7 @@ import isInteger    from 'lodash/isInteger';
 // thousandth
 // millionth
 
-// TODO this needs an overhaul and some documentation
+// TODO [2021-09-30] this needs an overhaul and some documentation
 
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).

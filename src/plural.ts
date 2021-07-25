@@ -21,7 +21,7 @@ export function plural(input: string, quantity?: number): string {
     for(const p of database.prefixes) {
         if(lc.startsWith(p)) {
             prefix = p;
-            lc = lc.substr(p.length);
+            lc = lc.slice(p.length);
             break;
         }
     }
@@ -29,7 +29,7 @@ export function plural(input: string, quantity?: number): string {
     for(const s of database.suffixes) {
         if(lc.endsWith(s)) {
             suffix = s;
-            lc = lc.substr(0, lc.length - s.length);
+            lc = lc.slice(0, Math.max(0, lc.length - s.length));
             break;
         }
     }
@@ -37,11 +37,7 @@ export function plural(input: string, quantity?: number): string {
     if(database.uncountableWords.includes(lc))
         result = matchCase(prefix + lc + suffix, input);
 
-    // eslint-disable-next-line sonarjs/no-collapsible-if
-    if(!result) {
-        if(lc in database.irregulars)
-            result = matchCase(prefix + database.irregulars[lc] + suffix, input);
-    }
+    if(!result && lc in database.irregulars) result = matchCase(prefix + database.irregulars[lc] + suffix, input);
 
     if(!result) {
         for(const v of database.uncountableRules) {

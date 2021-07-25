@@ -10,7 +10,7 @@ describe(
                 expect(isValidDate(new Date())).toBe(true);
                 expect(isValidDate(new Date('Jan 1 1970'))).toBe(true);
                 expect(isValidDate(new Date('not a date'))).toBe(false);
-                expect(isValidDate(new Date(NaN))).toBe(false);
+                expect(isValidDate(new Date(Number.NaN))).toBe(false);
             }
         );
     }

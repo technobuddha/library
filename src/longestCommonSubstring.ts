@@ -44,7 +44,7 @@ export function longestCommonSubstring(string1: string, string2: string, { caseI
         }
     }
 
-    return string1.substr(lastMaxSubStrIndex - maxSubStrLength + 1, maxSubStrLength);
+    return string1.slice(lastMaxSubStrIndex - maxSubStrLength + 1, lastMaxSubStrIndex + 1);
 }
 
 export default longestCommonSubstring;

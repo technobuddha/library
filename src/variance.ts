@@ -13,7 +13,7 @@ import sum from 'lodash/sum';
 export function variance(...datapoints: number[]): number {
     const sampleSize = datapoints.length;
     if(sampleSize < 2)
-        return NaN;
+        return Number.NaN;
 
     const average  = mean(datapoints);
     return sum(datapoints.map(val => Math.pow(val - average, 2))) / (sampleSize - 1);

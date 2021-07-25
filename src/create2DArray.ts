@@ -11,9 +11,9 @@ import isFunction from 'lodash/isFunction';
  */
 export function create2DArray<T>(width: number, height: number, fill: T | ((x: number, y: number) => T)): T[][] {
     if(isFunction(fill))
-        return Array.from(Array(width), (_1, x) => Array.from(Array<T>(height), (_2, y) => fill(x, y)));
+        return Array.from(new Array(width), (_1, x) => Array.from(new Array<T>(height), (_2, y) => fill(x, y)));
 
-    return Array.from(Array(width), () => new Array<T>(height).fill(fill));
+    return Array.from(new Array(width), () => new Array<T>(height).fill(fill));
 }
 
 export default create2DArray;

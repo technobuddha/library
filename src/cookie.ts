@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/no-document-cookie */
 import formatDate from './formatDate';
 
 let yummy: Record<string, string>;

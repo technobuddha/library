@@ -8,12 +8,12 @@ describe(
         test(
             'should unescape standard sequences',
             () => {
-                expect(unescapeC('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"\\?\\e')).toBe('\x07\b\f\n\r\t\v\\\'"?\x1b');
+                expect(unescapeC('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"\\?\\e')).toBe('\x07\b\f\n\r\t\v\\\'"?\x1B');
             }
         );
 
         test(
-            'should upport non-standard sequenes',
+            'should support non-standard sequences',
             () => {
                 expect(unescapeC('\\j\\q\\z')).toBe('jqz');
             }
@@ -63,7 +63,7 @@ describe(
         );
 
         test(
-            'should unescape exended unicode',
+            'should unescape extended unicode',
             () => {
                 expect(unescapeC('\\U00000000')).toBe('\0');
                 expect(unescapeC('\\U000000000')).toBe('\x000');

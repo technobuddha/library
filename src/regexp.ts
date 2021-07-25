@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/better-regex */
 /* eslint-disable require-unicode-regexp */
 /* eslint-disable no-control-regex */
 import compact      from 'lodash/compact';
@@ -12,7 +13,7 @@ export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
             zip(
                 template,
                 args.map(a => {
-                    splitChars(a.flags).forEach(flag => flags.add(flag));
+                    for(const flag of splitChars(a.flags))  flags.add(flag);
                     let source = a.source;
                     if(source.startsWith('^') && source.endsWith('$'))
                         source = source.slice(1, -1);

@@ -16,14 +16,11 @@ export type Options = {
  * @param input The text to surround
  * @param __namedParameters see {@link Options}
  * @default quote double-quote (")
- * @deffaultValue escape {@link esapeJs}
+ * @deffaultValue escape {@link escapeJs}
  * @returns text surrounded by quotes
  */
 export function quote(input: string, { quote: q = '"', escape = escapeJS }: Options = {}): string {
-    if(isFunction(escape))
-        input = escape(input);
-    else
-        input = input.replace(new RegExp(escapeRegExp(q), 'ug'), escape);
+    input = isFunction(escape) ? escape(input) : input.replace(new RegExp(escapeRegExp(q), 'ug'), escape);
 
     return build(q, input, q);
 }
