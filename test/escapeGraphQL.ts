@@ -18,11 +18,13 @@ describe(
                 expect(escapeGraphQL(space)).toBe(space);
                 expect(escapeGraphQL('ABCdef[~]')).toBe('ABCdef[~]');
                 expect(escapeGraphQL('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+                // cspell:disable-next-line
                 expect(escapeGraphQL('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
             }
         );
 
         test(
+            // cspell:disable-next-line
             'should escape non printables as \\unnnn',
             () => {
                 expect(escapeGraphQL('\x01')).toBe('\\u0001');

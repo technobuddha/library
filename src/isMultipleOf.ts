@@ -1,10 +1,10 @@
 import isNumber    from 'lodash/isNumber';
 
 /**
- * Tests to see if the specified value is an multiple of *multipler*
+ * Tests to see if the specified value is an multiple of *multiplier*
  *
  * @param input The number to test
- * @param multiplier The multipler
+ * @param multiplier The multiplier
  * @returns true, if the number is a multiple
  */
 export function isMultipleOf(input: number, multiplier: number): boolean {

@@ -1,3 +1,4 @@
+// cspell:disable
 import expect from '../util/expect';
 import { clean, cleanEnd, cleanStart } from '../src/clean';
 import { empty }    from '../src/constants';

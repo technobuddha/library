@@ -1,6 +1,7 @@
 import { empty } from './constants';
 import floor     from './floor';
 
+// cspell:disable-next-line
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 type Options = {

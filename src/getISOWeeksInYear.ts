@@ -6,7 +6,7 @@ import modulo       from './modulo';
 type GetWeeksInYearOptions = {
     /** Use the UTC timezone */
     UTC?: boolean;
-    /** Week 1 is definied as the week with the Gregoriain year's first [weekOneInclues] day in it */
+    /** Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it */
     weekOneIncludes?: DayOfWeek;
 };
 

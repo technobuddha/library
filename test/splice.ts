@@ -1,6 +1,7 @@
 import expect from '../util/expect';
 import splice     from '../src/splice';
 
+// cspell:disable
 describe(
     'splice',
     () => {

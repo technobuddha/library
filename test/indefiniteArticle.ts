@@ -242,7 +242,7 @@ describe(
                 expect(indefiniteArticle('viper')).toBe('a viper');
                 expect(indefiniteArticle('X-ray')).toBe('an X-ray');
                 expect(indefiniteArticle('X.O.')).toBe('an X.O.');
-                expect(indefiniteArticle('XYLAPHONE')).toBe('a XYLAPHONE');
+                expect(indefiniteArticle('XYLOPHONE')).toBe('a XYLOPHONE');
                 expect(indefiniteArticle('XY chromosome')).toBe('an XY chromosome');
                 expect(indefiniteArticle('xenophobe')).toBe('a xenophobe');
                 expect(indefiniteArticle('Y-shaped pipe')).toBe('a Y-shaped pipe');

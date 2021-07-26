@@ -6,7 +6,7 @@ const re = /\p{Ll}\p{Lu}+/gu;
 /**
  * Convert an identifier string to human readable form
  *
- * @param input The identifer string
+ * @param input The identifier string
  * @returns the identifier in human readable form
  */
 export function toHumanCase(input: string): string {

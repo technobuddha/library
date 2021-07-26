@@ -1,6 +1,7 @@
 import expect from '../util/expect';
 import toASCII    from '../src/toASCII';
 
+// cspell:ignore ＡＢＣＤ
 describe(
     'toASCII',
     () => {

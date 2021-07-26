@@ -30,7 +30,7 @@ Convert an identifier string to human readable form
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | `string` | The identifer string |
+| `input` | `string` | The identifier string |
 
 #### Returns
 

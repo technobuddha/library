@@ -30,7 +30,7 @@ Convert an identifier string to pascal case
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `input` | `string` | The identifer string |
+| `input` | `string` | The identifier string |
 
 #### Returns
 

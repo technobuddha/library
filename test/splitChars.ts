@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import splitChars from '../src/splitChars';
 import { empty }   from '../src/constants';
 
+// cspell:ignore abcdefghi
 describe(
     'splitChars',
     () => {

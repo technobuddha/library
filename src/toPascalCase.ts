@@ -3,7 +3,7 @@ import toCapitalCase  from './toCapitalCase';
 /**
  * Convert an identifier string to pascal case
  *
- * @param input The identifer string
+ * @param input The identifier string
  * @returns the identifier in pascal case
  */
 export function toPascalCase(input: string): string {

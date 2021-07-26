@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import escapeJava from '../src/escapeJava';
 import { space }  from '../src/constants';
 
+// cspell:ignore unnnn ΑΒΓΔΕΖ
 describe(
     'escapeJava',
     () => {

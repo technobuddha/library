@@ -1,7 +1,7 @@
 import { ticksPerDay } from './constants';
 
 /**
- * Get the Julian date (number of days since noon on Monday, Janurary 1 4713 BCE)
+ * Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
  *
  * @remarks Julian dates are always in the UTC timezone
  *

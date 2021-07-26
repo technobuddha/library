@@ -1,6 +1,7 @@
 import expect from '../util/expect';
 import decodeUTF8 from '../src/decodeUTF8';
 
+// cspell:ignore ΑΒΓΔ 𝐀𝐁𝐂
 describe(
     'decodeUTF8',
     () => {
@@ -16,6 +17,7 @@ describe(
             'should decode codepoints < 0x8000',
             () => {
                 expect(decodeUTF8('\xC2\xBC\xC2\xBD\xC2\xBE')).toBe('¼½¾');
+                // cspell:disable-next-line
                 expect(decodeUTF8('\xCE\x91\xCE\x92\xCE\x93\xCE\x94')).toBe('ΑΒΓΔ');
             }
         );

@@ -17,6 +17,7 @@ type Options = {
 export function isSurrogate(input: string, { high = true, low = true }: Options = {}): boolean {
     const cc = input.charCodeAt(0);
 
+    // cspell:ignore DBFF DFFF
     return ((high && cc >= 0xD800 && cc <= 0xDBFF) || (low && cc >= 0xDC00 && cc <= 0xDFFF));
 }
 

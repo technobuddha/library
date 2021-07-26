@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import isAlphaNumeric from '../src/isAlphaNumeric';
 import { empty }      from '../src/constants';
 
+// cspell:ignore AEIOU
 describe(
     'isAlphaNumeric',
     () => {

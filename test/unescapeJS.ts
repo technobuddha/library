@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import unescapeJS from '../src/unescapeJS';
 import { space }  from '../src/constants';
 
+// cspell:ignore ΑΒΓΔΕΖ
 describe(
     'unescapeJS',
     () => {
@@ -13,7 +14,7 @@ describe(
         );
 
         test(
-            'should upport non-standard sequenes',
+            'should support non-standard sequences',
             () => {
                 expect(unescapeJS('\\j\\q\\z')).toBe('jqz');
             }
@@ -47,7 +48,7 @@ describe(
         );
 
         test(
-            'should unescape exended unicode',
+            'should unescape extended unicode',
             () => {
                 expect(unescapeJS('\\u{0}')).toBe('\0');
                 expect(unescapeJS('\\u{0}0')).toBe('\x000');

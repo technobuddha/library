@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import unescapeHTML from '../src/unescapeHTML';
 import { space }    from '../src/constants';
 
+// cspell:ignore ΑΒΓΔΕΖ ΑΒЖК
 describe(
     'unescapeHTML',
     () => {

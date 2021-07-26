@@ -8,6 +8,7 @@ describe(
         test(
             'should detect alphabetic strings',
             () => {
+                // cspell:disable
                 expect(isAlpha('AEIOU')).toBe(true);
                 expect(isAlpha('ÂÊîÔû')).toBe(true);
                 expect(isAlpha('A B')).toBe(false);
@@ -15,6 +16,7 @@ describe(
                 expect(isAlpha(empty)).toBe(false);
                 expect(isAlpha('AB101')).toBe(false);
                 expect(isAlpha('01101001')).toBe(false);
+                // cspell:enable
             }
         );
     }

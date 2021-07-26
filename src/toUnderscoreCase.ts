@@ -1,7 +1,7 @@
 /**
  * Convert an identifier string to underscore case
  *
- * @param input The identifer string
+ * @param input The identifier string
  * @returns the identifier in underscore case
  */
 export function toUnderscoreCase(input: string): string {

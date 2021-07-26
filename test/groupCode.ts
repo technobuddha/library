@@ -9,7 +9,7 @@ describe(
             () => {
                 expect(groupCode('pink floyd')).toBe('P');
                 expect(groupCode('the beatles')).toBe('B');
-                expect(groupCode('"wierd" al yankovic')).toBe('W');
+                expect(groupCode('"weird" al yankovic')).toBe('W');
                 expect(groupCode('101 string')).toBe('#');
                 expect(groupCode('[Various Artists]')).toBe('[]');
             }

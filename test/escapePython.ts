@@ -65,6 +65,7 @@ describe(
         test(
             'should unicode escape BMP characters',
             () => {
+                // cspell:disable-next-line
                 expect(escapePython('ΑΒΓΔΕΖ')).toBe('\\u0391\\u0392\\u0393\\u0394\\u0395\\u0396');
             }
         );

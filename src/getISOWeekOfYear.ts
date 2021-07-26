@@ -7,7 +7,7 @@ import getISOWeeksInYear  from './getISOWeeksInYear';
 type Options = {
     /** Use the UTC timezone */
     UTC?: boolean;
-    /** Week 1 is definied as the week with the Gregoriain year's first [weekOneInclues] day in it */
+    /** Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it */
     weekOneIncludes?: DayOfWeek;
     /** The first day of the week */
     firstDayOfWeek?: DayOfWeek;

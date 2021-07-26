@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import unescapePython from '../src/unescapePython';
 import { space }      from '../src/constants';
 
+// cspell:ignore ΑΒΓΔΕΖ
 describe(
     'unescapePython',
     () => {

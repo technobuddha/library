@@ -45,6 +45,7 @@ const TEN               = 10;
 const TWENTY            = 20;
 const ONE_HUNDRED       = 100;
 
+// cspell:word uncentillions
 /**
  * Convert a number into text (the cardinal number)
  *
@@ -151,6 +152,7 @@ function illion(mantissa: string, exponent: number): IllionReturn {
     if(factor <    0)       return { quantity, mantissa, exponent, word: null };
     if(factor ===  0)       return { quantity, mantissa, exponent, word: 'thousand' };
 
+    // cspell:disable
     let word = 'on';
     while(factor > 0) {
         let a    = false;   // ones; use the prefixed form; tens change end from 'i' to 'a'
@@ -218,6 +220,7 @@ function illion(mantissa: string, exponent: number): IllionReturn {
                 case 9: word = `noni${word}`; break;
             }
         }
+        // cspell:enable
 
         factor = Math.floor(factor / 1000);
     }

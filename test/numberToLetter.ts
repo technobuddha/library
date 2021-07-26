@@ -16,8 +16,9 @@ describe(
         );
 
         test(
-            'should work with alternate alphbets',
+            'should work with alternate alphabets',
             () => {
+                // cspell:ignore ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ ΥΡΩΧ
                 expect(numberToLetter(1, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('Α');
                 expect(numberToLetter(26, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('ΑΒ');
                 expect(numberToLetter(27, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('ΑΓ');

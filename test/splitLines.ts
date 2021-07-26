@@ -2,6 +2,7 @@ import expect from '../util/expect';
 import splitLines from '../src/splitLines';
 import { empty }  from '../src/constants';
 
+// cspell:ignore abcdefghi
 describe(
     'splitLines',
     () => {
@@ -35,7 +36,7 @@ describe(
         );
 
         test(
-            'should handle LFCR end of line',
+            'should handle LF/CR end of line',
             () => {
                 expect(splitLines('a\n\rb\n\rc\n\rd')).toEqual([ 'a', 'b', 'c', 'd' ]);
             }

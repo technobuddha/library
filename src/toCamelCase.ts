@@ -1,10 +1,10 @@
 import toSmallCase from './toSmallCase';
 
 /**
- * Convert an idenfifer string to a camel case
+ * Convert an identifier string to a camel case
  *
  * @param input The identifier string
- * @returns string in cemal case
+ * @returns string in camel case
  */
 export function toCamelCase(input: string): string {
     return toSmallCase(input.trim().replace(/[-_.\s]+\w/ug, c => c.slice(-1).toUpperCase()));

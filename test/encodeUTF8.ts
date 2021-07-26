@@ -1,6 +1,7 @@
 import expect from '../util/expect';
 import encodeUTF8 from '../src/encodeUTF8';
 
+// cspell:ignore ΑΒΓΔ 𝐀𝐁𝐂
 describe(
     'encodeUTF8',
     () => {

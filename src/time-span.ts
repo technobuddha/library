@@ -197,6 +197,7 @@ export class TimeSpan {
             } as {[key: string]: string };
 
             return mask.replace(
+                // cspell:disable-next-line
                 /[dmhsf]{1,2}|"[^"]*"|'[^']*'/ug,
                 $0 => {
                     return ($0 in flags) ? flags[$0] : $0.slice(1, -1);

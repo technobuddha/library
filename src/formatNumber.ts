@@ -211,8 +211,6 @@ function format(input: number, { round, precision, scale, lead = 1, trim = 'none
                     if(d === '7') { mantissa[n] = '8'; break; }
                     if(d === '8') { mantissa[n] = '9'; break; }
                     if(d === '9') { mantissa[n] = '0'; mantissa.unshift('1'); ++exponent; break; }
-
-                    process.stderr.write(`"${d}"${n}"`);
                 }
             }
         }
@@ -298,6 +296,7 @@ class NumberFormatter {
 //#endregion
 //#region formatNumber
 export function formatNumber(input: number, mask: string): string {
+    // cspell:disable-next-line
     if(/^([CDEFGNPX][0-9]*)|R$/ui.test(mask)) {
         const f    = mask.charAt(0);
         let   prec = Number.parseInt(mask.slice(1), 10);

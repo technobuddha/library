@@ -4,7 +4,7 @@ export type Options = {
 };
 
 /**
- * Compute the number of times a substring occors within a string
+ * Compute the number of times a substring occurs within a string
  *
  * @param input The string
  * @param supstring The substring to look for
