@@ -14,10 +14,10 @@ type GraphQLValue     = number | string | null | boolean | GraphQLArray | GraphQ
 
 export function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
 export function graphQL(arg: GraphQLValue):                                       string;
-export function graphQL(template: any, ...args: GraphQLValue[]):                  string {
-    if(isArrayLike(template) && template.raw) {
+export function graphQL(template: TemplateStringsArray | GraphQLValue, ...args: GraphQLValue[]):                  string {
+    if(!isString(template) && isArrayLike(template) && ('raw' in template)) {
         return zip(
-            (template as TemplateStringsArray).map(t => t.replace(/[\r\n]+\s*/gu, space)),
+            template.map(t => t.replace(/[\r\n]+\s*/gu, space)),
             args.map(arg => graphQL(arg))
         )
         .flat()

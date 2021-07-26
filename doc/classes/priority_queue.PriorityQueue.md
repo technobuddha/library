@@ -75,13 +75,13 @@ number of element in the queue
 
 ### [iterator]
 
-▸ **[iterator]**(): `Generator`<`T`, `void`, `undefined`\>
+▸ **[iterator]**(): `Iterator`<`T`, `any`, `undefined`\>
 
 Iterate through all elements in the queue
 
 #### Returns
 
-`Generator`<`T`, `void`, `undefined`\>
+`Iterator`<`T`, `any`, `undefined`\>
 
 generator function
 

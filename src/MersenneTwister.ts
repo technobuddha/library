@@ -110,7 +110,7 @@ export class MersenneTwister {
     }
 
     /* generates a random number on [0,0xffffffff]-interval */
-    public genrand_int32() {
+    public genrand_int32(): number {
         let y;
 
         if(this.mti >= N) {
@@ -142,30 +142,30 @@ export class MersenneTwister {
     }
 
     /* generates a random number on [0,0x7fffffff]-interval */
-    public genrand_int31() {
+    public genrand_int31(): number {
         return this.genrand_int32() >>> 1;
     }
 
     /* generates a random number on [0,1]-real-interval */
-    public genrand_real1() {
+    public genrand_real1(): number {
         return this.genrand_int32() / 4294967295.0;
         /* divided by 2^32-1 */
     }
 
     /* generates a random number on [0,1)-real-interval */
-    public genrand_real2() {
+    public genrand_real2(): number {
         return this.genrand_int32() / 4294967296.0;
         /* divided by 2^32 */
     }
 
     /* generates a random number on (0,1)-real-interval */
-    public genrand_real3() {
+    public genrand_real3(): number {
         return (this.genrand_int32() + 0.5) / 4294967296.0;
         /* divided by 2^32 */
     }
 
     /* generates a random number on [0,1) with 53-bit resolution*/
-    public genrand_res53() {
+    public genrand_res53(): number {
         const a = this.genrand_int32() >> 5;
         const b = this.genrand_int32() >> 6;
         return (a * 67108864.0 + b) / 9007199254740992.0;

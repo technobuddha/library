@@ -33,7 +33,7 @@ export function relativeTime(
         ymdFormat = 'MMMM D YYYY',
         mdFormat = 'MMMM D',
     }:  Options = {}
-) {
+): string {
     const text  = [] as string[];
 
     if(todayTomorrowYesterday) {

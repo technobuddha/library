@@ -38,7 +38,7 @@ export async function fetcher(
         timeout         = 600000,
         window,
     }: Options = {},
-) {
+): Promise<Response> {
     const controller    = new AbortController();
     const timer         = setTimeout(() => { controller.abort(); }, timeout);
 

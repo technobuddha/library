@@ -22,7 +22,7 @@ export function fuzzyMatch(
         weightDiceCoefficient = 3,
         weightLongestCommonSubstring = 2,
     }: Options = {}
-) {
+): number {
     const len = Math.max(input.length, comparedTo.length);
     let wgt = 0;
     let sum = 0;

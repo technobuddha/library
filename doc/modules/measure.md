@@ -8,6 +8,10 @@
 
 - [default](measure.md#default)
 
+### Type aliases
+
+- [Size](measure.md#size)
+
 ### Functions
 
 - [getScrollbarSize](measure.md#getscrollbarsize)
@@ -20,30 +24,35 @@
 
 Renames and exports: [measure](measure.md#measure)
 
+## Type aliases
+
+### Size
+
+Ƭ **Size**: `ScrollbarSize` & { `height`: `number` ; `width`: `number`  }
+
+#### Defined in
+
+[measure.ts:1](../../src/measure.ts#L1)
+
 ## Functions
 
 ### getScrollbarSize
 
-▸ **getScrollbarSize**(): `Object`
+▸ **getScrollbarSize**(): `ScrollbarSize`
 
 #### Returns
 
-`Object`
-
-| Name | Type |
-| :------ | :------ |
-| `scrollbarHeight` | `number` |
-| `scrollbarWidth` | `number` |
+`ScrollbarSize`
 
 #### Defined in
 
-[measure.ts:8](../../src/measure.ts#L8)
+[measure.ts:12](../../src/measure.ts#L12)
 
 ___
 
 ### measure
 
-▸ **measure**(`element`): `Size`
+▸ **measure**(`element`): [`Size`](measure.md#size)
 
 #### Parameters
 
@@ -53,22 +62,22 @@ ___
 
 #### Returns
 
-`Size`
+[`Size`](measure.md#size)
 
 #### Defined in
 
-[measure.ts:22](../../src/measure.ts#L22)
+[measure.ts:26](../../src/measure.ts#L26)
 
 ___
 
 ### measureWindow
 
-▸ **measureWindow**(): `Size`
+▸ **measureWindow**(): [`Size`](measure.md#size)
 
 #### Returns
 
-`Size`
+[`Size`](measure.md#size)
 
 #### Defined in
 
-[measure.ts:26](../../src/measure.ts#L26)
+[measure.ts:30](../../src/measure.ts#L30)

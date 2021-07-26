@@ -35,7 +35,7 @@ export function replacer(this: Record<string, unknown>, key: string, value: unkn
  * @param value The value
  * @returns the decoded value
  */
-export function reviver(this: unknown, _key: string, value: unknown) {
+export function reviver(this: unknown, _key: string, value: unknown): unknown {
     if(typeof value === 'string' && value.startsWith(specialBegin) && value.endsWith(specialFinish)) {
         const [ type, jsonValue ] = value.slice(1, -1).split(/:(.+)/u);
         switch(type) {

@@ -30,7 +30,7 @@ Convert an object into its primitive (string, number, etc.) value
 
 | Name | Type | Default value | Description |
 | :------ | :------ | :------ | :------ |
-| `input` | `any` | `undefined` | the object |
+| `input` | `unknown` | `undefined` | the object |
 | `hint` | ``"string"`` \| ``"number"`` \| ``"default"`` | `'default'` | A "hint" as to what the type should be.  "string", "number" or "default" |
 
 #### Returns
@@ -41,4 +41,4 @@ primitive value
 
 #### Defined in
 
-[toPrimitive.ts:12](../../src/toPrimitive.ts#L12)
+[toPrimitive.ts:13](../../src/toPrimitive.ts#L13)

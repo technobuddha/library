@@ -1,11 +1,15 @@
-type Size = {
+export type Size = ScrollbarSize & {
     width: number;
     height: number;
+
+};
+
+type ScrollbarSize = {
     scrollbarWidth: number;
     scrollbarHeight: number;
 };
 
-export function getScrollbarSize() {
+export function getScrollbarSize(): ScrollbarSize {
     const node = document.createElement('div');
 
     node.setAttribute('style', 'width: 100px; height: 100px; position: absolute; top: -1000000px; overflow: scroll;');

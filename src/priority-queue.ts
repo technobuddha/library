@@ -24,7 +24,7 @@ export class PriorityQueue<T> {
      * Add an element to the queue
      * @param o element to be added
      */
-    public push(...o: T[]) {
+    public push(...o: T[]): void {
         this.contents.push(...o);
         this.sorted = false;
     }
@@ -34,7 +34,7 @@ export class PriorityQueue<T> {
      *
      * @returns queue element
      */
-    public pop() {
+    public pop(): T | undefined {
         if(!this.sorted) this.sort();
         return this.contents.shift();
     }
@@ -44,7 +44,7 @@ export class PriorityQueue<T> {
      *
      * @returns generator function
      */
-    public *[Symbol.iterator]() {
+    public *[Symbol.iterator](): Iterator<T> {
         if(!this.sorted) this.sort();
         yield *this.contents;
     }
@@ -54,7 +54,7 @@ export class PriorityQueue<T> {
      *
      * @returns number of element in the queue
      */
-    public get size() {
+    public get size(): number {
         return this.contents.length;
     }
 
@@ -64,7 +64,7 @@ export class PriorityQueue<T> {
      * @param f Function to transforme each element of the queue
      * @returns array of transformed queue elements
      */
-    public map<S>(f: (value: T, index: number, array: T[]) => S) {
+    public map<S>(f: (value: T, index: number, array: T[]) => S): S[] {
         if(!this.sorted) this.sort();
         // eslint-disable-next-line unicorn/no-array-callback-reference
         return this.contents.map(f);
@@ -75,7 +75,7 @@ export class PriorityQueue<T> {
      *
      * @param newComparator function to compare elements of the queue
      */
-    public reorder(newComparator: (a: T, b: T) => number) {
+    public reorder(newComparator: (a: T, b: T) => number): void {
         this.comparator = newComparator;
         this.sorted = false;
     }
