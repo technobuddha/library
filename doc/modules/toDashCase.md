@@ -36,7 +36,7 @@ Convert an identifier string to a dash form
 
 `string`
 
-the ientifier in dash form
+the identifier in dash form
 
 #### Defined in
 

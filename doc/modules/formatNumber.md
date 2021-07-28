@@ -37,4 +37,4 @@ Renames and exports: [formatNumber](formatNumber.md#formatnumber)
 
 #### Defined in
 
-[formatNumber.ts:300](../../src/formatNumber.ts#L300)
+[formatNumber.ts:298](../../src/formatNumber.ts#L298)

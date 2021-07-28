@@ -48,4 +48,4 @@ option is used, only the indefinite article is returned.
 
 #### Defined in
 
-[indefiniteArticle.ts:35](../../src/indefiniteArticle.ts#L35)
+[indefiniteArticle.ts:37](../../src/indefiniteArticle.ts#L37)

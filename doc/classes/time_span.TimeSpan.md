@@ -310,7 +310,7 @@ a TimeSpan that is the sum of two timespans
 
 #### Defined in
 
-[time-span.ts:239](../../src/time-span.ts#L239)
+[time-span.ts:240](../../src/time-span.ts#L240)
 
 ___
 
@@ -352,7 +352,7 @@ formatted string
 
 #### Defined in
 
-[time-span.ts:229](../../src/time-span.ts#L229)
+[time-span.ts:230](../../src/time-span.ts#L230)
 
 ___
 
@@ -377,4 +377,4 @@ Compare two TimeSpans
 
 #### Defined in
 
-[time-span.ts:250](../../src/time-span.ts#L250)
+[time-span.ts:251](../../src/time-span.ts#L251)

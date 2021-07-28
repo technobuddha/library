@@ -44,7 +44,7 @@ Renames and exports: [count](count.md#count)
 
 ▸ **count**(`input`, `substring`, `__namedParameters?`): `number`
 
-Compute the number of times a substring occors within a string
+Compute the number of times a substring occurs within a string
 
 #### Parameters
 

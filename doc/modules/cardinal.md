@@ -104,7 +104,7 @@ The number spelled out
 
 #### Defined in
 
-[cardinal.ts:63](../../src/cardinal.ts#L63)
+[cardinal.ts:64](../../src/cardinal.ts#L64)
 
 ___
 
@@ -135,7 +135,7 @@ Order of Magnitude as text
 
 #### Defined in
 
-[cardinal.ts:239](../../src/cardinal.ts#L239)
+[cardinal.ts:242](../../src/cardinal.ts#L242)
 
 ___
 
@@ -166,4 +166,4 @@ number as text
 
 #### Defined in
 
-[cardinal.ts:255](../../src/cardinal.ts#L255)
+[cardinal.ts:258](../../src/cardinal.ts#L258)

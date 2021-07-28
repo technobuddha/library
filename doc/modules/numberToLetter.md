@@ -37,4 +37,4 @@ Renames and exports: [numberToLetter](numberToLetter.md#numbertoletter)
 
 #### Defined in
 
-[numberToLetter.ts:11](../../src/numberToLetter.ts#L11)
+[numberToLetter.ts:12](../../src/numberToLetter.ts#L12)

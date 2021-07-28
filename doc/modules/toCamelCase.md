@@ -24,7 +24,7 @@ Renames and exports: [toCamelCase](toCamelCase.md#tocamelcase)
 
 ▸ **toCamelCase**(`input`): `string`
 
-Convert an idenfifer string to a camel case
+Convert an identifier string to a camel case
 
 #### Parameters
 
@@ -36,7 +36,7 @@ Convert an idenfifer string to a camel case
 
 `string`
 
-string in cemal case
+string in camel case
 
 #### Defined in
 
