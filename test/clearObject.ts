@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import clearObject from '../src/clearObject';
 
 describe(

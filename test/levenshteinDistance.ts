@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import levenshteinDistance from '../src/levenshteinDistance';
 
 describe(

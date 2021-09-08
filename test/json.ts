@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import { replacer, reviver, specialBegin, specialFinish } from '../src/json';
 
 describe(

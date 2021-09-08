@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import isMultipleOf     from '../src/isMultipleOf';
 import { negativeZero } from '../src/constants';
 

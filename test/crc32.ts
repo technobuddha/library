@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import crc32 from '../src/crc32';
 
 describe(

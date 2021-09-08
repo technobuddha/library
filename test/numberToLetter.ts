@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import numberToLetter from '../src/numberToLetter';
 
 describe(

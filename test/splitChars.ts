@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import splitChars from '../src/splitChars';
 import { empty }   from '../src/constants';
 

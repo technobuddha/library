@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import toCapitalWordCase from '../src/toCapitalWordCase';
 
 describe(

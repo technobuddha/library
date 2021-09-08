@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import decodeUTF8 from '../src/decodeUTF8';
 
 // cspell:ignore ΑΒΓΔ 𝐀𝐁𝐂

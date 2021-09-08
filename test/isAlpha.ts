@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import isAlpha    from '../src/isAlpha';
 import { empty }  from '../src/constants';
 

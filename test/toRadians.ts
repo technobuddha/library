@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import toRadians from '../src/toRadians';
 
 describe(

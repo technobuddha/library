@@ -1,5 +1,5 @@
 /* eslint-disable unicorn/no-document-cookie */
-import expect from '../util/expect';
+import expect from '@util/expect';
 import cookie from '../src/cookie';
 
 describe(

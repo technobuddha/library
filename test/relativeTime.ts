@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import relativeTime from '../src/relativeTime';
 import addTime      from '../src/addTime';
 import formatDate   from '../src/formatDate';

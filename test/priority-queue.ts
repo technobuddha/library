@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import PriorityQueue from '../src/priority-queue';
 import compareNumbers  from '../src/compareNumbers';
 

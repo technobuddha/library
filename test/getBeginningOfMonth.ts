@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import getBeginningOfMonth from '../src/getBeginningOfMonth';
 import { month }           from '../src/constants';
 

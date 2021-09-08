@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import isSurrogate from '../src/isSurrogate';
 
 describe(

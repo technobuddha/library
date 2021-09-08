@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import toPolar         from '../src/toPolar';
 
 describe(

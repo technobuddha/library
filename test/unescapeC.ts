@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import unescapeC  from '../src/unescapeC';
 import { space }  from '../src/constants';
 

@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import TimeSpan from '../src/time-span';
 
 describe(

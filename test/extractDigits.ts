@@ -1,4 +1,4 @@
-import expect from '../util/expect';
+import expect from '@util/expect';
 import extractDigits from '../src/extractDigits';
 import { empty }     from '../src/constants';
 
