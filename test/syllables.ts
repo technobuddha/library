@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import syllables  from '../src/syllables';
 
 describe(

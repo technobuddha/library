@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import mask       from '../src/mask';
 
 describe(

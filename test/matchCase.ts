@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import matchCase  from '../src/matchCase';
 
 describe(

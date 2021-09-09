@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import escapeJS   from '../src/escapeJS';
 import { space }  from '../src/constants';
 

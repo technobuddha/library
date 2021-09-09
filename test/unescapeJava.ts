@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import unescapeJava from '../src/unescapeJava';
 import { space }    from '../src/constants';
 

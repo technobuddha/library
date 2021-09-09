@@ -12,5 +12,8 @@ export default async (): Promise<Config.InitialOptions> => {
                 tsconfig: './test/tsconfig.json',
             }
         },
+        "moduleNameMapper": {
+            "#util/(.*)": "../../../util/$1",
+        }
     };
 };

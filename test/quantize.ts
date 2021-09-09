@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 //import Jimp from 'jimp';
 //import type { RGB } from '../src/quantize';
 //import quantize   from '../src/quantize';

@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import splitWords from '../src/splitWords';
 import { empty }  from '../src/constants';
 

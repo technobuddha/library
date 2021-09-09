@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import getISOWeeksInYear from '../src/getISOWeeksInYear';
 import { month }      from '../src/constants';
 

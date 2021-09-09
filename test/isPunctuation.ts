@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import isPunctuation    from '../src/isPunctuation';
 import { space, empty } from '../src/constants';
 

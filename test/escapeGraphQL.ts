@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import escapeGraphQL    from '../src/escapeGraphQL';
 import { space }  from '../src/constants';
 

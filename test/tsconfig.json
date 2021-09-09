@@ -6,7 +6,7 @@
         "noEmit": true,
         "types": [ "jest", "node" ],
         "paths": {                                      /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
-            "@util/*":           [ "../../../util/*" ],
+            "#util/*": [ "../../../util/*" ],
         }
     },
     "include": [ "*.ts" ],

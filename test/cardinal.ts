@@ -1,5 +1,5 @@
 // cspell:disable
-import expect from '@util/expect';
+import expect from '#util/expect';
 import cardinal, { orderOfMagnitude, summarize }   from '../src/cardinal';
 
 describe(

@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import ordinal          from '../src/ordinal';
 import { negativeZero } from '../src/constants';
 

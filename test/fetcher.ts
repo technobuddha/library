@@ -1,4 +1,4 @@
-import expect  from '@util/expect';
+import expect  from '#util/expect';
 import fetcher from '../src/fetcher';
 import fetch   from 'node-fetch';
 

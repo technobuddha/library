@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import { domain, email, isoDate, numeric, ipV4 } from '../src/regexp';
 
 describe(

@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import getTimezone     from '../src/getTimezone';
 
 //use(require('chai-match'));

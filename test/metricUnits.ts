@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import metricUnits from '../src/metricUnits';
 
 //TODO [2021-09-30] add tests for 'pad' option

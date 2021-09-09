@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import isNumeric                      from '../src/isNumeric';
 import { empty, space, negativeZero } from '../src/constants';
 

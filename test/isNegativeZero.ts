@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import isNegativeZero   from '../src/isNegativeZero';
 import { negativeZero } from '../src/constants';
 

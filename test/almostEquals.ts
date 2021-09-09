@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import almostEquals from '../src/almostEquals';
 
 describe(

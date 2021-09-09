@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import isUpperCase      from '../src/isUpperCase';
 import { empty, space } from '../src/constants';
 

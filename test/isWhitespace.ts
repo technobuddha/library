@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import isWhitespace     from '../src/isWhitespace';
 import { empty, space } from '../src/constants';
 

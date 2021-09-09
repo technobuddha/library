@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import delimited  from '../src/delimited';
 import { empty }  from '../src/constants';
 

@@ -1,4 +1,4 @@
-import expect from '@util/expect';
+import expect from '#util/expect';
 import unescapePython from '../src/unescapePython';
 import { space }      from '../src/constants';
 
