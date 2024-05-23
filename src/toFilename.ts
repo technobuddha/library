@@ -31,7 +31,7 @@ export function toFilename(input: string, { maxLength = 64, replacement = '-', d
     let suffix = empty;
     const compress = new RegExp(`\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`, 'ug');
 
-    input = clean(collapseWhitespace(input.normalize('NFC').replace('"', "'").replace(badChars, replacement)).replace(compress, replacement), replacement);
+    input = clean(collapseWhitespace(input.normalize('NFC').replaceAll('"', "'").replaceAll(badChars, replacement)).replaceAll(compress, replacement), replacement);
 
     if(suffix.length === 0 && input.length > maxLength) {
         suffix = input.slice(-disambiguate);

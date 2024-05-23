@@ -1,3 +1,10 @@
+/*
+ * Copyright © 2020 Phil Hill
+ *
+ * Use of this source code is governed by an MIT-style
+ * license that can be found at https://github.com/technobuddha/hill.software/blob/main/LICENSE
+ */
+
 import isNil        from 'lodash/isNil';
 
 /**
