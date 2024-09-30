@@ -26,10 +26,10 @@ Renames and exports: [singleline](singleline.md#singleline)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                   |
+| :--------- | :--------------------- |
 | `template` | `TemplateStringsArray` |
-| `...args` | `any`[] |
+| `...args`  | `any`[]                |
 
 #### Returns
 

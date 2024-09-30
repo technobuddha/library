@@ -10,7 +10,7 @@ import variance from './variance';
  * not a valid number).
  */
 export function standardDeviation(...datapoints: number[]): number {
-    return Math.sqrt(variance(...datapoints));
+  return Math.sqrt(variance(...datapoints));
 }
 
 export default standardDeviation;

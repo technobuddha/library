@@ -1,12 +1,12 @@
-import { space }    from './constants';
-import splitChars   from './splitChars';
+import { space } from './constants';
+import splitChars from './splitChars';
 
 type Options = {
-    /** if the mask is longer, fill with character */
-    missing?: string;
+  /** if the mask is longer, fill with character */
+  missing?: string;
 };
 
-const tokenizer    = /\\#|#|./gu;
+const tokenizer = /\\#|#|./gu;
 
 /**
  * Use a simple mask to display a string
@@ -21,10 +21,14 @@ const tokenizer    = /\\#|#|./gu;
  * @returns The mask filled with characters from the string
  */
 export function mask(input: string, maskStr: string, { missing = space }: Options = {}): string {
-    const chars = splitChars(input);
-    let   index = 0;
+  const chars = splitChars(input);
+  let index = 0;
 
-    return maskStr.replace(tokenizer, token => (token === '\\#' ? '#' : token === '#' ? (chars[index++] ?? missing) : token));
+  return maskStr.replace(tokenizer, (token) =>
+    token === '\\#' ? '#'
+    : token === '#' ? (chars[index++] ?? missing)
+    : token,
+  );
 }
 
 export default mask;

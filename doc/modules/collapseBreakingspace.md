@@ -30,8 +30,8 @@ Renames and exports: [collapseBreakingspace](collapseBreakingspace.md#collapsebr
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type      | Description   |
+| :------ | :-------- | :------------ |
 | `trim?` | `boolean` | If true, trim |
 
 #### Defined in
@@ -48,10 +48,10 @@ Replace all breaking space (space, tab, carriage return, new line) with a single
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `__namedParameters` | [`Options`](collapseBreakingspace.md#options) | - |
+| Name                | Type                                          | Description |
+| :------------------ | :-------------------------------------------- | :---------- |
+| `input`             | `string`                                      | The string  |
+| `__namedParameters` | [`Options`](collapseBreakingspace.md#options) | -           |
 
 #### Returns
 

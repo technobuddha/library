@@ -1,31 +1,31 @@
-const find = /[\u00A0–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/ug;
+const find = /[\u00A0–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/gu;
 const replace: Readonly<Record<string, string>> = Object.freeze({
-    '\u00A0': ' ',
-    '–':      '-',
-    '—':      '-',
-    '‘':      "'",
-    '’':      "'",
-    '‹':      '<',
-    '›':      '>',
-    '“':      '"',
-    '”':      '"',
-    '«':      '<<',
-    '»':      '>>',
-    '©':      '(c)',
-    '®':      '(r)',
-    '¼':      '1/4',
-    '½':      '1/2',
-    '¾':      '3/4',
-    '…':      '...',
-    '€':      '(e)',
-    '™':      '(tm)',
-    '←':      '<--',
-    '→':      '-->',
-    '⇐':     '<==',
-    '⇒':     '==>',
-    '⇔':     '<=>',
-    '☹':     ':(',
-    '☺':     ':)',
+  '\u00A0': ' ',
+  '–': '-',
+  '—': '-',
+  '‘': "'",
+  '’': "'",
+  '‹': '<',
+  '›': '>',
+  '“': '"',
+  '”': '"',
+  '«': '<<',
+  '»': '>>',
+  '©': '(c)',
+  '®': '(r)',
+  '¼': '1/4',
+  '½': '1/2',
+  '¾': '3/4',
+  '…': '...',
+  '€': '(e)',
+  '™': '(tm)',
+  '←': '<--',
+  '→': '-->',
+  '⇐': '<==',
+  '⇒': '==>',
+  '⇔': '<=>',
+  '☹': ':(',
+  '☺': ':)',
 });
 
 /**
@@ -35,7 +35,7 @@ const replace: Readonly<Record<string, string>> = Object.freeze({
  * @returns string with special characters corrected
  */
 export function correctMSWord(input: string): string {
-    return input.replace(find, a => replace[a]);
+  return input.replace(find, (a) => replace[a]);
 }
 
 export default correctMSWord;

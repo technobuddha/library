@@ -24,13 +24,13 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `add` | (`name`: `string`, `value`: `string`, `expires?`: `string` \| `Date`) => `void` |
-| `del` | (`name`: `string`) => `void` |
-| `get` | (`name`: `string`) => `string` \| `undefined` |
-| `init` | (`input`: `string`) => `void` |
-| `names` | () => `string`[] |
+| Name    | Type                                                                            |
+| :------ | :------------------------------------------------------------------------------ |
+| `add`   | (`name`: `string`, `value`: `string`, `expires?`: `string` \| `Date`) => `void` |
+| `del`   | (`name`: `string`) => `void`                                                    |
+| `get`   | (`name`: `string`) => `string` \| `undefined`                                   |
+| `init`  | (`input`: `string`) => `void`                                                   |
+| `names` | () => `string`[]                                                                |
 
 ## Functions
 
@@ -42,11 +42,11 @@ Add or update a cookie
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name` | `string` | name of the cookie |
-| `value` | `string` | value of the cookie |
-| `expires?` | `string` \| `Date` | Expiration date |
+| Name       | Type               | Description         |
+| :--------- | :----------------- | :------------------ |
+| `name`     | `string`           | name of the cookie  |
+| `value`    | `string`           | value of the cookie |
+| `expires?` | `string` \| `Date` | Expiration date     |
 
 #### Returns
 
@@ -56,7 +56,7 @@ Add or update a cookie
 
 [cookie.ts:47](../../src/cookie.ts#L47)
 
-___
+---
 
 ### del
 
@@ -66,8 +66,8 @@ Delete a cookie
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `name` | `string` |
 
 #### Returns
@@ -78,7 +78,7 @@ Delete a cookie
 
 [cookie.ts:62](../../src/cookie.ts#L62)
 
-___
+---
 
 ### get
 
@@ -88,8 +88,8 @@ Get the value of a cookie
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type     | Description      |
+| :----- | :------- | :--------------- |
 | `name` | `string` | name of a cookie |
 
 #### Returns
@@ -100,7 +100,7 @@ Get the value of a cookie
 
 [cookie.ts:25](../../src/cookie.ts#L25)
 
-___
+---
 
 ### init
 
@@ -111,8 +111,8 @@ Parse a string containing cookies for use by other cookie method
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description          |
+| :------ | :------- | :------------------- |
 | `input` | `string` | string to be decoded |
 
 #### Returns
@@ -123,7 +123,7 @@ Parse a string containing cookies for use by other cookie method
 
 [cookie.ts:12](../../src/cookie.ts#L12)
 
-___
+---
 
 ### names
 

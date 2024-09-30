@@ -26,7 +26,7 @@ Renames and exports: [toBoolean](toBoolean.md#toboolean)
 
 Convert a string to a boolean value
 
-**`parm`** __namedParameters see [Options](almostEquals.md#options)
+**`parm`** \_\_namedParameters see [Options](almostEquals.md#options)
 
 **`defaults`** trueValues 'true', 'yes', 'y', 'on', or '1'
 
@@ -34,10 +34,10 @@ Convert a string to a boolean value
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to convert |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description           |
+| :------------------ | :-------- | :-------------------- |
+| `input`             | `string`  | The string to convert |
+| `__namedParameters` | `Options` | -                     |
 
 #### Returns
 

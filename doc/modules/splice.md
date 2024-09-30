@@ -28,12 +28,12 @@ Insert a substring into a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `start` | `number` | The position which to insert the substring |
-| `deleteCount` | `number` | The number of characters to delete |
-| `...items` | `string`[] | The substring(s) to insert |
+| Name          | Type       | Description                                |
+| :------------ | :--------- | :----------------------------------------- |
+| `input`       | `string`   | The string                                 |
+| `start`       | `number`   | The position which to insert the substring |
+| `deleteCount` | `number`   | The number of characters to delete         |
+| `...items`    | `string`[] | The substring(s) to insert                 |
 
 #### Returns
 

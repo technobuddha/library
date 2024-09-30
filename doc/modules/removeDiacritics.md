@@ -28,9 +28,9 @@ Remove all diacritics from a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name    | Type     | Description |
+| :------ | :------- | :---------- |
+| `input` | `string` | The string  |
 
 #### Returns
 

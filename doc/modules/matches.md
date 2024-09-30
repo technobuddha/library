@@ -26,9 +26,9 @@ Renames and exports: [matches](matches.md#matches)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text` | `string` |
+| Name    | Type                                                      |
+| :------ | :-------------------------------------------------------- |
+| `text`  | `string`                                                  |
 | `match` | `string` \| `RegExp` \| `Iterable`<`string` \| `RegExp`\> |
 
 #### Returns

@@ -6,7 +6,7 @@
  * @returns The prefix followed by the string
  */
 export function ensurePrefix(input: string, prefix: string): string {
-    return input.startsWith(prefix) ? input : prefix + input;
+  return input.startsWith(prefix) ? input : prefix + input;
 }
 
 export default ensurePrefix;

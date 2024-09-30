@@ -42,10 +42,10 @@ Convert any binary object into a data URL
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | [`BinaryObject`](dataURL.md#binaryobject) | The binary object |
-| `mimeType` | `string` | The MIME type for the URL |
+| Name       | Type                                      | Description               |
+| :--------- | :---------------------------------------- | :------------------------ |
+| `input`    | [`BinaryObject`](dataURL.md#binaryobject) | The binary object         |
+| `mimeType` | `string`                                  | The MIME type for the URL |
 
 #### Returns
 

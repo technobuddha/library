@@ -7,7 +7,7 @@ const re = /^(\p{Ll})+$/u;
  * @return true, if all characters in the string are lower case
  */
 export function isLowerCase(input: string): boolean {
-    return re.test(input);
+  return re.test(input);
 }
 
 export default isLowerCase;

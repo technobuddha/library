@@ -30,10 +30,10 @@ Compute the levenshtein distance between two strings (similarity)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `comparedTo` | `string` | The string to compare to |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The string                             |
+| `comparedTo`        | `string`  | The string to compare to               |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

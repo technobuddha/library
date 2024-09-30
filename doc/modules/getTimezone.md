@@ -30,10 +30,10 @@ Renames and exports: [getTimezone](getTimezone.md#gettimezone)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `GMT?` | `boolean` | Display 'GMT' in time zones |
-| `Z?` | `boolean` | Display 'Z' for the GMT time zone |
+| Name   | Type      | Description                       |
+| :----- | :-------- | :-------------------------------- |
+| `GMT?` | `boolean` | Display 'GMT' in time zones       |
+| `Z?`   | `boolean` | Display 'Z' for the GMT time zone |
 
 #### Defined in
 
@@ -55,16 +55,16 @@ Determine the correct timezone string for a specified date using a local timezon
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` \| `number` | The date, or a timezone offset in minutes |
-| `__namedParameters` | [`Options`](getTimezone.md#options) | see [Options](getTimezone.md#options) |
+| Name                | Type                                | Description                               |
+| :------------------ | :---------------------------------- | :---------------------------------------- |
+| `input`             | `Date` \| `number`                  | The date, or a timezone offset in minutes |
+| `__namedParameters` | [`Options`](getTimezone.md#options) | see [Options](getTimezone.md#options)     |
 
 #### Returns
 
 `string`
 
-the timezone offset formatted like '±hh:mm' the string is prefixed by 'GMT' if the option is set.  If the Z option is set 'Z' is returned for the
+the timezone offset formatted like '±hh:mm' the string is prefixed by 'GMT' if the option is set. If the Z option is set 'Z' is returned for the
 GMT+00:00 timezone
 
 #### Defined in

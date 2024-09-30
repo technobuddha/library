@@ -28,8 +28,8 @@ Test a string for all upper case characters
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description    |
+| :------ | :------- | :------------- |
 | `input` | `string` | string to test |
 
 #### Returns

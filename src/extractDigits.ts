@@ -7,7 +7,7 @@ import { empty } from './constants';
  * @returns digits from the string
  */
 export function extractDigits(input: string): string {
-    return input.replace(/\D/ug, empty);
+  return input.replace(/\D/gu, empty);
 }
 
 export default extractDigits;

@@ -1,5 +1,4 @@
-import mean from 'lodash/mean';
-import sum from 'lodash/sum';
+import { mean, sum } from 'lodash-es';
 
 /**
  * Returns the unbiased sample variance of the arguments. For a definition,
@@ -11,12 +10,11 @@ import sum from 'lodash/sum';
  * not a valid number).
  */
 export function variance(...datapoints: number[]): number {
-    const sampleSize = datapoints.length;
-    if(sampleSize < 2)
-        return Number.NaN;
+  const sampleSize = datapoints.length;
+  if (sampleSize < 2) return Number.NaN;
 
-    const average  = mean(datapoints);
-    return sum(datapoints.map(val => Math.pow(val - average, 2))) / (sampleSize - 1);
+  const average = mean(datapoints);
+  return sum(datapoints.map((val) => (val - average) ** 2 / (sampleSize - 1)));
 }
 
 export default variance;

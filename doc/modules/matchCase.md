@@ -27,16 +27,17 @@ Renames and exports: [matchCase](matchCase.md#matchcase)
 Attempt to convert the input string into the same case as the target string
 
 **`remarks`** The best guess is made to try to figure out what case the target is in:
- * lowercase
- * UPPERCASE
- * Capitalcase
- * sMALLCASE
+
+- lowercase
+- UPPERCASE
+- Capitalcase
+- sMALLCASE
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The input string |
+| Name     | Type     | Description       |
+| :------- | :------- | :---------------- |
+| `input`  | `string` | The input string  |
 | `target` | `string` | The target string |
 
 #### Returns

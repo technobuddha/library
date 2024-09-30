@@ -1,4 +1,4 @@
-import isEmpty from 'lodash/isEmpty';
+import { isEmpty } from 'lodash-es';
 
 const crcTable: number[] = [];
 
@@ -9,21 +9,20 @@ const crcTable: number[] = [];
  * @return the CRC32 checksum
  */
 export function crc32(input: string): number {
-    if(isEmpty(crcTable)) {
-        for(let n = 0; n < 256; ++n) {
-            let c = n;
-            for(let k = 0; k < 8; ++k)
-                c = ((c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1));
+  if (isEmpty(crcTable)) {
+    for (let n = 0; n < 256; ++n) {
+      let c = n;
+      for (let k = 0; k < 8; ++k) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
 
-            crcTable[n] = c;
-        }
+      crcTable[n] = c;
     }
+  }
 
-    let crc = -1;
-    for(let i = 0; i < input.length; ++i)
-        crc = (crc >>> 8) ^ crcTable[(crc ^ input.charCodeAt(i)) & 0xFF];
+  let crc = -1;
+  for (let i = 0; i < input.length; ++i)
+    crc = (crc >>> 8) ^ crcTable[(crc ^ input.charCodeAt(i)) & 0xff];
 
-    return (crc ^ -1) >>> 0;
+  return (crc ^ -1) >>> 0;
 }
 
 export default crc32;

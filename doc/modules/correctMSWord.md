@@ -28,8 +28,8 @@ Correct character sequences that Microsoft Word changes to make it look prettier
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description        |
+| :------ | :------- | :----------------- |
 | `input` | `string` | The mangled string |
 
 #### Returns

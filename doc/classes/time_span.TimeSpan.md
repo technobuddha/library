@@ -47,8 +47,8 @@ Store and manipulate a duration of time
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description                        |
+| :------ | :------- | :--------------------------------- |
 | `ticks` | `number` | the number of ticks (milliseconds) |
 
 #### Defined in
@@ -59,11 +59,11 @@ Store and manipulate a duration of time
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `h` | `number` | Hours |
-| `m` | `number` | minutes |
-| `s` | `number` | seconds |
+| Name | Type     | Description |
+| :--- | :------- | :---------- |
+| `h`  | `number` | Hours       |
+| `m`  | `number` | minutes     |
+| `s`  | `number` | seconds     |
 
 #### Defined in
 
@@ -73,12 +73,12 @@ Store and manipulate a duration of time
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `d` | `number` | Days |
-| `h` | `number` | Hours |
-| `m` | `number` | minutes |
-| `s` | `number` | seconds |
+| Name | Type     | Description |
+| :--- | :------- | :---------- |
+| `d`  | `number` | Days        |
+| `h`  | `number` | Hours       |
+| `m`  | `number` | minutes     |
+| `s`  | `number` | seconds     |
 
 #### Defined in
 
@@ -88,12 +88,12 @@ Store and manipulate a duration of time
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `d` | `number` | Days |
-| `h` | `number` | Hours |
-| `m` | `number` | minutes |
-| `s` | `number` | seconds |
+| Name | Type     | Description  |
+| :--- | :------- | :----------- |
+| `d`  | `number` | Days         |
+| `h`  | `number` | Hours        |
+| `m`  | `number` | minutes      |
+| `s`  | `number` | seconds      |
 | `ms` | `number` | milliseconds |
 
 #### Defined in
@@ -104,8 +104,8 @@ Store and manipulate a duration of time
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type     | Description                                                             |
+| :----- | :------- | :---------------------------------------------------------------------- |
 | `text` | `string` | formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be omitted |
 
 #### Defined in
@@ -128,7 +128,7 @@ Get the days portion
 
 [time-span.ts:98](../../src/time-span.ts#L98)
 
-___
+---
 
 ### hours
 
@@ -144,7 +144,7 @@ Get the hours portion
 
 [time-span.ts:105](../../src/time-span.ts#L105)
 
-___
+---
 
 ### milliseconds
 
@@ -160,7 +160,7 @@ Get the milliseconds portion
 
 [time-span.ts:126](../../src/time-span.ts#L126)
 
-___
+---
 
 ### minutes
 
@@ -176,7 +176,7 @@ Get the minutes portion
 
 [time-span.ts:112](../../src/time-span.ts#L112)
 
-___
+---
 
 ### seconds
 
@@ -192,7 +192,7 @@ Get the seconds portion
 
 [time-span.ts:119](../../src/time-span.ts#L119)
 
-___
+---
 
 ### ticks
 
@@ -208,7 +208,7 @@ Get the total number of ticks (milliseconds)
 
 [time-span.ts:133](../../src/time-span.ts#L133)
 
-___
+---
 
 ### totalDays
 
@@ -224,7 +224,7 @@ Get the total number of days
 
 [time-span.ts:140](../../src/time-span.ts#L140)
 
-___
+---
 
 ### totalHours
 
@@ -240,7 +240,7 @@ Get the total number of hours
 
 [time-span.ts:147](../../src/time-span.ts#L147)
 
-___
+---
 
 ### totalMilliseconds
 
@@ -256,7 +256,7 @@ Get the total number of milliseconds
 
 [time-span.ts:168](../../src/time-span.ts#L168)
 
-___
+---
 
 ### totalMinutes
 
@@ -272,7 +272,7 @@ Get the total number of minutes
 
 [time-span.ts:154](../../src/time-span.ts#L154)
 
-___
+---
 
 ### totalSeconds
 
@@ -298,8 +298,8 @@ Add two timespans
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type                                | Description             |
+| :------ | :---------------------------------- | :---------------------- |
 | `other` | [`TimeSpan`](time_span.TimeSpan.md) | TimeSpan to add to this |
 
 #### Returns
@@ -312,7 +312,7 @@ a TimeSpan that is the sum of two timespans
 
 [time-span.ts:240](../../src/time-span.ts#L240)
 
-___
+---
 
 ### format
 
@@ -322,9 +322,9 @@ Format the timespan using a mask
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `mask?` | `string` | The mask |
+| Name    | Type     | Description |
+| :------ | :------- | :---------- |
+| `mask?` | `string` | The mask    |
 
 #### Returns
 
@@ -336,7 +336,7 @@ the formatted TimeSpan
 
 [time-span.ts:178](../../src/time-span.ts#L178)
 
-___
+---
 
 ### toString
 
@@ -354,7 +354,7 @@ formatted string
 
 [time-span.ts:230](../../src/time-span.ts#L230)
 
-___
+---
 
 ### compare
 
@@ -364,9 +364,9 @@ Compare two TimeSpans
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `t1` | [`TimeSpan`](time_span.TimeSpan.md) | First TimeSpan |
+| Name | Type                                | Description     |
+| :--- | :---------------------------------- | :-------------- |
+| `t1` | [`TimeSpan`](time_span.TimeSpan.md) | First TimeSpan  |
 | `t2` | [`TimeSpan`](time_span.TimeSpan.md) | Second TimeSpan |
 
 #### Returns

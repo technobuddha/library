@@ -30,8 +30,8 @@ Renames and exports: [collapseWhitespace](collapseWhitespace.md#collapsewhitespa
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type      | Description   |
+| :------ | :-------- | :------------ |
 | `trim?` | `boolean` | If true, trim |
 
 #### Defined in
@@ -48,10 +48,10 @@ Replace all whitespace within a string with a single space
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `__namedParameters` | [`Options`](collapseWhitespace.md#options) | - |
+| Name                | Type                                       | Description |
+| :------------------ | :----------------------------------------- | :---------- |
+| `input`             | `string`                                   | The string  |
+| `__namedParameters` | [`Options`](collapseWhitespace.md#options) | -           |
 
 #### Returns
 

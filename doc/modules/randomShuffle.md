@@ -27,14 +27,14 @@ Renames and exports: [randomShuffle](randomShuffle.md#randomshuffle)
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `deck` | `T`[] |
+| Name     | Type           |
+| :------- | :------------- |
+| `deck`   | `T`[]          |
 | `random` | () => `number` |
 
 #### Returns

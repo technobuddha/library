@@ -1,8 +1,8 @@
 import getDaysInMonth from './getDaysInMonth';
 
 type Options = {
-    /** Use the UTC timezone */
-    UTC?: boolean;
+  /** Use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -14,10 +14,12 @@ type Options = {
  * @returns Midnight on the last day of the month corresponding to the input date
  */
 export function getEndOfMonth(input: Date, { UTC = false }: Options = {}): Date {
-    if(UTC)
-        return new Date(Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), getDaysInMonth(input, { UTC })));
+  if (UTC)
+    return new Date(
+      Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), getDaysInMonth(input, { UTC })),
+    );
 
-    return new Date(input.getFullYear(), input.getMonth(), getDaysInMonth(input, { UTC }));
+  return new Date(input.getFullYear(), input.getMonth(), getDaysInMonth(input, { UTC }));
 }
 
 export default getEndOfMonth;

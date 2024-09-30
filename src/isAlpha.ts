@@ -7,7 +7,7 @@ const reAlpha = /^\p{L}+$/u;
  * @return true, if all characters in the string are alphabetic
  */
 export function isAlpha(input: string): boolean {
-    return reAlpha.test(input);
+  return reAlpha.test(input);
 }
 
 export default isAlpha;

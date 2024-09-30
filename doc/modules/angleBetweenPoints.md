@@ -26,20 +26,20 @@ Renames and exports: [angleBetweenPoints](angleBetweenPoints.md#anglebetweenpoin
 
 Computes the angle between two points (x1,y1) and (x2,y2).
 Angle zero points in the +X direction, PI/2 radians points in the +Y
-direction (down) and from there we grow clockwise towards PI*2 radians.
+direction (down) and from there we grow clockwise towards PI\*2 radians.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `a` | [`Cartesian`](coordinates.md#cartesian) | first point. |
-| `b` | [`Cartesian`](coordinates.md#cartesian) | second. |
+| Name | Type                                    | Description  |
+| :--- | :-------------------------------------- | :----------- |
+| `a`  | [`Cartesian`](coordinates.md#cartesian) | first point. |
+| `b`  | [`Cartesian`](coordinates.md#cartesian) | second.      |
 
 #### Returns
 
 `number`
 
-Standardized angle in radians of the vector from *a* to *b*.
+Standardized angle in radians of the vector from _a_ to _b_.
 
 #### Defined in
 

@@ -1,4 +1,4 @@
-import type { Cartesian } from './coordinates';
+import { type Cartesian } from './coordinates';
 import normalizeAngle from './normalizeAngle';
 
 /**
@@ -11,7 +11,7 @@ import normalizeAngle from './normalizeAngle';
  * @return Standardized angle in radians of the vector from *a* to *b*.
  */
 export function angleBetweenPoints(a: Cartesian, b: Cartesian): number {
-    return normalizeAngle(Math.atan2(b.y - a.y, b.x - a.x));
+  return normalizeAngle(Math.atan2(b.y - a.y, b.x - a.x));
 }
 
 export default angleBetweenPoints;

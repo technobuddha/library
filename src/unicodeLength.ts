@@ -7,8 +7,8 @@
  * @returns the number of code points
  */
 export function unicodeLength(input: string): number {
-    // eslint-disable-next-line require-unicode-regexp
-    return input.replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, space).length;
+  // eslint-disable-next-line require-unicode-regexp
+  return input.replaceAll(/[\uD800-\uDBFF][\uDC00-\uDFFF]/gu, space).length;
 }
 
 export default unicodeLength;

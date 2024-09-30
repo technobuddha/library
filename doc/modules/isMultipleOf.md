@@ -24,14 +24,14 @@ Renames and exports: [isMultipleOf](isMultipleOf.md#ismultipleof)
 
 ▸ **isMultipleOf**(`input`, `multiplier`): `boolean`
 
-Tests to see if the specified value is an multiple of *multiplier*
+Tests to see if the specified value is an multiple of _multiplier_
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | The number to test |
-| `multiplier` | `number` | The multiplier |
+| Name         | Type     | Description        |
+| :----------- | :------- | :----------------- |
+| `input`      | `number` | The number to test |
+| `multiplier` | `number` | The multiplier     |
 
 #### Returns
 

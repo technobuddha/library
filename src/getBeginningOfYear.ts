@@ -1,8 +1,8 @@
-import { month }                from './constants';
+import { month } from './constants';
 
 type Options = {
-    /** Use the UTC timezone */
-    UTC?: boolean;
+  /** Use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -14,9 +14,8 @@ type Options = {
  * @returns The date value for midnight on the first day of the specified year
  */
 export function getBeginningOfYear(input: Date, { UTC = false }: Options = {}): Date {
-    if(UTC)
-        return new Date(Date.UTC(input.getUTCFullYear(), month.january, 1));
-    return new Date(input.getFullYear(), month.january, 1);
+  if (UTC) return new Date(Date.UTC(input.getUTCFullYear(), month.january, 1));
+  return new Date(input.getFullYear(), month.january, 1);
 }
 
 export default getBeginningOfYear;

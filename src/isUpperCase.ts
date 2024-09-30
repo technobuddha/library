@@ -1,4 +1,4 @@
-const re    = /^(\p{Lu})+$/u;
+const re = /^(\p{Lu})+$/u;
 
 /**
  * Test a string for all upper case characters
@@ -7,7 +7,7 @@ const re    = /^(\p{Lu})+$/u;
  * @return true, if all characters in the string are upper case
  */
 export function isUpperCase(input: string): boolean {
-    return re.test(input);
+  return re.test(input);
 }
 
 export default isUpperCase;

@@ -28,8 +28,8 @@ Check to see if an object is a primitive
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type      | Description    |
+| :------ | :-------- | :------------- |
 | `input` | `unknown` | object to test |
 
 #### Returns

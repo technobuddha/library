@@ -26,10 +26,10 @@ Renames and exports: [formatNumber](formatNumber.md#formatnumber)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name    | Type     |
+| :------ | :------- |
 | `input` | `number` |
-| `mask` | `string` |
+| `mask`  | `string` |
 
 #### Returns
 

@@ -5,7 +5,7 @@
  * @return true, if all characters in the string are white space
  */
 export function isWhitespace(input: string): boolean {
-    return /^\s+$/u.test(input);
+  return /^\s+$/u.test(input);
 }
 
 export default isWhitespace;

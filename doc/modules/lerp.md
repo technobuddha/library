@@ -30,10 +30,10 @@ outside this range, the return value is a linear extrapolation).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `a` | `number` | A number. |
-| `b` | `number` | A number. |
+| Name         | Type     | Description                     |
+| :----------- | :------- | :------------------------------ |
+| `a`          | `number` | A number.                       |
+| `b`          | `number` | A number.                       |
 | `proportion` | `number` | The proportion between a and b. |
 
 #### Returns

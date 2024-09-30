@@ -1,5 +1,5 @@
 import removeDiacritics from './removeDiacritics';
-import matchCase        from './matchCase';
+import matchCase from './matchCase';
 
 /**
  * Determine the possessive form of a word
@@ -8,11 +8,10 @@ import matchCase        from './matchCase';
  * @returns the posessive form of the word
  */
 export function possessive(input: string): string {
-    const last = removeDiacritics(input[input.length - 1]);
+  const last = removeDiacritics(input[input.length - 1]);
 
-    if(last === 's' || last === 'S')
-        return matchCase(`${input}'`, input);
-    return matchCase(`${input}'s`, input);
+  if (last === 's' || last === 'S') return matchCase(`${input}'`, input);
+  return matchCase(`${input}'s`, input);
 }
 
 export default possessive;

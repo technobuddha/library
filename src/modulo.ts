@@ -12,8 +12,8 @@
  * or b < x <= 0, depending on the sign of b).
  */
 export function modulo(dividend: number, divisor: number): number {
-    const remainder = dividend % divisor;
-    return (dividend * divisor < 0 && remainder !== 0) ? divisor + remainder : remainder;
+  const remainder = dividend % divisor;
+  return dividend * divisor < 0 && remainder !== 0 ? divisor + remainder : remainder;
 }
 
 export default modulo;

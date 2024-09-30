@@ -28,10 +28,10 @@ Add a prefix to a string, if it does not already have the prefix
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `prefix` | `string` | The prefix |
+| Name     | Type     | Description |
+| :------- | :------- | :---------- |
+| `input`  | `string` | The string  |
+| `prefix` | `string` | The prefix  |
 
 #### Returns
 

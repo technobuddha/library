@@ -28,8 +28,8 @@ Decode a UTF8 encoded string into unicode
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description            |
+| :------ | :------- | :--------------------- |
 | `input` | `string` | the utf encoded string |
 
 #### Returns

@@ -26,20 +26,20 @@ Renames and exports: [randomPick](randomPick.md#randompick)
 
 Pick a random items from a list.
 
-**`default`** random  Math.random
+**`default`** random Math.random
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `unknown` |
+| Name | Type      |
+| :--- | :-------- |
+| `T`  | `unknown` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `list` | `T`[] | Array of items to pick from |
-| `random` | () => `number` | Random number generator |
+| Name     | Type           | Description                 |
+| :------- | :------------- | :-------------------------- |
+| `list`   | `T`[]          | Array of items to pick from |
+| `random` | () => `number` | Random number generator     |
 
 #### Returns
 

@@ -30,9 +30,9 @@ Determine the indentation level of text
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The indented text |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The indented text                      |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

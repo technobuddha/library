@@ -30,8 +30,8 @@ Renames and exports: [toCapitalCase](toCapitalCase.md#tocapitalcase)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type      | Description                                  |
+| :----------- | :-------- | :------------------------------------------- |
 | `lowerCase?` | `boolean` | Convert the rest of the string to lower case |
 
 #### Defined in
@@ -50,9 +50,9 @@ Capitalize the first letter of a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to capitalize |
+| Name                | Type                                  | Description                             |
+| :------------------ | :------------------------------------ | :-------------------------------------- |
+| `input`             | `string`                              | The string to capitalize                |
 | `__namedParameters` | [`Options`](toCapitalCase.md#options) | see [Options](toCapitalCase.md#options) |
 
 #### Returns

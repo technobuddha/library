@@ -26,9 +26,9 @@ Renames and exports: [numberToLetter](numberToLetter.md#numbertoletter)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `n` | `number` |
+| Name                | Type      |
+| :------------------ | :-------- |
+| `n`                 | `number`  |
 | `__namedParameters` | `Options` |
 
 #### Returns

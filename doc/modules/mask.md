@@ -26,17 +26,17 @@ Renames and exports: [mask](mask.md#mask)
 
 Use a simple mask to display a string
 
-**`remark`** The simple mask is a string where '#' characters are replaced by characters from the input string.  Other characters in the mask
+**`remark`** The simple mask is a string where '#' characters are replaced by characters from the input string. Other characters in the mask
 are output as-is, to output a '#' use '\#'
 
 **`default`** missing space
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `maskStr` | `string` | - |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The string                             |
+| `maskStr`           | `string`  | -                                      |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

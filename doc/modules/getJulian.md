@@ -30,8 +30,8 @@ Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type   | Description                  |
+| :------ | :----- | :--------------------------- |
 | `input` | `Date` | The date and time to convert |
 
 #### Returns

@@ -28,11 +28,11 @@ Surround text with an HTML tag
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | `string` | `undefined` | The text to surround |
-| `tagName` | `string` | `'span'` | The name of the tag |
-| `attributes` | `Record`<`string`, `string`\> | `{}` | A dictionary of name value pairs to use for attributes |
+| Name         | Type                          | Default value | Description                                            |
+| :----------- | :---------------------------- | :------------ | :----------------------------------------------------- |
+| `input`      | `string`                      | `undefined`   | The text to surround                                   |
+| `tagName`    | `string`                      | `'span'`      | The name of the tag                                    |
+| `attributes` | `Record`<`string`, `string`\> | `{}`          | A dictionary of name value pairs to use for attributes |
 
 #### Returns
 

@@ -30,8 +30,8 @@ Renames and exports: [count](count.md#count)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type      | Description                         |
+| :--------- | :-------- | :---------------------------------- |
 | `overlap?` | `boolean` | if true, counts overlapping strings |
 
 #### Defined in
@@ -48,17 +48,17 @@ Compute the number of times a substring occurs within a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `substring` | `string` | - |
+| Name                | Type                          | Description                     |
+| :------------------ | :---------------------------- | :------------------------------ |
+| `input`             | `string`                      | The string                      |
+| `substring`         | `string`                      | -                               |
 | `__namedParameters` | [`Options`](count.md#options) | see [Options](count.md#options) |
 
 #### Returns
 
 `number`
 
-number of times *substring* occurs within *input*
+number of times _substring_ occurs within _input_
 
 #### Defined in
 

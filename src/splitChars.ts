@@ -5,7 +5,7 @@
  * @returns array of characters
  */
 export function splitChars(input: string): string[] {
-    return Array.from(input);
+  return Array.from(input);
 }
 
 export default splitChars;

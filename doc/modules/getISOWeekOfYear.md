@@ -32,10 +32,10 @@ Determine the ISO week number for a given date
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | The date |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description |
+| :------------------ | :-------- | :---------- |
+| `input`             | `Date`    | The date    |
+| `__namedParameters` | `Options` | -           |
 
 #### Returns
 
@@ -43,8 +43,8 @@ Determine the ISO week number for a given date
 
 the week number (1-53)
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `week` | `number` |
 | `year` | `number` |
 

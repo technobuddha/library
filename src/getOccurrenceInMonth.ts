@@ -1,13 +1,13 @@
 import type { DayOfWeek } from './constants';
-import { daysPerWeek }    from './constants';
-import getBeginningOfMonth           from './getBeginningOfMonth';
-import getDaysInMonth                from './getDaysInMonth';
-import addTime                       from './addTime';
-import modulo                        from './modulo';
+import { daysPerWeek } from './constants';
+import getBeginningOfMonth from './getBeginningOfMonth';
+import getDaysInMonth from './getDaysInMonth';
+import addTime from './addTime';
+import modulo from './modulo';
 
 type Options = {
-    /** Use the UTC timezone */
-    UTC?: boolean;
+  /** Use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -20,16 +20,27 @@ type Options = {
  * @defaultValue UTC false
  * @returns A date object corresponding to the occurrence requested, or null if no such date exists in the month
  */
-export function getOccurrenceInMonth(input: Date, dayOfWeek: DayOfWeek, occurrence: number | 'last', { UTC = false }: Options = {}): Date | null {
-    let   day  = getBeginningOfMonth(input, { UTC });
-    const jump = modulo(dayOfWeek - (UTC ? day.getUTCDay() : day.getDay()), daysPerWeek);
-    if(occurrence === 'last')
-        return addTime(day, { days: jump + Math.floor((getDaysInMonth(input, { UTC }) - jump - 1) / daysPerWeek) * daysPerWeek });
-    else if(occurrence < 1 || occurrence > 5)
-        return null;
+export function getOccurrenceInMonth(
+  input: Date,
+  dayOfWeek: DayOfWeek,
+  occurrence: number | 'last',
+  { UTC = false }: Options = {},
+): Date | null {
+  let day = getBeginningOfMonth(input, { UTC });
+  const jump = modulo(dayOfWeek - (UTC ? day.getUTCDay() : day.getDay()), daysPerWeek);
+  if (occurrence === 'last')
+    return addTime(day, {
+      days:
+        jump + Math.floor((getDaysInMonth(input, { UTC }) - jump - 1) / daysPerWeek) * daysPerWeek,
+    });
+  else if (occurrence < 1 || occurrence > 5) return null;
 
-    day = addTime(day, { days: jump + daysPerWeek * (occurrence - 1) });
-    return (UTC ? day.getUTCMonth() === input.getUTCMonth() : day.getMonth() === input.getMonth()) ? day : null;
+  day = addTime(day, { days: jump + daysPerWeek * (occurrence - 1) });
+  return (
+      UTC ? day.getUTCMonth() === input.getUTCMonth() : day.getMonth() === input.getMonth()
+    ) ?
+      day
+    : null;
 }
 
 export default getOccurrenceInMonth;

@@ -6,7 +6,7 @@
  * @returns The string followed by the suffix
  */
 export function ensureSuffix(input: string, suffix: string): string {
-    return input.endsWith(suffix) ? input : input + suffix;
+  return input.endsWith(suffix) ? input : input + suffix;
 }
 
 export default ensureSuffix;

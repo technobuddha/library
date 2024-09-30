@@ -28,8 +28,8 @@ Convert a string to a title, capitalizing each word, except for the small words
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description                   |
+| :------ | :------- | :---------------------------- |
 | `input` | `string` | the string to make title case |
 
 #### Returns

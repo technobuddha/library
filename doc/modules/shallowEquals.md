@@ -24,15 +24,15 @@ Renames and exports: [shallowEquals](shallowEquals.md#shallowequals)
 
 ▸ **shallowEquals**(`objA`, `objB`, `exclude?`): `boolean`
 
-Compare two object for equality.  Testing goes one level deep.
+Compare two object for equality. Testing goes one level deep.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `objA` | `Record`<`string`, `unknown`\> \| ``null`` \| `undefined` | `undefined` | First object to compare |
-| `objB` | `Record`<`string`, `unknown`\> \| ``null`` \| `undefined` | `undefined` | Second object to compare |
-| `exclude` | `string`[] | `[]` | Array of key names to exclude from the comparison |
+| Name      | Type                                                    | Default value | Description                                       |
+| :-------- | :------------------------------------------------------ | :------------ | :------------------------------------------------ |
+| `objA`    | `Record`<`string`, `unknown`\> \| `null` \| `undefined` | `undefined`   | First object to compare                           |
+| `objB`    | `Record`<`string`, `unknown`\> \| `null` \| `undefined` | `undefined`   | Second object to compare                          |
+| `exclude` | `string`[]                                              | `[]`          | Array of key names to exclude from the comparison |
 
 #### Returns
 

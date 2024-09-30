@@ -30,8 +30,8 @@ Renames and exports: [unindent](unindent.md#unindent)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type     | Description               |
+| :---------- | :------- | :------------------------ |
 | `indenter?` | `string` | the indentation character |
 
 #### Defined in
@@ -48,10 +48,10 @@ Remove indentation from text
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The indented text |
-| `__namedParameters` | [`Options`](unindent.md#options) | - |
+| Name                | Type                             | Description       |
+| :------------------ | :------------------------------- | :---------------- |
+| `input`             | `string`                         | The indented text |
+| `__namedParameters` | [`Options`](unindent.md#options) | -                 |
 
 #### Returns
 

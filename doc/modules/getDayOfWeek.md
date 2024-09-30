@@ -32,9 +32,9 @@ Determine the day of the week for a specific date
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | The date |
+| Name                | Type                  | Description                            |
+| :------------------ | :-------------------- | :------------------------------------- |
+| `input`             | `Date`                | The date                               |
 | `__namedParameters` | `GetDayOfWeekOptions` | see [Options](almostEquals.md#options) |
 
 #### Returns

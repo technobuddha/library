@@ -30,15 +30,15 @@ Renames and exports: [addTime](addTime.md#addtime)
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `days?` | `number` |
-| `hours?` | `number` |
+| Name            | Type     |
+| :-------------- | :------- |
+| `days?`         | `number` |
+| `hours?`        | `number` |
 | `milliseconds?` | `number` |
-| `minutes?` | `number` |
-| `months?` | `number` |
-| `seconds?` | `number` |
-| `years?` | `number` |
+| `minutes?`      | `number` |
+| `months?`       | `number` |
+| `seconds?`      | `number` |
+| `years?`        | `number` |
 
 #### Defined in
 
@@ -56,9 +56,9 @@ Add units of time to a Date
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | Starting date |
+| Name                | Type                                        | Description                 |
+| :------------------ | :------------------------------------------ | :-------------------------- |
+| `input`             | `Date`                                      | Starting date               |
 | `__namedParameters` | [`TimeIncrement`](addTime.md#timeincrement) | Amount of time to increment |
 
 #### Returns

@@ -28,10 +28,10 @@ Add leading zeros to a number to ensure a string of a minimum length
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | `number` | `undefined` | The number to pad |
-| `length` | `number` | `2` | The minimum length of the resulting string |
+| Name     | Type     | Default value | Description                                |
+| :------- | :------- | :------------ | :----------------------------------------- |
+| `input`  | `number` | `undefined`   | The number to pad                          |
+| `length` | `number` | `2`           | The minimum length of the resulting string |
 
 #### Returns
 

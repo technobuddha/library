@@ -1,6 +1,6 @@
 type Options = {
-    /** The indentation character */
-    indenter?: string;
+  /** The indentation character */
+  indenter?: string;
 };
 
 /**
@@ -12,7 +12,7 @@ type Options = {
  * @returns string with each line indented
  */
 export function indent(input: string, { indenter = ' ' }: Options = {}): string {
-    return input.replace(/^/ugm, indenter);
+  return input.replace(/^/gmu, indenter);
 }
 
 export default indent;

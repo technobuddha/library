@@ -28,8 +28,8 @@ Return the number of unicode code points in a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description        |
+| :------ | :------- | :----------------- |
 | `input` | `string` | the unicode string |
 
 #### Returns

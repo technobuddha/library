@@ -29,14 +29,14 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `domain` | `RegExp` |
-| `email` | `RegExp` |
-| `ipV4` | `RegExp` |
+| Name        | Type     |
+| :---------- | :------- |
+| `domain`    | `RegExp` |
+| `email`     | `RegExp` |
+| `ipV4`      | `RegExp` |
 | `ipV4Local` | `RegExp` |
-| `isoDate` | `RegExp` |
-| `numeric` | `RegExp` |
+| `isoDate`   | `RegExp` |
+| `numeric`   | `RegExp` |
 
 ## Variables
 
@@ -48,7 +48,7 @@
 
 [regexp.ts:67](../../src/regexp.ts#L67)
 
-___
+---
 
 ### email
 
@@ -58,7 +58,7 @@ ___
 
 [regexp.ts:74](../../src/regexp.ts#L74)
 
-___
+---
 
 ### ipV4
 
@@ -70,7 +70,7 @@ validate an IPv4 address
 
 [regexp.ts:39](../../src/regexp.ts#L39)
 
-___
+---
 
 ### ipV4Local
 
@@ -82,7 +82,7 @@ determine if Ipv4 address is local
 
 [regexp.ts:45](../../src/regexp.ts#L45)
 
-___
+---
 
 ### isoDate
 
@@ -92,7 +92,7 @@ ___
 
 [regexp.ts:60](../../src/regexp.ts#L60)
 
-___
+---
 
 ### numeric
 
@@ -112,10 +112,10 @@ validate a valid number
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                   |
+| :--------- | :--------------------- |
 | `template` | `TemplateStringsArray` |
-| `...args` | `RegExp`[] |
+| `...args`  | `RegExp`[]             |
 
 #### Returns
 

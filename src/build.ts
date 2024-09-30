@@ -1,8 +1,8 @@
-import { empty }  from './constants';
-import compact    from 'lodash/compact';
-import isString   from 'lodash/isString';
-import isArray    from 'lodash/isArray';
-import isFunction from 'lodash/isFunction';
+import { empty } from './constants';
+import { compact } from 'lodash-es';
+import { isString } from 'lodash-es';
+import { isArray } from 'lodash-es';
+import { isFunction } from 'lodash-es';
 
 type stringy = string | string[] | IterableIterator<string>;
 /**
@@ -12,7 +12,13 @@ type stringy = string | string[] | IterableIterator<string>;
  * @returns The concatenation of *args*.
  */
 export function build(...args: (stringy | Generator<stringy> | (() => stringy))[]): string {
-    return compact(args.flatMap(a => (isString(a) || isArray(a) ? a : isFunction(a) ? a() : Array.from(a)))).join(empty);
+  return compact(
+    args.flatMap((a) =>
+      isString(a) || isArray(a) ? a
+      : isFunction(a) ? a()
+      : Array.from(a),
+    ),
+  ).join(empty);
 }
 
 export default build;

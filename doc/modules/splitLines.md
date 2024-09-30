@@ -28,8 +28,8 @@ Split a string into an array of lines
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description         |
+| :------ | :------- | :------------------ |
 | `input` | `string` | The string to split |
 
 #### Returns

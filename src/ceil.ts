@@ -1,8 +1,8 @@
-import lodash_ceil from 'lodash/ceil';
+import { lodash_ceil } from 'lodash-es';
 
 type Options = {
-    tolerance?: number;
-    precision?: number;
+  tolerance?: number;
+  precision?: number;
 };
 
 /**
@@ -13,7 +13,7 @@ type Options = {
  * @return                The smallest integer greater than or equal to {@code input}.
  */
 export function ceil(input: number, { tolerance = 0, precision = 0 }: Options = {}): number {
-    return lodash_ceil(input - (Math.sign(input) * tolerance) - Number.EPSILON, precision);
+  return lodash_ceil(input - Math.sign(input) * tolerance - Number.EPSILON, precision);
 }
 
 export default ceil;

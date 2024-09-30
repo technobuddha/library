@@ -28,9 +28,9 @@ Determine the possessive form of a word
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | the word |
+| Name    | Type     | Description |
+| :------ | :------- | :---------- |
+| `input` | `string` | the word    |
 
 #### Returns
 

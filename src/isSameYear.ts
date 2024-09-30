@@ -1,6 +1,6 @@
 type Options = {
-    /** use the UTC timezone */
-    UTC?: boolean;
+  /** use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -13,10 +13,9 @@ type Options = {
  * @returns true, if the two dates occur in the same year
  */
 export function isSameYear(input1: Date, input2: Date, { UTC = false }: Options = {}): boolean {
-    if(UTC)
-        return input1.getUTCFullYear() === input2.getUTCFullYear();
+  if (UTC) return input1.getUTCFullYear() === input2.getUTCFullYear();
 
-    return input1.getFullYear() === input2.getFullYear();
+  return input1.getFullYear() === input2.getFullYear();
 }
 
 export default isSameYear;

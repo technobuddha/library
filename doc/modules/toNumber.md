@@ -26,8 +26,8 @@ Renames and exports: [toNumber](toNumber.md#tonumber)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type      |
+| :------- | :-------- |
 | `entity` | `unknown` |
 
 #### Returns

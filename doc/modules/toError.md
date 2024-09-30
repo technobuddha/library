@@ -26,8 +26,8 @@ Renames and exports: [toError](toError.md#toerror)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type      |
+| :------- | :-------- |
 | `entity` | `unknown` |
 
 #### Returns

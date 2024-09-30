@@ -1,5 +1,12 @@
+// ​🚨​
+// ​🚨​ This file is managed by @technobuddha/project
+// ​🚨​
 {
-    "extends": "../../tsconfig.base.json",
-    "compilerOptions": { "lib": [ "esnext" ]},
-    "exclude": [ "node_modules", "dist", "coverage" ]
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "noEmit": true
+  },
+  "references": [{ "path": "./src" }],
+  "include": ["./prettier.config.js", "./eslint.config.js"]
 }

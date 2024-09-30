@@ -32,10 +32,10 @@ Determine if two dates occur in the same week
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input1` | `Date` | The first date |
-| `input2` | `Date` | The second date |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input1`            | `Date`    | The first date                         |
+| `input2`            | `Date`    | The second date                        |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

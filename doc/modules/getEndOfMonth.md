@@ -30,9 +30,9 @@ Determine the last day of the month containing the input date
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | The date |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `Date`    | The date                               |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

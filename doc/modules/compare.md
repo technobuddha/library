@@ -28,10 +28,10 @@ Compare two objects
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `unknown` |
-| `y` | `unknown` |
+| Name | Type      |
+| :--- | :-------- |
+| `x`  | `unknown` |
+| `y`  | `unknown` |
 
 #### Returns
 

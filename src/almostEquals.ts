@@ -1,6 +1,6 @@
 export type Options = {
-    /** Tolerance range. If specified, should be greater than 0. **/
-    tolerance?: number;
+  /** Tolerance range. If specified, should be greater than 0. **/
+  tolerance?: number;
 };
 
 /**
@@ -14,7 +14,7 @@ export type Options = {
  * @return true if *a* and *b* are nearly equal.
  */
 export function almostEquals(a: number, b: number, { tolerance = 0 }: Options = {}): boolean {
-    return Math.abs(a - b) <= (tolerance + Number.EPSILON);
+  return Math.abs(a - b) <= tolerance + Number.EPSILON;
 }
 
 export default almostEquals;

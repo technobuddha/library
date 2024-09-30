@@ -36,10 +36,10 @@ Wrap text so that it fits within a area of fixed width
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | the text to wrap |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description      |
+| :------------------ | :-------- | :--------------- |
+| `input`             | `string`  | the text to wrap |
+| `__namedParameters` | `Options` | -                |
 
 #### Returns
 

@@ -1,8 +1,8 @@
-import isSameYear   from './isSameYear';
+import isSameYear from './isSameYear';
 
 type Options = {
-    /** use the UTC timezone */
-    UTC?: boolean;
+  /** use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -15,10 +15,10 @@ type Options = {
  * @returns true, if the two dates occur in the same month
  */
 export function isSameMonth(input1: Date, input2: Date, { UTC = false }: Options = {}): boolean {
-    if(UTC)
-        return input1.getUTCMonth() === input2.getUTCMonth() && isSameYear(input1, input2, { UTC });
+  if (UTC)
+    return input1.getUTCMonth() === input2.getUTCMonth() && isSameYear(input1, input2, { UTC });
 
-    return input1.getMonth() === input2.getMonth() && isSameYear(input1, input2, { UTC });
+  return input1.getMonth() === input2.getMonth() && isSameYear(input1, input2, { UTC });
 }
 
 export default isSameMonth;

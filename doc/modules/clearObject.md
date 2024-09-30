@@ -30,14 +30,14 @@ Delete all own enumerable string properties from an object
 
 #### Type parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `T` | `unknown` | Type of values within the object |
+| Name | Type      | Description                      |
+| :--- | :-------- | :------------------------------- |
+| `T`  | `unknown` | Type of values within the object |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type                                             | Description                    |
+| :------ | :----------------------------------------------- | :----------------------------- |
 | `input` | `Record`<`string` \| `number` \| `symbol`, `T`\> | Object to clear all properties |
 
 #### Returns

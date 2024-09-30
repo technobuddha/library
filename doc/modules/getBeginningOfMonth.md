@@ -30,10 +30,10 @@ Determine the start of the month for a dateDetermine the start of the month for 
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | The date |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description |
+| :------------------ | :-------- | :---------- |
+| `input`             | `Date`    | The date    |
+| `__namedParameters` | `Options` | -           |
 
 #### Returns
 

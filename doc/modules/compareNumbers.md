@@ -22,20 +22,20 @@ Renames and exports: [compareNumbers](compareNumbers.md#comparenumbers)
 
 ### compareNumbers
 
-▸ **compareNumbers**(`a`, `b`): ``-1`` \| ``0`` \| ``1``
+▸ **compareNumbers**(`a`, `b`): `-1` \| `0` \| `1`
 
 Compare two numbers
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `a` | `number` \| ``null`` | First object |
-| `b` | `number` \| ``null`` | Second object |
+| Name | Type               | Description   |
+| :--- | :----------------- | :------------ |
+| `a`  | `number` \| `null` | First object  |
+| `b`  | `number` \| `null` | Second object |
 
 #### Returns
 
-``-1`` \| ``0`` \| ``1``
+`-1` \| `0` \| `1`
 
 0 if a == b; -1 if a < b; 1 if a > b
 

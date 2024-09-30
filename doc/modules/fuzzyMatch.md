@@ -26,10 +26,10 @@ Renames and exports: [fuzzyMatch](fuzzyMatch.md#fuzzymatch)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `string` |
-| `comparedTo` | `string` |
+| Name                | Type      |
+| :------------------ | :-------- |
+| `input`             | `string`  |
+| `comparedTo`        | `string`  |
 | `__namedParameters` | `Options` |
 
 #### Returns

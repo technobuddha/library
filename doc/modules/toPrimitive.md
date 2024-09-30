@@ -28,10 +28,10 @@ Convert an object into its primitive (string, number, etc.) value
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `input` | `unknown` | `undefined` | the object |
-| `hint` | ``"string"`` \| ``"number"`` \| ``"default"`` | `'default'` | A "hint" as to what the type should be.  "string", "number" or "default" |
+| Name    | Type                                    | Default value | Description                                                             |
+| :------ | :-------------------------------------- | :------------ | :---------------------------------------------------------------------- |
+| `input` | `unknown`                               | `undefined`   | the object                                                              |
+| `hint`  | `"string"` \| `"number"` \| `"default"` | `'default'`   | A "hint" as to what the type should be. "string", "number" or "default" |
 
 #### Returns
 

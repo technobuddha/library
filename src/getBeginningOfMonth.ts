@@ -1,6 +1,6 @@
 type Options = {
-    /** Use the UTC timezone */
-    UTC?: boolean;
+  /** Use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -12,10 +12,9 @@ type Options = {
  * @returns The date value for midnight on the first day of the specified month
  */
 export function getBeginningOfMonth(input: Date, { UTC = false }: Options = {}): Date {
-    if(UTC)
-        return new Date(Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), 1));
+  if (UTC) return new Date(Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), 1));
 
-    return new Date(input.getFullYear(), input.getMonth(), 1);
+  return new Date(input.getFullYear(), input.getMonth(), 1);
 }
 
 export default getBeginningOfMonth;

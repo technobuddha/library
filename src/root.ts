@@ -1,10 +1,10 @@
-import isNil from 'lodash/isNil';
+import { isNil } from 'lodash-es';
 
 export type Options = {
-    /** The refix string to remove */
-    prefix?: string;
-    /** The suffix string to remove */
-    suffix?: string;
+  /** The refix string to remove */
+  prefix?: string;
+  /** The suffix string to remove */
+  suffix?: string;
 };
 
 /**
@@ -15,13 +15,12 @@ export type Options = {
  * @returns The root word
  */
 export function root(input: string, { prefix, suffix }: Options = {}): string {
-    if(!isNil(prefix) && input.startsWith(prefix))
-        input = input.slice(prefix.length);
+  if (!isNil(prefix) && input.startsWith(prefix)) input = input.slice(prefix.length);
 
-    if(!isNil(suffix) && input.endsWith(suffix))
-        input = input.slice(0, Math.max(0, input.length - suffix.length));
+  if (!isNil(suffix) && input.endsWith(suffix))
+    input = input.slice(0, Math.max(0, input.length - suffix.length));
 
-    return input;
+  return input;
 }
 
 export default root;

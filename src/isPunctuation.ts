@@ -7,7 +7,7 @@ const re = /^(\p{P})+$/u;
  * @return true, if all characters in the string are punctuation
  */
 export function isPunctuation(input: string): boolean {
-    return re.test(input);
+  return re.test(input);
 }
 
 export default isPunctuation;

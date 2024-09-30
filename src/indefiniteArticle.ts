@@ -1,24 +1,27 @@
 // cspell:disable
 const TESTS: [string, RegExp][] = [
-    [ 'an', /^[aefhilmnirsx]([-.]|$|th$)/ui ],
-    [ 'a',  /^[bcdgjkpqtuvwyz]([-.]|$|th$)/ui ],
-    [ 'an', /^(euler|hour(?!i)|heir|honest|hono)/ui ],
-    [ 'an', /^(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]/u ],
-    [ 'a',  /^[^aeiouy]/ui ],
-    [ 'a',  /^e[uw]/ui ],
-    [ 'a',  /^onc?e\b/u ],
-    [ 'a',  /^uni([^nmd]|mo)/ui ],
-    [ 'an', /^ut[th]/ui ],
-    [ 'a',  /^u[bcfhjkqrst][aeiou]/ui ],
-    [ 'a',  /^U[NK][AIEO]?/u ],
-    [ 'an', /^[aeiou]/ui ],
-    [ 'an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/ui ],
+  ['an', /^[aefhilmnirsx]([-.]|$|th$)/iu],
+  ['a', /^[bcdgjkpqtuvwyz]([-.]|$|th$)/iu],
+  ['an', /^(euler|hour(?!i)|heir|honest|hono)/iu],
+  [
+    'an',
+    /^(?!FJO|[HLMNS]Y.|RY[EO]|SQU|(F[LR]?|[HL]|MN?|N|RH?|S[CHKLMNPTVW]?|X(YL)?)[AEIOU])[FHLMNRSX][A-Z]/u,
+  ],
+  ['a', /^[^aeiouy]/iu],
+  ['a', /^e[uw]/iu],
+  ['a', /^onc?e\b/u],
+  ['a', /^uni([^nmd]|mo)/iu],
+  ['an', /^ut[th]/iu],
+  ['a', /^u[bcfhjkqrst][aeiou]/iu],
+  ['a', /^U[NK][AIEO]?/u],
+  ['an', /^[aeiou]/iu],
+  ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/iu],
 ];
 //cspell:enable
 
 type Options = {
-    /** only return the indefinite article, do not combine with the input */
-    only?: boolean;
+  /** only return the indefinite article, do not combine with the input */
+  only?: boolean;
 };
 
 /**
@@ -35,15 +38,15 @@ type Options = {
  * option is used, only the indefinite article is returned.
  */
 export function indefiniteArticle(word: string, { only = false }: Options = {}): string {
-    let result = 'a';
-    for(const [ article, rule ] of TESTS) {
-        if(rule.test(word)) {
-            result = article;
-            break;
-        }
+  let result = 'a';
+  for (const [article, rule] of TESTS) {
+    if (rule.test(word)) {
+      result = article;
+      break;
     }
+  }
 
-    return only ? result : `${result} ${word}`;
+  return only ? result : `${result} ${word}`;
 }
 
 export default indefiniteArticle;

@@ -23,11 +23,10 @@ import normalizeAngle from './normalizeAngle';
  * angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
  */
 export function angleDifference(startAngle: number, endAngle: number): number {
-    let d = normalizeAngle(endAngle) - normalizeAngle(startAngle);
-    if(d > Math.PI)
-        d -= Math.PI * 2;
+  let d = normalizeAngle(endAngle) - normalizeAngle(startAngle);
+  if (d > Math.PI) d -= Math.PI * 2;
 
-    return d;
+  return d;
 }
 
 export default angleDifference;

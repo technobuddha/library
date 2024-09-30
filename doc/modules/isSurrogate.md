@@ -32,9 +32,9 @@ Deterimine is a character is a surrogate
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | the character to test |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | the character to test                  |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

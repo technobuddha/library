@@ -28,11 +28,11 @@ Compute the dice coefficient measure of similarity between two strings
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The first string |
-| `compareTo` | `string` | The second string |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description       |
+| :------------------ | :-------- | :---------------- |
+| `input`             | `string`  | The first string  |
+| `compareTo`         | `string`  | The second string |
+| `__namedParameters` | `Options` | -                 |
 
 #### Returns
 

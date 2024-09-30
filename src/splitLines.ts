@@ -7,9 +7,8 @@ import { empty } from './constants';
  * @returns array of lines
  */
 export function splitLines(input: string): string[] {
-    if(input === empty)
-        return [];
-    return input.split(/\r\n|\n\r|\r|\n|\0/u);
+  if (input === empty) return [];
+  return input.split(/\r\n|\n\r|\r|\n|\0/u);
 }
 
 export default splitLines;

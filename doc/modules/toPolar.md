@@ -28,8 +28,8 @@ Convert cartesian coordinates to polar
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name                | Type                                    | Description                               |
+| :------------------ | :-------------------------------------- | :---------------------------------------- |
 | `__namedParameters` | [`Cartesian`](coordinates.md#cartesian) | see [Cartesian](coordinates.md#cartesian) |
 
 #### Returns

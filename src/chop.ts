@@ -1,9 +1,9 @@
-import { empty }  from './constants';
-import isFinite from 'lodash/isFinite';
+import { empty } from './constants';
+import { isFinite } from 'lodash-es';
 
 export type Options = {
-    /** If true, the last block will be omitted if has insufficient characters **/
-    truncate?: boolean;
+  /** If true, the last block will be omitted if has insufficient characters **/
+  truncate?: boolean;
 };
 
 /**
@@ -14,8 +14,10 @@ export type Options = {
  * @returns Array of segments
  */
 export function chop(input: string, length: number, { truncate = false }: Options = {}): string[] {
-    // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
-    return length > 0 && isFinite(length) ? input.match(new RegExp(`.{${truncate ? empty : '1,'}${length}}`, 'gu')) as string[] : [ input ];
+  // eslint-disable-next-line @typescript-eslint/prefer-regexp-exec
+  return length > 0 && isFinite(length) ?
+      (input.match(new RegExp(`.{${truncate ? empty : '1,'}${length}}`, 'gu')) as string[])
+    : [input];
 }
 
 export default chop;

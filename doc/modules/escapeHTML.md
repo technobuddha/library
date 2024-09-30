@@ -28,9 +28,9 @@ Escape a string for use in HTML
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to escape |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The string to escape                   |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

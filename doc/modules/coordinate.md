@@ -30,11 +30,11 @@ Renames and exports: [coordinate](coordinate.md#coordinate)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `conjunction?` | `string` | Conjunction to insert in the last position (default 'and') |
-| `oxford?` | `boolean` | If true, use the oxford comma |
-| `separator?` | `string` | String used to separate values (default ',') |
+| Name           | Type      | Description                                                |
+| :------------- | :-------- | :--------------------------------------------------------- |
+| `conjunction?` | `string`  | Conjunction to insert in the last position (default 'and') |
+| `oxford?`      | `boolean` | If true, use the oxford comma                              |
+| `separator?`   | `string`  | String used to separate values (default ',')               |
 
 #### Defined in
 
@@ -50,15 +50,15 @@ Create a string from an array, separating values and inserting a conjunction
 
 #### Type parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | `unknown` |
+| Name | Type      |
+| :--- | :-------- |
+| `T`  | `unknown` |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `ArrayLike`<`T`\> | Array of values |
+| Name                | Type                               | Description                          |
+| :------------------ | :--------------------------------- | :----------------------------------- |
+| `input`             | `ArrayLike`<`T`\>                  | Array of values                      |
 | `__namedParameters` | [`Options`](coordinate.md#options) | see [Options](coordinate.md#options) |
 
 #### Returns

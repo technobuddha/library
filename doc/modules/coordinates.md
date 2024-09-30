@@ -17,16 +17,16 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
+| Name | Type     |
+| :--- | :------- |
+| `x`  | `number` |
+| `y`  | `number` |
 
 #### Defined in
 
 [coordinates.ts:1](../../src/coordinates.ts#L1)
 
-___
+---
 
 ### Polar
 
@@ -34,9 +34,9 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `angle` | `number` |
+| Name     | Type     |
+| :------- | :------- |
+| `angle`  | `number` |
 | `radius` | `number` |
 
 #### Defined in

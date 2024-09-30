@@ -1,6 +1,6 @@
 type Options = {
-    /** Convert other characters in the string to lower case */
-    lowerCase?: boolean;
+  /** Convert other characters in the string to lower case */
+  lowerCase?: boolean;
 };
 
 /**
@@ -11,7 +11,7 @@ type Options = {
  * @default lowercase false
  */
 export function toCapitalWordCase(input: string, { lowerCase = false }: Options = {}): string {
-    return (lowerCase ? input.toLowerCase() : input).replace(/\b\w/ug, l => l.toUpperCase());
+  return (lowerCase ? input.toLowerCase() : input).replace(/\b\w/gu, (l) => l.toUpperCase());
 }
 
 export default toCapitalWordCase;

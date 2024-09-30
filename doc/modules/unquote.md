@@ -32,9 +32,9 @@ Remove surrounding quotes from text
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The text to surrounded by quotes |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The text to surrounded by quotes       |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

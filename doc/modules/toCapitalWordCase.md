@@ -30,9 +30,9 @@ Capitalize the first letter of each word in a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to capitalize |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The string to capitalize               |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

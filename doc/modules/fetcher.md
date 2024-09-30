@@ -30,7 +30,7 @@ Renames and exports: [fetcher](fetcher.md#fetcher)
 
 ### Options
 
-Ƭ **Options**: `RequestInit` & { `timeout?`: `number`  }
+Ƭ **Options**: `RequestInit` & { `timeout?`: `number` }
 
 #### Defined in
 
@@ -52,10 +52,10 @@ Fetch a remote resource
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `url` | `string` | The url of a resource that you wish to fetch |
-| `__namedParameters` | [`Options`](fetcher.md#options) | see [Options](fetcher.md#options) |
+| Name                | Type                            | Description                                  |
+| :------------------ | :------------------------------ | :------------------------------------------- |
+| `url`               | `string`                        | The url of a resource that you wish to fetch |
+| `__namedParameters` | [`Options`](fetcher.md#options) | see [Options](fetcher.md#options)            |
 
 #### Returns
 

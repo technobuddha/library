@@ -28,9 +28,9 @@ Split a string into an array of characters
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name    | Type     | Description |
+| :------ | :------- | :---------- |
+| `input` | `string` | The string  |
 
 #### Returns
 

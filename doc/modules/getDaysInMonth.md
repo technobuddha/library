@@ -30,9 +30,9 @@ Determine the number of days in the month for a date
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | The date |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `Date`    | The date                               |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

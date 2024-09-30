@@ -34,16 +34,16 @@ all
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `word` | `string` | The word |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `word`              | `string`  | The word                               |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns
 
 `string`
 
-The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
+The appropriate indefinite article ("a" or "an") combined with the input word. If the only
 option is used, only the indefinite article is returned.
 
 #### Defined in

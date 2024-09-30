@@ -32,10 +32,10 @@ Math.LN10) == 2}, not 3 as one would expect.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | A number. |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description |
+| :------------------ | :-------- | :---------- |
+| `input`             | `number`  | A number.   |
+| `__namedParameters` | `Options` | -           |
 
 #### Returns
 

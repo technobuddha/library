@@ -7,7 +7,7 @@ import type { Cartesian, Polar } from './coordinates';
  * @returns Object containing the X and Y-distance for the angle and radius.
  */
 export function toCartesian({ radius, angle }: Polar): Cartesian {
-    return { x: radius * Math.cos(angle), y: radius * Math.sin(angle) };
+  return { x: radius * Math.cos(angle), y: radius * Math.sin(angle) };
 }
 
 export default toCartesian;

@@ -26,13 +26,13 @@ Renames and exports: [toEnumeration](toEnumeration.md#toenumeration)
 
 Convert a string to a numeric value
 
-**`parm`** __namedParameters see [Options](almostEquals.md#options)
+**`parm`** \_\_namedParameters see [Options](almostEquals.md#options)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to convert |
+| Name       | Type                                                          | Description                                          |
+| :--------- | :------------------------------------------------------------ | :--------------------------------------------------- |
+| `input`    | `string`                                                      | The string to convert                                |
 | `...tests` | (`Iterable`<`string` \| `RegExp`\> \| `string` \| `RegExp`)[] | Array of tests (string value or regular expressions) |
 
 #### Returns

@@ -29,8 +29,8 @@ be normalized to be the equivalent angle with that range.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type     |
+| :-------- | :------- |
 | `radians` | `number` |
 
 #### Returns

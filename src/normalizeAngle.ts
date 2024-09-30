@@ -1,4 +1,4 @@
-import modulo      from './modulo';
+import modulo from './modulo';
 
 /**
  * Normalizes an angle to be in range [0-PI*2]. Angles outside this range will
@@ -7,7 +7,7 @@ import modulo      from './modulo';
  * @return Standardized angle.
  */
 export function normalizeAngle(radians: number): number {
-    return modulo(radians, Math.PI * 2);
+  return modulo(radians, Math.PI * 2);
 }
 
 export default normalizeAngle;

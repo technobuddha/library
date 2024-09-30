@@ -7,7 +7,7 @@ import toSmallCase from './toSmallCase';
  * @returns string in camel case
  */
 export function toCamelCase(input: string): string {
-    return toSmallCase(input.trim().replace(/[-_.\s]+\w/ug, c => c.slice(-1).toUpperCase()));
+  return toSmallCase(input.trim().replace(/[-_.\s]+\w/gu, (c) => c.slice(-1).toUpperCase()));
 }
 
 export default toCamelCase;

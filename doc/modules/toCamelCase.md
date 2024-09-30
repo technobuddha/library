@@ -28,8 +28,8 @@ Convert an identifier string to a camel case
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description           |
+| :------ | :------- | :-------------------- |
 | `input` | `string` | The identifier string |
 
 #### Returns

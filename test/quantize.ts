@@ -31,11 +31,8 @@ import expect from '#util/expect';
 //     void image.writeAsync('/home/phil/Development/library/test/rainbow64.png');
 //})();
 
-describe(
-    'quantize',
-    () => {
-        test('Fail!', () => {
-            expect(1 + 0).toBe(1);
-        });
-    }
-);
+describe('quantize', () => {
+  test('Fail!', () => {
+    expect(1 + 0).toBe(1);
+  });
+});

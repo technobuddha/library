@@ -22,7 +22,7 @@ Renames and exports: [compareStrings](compareStrings.md#comparestrings)
 
 ### compareStrings
 
-▸ **compareStrings**(`text1`, `text2`, `__namedParameters?`): ``-1`` \| ``0`` \| ``1``
+▸ **compareStrings**(`text1`, `text2`, `__namedParameters?`): `-1` \| `0` \| `1`
 
 Compare two strings
 
@@ -34,15 +34,15 @@ Compare two strings
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `text1` | `string` \| ``null`` |
-| `text2` | `string` \| ``null`` |
-| `__namedParameters` | `Options` |
+| Name                | Type               |
+| :------------------ | :----------------- |
+| `text1`             | `string` \| `null` |
+| `text2`             | `string` \| `null` |
+| `__namedParameters` | `Options`          |
 
 #### Returns
 
-``-1`` \| ``0`` \| ``1``
+`-1` \| `0` \| `1`
 
 0 if a == b; -1 if a < b; 1 if a > b
 

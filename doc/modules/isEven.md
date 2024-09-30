@@ -28,8 +28,8 @@ Tests to see if the specified value is an even integer
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description        |
+| :------ | :------- | :----------------- |
 | `input` | `number` | The number to test |
 
 #### Returns

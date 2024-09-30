@@ -26,26 +26,26 @@
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `replacer` | (`key`: `string`, `value`: `unknown`) => `unknown` |
-| `reviver` | (`_key`: `string`, `value`: `unknown`) => `unknown` |
+| Name       | Type                                                |
+| :--------- | :-------------------------------------------------- |
+| `replacer` | (`key`: `string`, `value`: `unknown`) => `unknown`  |
+| `reviver`  | (`_key`: `string`, `value`: `unknown`) => `unknown` |
 
 ## Variables
 
 ### specialBegin
 
-• `Const` **specialBegin**: ``"﴾"``
+• `Const` **specialBegin**: `"﴾"`
 
 #### Defined in
 
 [json.ts:4](../../src/json.ts#L4)
 
-___
+---
 
 ### specialFinish
 
-• `Const` **specialFinish**: ``"﴿"``
+• `Const` **specialFinish**: `"﴿"`
 
 #### Defined in
 
@@ -59,13 +59,13 @@ ___
 
 Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with {@link revive}
 
-**`remarks`** Will encode Date, RegExp and BigInt objects.  The numeric values 'Infinity' and 'NaN' are also encoded.
+**`remarks`** Will encode Date, RegExp and BigInt objects. The numeric values 'Infinity' and 'NaN' are also encoded.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `key` | `string` | The key for the field |
+| Name    | Type      | Description                                             |
+| :------ | :-------- | :------------------------------------------------------ |
+| `key`   | `string`  | The key for the field                                   |
 | `value` | `unknown` | The value (may have already been encoded into a string) |
 
 #### Returns
@@ -78,7 +78,7 @@ the encoded value
 
 [json.ts:16](../../src/json.ts#L16)
 
-___
+---
 
 ### reviver
 
@@ -88,10 +88,10 @@ Used with JSON.parse to decode objected encoded by [replacer](json.md#replacer)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `_key` | `string` | The key |
-| `value` | `unknown` | The value |
+| Name    | Type      | Description |
+| :------ | :-------- | :---------- |
+| `_key`  | `string`  | The key     |
+| `value` | `unknown` | The value   |
 
 #### Returns
 

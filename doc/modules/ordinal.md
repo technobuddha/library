@@ -28,8 +28,8 @@ Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description           |
+| :------ | :------- | :-------------------- |
 | `input` | `number` | The number to convert |
 
 #### Returns

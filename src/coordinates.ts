@@ -1,9 +1,9 @@
 export type Cartesian = {
-    x: number;
-    y: number;
+  x: number;
+  y: number;
 };
 
 export type Polar = {
-    radius: number;
-    angle: number;
+  radius: number;
+  angle: number;
 };

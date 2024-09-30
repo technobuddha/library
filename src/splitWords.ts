@@ -1,9 +1,9 @@
 import isWhitespace from './isWhitespace';
-import clean        from './clean';
+import clean from './clean';
 
 type Options = {
-    /** The delimiter between words */
-    delimiter?: string | RegExp;
+  /** The delimiter between words */
+  delimiter?: string | RegExp;
 };
 
 /**
@@ -15,9 +15,8 @@ type Options = {
  * @returns array of words
  */
 export function splitWords(input: string, { delimiter = /\s+/u }: Options = {}): string[] {
-    if(input.length === 0 || isWhitespace(input))
-        return [];
-    return clean(input, delimiter).split(delimiter);
+  if (input.length === 0 || isWhitespace(input)) return [];
+  return clean(input, delimiter).split(delimiter);
 }
 
 export default splitWords;

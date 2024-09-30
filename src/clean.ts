@@ -1,8 +1,8 @@
-import isString     from 'lodash/isString';
-import isRegExp     from 'lodash/isRegExp';
-import escapeRegExp from 'lodash/escapeRegExp';
-import { empty }    from './constants';
-import splitChars   from './splitChars';
+import { isString } from 'lodash-es';
+import { isRegExp } from 'lodash-es';
+import { escapeRegExp } from 'lodash-es';
+import { empty } from './constants';
+import splitChars from './splitChars';
 
 const trimEquivalent = /[\s\uFEFF\xA0]/u;
 
@@ -12,16 +12,27 @@ const trimEquivalent = /[\s\uFEFF\xA0]/u;
  * @param input  The string
  * @param characters The characters(s) to remove
  */
-export function clean(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquivalent): string {
-    const re = (
-        isString(characters)
-            ?    splitChars(characters).map(ch => escapeRegExp(ch)).join('|')
-            :    isRegExp(characters)
-                ?    characters.source
-                :    characters.map(c => (isRegExp(c) ? c.source : splitChars(c).map(ch => escapeRegExp(ch)).join('|'))).join('|')
-    );
+export function clean(
+  input: string,
+  characters: string | RegExp | (string | RegExp)[] = trimEquivalent,
+): string {
+  const re =
+    isString(characters) ?
+      splitChars(characters)
+        .map((ch) => escapeRegExp(ch))
+        .join('|')
+    : isRegExp(characters) ? characters.source
+    : characters
+        .map((c) =>
+          isRegExp(c) ?
+            c.source
+          : splitChars(c)
+              .map((ch) => escapeRegExp(ch))
+              .join('|'),
+        )
+        .join('|');
 
-    return input.replace(new RegExp(`^(${re})+|(${re})+$`, 'gu'), empty);
+  return input.replace(new RegExp(`^(${re})+|(${re})+$`, 'gu'), empty);
 }
 
 /**
@@ -30,16 +41,27 @@ export function clean(input: string, characters: (string | RegExp | (string | Re
  * @param input  The string
  * @param characters  he characters(s) to remove
  */
-export function cleanEnd(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquivalent): string {
-    const re = (
-        isString(characters)
-            ? splitChars(characters).map(ch => escapeRegExp(ch)).join('|')
-            : isRegExp(characters)
-                ? characters.source
-                : characters.map(c => (isRegExp(c) ? c.source : splitChars(c).map(ch => escapeRegExp(ch)).join('|'))).join('|')
-    );
+export function cleanEnd(
+  input: string,
+  characters: string | RegExp | (string | RegExp)[] = trimEquivalent,
+): string {
+  const re =
+    isString(characters) ?
+      splitChars(characters)
+        .map((ch) => escapeRegExp(ch))
+        .join('|')
+    : isRegExp(characters) ? characters.source
+    : characters
+        .map((c) =>
+          isRegExp(c) ?
+            c.source
+          : splitChars(c)
+              .map((ch) => escapeRegExp(ch))
+              .join('|'),
+        )
+        .join('|');
 
-    return input.replace(new RegExp(`(${re})+$`, 'u'), empty);
+  return input.replace(new RegExp(`(${re})+$`, 'u'), empty);
 }
 
 /**
@@ -48,16 +70,27 @@ export function cleanEnd(input: string, characters: (string | RegExp | (string |
  * @param input The string
  * @param characters The characters(s) to remove
  */
-export function cleanStart(input: string, characters: (string | RegExp | (string | RegExp)[]) = trimEquivalent): string {
-    const re = (
-        isString(characters)
-            ? splitChars(characters).map(ch => escapeRegExp(ch)).join('|')
-            : isRegExp(characters)
-                ? characters.source
-                : characters.map(c => (isRegExp(c) ? c.source : splitChars(c).map(ch => escapeRegExp(ch)).join('|'))).join('|')
-    );
+export function cleanStart(
+  input: string,
+  characters: string | RegExp | (string | RegExp)[] = trimEquivalent,
+): string {
+  const re =
+    isString(characters) ?
+      splitChars(characters)
+        .map((ch) => escapeRegExp(ch))
+        .join('|')
+    : isRegExp(characters) ? characters.source
+    : characters
+        .map((c) =>
+          isRegExp(c) ?
+            c.source
+          : splitChars(c)
+              .map((ch) => escapeRegExp(ch))
+              .join('|'),
+        )
+        .join('|');
 
-    return input.replace(new RegExp(`^(${re})+`, 'u'), empty);
+  return input.replace(new RegExp(`^(${re})+`, 'u'), empty);
 }
 
 export default clean;

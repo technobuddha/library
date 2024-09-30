@@ -26,9 +26,9 @@ Renames and exports: [getDayOfYear](getDayOfYear.md#getdayofyear)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `Date` |
+| Name                | Type      |
+| :------------------ | :-------- |
+| `input`             | `Date`    |
 | `__namedParameters` | `Options` |
 
 #### Returns

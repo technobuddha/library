@@ -30,8 +30,8 @@ Renames and exports: [chop](chop.md#chop)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name        | Type      | Description                                                            |
+| :---------- | :-------- | :--------------------------------------------------------------------- |
 | `truncate?` | `boolean` | If true, the last block will be omitted if has insufficient characters |
 
 #### Defined in
@@ -48,11 +48,11 @@ Break a string into equal sized segments of characters
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to break apart |
-| `length` | `number` | The length of each segment |
-| `__namedParameters` | [`Options`](chop.md#options) | - |
+| Name                | Type                         | Description                |
+| :------------------ | :--------------------------- | :------------------------- |
+| `input`             | `string`                     | The string to break apart  |
+| `length`            | `number`                     | The length of each segment |
+| `__namedParameters` | [`Options`](chop.md#options) | -                          |
 
 #### Returns
 

@@ -1,8 +1,7 @@
 function sameValue(x: any, y: any) {
-    if(x === y)
-        return x !== 0 || 1 / x === 1 / y;
-    // eslint-disable-next-line no-self-compare
-    return x !== x && y !== y;
+  if (x === y) return x !== 0 || 1 / x === 1 / y;
+  // eslint-disable-next-line no-self-compare
+  return x !== x && y !== y;
 }
 
 /**
@@ -13,27 +12,28 @@ function sameValue(x: any, y: any) {
  * @param exclude Array of key names to exclude from the comparison
  * @returns true if the two objects have the same members
  */
-export function shallowEquals(objA: Record<string, unknown> | null | undefined, objB: Record<string, unknown> | null | undefined, exclude: string[] = []): boolean {
-    if(sameValue(objA, objB))
-        return true;
+export function shallowEquals(
+  objA: Record<string, unknown> | null | undefined,
+  objB: Record<string, unknown> | null | undefined,
+  exclude: string[] = [],
+): boolean {
+  if (sameValue(objA, objB)) return true;
 
-    if(objA === null || objA === undefined || objB === null || objB === undefined)
-        return false;
+  if (objA === null || objA === undefined || objB === null || objB === undefined) return false;
 
-    const hash  = new Set(exclude);
+  const hash = new Set(exclude);
 
-    const keysA = Object.keys(objA).filter(key => !hash.has(key));
-    const keysB = Object.keys(objB).filter(key => !hash.has(key));
+  const keysA = Object.keys(objA).filter((key) => !hash.has(key));
+  const keysB = Object.keys(objB).filter((key) => !hash.has(key));
 
-    if(keysA.length !== keysB.length)
-        return false;
+  if (keysA.length !== keysB.length) return false;
 
-    for(const key of keysA) {
-        if(!Object.prototype.hasOwnProperty.call(objB, key) || !sameValue(objA[key], objB[key]))
-            return false;
-    }
+  for (const key of keysA) {
+    if (!Object.prototype.hasOwnProperty.call(objB, key) || !sameValue(objA[key], objB[key]))
+      return false;
+  }
 
-    return true;
+  return true;
 }
 
 export default shallowEquals;

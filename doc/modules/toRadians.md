@@ -28,10 +28,10 @@ Converts degrees to radians.
 
 #### Parameters
 
-| Name | Type | Default value | Description |
-| :------ | :------ | :------ | :------ |
-| `angle` | `number` | `undefined` | Angle in degrees. |
-| `unit` | `AngleUnit` | `'degrees'` | - |
+| Name    | Type        | Default value | Description       |
+| :------ | :---------- | :------------ | :---------------- |
+| `angle` | `number`    | `undefined`   | Angle in degrees. |
+| `unit`  | `AngleUnit` | `'degrees'`   | -                 |
 
 #### Returns
 

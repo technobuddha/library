@@ -28,15 +28,15 @@ Concatenates strings and/or arrays of strings
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type                                                        | Description                                                                                       |
+| :-------- | :---------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
 | `...args` | (`stringy` \| `Generator`<`stringy`\> \| () => `stringy`)[] | Concatenates a list of strings, string arrays, or functions that return a string or string array. |
 
 #### Returns
 
 `string`
 
-The concatenation of *args*.
+The concatenation of _args_.
 
 #### Defined in
 

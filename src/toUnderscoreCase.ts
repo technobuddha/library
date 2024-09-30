@@ -5,7 +5,10 @@
  * @returns the identifier in underscore case
  */
 export function toUnderscoreCase(input: string): string {
-    return input.trim().replace(/[-_.\s]+\w/ug, c => `_${c.slice(-1).toUpperCase()}`).toLowerCase();
+  return input
+    .trim()
+    .replaceAll(/[-_.\s]+\w/gu, (c) => `_${c.slice(-1).toUpperCase()}`)
+    .toLowerCase();
 }
 
 export default toUnderscoreCase;

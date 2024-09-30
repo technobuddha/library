@@ -33,26 +33,26 @@ The shortest route (clockwise vs counter-clockwise) between the angles is used.
 When the difference is PI radians, the function returns PI (not -PI)
 
 **`example`**
-angleDifference(PI * 1/6,  PI * 2/6) is PI * 1/6
+angleDifference(PI _ 1/6, PI _ 2/6) is PI \* 1/6
 
-angleDifference(PI * 2/6, PI * 1/6)  is -PI * 1/6.
+angleDifference(PI _ 2/6, PI _ 1/6) is -PI \* 1/6.
 
-angleDifference(PI * 11/6, PI * 1/6) is PI * 2/6
+angleDifference(PI _ 11/6, PI _ 1/6) is PI \* 2/6
 
-angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
+angleDifference(PI _ 1/6, PI _ 11/6) is -PI \* 1/6.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description             |
+| :----------- | :------- | :---------------------- |
 | `startAngle` | `number` | Start angle in radians. |
-| `endAngle` | `number` | End angle in radians. |
+| `endAngle`   | `number` | End angle in radians.   |
 
 #### Returns
 
 `number`
 
-The number of radians that when added to *startAngle* will result in *endAngle*.
+The number of radians that when added to _startAngle_ will result in _endAngle_.
 
 #### Defined in
 

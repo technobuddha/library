@@ -1,4 +1,4 @@
-import toCapitalCase  from './toCapitalCase';
+import toCapitalCase from './toCapitalCase';
 
 /**
  * Convert an identifier string to pascal case
@@ -7,7 +7,7 @@ import toCapitalCase  from './toCapitalCase';
  * @returns the identifier in pascal case
  */
 export function toPascalCase(input: string): string {
-    return toCapitalCase(input.trim().replace(/[-_.\s]+\w/ug, c => c.slice(-1).toUpperCase()));
+  return toCapitalCase(input.trim().replaceAll(/[-_.\s]+\w/gu, (c) => c.slice(-1).toUpperCase()));
 }
 
 export default toPascalCase;

@@ -30,9 +30,9 @@ Remove all occurrences of characters from the beginning and end of the string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name         | Type                                             | Description                 |
+| :----------- | :----------------------------------------------- | :-------------------------- |
+| `input`      | `string`                                         | The string                  |
 | `characters` | `string` \| `RegExp` \| (`string` \| `RegExp`)[] | The characters(s) to remove |
 
 #### Returns
@@ -43,7 +43,7 @@ Remove all occurrences of characters from the beginning and end of the string
 
 [clean.ts:15](../../src/clean.ts#L15)
 
-___
+---
 
 ### cleanEnd
 
@@ -53,9 +53,9 @@ Remove all occurrences of characters from the end of the string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name         | Type                                             | Description                |
+| :----------- | :----------------------------------------------- | :------------------------- |
+| `input`      | `string`                                         | The string                 |
 | `characters` | `string` \| `RegExp` \| (`string` \| `RegExp`)[] | he characters(s) to remove |
 
 #### Returns
@@ -66,7 +66,7 @@ Remove all occurrences of characters from the end of the string
 
 [clean.ts:33](../../src/clean.ts#L33)
 
-___
+---
 
 ### cleanStart
 
@@ -76,9 +76,9 @@ Remove all occurrences of characters from the start of the string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name         | Type                                             | Description                 |
+| :----------- | :----------------------------------------------- | :-------------------------- |
+| `input`      | `string`                                         | The string                  |
 | `characters` | `string` \| `RegExp` \| (`string` \| `RegExp`)[] | The characters(s) to remove |
 
 #### Returns

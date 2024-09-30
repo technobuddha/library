@@ -30,12 +30,12 @@ Renames and exports: [toFilename](toFilename.md#tofilename)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name            | Type     | Description                                                                                    |
+| :-------------- | :------- | :--------------------------------------------------------------------------------------------- |
 | `disambiguate?` | `number` | number of characters to presere at the end of the filename when truncated (for disambiguation) |
-| `maxLength?` | `number` | the file name will be truncated to this length |
-| `replacement?` | `string` | character to use to replace "bad" characters |
-| `separator?` | `string` | string to separate the main section from the disambiguated section |
+| `maxLength?`    | `number` | the file name will be truncated to this length                                                 |
+| `replacement?`  | `string` | character to use to replace "bad" characters                                                   |
+| `separator?`    | `string` | string to separate the main section from the disambiguated section                             |
 
 #### Defined in
 
@@ -59,9 +59,9 @@ Convert a string so that it can be used as a filename
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to escape |
+| Name                | Type                               | Description                          |
+| :------------------ | :--------------------------------- | :----------------------------------- |
+| `input`             | `string`                           | The string to escape                 |
 | `__namedParameters` | [`Options`](toFilename.md#options) | see [Options](toFilename.md#options) |
 
 #### Returns

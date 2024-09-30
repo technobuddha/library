@@ -1,10 +1,11 @@
-import escapeRegExp     from 'lodash/escapeRegExp';
+import { escapeRegExp } from 'lodash-es';
+
 import { empty, space } from './constants';
-import getIndent        from './getIndent';
+import getIndent from './getIndent';
 
 export type Options = {
-    /** the indentation character */
-    indenter?: string;
+  /** the indentation character */
+  indenter?: string;
 };
 
 /**
@@ -14,12 +15,11 @@ export type Options = {
  * @param pattern  (space)
  */
 export function unindent(input: string, { indenter = space }: Options = {}): string {
-    const indent = getIndent(input, { indenter });
+  const indent = getIndent(input, { indenter });
 
-    if(indent === 0)
-        return input;
+  if (indent === 0) return input;
 
-    return input.replace(new RegExp(`^(${escapeRegExp(indenter)}){${indent}}`, 'gmu'), empty);
+  return input.replaceAll(new RegExp(`^(${escapeRegExp(indenter)}){${indent}}`, 'mu'), empty);
 }
 
 export default unindent;

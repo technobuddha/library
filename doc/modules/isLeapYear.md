@@ -28,10 +28,10 @@ Determine if a year is a leap year
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` \| `number` | A date, or a year number |
-| `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
+| Name                | Type               | Description                            |
+| :------------------ | :----------------- | :------------------------------------- |
+| `input`             | `Date` \| `number` | A date, or a year number               |
+| `__namedParameters` | `Options`          | see [Options](almostEquals.md#options) |
 
 #### Returns
 

@@ -9,7 +9,7 @@
  * @returns The interpolated value between a and b.
  */
 export function lerp(a: number, b: number, proportion: number): number {
-    return a + proportion * (b - a);
+  return a + proportion * (b - a);
 }
 
 export default lerp;

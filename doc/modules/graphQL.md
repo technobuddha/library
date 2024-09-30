@@ -26,10 +26,10 @@ Renames and exports: [graphQL](graphQL.md#graphql)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                   |
+| :--------- | :--------------------- |
 | `template` | `TemplateStringsArray` |
-| `...args` | `GraphQLValue`[] |
+| `...args`  | `GraphQLValue`[]       |
 
 #### Returns
 
@@ -43,8 +43,8 @@ Renames and exports: [graphQL](graphQL.md#graphql)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type           |
+| :---- | :------------- |
 | `arg` | `GraphQLValue` |
 
 #### Returns

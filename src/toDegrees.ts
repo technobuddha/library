@@ -8,7 +8,7 @@ import type { AngleUnit } from './_angle';
  * @returns angle in degrees
  */
 export function toDegrees(angle: number, unit: AngleUnit = 'radians'): number {
-    return units.degrees * angle / units[unit];
+  return (units.degrees * angle) / units[unit];
 }
 
 export default toDegrees;

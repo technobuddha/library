@@ -29,10 +29,10 @@ details.
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | A number. |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description |
+| :------------------ | :-------- | :---------- |
+| `input`             | `number`  | A number.   |
+| `__namedParameters` | `Options` | -           |
 
 #### Returns
 

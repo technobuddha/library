@@ -1,6 +1,6 @@
 export type Options = {
-    /** if true, counts overlapping strings */
-    overlap?: boolean;
+  /** if true, counts overlapping strings */
+  overlap?: boolean;
 };
 
 /**
@@ -12,16 +12,16 @@ export type Options = {
  * @return number of times *substring* occurs within *input*
  */
 export function count(input: string, substring: string, { overlap = false }: Options = {}): number {
-    const step = overlap ? 1 : substring.length;
-    let   cnt  = 0;
-    let   pos  = 0;
+  const step = overlap ? 1 : substring.length;
+  let cnt = 0;
+  let pos = 0;
 
-    while((pos = input.indexOf(substring, pos)) >= 0) {
-        cnt++;
-        pos += step;
-    }
+  while ((pos = input.indexOf(substring, pos)) >= 0) {
+    cnt++;
+    pos += step;
+  }
 
-    return cnt;
+  return cnt;
 }
 
 export default count;

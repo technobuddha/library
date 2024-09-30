@@ -26,8 +26,8 @@ Renames and exports: [toDate](toDate.md#todate)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name     | Type      |
+| :------- | :-------- |
 | `entity` | `unknown` |
 
 #### Returns

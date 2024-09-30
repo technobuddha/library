@@ -28,7 +28,7 @@ Renames and exports: [measure](measure.md#measure)
 
 ### Size
 
-Ƭ **Size**: `ScrollbarSize` & { `height`: `number` ; `width`: `number`  }
+Ƭ **Size**: `ScrollbarSize` & { `height`: `number` ; `width`: `number` }
 
 #### Defined in
 
@@ -48,7 +48,7 @@ Renames and exports: [measure](measure.md#measure)
 
 [measure.ts:12](../../src/measure.ts#L12)
 
-___
+---
 
 ### measure
 
@@ -56,8 +56,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name      | Type          |
+| :-------- | :------------ |
 | `element` | `HTMLElement` |
 
 #### Returns
@@ -68,7 +68,7 @@ ___
 
 [measure.ts:26](../../src/measure.ts#L26)
 
-___
+---
 
 ### measureWindow
 

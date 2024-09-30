@@ -8,11 +8,13 @@ import matches from './matches';
  * @parm __namedParameters see {@link Options}
  * @returns The index of the first test to match the input string
  */
-export function toEnumeration(input: string, ...tests: (Iterable<string | RegExp> | string | RegExp)[]): number | undefined {
-    for(let i = 0; i < tests.length; ++i)
-        if(matches(input, tests[i])) return i;
+export function toEnumeration(
+  input: string,
+  ...tests: (Iterable<string | RegExp> | string | RegExp)[]
+): number | undefined {
+  for (let i = 0; i < tests.length; ++i) if (matches(input, tests[i])) return i;
 
-    return undefined;
+  return undefined;
 }
 
 export default toEnumeration;

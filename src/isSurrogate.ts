@@ -1,8 +1,8 @@
 type Options = {
-    /** test for high surrogates (D800-DBFF) */
-    high?: boolean;
-    /** test for low surrogates (DC00-DFFF) */
-    low?: boolean;
+  /** test for high surrogates (D800-DBFF) */
+  high?: boolean;
+  /** test for low surrogates (DC00-DFFF) */
+  low?: boolean;
 };
 
 /**
@@ -15,10 +15,10 @@ type Options = {
  * @returns true if the specified character is a unicode surrogate
  */
 export function isSurrogate(input: string, { high = true, low = true }: Options = {}): boolean {
-    const cc = input.charCodeAt(0);
+  const cc = input.charCodeAt(0);
 
-    // cspell:ignore DBFF DFFF
-    return ((high && cc >= 0xD800 && cc <= 0xDBFF) || (low && cc >= 0xDC00 && cc <= 0xDFFF));
+  // cspell:ignore DBFF DFFF
+  return (high && cc >= 0xd800 && cc <= 0xdbff) || (low && cc >= 0xdc00 && cc <= 0xdfff);
 }
 
 export default isSurrogate;

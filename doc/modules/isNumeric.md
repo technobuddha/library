@@ -28,8 +28,8 @@ Test an object to see if it a number, or a string which can be converted into a 
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type      | Description        |
+| :------ | :-------- | :----------------- |
 | `input` | `unknown` | the object to test |
 
 #### Returns

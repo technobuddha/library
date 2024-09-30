@@ -1,5 +1,5 @@
+import { type Cartesian, type Polar } from './coordinates';
 import { normalizeAngle } from './normalizeAngle';
-import type { Cartesian, Polar } from './coordinates';
 
 /**
  * Convert cartesian coordinates to polar
@@ -8,7 +8,10 @@ import type { Cartesian, Polar } from './coordinates';
  * @returns polar coordinated
  */
 export function toPolar({ x, y }: Cartesian): Polar {
-    return { radius: Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)), angle: normalizeAngle(Math.atan2(y, x)) };
+  return {
+    radius: Math.hypot(x, y),
+    angle: normalizeAngle(Math.atan2(y, x)),
+  };
 }
 
 export default toPolar;

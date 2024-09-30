@@ -30,10 +30,10 @@ Renames and exports: [quote](quote.md#quote)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type                                        | Description                                                                                                   |
+| :-------- | :------------------------------------------ | :------------------------------------------------------------------------------------------------------------ |
 | `escape?` | `string` \| (`input`: `string`) => `string` | Character sequence to replace the quote mark within the text, or function to return the properly escaped text |
-| `quote?` | `string` | The quote character(s) to use |
+| `quote?`  | `string`                                    | The quote character(s) to use                                                                                 |
 
 #### Defined in
 
@@ -53,9 +53,9 @@ Surround text with quotes
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The text to surround |
+| Name                | Type                          | Description                     |
+| :------------------ | :---------------------------- | :------------------------------ |
+| `input`             | `string`                      | The text to surround            |
 | `__namedParameters` | [`Options`](quote.md#options) | see [Options](quote.md#options) |
 
 #### Returns

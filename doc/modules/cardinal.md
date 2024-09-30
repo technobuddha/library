@@ -36,7 +36,7 @@ Renames and exports: [cardinal](cardinal.md#cardinal)
 
 [cardinal.ts:5](../../src/cardinal.ts#L5)
 
-___
+---
 
 ### OptionsCardinal
 
@@ -44,16 +44,16 @@ ___
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name      | Type      | Description                                                                              |
+| :-------- | :-------- | :--------------------------------------------------------------------------------------- |
 | `digits?` | `boolean` | Use numbers instead of words for the group value, the group name is still output as text |
-| `groups?` | `number` | The number of groups to output, each group consists of three digits. |
+| `groups?` | `number`  | The number of groups to output, each group consists of three digits.                     |
 
 #### Defined in
 
 [cardinal.ts:7](../../src/cardinal.ts#L7)
 
-___
+---
 
 ### OptionsIllion
 
@@ -61,10 +61,10 @@ ___
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `and?` | `string` | Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" |
-| `hyphen?` | `string` | Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one" |
+| Name      | Type     | Description                                                                                 |
+| :-------- | :------- | :------------------------------------------------------------------------------------------ |
+| `and?`    | `string` | Word to place after the hundreds. "one hundred and one" vs. "one hundred one"               |
+| `hyphen?` | `string` | Places a character between the tens units and the ones units. "twenty-one" vs. "twenty one" |
 
 #### Defined in
 
@@ -91,9 +91,9 @@ up to uncentillions (1e308).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | The number |
+| Name                | Type                             | Description                        |
+| :------------------ | :------------------------------- | :--------------------------------- |
+| `input`             | `number`                         | The number                         |
 | `__namedParameters` | [`Options`](cardinal.md#options) | see [Options](cardinal.md#options) |
 
 #### Returns
@@ -106,11 +106,11 @@ The number spelled out
 
 [cardinal.ts:64](../../src/cardinal.ts#L64)
 
-___
+---
 
 ### orderOfMagnitude
 
-▸ **orderOfMagnitude**(`exponent`): `string` \| ``null``
+▸ **orderOfMagnitude**(`exponent`): `string` \| `null`
 
 Get the spelled out word for an exponent
 
@@ -123,13 +123,13 @@ numbers up to 1e308, which limits the numbers that this method can represent to 
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name       | Type     | Description             |
+| :--------- | :------- | :---------------------- |
 | `exponent` | `number` | The exponent to convert |
 
 #### Returns
 
-`string` \| ``null``
+`string` \| `null`
 
 Order of Magnitude as text
 
@@ -137,7 +137,7 @@ Order of Magnitude as text
 
 [cardinal.ts:242](../../src/cardinal.ts#L242)
 
-___
+---
 
 ### summarize
 
@@ -153,9 +153,9 @@ Get a short description of a number
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | number to convert |
+| Name      | Type                                         | Description                                    |
+| :-------- | :------------------------------------------- | :--------------------------------------------- |
+| `input`   | `number`                                     | number to convert                              |
 | `options` | [`OptionsIllion`](cardinal.md#optionsillion) | see [OptionsIllion](cardinal.md#optionsillion) |
 
 #### Returns

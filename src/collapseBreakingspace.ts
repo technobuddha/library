@@ -1,9 +1,9 @@
-import { space }                from './constants';
-import clean                    from './clean';
+import { space } from './constants';
+import clean from './clean';
 
 export type Options = {
-    /** If true, trim  */
-    trim?: boolean;
+  /** If true, trim  */
+  trim?: boolean;
 };
 
 /**
@@ -13,9 +13,8 @@ export type Options = {
  * @param trim  If true, remove leading and trailing whitespace
  */
 export function collapseBreakingspace(input: string, { trim = true }: Options = {}): string {
-    if(trim)
-        return clean(input.replace(/[\t\r\n ]+/ug, space), '\t\r\n ');
-    return input.replace(/[\t\r\n ]+/ug, space);
+  if (trim) return clean(input.replace(/[\t\r\n ]+/gu, space), '\t\r\n ');
+  return input.replace(/[\t\r\n ]+/gu, space);
 }
 
 export default collapseBreakingspace;

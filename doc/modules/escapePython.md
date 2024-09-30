@@ -28,8 +28,8 @@ Escape a string for use in Python
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description          |
+| :------ | :------- | :------------------- |
 | `input` | `string` | The string to escape |
 
 #### Returns

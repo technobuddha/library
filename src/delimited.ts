@@ -9,12 +9,11 @@ import { empty } from './constants';
  * @param count The number of fields to return (default 1)
  */
 export function delimited(input: string, delimiter: string, index = 0, count = 1): string {
-    if(count <= 0)
-        return empty;
+  if (count <= 0) return empty;
 
-    const splits = input.split(delimiter);
-    const start  = index < 0 ? splits.length + index : index;
-    return splits.slice(start, start + count).join(delimiter);
+  const splits = input.split(delimiter);
+  const start = index < 0 ? splits.length + index : index;
+  return splits.slice(start, start + count).join(delimiter);
 }
 
 export default delimited;

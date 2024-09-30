@@ -9,7 +9,7 @@ const re = /\p{Mn}/gu;
  * @returns string with diacritics removed
  */
 export function removeDiacritics(input: string): string {
-    return input.normalize('NFD').replace(re, empty).normalize('NFC');
+  return input.normalize('NFD').replace(re, empty).normalize('NFC');
 }
 
 export default removeDiacritics;

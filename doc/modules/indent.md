@@ -30,10 +30,10 @@ Indent each line of a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to indent |
-| `__namedParameters` | `Options` | see {@Options} |
+| Name                | Type      | Description          |
+| :------------------ | :-------- | :------------------- |
+| `input`             | `string`  | The string to indent |
+| `__namedParameters` | `Options` | see {@Options}       |
 
 #### Returns
 

@@ -28,10 +28,10 @@ Return the plural version of the input string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The word to pluralize |
-| `quantity?` | `number` | The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned. |
+| Name        | Type     | Description                                                                                                             |
+| :---------- | :------- | :---------------------------------------------------------------------------------------------------------------------- |
+| `input`     | `string` | The word to pluralize                                                                                                   |
+| `quantity?` | `number` | The quantity to prepend to the word. If omitted nothing is prepended. If quantity is one the singular form is returned. |
 
 #### Returns
 

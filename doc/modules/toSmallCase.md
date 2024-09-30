@@ -30,8 +30,8 @@ Renames and exports: [toSmallCase](toSmallCase.md#tosmallcase)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type      | Description                                          |
+| :----------- | :-------- | :--------------------------------------------------- |
 | `upperCase?` | `boolean` | Convert other characters in the string to upper case |
 
 #### Defined in
@@ -50,10 +50,10 @@ Convert the first letter of a string to lower case
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to make small case |
-| `__namedParameters` | [`Options`](toSmallCase.md#options) | - |
+| Name                | Type                                | Description                   |
+| :------------------ | :---------------------------------- | :---------------------------- |
+| `input`             | `string`                            | The string to make small case |
+| `__namedParameters` | [`Options`](toSmallCase.md#options) | -                             |
 
 #### Returns
 

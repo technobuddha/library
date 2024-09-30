@@ -16,14 +16,14 @@
 
 ### Methods
 
-- [genrand\_int31](MersenneTwister.MersenneTwister-1.md#genrand_int31)
-- [genrand\_int32](MersenneTwister.MersenneTwister-1.md#genrand_int32)
-- [genrand\_real1](MersenneTwister.MersenneTwister-1.md#genrand_real1)
-- [genrand\_real2](MersenneTwister.MersenneTwister-1.md#genrand_real2)
-- [genrand\_real3](MersenneTwister.MersenneTwister-1.md#genrand_real3)
-- [genrand\_res53](MersenneTwister.MersenneTwister-1.md#genrand_res53)
-- [init\_by\_array](MersenneTwister.MersenneTwister-1.md#init_by_array)
-- [init\_genrand](MersenneTwister.MersenneTwister-1.md#init_genrand)
+- [genrand_int31](MersenneTwister.MersenneTwister-1.md#genrand_int31)
+- [genrand_int32](MersenneTwister.MersenneTwister-1.md#genrand_int32)
+- [genrand_real1](MersenneTwister.MersenneTwister-1.md#genrand_real1)
+- [genrand_real2](MersenneTwister.MersenneTwister-1.md#genrand_real2)
+- [genrand_real3](MersenneTwister.MersenneTwister-1.md#genrand_real3)
+- [genrand_res53](MersenneTwister.MersenneTwister-1.md#genrand_res53)
+- [init_by_array](MersenneTwister.MersenneTwister-1.md#init_by_array)
+- [init_genrand](MersenneTwister.MersenneTwister-1.md#init_genrand)
 - [setSeed](MersenneTwister.MersenneTwister-1.md#setseed)
 
 ## Constructors
@@ -34,8 +34,8 @@
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                   |
+| :----- | :--------------------- |
 | `seed` | `number` \| `number`[] |
 
 #### Defined in
@@ -54,7 +54,7 @@
 
 ## Methods
 
-### genrand\_int31
+### genrand_int31
 
 ▸ **genrand_int31**(): `number`
 
@@ -66,9 +66,9 @@
 
 [MersenneTwister.ts:145](../../src/MersenneTwister.ts#L145)
 
-___
+---
 
-### genrand\_int32
+### genrand_int32
 
 ▸ **genrand_int32**(): `number`
 
@@ -80,9 +80,9 @@ ___
 
 [MersenneTwister.ts:113](../../src/MersenneTwister.ts#L113)
 
-___
+---
 
-### genrand\_real1
+### genrand_real1
 
 ▸ **genrand_real1**(): `number`
 
@@ -94,9 +94,9 @@ ___
 
 [MersenneTwister.ts:150](../../src/MersenneTwister.ts#L150)
 
-___
+---
 
-### genrand\_real2
+### genrand_real2
 
 ▸ **genrand_real2**(): `number`
 
@@ -108,9 +108,9 @@ ___
 
 [MersenneTwister.ts:156](../../src/MersenneTwister.ts#L156)
 
-___
+---
 
-### genrand\_real3
+### genrand_real3
 
 ▸ **genrand_real3**(): `number`
 
@@ -122,9 +122,9 @@ ___
 
 [MersenneTwister.ts:162](../../src/MersenneTwister.ts#L162)
 
-___
+---
 
-### genrand\_res53
+### genrand_res53
 
 ▸ **genrand_res53**(): `number`
 
@@ -136,16 +136,16 @@ ___
 
 [MersenneTwister.ts:168](../../src/MersenneTwister.ts#L168)
 
-___
+---
 
-### init\_by\_array
+### init_by_array
 
 ▸ **init_by_array**(`key`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type       |
+| :---- | :--------- |
 | `key` | `number`[] |
 
 #### Returns
@@ -156,16 +156,16 @@ ___
 
 [MersenneTwister.ts:91](../../src/MersenneTwister.ts#L91)
 
-___
+---
 
-### init\_genrand
+### init_genrand
 
 ▸ **init_genrand**(`seed`): `void`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type     |
+| :----- | :------- |
 | `seed` | `number` |
 
 #### Returns
@@ -176,7 +176,7 @@ ___
 
 [MersenneTwister.ts:77](../../src/MersenneTwister.ts#L77)
 
-___
+---
 
 ### setSeed
 
@@ -184,8 +184,8 @@ ___
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type                   |
+| :----- | :--------------------- |
 | `seed` | `number` \| `number`[] |
 
 #### Returns

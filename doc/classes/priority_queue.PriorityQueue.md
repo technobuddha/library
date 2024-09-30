@@ -9,8 +9,8 @@ A simple priority queue
 ## Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 ## Table of contents
 
@@ -39,15 +39,15 @@ A simple priority queue
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `comparator` | (`a`: `T`, `b`: `T`) => `number` | Function to compare two elements and puts them in priority order.  Takes two elements as arguments and returns a number greater, less then or equal to zero. |
-| `contents?` | `Iterable`<`T`\> | Initial contents of the queue |
+| Name         | Type                             | Description                                                                                                                                                 |
+| :----------- | :------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `comparator` | (`a`: `T`, `b`: `T`) => `number` | Function to compare two elements and puts them in priority order. Takes two elements as arguments and returns a number greater, less then or equal to zero. |
+| `contents?`  | `Iterable`<`T`\>                 | Initial contents of the queue                                                                                                                               |
 
 #### Defined in
 
@@ -89,7 +89,7 @@ generator function
 
 [priority-queue.ts:47](../../src/priority-queue.ts#L47)
 
-___
+---
 
 ### map
 
@@ -100,14 +100,14 @@ Transform all elements in the queue
 #### Type parameters
 
 | Name |
-| :------ |
-| `S` |
+| :--- |
+| `S`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `f` | (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S` | Function to transforme each element of the queue |
+| Name | Type                                                     | Description                                      |
+| :--- | :------------------------------------------------------- | :----------------------------------------------- |
+| `f`  | (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S` | Function to transforme each element of the queue |
 
 #### Returns
 
@@ -119,7 +119,7 @@ array of transformed queue elements
 
 [priority-queue.ts:67](../../src/priority-queue.ts#L67)
 
-___
+---
 
 ### pop
 
@@ -137,7 +137,7 @@ queue element
 
 [priority-queue.ts:37](../../src/priority-queue.ts#L37)
 
-___
+---
 
 ### push
 
@@ -147,8 +147,8 @@ Add an element to the queue
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type  | Description         |
+| :----- | :---- | :------------------ |
 | `...o` | `T`[] | element to be added |
 
 #### Returns
@@ -159,7 +159,7 @@ Add an element to the queue
 
 [priority-queue.ts:27](../../src/priority-queue.ts#L27)
 
-___
+---
 
 ### reorder
 
@@ -169,8 +169,8 @@ Change the function used to order the queue
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name            | Type                             | Description                               |
+| :-------------- | :------------------------------- | :---------------------------------------- |
 | `newComparator` | (`a`: `T`, `b`: `T`) => `number` | function to compare elements of the queue |
 
 #### Returns

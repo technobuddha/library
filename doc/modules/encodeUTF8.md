@@ -28,8 +28,8 @@ Encode a unicode (UTF-16 encoded javascript) string into UTF8
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description          |
+| :------ | :------- | :------------------- |
 | `input` | `string` | The string to encode |
 
 #### Returns

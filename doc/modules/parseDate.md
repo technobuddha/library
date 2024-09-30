@@ -31,8 +31,8 @@ back to new Date(text)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name   | Type     | Description                  |
+| :----- | :------- | :--------------------------- |
 | `text` | `string` | The string containing a date |
 
 #### Returns

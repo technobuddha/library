@@ -30,14 +30,14 @@ Renames and exports: [metricUnits](metricUnits.md#metricunits)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `format?` | `string` | format specification to pass to @link{formatNumber} |
-| `macro?` | `ArrayLike`<`string`\> | Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y']) |
-| `micro?` | `ArrayLike`<`string`\> | Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y']) |
-| `pad?` | `number` | left padding to apply to numeric value |
-| `precision?` | `number` | Number of digits after the decimal point to display |
-| `unit?` | `number` | Multiplier for each level of suffixes (default: 1000) |
+| Name         | Type                   | Description                                                                                   |
+| :----------- | :--------------------- | :-------------------------------------------------------------------------------------------- |
+| `format?`    | `string`               | format specification to pass to @link{formatNumber}                                           |
+| `macro?`     | `ArrayLike`<`string`\> | Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y']) |
+| `micro?`     | `ArrayLike`<`string`\> | Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y']) |
+| `pad?`       | `number`               | left padding to apply to numeric value                                                        |
+| `precision?` | `number`               | Number of digits after the decimal point to display                                           |
+| `unit?`      | `number`               | Multiplier for each level of suffixes (default: 1000)                                         |
 
 #### Defined in
 
@@ -53,9 +53,9 @@ Abbreviate a number by adding a suffix for metric units (i.e. 1000 => 1K, .0001 
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | The number to abbreviate |
+| Name                | Type                                | Description               |
+| :------------------ | :---------------------------------- | :------------------------ |
+| `input`             | `number`                            | The number to abbreviate  |
 | `__namedParameters` | [`Options`](metricUnits.md#options) | {@link MetricUnitOptions} |
 
 #### Returns

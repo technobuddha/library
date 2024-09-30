@@ -29,8 +29,8 @@ see http://en.wikipedia.org/wiki/Variance
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name            | Type       | Description                |
+| :-------------- | :--------- | :------------------------- |
 | `...datapoints` | `number`[] | Number samples to analyze. |
 
 #### Returns

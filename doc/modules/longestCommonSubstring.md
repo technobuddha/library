@@ -31,10 +31,10 @@ Returns the longest possible substring that is substring of both of given string
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `string1` | `string` |
-| `string2` | `string` |
+| Name                | Type      |
+| :------------------ | :-------- |
+| `string1`           | `string`  |
+| `string2`           | `string`  |
 | `__namedParameters` | `Options` |
 
 #### Returns

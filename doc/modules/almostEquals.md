@@ -30,8 +30,8 @@ Renames and exports: [almostEquals](almostEquals.md#almostequals)
 
 #### Type declaration
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name         | Type     | Description                                              |
+| :----------- | :------- | :------------------------------------------------------- |
 | `tolerance?` | `number` | Tolerance range. If specified, should be greater than 0. |
 
 #### Defined in
@@ -51,17 +51,17 @@ tolerance, taking into account floating point errors (numbers within EPSILON).
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `a` | `number` | First number to compare. |
-| `b` | `number` | Second number to compare. |
+| Name                | Type                                 | Description                            |
+| :------------------ | :----------------------------------- | :------------------------------------- |
+| `a`                 | `number`                             | First number to compare.               |
+| `b`                 | `number`                             | Second number to compare.              |
 | `__namedParameters` | [`Options`](almostEquals.md#options) | see [Options](almostEquals.md#options) |
 
 #### Returns
 
 `boolean`
 
-true if *a* and *b* are nearly equal.
+true if _a_ and _b_ are nearly equal.
 
 #### Defined in
 

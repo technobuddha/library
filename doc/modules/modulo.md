@@ -33,10 +33,10 @@ calculating an offset index in a circular list.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type     |
+| :--------- | :------- |
 | `dividend` | `number` |
-| `divisor` | `number` |
+| `divisor`  | `number` |
 
 #### Returns
 

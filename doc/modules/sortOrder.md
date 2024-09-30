@@ -30,9 +30,9 @@ Convert a string into a sortable string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | string to convert |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | string to convert                      |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

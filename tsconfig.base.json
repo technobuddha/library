@@ -1,0 +1,41 @@
+// ​🚨​
+// ​🚨​ This file is managed by @technobuddha/project
+// ​🚨​
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "jsx": "react-jsx",
+
+    "allowArbitraryExtensions": true,
+    "module": "preserve",
+    "moduleResolution": "Bundler",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "resolvePackageJsonImports": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    // "noUncheckedIndexedAccess": true, // NEW
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true
+  }
+}

@@ -24,13 +24,13 @@ Renames and exports: [standardDeviation](standardDeviation.md#standarddeviation)
 
 ▸ **standardDeviation**(...`datapoints`): `number`
 
-Returns the sample standard deviation of the arguments.  For a definition of
+Returns the sample standard deviation of the arguments. For a definition of
 sample standard deviation, see http://en.wikipedia.org/wiki/Standard_deviation
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name            | Type       | Description         |
+| :-------------- | :--------- | :------------------ |
 | `...datapoints` | `number`[] | samples to analyze. |
 
 #### Returns

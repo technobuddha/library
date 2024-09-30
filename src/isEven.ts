@@ -1,4 +1,4 @@
-import isInteger    from 'lodash/isInteger';
+import { isInteger } from 'lodash-es';
 import isMultipleOf from './isMultipleOf';
 
 /**
@@ -8,7 +8,7 @@ import isMultipleOf from './isMultipleOf';
  * @returns true if the number is an even integer
  */
 export function isEven(input: number): boolean {
-    return isInteger(input) && isMultipleOf(input, 2);
+  return isInteger(input) && isMultipleOf(input, 2);
 }
 
 export default isEven;

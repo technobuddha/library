@@ -10,11 +10,13 @@ let yummy: Record<string, string>;
  * @param input string to be decoded
  */
 export function init(input = document.cookie): void {
-    if(typeof yummy === 'undefined') {
-        yummy =  Object.fromEntries(input.split(';').map(
-            cookie => cookie.split('=').map(crumb => decodeURIComponent(crumb.trim()))
-        ));
-    }
+  if (typeof yummy === 'undefined') {
+    yummy = Object.fromEntries(
+      input
+        .split(';')
+        .map((cookie) => cookie.split('=').map((crumb) => decodeURIComponent(crumb.trim()))),
+    );
+  }
 }
 
 /**
@@ -23,8 +25,8 @@ export function init(input = document.cookie): void {
  * @param name name of a cookie
  */
 export function get(name: string): string | undefined {
-    init();
-    return yummy[name];
+  init();
+  return yummy[name];
 }
 
 /**
@@ -33,8 +35,8 @@ export function get(name: string): string | undefined {
  * @returns array of cookie names
  */
 export function names(): string[] {
-    init();
-    return Object.keys(yummy);
+  init();
+  return Object.keys(yummy);
 }
 
 /**
@@ -45,13 +47,12 @@ export function names(): string[] {
  * @param expires Expiration date
  */
 export function add(name: string, value: string, expires?: string | Date): void {
-    init();
-    let cookie = `${name}=${encodeURIComponent(value)}; Path=/`;
+  init();
+  let cookie = `${name}=${encodeURIComponent(value)}; Path=/`;
 
-    if(expires)
-        cookie += `; Expires=${formatDate(new Date(expires), 'cookie', { UTC: true })}`;
-    document.cookie = cookie;
-    yummy[name] = value;
+  if (expires) cookie += `; Expires=${formatDate(new Date(expires), 'cookie', { UTC: true })}`;
+  document.cookie = cookie;
+  yummy[name] = value;
 }
 
 /**
@@ -60,9 +61,9 @@ export function add(name: string, value: string, expires?: string | Date): void 
  * @param name
  */
 export function del(name: string): void {
-    init();
-    document.cookie = `${name}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT`;
-    delete yummy[name];
+  init();
+  document.cookie = `${name}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT`;
+  delete yummy[name];
 }
 
 export default { init, get, names, add, del };

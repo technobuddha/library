@@ -28,10 +28,10 @@ Determine if a date is at midnight
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` | A date |
-| `__namedParameters` | `Options` | - |
+| Name                | Type      | Description |
+| :------------------ | :-------- | :---------- |
+| `input`             | `Date`    | A date      |
+| `__namedParameters` | `Options` | -           |
 
 #### Returns
 

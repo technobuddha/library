@@ -1,8 +1,8 @@
-import isError   from 'lodash/isError';
-import toString  from 'lodash/toString';
+import { isError } from 'lodash-es';
+import { toString } from 'lodash-es';
 
 export function toError(entity: unknown): Error {
-    return isError(entity) ? entity : new Error(toString(entity));
+  return isError(entity) ? entity : new Error(toString(entity));
 }
 
 export default toError;

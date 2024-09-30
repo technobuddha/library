@@ -1,9 +1,9 @@
 import { month } from './constants';
 
 type Options = {
-    /** Use the UTC timezone */
+  /** Use the UTC timezone */
 
-    UTC?: boolean;
+  UTC?: boolean;
 };
 
 /**
@@ -15,9 +15,8 @@ type Options = {
  * @returns Midnight of the last day of the year containing the input date
  */
 export function getEndOfYear(input: Date, { UTC = false }: Options = {}): Date {
-    if(UTC)
-        return new Date(Date.UTC(input.getUTCFullYear(), month.december, 31));
-    return new Date(input.getFullYear(), month.december, 31);
+  if (UTC) return new Date(Date.UTC(input.getUTCFullYear(), month.december, 31));
+  return new Date(input.getFullYear(), month.december, 31);
 }
 
 export default getEndOfYear;

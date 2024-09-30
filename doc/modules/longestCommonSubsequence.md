@@ -31,15 +31,15 @@ Renames and exports: [longestCommonSubsequence](longestCommonSubsequence.md#long
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type                                    |
+| :--------- | :-------------------------------------- |
 | `collect?` | (`i1`: `number`, `i2`: `number`) => `T` |
-| `compare?` | (`a`: `T`, `b`: `T`) => `boolean` |
+| `compare?` | (`a`: `T`, `b`: `T`) => `boolean`       |
 
 #### Defined in
 
@@ -63,15 +63,15 @@ Returns the longest possible array that is subarray of both of given arrays.
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `array1` | `ArrayLike`<`T`\> | First array of objects. |
-| `array2` | `ArrayLike`<`T`\> | Second array of objects. |
+| Name                | Type                                                   | Description                                        |
+| :------------------ | :----------------------------------------------------- | :------------------------------------------------- |
+| `array1`            | `ArrayLike`<`T`\>                                      | First array of objects.                            |
+| `array2`            | `ArrayLike`<`T`\>                                      | Second array of objects.                           |
 | `__namedParameters` | [`Options`](longestCommonSubsequence.md#options)<`T`\> | see [Options](longestCommonSubsequence.md#options) |
 
 #### Returns

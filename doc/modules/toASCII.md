@@ -28,9 +28,9 @@ Change a string to be all from the basic latin unicode plane
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name    | Type     | Description |
+| :------ | :------- | :---------- |
+| `input` | `string` | The string  |
 
 #### Returns
 

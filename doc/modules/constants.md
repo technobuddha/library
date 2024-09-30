@@ -45,17 +45,17 @@
 
 ### DayOfWeek
 
-Ƭ **DayOfWeek**: ``0`` \| ``1`` \| ``2`` \| ``3`` \| ``4`` \| ``5`` \| ``6``
+Ƭ **DayOfWeek**: `0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6`
 
 #### Defined in
 
 [constants.ts:28](../../src/constants.ts#L28)
 
-___
+---
 
 ### MonthOfYear
 
-Ƭ **MonthOfYear**: ``0`` \| ``1`` \| ``2`` \| ``3`` \| ``4`` \| ``5`` \| ``6`` \| ``7`` \| ``8`` \| ``9`` \| ``10`` \| ``11``
+Ƭ **MonthOfYear**: `0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9` \| `10` \| `11`
 
 #### Defined in
 
@@ -69,32 +69,32 @@ ___
 
 #### Type declaration
 
-| Name | Type |
-| :------ | :------ |
-| `charcode` | `Readonly`<`Object`\> |
-| `day` | `Readonly`<`Record`<`string`, [`DayOfWeek`](constants.md#dayofweek)\>\> |
-| `daysPerWeek` | `number` |
-| `empty` | `string` |
-| `hoursPerDay` | `number` |
-| `hoursPerWeek` | `number` |
-| `keycode` | `Readonly`<`Object`\> |
-| `minutesPerDay` | `number` |
-| `minutesPerHour` | `number` |
-| `minutesPerWeek` | `number` |
-| `month` | `Readonly`<`Record`<`string`, [`MonthOfYear`](constants.md#monthofyear)\>\> |
-| `mouseButton` | `Readonly`<`Object`\> |
-| `nbsp` | `string` |
-| `secondsPerDay` | `number` |
-| `secondsPerHour` | `number` |
-| `secondsPerMinute` | `number` |
-| `secondsPerWeek` | `number` |
-| `space` | `string` |
-| `ticksPerDay` | `number` |
-| `ticksPerHour` | `number` |
-| `ticksPerMinute` | `number` |
-| `ticksPerSecond` | `number` |
-| `ticksPerWeek` | `number` |
-| `zwsp` | `string` |
+| Name               | Type                                                                        |
+| :----------------- | :-------------------------------------------------------------------------- |
+| `charcode`         | `Readonly`<`Object`\>                                                       |
+| `day`              | `Readonly`<`Record`<`string`, [`DayOfWeek`](constants.md#dayofweek)\>\>     |
+| `daysPerWeek`      | `number`                                                                    |
+| `empty`            | `string`                                                                    |
+| `hoursPerDay`      | `number`                                                                    |
+| `hoursPerWeek`     | `number`                                                                    |
+| `keycode`          | `Readonly`<`Object`\>                                                       |
+| `minutesPerDay`    | `number`                                                                    |
+| `minutesPerHour`   | `number`                                                                    |
+| `minutesPerWeek`   | `number`                                                                    |
+| `month`            | `Readonly`<`Record`<`string`, [`MonthOfYear`](constants.md#monthofyear)\>\> |
+| `mouseButton`      | `Readonly`<`Object`\>                                                       |
+| `nbsp`             | `string`                                                                    |
+| `secondsPerDay`    | `number`                                                                    |
+| `secondsPerHour`   | `number`                                                                    |
+| `secondsPerMinute` | `number`                                                                    |
+| `secondsPerWeek`   | `number`                                                                    |
+| `space`            | `string`                                                                    |
+| `ticksPerDay`      | `number`                                                                    |
+| `ticksPerHour`     | `number`                                                                    |
+| `ticksPerMinute`   | `number`                                                                    |
+| `ticksPerSecond`   | `number`                                                                    |
+| `ticksPerWeek`     | `number`                                                                    |
+| `zwsp`             | `string`                                                                    |
 
 ## Variables
 
@@ -106,7 +106,7 @@ ___
 
 [constants.ts:86](../../src/constants.ts#L86)
 
-___
+---
 
 ### day
 
@@ -116,37 +116,37 @@ ___
 
 [constants.ts:30](../../src/constants.ts#L30)
 
-___
+---
 
 ### daysPerWeek
 
-• `Const` **daysPerWeek**: ``7``
+• `Const` **daysPerWeek**: `7`
 
 #### Defined in
 
 [constants.ts:12](../../src/constants.ts#L12)
 
-___
+---
 
 ### empty
 
-• `Const` **empty**: ``""``
+• `Const` **empty**: `""`
 
 #### Defined in
 
 [constants.ts:1](../../src/constants.ts#L1)
 
-___
+---
 
 ### hoursPerDay
 
-• `Const` **hoursPerDay**: ``24``
+• `Const` **hoursPerDay**: `24`
 
 #### Defined in
 
 [constants.ts:11](../../src/constants.ts#L11)
 
-___
+---
 
 ### hoursPerWeek
 
@@ -156,7 +156,7 @@ ___
 
 [constants.ts:26](../../src/constants.ts#L26)
 
-___
+---
 
 ### keycode
 
@@ -166,7 +166,7 @@ ___
 
 [constants.ts:190](../../src/constants.ts#L190)
 
-___
+---
 
 ### minutesPerDay
 
@@ -176,17 +176,17 @@ ___
 
 [constants.ts:23](../../src/constants.ts#L23)
 
-___
+---
 
 ### minutesPerHour
 
-• `Const` **minutesPerHour**: ``60``
+• `Const` **minutesPerHour**: `60`
 
 #### Defined in
 
 [constants.ts:10](../../src/constants.ts#L10)
 
-___
+---
 
 ### minutesPerWeek
 
@@ -196,7 +196,7 @@ ___
 
 [constants.ts:24](../../src/constants.ts#L24)
 
-___
+---
 
 ### month
 
@@ -206,7 +206,7 @@ ___
 
 [constants.ts:59](../../src/constants.ts#L59)
 
-___
+---
 
 ### mouseButton
 
@@ -216,27 +216,27 @@ ___
 
 [constants.ts:184](../../src/constants.ts#L184)
 
-___
+---
 
 ### nbsp
 
-• `Const` **nbsp**: ``" "``
+• `Const` **nbsp**: `" "`
 
 #### Defined in
 
 [constants.ts:3](../../src/constants.ts#L3)
 
-___
+---
 
 ### negativeZero
 
-• `Const` **negativeZero**: ``0``
+• `Const` **negativeZero**: `0`
 
 #### Defined in
 
 [constants.ts:6](../../src/constants.ts#L6)
 
-___
+---
 
 ### secondsPerDay
 
@@ -246,7 +246,7 @@ ___
 
 [constants.ts:20](../../src/constants.ts#L20)
 
-___
+---
 
 ### secondsPerHour
 
@@ -256,17 +256,17 @@ ___
 
 [constants.ts:19](../../src/constants.ts#L19)
 
-___
+---
 
 ### secondsPerMinute
 
-• `Const` **secondsPerMinute**: ``60``
+• `Const` **secondsPerMinute**: `60`
 
 #### Defined in
 
 [constants.ts:9](../../src/constants.ts#L9)
 
-___
+---
 
 ### secondsPerWeek
 
@@ -276,17 +276,17 @@ ___
 
 [constants.ts:21](../../src/constants.ts#L21)
 
-___
+---
 
 ### space
 
-• `Const` **space**: ``" "``
+• `Const` **space**: `" "`
 
 #### Defined in
 
 [constants.ts:2](../../src/constants.ts#L2)
 
-___
+---
 
 ### ticksPerDay
 
@@ -296,7 +296,7 @@ ___
 
 [constants.ts:16](../../src/constants.ts#L16)
 
-___
+---
 
 ### ticksPerHour
 
@@ -306,7 +306,7 @@ ___
 
 [constants.ts:15](../../src/constants.ts#L15)
 
-___
+---
 
 ### ticksPerMinute
 
@@ -316,17 +316,17 @@ ___
 
 [constants.ts:14](../../src/constants.ts#L14)
 
-___
+---
 
 ### ticksPerSecond
 
-• `Const` **ticksPerSecond**: ``1000``
+• `Const` **ticksPerSecond**: `1000`
 
 #### Defined in
 
 [constants.ts:8](../../src/constants.ts#L8)
 
-___
+---
 
 ### ticksPerWeek
 
@@ -336,11 +336,11 @@ ___
 
 [constants.ts:17](../../src/constants.ts#L17)
 
-___
+---
 
 ### zwsp
 
-• `Const` **zwsp**: ``"​"``
+• `Const` **zwsp**: `"​"`
 
 #### Defined in
 

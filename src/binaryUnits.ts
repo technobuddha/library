@@ -10,17 +10,14 @@ export type Options = Omit<MetricUnitOptions, 'macro' | 'micro' | 'unit'>;
  * }
  */
 export function binaryUnits(input: number, { format, pad, precision = 2 }: Options = {}): string {
-    return `${metricUnits(
-        input,
-        {
-            format,
-            pad,
-            macro: [ 'Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi' ],
-            micro: [],
-            unit: 1024,
-            precision,
-        }
-    )}B`;
+  return `${metricUnits(input, {
+    format,
+    pad,
+    macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
+    micro: [],
+    unit: 1024,
+    precision,
+  })}B`;
 }
 
 export default binaryUnits;

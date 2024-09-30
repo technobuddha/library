@@ -32,11 +32,11 @@ Fill a template with supplies values
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The template |
-| `values` | `Record`<`string`, `string` \| `undefined`\> | A dictionary of name-values used to fill in values in the template |
-| `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
+| Name                | Type                                         | Description                                                        |
+| :------------------ | :------------------------------------------- | :----------------------------------------------------------------- |
+| `input`             | `string`                                     | The template                                                       |
+| `values`            | `Record`<`string`, `string` \| `undefined`\> | A dictionary of name-values used to fill in values in the template |
+| `__namedParameters` | `Options`                                    | see [Options](almostEquals.md#options)                             |
 
 #### Returns
 

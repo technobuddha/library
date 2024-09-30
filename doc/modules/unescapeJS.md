@@ -28,8 +28,8 @@ Unescape a string encoded in Javascript style
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type     | Description            |
+| :------ | :------- | :--------------------- |
 | `input` | `string` | the string to unescape |
 
 #### Returns

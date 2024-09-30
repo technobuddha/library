@@ -1,13 +1,13 @@
 export class TimeoutError extends Error {
-    constructor() {
-        super('Request Timeout');
-        this.name = 'TimeoutError';
-    }
+  constructor() {
+    super('Request Timeout');
+    this.name = 'TimeoutError';
+  }
 }
 
 export type Options = RequestInit & {
-    /** The number of milliseconds before timeout */
-    timeout?: number;
+  /** The number of milliseconds before timeout */
+  timeout?: number;
 };
 
 /**
@@ -21,47 +21,59 @@ export type Options = RequestInit & {
  * @throws TimeoutError when timeout occurs
  */
 export async function fetcher(
-    url: string,
-    {
-        body,
-        cache           = 'no-store',
-        credentials     = 'same-origin',
-        keepalive       = false,
-        method          = 'GET',
-        mode            = 'same-origin',
-        headers         = {},
-        integrity,
-        redirect        = 'follow',
-        referrer        = 'client',
-        referrerPolicy  = 'no-referrer',
-        signal,
-        timeout         = 600000,
-        window,
-    }: Options = {},
+  url: string,
+  {
+    body,
+    cache = 'no-store',
+    credentials = 'same-origin',
+    keepalive = false,
+    method = 'GET',
+    mode = 'same-origin',
+    headers = {},
+    integrity,
+    redirect = 'follow',
+    referrer = 'client',
+    referrerPolicy = 'no-referrer',
+    signal,
+    timeout = 600000,
+    window,
+  }: Options = {},
 ): Promise<Response> {
-    const controller    = new AbortController();
-    const timer         = setTimeout(() => { controller.abort(); }, timeout);
+  const controller = new AbortController();
+  const timer = setTimeout(() => {
+    controller.abort();
+  }, timeout);
 
-    if(signal)
-        signal.addEventListener('abort', () => { controller.abort(); });
+  if (signal)
+    signal.addEventListener('abort', () => {
+      controller.abort();
+    });
 
-    return fetch(
-        encodeURI(url),
-        { method, headers, body, cache, mode, credentials, redirect, referrer, referrerPolicy, integrity, keepalive, window, signal: controller.signal }
-    ).then(
-        response => {
-            clearTimeout(timer);
-            return response;
-        }
-    ).catch(
-        error => {
-            clearTimeout(timer);
-            if(!signal && error.name === 'AbortError')
-                throw new TimeoutError();
+  return fetch(encodeURI(url), {
+    method,
+    headers,
+    body,
+    cache,
+    mode,
+    credentials,
+    redirect,
+    referrer,
+    referrerPolicy,
+    integrity,
+    keepalive,
+    window,
+    signal: controller.signal,
+  })
+    .then((response) => {
+      clearTimeout(timer);
+      return response;
+    })
+    .catch((error) => {
+      clearTimeout(timer);
+      if (!signal && error.name === 'AbortError') throw new TimeoutError();
 
-            throw error;
-        }
-    );
+      throw error;
+    });
 }
 
 export default fetcher;

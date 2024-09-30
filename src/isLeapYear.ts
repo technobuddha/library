@@ -1,8 +1,8 @@
-import isNumber    from 'lodash/isNumber';
+import { isNumber } from 'lodash-es';
 
 type Options = {
-    /** Use the UTC timezone */
-    UTC?: boolean;
+  /** Use the UTC timezone */
+  UTC?: boolean;
 };
 
 /**
@@ -13,8 +13,11 @@ type Options = {
  * @returns true, if the specified year is a leap year
  */
 export function isLeapYear(input: Date | number, { UTC = false }: Options = {}): boolean {
-    const year = isNumber(input) ? input : UTC ? input.getUTCFullYear() : input.getFullYear();
-    return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const year =
+    isNumber(input) ? input
+    : UTC ? input.getUTCFullYear()
+    : input.getFullYear();
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 }
 
 export default isLeapYear;

@@ -1,5 +1,5 @@
-import toASCII   from './toASCII';
-import sortOrder      from './sortOrder';
+import toASCII from './toASCII';
+import sortOrder from './sortOrder';
 
 /**
  * Determine the group code (A-Z, [] or #) to place an item under
@@ -12,13 +12,11 @@ import sortOrder      from './sortOrder';
  * @returns The group code
  */
 export function groupCode(input: string): string {
-    const group = toASCII(sortOrder(input).slice(0, 1)).toUpperCase();
+  const group = toASCII(sortOrder(input).slice(0, 1)).toUpperCase();
 
-    if(group >= 'A' && group <= 'Z')
-        return group;
-    else if(group === '[')
-        return '[]';
-    return '#';
+  if (group >= 'A' && group <= 'Z') return group;
+  else if (group === '[') return '[]';
+  return '#';
 }
 
 export default groupCode;

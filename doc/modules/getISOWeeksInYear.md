@@ -30,10 +30,10 @@ Determine the number of ISO weeks within a year
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `Date` \| `number` | A date within the year, or a year number |
-| `__namedParameters` | `GetWeeksInYearOptions` | see [Options](almostEquals.md#options) |
+| Name                | Type                    | Description                              |
+| :------------------ | :---------------------- | :--------------------------------------- |
+| `input`             | `Date` \| `number`      | A date within the year, or a year number |
+| `__namedParameters` | `GetWeeksInYearOptions` | see [Options](almostEquals.md#options)   |
 
 #### Returns
 

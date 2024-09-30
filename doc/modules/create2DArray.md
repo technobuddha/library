@@ -31,16 +31,16 @@ Create a two dimensional array with all elements initialized
 #### Type parameters
 
 | Name |
-| :------ |
-| `T` |
+| :--- |
+| `T`  |
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `width` | `number` | Width of the array |
-| `height` | `number` | Height of the array |
-| `fill` | `T` \| (`x`: `number`, `y`: `number`) => `T` | value to fill the array, or a function returning the fill value for each element |
+| Name     | Type                                         | Description                                                                      |
+| :------- | :------------------------------------------- | :------------------------------------------------------------------------------- |
+| `width`  | `number`                                     | Width of the array                                                               |
+| `height` | `number`                                     | Height of the array                                                              |
+| `fill`   | `T` \| (`x`: `number`, `y`: `number`) => `T` | value to fill the array, or a function returning the fill value for each element |
 
 #### Returns
 

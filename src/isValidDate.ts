@@ -1,4 +1,4 @@
-import isNaN from 'lodash/isNaN';
+import { isNaN } from 'lodash-es';
 
 /**
  * Determine if a date is valid
@@ -8,7 +8,7 @@ import isNaN from 'lodash/isNaN';
  * @returns true, if the date is valid
  */
 export function isValidDate(input: Date): boolean {
-    return !isNaN(input.valueOf());
+  return !isNaN(input.valueOf());
 }
 
 export default isValidDate;

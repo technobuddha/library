@@ -28,10 +28,10 @@ Add a suffix to a string, if it does not already have the suffix
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
-| `suffix` | `string` | The suffix |
+| Name     | Type     | Description |
+| :------- | :------- | :---------- |
+| `input`  | `string` | The string  |
+| `suffix` | `string` | The suffix  |
 
 #### Returns
 

@@ -30,9 +30,9 @@ Split a string into an array of words
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string to split |
+| Name                | Type      | Description                            |
+| :------------------ | :-------- | :------------------------------------- |
+| `input`             | `string`  | The string to split                    |
 | `__namedParameters` | `Options` | see [Options](almostEquals.md#options) |
 
 #### Returns

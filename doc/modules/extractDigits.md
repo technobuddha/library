@@ -28,9 +28,9 @@ Remove all non-digit characters from a string
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `string` | The string |
+| Name    | Type     | Description |
+| :------ | :------- | :---------- |
+| `input` | `string` | The string  |
 
 #### Returns
 

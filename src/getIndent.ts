@@ -1,10 +1,10 @@
-import isNil        from 'lodash/isNil';
-import escapeRegExp from 'lodash/escapeRegExp';
-import { space }    from './constants';
+import { isNil } from 'lodash-es';
+import { escapeRegExp } from 'lodash-es';
+import { space } from './constants';
 
 type Options = {
-    /** The indentation character */
-    indenter?: string;
+  /** The indentation character */
+  indenter?: string;
 };
 
 /**
@@ -16,11 +16,10 @@ type Options = {
  * @returns The minimum amount of indentation on each line
  */
 export function getIndent(input: string, { indenter = space }: Options = {}): number {
-    const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'ugm').exec(input);
-    if(isNil(matches))
-        return 0;
+  const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'ugm').exec(input);
+  if (isNil(matches)) return 0;
 
-    return (Math.min(...matches.map(m => m.length))) / indenter.length;
+  return Math.min(...matches.map((m) => m.length)) / indenter.length;
 }
 
 export default getIndent;

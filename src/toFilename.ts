@@ -1,19 +1,20 @@
-import escapeRegExp         from 'lodash/escapeRegExp';
-import { empty }            from './constants';
-import collapseWhitespace   from './collapseWhitespace';
-import clean                from './clean';
+import { escapeRegExp } from 'lodash-es';
 
-const badChars = /[/\\:*?<>|.]+/ug;
+import clean from './clean';
+import collapseWhitespace from './collapseWhitespace';
+import { empty } from './constants';
+
+const badChars = /[/\\:*?<>|.]+/gu;
 
 export type Options = {
-    /** the file name will be truncated to this length */
-    maxLength?: number;
-    /** character to use to replace "bad" characters */
-    replacement?: string;
-    /** number of characters to presere at the end of the filename when truncated (for disambiguation) */
-    disambiguate?: number;
-    /** string to separate the main section from the disambiguated section */
-    separator?: string;
+  /** the file name will be truncated to this length */
+  maxLength?: number;
+  /** character to use to replace "bad" characters */
+  replacement?: string;
+  /** number of characters to presere at the end of the filename when truncated (for disambiguation) */
+  disambiguate?: number;
+  /** string to separate the main section from the disambiguated section */
+  separator?: string;
 };
 
 /**
@@ -27,31 +28,38 @@ export type Options = {
  * @default separator … (ellipsis)
  * @returns the file name
  */
-export function toFilename(input: string, { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: Options = {}): string {
-    let suffix = empty;
-    const compress = new RegExp(`\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`, 'ug');
+export function toFilename(
+  input: string,
+  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: Options = {},
+): string {
+  let suffix = empty;
+  const compress = new RegExp(
+    `\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`,
+    'ug',
+  );
 
-    input = clean(collapseWhitespace(input.normalize('NFC').replaceAll('"', "'").replaceAll(badChars, replacement)).replaceAll(compress, replacement), replacement);
+  let filename = clean(
+    collapseWhitespace(
+      input.normalize('NFC').replaceAll('"', "'").replaceAll(badChars, replacement),
+    ).replaceAll(compress, replacement),
+    replacement,
+  );
 
-    if(suffix.length === 0 && input.length > maxLength) {
-        suffix = input.slice(-disambiguate);
-        input = input.slice(0, Math.max(0, input.length - suffix.length));
-    }
+  if (suffix.length === 0 && filename.length > maxLength) {
+    suffix = filename.slice(-disambiguate);
+    filename = filename.slice(0, Math.max(0, filename.length - suffix.length));
+  }
 
-    if(suffix.length > maxLength)
-        suffix = suffix.slice(0, Math.max(0, maxLength));
+  if (suffix.length > maxLength) suffix = suffix.slice(0, Math.max(0, maxLength));
 
-    const length = maxLength - suffix.length;
+  const length = maxLength - suffix.length;
 
-    if(input.length > length)
-        input = input.slice(0, Math.max(0, length));
+  if (filename.length > length) filename = filename.slice(0, Math.max(0, length));
 
-    if(input.length === 0)
-        input = replacement;
+  if (filename.length === 0) filename = replacement;
 
-    if(suffix.length > 0)
-        return input + separator + suffix;
-    return input;
+  if (suffix.length > 0) return filename + separator + suffix;
+  return filename;
 }
 
 export default toFilename;

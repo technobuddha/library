@@ -28,10 +28,10 @@ Convert an angle from radians to degrees
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `angle` | `number` | `undefined` |
-| `unit` | `AngleUnit` | `'radians'` |
+| Name    | Type        | Default value |
+| :------ | :---------- | :------------ |
+| `angle` | `number`    | `undefined`   |
+| `unit`  | `AngleUnit` | `'radians'`   |
 
 #### Returns
 

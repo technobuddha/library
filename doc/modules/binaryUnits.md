@@ -26,7 +26,7 @@ Renames and exports: [binaryUnits](binaryUnits.md#binaryunits)
 
 ### Options
 
-Ƭ **Options**: `Omit`<[`Options`](metricUnits.md#options), ``"macro"`` \| ``"micro"`` \| ``"unit"``\>
+Ƭ **Options**: `Omit`<[`Options`](metricUnits.md#options), `"macro"` \| `"micro"` \| `"unit"`\>
 
 #### Defined in
 
@@ -42,9 +42,9 @@ Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 => 1K)
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `input` | `number` | The number to abbreviate |
+| Name                | Type                                | Description                      |
+| :------------------ | :---------------------------------- | :------------------------------- |
+| `input`             | `number`                            | The number to abbreviate         |
 | `__namedParameters` | [`Options`](binaryUnits.md#options) | see {@link BinaryUnitsOptions} } |
 
 #### Returns

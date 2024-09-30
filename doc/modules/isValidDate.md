@@ -28,8 +28,8 @@ Determine if a date is valid
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
+| Name    | Type   | Description       |
+| :------ | :----- | :---------------- |
 | `input` | `Date` | The date to check |
 
 #### Returns
