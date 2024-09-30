@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 import { isEmpty } from 'lodash-es';
 
 const crcTable: number[] = [];
@@ -20,7 +21,7 @@ export function crc32(input: string): number {
 
   let crc = -1;
   for (let i = 0; i < input.length; ++i)
-    crc = (crc >>> 8) ^ crcTable[(crc ^ input.charCodeAt(i)) & 0xff];
+    crc = (crc >>> 8) ^ crcTable[(crc ^ input.codePointAt(i)!) & 0xff];
 
   return (crc ^ -1) >>> 0;
 }

@@ -1,8 +1,10 @@
-import { isRegExp } from 'lodash-es';
-import { isString } from 'lodash-es';
+import { isRegExp, isString } from 'lodash-es';
 
-export function matches(text: string, match: string | RegExp | Iterable<string | RegExp>): boolean {
-  text = text.trim().toLowerCase();
+export function matches(
+  input: string,
+  match: string | RegExp | Iterable<string | RegExp>,
+): boolean {
+  const text = input.trim().toLowerCase();
 
   if (isRegExp(match)) return match.test(text);
   if (isString(match)) return match.toLowerCase() === text;

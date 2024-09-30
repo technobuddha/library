@@ -1,5 +1,6 @@
 import { toString } from 'lodash-es';
-import { space, empty } from './constants';
+
+import { empty, space } from './constants';
 
 export type Options = {
   /** Conjunction to insert in the last position (default 'and') */
@@ -20,18 +21,20 @@ export function coordinate<T = unknown>(
   input: ArrayLike<T>,
   { conjunction = 'and', oxford = true, separator = ',' }: Options = {},
 ): string {
-  if (input.length > 0) {
-    let text = toString(input[0]);
+  const array = Array.from(input);
 
-    for (let i = 1; i < input.length - 1; i++) text += separator + space + toString(input[i]);
+  if (array.length > 0) {
+    let text = toString(array[0]);
 
-    if (input.length > 1)
+    for (let i = 1; i < array.length - 1; i++) text += separator + space + toString(array[i]);
+
+    if (array.length > 1)
       text +=
-        (oxford && input.length > 2 ? separator : empty) +
+        (oxford && array.length > 2 ? separator : empty) +
         space +
         conjunction +
         space +
-        toString(input[input.length - 1]);
+        toString(array.at(-1));
 
     return text;
   }

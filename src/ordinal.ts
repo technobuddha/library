@@ -1,5 +1,4 @@
-import { isNaN } from 'lodash-es';
-import { isInteger } from 'lodash-es';
+import { isInteger, isNaN } from 'lodash-es';
 
 //const ones      = [ 'zero', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth',
 //                  'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth' ];
@@ -9,7 +8,7 @@ import { isInteger } from 'lodash-es';
 // thousandth
 // millionth
 
-// TODO [2021-09-30] this needs an overhaul and some documentation
+// TODO [2024-11-01]: this needs an overhaul and some documentation
 
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
@@ -28,8 +27,9 @@ export function ordinal(input: number): string {
       case 61:
       case 71:
       case 81:
-      case 91:
+      case 91: {
         return `${input.toString()}st`;
+      }
       case 2:
       case 22:
       case 32:
@@ -38,8 +38,9 @@ export function ordinal(input: number): string {
       case 62:
       case 72:
       case 82:
-      case 92:
+      case 92: {
         return `${input.toString()}nd`;
+      }
       case 3:
       case 23:
       case 33:
@@ -48,10 +49,12 @@ export function ordinal(input: number): string {
       case 63:
       case 73:
       case 83:
-      case 93:
+      case 93: {
         return `${input.toString()}rd`;
-      default:
+      }
+      default: {
         return `${input.toString()}th`;
+      }
     }
   } else {
     return `${input.toString()}th`;

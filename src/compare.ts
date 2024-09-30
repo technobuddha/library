@@ -1,7 +1,6 @@
-import { isUndefined } from 'lodash-es';
-import { isNull } from 'lodash-es';
-import { isNaN } from 'lodash-es';
-import toPrimitive from './toPrimitive';
+import { isNaN, isNull, isUndefined } from 'lodash-es';
+
+import toPrimitive from './to-primitive';
 
 /**
  * Compare two objects
@@ -37,8 +36,12 @@ export function compare(x: unknown, y: unknown): number {
     else if (nx < ny) return -1;
     return 1;
   }
-  if (px === py) return 0;
-  else if (px < py) return -1;
+
+  const sx = px.toString();
+  const sy = py.toString();
+
+  if (sx === sy) return 0;
+  else if (sx < sy) return -1;
   return 1;
 }
 

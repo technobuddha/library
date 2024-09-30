@@ -1,6 +1,7 @@
 import { isUndefined } from 'lodash-es';
+
 import { empty, space } from './constants';
-import matchCase from './matchCase';
+import matchCase from './match-case';
 
 /**
  * Return the plural version of the input string

@@ -15,15 +15,17 @@ export function splice(
   deleteCount: number,
   ...items: string[]
 ): string {
+  let begin = start;
+
   if (start < 0) {
-    start = input.length + start + 1;
-    if (start < 0) start = 0;
+    begin = input.length + begin + 1;
+    if (begin < 0) begin = 0;
   }
 
   return (
-    input.slice(0, start) +
+    input.slice(0, begin) +
     items.join(empty) +
-    input.slice(start + (deleteCount < 0 ? 0 : deleteCount))
+    input.slice(begin + (deleteCount < 0 ? 0 : deleteCount))
   );
 }
 

@@ -1,5 +1,5 @@
 import { space } from './constants';
-import splitChars from './splitChars';
+import splitChars from './split-chars';
 
 type Options = {
   /** if the mask is longer, fill with character */
@@ -24,7 +24,7 @@ export function mask(input: string, maskStr: string, { missing = space }: Option
   const chars = splitChars(input);
   let index = 0;
 
-  return maskStr.replace(tokenizer, (token) =>
+  return maskStr.replaceAll(tokenizer, (token) =>
     token === '\\#' ? '#'
     : token === '#' ? (chars[index++] ?? missing)
     : token,

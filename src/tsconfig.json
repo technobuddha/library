@@ -5,8 +5,7 @@
     "rootDir": ".",
 
     "declaration": true,
-    "outDir": "../dist",
-    "types": ["jest", "node"]
+    "outDir": "../dist"
   },
-  "include": ["*.ts"]
+  "include": ["*.ts", "dom/measure.ts"]
 }

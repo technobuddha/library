@@ -1,6 +1,6 @@
-import { space } from './constants';
 import build from './build';
-import escapeHTML from './escapeHTML';
+import { space } from './constants';
+import escapeHTML from './escape-html';
 
 /**
  * Surround text with an HTML tag

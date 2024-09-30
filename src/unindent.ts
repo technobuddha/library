@@ -1,7 +1,7 @@
 import { escapeRegExp } from 'lodash-es';
 
 import { empty, space } from './constants';
-import getIndent from './getIndent';
+import getIndent from './get-Indent';
 
 export type Options = {
   /** the indentation character */

@@ -7,18 +7,18 @@ export class PriorityQueue<T> {
    * then or equal to zero.
    * @param contents Initial contents of the queue
    */
-  constructor(
+  public constructor(
     private comparator: (a: T, b: T) => number,
     contents?: Iterable<T>,
   ) {
-    this.contents = Array.from<T>(contents ?? []);
+    this.contents = [...(contents ?? [])];
     this.sorted = false;
   }
 
   private readonly contents: T[];
   private sorted: boolean;
 
-  private sort() {
+  private sort(): void {
     this.contents.sort(this.comparator);
     this.sorted = true;
   }

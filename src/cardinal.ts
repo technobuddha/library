@@ -1,5 +1,5 @@
-import { isFinite } from 'lodash-es';
-import { isNaN } from 'lodash-es';
+import { isFinite, isNaN } from 'lodash-es';
+
 import { empty, space } from './constants';
 
 export type Options = OptionsCardinal & OptionsIllion;
@@ -63,30 +63,29 @@ const ONE_HUNDRED = 100;
  * @default and (empty)
  * @default hyphen (space)
  */
-export function cardinal(
-  input: number,
-  { groups = Infinity, digits = false, ...options }: Options = {},
-): string {
+export function cardinal(input: number, props: Options = {}): string {
+  let { groups = Infinity, digits = false, ...options } = props;
   const words = [] as (string | string[])[];
 
   if (isNaN(input)) {
     words.push('not a number');
   } else {
+    const whole = input < ZERO ? -input : input;
+
     if (input < ZERO) {
       words.push('negative');
-      input = -input;
     }
 
-    if (isFinite(input)) {
-      if (input === 0) {
+    if (isFinite(whole)) {
+      if (whole === 0) {
         words.push(ones[0]);
       } else {
-        let { mantissa, exponent } = breakdown(input, groups);
+        let { mantissa, exponent } = breakdown(whole, groups);
 
-        while (Number.parseInt(mantissa, 10) > 0 && exponent >= 0 && groups-- > 0) {
+        while (Number.parseInt(mantissa) > 0 && exponent >= 0 && groups-- > 0) {
           let word: string | null;
           let quantity: number;
-          ({ quantity, mantissa, exponent, word } = illion(mantissa, exponent));
+          ({ quantity, mantissa, exponent, word } = illion({ mantissa, exponent }));
 
           if (quantity) {
             if (digits) words.push(quantity.toString());
@@ -106,7 +105,7 @@ export function cardinal(
 function breakdown(value: number, groups: number): { mantissa: string; exponent: number } {
   let [m, e] = value.toExponential(15).split('e'); // - 1 because toExponential returns 1 digit before the decimal point
   let mantissa = m.replace('.', empty);
-  let exponent = Number.parseInt(e, 10); // number of digits = (exponent + 1)
+  let exponent = Number.parseInt(e); // number of digits = (exponent + 1)
   const groupCount = Math.floor(exponent / 3) + 1;
 
   if (groupCount > groups) {
@@ -114,28 +113,10 @@ function breakdown(value: number, groups: number): { mantissa: string; exponent:
     if (digits < 16) {
       [m, e] = value.toExponential(digits - 2).split('e');
       mantissa = m.replace('.', empty);
-      exponent = Number.parseInt(e, 10);
+      exponent = Number.parseInt(e);
     }
   }
   return { mantissa, exponent };
-}
-
-function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion): string[] {
-  const words = [] as string[];
-
-  if (input >= ONE_HUNDRED) {
-    words.push(ones[Math.floor(input / ONE_HUNDRED)], 'hundred');
-    input = input % ONE_HUNDRED;
-    if (and && input > ZERO) words.push(and);
-  }
-
-  if (input > ZERO) {
-    if (input < TWENTY) words.push(ones[input]);
-    else if (input % TEN === ZERO) words.push(tens[Math.floor(input / TEN) - 2]);
-    else words.push(tens[Math.floor(input / TEN) - 2] + hyphen + ones[input % TEN]);
-  }
-
-  return words;
 }
 
 type IllionReturn = {
@@ -145,26 +126,32 @@ type IllionReturn = {
   word: string | null;
 };
 
-function illion(mantissa: string, exponent: number): IllionReturn {
+function illion(props: { mantissa: string; exponent: number }): IllionReturn {
+  let { mantissa, exponent } = props;
   let factor = Math.floor((exponent - 3) / 3);
   let quantity = 0;
 
   switch (exponent - (factor * 3 + 3)) {
-    case 0:
-      quantity = Number.parseInt(mantissa.slice(0, 1), 10);
+    case 0: {
+      quantity = Number.parseInt(mantissa.slice(0, 1));
       mantissa = mantissa.slice(1);
       exponent -= 1;
       break;
-    case 1:
-      quantity = Number.parseInt(mantissa.slice(0, 2), 10);
+    }
+    case 1: {
+      quantity = Number.parseInt(mantissa.slice(0, 2));
       mantissa = mantissa.slice(2);
       exponent -= 2;
       break;
-    case 2:
-      quantity = Number.parseInt(mantissa.slice(0, 3), 10);
+    }
+    case 2: {
+      quantity = Number.parseInt(mantissa.slice(0, 3));
       mantissa = mantissa.slice(3);
       exponent -= 3;
       break;
+    }
+
+    // no default
   }
 
   if (factor < 0) return { quantity, mantissa, exponent, word: null };
@@ -187,7 +174,7 @@ function illion(mantissa: string, exponent: number): IllionReturn {
 
     // hundreds
     switch (factor2) {
-      case 1:
+      case 1: {
         word = `centi${word}`;
         a = true;
         s = false;
@@ -195,7 +182,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 2:
+      }
+      case 2: {
         word = `ducenti${word}`;
         a = true;
         s = false;
@@ -203,7 +191,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 3:
+      }
+      case 3: {
         word = `trecenti${word}`;
         a = true;
         s = true;
@@ -211,7 +200,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 4:
+      }
+      case 4: {
         word = `quadringenti${word}`;
         a = true;
         s = true;
@@ -219,7 +209,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 5:
+      }
+      case 5: {
         word = `quingenti${word}`;
         a = true;
         s = true;
@@ -227,7 +218,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 6:
+      }
+      case 6: {
         word = `sescenti${word}`;
         a = true;
         s = false;
@@ -235,7 +227,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 7:
+      }
+      case 7: {
         word = `septingenti${word}`;
         a = true;
         s = false;
@@ -243,7 +236,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 8:
+      }
+      case 8: {
         word = `octingenti${word}`;
         a = true;
         s = false;
@@ -251,7 +245,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = true;
         n = false;
         break;
-      case 9:
+      }
+      case 9: {
         word = `nongenti${word}`;
         a = true;
         s = false;
@@ -259,11 +254,14 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = false;
         break;
+      }
+
+      // no default
     }
 
     // tens
     switch (factor1) {
-      case 1:
+      case 1: {
         word = `deci${word}`;
         a = true;
         s = false;
@@ -271,7 +269,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 2:
+      }
+      case 2: {
         word = `viginti${word}`;
         a = true;
         s = true;
@@ -279,7 +278,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = true;
         n = false;
         break;
-      case 3:
+      }
+      case 3: {
         word = (a ? 'triginta' : 'triginti') + word;
         a = true;
         s = true;
@@ -287,7 +287,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 4:
+      }
+      case 4: {
         word = (a ? 'quadraginta' : 'quadraginti') + word;
         a = true;
         s = true;
@@ -295,7 +296,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 5:
+      }
+      case 5: {
         word = (a ? 'quinquaginta' : 'quinquaginti') + word;
         a = true;
         s = true;
@@ -303,7 +305,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 6:
+      }
+      case 6: {
         word = (a ? 'sexaginta' : 'sexaginti') + word;
         a = true;
         s = false;
@@ -311,7 +314,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = false;
         break;
-      case 7:
+      }
+      case 7: {
         word = (a ? 'septuaginta' : 'septuaginti') + word;
         a = true;
         s = false;
@@ -319,7 +323,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = true;
         break;
-      case 8:
+      }
+      case 8: {
         word = (a ? 'octoginta' : 'octoginti') + word;
         a = true;
         s = false;
@@ -327,7 +332,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = true;
         n = false;
         break;
-      case 9:
+      }
+      case 9: {
         word = (a ? 'nonaginta' : 'nonginti') + word;
         a = true;
         s = false;
@@ -335,83 +341,109 @@ function illion(mantissa: string, exponent: number): IllionReturn {
         m = false;
         n = false;
         break;
+      }
+
+      // no default
     }
 
     // ones
     if (a) {
       switch (factor0) {
-        case 1:
+        case 1: {
           word = `un${word}`;
           break;
-        case 2:
+        }
+        case 2: {
           word = `duo${word}`;
           break;
-        case 3:
+        }
+        case 3: {
           word =
             (s ? 'tres'
             : x ? 'tres'
             : 'tre') + word;
           break;
-        case 4:
+        }
+        case 4: {
           word = `quattuor${word}`;
           break;
-        case 5:
+        }
+        case 5: {
           word = `quinqua${word}`;
           break;
-        case 6:
+        }
+        case 6: {
           word =
             (s ? 'ses'
             : x ? 'sex'
             : 'se') + word;
           break;
-        case 7:
+        }
+        case 7: {
           word =
             (n ? 'septen'
             : m ? 'septem'
             : 'septe') + word;
           break;
-        case 8:
+        }
+        case 8: {
           word = `octo${word}`;
           break;
-        case 9:
+        }
+        case 9: {
           word =
             (n ? 'noven'
             : m ? 'novem'
             : 'nove') + word;
           break;
+        }
+
+        // no default
       }
     } else {
       switch (factor0) {
-        case 0:
+        case 0: {
           word = `ni${word}`;
           break;
-        case 1:
+        }
+        case 1: {
           word = `mi${word}`;
           break;
-        case 2:
+        }
+        case 2: {
           word = `bi${word}`;
           break;
-        case 3:
+        }
+        case 3: {
           word = `tri${word}`;
           break;
-        case 4:
+        }
+        case 4: {
           word = `quadri${word}`;
           break;
-        case 5:
+        }
+        case 5: {
           word = `quniti${word}`;
           break;
-        case 6:
+        }
+        case 6: {
           word = `sexti${word}`;
           break;
-        case 7:
+        }
+        case 7: {
           word = `septi${word}`;
           break;
-        case 8:
+        }
+        case 8: {
           word = `octi${word}`;
           break;
-        case 9:
+        }
+        case 9: {
           word = `noni${word}`;
           break;
+        }
+
+        // no default
       }
     }
     // cspell:enable
@@ -420,6 +452,25 @@ function illion(mantissa: string, exponent: number): IllionReturn {
   }
 
   return { quantity, mantissa, exponent, word };
+}
+
+function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion): string[] {
+  const words: string[] = [];
+
+  let num = input;
+  if (num >= ONE_HUNDRED) {
+    words.push(ones[Math.floor(num / ONE_HUNDRED)], 'hundred');
+    num %= ONE_HUNDRED;
+    if (and && num > ZERO) words.push(and);
+  }
+
+  if (num > ZERO) {
+    if (num < TWENTY) words.push(ones[num]);
+    else if (num % TEN === ZERO) words.push(tens[Math.floor(num / TEN) - 2]);
+    else words.push(tens[Math.floor(num / TEN) - 2] + hyphen + ones[num % TEN]);
+  }
+
+  return words;
 }
 
 /**
@@ -434,7 +485,7 @@ function illion(mantissa: string, exponent: number): IllionReturn {
  * @returns Order of Magnitude as text
  */
 export function orderOfMagnitude(exponent: number): string | null {
-  return illion('000', exponent).word;
+  return illion({ mantissa: '000', exponent }).word;
 }
 
 /**
@@ -445,7 +496,7 @@ export function orderOfMagnitude(exponent: number): string | null {
  * @example 1000000 "1 million"
  * @example 101323847382459 "101 trillion"
  *
- * @param input number to convert
+ * @param num number to convert
  * @param options see {@link OptionsIllion}
  * @return number as text
  */

@@ -1,4 +1,4 @@
-import { lodash_floor } from 'lodash-es';
+import { floor as lodashFloor } from 'lodash-es';
 
 type Options = {
   tolerance?: number;
@@ -16,7 +16,7 @@ type Options = {
  * @return The largest integer less than or equal to {@code num}.
  */
 export function floor(input: number, { tolerance = 0, precision = 0 }: Options = {}): number {
-  return lodash_floor(input + Math.sign(input) * tolerance + Number.EPSILON, precision);
+  return lodashFloor(input + Math.sign(input) * tolerance + Number.EPSILON, precision);
 }
 
 export default floor;

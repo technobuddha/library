@@ -1,10 +1,9 @@
-import { isString } from 'lodash-es';
-import { isRegExp } from 'lodash-es';
-import { escapeRegExp } from 'lodash-es';
-import { empty } from './constants';
-import splitChars from './splitChars';
+import { escapeRegExp, isRegExp, isString } from 'lodash-es';
 
-const trimEquivalent = /[\s\uFEFF\xA0]/u;
+import { empty } from './constants';
+import splitChars from './split-chars';
+
+const trimEquivalent = /[\s\uFEFF\u00A0]/u;
 
 /**
  * Remove all occurrences of characters from the beginning and end of the string
@@ -32,7 +31,7 @@ export function clean(
         )
         .join('|');
 
-  return input.replace(new RegExp(`^(${re})+|(${re})+$`, 'gu'), empty);
+  return input.replaceAll(new RegExp(`^(${re})+|(${re})+$`, 'gu'), empty);
 }
 
 /**

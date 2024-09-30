@@ -1,9 +1,10 @@
-import { space, empty } from './constants';
 import { zip } from 'lodash-es';
 
-export function singleline(template: TemplateStringsArray, ...args: any[]): string {
+import { empty, space } from './constants';
+
+export function singleline(template: TemplateStringsArray, ...args: unknown[]): string {
   return zip(
-    template.map((t) => t.replace(/[\r\n]+\s*/gu, space)),
+    template.map((t) => t.replaceAll(/[\r\n]+\s*/gu, space)),
     args,
   )
     .flat()

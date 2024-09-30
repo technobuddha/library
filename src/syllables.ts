@@ -1,6 +1,6 @@
 import { empty } from './constants';
-import toASCII from './toASCII';
-import splitWords from './splitWords';
+import splitWords from './split-words';
+import toASCII from './to-ascii';
 
 /**
  * Approximate the number of syllables in a string
@@ -9,7 +9,10 @@ import splitWords from './splitWords';
  * @returns the number of syllables
  */
 export function syllables(input: string): number {
-  return splitWords(toASCII(input.toLowerCase())).reduce((count, word) => {
+  return splitWords(toASCII(input.toLowerCase())).reduce((c, w) => {
+    let count = c;
+    let word = w;
+
     if (word.length <= 3) {
       count++;
     } else {

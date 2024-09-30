@@ -1,5 +1,4 @@
-import { isNaN } from 'lodash-es';
-import { isFinite } from 'lodash-es';
+import { isFinite,isNaN  } from 'lodash-es';
 
 export const specialBegin = '﴾';
 export const specialFinish = '﴿';
@@ -42,18 +41,22 @@ export function reviver(this: unknown, _key: string, value: unknown): unknown {
   ) {
     const [type, jsonValue] = value.slice(1, -1).split(/:(.+)/u);
     switch (type) {
-      case 'Date':
+      case 'Date': {
         return new Date(jsonValue);
+      }
       case 'RegExp': {
         const matches = /^\/(.*)\/([a-z]*)$/u.exec(jsonValue);
         return matches ? new RegExp(matches[1], matches[2]) : new RegExp(jsonValue, 'u');
       }
-      case 'Number':
+      case 'Number': {
         return Number(jsonValue);
-      case 'BigInt':
+      }
+      case 'BigInt': {
         return BigInt(jsonValue);
-      default:
+      }
+      default: {
         return value;
+      }
     }
   }
   return value;

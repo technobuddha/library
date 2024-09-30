@@ -1,7 +1,7 @@
-import { escapeRegExp } from 'lodash-es';
-import { isFunction } from 'lodash-es';
-import escapeJS from './escapeJS';
+import { escapeRegExp, isFunction } from 'lodash-es';
+
 import build from './build';
+import escapeJS from './escape-js';
 
 export type Options = {
   /** The quote character(s) to use */
@@ -20,10 +20,12 @@ export type Options = {
  * @returns text surrounded by quotes
  */
 export function quote(input: string, { quote: q = '"', escape = escapeJS }: Options = {}): string {
-  input =
-    isFunction(escape) ? escape(input) : input.replace(new RegExp(escapeRegExp(q), 'ug'), escape);
+  const text =
+    isFunction(escape) ?
+      escape(input)
+    : input.replaceAll(new RegExp(escapeRegExp(q), 'ug'), escape);
 
-  return build(q, input, q);
+  return build(q, text, q);
 }
 
 export default quote;

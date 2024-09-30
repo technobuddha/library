@@ -25,7 +25,7 @@
     "postbuild": "../../scripts/bootstrap.ts --update @technobuddha/library",
     "compile": "scripts/build.ts",
     "test": "jest --coverage",
-    "lint": "LINT_LEVEL=1 eslint --ext .ts src/*.ts test/*.ts ",
+    "lint": "eslint .",
     "pub": "npm-run-all clean build:compile pub:version build:copy build:package pub:publish",
     "pub:version": "npm --no-tag-git-version version prerelease",
     "pub:publish": "npm publish dist",
@@ -45,7 +45,7 @@
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
-    "@technobuddha/project": "^0.0.21",
+    "@technobuddha/project": "^0.0.29",
     "@types/jest": "^29.5.13",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.7.4",

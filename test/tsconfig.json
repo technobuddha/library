@@ -10,5 +10,18 @@
       "#util/*": ["../../../util/*"]
     }
   },
-  "include": ["*.ts"]
+  "include": [
+    "*.ts",
+    "../src/add-time.test.ts",
+    "../src/build.test.ts",
+    "../src/cardinal.test.ts",
+    "../src/ceil.test.ts",
+    "../src/compare-numbers.test.ts",
+    "../src/escape-graphql.test.ts",
+    "../src/escape-java.test.ts",
+    "../src/format-date.test.ts",
+    "../src/get-iso-week-of-year.test.ts",
+    "../src/graphql.test.ts",
+    "../src/is-alpha.test.ts"
+  ]
 }

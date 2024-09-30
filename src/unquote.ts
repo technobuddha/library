@@ -1,6 +1,6 @@
 import { escapeRegExp, isString } from 'lodash-es';
 
-import unescapeJS from './unescapeJS';
+import unescapeJS from './unescape-js';
 
 type Options = {
   /** The quote character(s) to use */

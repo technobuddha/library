@@ -1,13 +1,14 @@
 /* eslint-disable @typescript-eslint/unified-signatures */
 import { isString } from 'lodash-es';
+
 import {
+  hoursPerDay,
+  minutesPerHour,
+  secondsPerMinute,
   ticksPerDay,
   ticksPerHour,
   ticksPerMinute,
   ticksPerSecond,
-  hoursPerDay,
-  minutesPerHour,
-  secondsPerMinute,
 } from './constants';
 
 /**
@@ -24,13 +25,13 @@ export class TimeSpan {
    * @param s seconds
    * @param ms milliseconds
    */
-  constructor();
-  constructor(ticks: number);
-  constructor(h: number, m: number, s: number);
-  constructor(d: number, h: number, m: number, s: number);
-  constructor(d: number, h: number, m: number, s: number, ms: number);
-  constructor(text: string);
-  constructor(...args: any[]) {
+  public constructor();
+  public constructor(ticks: number);
+  public constructor(h: number, m: number, s: number);
+  public constructor(d: number, h: number, m: number, s: number);
+  public constructor(d: number, h: number, m: number, s: number, ms: number);
+  public constructor(text: string);
+  public constructor(...args: unknown[]) {
     let sign = 1;
     let d = 0;
     let h = 0;
@@ -46,7 +47,7 @@ export class TimeSpan {
       }
       case 1: {
         if (isString(args[0])) {
-          let text = args[0]!;
+          let [text] = args;
 
           if (text.startsWith('-')) {
             sign = -1;
@@ -81,19 +82,13 @@ export class TimeSpan {
       }
       case 3: {
         d = 0;
-        h = args[0];
-        m = args[1];
-        s = args[2];
+        [h, m, s] = args as number[];
         ms = 0;
 
         break;
       }
       default: {
-        d = args[0];
-        h = args[1];
-        m = args[2];
-        s = args[3];
-        ms = args[4];
+        [d, h, m, s, ms] = args as number[];
       }
     }
 
@@ -103,7 +98,7 @@ export class TimeSpan {
         (h ? h * ticksPerHour : 0) +
         (m ? m * ticksPerMinute : 0) +
         (s ? s * ticksPerSecond : 0) +
-        (ms ? ms : 0));
+        (ms || 0));
   }
 
   private readonly clicks: number;
@@ -218,7 +213,7 @@ export class TimeSpan {
         ff: F.toString().padStart(3, '0'),
       } as { [key: string]: string };
 
-      return mask.replace(
+      return mask.replaceAll(
         // cspell:disable-next-line
         /[dmhsf]{1,2}|"[^"]*"|'[^']*'/gu,
         ($0) => {
@@ -238,9 +233,11 @@ export class TimeSpan {
         2,
         '0',
       )}:${S.toString().padStart(2, '0')}`;
-    else if (H !== 0)
+    else if (H === 0) {
+      str = `${M}:${S.toString().padStart(2, '0')}`;
+    } else {
       str = `${H}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
-    else str = `${M}:${S.toString().padStart(2, '0')}`;
+    }
     if (F) str += `.${F.toString().padStart(3, '0')}`;
     return str;
   }

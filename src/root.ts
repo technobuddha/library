@@ -15,12 +15,14 @@ export type Options = {
  * @returns The root word
  */
 export function root(input: string, { prefix, suffix }: Options = {}): string {
-  if (!isNil(prefix) && input.startsWith(prefix)) input = input.slice(prefix.length);
+  let text = input;
 
-  if (!isNil(suffix) && input.endsWith(suffix))
-    input = input.slice(0, Math.max(0, input.length - suffix.length));
+  if (!isNil(prefix) && text.startsWith(prefix)) text = text.slice(prefix.length);
 
-  return input;
+  if (!isNil(suffix) && text.endsWith(suffix))
+    text = text.slice(0, Math.max(0, text.length - suffix.length));
+
+  return text;
 }
 
 export default root;

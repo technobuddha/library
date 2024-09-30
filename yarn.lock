@@ -785,10 +785,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.0"
 
-"@technobuddha/project@^0.0.21":
-  version "0.0.21"
-  resolved "http://verdaccio.technobuddha.com/@technobuddha/project/-/project-0.0.21.tgz#7c6c7b4f64c69c2abce12a281a38b3ee77496e3f"
-  integrity sha512-GHFh5hOyG5FUEtUM27Fgie57hCF/YMvN0VYp4bzRXkJiB+EcUG48oPtCGthZnabfcVUKeczOyhRSl0OzAtLzag==
+"@technobuddha/project@^0.0.29":
+  version "0.0.29"
+  resolved "http://verdaccio.technobuddha.com/@technobuddha/project/-/project-0.0.29.tgz#f373217239141d1c206f96e552f6dd0362376cf6"
+  integrity sha512-Iuj1CVTM7qJchEMpf225j8ayczqEwRD3MwVkUrRJoSw9Ju+BN05zIzpkQYQpcszxlQkqtSXI0qKTSbc69dqRgw==
   dependencies:
     "@eslint/js" "^9.10.0"
     "@inquirer/prompts" "^6.0.1"
@@ -812,7 +812,7 @@
     eslint-plugin-react "^7.35.2"
     eslint-plugin-react-hooks "^4.6.2"
     eslint-plugin-simple-import-sort "^12.1.1"
-    eslint-plugin-technobuddha "^0.0.9"
+    eslint-plugin-technobuddha "^0.0.10"
     eslint-plugin-unicorn "^55.0.0"
     get-tsconfig "^4.8.1"
     globals "^15.9.0"
@@ -2177,10 +2177,10 @@ eslint-plugin-simple-import-sort@^12.1.1:
   resolved "http://verdaccio.technobuddha.com/eslint-plugin-simple-import-sort/-/eslint-plugin-simple-import-sort-12.1.1.tgz#e64bfdaf91c5b98a298619aa634a9f7aa43b709e"
   integrity sha512-6nuzu4xwQtE3332Uz0to+TxDQYRLTKRESSc2hefVT48Zc8JthmN23Gx9lnYhu0FtkRSL1oxny3kJ2aveVhmOVA==
 
-eslint-plugin-technobuddha@^0.0.9:
-  version "0.0.9"
-  resolved "http://verdaccio.technobuddha.com/eslint-plugin-technobuddha/-/eslint-plugin-technobuddha-0.0.9.tgz#d8ba9a02fe7c5bc7e1db9aca7c11d1905402b3f9"
-  integrity sha512-vRIJDDTIFAzT1ZJjIbnGymh0++SKzys5RLv+oYX9SpNVu8QDlaRxTN9zUrKLnuKrJyQMoar10KfwL/5J1choZg==
+eslint-plugin-technobuddha@^0.0.10:
+  version "0.0.10"
+  resolved "http://verdaccio.technobuddha.com/eslint-plugin-technobuddha/-/eslint-plugin-technobuddha-0.0.10.tgz#b0c6723555b8872a6a3294f68e6577e478afc1fb"
+  integrity sha512-WOayqacGnfP1dBcyyYMeTrOyi2qGuMpIMm0RJZ0gFGFPx6FWFBCUXid4AdZkIyf6Gsbt5eaTAZ8slMRO3HPZVQ==
   dependencies:
     eslint "^8.57"
     get-tsconfig "^4.8.1"
