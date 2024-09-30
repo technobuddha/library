@@ -1,4 +1,4 @@
-import { ticksPerDay } from './constants';
+import { ticksPerDay } from './constants.js';
 
 /**
  * Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)

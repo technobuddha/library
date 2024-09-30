@@ -2,7 +2,7 @@ import addTime from './add-time';
 import { type DayOfWeek } from './constants';
 import { daysPerWeek } from './constants';
 import getBeginningOfMonth from './get-beginning-of-month';
-import getDaysInMonth from './get-days-In-month';
+import getDaysInMonth from './get-days-in-month';
 import modulo from './modulo';
 
 type Options = {

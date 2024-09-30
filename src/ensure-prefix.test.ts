@@ -1,5 +1,5 @@
 // import expect from '#util/expect';
-import ensurePrefix from '../src/ensurePrefix';
+import ensurePrefix from './ensure-prefix';
 
 describe('ensurePrefix', () => {
   test('should add prefixes when needed', () => {

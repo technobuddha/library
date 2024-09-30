@@ -2,7 +2,7 @@ import { type DayOfWeek } from './constants';
 import { day, month, ticksPerWeek } from './constants';
 import floor from './floor';
 import getBeginningOfWeek from './get-beginning-of-week';
-import getISOWeeksInYear from './get-iso-weeks-In-year';
+import getISOWeeksInYear from './get-iso-weeks-in-year';
 
 type Options = {
   /** Use the UTC timezone */
