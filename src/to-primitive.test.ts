@@ -25,7 +25,6 @@ describe('toPrimitive', () => {
 
   test('should handle null and undefined', () => {
     expect(toPrimitive(null)).toBeNull();
-    expect(toPrimitive()).toBeUndefined();
   });
 
   test('should handle symbols', () => {

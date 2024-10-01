@@ -1,0 +1,27 @@
+[**@technobuddha/library**](../../README.md) • **Docs**
+
+***
+
+[@technobuddha/library](../../README.md) / [unescape-java](../README.md) / unescapeJava
+
+# Function: unescapeJava()
+
+> **unescapeJava**(`input`): `string`
+
+Unescape a string encoded in Java style
+
+## Parameters
+
+• **input**: `string`
+
+The string to unescape
+
+## Returns
+
+`string`
+
+the string with escapes resolved
+
+## Defined in
+
+unescape-java.ts:7

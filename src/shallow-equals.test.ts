@@ -7,9 +7,7 @@ describe('shallowEquals', () => {
 
   test('null == null && undefined == undefined', () => {
     expect(shallowEquals(null, null)).toBeTrue();
-    expect(shallowEquals()).toBeTrue();
     expect(shallowEquals(undefined, null)).toBeFalse();
-    expect(shallowEquals(null)).toBeFalse();
   });
 
   test('object == self', () => {

@@ -1,0 +1,27 @@
+[**@technobuddha/library**](../../README.md) • **Docs**
+
+***
+
+[@technobuddha/library](../../README.md) / [cardinal](../README.md) / OptionsIllion
+
+# Type Alias: OptionsIllion
+
+> **OptionsIllion**: `object`
+
+## Type declaration
+
+### and?
+
+> `optional` **and**: `string`
+
+Word to place after the hundreds.  "one hundred and one" vs. "one hundred one"
+
+### hyphen?
+
+> `optional` **hyphen**: `string`
+
+Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one"
+
+## Defined in
+
+cardinal.ts:14

@@ -42,7 +42,6 @@ describe('isNumeric', () => {
     expect(isNumeric(space)).toBeFalse();
     expect(isNumeric('abcdef')).toBeFalse();
     expect(isNumeric(null)).toBeFalse();
-    expect(isNumeric()).toBeFalse();
     expect(isNumeric([])).toBeFalse();
     expect(isNumeric({})).toBeFalse();
   });

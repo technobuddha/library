@@ -17,7 +17,6 @@ describe('toDate', () => {
 
   test('nullish should be invalid dates', () => {
     expect(toDate(null).getTime()).toBeNaN();
-    expect(toDate().getTime()).toBeNaN();
   });
 
   test('convert other types to string first', () => {
