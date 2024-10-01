@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import splitWords from './split-words';
-import { empty } from './constants';
+import { empty } from './constants.js';
+import splitWords from './split-words.js';
 
 describe('splitWords', () => {
   test('should split on whitespace', () => {

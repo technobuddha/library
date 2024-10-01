@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import formatNumber from './format-number';
+import formatNumber from './format-number.js';
 
 describe('formatNumber', () => {
   test('should support the C (Currency) format', () => {

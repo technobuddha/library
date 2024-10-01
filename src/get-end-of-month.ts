@@ -1,4 +1,4 @@
-import getDaysInMonth from './get-days-in-month';
+import getDaysInMonth from './get-days-in-month.js';
 
 type Options = {
   /** Use the UTC timezone */

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toRadians from './to-radians';
+import toRadians from './to-radians.js';
 
 describe('toRadians', () => {
   test('converts positive angles', () => {

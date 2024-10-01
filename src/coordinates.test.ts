@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import type { Cartesian, Polar } from './coordinates';
+import { type Cartesian, type Polar } from './coordinates.js';
 
 describe('coordinates', () => {
   test('Polar', () => {

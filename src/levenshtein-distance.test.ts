@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import levenshteinDistance from './levenshtein-distance';
+import levenshteinDistance from './levenshtein-distance.js';
 
 describe('levenshteinDistance', () => {
   test('Detect difference between two strings', () => {

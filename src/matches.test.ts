@@ -1,24 +1,23 @@
-// import expect from '#util/expect';
-import matches from './matches';
+import matches from './matches.js';
 
 describe('matches', () => {
   test('should match string', () => {
-    expect(matches('abc', 'xyz')).toBe(false);
-    expect(matches('abc', 'abc')).toBe(true);
+    expect(matches('abc', 'xyz')).toBeFalse();
+    expect(matches('abc', 'abc')).toBeTrue();
   });
 
   test('should ignore case', () => {
-    expect(matches('abc', 'ABC')).toBe(true);
+    expect(matches('abc', 'ABC')).toBeTrue();
   });
 
   test('should match regexp', () => {
-    expect(matches('abc', /abc/u)).toBe(true);
+    expect(matches('abc', /abc/u)).toBeTrue();
   });
 
   test('should match array', () => {
-    expect(matches('abc', [/abc/u, 'xyz'])).toBe(true);
-    expect(matches('abc', [/xyz/u, 'abc'])).toBe(true);
-    expect(matches('abc', [/xyz/u, 'xyz'])).toBe(false);
-    expect(matches('abc', [])).toBe(false);
+    expect(matches('abc', [/abc/u, 'xyz'])).toBeTrue();
+    expect(matches('abc', [/xyz/u, 'abc'])).toBeTrue();
+    expect(matches('abc', [/xyz/u, 'xyz'])).toBeFalse();
+    expect(matches('abc', [])).toBeFalse();
   });
 });

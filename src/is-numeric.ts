@@ -1,6 +1,6 @@
 import { isNaN, isNumber, isString, toNumber } from 'lodash-es';
 
-import isWhitespace from './is-whitespace';
+import isWhitespace from './is-whitespace.js';
 
 /**
  * Test an object to see if it a number, or a string which can be converted into a number

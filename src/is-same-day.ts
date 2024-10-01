@@ -1,4 +1,4 @@
-import isSameMonth from './is-same-month';
+import isSameMonth from './is-same-month.js';
 
 type Options = {
   /** use the UTC timezone */

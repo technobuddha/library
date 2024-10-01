@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import getBeginningOfDay from './get-beginning-of-day';
+import getBeginningOfDay from './get-beginning-of-day.js';
 
 describe('getBeginningOfDay', () => {
   test('should calculate the beginning of the day', () => {

@@ -1,6 +1,6 @@
-import { ticksPerDay } from './constants';
-import floor from './floor';
-import getBeginningOfYear from './get-beginning-of-year';
+import { ticksPerDay } from './constants.js';
+import floor from './floor.js';
+import getBeginningOfYear from './get-beginning-of-year.js';
 
 type Options = {
   UTC?: boolean;

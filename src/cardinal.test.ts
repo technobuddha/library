@@ -1,6 +1,6 @@
 // cspell:disable
-// import expect from '#util/expect';
-import cardinal, { orderOfMagnitude, summarize } from './cardinal';
+
+import cardinal, { orderOfMagnitude, summarize } from './cardinal.js';
 
 describe('cardinal', () => {
   test('should handle simple numbers', () => {
@@ -142,7 +142,7 @@ describe('cardinal', () => {
 
 describe('orderOfMagnitude', () => {
   test('should describe orders of magnitude', () => {
-    expect(orderOfMagnitude(0)).toBe(null);
+    expect(orderOfMagnitude(0)).toBeNull();
     expect(orderOfMagnitude(3)).toBe('thousand');
     expect(orderOfMagnitude(6)).toBe('million');
     expect(orderOfMagnitude(9)).toBe('billion');

@@ -1,5 +1,5 @@
-import { type Options as MetricUnitOptions } from './metric-units';
-import metricUnits from './metric-units';
+import { type Options as MetricUnitOptions } from './metric-units.js';
+import metricUnits from './metric-units.js';
 
 export type Options = Omit<MetricUnitOptions, 'macro' | 'micro' | 'unit'>;
 
@@ -13,7 +13,7 @@ export function binaryUnits(input: number, { format, pad, precision = 2 }: Optio
   return `${metricUnits(input, {
     format,
     pad,
-    macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi'],
+    macro: ['Ki', 'Mi', 'Gi', 'Ti', 'Pi', 'Ei', 'Zi', 'Yi', 'Ri', 'Qi'],
     micro: [],
     unit: 1024,
     precision,

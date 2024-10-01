@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import matchCase from './match-case';
+import matchCase from './match-case.js';
 
 describe('matchCase', () => {
   test('should match case', () => {

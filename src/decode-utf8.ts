@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 /**
  * Decode a UTF8 encoded string into unicode

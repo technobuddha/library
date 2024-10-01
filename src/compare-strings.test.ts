@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import { compareStrings } from './compare-strings';
+import { compareStrings } from './compare-strings.js';
 
 describe('compareStrings', () => {
   test('should compare strings', () => {
@@ -8,7 +7,7 @@ describe('compareStrings', () => {
     expect(compareStrings('b', 'a')).toBe(1);
   });
 
-  test('should compare strings', () => {
+  test('should compare nulls', () => {
     expect(compareStrings(null, null)).toBe(0);
     expect(compareStrings(null, 'a')).toBe(-1);
     expect(compareStrings('a', null)).toBe(1);

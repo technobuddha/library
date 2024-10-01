@@ -1,6 +1,6 @@
 import { escapeRegExp,isNil  } from 'lodash-es';
 
-import { space } from './constants';
+import { space } from './constants.js';
 
 type Options = {
   /** The indentation character */

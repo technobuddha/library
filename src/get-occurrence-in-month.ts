@@ -1,9 +1,9 @@
-import addTime from './add-time';
-import { type DayOfWeek } from './constants';
-import { daysPerWeek } from './constants';
-import getBeginningOfMonth from './get-beginning-of-month';
-import getDaysInMonth from './get-days-in-month';
-import modulo from './modulo';
+import addTime from './add-time.js';
+import { type DayOfWeek } from './constants.js';
+import { daysPerWeek } from './constants.js';
+import getBeginningOfMonth from './get-beginning-of-month.js';
+import getDaysInMonth from './get-days-in-month.js';
+import modulo from './modulo.js';
 
 type Options = {
   /** Use the UTC timezone */

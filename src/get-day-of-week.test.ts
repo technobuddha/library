@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getDayOfWeek from './get-day-of-week';
-import { day } from './constants';
+import { day } from './constants.js';
+import getDayOfWeek from './get-day-of-week.js';
 
 describe('getDayOfWeek', () => {
   test('should detect weekday', () => {

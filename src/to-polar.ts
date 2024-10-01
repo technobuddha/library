@@ -1,5 +1,5 @@
-import { type Cartesian, type Polar } from './coordinates';
-import { normalizeAngle } from './normalize-angle';
+import { type Cartesian, type Polar } from './coordinates.js';
+import { normalizeAngle } from './normalize-angle.js';
 
 /**
  * Convert cartesian coordinates to polar

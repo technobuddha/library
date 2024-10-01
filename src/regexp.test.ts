@@ -1,21 +1,20 @@
-// import expect from '#util/expect';
-import { domain, email, isoDate, numeric, ipV4 } from './regexp';
+import { domain, email, ipV4, isoDate, numeric } from './regexp.js';
 
 describe('regexp', () => {
   test('validate hostname', () => {
-    expect(domain.test('technobuddha.com')).toBe(true);
+    expect(domain.test('technobuddha.com')).toBeTrue();
   });
 
   test('validate email', () => {
-    expect(email.test('phil@technobudha.com')).toBe(true);
+    expect(email.test('phil@technobudha.com')).toBeTrue();
   });
 
   test('validate isoDate', () => {
-    expect(isoDate.test('2021-06-02T10:45:31.345Z')).toBe(true);
+    expect(isoDate.test('2021-06-02T10:45:31.345Z')).toBeTrue();
   });
 
   test('validate numeric', () => {
-    expect(numeric.test('123.456')).toBe(true);
+    expect(numeric.test('123.456')).toBeTrue();
   });
 
   test.each([

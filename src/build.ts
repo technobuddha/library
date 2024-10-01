@@ -1,6 +1,6 @@
 import { compact, isArray, isFunction, isString } from 'lodash-es';
 
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 type Stringy = string | string[] | IterableIterator<string>;
 

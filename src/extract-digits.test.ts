@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import extractDigits from './extract-digits';
-import { empty } from './constants';
+import { empty } from './constants.js';
+import extractDigits from './extract-digits.js';
 
 describe('extractDigits', () => {
   test('should add Suffixes when needed', () => {

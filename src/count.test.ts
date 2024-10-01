@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import count from './count';
+import count from './count.js';
 
 describe('count', () => {
   test('should count substrings', () => {

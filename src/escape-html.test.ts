@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import escapeHTML from './escape-html';
-import { space } from './constants';
+import { space } from './constants.js';
+import escapeHTML from './escape-html.js';
 
 // cspell:ignore ΑΒΓΔΕΖ
 describe('escapeHTML', () => {
@@ -10,9 +9,9 @@ describe('escapeHTML', () => {
 
   test('should escape control characters', () => {
     expect(escapeHTML('\0')).toBe('&#0;');
-    expect(escapeHTML('\x01')).toBe('&#1;');
-    expect(escapeHTML('\x7f')).toBe('&#127;');
-    expect(escapeHTML('\x9f')).toBe('&#159;');
+    expect(escapeHTML('\u0001')).toBe('&#1;');
+    expect(escapeHTML('\u007f')).toBe('&#127;');
+    expect(escapeHTML('\u009f')).toBe('&#159;');
   });
 
   test('should not escape most ascii', () => {

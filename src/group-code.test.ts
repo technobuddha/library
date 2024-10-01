@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import groupCode from './group-code';
+import groupCode from './group-code.js';
 
 describe('groupCode', () => {
   test('should add select the proper sort order', () => {

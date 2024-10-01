@@ -1,6 +1,6 @@
 import { escapeRegExp } from 'lodash-es';
 
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 type Options = {
   /** The opening field delimiter */

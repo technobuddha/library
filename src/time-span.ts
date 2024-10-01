@@ -9,7 +9,7 @@ import {
   ticksPerHour,
   ticksPerMinute,
   ticksPerSecond,
-} from './constants';
+} from './constants.js';
 
 /**
  * Store and manipulate a duration of time

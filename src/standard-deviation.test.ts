@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import standardDeviation from './standard-deviation';
+import standardDeviation from './standard-deviation.js';
 
 describe('standardDeviation', () => {
   test('should compute standardDeviation', () => {
@@ -10,7 +9,7 @@ describe('standardDeviation', () => {
   });
 
   test('should handle edge cases', () => {
-    expect(Number.isNaN(standardDeviation())).toBe(true);
-    expect(Number.isNaN(standardDeviation(1))).toBe(true);
+    expect(Number.isNaN(standardDeviation())).toBeTrue();
+    expect(Number.isNaN(standardDeviation(1))).toBeTrue();
   });
 });

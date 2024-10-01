@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import correctMSWord from './correct-ms-word';
+import correctMSWord from './correct-ms-word.js';
 
 describe('correctMSWord', () => {
   test('should handle special characters', () => {

@@ -1,8 +1,8 @@
-import { type DayOfWeek } from './constants';
-import { day, month, ticksPerWeek } from './constants';
-import floor from './floor';
-import getBeginningOfWeek from './get-beginning-of-week';
-import getISOWeeksInYear from './get-iso-weeks-in-year';
+import { type DayOfWeek } from './constants.js';
+import { day, month, ticksPerWeek } from './constants.js';
+import floor from './floor.js';
+import getBeginningOfWeek from './get-beginning-of-week.js';
+import getISOWeeksInYear from './get-iso-weeks-in-year.js';
 
 type Options = {
   /** Use the UTC timezone */

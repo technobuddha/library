@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import mask from './mask';
+import mask from './mask.js';
 
 describe('mask', () => {
   test('should mask strings', () => {

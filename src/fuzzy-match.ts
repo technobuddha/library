@@ -1,6 +1,6 @@
-import diceCoefficient from './dice-coefficient';
-import levenshteinDistance from './levenshtein-distance';
-import longestCommonSubstring from './longest-common-substring';
+import diceCoefficient from './dice-coefficient.js';
+import levenshteinDistance from './levenshtein-distance.js';
+import longestCommonSubstring from './longest-common-substring.js';
 
 type Options = {
   /** The compairson will ignore case */

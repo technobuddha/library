@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import build from './build';
+import build from './build.js';
 
 describe('build', () => {
   test('should build strings', () => {

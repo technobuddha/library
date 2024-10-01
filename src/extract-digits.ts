@@ -1,4 +1,4 @@
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 /**
  * Remove all non-digit characters from a string

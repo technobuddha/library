@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import clearObject from '../src/clearObject';
+import clearObject from './clear-object.js';
 
 describe('clearObject', () => {
   test('should clear objects', () => {

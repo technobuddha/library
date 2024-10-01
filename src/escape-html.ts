@@ -1,5 +1,5 @@
-import build from './build';
-import splitChars from './split-chars';
+import build from './build.js';
+import splitChars from './split-chars.js';
 
 type Options = {
   /** escape all characters outside the 7-bit ASCII range */

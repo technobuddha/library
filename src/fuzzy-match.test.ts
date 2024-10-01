@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import fuzzyMatch from './fuzzy-match';
+import fuzzyMatch from './fuzzy-match.js';
 
 describe('levenshteinDistance', () => {
   test('Detect difference between two strings', () => {

@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getBeginningOfMonth from './get-beginning-of-month';
-import { month } from './constants';
+import { month } from './constants.js';
+import getBeginningOfMonth from './get-beginning-of-month.js';
 
 describe('getBeginningOfMonth', () => {
   test('should compute beginning of the month', () => {

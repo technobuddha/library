@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import possessive from './possessive';
+import possessive from './possessive.js';
 
 describe('possessive', () => {
   test('should handle simple possessives', () => {

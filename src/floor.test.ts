@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import floor from './floor';
+import floor from './floor.js';
 
 describe('floor', () => {
   test('should handle positive numbers', () => {

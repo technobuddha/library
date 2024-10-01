@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import plural from './plural';
+import plural from './plural.js';
 
 describe('plural', () => {
   test('should handle simple plurals', () => {
@@ -17,10 +16,6 @@ describe('plural', () => {
   test('should handle uncountables', () => {
     expect(plural('pants')).toBe('pants');
     expect(plural('witchcraft')).toBe('witchcraft');
-  });
-
-  test('should handle irregulars', () => {
-    expect(plural('die')).toBe('dice');
   });
 
   test('should handle irregulars', () => {

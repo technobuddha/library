@@ -1,44 +1,43 @@
-// import expect from '#util/expect';
-import shallowEquals from './shallow-equals';
+import shallowEquals from './shallow-equals.js';
 
 describe('shallowEquals', () => {
   test('computes checksum & build table', () => {
-    expect(shallowEquals({ a: 1, b: 2, c: 3 }, { a: 1, b: 2, c: 3 })).toBe(true);
+    expect(shallowEquals({ a: 1, b: 2, c: 3 }, { a: 1, b: 2, c: 3 })).toBeTrue();
   });
 
   test('null == null && undefined == undefined', () => {
-    expect(shallowEquals(null, null)).toBe(true);
-    expect(shallowEquals(undefined, undefined)).toBe(true);
-    expect(shallowEquals(undefined, null)).toBe(false);
-    expect(shallowEquals(null, undefined)).toBe(false);
+    expect(shallowEquals(null, null)).toBeTrue();
+    expect(shallowEquals()).toBeTrue();
+    expect(shallowEquals(undefined, null)).toBeFalse();
+    expect(shallowEquals(null)).toBeFalse();
   });
 
   test('object == self', () => {
     const obj = {};
-    expect(shallowEquals(obj, obj)).toBe(true);
+    expect(shallowEquals(obj, obj)).toBeTrue();
   });
 
   test('object != null / undefined', () => {
     const obj = {};
-    expect(shallowEquals(obj, null)).toBe(false);
-    expect(shallowEquals(obj, null)).toBe(false);
+    expect(shallowEquals(obj, null)).toBeFalse();
+    expect(shallowEquals(obj, null)).toBeFalse();
   });
 
   test('diff #keys is unequal', () => {
-    expect(shallowEquals({ a: 1 }, { a: 1, b: 2 })).toBe(false);
+    expect(shallowEquals({ a: 1 }, { a: 1, b: 2 })).toBeFalse();
   });
 
   test('value comparison is by reference', () => {
     const a = { z: 1 };
     const b = { z: 1 };
-    expect(shallowEquals({ q: a }, { q: b })).toBe(false);
+    expect(shallowEquals({ q: a }, { q: b })).toBeFalse();
   });
 
   test('NaN == NaN', () => {
-    expect(shallowEquals({ q: Number.NaN }, { q: Number.NaN })).toBe(true);
+    expect(shallowEquals({ q: Number.NaN }, { q: Number.NaN })).toBeTrue();
   });
 
   test('-0 != 0', () => {
-    expect(shallowEquals({ q: 0 }, { q: -0 })).toBe(false);
+    expect(shallowEquals({ q: 0 }, { q: -0 })).toBeFalse();
   });
 });

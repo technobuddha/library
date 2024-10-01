@@ -1,5 +1,5 @@
-import { empty } from './constants';
-import floor from './floor';
+import { empty } from './constants.js';
+import floor from './floor.js';
 
 // cspell:disable-next-line
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

@@ -1,45 +1,44 @@
-// import expect from '#util/expect';
-import isWhitespace from './is-whitespace';
-import { empty, space } from './constants';
+import { empty, space } from './constants.js';
+import isWhitespace from './is-whitespace.js';
 
 describe('isWhitespace', () => {
   test('should handle empty strings', () => {
-    expect(isWhitespace(empty)).toBe(false);
+    expect(isWhitespace(empty)).toBeFalse();
   });
 
   test('should handle whitespace characters', () => {
-    expect(isWhitespace(space)).toBe(true);
-    expect(isWhitespace('\t')).toBe(true);
-    expect(isWhitespace('\r')).toBe(true);
-    expect(isWhitespace('\n')).toBe(true);
-    expect(isWhitespace('\v')).toBe(true);
-    expect(isWhitespace('\f')).toBe(true);
-    expect(isWhitespace('\u00A0')).toBe(true);
-    expect(isWhitespace('\u1680')).toBe(true);
-    expect(isWhitespace('\u2000')).toBe(true);
-    expect(isWhitespace('\u2001')).toBe(true);
-    expect(isWhitespace('\u2002')).toBe(true);
-    expect(isWhitespace('\u2003')).toBe(true);
-    expect(isWhitespace('\u2004')).toBe(true);
-    expect(isWhitespace('\u2005')).toBe(true);
-    expect(isWhitespace('\u2006')).toBe(true);
-    expect(isWhitespace('\u2007')).toBe(true);
-    expect(isWhitespace('\u2008')).toBe(true);
-    expect(isWhitespace('\u2009')).toBe(true);
-    expect(isWhitespace('\u200a')).toBe(true);
-    expect(isWhitespace('\u2028')).toBe(true);
-    expect(isWhitespace('\u2029')).toBe(true);
-    expect(isWhitespace('\u202f')).toBe(true);
-    expect(isWhitespace('\u205f')).toBe(true);
-    expect(isWhitespace('\u3000')).toBe(true);
-    expect(isWhitespace('\ufeff')).toBe(true);
+    expect(isWhitespace(space)).toBeTrue();
+    expect(isWhitespace('\t')).toBeTrue();
+    expect(isWhitespace('\r')).toBeTrue();
+    expect(isWhitespace('\n')).toBeTrue();
+    expect(isWhitespace('\v')).toBeTrue();
+    expect(isWhitespace('\f')).toBeTrue();
+    expect(isWhitespace('\u00A0')).toBeTrue();
+    expect(isWhitespace('\u1680')).toBeTrue();
+    expect(isWhitespace('\u2000')).toBeTrue();
+    expect(isWhitespace('\u2001')).toBeTrue();
+    expect(isWhitespace('\u2002')).toBeTrue();
+    expect(isWhitespace('\u2003')).toBeTrue();
+    expect(isWhitespace('\u2004')).toBeTrue();
+    expect(isWhitespace('\u2005')).toBeTrue();
+    expect(isWhitespace('\u2006')).toBeTrue();
+    expect(isWhitespace('\u2007')).toBeTrue();
+    expect(isWhitespace('\u2008')).toBeTrue();
+    expect(isWhitespace('\u2009')).toBeTrue();
+    expect(isWhitespace('\u200a')).toBeTrue();
+    expect(isWhitespace('\u2028')).toBeTrue();
+    expect(isWhitespace('\u2029')).toBeTrue();
+    expect(isWhitespace('\u202f')).toBeTrue();
+    expect(isWhitespace('\u205f')).toBeTrue();
+    expect(isWhitespace('\u3000')).toBeTrue();
+    expect(isWhitespace('\ufeff')).toBeTrue();
   });
 
   test('should handle whitespace strings', () => {
-    expect(isWhitespace(' \t\r\n\v\f ')).toBe(true);
+    expect(isWhitespace(' \t\r\n\v\f ')).toBeTrue();
   });
 
   test('should reject other strings', () => {
-    expect(isWhitespace('    a    ')).toBe(false);
+    expect(isWhitespace('    a    ')).toBeFalse();
   });
 });

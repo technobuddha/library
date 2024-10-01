@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toDegrees from './to-degrees';
+import toDegrees from './to-degrees.js';
 
 describe('toDegrees', () => {
   test('converts positive angles', () => {

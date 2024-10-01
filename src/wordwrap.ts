@@ -1,5 +1,5 @@
-import { empty, space } from './constants';
-import splitWords from './split-words';
+import { empty, space } from './constants.js';
+import splitWords from './split-words.js';
 
 type Options = {
   /** The width to wrap to */

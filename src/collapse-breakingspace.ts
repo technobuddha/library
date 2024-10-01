@@ -1,5 +1,5 @@
-import clean from './clean';
-import { space } from './constants';
+import clean from './clean.js';
+import { space } from './constants.js';
 
 export type Options = {
   /** If true, trim  */

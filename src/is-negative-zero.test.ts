@@ -1,21 +1,20 @@
-// import expect from '#util/expect';
-import isNegativeZero from './is-negative-zero';
-import { negativeZero } from './constants';
+import { negativeZero } from './constants.js';
+import isNegativeZero from './is-negative-zero.js';
 
 describe('isNegativeZero', () => {
   test('should handle testing for negative zero', () => {
-    expect(isNegativeZero(-3)).toBe(false);
-    expect(isNegativeZero(-2)).toBe(false);
-    expect(isNegativeZero(-1)).toBe(false);
-    expect(isNegativeZero(negativeZero)).toBe(true);
-    expect(isNegativeZero(0)).toBe(false);
-    expect(isNegativeZero(1)).toBe(false);
-    expect(isNegativeZero(2)).toBe(false);
-    expect(isNegativeZero(3)).toBe(false);
-    expect(isNegativeZero(Number.MAX_VALUE)).toBe(false);
-    expect(isNegativeZero(Number.MIN_VALUE)).toBe(false);
-    expect(isNegativeZero(Number.NaN)).toBe(false);
-    expect(isNegativeZero(Infinity)).toBe(false);
-    expect(isNegativeZero(-Infinity)).toBe(false);
+    expect(isNegativeZero(-3)).toBeFalse();
+    expect(isNegativeZero(-2)).toBeFalse();
+    expect(isNegativeZero(-1)).toBeFalse();
+    expect(isNegativeZero(negativeZero)).toBeTrue();
+    expect(isNegativeZero(0)).toBeFalse();
+    expect(isNegativeZero(1)).toBeFalse();
+    expect(isNegativeZero(2)).toBeFalse();
+    expect(isNegativeZero(3)).toBeFalse();
+    expect(isNegativeZero(Number.MAX_VALUE)).toBeFalse();
+    expect(isNegativeZero(Number.MIN_VALUE)).toBeFalse();
+    expect(isNegativeZero(Number.NaN)).toBeFalse();
+    expect(isNegativeZero(Infinity)).toBeFalse();
+    expect(isNegativeZero(-Infinity)).toBeFalse();
   });
 });

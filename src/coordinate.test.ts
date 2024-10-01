@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import coordinate from './coordinate';
+import coordinate from './coordinate.js';
 
 describe('coordinate', () => {
   test('should handle basic functionality', () => {

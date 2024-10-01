@@ -1,6 +1,6 @@
 import { zip } from 'lodash-es';
 
-import { empty, space } from './constants';
+import { empty, space } from './constants.js';
 
 export function singleline(template: TemplateStringsArray, ...args: unknown[]): string {
   return zip(

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import sortOrder from './sort-order';
+import sortOrder from './sort-order.js';
 
 describe('sortOrder', () => {
   test('should add select the proper sort order', () => {

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import variance from './variance';
+import variance from './variance.js';
 
 describe('variance', () => {
   test('should compute variance', () => {
@@ -10,7 +9,7 @@ describe('variance', () => {
   });
 
   test('should handle edge cases', () => {
-    expect(Number.isNaN(variance())).toBe(true);
-    expect(Number.isNaN(variance(1))).toBe(true);
+    expect(Number.isNaN(variance())).toBeTrue();
+    expect(Number.isNaN(variance(1))).toBeTrue();
   });
 });

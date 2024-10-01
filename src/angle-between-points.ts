@@ -1,5 +1,5 @@
-import { type Cartesian } from './coordinates';
-import normalizeAngle from './normalize-angle';
+import { type Cartesian } from './coordinates.js';
+import normalizeAngle from './normalize-angle.js';
 
 /**
  * Computes the angle between two points (x1,y1) and (x2,y2).

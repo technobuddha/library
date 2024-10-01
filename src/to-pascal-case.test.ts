@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toPascalCase from './to-pascal-case';
+import toPascalCase from './to-pascal-case.js';
 
 describe('toPascalCase', () => {
   test('should sentences', () => {

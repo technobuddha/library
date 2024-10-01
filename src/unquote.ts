@@ -1,6 +1,6 @@
 import { escapeRegExp, isString } from 'lodash-es';
 
-import unescapeJS from './unescape-js';
+import unescapeJS from './unescape-js.js';
 
 type Options = {
   /** The quote character(s) to use */
@@ -21,8 +21,8 @@ type Options = {
 export function unquote(input: string, { quote = '"', escape = unescapeJS }: Options = {}): string {
   if (input.startsWith(quote) && input.endsWith(quote)) {
     const unquoted = input.slice(quote.length, input.length - quote.length);
-    if (isString(escape)) return unquoted.replaceAll(new RegExp(escapeRegExp(escape), 'u'), quote);
-    return escape(input);
+    if (isString(escape)) return unquoted.replaceAll(new RegExp(escapeRegExp(escape), 'ug'), quote);
+    return escape(unquoted);
   }
   return input;
 }

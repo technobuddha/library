@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import lerp from './lerp';
+import lerp from './lerp.js';
 
 describe('lerp', () => {
   test('converts left to right range', () => {

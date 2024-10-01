@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import MersenneTwister from './mersenne-twister';
+import MersenneTwister from './mersenne-twister.js';
 
 describe('MersenneTwister', () => {
   test('should generate same random int32 from seed', () => {
@@ -69,14 +68,14 @@ describe('MersenneTwister', () => {
   });
 
   test('should generate same random int32 from array seed', () => {
-    const mt = new MersenneTwister(new Array(100).fill(0));
+    const mt = new MersenneTwister(Array.from({ length: 100 }).fill(0) as number[]);
 
     expect(mt.genrand_int32()).toBe(1434223582);
     expect(mt.genrand_int32()).toBe(1450191270);
   });
 
-  test('should generate same random int32 from array seed', () => {
-    const mt = new MersenneTwister(new Array(1000).fill(0));
+  test('should generate same random int32 from different array seed', () => {
+    const mt = new MersenneTwister(Array.from({ length: 1000 }).fill(0) as number[]);
 
     expect(mt.genrand_int32()).toBe(1914342825);
     expect(mt.genrand_int32()).toBe(305667567);

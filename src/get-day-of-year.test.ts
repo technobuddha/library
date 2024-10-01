@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getDayOfYear from './get-day-of-year';
-import { month } from './constants';
+import { month } from './constants.js';
+import getDayOfYear from './get-day-of-year.js';
 
 describe('getDayOfYear', () => {
   test('should convert to day of year', () => {

@@ -1,6 +1,6 @@
 import { toString } from 'lodash-es';
 
-import { empty, space } from './constants';
+import { empty, space } from './constants.js';
 
 export type Options = {
   /** Conjunction to insert in the last position (default 'and') */

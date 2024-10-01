@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import removeDiacritics from './remove-diacritics';
+import removeDiacritics from './remove-diacritics.js';
 
 describe('removeDiacritics', () => {
   test('should bad characters to be replaces', () => {

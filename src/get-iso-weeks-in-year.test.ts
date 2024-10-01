@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getISOWeeksInYear from '../src/get-iso-weeks-in-year';
-import { month } from './constants';
+import { month } from './constants.js';
+import getISOWeeksInYear from './get-iso-weeks-in-year.js';
 
 describe('getISOWeeksInYear', () => {
   test('should compute weeks in year', () => {

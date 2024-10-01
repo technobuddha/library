@@ -1,4 +1,4 @@
-import clean from './clean';
+import clean from './clean.js';
 
 type Options = {
   /** Ignore a leading quote (") */

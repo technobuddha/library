@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import collapseBreakingspace from '../src/collapseBreakingspace';
+import collapseBreakingspace from './collapse-breakingspace.js';
 
 describe('collapseBreakingspace', () => {
   test('should collapse Breakingspace', () => {

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import create2DArray from './create-2d-array';
+import create2DArray from './create-2d-array.js';
 
 describe('create2DArray', () => {
   test('should fill from value', () => {

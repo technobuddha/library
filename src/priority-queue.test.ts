@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import PriorityQueue from './priority-queue';
-import compareNumbers from './compare-numbers';
+import compareNumbers from './compare-numbers.js';
+import PriorityQueue from './priority-queue.js';
 
 describe('priority-queue', () => {
   test('should create a queue', () => {

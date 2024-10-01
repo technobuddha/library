@@ -1,9 +1,8 @@
-// import expect from '#util/expect';
-import tag from './tag';
+import tag from './tag.js';
 
 describe('tag', () => {
   test('create a tag', () => {
-    expect(tag('text')).toEqual('<span>text</span>');
+    expect(tag('text')).toBe('<span>text</span>');
   });
 
   test('should escape HTML', () => {

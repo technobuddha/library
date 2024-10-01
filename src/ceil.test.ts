@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import ceil from './ceil';
+import ceil from './ceil.js';
 
 describe('safeCeil', () => {
   test('should handle positive numbers', () => {

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toError from './to-error';
+import toError from './to-error.js';
 
 describe('toError', () => {
   test('should return Error', () => {

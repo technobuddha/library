@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import padNumber from './pad-number';
-import { negativeZero } from './constants';
+import { negativeZero } from './constants.js';
+import padNumber from './pad-number.js';
 
 describe('padNumber', () => {
   test('should handle positive numbers', () => {

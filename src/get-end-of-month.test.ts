@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getEndOfMonth from './get-end-of-month';
-import { month } from './constants';
+import { month } from './constants.js';
+import getEndOfMonth from './get-end-of-month.js';
 
 describe('getEndOfMonth', () => {
   test('should compute End of the month', () => {

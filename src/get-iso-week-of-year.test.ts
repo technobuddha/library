@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getISOWeekOfYear from './get-iso-week-of-year';
-import { month } from './constants';
+import { month } from './constants.js';
+import getISOWeekOfYear from './get-iso-week-of-year.js';
 
 describe('getISOWeekOfYear', () => {
   test('should compute the week of the year', () => {

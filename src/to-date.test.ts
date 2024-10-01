@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toDate from './to-date';
+import toDate from './to-date.js';
 
 describe('toDate', () => {
   test('should return dates', () => {
@@ -18,7 +17,7 @@ describe('toDate', () => {
 
   test('nullish should be invalid dates', () => {
     expect(toDate(null).getTime()).toBeNaN();
-    expect(toDate(undefined).getTime()).toBeNaN();
+    expect(toDate().getTime()).toBeNaN();
   });
 
   test('convert other types to string first', () => {

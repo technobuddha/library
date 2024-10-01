@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import modulo from './modulo';
+import modulo from './modulo.js';
 
 describe('modulo', () => {
   test('should handle positive dividend and divisors', () => {
@@ -27,8 +26,8 @@ describe('modulo', () => {
   });
 
   test('should handle zero divisor', () => {
-    expect(Number.isNaN(modulo(1, 0))).toBe(true);
-    expect(Number.isNaN(modulo(2, 0))).toBe(true);
-    expect(Number.isNaN(modulo(3, 0))).toBe(true);
+    expect(Number.isNaN(modulo(1, 0))).toBeTrue();
+    expect(Number.isNaN(modulo(2, 0))).toBeTrue();
+    expect(Number.isNaN(modulo(3, 0))).toBeTrue();
   });
 });

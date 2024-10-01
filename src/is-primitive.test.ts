@@ -1,15 +1,13 @@
-// import expect from '#util/expect';
-import isPrimitive from './is-primitive';
+import isPrimitive from './is-primitive.js';
 
 describe('isPrimitive', () => {
   test('should detect primitives', () => {
-    expect(isPrimitive(null)).toBe(true);
-    expect(isPrimitive(undefined)).toBe(true);
-    expect(isPrimitive('jabberwocky')).toBe(true);
-    expect(isPrimitive(0)).toBe(true);
-    expect(isPrimitive(Symbol())).toBe(true);
-    expect(isPrimitive({})).toBe(false);
-    expect(isPrimitive([])).toBe(false);
-    expect(isPrimitive(new Date())).toBe(false);
+    expect(isPrimitive(null)).toBeTrue();
+    expect(isPrimitive('jabberwocky')).toBeTrue();
+    expect(isPrimitive(0)).toBeTrue();
+    expect(isPrimitive(Symbol('symbol'))).toBeTrue();
+    expect(isPrimitive({})).toBeFalse();
+    expect(isPrimitive([])).toBeFalse();
+    expect(isPrimitive(new Date())).toBeFalse();
   });
 });

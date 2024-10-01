@@ -1,4 +1,4 @@
-import { compareStrings } from './compare-strings';
+import { compareStrings } from './compare-strings.js';
 
 type Options = {
   /** compare the two strings in case insensitive mode */

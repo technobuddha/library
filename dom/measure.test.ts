@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import { measure, measureWindow } from '../src/measure';
+import { measure, measureWindow } from './measure.js';
 
 describe('measure', () => {
   test('measure an element', () => {
@@ -10,7 +9,7 @@ describe('measure', () => {
     expect(measure(node)).toEqual({ height: 0, scrollbarHeight: 0, scrollbarWidth: 0, width: 0 });
   });
 
-  test('measure an element', () => {
+  test('measure the window', () => {
     expect(measureWindow()).toEqual({
       height: 768,
       scrollbarHeight: 0,

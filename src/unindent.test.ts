@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import unindent from './unindent';
+import unindent from './unindent.js';
 
 describe('unindent', () => {
   test('should unindent lines', () => {

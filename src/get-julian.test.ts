@@ -1,4 +1,3 @@
-// import expect from '#util/expect';
 import getJulian from './get-julian.js';
 
 describe('getJulian', () => {

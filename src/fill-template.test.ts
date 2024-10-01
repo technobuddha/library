@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import fillTemplate from './fill-template';
+import fillTemplate from './fill-template.js';
 
 describe('fillTemplate', () => {
   test('should handle templates', () => {
@@ -9,9 +8,9 @@ describe('fillTemplate', () => {
   });
 
   test('should allow different delimiters', () => {
-    // eslint-disable-next-line no-template-curly-in-string
     expect(
       fillTemplate(
+        // eslint-disable-next-line no-template-curly-in-string
         'The ${object} of ${principle}.',
         { object: 'Statue', principle: 'Liberty' },
         { open: '${', close: '}' },

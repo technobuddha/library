@@ -1,7 +1,7 @@
 import { escapeRegExp, isFunction } from 'lodash-es';
 
-import build from './build';
-import escapeJS from './escape-js';
+import build from './build.js';
+import escapeJS from './escape-js.js';
 
 export type Options = {
   /** The quote character(s) to use */

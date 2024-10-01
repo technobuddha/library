@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import syllables from './syllables';
+import syllables from './syllables.js';
 
 describe('syllables', () => {
   test('should count syllables', () => {

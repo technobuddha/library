@@ -1,7 +1,7 @@
-import isLowerCase from './is-lower-case';
-import isUpperCase from './is-upper-case';
-import toCapitalCase from './to-capital-case';
-import toSmallCase from './to-small-case';
+import isLowerCase from './is-lower-case.js';
+import isUpperCase from './is-upper-case.js';
+import toCapitalCase from './to-capital-case.js';
+import toSmallCase from './to-small-case.js';
 
 /**
  * Attempt to convert the input string into the same case as the target string

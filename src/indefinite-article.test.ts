@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import indefiniteArticle from './indefinite-article';
+import indefiniteArticle from './indefinite-article.js';
 
 describe('indefiniteArticle', () => {
   test('should add select the proper indefinite article', () => {

@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getOccurrenceInMonth from './get-occurrence-in-month';
-import { day } from './constants';
+import { day } from './constants.js';
+import getOccurrenceInMonth from './get-occurrence-in-month.js';
 
 describe('getOccurrenceInMonth', () => {
   test('should find the occurrences of a day in a month', () => {
@@ -88,9 +87,9 @@ describe('getOccurrenceInMonth', () => {
     expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.saturday, 4)!.toString()).toBe(
       new Date('25 Aug 2018').toString(),
     );
-    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.sunday, 5)).toBe(null);
-    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.monday, 5)).toBe(null);
-    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.tuesday, 5)).toBe(null);
+    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.sunday, 5)).toBeNull();
+    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.monday, 5)).toBeNull();
+    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.tuesday, 5)).toBeNull();
     expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.wednesday, 5)!.toString()).toBe(
       new Date('29 Aug 2018').toString(),
     );
@@ -100,7 +99,7 @@ describe('getOccurrenceInMonth', () => {
     expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.friday, 5)!.toString()).toBe(
       new Date('31 Aug 2018').toString(),
     );
-    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.saturday, 5)).toBe(null);
+    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.saturday, 5)).toBeNull();
   });
 
   test('should find the occurrences of a day in a UTC month', () => {
@@ -246,13 +245,13 @@ describe('getOccurrenceInMonth', () => {
     ).toBe(new Date('25 Aug 2018 UTC').toString());
     expect(
       getOccurrenceInMonth(new Date('31 Jul 2018 22:00 GMT-04:00'), day.sunday, 5, { UTC: true }),
-    ).toBe(null);
+    ).toBeNull();
     expect(
       getOccurrenceInMonth(new Date('31 Jul 2018 22:00 GMT-04:00'), day.monday, 5, { UTC: true }),
-    ).toBe(null);
+    ).toBeNull();
     expect(
       getOccurrenceInMonth(new Date('31 Jul 2018 22:00 GMT-04:00'), day.tuesday, 5, { UTC: true }),
-    ).toBe(null);
+    ).toBeNull();
     expect(
       getOccurrenceInMonth(new Date('31 Jul 2018 22:00 GMT-04:00'), day.wednesday, 5, {
         UTC: true,
@@ -270,12 +269,12 @@ describe('getOccurrenceInMonth', () => {
     ).toBe(new Date('31 Aug 2018 UTC').toString());
     expect(
       getOccurrenceInMonth(new Date('31 Jul 2018 22:00 GMT-04:00'), day.saturday, 5, { UTC: true }),
-    ).toBe(null);
+    ).toBeNull();
   });
 
   test('should check for out of range', () => {
-    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.sunday, 0)).toBe(null);
-    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.monday, 6)).toBe(null);
+    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.sunday, 0)).toBeNull();
+    expect(getOccurrenceInMonth(new Date('1 Aug 2018'), day.monday, 6)).toBeNull();
   });
 
   test('should find the last occurrence of a day in a month', () => {

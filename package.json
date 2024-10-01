@@ -24,7 +24,7 @@
     "build": "npm run compile",
     "postbuild": "../../scripts/bootstrap.ts --update @technobuddha/library",
     "compile": "scripts/build.ts",
-    "test": "jest --coverage",
+    "test": "TZ=America/New_York vitest --coverage",
     "lint": "eslint .",
     "pub": "npm-run-all clean build:compile pub:version build:copy build:package pub:publish",
     "pub:version": "npm --no-tag-git-version version prerelease",
@@ -41,7 +41,8 @@
     "directory": "dist"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vite": "^5.4.8"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
   "devDependencies": {
@@ -49,7 +50,12 @@
     "@types/jest": "^29.5.13",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^22.7.4",
-    "jest": "^29.7.0",
-    "prettier": "^3.3.3"
+    "@vitest/coverage-v8": "^2.1.1",
+    "jest-extended": "^4.0.2",
+    "jest-matcher-deep-close-to": "^3.0.2",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
   }
 }

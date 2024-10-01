@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getBeginningOfWeek from './get-beginning-of-week';
-import { month } from './constants';
+import { month } from './constants.js';
+import getBeginningOfWeek from './get-beginning-of-week.js';
 
 describe('getBeginningOfWeek', () => {
   test('should find the beginning of the week', () => {
@@ -41,7 +40,7 @@ describe('getBeginningOfWeek', () => {
     ).toBe(new Date(Date.UTC(1969, month.july, 20)).toString());
   });
 
-  test('should accept alternate start of week', () => {
+  test('should accept alternate UTC start of week', () => {
     expect(
       getBeginningOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
         UTC: true,

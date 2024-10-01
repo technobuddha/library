@@ -1,26 +1,25 @@
-// import expect from '#util/expect';
-import isEven from './is-even';
-import { negativeZero } from './constants';
+import { negativeZero } from './constants.js';
+import isEven from './is-even.js';
 
 describe('isEven', () => {
   test('should work with numbers', () => {
-    expect(isEven(-3)).toBe(false);
-    expect(isEven(-2)).toBe(true);
-    expect(isEven(-1)).toBe(false);
-    expect(isEven(0)).toBe(true);
-    expect(isEven(1)).toBe(false);
-    expect(isEven(2)).toBe(true);
-    expect(isEven(3)).toBe(false);
-    expect(isEven(negativeZero)).toBe(true);
-    expect(isEven(Number.NaN)).toBe(false);
-    expect(isEven(Infinity)).toBe(false);
-    expect(isEven(-Infinity)).toBe(false);
+    expect(isEven(-3)).toBeFalse();
+    expect(isEven(-2)).toBeTrue();
+    expect(isEven(-1)).toBeFalse();
+    expect(isEven(0)).toBeTrue();
+    expect(isEven(1)).toBeFalse();
+    expect(isEven(2)).toBeTrue();
+    expect(isEven(3)).toBeFalse();
+    expect(isEven(negativeZero)).toBeTrue();
+    expect(isEven(Number.NaN)).toBeFalse();
+    expect(isEven(Infinity)).toBeFalse();
+    expect(isEven(-Infinity)).toBeFalse();
   });
 
   test('should work with special numbers', () => {
-    expect(isEven(negativeZero)).toBe(true);
-    expect(isEven(Number.NaN)).toBe(false);
-    expect(isEven(Infinity)).toBe(false);
-    expect(isEven(-Infinity)).toBe(false);
+    expect(isEven(negativeZero)).toBeTrue();
+    expect(isEven(Number.NaN)).toBeFalse();
+    expect(isEven(Infinity)).toBeFalse();
+    expect(isEven(-Infinity)).toBeFalse();
   });
 });

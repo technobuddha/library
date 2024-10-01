@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import root from './root';
+import root from './root.js';
 
 describe('root', () => {
   test('should extract root word', () => {

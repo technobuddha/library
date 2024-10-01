@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toUnderscoreCase from './to-underscore-case';
+import toUnderscoreCase from './to-underscore-case.js';
 
 describe('toUnderscoreCase', () => {
   test('should sentences', () => {

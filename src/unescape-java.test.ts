@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import unescapeJava from './unescape-java';
-import { space } from './constants';
+import { space } from './constants.js';
+import unescapeJava from './unescape-java.js';
 
 // cspell:ignore ΑΒΓΔΕΖ
 describe('unescapeJava', () => {
@@ -16,12 +15,12 @@ describe('unescapeJava', () => {
     expect(unescapeJava('\\0')).toBe('\0');
     expect(unescapeJava('\\00')).toBe('\0');
     expect(unescapeJava('\\000')).toBe('\0');
-    expect(unescapeJava('\\0000')).toBe('\x000');
+    expect(unescapeJava('\\0000')).toBe('\u00000');
   });
 
   test('should unescape unicode', () => {
     expect(unescapeJava('\\u0000')).toBe('\0');
-    expect(unescapeJava('\\u00000')).toBe('\x000');
+    expect(unescapeJava('\\u00000')).toBe('\u00000');
     expect(unescapeJava('\\u0000X')).toBe('\0X');
   });
 

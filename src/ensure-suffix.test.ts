@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import ensureSuffix from './ensure-suffix';
+import ensureSuffix from './ensure-suffix.js';
 
 describe('ensureSuffix', () => {
   test('should add Suffixes when needed', () => {

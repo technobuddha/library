@@ -1,6 +1,6 @@
 import { map } from 'lodash-es';
 
-import build from './build';
+import build from './build.js';
 
 export type BinaryObject =
   | ArrayBuffer

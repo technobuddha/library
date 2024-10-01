@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import diceCoefficient from './dice-coefficient';
+import diceCoefficient from './dice-coefficient.js';
 
 describe('diceCoefficient', () => {
   test('Detect difference between two strings', () => {

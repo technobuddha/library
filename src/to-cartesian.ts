@@ -1,4 +1,4 @@
-import  { type Cartesian, type Polar } from './coordinates';
+import  { type Cartesian, type Polar } from './coordinates.js';
 
 /**
  * Convert polar coordinates to cartesian

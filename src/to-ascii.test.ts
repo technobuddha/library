@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toASCII from './to-ascii';
+import toASCII from './to-ascii.js';
 
 // cspell:ignore ＡＢＣＤ
 describe('toASCII', () => {

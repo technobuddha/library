@@ -1,10 +1,9 @@
-// import expect from '#util/expect';
-import toCartesian from './to-cartesian';
+import toCartesian from './to-cartesian.js';
 
 describe('toCartesian', () => {
   test('converts positive angles', () => {
     expect(toCartesian({ radius: 10, angle: (0 * Math.PI) / 4 })).toBeDeepCloseTo({ x: 10, y: 0 });
-    expect(toCartesian({ radius: 10, angle: (1 * Math.PI) / 4 })).toBeDeepCloseTo({
+    expect(toCartesian({ radius: 10, angle: Number(Math.PI) / 4 })).toBeDeepCloseTo({
       x: 10 / Math.SQRT2,
       y: 10 / Math.SQRT2,
     });

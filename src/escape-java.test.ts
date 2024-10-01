@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import escapeJava from './escape-java';
-import { space } from './constants';
+import { space } from './constants.js';
+import escapeJava from './escape-java.js';
 
 // cspell:ignore unnnn ΑΒΓΔΕΖ
 describe('escapeJava', () => {
@@ -11,7 +10,7 @@ describe('escapeJava', () => {
   test('should escape nul as \\0, unless followed by an octal digit', () => {
     expect(escapeJava('\0')).toBe('\\0');
     expect(escapeJava('\0X')).toBe('\\0X');
-    expect(escapeJava('\x000')).toBe('\\0000');
+    expect(escapeJava('\u00000')).toBe('\\0000');
   });
 
   test('should not escape most ascii', () => {
@@ -20,10 +19,10 @@ describe('escapeJava', () => {
   });
 
   test('should escape non printables as \\unnnn', () => {
-    expect(escapeJava('\x01')).toBe('\\u0001');
-    expect(escapeJava('\x1f')).toBe('\\u001f');
-    expect(escapeJava('\x7f')).toBe('\\u007f');
-    expect(escapeJava('\xa0')).toBe('\\u00a0');
+    expect(escapeJava('\u0001')).toBe('\\u0001');
+    expect(escapeJava('\u001f')).toBe('\\u001f');
+    expect(escapeJava('\u007f')).toBe('\\u007f');
+    expect(escapeJava('\u00a0')).toBe('\\u00a0');
   });
 
   test('should mot escape latin-1 characters', () => {

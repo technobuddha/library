@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import numberToLetter from './number-to-letter';
+import numberToLetter from './number-to-letter.js';
 
 describe('numberToLetter', () => {
   test('should convert numbers', () => {

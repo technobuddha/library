@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import quote from './quote';
+import quote from './quote.js';
 
 describe('quote', () => {
   test('should quote input', () => {

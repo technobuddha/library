@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import escapeGraphQL from './escape-graphql';
-import { space } from './constants';
+import { space } from './constants.js';
+import escapeGraphQL from './escape-graphql.js';
 
 describe('escapeGraphQL', () => {
   test('should escape standard sequences', () => {
@@ -17,10 +16,10 @@ describe('escapeGraphQL', () => {
 
   test(// cspell:disable-next-line
   'should escape non printables as \\unnnn', () => {
-    expect(escapeGraphQL('\x01')).toBe('\\u0001');
-    expect(escapeGraphQL('\x1f')).toBe('\\u001f');
-    expect(escapeGraphQL('\x7f')).toBe('\\u007f');
-    expect(escapeGraphQL('\xa0')).toBe('\\u00a0');
+    expect(escapeGraphQL('\u0001')).toBe('\\u0001');
+    expect(escapeGraphQL('\u001f')).toBe('\\u001f');
+    expect(escapeGraphQL('\u007f')).toBe('\\u007f');
+    expect(escapeGraphQL('\u00a0')).toBe('\\u00a0');
   });
 
   test('should not encode astral characters', () => {

@@ -1,5 +1,6 @@
-import { empty } from './constants';
-import { escu4, isOct } from './escape';
+/* eslint-disable unicorn/prefer-code-point */
+import { empty } from './constants.js';
+import { escu4, isOct } from './escape.js';
 
 /**
  * Escape a string for use in Java
@@ -68,8 +69,8 @@ export function escapeJava(input: string): string {
     } else if (u0 < 0x00010000) {
       output.push(escu4(u0));
     } else {
-      u0 = input.codePointAt(i)!;
-      u1 = input.codePointAt(++i)!;
+      u0 = input.charCodeAt(i)!;
+      u1 = input.charCodeAt(++i)!;
       output.push(escu4(u0), escu4(u1));
     }
   }

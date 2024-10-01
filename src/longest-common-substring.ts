@@ -1,4 +1,4 @@
-import create2DArray from './create-2d-array';
+import create2DArray from './create-2d-array.js';
 
 type Options = {
   /** compare the two strings in case insensitive mode */

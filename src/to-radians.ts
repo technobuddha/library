@@ -1,5 +1,5 @@
-import { type AngleUnit } from './angle-units';
-import { angleUnits } from './angle-units';
+import { type AngleUnit } from './angle-units.js';
+import { angleUnits } from './angle-units.js';
 
 /**
  * Converts degrees to radians.

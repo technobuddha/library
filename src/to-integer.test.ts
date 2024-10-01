@@ -1,9 +1,8 @@
-// import expect from '#util/expect';
-import toInteger from './to-integer';
+import toInteger from './to-integer.js';
 
 describe('toInteger', () => {
   test('should return numbers', () => {
-    expect(toInteger(123456.789)).toEqual(123456);
+    expect(toInteger(123456.789)).toBe(123456);
   });
 
   test('should convert strings', () => {

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import singleline from './singleline';
+import singleline from './singleline.js';
 
 describe('singleline', () => {
   test('should strip newlines', () => {

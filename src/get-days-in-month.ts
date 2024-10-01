@@ -1,5 +1,5 @@
-import { month } from './constants';
-import isLeapYear from './is-leap-year';
+import { month } from './constants.js';
+import isLeapYear from './is-leap-year.js';
 
 type Options = {
   /** Use the UTC timezone */

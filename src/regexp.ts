@@ -1,7 +1,7 @@
 import { compact, zip } from 'lodash-es';
 
-import build from './build';
-import splitChars from './split-chars';
+import build from './build.js';
+import splitChars from './split-chars.js';
 
 export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   const flags = new Set<string>(['u']);

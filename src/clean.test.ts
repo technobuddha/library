@@ -1,7 +1,7 @@
 // cspell:disable
-// import expect from '#util/expect';
-import { clean, cleanEnd, cleanStart } from './clean';
-import { empty } from './constants';
+
+import { clean, cleanEnd, cleanStart } from './clean.js';
+import { empty } from './constants.js';
 
 describe('clean', () => {
   test('should trim whitespace', () => {

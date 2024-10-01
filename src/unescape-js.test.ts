@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import unescapeJS from './unescape-js';
-import { space } from './constants';
+import { space } from './constants.js';
+import unescapeJS from './unescape-js.js';
 
 // cspell:ignore ΑΒΓΔΕΖ
 describe('unescapeJS', () => {
@@ -16,7 +15,7 @@ describe('unescapeJS', () => {
     expect(unescapeJS('\\0')).toBe('\0');
     expect(unescapeJS('\\00')).toBe('\0');
     expect(unescapeJS('\\000')).toBe('\0');
-    expect(unescapeJS('\\0000')).toBe('\x000');
+    expect(unescapeJS('\\0000')).toBe('\u00000');
   });
 
   test('should unescape hex', () => {
@@ -26,13 +25,13 @@ describe('unescapeJS', () => {
 
   test('should unescape unicode', () => {
     expect(unescapeJS('\\u0000')).toBe('\0');
-    expect(unescapeJS('\\u00000')).toBe('\x000');
+    expect(unescapeJS('\\u00000')).toBe('\u00000');
     expect(unescapeJS('\\u0000X')).toBe('\0X');
   });
 
   test('should unescape extended unicode', () => {
     expect(unescapeJS('\\u{0}')).toBe('\0');
-    expect(unescapeJS('\\u{0}0')).toBe('\x000');
+    expect(unescapeJS('\\u{0}0')).toBe('\u00000');
     expect(unescapeJS('\\u{0}X')).toBe('\0X');
   });
 

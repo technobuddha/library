@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import ordinal from './ordinal';
-import { negativeZero } from './constants';
+import { negativeZero } from './constants.js';
+import ordinal from './ordinal.js';
 
 describe('ordinal', () => {
   test('should handle positive numbers', () => {

@@ -1,6 +1,6 @@
 import { isFinite, isNaN } from 'lodash-es';
 
-import { empty, space } from './constants';
+import { empty, space } from './constants.js';
 
 export type Options = OptionsCardinal & OptionsIllion;
 

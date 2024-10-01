@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import getBeginningOfYear from './get-beginning-of-year';
-import { month } from './constants';
+import { month } from './constants.js';
+import getBeginningOfYear from './get-beginning-of-year.js';
 
 describe('getBeginningOfYear', () => {
   test('should compute the beginning of the year', () => {

@@ -1,4 +1,4 @@
-import isSameYear from './is-same-year';
+import isSameYear from './is-same-year.js';
 
 type Options = {
   /** use the UTC timezone */

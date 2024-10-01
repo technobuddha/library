@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toHumanCase from './to-human-case';
+import toHumanCase from './to-human-case.js';
 
 describe('toHumanCase', () => {
   test('should sentences', () => {

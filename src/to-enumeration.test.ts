@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toEnumeration from './to-enumeration';
+import toEnumeration from './to-enumeration.js';
 
 describe('toEnumeration', () => {
   test('determine the matching index', () => {

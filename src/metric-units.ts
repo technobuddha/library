@@ -1,7 +1,7 @@
 import { isNil, round } from 'lodash-es';
 
-import { empty } from './constants';
-import { formatNumber } from './format-number';
+import { empty } from './constants.js';
+import { formatNumber } from './format-number.js';
 
 export type Options = {
   /**
@@ -13,11 +13,11 @@ export type Options = {
    */
   pad?: number;
   /**
-   * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y'])
+   * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'])
    */
   macro?: ArrayLike<string>;
   /**
-   * Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'])
+   * Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y', 'r', 'q'])
    */
   micro?: ArrayLike<string>;
   /**

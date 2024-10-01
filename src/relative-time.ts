@@ -1,15 +1,15 @@
-import addTime from './add-time';
+import addTime from './add-time.js';
 import {
   secondsPerDay,
   secondsPerHour,
   secondsPerMinute,
   space,
   ticksPerSecond,
-} from './constants';
-import floor from './floor';
-import formatDate from './format-date';
-import isSameDay from './is-same-day';
-import plural from './plural';
+} from './constants.js';
+import floor from './floor.js';
+import formatDate from './format-date.js';
+import isSameDay from './is-same-day.js';
+import plural from './plural.js';
 
 export type Options = {
   /** Describe the time difference as a time on a nearby day  */

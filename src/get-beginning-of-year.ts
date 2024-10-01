@@ -1,4 +1,4 @@
-import { month } from './constants';
+import { month } from './constants.js';
 
 type Options = {
   /** Use the UTC timezone */

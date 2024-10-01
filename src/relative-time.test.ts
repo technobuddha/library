@@ -1,7 +1,6 @@
-// import expect from '#util/expect';
-import relativeTime from './relative-time';
-import addTime from './add-time';
-import formatDate from './format-date';
+import addTime from './add-time.js';
+import formatDate from './format-date.js';
+import relativeTime from './relative-time.js';
 
 describe('relativeTime', () => {
   test('should handle future dates', () => {

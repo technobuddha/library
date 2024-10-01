@@ -1,6 +1,6 @@
-// import expect from '#util/expect';
-import fetcher from './fetcher';
 import fetch from 'node-fetch';
+
+import fetcher from './fetcher.js';
 
 const URL_SUCCESS = 'http://www.google.com:80';
 const URL_TIMEOUT = 'http://www.google.com:81';

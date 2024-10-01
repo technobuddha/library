@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import crc32 from './crc32';
+import crc32 from './crc32.js';
 
 describe('crc32', () => {
   test('computes checksum & build table', () => {

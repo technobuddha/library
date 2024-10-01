@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import randomShuffle from './random-shuffle';
+import randomShuffle from './random-shuffle.js';
 
 describe('randomShuffle', () => {
   test('should shuffle a list', () => {

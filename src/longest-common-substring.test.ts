@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import longestCommonSubstring from './longest-common-substring';
+import longestCommonSubstring from './longest-common-substring.js';
 
 describe('longestCommonSubstring', () => {
   test('should handle basic functionality', () => {

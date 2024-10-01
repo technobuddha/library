@@ -1,6 +1,6 @@
-import build from './build';
-import { space } from './constants';
-import escapeHTML from './escape-html';
+import build from './build.js';
+import { space } from './constants.js';
+import escapeHTML from './escape-html.js';
 
 /**
  * Surround text with an HTML tag

@@ -1,6 +1,6 @@
 import { isNaN, isNull, isUndefined } from 'lodash-es';
 
-import toPrimitive from './to-primitive';
+import toPrimitive from './to-primitive.js';
 
 /**
  * Compare two objects

@@ -1,4 +1,4 @@
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 /**
  * Insert a substring into a string

@@ -1,6 +1,6 @@
 import { isNil } from 'lodash-es';
 
-import compareNumbers from './compare-numbers';
+import compareNumbers from './compare-numbers.js';
 
 type Options = {
   /** if true, strings are to be compared case insensitive */

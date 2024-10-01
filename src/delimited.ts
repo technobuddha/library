@@ -1,4 +1,4 @@
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 /**
  * Return a field from a delimited string

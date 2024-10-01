@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import splice from '../splice';
+import splice from './splice.js';
 
 // cspell:disable
 describe('splice', () => {

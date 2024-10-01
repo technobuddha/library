@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import toPrimitive from './to-primitive';
-import { empty, space } from './constants';
+import { empty, space } from './constants.js';
+import toPrimitive from './to-primitive.js';
 
 describe('toPrimitive', () => {
   test('should convert strings', () => {
@@ -16,17 +15,17 @@ describe('toPrimitive', () => {
     expect(toPrimitive(1)).toBe(1);
     expect(toPrimitive(Infinity)).toBe(Infinity);
     expect(toPrimitive(-Infinity)).toBe(-Infinity);
-    expect(Number.isNaN(toPrimitive(Number.NaN))).toBe(true);
+    expect(Number.isNaN(toPrimitive(Number.NaN))).toBeTrue();
   });
 
   test('should handle booleans', () => {
-    expect(toPrimitive(true)).toBe(true);
-    expect(toPrimitive(false)).toBe(false);
+    expect(toPrimitive(true)).toBeTrue();
+    expect(toPrimitive(false)).toBeFalse();
   });
 
   test('should handle null and undefined', () => {
-    expect(toPrimitive(null)).toBe(null);
-    expect(toPrimitive(undefined)).toBeUndefined();
+    expect(toPrimitive(null)).toBeNull();
+    expect(toPrimitive()).toBeUndefined();
   });
 
   test('should handle symbols', () => {
@@ -89,7 +88,7 @@ describe('toPrimitive', () => {
 
   test('should handle hint of string', () => {
     expect(toPrimitive(undefined, 'string')).toBeUndefined();
-    expect(toPrimitive(null, 'string')).toBe(null);
+    expect(toPrimitive(null, 'string')).toBeNull();
     expect(toPrimitive('123', 'string')).toBe('123');
     expect(toPrimitive(123, 'string')).toBe('123');
     expect(toPrimitive(false, 'string')).toBe('false');
@@ -99,20 +98,20 @@ describe('toPrimitive', () => {
 
   test('should handle hint of number', () => {
     expect(toPrimitive(undefined, 'number')).toBeUndefined();
-    expect(toPrimitive(null, 'number')).toBe(null);
+    expect(toPrimitive(null, 'number')).toBeNull();
     expect(toPrimitive('123', 'number')).toBe('123');
     expect(toPrimitive(123, 'number')).toBe(123);
-    expect(toPrimitive(false, 'number')).toBe(false);
+    expect(toPrimitive(false, 'number')).toBeFalse();
     expect(toPrimitive(Symbol.toPrimitive, 'number')).toBe(Symbol.toPrimitive);
     expect(toPrimitive([1, 2, 3], 'number')).toEqual([1, 2, 3]);
   });
 
   test('should handle hint of default', () => {
     expect(toPrimitive(undefined, 'default')).toBeUndefined();
-    expect(toPrimitive(null, 'default')).toBe(null);
+    expect(toPrimitive(null, 'default')).toBeNull();
     expect(toPrimitive('123', 'default')).toBe('123');
     expect(toPrimitive(123, 'default')).toBe(123);
-    expect(toPrimitive(false, 'default')).toBe(false);
+    expect(toPrimitive(false, 'default')).toBeFalse();
     expect(toPrimitive(Symbol.toPrimitive, 'default')).toBe(Symbol.toPrimitive);
     expect(toPrimitive([1, 2, 3], 'default')).toEqual([1, 2, 3]);
   });

@@ -1,9 +1,9 @@
 import { defaultTo, map } from 'lodash-es';
 
-import build from './build';
-import { empty } from './constants';
-import padNumber from './pad-number';
-import splitChars from './split-chars';
+import build from './build.js';
+import { empty } from './constants.js';
+import padNumber from './pad-number.js';
+import splitChars from './split-chars.js';
 
 //#region parse
 type ParseReturn = {
@@ -425,7 +425,8 @@ export function formatNumber(input: number, mask: string): string {
     }
     prec = defaultTo(prec, 0);
 
-    let hex = Number(input).toString(16);
+    // eslint-disable-next-line no-bitwise
+    let hex = (input >>> 0).toString(16);
     hex = hex.padStart(prec, '0');
     if (f === 'X') hex = hex.toUpperCase();
 

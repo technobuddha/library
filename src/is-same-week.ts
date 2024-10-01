@@ -1,6 +1,6 @@
-import { type DayOfWeek } from './constants';
-import { day } from './constants';
-import getBeginningOfWeek from './get-beginning-of-week';
+import { type DayOfWeek } from './constants.js';
+import { day } from './constants.js';
+import getBeginningOfWeek from './get-beginning-of-week.js';
 
 type Options = {
   /** use the UTC timezone */

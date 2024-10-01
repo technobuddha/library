@@ -1,5 +1,5 @@
-import clean from './clean';
-import isWhitespace from './is-whitespace';
+import clean from './clean.js';
+import isWhitespace from './is-whitespace.js';
 
 type Options = {
   /** The delimiter between words */

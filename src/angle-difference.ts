@@ -1,4 +1,4 @@
-import normalizeAngle from './normalize-angle';
+import normalizeAngle from './normalize-angle.js';
 
 /**
  * Computes the difference between startAngle and endAngle (angles in radians).

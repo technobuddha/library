@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-restricted-types */
 import { isNull, isObject, isUndefined } from 'lodash-es';
 
-import isPrimitive from './is-primitive';
+import isPrimitive from './is-primitive.js';
 
 /**
  * Convert an object into its primitive (string, number, etc.) value

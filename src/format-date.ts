@@ -1,11 +1,11 @@
-import { secondsPerHour, secondsPerMinute } from './constants';
-import getDayOfWeek from './get-day-of-week';
-import getDayOfYear from './get-day-of-year';
-import getWeekOfYear from './get-iso-week-of-year';
-import getJulian from './get-julian';
-import getTimezone from './get-timezone';
-import ordinal from './ordinal';
-import padNumber from './pad-number';
+import { secondsPerHour, secondsPerMinute } from './constants.js';
+import getDayOfWeek from './get-day-of-week.js';
+import getDayOfYear from './get-day-of-year.js';
+import getWeekOfYear from './get-iso-week-of-year.js';
+import getJulian from './get-julian.js';
+import getTimezone from './get-timezone.js';
+import ordinal from './ordinal.js';
+import padNumber from './pad-number.js';
 
 const tokenizer =
   /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/gu;

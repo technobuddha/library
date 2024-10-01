@@ -1,15 +1,14 @@
-// import expect from '#util/expect';
-import isUpperCase from '../is-upper-case';
-import { empty, space } from '../constants';
+import { empty, space } from './constants.js';
+import isUpperCase from './is-upper-case.js';
 
 describe('isUpperCase', () => {
   test('should detect lower case', () => {
-    expect(isUpperCase('ABCDEF')).toBe(true);
-    expect(isUpperCase('ABCdef')).toBe(false);
-    expect(isUpperCase('abcdef')).toBe(false);
-    expect(isUpperCase(space)).toBe(false);
-    expect(isUpperCase(empty)).toBe(false);
-    expect(isUpperCase('ABC.DEF')).toBe(false);
-    expect(isUpperCase('$')).toBe(false);
+    expect(isUpperCase('ABCDEF')).toBeTrue();
+    expect(isUpperCase('ABCdef')).toBeFalse();
+    expect(isUpperCase('abcdef')).toBeFalse();
+    expect(isUpperCase(space)).toBeFalse();
+    expect(isUpperCase(empty)).toBeFalse();
+    expect(isUpperCase('ABC.DEF')).toBeFalse();
+    expect(isUpperCase('$')).toBeFalse();
   });
 });

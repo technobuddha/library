@@ -1,4 +1,4 @@
-import toEnumeration from './to-enumeration';
+import toEnumeration from './to-enumeration.js';
 
 type Options = {
   /** An iterable list of values that are "true" */

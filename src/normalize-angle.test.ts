@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import normalizeAngle from './normalize-angle';
+import normalizeAngle from './normalize-angle.js';
 
 describe('normalizeAngle', () => {
   test('converts positive angles', () => {

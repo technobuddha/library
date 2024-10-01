@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import chop from './chop';
+import chop from './chop.js';
 
 describe('chop', () => {
   test('should chop string in to blocks', () => {

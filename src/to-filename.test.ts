@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toFilename from './to-filename';
+import toFilename from './to-filename.js';
 
 describe('toFilename', () => {
   test('should bad characters to be replaces', () => {

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toSmallCase from './to-small-case';
+import toSmallCase from './to-small-case.js';
 
 describe('toSmallCase', () => {
   test('should sentences', () => {

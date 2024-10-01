@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import dataURL from './data-url';
+import dataURL from './data-url.js';
 
 describe('dataURL', () => {
   test('should create dataURLs', () => {

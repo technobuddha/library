@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import indent from './indent';
+import indent from './indent.js';
 
 describe('indent', () => {
   test('should indent lines', () => {

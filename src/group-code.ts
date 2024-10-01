@@ -1,5 +1,5 @@
-import sortOrder from './sort-order';
-import toASCII from './to-ascii';
+import sortOrder from './sort-order.js';
+import toASCII from './to-ascii.js';
 
 /**
  * Determine the group code (A-Z, [] or #) to place an item under

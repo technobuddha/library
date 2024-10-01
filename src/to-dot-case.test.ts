@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toDotCase from './to-dot-case';
+import toDotCase from './to-dot-case.js';
 
 describe('toDotCase', () => {
   test('should sentences', () => {

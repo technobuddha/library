@@ -1,5 +1,5 @@
-import { empty } from './constants';
-import { escu4 } from './escape';
+import { empty } from './constants.js';
+import { escu4 } from './escape.js';
 
 /**
  * Escape a string for use in GraphQL

@@ -1,5 +1,5 @@
-// import expect from '#util/expect';
-import unquote from './unquote';
+//
+import unquote from './unquote.js';
 
 describe('unquote', () => {
   test('should quote input', () => {

@@ -1,7 +1,7 @@
 import { isArray, isArrayLike, isBoolean, isNull, isNumber, isString, zip } from 'lodash-es';
 
-import { empty, space } from './constants';
-import escapeGraphQL from './escape-graphql';
+import { empty, space } from './constants.js';
+import escapeGraphQL from './escape-graphql.js';
 
 type GraphQLObject = { [Key in string]: GraphQLValue };
 type GraphQLArray = GraphQLValue[];

@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import splitChars from './split-chars';
-import { empty } from './constants';
+import { empty } from './constants.js';
+import splitChars from './split-chars.js';
 
 // cspell:ignore abcdefghi
 describe('splitChars', () => {

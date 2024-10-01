@@ -1,8 +1,8 @@
-import { isNumber } from 'lodash';
+import { isNumber } from 'lodash-es';
 
-import  { type DayOfWeek } from './constants';
-import { day,daysPerWeek, month } from './constants';
-import modulo from './modulo';
+import { type DayOfWeek } from './constants.js';
+import { day, daysPerWeek, month } from './constants.js';
+import modulo from './modulo.js';
 
 type GetWeeksInYearOptions = {
   /** Use the UTC timezone */

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toTitleCase from './to-title-case';
+import toTitleCase from './to-title-case.js';
 
 describe('toTitleCase', () => {
   test('should handle sentences', () => {

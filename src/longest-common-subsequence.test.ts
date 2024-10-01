@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import longestCommonSubsequence from './longest-common-subsequence';
+import longestCommonSubsequence from './longest-common-subsequence.js';
 
 describe('longestCommonSubsequence', () => {
   test('should handle basic functionality', () => {

@@ -1,6 +1,6 @@
-import  { type DayOfWeek } from './constants';
-import { day,daysPerWeek } from './constants';
-import modulo from './modulo';
+import  { type DayOfWeek } from './constants.js';
+import { day,daysPerWeek } from './constants.js';
+import modulo from './modulo.js';
 
 type Options = {
   /** Use the UTC timezone */

@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import formatDate from './format-date';
-import getTimezone from './get-timezone';
+import formatDate from './format-date.js';
+import getTimezone from './get-timezone.js';
 
 describe('formatNumber', () => {
   test('support the h format', () => {
@@ -236,7 +235,7 @@ describe('formatNumber', () => {
     expect(formatDate(new Date('2000-01-01T00:00:00'))).toBe('2000-01-01 00:00:00.000');
   });
 
-  test('support default', () => {
+  test('support standard masks', () => {
     const d = new Date('2000-01-01T00:00:00Z');
     expect(formatDate(d, 'default', { UTC: true })).toBe('2000-01-01 00:00:00.000');
     expect(formatDate(d, 'rfc1123', { UTC: true })).toBe('Sat, 01 Jan 2000 00:00:00 GMT');

@@ -1,11 +1,12 @@
-// import expect from '#util/expect';
-import unescapeC from './unescape-c';
-import { space } from './constants';
+import { space } from './constants.js';
+import unescapeC from './unescape-c.js';
 
 // cspell:ignore ΑΒΓΔΕΖ
 describe('unescapeC', () => {
   test('should unescape standard sequences', () => {
-    expect(unescapeC('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"\\?\\e')).toBe('\x07\b\f\n\r\t\v\\\'"?\x1B');
+    expect(unescapeC('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"\\?\\e')).toBe(
+      '\u0007\b\f\n\r\t\v\\\'"?\u001B',
+    );
   });
 
   test('should support non-standard sequences', () => {
@@ -16,7 +17,7 @@ describe('unescapeC', () => {
     expect(unescapeC('\\0')).toBe('\0');
     expect(unescapeC('\\00')).toBe('\0');
     expect(unescapeC('\\000')).toBe('\0');
-    expect(unescapeC('\\0000')).toBe('\x000');
+    expect(unescapeC('\\0000')).toBe('\u00000');
   });
 
   test('should unescape hex', () => {
@@ -42,13 +43,13 @@ describe('unescapeC', () => {
 
   test('should unescape unicode', () => {
     expect(unescapeC('\\u0000')).toBe('\0');
-    expect(unescapeC('\\u00000')).toBe('\x000');
+    expect(unescapeC('\\u00000')).toBe('\u00000');
     expect(unescapeC('\\u0000X')).toBe('\0X');
   });
 
   test('should unescape extended unicode', () => {
     expect(unescapeC('\\U00000000')).toBe('\0');
-    expect(unescapeC('\\U000000000')).toBe('\x000');
+    expect(unescapeC('\\U000000000')).toBe('\u00000');
     expect(unescapeC('\\U00000000X')).toBe('\0X');
   });
 

@@ -1,5 +1,5 @@
-import build from './build';
-import { escu4, escUU, escx2, isHex, isOct } from './escape';
+import build from './build.js';
+import { escu4, escUU, escx2, isHex, isOct } from './escape.js';
 
 /**
  * Escape a string for use in Javascript

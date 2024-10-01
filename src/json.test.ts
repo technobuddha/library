@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import { replacer, reviver, specialBegin, specialFinish } from './json';
+import { replacer, reviver, specialBegin, specialFinish } from './json.js';
 
 describe('clearObject', () => {
   describe('replacer', () => {

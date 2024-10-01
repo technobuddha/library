@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import delimited from './delimited';
-import { empty } from './constants';
+import { empty } from './constants.js';
+import delimited from './delimited.js';
 
 describe('delimited', () => {
   test('should extract from delimited string', () => {

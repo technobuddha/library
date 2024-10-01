@@ -1,4 +1,4 @@
-import variance from './variance';
+import variance from './variance.js';
 
 /**
  * Returns the sample standard deviation of the arguments.  For a definition of

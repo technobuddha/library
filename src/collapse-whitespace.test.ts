@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import collapseWhitespace from './collapse-whitespace';
+import collapseWhitespace from './collapse-whitespace.js';
 
 describe('collapseWhitespace', () => {
   test('should collapse whitespace', () => {

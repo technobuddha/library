@@ -1,7 +1,7 @@
 import { escapeRegExp } from 'lodash-es';
 
-import { empty, space } from './constants';
-import getIndent from './get-indent';
+import { empty, space } from './constants.js';
+import getIndent from './get-indent.js';
 
 export type Options = {
   /** the indentation character */
@@ -19,7 +19,7 @@ export function unindent(input: string, { indenter = space }: Options = {}): str
 
   if (indent === 0) return input;
 
-  return input.replaceAll(new RegExp(`^(${escapeRegExp(indenter)}){${indent}}`, 'mu'), empty);
+  return input.replaceAll(new RegExp(`^(${escapeRegExp(indenter)}){${indent}}`, 'mug'), empty);
 }
 
 export default unindent;

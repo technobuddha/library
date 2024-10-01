@@ -1,5 +1,6 @@
-// import expect from '#util/expect';
-import angleDifference from './angle-difference';
+/* eslint-disable no-implicit-coercion */
+
+import angleDifference from './angle-difference.js';
 
 describe('angleDifference', () => {
   test('should compute positive angles', () => {

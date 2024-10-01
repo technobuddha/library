@@ -1,5 +1,5 @@
-import matchCase from './match-case';
-import removeDiacritics from './remove-diacritics';
+import matchCase from './match-case.js';
+import removeDiacritics from './remove-diacritics.js';
 
 /**
  * Determine the possessive form of a word

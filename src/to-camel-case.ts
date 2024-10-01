@@ -1,4 +1,4 @@
-import toSmallCase from './to-small-case';
+import toSmallCase from './to-small-case.js';
 
 /**
  * Convert an identifier string to a camel case

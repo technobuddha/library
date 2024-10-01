@@ -1,7 +1,7 @@
 import { isDate } from 'lodash-es';
 
-import { empty } from './constants';
-import padNumber from './pad-number';
+import { empty } from './constants.js';
+import padNumber from './pad-number.js';
 
 export type Options = {
   /** Display 'GMT' in time zones */

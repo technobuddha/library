@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import { compareNumbers } from './compare-numbers';
+import { compareNumbers } from './compare-numbers.js';
 
 describe('compareNumbers', () => {
   test('should compare strings', () => {

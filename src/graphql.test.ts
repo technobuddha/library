@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import graphQL from './graphql';
+import graphQL from './graphql.js';
 
 describe('graphQL', () => {
   test('should output numbers', () => {

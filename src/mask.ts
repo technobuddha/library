@@ -1,5 +1,5 @@
-import { space } from './constants';
-import splitChars from './split-chars';
+import { space } from './constants.js';
+import splitChars from './split-chars.js';
 
 type Options = {
   /** if the mask is longer, fill with character */

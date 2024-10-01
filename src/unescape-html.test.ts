@@ -1,6 +1,5 @@
-// import expect from '#util/expect';
-import unescapeHTML from './unescape-html';
-import { space } from './constants';
+import { space } from './constants.js';
+import unescapeHTML from './unescape-html.js';
 
 // cspell:ignore ΑΒΓΔΕΖ ΑΒЖК
 describe('unescapeHTML', () => {
@@ -10,16 +9,16 @@ describe('unescapeHTML', () => {
 
   test('should unescape control characters', () => {
     expect(unescapeHTML('&#0;')).toBe('\0');
-    expect(unescapeHTML('&#1;')).toBe('\x01');
-    expect(unescapeHTML('&#127;')).toBe('\x7f');
-    expect(unescapeHTML('&#159;')).toBe('\x9f');
+    expect(unescapeHTML('&#1;')).toBe('\u0001');
+    expect(unescapeHTML('&#127;')).toBe('\u007f');
+    expect(unescapeHTML('&#159;')).toBe('\u009f');
   });
 
   test('should unescape hex control characters', () => {
     expect(unescapeHTML('&#x0;')).toBe('\0');
-    expect(unescapeHTML('&#x1;')).toBe('\x01');
-    expect(unescapeHTML('&#x7F;')).toBe('\x7f');
-    expect(unescapeHTML('&#x9f;')).toBe('\x9f');
+    expect(unescapeHTML('&#x1;')).toBe('\u0001');
+    expect(unescapeHTML('&#x7F;')).toBe('\u007f');
+    expect(unescapeHTML('&#x9f;')).toBe('\u009f');
   });
 
   test('should not unescape most ascii', () => {

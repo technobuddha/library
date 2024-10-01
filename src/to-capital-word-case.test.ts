@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toCapitalWordCase from './to-capital-word-case';
+import toCapitalWordCase from './to-capital-word-case.js';
 
 describe('toCapitalWordCase', () => {
   test('should sentences', () => {

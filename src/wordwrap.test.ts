@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import wordwrap from '../wordwrap';
+import wordwrap from './wordwrap.js';
 
 // cspell:ignore nbove
 describe('wordwrap', () => {

@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import parseDate from './parse-date';
+import parseDate from './parse-date.js';
 
 describe('parseDate', () => {
   test('should parse mdy (num)', () => {

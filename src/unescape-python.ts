@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-code-point */
 /**
  * Unescape a string encoded in Python style
  *
@@ -22,9 +23,9 @@ export function unescapePython(input: string): string {
       if (c === "'") return "'";
       if (c === '\\') return '\\';
       if (c === 'N') throw new Error('N escape is not supported.');
-      if (c >= '0' && c <= '7') return String.fromCodePoint(Number.parseInt(escape, 8));
-      if (c === 'x') return String.fromCodePoint(Number.parseInt(escape.slice(2), 16));
-      if (c === 'U' || c === 'u') return String.fromCodePoint(Number.parseInt(escape.slice(2), 16));
+      if (c >= '0' && c <= '7') return String.fromCharCode(Number.parseInt(escape, 8));
+      if (c === 'x') return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
+      if (c === 'U' || c === 'u') return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
 
       return escape;
     },

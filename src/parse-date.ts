@@ -1,7 +1,7 @@
 import { compact, isNil, zip } from 'lodash-es';
 
-import build from './build';
-import { month } from './constants';
+import build from './build.js';
+import { month } from './constants.js';
 
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   return new RegExp(

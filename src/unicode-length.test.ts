@@ -1,9 +1,8 @@
-// import expect from '#util/expect';
-import unicodeLength from './unicode-length';
+import unicodeLength from './unicode-length.js';
 
 describe('unicodeLength', () => {
   test('should detect surrogates', () => {
-    expect('😀😁😂😺😸😹'.length).toBe(12);
+    expect('😀😁😂😺😸😹').toHaveLength(12);
     expect(unicodeLength('😀😁😂😺😸😹')).toBe(6);
   });
 });

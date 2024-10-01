@@ -1,6 +1,6 @@
 import { isFinite } from 'lodash-es';
 
-import { empty } from './constants';
+import { empty } from './constants.js';
 
 export type Options = {
   /** If true, the last block will be omitted if has insufficient characters **/

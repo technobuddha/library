@@ -1,5 +1,4 @@
-// import expect from '#util/expect';
-import toDashCase from './to-dash-case';
+import toDashCase from './to-dash-case.js';
 
 describe('toDashCase', () => {
   test('should sentences', () => {

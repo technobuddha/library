@@ -1,4 +1,4 @@
-import modulo from './modulo';
+import modulo from './modulo.js';
 
 /**
  * Normalizes an angle to be in range [0-PI*2]. Angles outside this range will
