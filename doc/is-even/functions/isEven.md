@@ -24,4 +24,4 @@ true if the number is an even integer
 
 ## Defined in
 
-is-even.ts:11
+[is-even.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-even.ts#L11)

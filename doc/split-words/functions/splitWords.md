@@ -34,4 +34,4 @@ delimiter whitespace
 
 ## Defined in
 
-split-words.ts:17
+[split-words.ts:17](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/split-words.ts#L17)

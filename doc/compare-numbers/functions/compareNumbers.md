@@ -28,4 +28,4 @@ Second object
 
 ## Defined in
 
-compare-numbers.ts:10
+[compare-numbers.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/compare-numbers.ts#L10)

@@ -26,4 +26,4 @@ Angle in radians.
 
 ## Defined in
 
-to-radians.ts:10
+[to-radians.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-radians.ts#L10)

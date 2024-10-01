@@ -29,4 +29,4 @@ The smallest integer greater than or equal to {@code input}.
 
 ## Defined in
 
-ceil.ts:15
+[ceil.ts:15](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/ceil.ts#L15)

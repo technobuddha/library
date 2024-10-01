@@ -24,4 +24,4 @@ the string escapes for use in python
 
 ## Defined in
 
-escape-python.ts:10
+[escape-python.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/escape-python.ts#L10)

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-mersenne-twister.ts:70
+[mersenne-twister.ts:70](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L70)
 
 ## Properties
 
@@ -32,7 +32,7 @@ mersenne-twister.ts:70
 
 #### Defined in
 
-mersenne-twister.ts:68
+[mersenne-twister.ts:68](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L68)
 
 ## Methods
 
@@ -46,7 +46,7 @@ mersenne-twister.ts:68
 
 #### Defined in
 
-mersenne-twister.ts:161
+[mersenne-twister.ts:161](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L161)
 
 ***
 
@@ -60,7 +60,7 @@ mersenne-twister.ts:161
 
 #### Defined in
 
-mersenne-twister.ts:129
+[mersenne-twister.ts:129](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L129)
 
 ***
 
@@ -74,7 +74,7 @@ mersenne-twister.ts:129
 
 #### Defined in
 
-mersenne-twister.ts:166
+[mersenne-twister.ts:166](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L166)
 
 ***
 
@@ -88,7 +88,7 @@ mersenne-twister.ts:166
 
 #### Defined in
 
-mersenne-twister.ts:172
+[mersenne-twister.ts:172](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L172)
 
 ***
 
@@ -102,7 +102,7 @@ mersenne-twister.ts:172
 
 #### Defined in
 
-mersenne-twister.ts:178
+[mersenne-twister.ts:178](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L178)
 
 ***
 
@@ -116,7 +116,7 @@ mersenne-twister.ts:178
 
 #### Defined in
 
-mersenne-twister.ts:184
+[mersenne-twister.ts:184](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L184)
 
 ***
 
@@ -134,7 +134,7 @@ mersenne-twister.ts:184
 
 #### Defined in
 
-mersenne-twister.ts:95
+[mersenne-twister.ts:95](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L95)
 
 ***
 
@@ -152,7 +152,7 @@ mersenne-twister.ts:95
 
 #### Defined in
 
-mersenne-twister.ts:80
+[mersenne-twister.ts:80](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L80)
 
 ***
 
@@ -170,4 +170,4 @@ mersenne-twister.ts:80
 
 #### Defined in
 
-mersenne-twister.ts:74
+[mersenne-twister.ts:74](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mersenne-twister.ts#L74)

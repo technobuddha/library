@@ -24,4 +24,4 @@ the decoded strings (which is encoded as UTF-16 by javascript)
 
 ## Defined in
 
-decode-utf8.ts:10
+[decode-utf8.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/decode-utf8.ts#L10)

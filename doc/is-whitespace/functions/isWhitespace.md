@@ -24,4 +24,4 @@ true, if all characters in the string are white space
 
 ## Defined in
 
-is-whitespace.ts:7
+[is-whitespace.ts:7](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-whitespace.ts#L7)

@@ -24,4 +24,4 @@ the identifier in dot form
 
 ## Defined in
 
-to-dot-case.ts:7
+[to-dot-case.ts:7](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-dot-case.ts#L7)

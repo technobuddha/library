@@ -10,4 +10,4 @@
 
 ## Defined in
 
-angle-units.ts:1
+[angle-units.ts:1](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/angle-units.ts#L1)

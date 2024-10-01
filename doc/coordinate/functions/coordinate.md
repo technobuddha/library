@@ -30,4 +30,4 @@ see [Options](../type-aliases/Options.md)
 
 ## Defined in
 
-coordinate.ts:20
+[coordinate.ts:20](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/coordinate.ts#L20)

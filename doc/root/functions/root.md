@@ -28,4 +28,4 @@ The root word
 
 ## Defined in
 
-root.ts:17
+[root.ts:17](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/root.ts#L17)

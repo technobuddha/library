@@ -34,4 +34,4 @@ UTC false
 
 ## Defined in
 
-get-beginning-of-year.ts:16
+[get-beginning-of-year.ts:16](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-beginning-of-year.ts#L16)

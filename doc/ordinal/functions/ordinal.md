@@ -22,4 +22,4 @@ The number to convert
 
 ## Defined in
 
-ordinal.ts:17
+[ordinal.ts:17](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/ordinal.ts#L17)

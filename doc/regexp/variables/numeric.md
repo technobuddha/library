@@ -12,4 +12,4 @@ validate a valid number
 
 ## Defined in
 
-regexp.ts:56
+[regexp.ts:56](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/regexp.ts#L56)

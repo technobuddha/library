@@ -46,4 +46,4 @@ version false
 
 ## Defined in
 
-compare-strings.ts:26
+[compare-strings.ts:26](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/compare-strings.ts#L26)

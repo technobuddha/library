@@ -34,4 +34,4 @@ indenter space
 
 ## Defined in
 
-get-indent.ts:18
+[get-indent.ts:18](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-indent.ts#L18)

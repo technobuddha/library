@@ -32,4 +32,4 @@ string describing the time difference between the two dates
 
 ## Defined in
 
-relative-time.ts:33
+[relative-time.ts:33](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/relative-time.ts#L33)

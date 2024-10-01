@@ -28,4 +28,4 @@ The plural form of the input, or if a quantity is supplied - the quantity and th
 
 ## Defined in
 
-plural.ts:13
+[plural.ts:13](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/plural.ts#L13)

@@ -27,4 +27,4 @@ not a valid number).
 
 ## Defined in
 
-variance.ts:12
+[variance.ts:12](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/variance.ts#L12)

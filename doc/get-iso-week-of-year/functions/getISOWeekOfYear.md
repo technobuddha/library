@@ -48,4 +48,4 @@ firstDayOfWeek Monday
 
 ## Defined in
 
-get-iso-week-of-year.ts:25
+[get-iso-week-of-year.ts:25](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-iso-week-of-year.ts#L25)

@@ -24,4 +24,4 @@ true, if all characters in the string are punctuation
 
 ## Defined in
 
-is-punctuation.ts:9
+[is-punctuation.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-punctuation.ts#L9)

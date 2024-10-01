@@ -24,4 +24,4 @@ digits from the string
 
 ## Defined in
 
-extract-digits.ts:9
+[extract-digits.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/extract-digits.ts#L9)

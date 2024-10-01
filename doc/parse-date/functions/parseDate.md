@@ -29,4 +29,4 @@ back to new Date(text)
 
 ## Defined in
 
-parse-date.ts:56
+[parse-date.ts:56](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/parse-date.ts#L56)

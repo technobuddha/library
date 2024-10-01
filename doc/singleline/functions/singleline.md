@@ -20,4 +20,4 @@
 
 ## Defined in
 
-singleline.ts:5
+[singleline.ts:5](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/singleline.ts#L5)

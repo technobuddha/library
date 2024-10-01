@@ -40,4 +40,4 @@ firstDayOfWeek Sunday
 
 ## Defined in
 
-get-end-of-week.ts:21
+[get-end-of-week.ts:21](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-end-of-week.ts#L21)

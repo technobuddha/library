@@ -36,4 +36,4 @@ The best guess is made to try to figure out what case the target is in:
 
 ## Defined in
 
-match-case.ts:19
+[match-case.ts:19](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/match-case.ts#L19)

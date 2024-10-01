@@ -24,4 +24,4 @@ the identifier in pascal case
 
 ## Defined in
 
-to-pascal-case.ts:9
+[to-pascal-case.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-pascal-case.ts#L9)

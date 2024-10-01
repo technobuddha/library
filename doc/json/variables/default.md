@@ -68,4 +68,4 @@ the decoded value
 
 ## Defined in
 
-json.ts:65
+[json.ts:65](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/json.ts#L65)

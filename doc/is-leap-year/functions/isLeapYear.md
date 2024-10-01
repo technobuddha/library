@@ -28,4 +28,4 @@ true, if the specified year is a leap year
 
 ## Defined in
 
-is-leap-year.ts:15
+[is-leap-year.ts:15](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-leap-year.ts#L15)

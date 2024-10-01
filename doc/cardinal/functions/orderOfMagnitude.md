@@ -39,4 +39,4 @@ numbers up to 1e308, which limits the numbers that this method can represent to 
 
 ## Defined in
 
-cardinal.ts:487
+[cardinal.ts:487](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/cardinal.ts#L487)

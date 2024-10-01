@@ -24,4 +24,4 @@ The number of groups to output, each group consists of three digits.
 
 ## Defined in
 
-cardinal.ts:7
+[cardinal.ts:7](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/cardinal.ts#L7)

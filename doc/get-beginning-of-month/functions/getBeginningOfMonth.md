@@ -34,4 +34,4 @@ UTC false
 
 ## Defined in
 
-get-beginning-of-month.ts:14
+[get-beginning-of-month.ts:14](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-beginning-of-month.ts#L14)

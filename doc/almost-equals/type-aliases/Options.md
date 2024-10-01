@@ -18,4 +18,4 @@ Tolerance range. If specified, should be greater than 0. *
 
 ## Defined in
 
-almost-equals.ts:1
+[almost-equals.ts:1](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/almost-equals.ts#L1)

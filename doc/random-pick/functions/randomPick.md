@@ -38,4 +38,4 @@ random  Math.random
 
 ## Defined in
 
-random-pick.ts:9
+[random-pick.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/random-pick.ts#L9)

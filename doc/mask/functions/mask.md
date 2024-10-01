@@ -41,4 +41,4 @@ missing space
 
 ## Defined in
 
-mask.ts:23
+[mask.ts:23](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/mask.ts#L23)

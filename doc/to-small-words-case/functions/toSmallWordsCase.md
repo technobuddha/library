@@ -32,4 +32,4 @@ upperCase false
 
 ## Defined in
 
-to-small-words-case.ts:13
+[to-small-words-case.ts:13](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-small-words-case.ts#L13)

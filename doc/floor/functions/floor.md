@@ -31,4 +31,4 @@ The largest integer less than or equal to {@code num}.
 
 ## Defined in
 
-floor.ts:18
+[floor.ts:18](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/floor.ts#L18)

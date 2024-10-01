@@ -36,4 +36,4 @@ Will encode Date, RegExp and BigInt objects.  The numeric values 'Infinity' and 
 
 ## Defined in
 
-json.ts:15
+[json.ts:15](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/json.ts#L15)

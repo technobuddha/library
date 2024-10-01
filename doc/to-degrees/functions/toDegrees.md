@@ -24,4 +24,4 @@ angle in degrees
 
 ## Defined in
 
-to-degrees.ts:10
+[to-degrees.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-degrees.ts#L10)

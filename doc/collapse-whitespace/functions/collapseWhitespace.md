@@ -26,4 +26,4 @@ If true, remove leading and trailing whitespace
 
 ## Defined in
 
-collapse-whitespace.ts:15
+[collapse-whitespace.ts:15](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/collapse-whitespace.ts#L15)

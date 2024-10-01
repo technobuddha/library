@@ -26,4 +26,4 @@ The characters(s) to remove
 
 ## Defined in
 
-clean.ts:72
+[clean.ts:72](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/clean.ts#L72)

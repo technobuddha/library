@@ -30,4 +30,4 @@ common substring with size greater than the length of the string.
 
 ## Defined in
 
-longest-common-substring.ts:19
+[longest-common-substring.ts:19](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/longest-common-substring.ts#L19)

@@ -24,4 +24,4 @@ true is the number is negative zero
 
 ## Defined in
 
-is-negative-zero.ts:7
+[is-negative-zero.ts:7](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-negative-zero.ts#L7)

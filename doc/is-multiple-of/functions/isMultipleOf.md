@@ -28,4 +28,4 @@ true, if the number is a multiple
 
 ## Defined in
 
-is-multiple-of.ts:10
+[is-multiple-of.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-multiple-of.ts#L10)

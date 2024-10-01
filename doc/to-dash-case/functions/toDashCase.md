@@ -24,4 +24,4 @@ the identifier in dash form
 
 ## Defined in
 
-to-dash-case.ts:7
+[to-dash-case.ts:7](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-dash-case.ts#L7)

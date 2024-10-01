@@ -28,4 +28,4 @@ Julian dates are always in the UTC timezone
 
 ## Defined in
 
-get-julian.ts:11
+[get-julian.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-julian.ts#L11)

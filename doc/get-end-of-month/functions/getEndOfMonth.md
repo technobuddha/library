@@ -34,4 +34,4 @@ UTC false
 
 ## Defined in
 
-get-end-of-month.ts:16
+[get-end-of-month.ts:16](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-end-of-month.ts#L16)

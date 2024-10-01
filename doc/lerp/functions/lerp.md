@@ -34,4 +34,4 @@ The interpolated value between a and b.
 
 ## Defined in
 
-lerp.ts:11
+[lerp.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/lerp.ts#L11)

@@ -34,4 +34,4 @@ The input argument is mutated in place
 
 ## Defined in
 
-clear-object.ts:10
+[clear-object.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/clear-object.ts#L10)

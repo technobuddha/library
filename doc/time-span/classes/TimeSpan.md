@@ -20,7 +20,7 @@ Store and manipulate a duration of time
 
 #### Defined in
 
-time-span.ts:28
+[time-span.ts:28](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L28)
 
 ### new TimeSpan()
 
@@ -36,7 +36,7 @@ time-span.ts:28
 
 #### Defined in
 
-time-span.ts:29
+[time-span.ts:29](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L29)
 
 ### new TimeSpan()
 
@@ -56,7 +56,7 @@ time-span.ts:29
 
 #### Defined in
 
-time-span.ts:30
+[time-span.ts:30](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L30)
 
 ### new TimeSpan()
 
@@ -78,7 +78,7 @@ time-span.ts:30
 
 #### Defined in
 
-time-span.ts:31
+[time-span.ts:31](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L31)
 
 ### new TimeSpan()
 
@@ -102,7 +102,7 @@ time-span.ts:31
 
 #### Defined in
 
-time-span.ts:32
+[time-span.ts:32](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L32)
 
 ### new TimeSpan()
 
@@ -118,7 +118,7 @@ time-span.ts:32
 
 #### Defined in
 
-time-span.ts:33
+[time-span.ts:33](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L33)
 
 ## Accessors
 
@@ -134,7 +134,7 @@ Get the days portion
 
 #### Defined in
 
-time-span.ts:109
+[time-span.ts:109](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L109)
 
 ***
 
@@ -150,7 +150,7 @@ Get the hours portion
 
 #### Defined in
 
-time-span.ts:116
+[time-span.ts:116](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L116)
 
 ***
 
@@ -166,7 +166,7 @@ Get the milliseconds portion
 
 #### Defined in
 
-time-span.ts:144
+[time-span.ts:144](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L144)
 
 ***
 
@@ -182,7 +182,7 @@ Get the minutes portion
 
 #### Defined in
 
-time-span.ts:125
+[time-span.ts:125](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L125)
 
 ***
 
@@ -198,7 +198,7 @@ Get the seconds portion
 
 #### Defined in
 
-time-span.ts:134
+[time-span.ts:134](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L134)
 
 ***
 
@@ -214,7 +214,7 @@ Get the total number of ticks (milliseconds)
 
 #### Defined in
 
-time-span.ts:151
+[time-span.ts:151](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L151)
 
 ***
 
@@ -230,7 +230,7 @@ Get the total number of days
 
 #### Defined in
 
-time-span.ts:158
+[time-span.ts:158](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L158)
 
 ***
 
@@ -246,7 +246,7 @@ Get the total number of hours
 
 #### Defined in
 
-time-span.ts:165
+[time-span.ts:165](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L165)
 
 ***
 
@@ -262,7 +262,7 @@ Get the total number of milliseconds
 
 #### Defined in
 
-time-span.ts:186
+[time-span.ts:186](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L186)
 
 ***
 
@@ -278,7 +278,7 @@ Get the total number of minutes
 
 #### Defined in
 
-time-span.ts:172
+[time-span.ts:172](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L172)
 
 ***
 
@@ -294,7 +294,7 @@ Get the total number of seconds
 
 #### Defined in
 
-time-span.ts:179
+[time-span.ts:179](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L179)
 
 ## Methods
 
@@ -318,7 +318,7 @@ a TimeSpan that is the sum of two timespans
 
 #### Defined in
 
-time-span.ts:260
+[time-span.ts:260](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L260)
 
 ***
 
@@ -342,7 +342,7 @@ the formatted TimeSpan
 
 #### Defined in
 
-time-span.ts:196
+[time-span.ts:196](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L196)
 
 ***
 
@@ -360,7 +360,7 @@ formatted string
 
 #### Defined in
 
-time-span.ts:250
+[time-span.ts:250](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L250)
 
 ***
 
@@ -388,4 +388,4 @@ Second TimeSpan
 
 #### Defined in
 
-time-span.ts:271
+[time-span.ts:271](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/time-span.ts#L271)

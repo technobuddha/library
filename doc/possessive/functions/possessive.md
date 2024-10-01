@@ -24,4 +24,4 @@ the posessive form of the word
 
 ## Defined in
 
-possessive.ts:10
+[possessive.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/possessive.ts#L10)

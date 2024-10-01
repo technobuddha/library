@@ -34,4 +34,4 @@ weekOneIncludes Thursday
 
 ## Defined in
 
-get-iso-weeks-in-year.ts:22
+[get-iso-weeks-in-year.ts:22](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-iso-weeks-in-year.ts#L22)

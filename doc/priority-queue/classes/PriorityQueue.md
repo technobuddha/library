@@ -35,7 +35,7 @@ Initial contents of the queue
 
 #### Defined in
 
-priority-queue.ts:10
+[priority-queue.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L10)
 
 ## Accessors
 
@@ -53,7 +53,7 @@ number of element in the queue
 
 #### Defined in
 
-priority-queue.ts:60
+[priority-queue.ts:60](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L60)
 
 ## Methods
 
@@ -71,7 +71,7 @@ generator function
 
 #### Defined in
 
-priority-queue.ts:50
+[priority-queue.ts:50](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L50)
 
 ***
 
@@ -99,7 +99,7 @@ array of transformed queue elements
 
 #### Defined in
 
-priority-queue.ts:70
+[priority-queue.ts:70](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L70)
 
 ***
 
@@ -117,7 +117,7 @@ queue element
 
 #### Defined in
 
-priority-queue.ts:40
+[priority-queue.ts:40](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L40)
 
 ***
 
@@ -139,7 +139,7 @@ element to be added
 
 #### Defined in
 
-priority-queue.ts:30
+[priority-queue.ts:30](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L30)
 
 ***
 
@@ -161,4 +161,4 @@ function to compare elements of the queue
 
 #### Defined in
 
-priority-queue.ts:81
+[priority-queue.ts:81](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/priority-queue.ts#L81)

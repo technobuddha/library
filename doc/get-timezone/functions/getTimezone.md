@@ -45,4 +45,4 @@ Z true
 
 ## Defined in
 
-get-timezone.ts:24
+[get-timezone.ts:24](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-timezone.ts#L24)

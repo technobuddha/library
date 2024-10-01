@@ -24,4 +24,4 @@ the string with escapes resolved
 
 ## Defined in
 
-unescape-js.ts:7
+[unescape-js.ts:7](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/unescape-js.ts#L7)

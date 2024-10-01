@@ -12,4 +12,4 @@ determine if Ipv4 address is local
 
 ## Defined in
 
-regexp.ts:38
+[regexp.ts:38](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/regexp.ts#L38)

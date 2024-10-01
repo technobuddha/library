@@ -47,4 +47,4 @@ angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
 
 ## Defined in
 
-angle-difference.ts:25
+[angle-difference.ts:25](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/angle-difference.ts#L25)

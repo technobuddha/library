@@ -52,4 +52,4 @@ separator … (ellipsis)
 
 ## Defined in
 
-to-filename.ts:31
+[to-filename.ts:31](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-filename.ts#L31)

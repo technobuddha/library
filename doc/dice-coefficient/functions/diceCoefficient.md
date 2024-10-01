@@ -32,4 +32,4 @@ a number from 0 (not similar) to 1 (equal) measuring the similarity
 
 ## Defined in
 
-dice-coefficient.ts:16
+[dice-coefficient.ts:16](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/dice-coefficient.ts#L16)

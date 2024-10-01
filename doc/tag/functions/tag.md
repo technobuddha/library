@@ -32,4 +32,4 @@ HTML tag with text
 
 ## Defined in
 
-tag.ts:13
+[tag.ts:13](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/tag.ts#L13)

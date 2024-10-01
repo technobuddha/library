@@ -41,4 +41,4 @@ only false
 
 ## Defined in
 
-indefinite-article.ts:40
+[indefinite-article.ts:40](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/indefinite-article.ts#L40)

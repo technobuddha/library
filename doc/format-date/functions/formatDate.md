@@ -36,4 +36,4 @@ UTC false
 
 ## Defined in
 
-format-date.ts:91
+[format-date.ts:91](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/format-date.ts#L91)

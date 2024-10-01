@@ -30,4 +30,4 @@ or b < x <= 0, depending on the sign of b).
 
 ## Defined in
 
-modulo.ts:14
+[modulo.ts:14](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/modulo.ts#L14)

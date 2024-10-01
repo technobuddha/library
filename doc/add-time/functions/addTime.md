@@ -32,4 +32,4 @@ Negative values will subtract from the Date
 
 ## Defined in
 
-add-time.ts:20
+[add-time.ts:20](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/add-time.ts#L20)

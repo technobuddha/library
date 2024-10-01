@@ -30,4 +30,4 @@ Array of segments
 
 ## Defined in
 
-chop.ts:17
+[chop.ts:17](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/chop.ts#L17)

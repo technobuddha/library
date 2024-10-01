@@ -24,4 +24,4 @@ true if the number is an odd integer
 
 ## Defined in
 
-is-odd.ts:11
+[is-odd.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-odd.ts#L11)

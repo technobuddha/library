@@ -24,4 +24,4 @@ true, if the object is a number, or can be converted to a number
 
 ## Defined in
 
-is-numeric.ts:11
+[is-numeric.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-numeric.ts#L11)

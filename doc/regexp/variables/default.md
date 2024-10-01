@@ -36,4 +36,4 @@
 
 ## Defined in
 
-regexp.ts:71
+[regexp.ts:71](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/regexp.ts#L71)

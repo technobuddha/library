@@ -40,4 +40,4 @@ this is a shortcut to calling cardinal with options {groups: 1, digits: true}
 
 ## Defined in
 
-cardinal.ts:503
+[cardinal.ts:503](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/cardinal.ts#L503)

@@ -24,4 +24,4 @@ the CRC32 checksum
 
 ## Defined in
 
-crc32.ts:12
+[crc32.ts:12](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/crc32.ts#L12)

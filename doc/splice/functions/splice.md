@@ -36,4 +36,4 @@ The modified strings
 
 ## Defined in
 
-splice.ts:12
+[splice.ts:12](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/splice.ts#L12)

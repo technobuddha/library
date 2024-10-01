@@ -32,4 +32,4 @@ for example "The Beatles" becomes "Beatles, The"
 
 ## Defined in
 
-sort-order.ts:18
+[sort-order.ts:18](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/sort-order.ts#L18)

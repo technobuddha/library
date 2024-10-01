@@ -24,4 +24,4 @@ string with diacritics removed
 
 ## Defined in
 
-remove-diacritics.ts:11
+[remove-diacritics.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/remove-diacritics.ts#L11)

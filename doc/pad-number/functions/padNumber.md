@@ -28,4 +28,4 @@ number as a string with leading zeros as needed
 
 ## Defined in
 
-pad-number.ts:10
+[pad-number.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/pad-number.ts#L10)

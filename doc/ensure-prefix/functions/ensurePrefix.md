@@ -28,4 +28,4 @@ The prefix followed by the string
 
 ## Defined in
 
-ensure-prefix.ts:8
+[ensure-prefix.ts:8](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/ensure-prefix.ts#L8)

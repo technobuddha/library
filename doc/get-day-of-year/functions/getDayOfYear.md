@@ -20,4 +20,4 @@
 
 ## Defined in
 
-get-day-of-year.ts:9
+[get-day-of-year.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-day-of-year.ts#L9)

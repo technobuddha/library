@@ -26,4 +26,4 @@ see Options
 
 ## Defined in
 
-escape-html.ts:15
+[escape-html.ts:15](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/escape-html.ts#L15)

@@ -34,4 +34,4 @@ UTC false
 
 ## Defined in
 
-get-days-in-month.ts:17
+[get-days-in-month.ts:17](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/get-days-in-month.ts#L17)

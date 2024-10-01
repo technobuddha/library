@@ -22,7 +22,7 @@
 
 ### Defined in
 
-graphql.ts:10
+[graphql.ts:10](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/graphql.ts#L10)
 
 ## graphQL(arg)
 
@@ -38,4 +38,4 @@ graphql.ts:10
 
 ### Defined in
 
-graphql.ts:11
+[graphql.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/graphql.ts#L11)

@@ -24,4 +24,4 @@ the number of code points
 
 ## Defined in
 
-unicode-length.ts:9
+[unicode-length.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/unicode-length.ts#L9)

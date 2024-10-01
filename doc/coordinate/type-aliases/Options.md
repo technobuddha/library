@@ -30,4 +30,4 @@ String used to separate values (default ',')
 
 ## Defined in
 
-coordinate.ts:5
+[coordinate.ts:5](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/coordinate.ts#L5)

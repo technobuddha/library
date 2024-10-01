@@ -23,4 +23,4 @@ Standardized angle.
 
 ## Defined in
 
-normalize-angle.ts:9
+[normalize-angle.ts:9](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/normalize-angle.ts#L9)

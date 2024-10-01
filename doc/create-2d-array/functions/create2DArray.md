@@ -38,4 +38,4 @@ Array is accessed by array[w][h]
 
 ## Defined in
 
-create-2d-array.ts:12
+[create-2d-array.ts:12](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/create-2d-array.ts#L12)

@@ -392,4 +392,4 @@
 
 ## Defined in
 
-constants.ts:86
+[constants.ts:86](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/constants.ts#L86)

@@ -32,4 +32,4 @@ lowercase false
 
 ## Defined in
 
-to-capital-word-case.ts:13
+[to-capital-word-case.ts:13](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/to-capital-word-case.ts#L13)

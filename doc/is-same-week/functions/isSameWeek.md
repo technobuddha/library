@@ -44,4 +44,4 @@ firstDayOfWeek Sunday
 
 ## Defined in
 
-is-same-week.ts:22
+[is-same-week.ts:22](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/is-same-week.ts#L22)

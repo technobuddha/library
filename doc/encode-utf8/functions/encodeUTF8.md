@@ -24,4 +24,4 @@ The UTF-8 encoded string
 
 ## Defined in
 
-encode-utf8.ts:11
+[encode-utf8.ts:11](https://github.com/technobuddha/library/blob/e196c53540c549b7602e5a5a9440d53c6db662cf/src/encode-utf8.ts#L11)
