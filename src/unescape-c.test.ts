@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { unescapeC } from './unescape-c.js';
+import { space } from './constants.ts';
+import { unescapeC } from './unescape-c.ts';
 
 describe('unescapeC', () => {
   test('should unescape standard sequences', () => {
@@ -57,6 +57,7 @@ describe('unescapeC', () => {
     expect(unescapeC('ABCabc[~]')).toBe('ABCabc[~]');
     expect(unescapeC('abcdef')).toBe('abcdef');
     expect(unescapeC('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(unescapeC('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(unescapeC('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
   });

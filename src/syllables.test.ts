@@ -1,4 +1,4 @@
-import { syllables } from './syllables.js';
+import { syllables } from './syllables.ts';
 
 describe('syllables', () => {
   test('should count syllables', () => {

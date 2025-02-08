@@ -1,15 +1,15 @@
-import { compact, isNil, zip } from 'lodash-es';
-
-import { build } from './build.js';
-import { month } from './constants.js';
+import { build } from './build.ts';
+import { collapse } from './collapse.ts';
+import { month } from './constants.ts';
+import { zipperMerge } from './zipper-merge.ts';
 
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   return new RegExp(
     build(
       pre.source,
-      compact(
-        zip(
-          template,
+      collapse(
+        zipperMerge(
+          Array.from(template),
           args.map((a) => a.source),
         ).flat(),
       ),
@@ -52,6 +52,8 @@ const yNumeric = re`${yyyy}`;
  *
  * @param input - The string containing a date
  * @returns new Date object
+ * @group Time
+ * @category Parsing
  */
 export function parseDate(input: string): Date {
   const now = new Date();
@@ -94,7 +96,7 @@ export function parseDate(input: string): Date {
     dY = Number.parseInt(match[1]);
   }
 
-  if (isNil(match)) {
+  if (match == null) {
     if ((match = mNumeric.exec(text)) !== null) {
       dM = Number.parseInt(match[1]) - 1;
       dY = 1000;
@@ -128,19 +130,19 @@ export function parseDate(input: string): Date {
       dD = 1;
     }
   } else {
-    tH = isNil(match[4]) ? 0 : Number.parseInt(match[4]);
-    tM = isNil(match[5]) ? 0 : Number.parseInt(match[5]);
-    tS = isNil(match[6]) ? 0 : Number.parseInt(match[6]);
-    tF = isNil(match[7]) ? 0 : Number.parseFloat(`0.${match[7]}`) * 1000;
-    if (!isNil(match[8]) && match[8].toLocaleLowerCase() === 'p' && tH !== 12) {
+    tH = match[4] == null ? 0 : Number.parseInt(match[4]);
+    tM = match[5] == null ? 0 : Number.parseInt(match[5]);
+    tS = match[6] == null ? 0 : Number.parseInt(match[6]);
+    tF = match[7] == null ? 0 : Number.parseFloat(`0.${match[7]}`) * 1000;
+    if (match[8] != null && match[8].toLocaleLowerCase() === 'p' && tH !== 12) {
       tH += 12;
-    } else if (!isNil(match[8]) && match[8].toLocaleLowerCase() === 'a' && tH === 12) {
+    } else if (match[8] != null && match[8].toLocaleLowerCase() === 'a' && tH === 12) {
       tH -= 12;
     }
 
-    if (!isNil(match[9])) {
-      zH = isNil(match[10]) ? 0 : Number.parseInt(match[10]);
-      zM = isNil(match[11]) ? 0 : Number.parseInt(match[11]);
+    if (match[9] != null) {
+      zH = match[10] == null ? 0 : Number.parseInt(match[10]);
+      zM = match[11] == null ? 0 : Number.parseInt(match[11]);
     }
   }
 
@@ -152,7 +154,7 @@ export function parseDate(input: string): Date {
   now.setSeconds(tS);
   now.setMilliseconds(tF);
 
-  if (!isNil(zH) && !isNil(zM)) {
+  if (zH != null && zM != null) {
     zH += now.getTimezoneOffset() / 60;
 
     now.setMinutes(now.getMinutes() - (zH < 0 ? zH * 60 - zM : zH * 60 + zM)); //Adjust the time zone

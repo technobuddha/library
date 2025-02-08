@@ -1,14 +1,15 @@
-import { compact } from 'lodash-es';
-
-import { build } from './build.js';
-import { splitChars } from './split-chars.js';
+import { build } from './build.ts';
+import { collapse } from './collapse.ts';
+import { splitChars } from './split-chars.ts';
 
 /**
  * Change a string to be all from the basic latin unicode plane
  * @param input - The string
+ * @group String
+ * @category Extraction
  */
 export function toASCII(input: string): string {
-  return build(compact(splitChars(input).map((c) => convertToASCII[c])));
+  return build(collapse(splitChars(input).map((c) => convertToASCII[c])));
 }
 
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -1769,8 +1770,8 @@ const convertToASCII: Record<string, string> = {
   'ꜫ': 'tresillo',
   'Ꜭ': 'CUARTRILLO',
   'Ꜯ': 'CUARTRILLO',
-  'ꜭ': 'cuartillo',
-  'ꜯ': 'cuartillo',
+  'ꜭ': 'cuartrillo',
+  'ꜯ': 'cuartrillo',
   'Ꜳ': 'AA',
   'ꜳ': 'aa',
   'Ꜵ': 'AO',

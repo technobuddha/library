@@ -1,35 +1,51 @@
-import { create2DArray } from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.ts';
 
+/**
+ * Options for configuring the {@link longestCommonSubsequence} calculation.
+ * @typeParam T - Type of objects in the arrays.
+ *
+ * @group Array
+ * @category Matching
+ */
 export type LongestCommonSubsequenceOptions<T> = {
   /**
    * Function that acts as a custom comparator
    * for the array objects. Function should return true if objects are equal, otherwise false.
-   *
    */
-  compare?(this: void, a: T, b: T): boolean;
+  compare?: (this: void, a: T, b: T) => boolean;
+
   /**
    * Function used to decide what to return
    * as a result subsequence. It accepts 2 arguments: index of common element
    * in the first array and index in the second. The default function returns
    * element from the first array.
    */
-  collect?(this: void, i1: number, i2: number): T;
+  collect?: (this: void, i1: number, i2: number) => T;
 };
 
 /**
- * Implementation of Longest Common Subsequence problem.
- * http://en.wikipedia.org/wiki/Longest_common_subsequence
+ * Determine the longest possible array that is subsequence of both of given arrays.
  *
- * Returns the longest possible array that is subarray of both of given arrays.
+ * @remarks
+ * Implementation of [Longest Common Subsequence]( https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
  *
+ * @example
+ * ```ts
+ * longestCommonSubsequence(
+ *  ['a', 'b', 'c', ' ', 'd', 'e', 'f'],
+ *  ['a', 'c', ' ', 'd', 'e', 'c'],
+ * ); // ['a', 'c', ' ', 'd', 'e']
+ * ```
+ *
+ * @typeParam T - Type of objects in the arrays.
  * @param array1 - First array of objects.
  * @param array2 - Second array of objects.
- * @param __namedParameters - see {@link LongestCommonSubsequenceOptions}
- * @defaultValue compare equality comparison
- * @defaultValue collect basic collector
+ * @param options - Functions to compare and collect elements from the two arrays
  * @returns A list of objects that are common to both arrays
  * such that there is no common subsequence with size greater than the
  * length of the list.
+ * @group Array
+ * @category Matching
  */
 export function longestCommonSubsequence<T>(
   array1: ArrayLike<T>,

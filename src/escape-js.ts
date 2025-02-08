@@ -1,11 +1,13 @@
-import { build } from './build.js';
-import { hex, oct, u4, uu, x2 } from './escape.js';
+import { build } from './build.ts';
+import { hex, oct, u4, uu, x2 } from './escape.ts';
 
 /**
  * Escape a string for use in Javascript
  *
  * @param input - The string to escape
  * @returns Sting escaped for Javascript
+ * @group Encoding
+ * @category Escaping
  */
 export function escapeJS(input: string): string {
   const output: string[] = [];

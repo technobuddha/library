@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { extractDigits } from './extract-digits.js';
+import { empty } from './constants.ts';
+import { extractDigits } from './extract-digits.ts';
 
 describe('extractDigits', () => {
   test('should add Suffixes when needed', () => {

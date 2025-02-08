@@ -1,6 +1,4 @@
-import { isNaN, isNull, isUndefined } from 'lodash-es';
-
-import { toPrimitive } from './to-primitive.js';
+import { toPrimitive } from './to-primitive.ts';
 
 /**
  * Compare two objects
@@ -8,32 +6,34 @@ import { toPrimitive } from './to-primitive.js';
  * @param a - First object
  * @param b - Second object
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
+ * @group Object
+ * @category Comparison
  */
 export function compare(a: unknown, b: unknown): number {
   const pa = toPrimitive(a, 'number');
   const pb = toPrimitive(b, 'number');
 
-  if (isUndefined(pa) && isUndefined(pb)) {
+  if (pa === undefined && pb === undefined) {
     return 0;
-  } else if (isUndefined(pa)) {
+  } else if (pa === undefined) {
     return -1;
-  } else if (isUndefined(pb)) {
+  } else if (pb === undefined) {
     return 1;
-  } else if (isNull(pa) && isNull(pb)) {
+  } else if (pa === null && pb === null) {
     return 0;
-  } else if (isNull(pa)) {
+  } else if (pa === null) {
     return -1;
-  } else if (isNull(pb)) {
+  } else if (pb === null) {
     return 1;
   } else if (typeof pa !== 'string' && typeof pb !== 'string') {
     const na = Number(pa);
     const nb = Number(pb);
 
-    if (isNaN(na) && isNaN(pb)) {
+    if (Number.isNaN(na) && Number.isNaN(nb)) {
       return 0;
-    } else if (isNaN(na)) {
+    } else if (Number.isNaN(na)) {
       return -1;
-    } else if (isNaN(nb)) {
+    } else if (Number.isNaN(nb)) {
       return 1;
     } else if (na === nb) {
       return 0;

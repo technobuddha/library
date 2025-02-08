@@ -1,4 +1,4 @@
-import { collapseWhitespace } from './collapse-whitespace.js';
+import { collapseWhitespace } from './collapse-whitespace.ts';
 
 describe('collapseWhitespace', () => {
   test('should collapse whitespace', () => {

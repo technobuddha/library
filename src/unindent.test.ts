@@ -1,4 +1,4 @@
-import { unindent } from './unindent.js';
+import { unindent } from './unindent.ts';
 
 describe('unindent', () => {
   test('should unindent lines', () => {

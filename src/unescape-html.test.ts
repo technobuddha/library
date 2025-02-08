@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { unescapeHTML } from './unescape-html.js';
+import { space } from './constants.ts';
+import { unescapeHTML } from './unescape-html.ts';
 
 describe('unescapeHTML', () => {
   test('should unescape basic characters', () => {
@@ -26,8 +26,10 @@ describe('unescapeHTML', () => {
   });
 
   test('should extended entities', () => {
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(unescapeHTML('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(unescapeHTML('&Alpha;&Beta;&Gamma;&Delta;&Epsilon;&Zeta;')).toBe('ΑΒΓΔΕΖ');
+    // cspell:ignore ΑΒЖК
     expect(unescapeHTML('&Alpha;&Beta;ЖК')).toBe('ΑΒЖК');
   });
 

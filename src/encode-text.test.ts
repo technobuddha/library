@@ -1,0 +1,42 @@
+import { encodeText } from './encode-text.ts';
+
+const REPLACEMENT = [0xef, 0x8f, 0xbd];
+function na(u: Uint8Array): number[] {
+  return Array.from(u);
+}
+
+describe('encodeText', () => {
+  test('should not change ASCII', () => {
+    expect(na(encodeText('abcdef'))).toStrictEqual([0x61, 0x62, 0x63, 0x64, 0x65, 0x66]);
+    expect(na(encodeText('\u0000\u0001\u0002\u0003\u007F'))).toStrictEqual([
+      0x00, 0x01, 0x02, 0x03, 0x7f,
+    ]);
+  });
+
+  test('should encode codepoints < 0x8000', () => {
+    expect(na(encodeText('¼½¾'))).toStrictEqual([0xc2, 0xbc, 0xc2, 0xbd, 0xc2, 0x0be]);
+    // cspell:ignore ΑΒΓΔ
+    expect(na(encodeText('ΑΒΓΔ'))).toStrictEqual([0xce, 0x91, 0xce, 0x92, 0xce, 0x93, 0xce, 0x94]);
+  });
+
+  test('should use encode non astral codepoints', () => {
+    expect(na(encodeText('♀♂'))).toStrictEqual([0xe2, 0x99, 0x80, 0xe2, 0x99, 0x82]);
+    expect(na(encodeText('ꭓꭔꭕ'))).toStrictEqual([
+      0x0ea, 0xad, 0x93, 0xea, 0xad, 0x94, 0xea, 0xad, 0x95,
+    ]);
+  });
+
+  test('should should encode astral codepoints', () => {
+    expect(na(encodeText('😀😁😂'))).toStrictEqual([
+      0xf0, 0x9f, 0x98, 0x80, 0xf0, 0x9f, 0x98, 0x81, 0xf0, 0x9f, 0x98, 0x82,
+    ]);
+    expect(na(encodeText('𝐀𝐁𝐂'))).toStrictEqual([
+      0xf0, 0x9d, 0x90, 0x80, 0xf0, 0x9d, 0x90, 0x81, 0xf0, 0x9d, 0x90, 0x82,
+    ]);
+  });
+
+  test('should trap bad surrogate pairs', () => {
+    expect(na(encodeText('\uD83D'))).toStrictEqual(REPLACEMENT);
+    expect(na(encodeText('\uD83D\u0000'))).toStrictEqual(REPLACEMENT);
+  });
+});

@@ -1,22 +1,17 @@
-import { compact, isArray, isFunction, isString } from 'lodash-es';
+import { type StringLike } from './@types/string-like.ts';
+import { collapse } from './collapse.ts';
+import { empty } from './constants.ts';
 
-import { empty } from './constants.js';
-
-export type Stringy = string | string[];
 /**
  * Concatenates strings and/or arrays of strings
  *
  * @param args - Concatenates a list of strings, string arrays, or functions that return a string or string array.
  * @returns The concatenation of *args*.
+ * @group String
+ * @category Build
  */
 export function build(
-  ...args: (Stringy | Generator<Stringy> | IterableIterator<string> | (() => Stringy))[]
+  ...args: (StringLike | Generator<StringLike> | Iterable<StringLike> | (() => StringLike))[]
 ): string {
-  return compact(
-    args.flatMap((a) =>
-      isString(a) || isArray(a) ? a
-      : isFunction(a) ? a()
-      : Array.from(a),
-    ),
-  ).join(empty);
+  return collapse(...args).join(empty);
 }

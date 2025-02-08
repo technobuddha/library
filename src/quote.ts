@@ -1,8 +1,12 @@
-import { escapeRegExp, isFunction } from 'lodash-es';
+import { build } from './build.ts';
+import { escapeJS } from './escape-js.ts';
+import { isFunction } from './is-function.ts';
 
-import { build } from './build.js';
-import { escapeJS } from './escape-js.js';
-
+/**
+ * Options for the {@link quote} and {@link unquote} function
+ * @group String
+ * @category Quoting
+ */
 export type QuoteOptions = {
   /** The quote character(s) to use */
   quote?: string;
@@ -14,10 +18,12 @@ export type QuoteOptions = {
  * Surround text with quotes
  *
  * @param input - The text to surround
- * @param __namedParameters - see {@link QuoteOptions}
+ * @param options - see {@link QuoteOptions}
  * @defaultValue quote double-quote (")
  * @defaultValue escape {@link escapeJS}
  * @returns text surrounded by quotes
+ * @group String
+ * @category Quoting
  */
 export function quote(
   input: string,
@@ -26,7 +32,7 @@ export function quote(
   const text =
     isFunction(escape) ?
       escape(input)
-    : input.replaceAll(new RegExp(escapeRegExp(q), 'ug'), escape);
+    : input.replaceAll(new RegExp(RegExp.escape(q), 'ug'), escape);
 
   return build(q, text, q);
 }

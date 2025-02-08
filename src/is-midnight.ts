@@ -1,4 +1,10 @@
-export type IsMidnightOptions = {
+/**
+ * Options for the {@link isMidnight} function
+ *
+ * @group Time
+ * @category Day
+ */
+export type MidnightOptions = {
   /** Use the utc timezone */
   utc?: boolean;
 };
@@ -7,10 +13,12 @@ export type IsMidnightOptions = {
  * Determine if a date is at midnight
  *
  * @param input - A date
- * @param __namedParamaters - see {@link IsMidnightOptions}
+ * @param options - see {@link MidnightOptions}
  * @returns true, if the date is at midnight
+ * @group Time
+ * @category Day
  */
-export function isMidnight(input: Date, { utc = false }: IsMidnightOptions = {}): boolean {
+export function isMidnight(input: Date, { utc = false }: MidnightOptions = {}): boolean {
   if (utc) {
     return (
       input.getUTCHours() === 0 &&

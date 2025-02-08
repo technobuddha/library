@@ -1,4 +1,4 @@
-import { toPolar } from './to-polar.js';
+import { toPolar } from './to-polar.ts';
 
 describe('toPolar', () => {
   test('converts positive angles', () => {

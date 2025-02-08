@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { unescapeJava } from './unescape-java.js';
+import { space } from './constants.ts';
+import { unescapeJava } from './unescape-java.ts';
 
 describe('unescapeJava', () => {
   test('should unescape standard sequences', () => {
@@ -28,6 +28,7 @@ describe('unescapeJava', () => {
     expect(unescapeJava('ABCabc[~]')).toBe('ABCabc[~]');
     expect(unescapeJava('abcdef')).toBe('abcdef');
     expect(unescapeJava('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+    //cspell:ignore ΑΒΓΔΕΖ
     expect(unescapeJava('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(unescapeJava('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
   });

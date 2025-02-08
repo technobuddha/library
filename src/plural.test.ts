@@ -1,4 +1,4 @@
-import { plural } from './plural.js';
+import { plural } from './plural.ts';
 
 describe('plural', () => {
   test('should handle simple plurals', () => {
@@ -23,7 +23,9 @@ describe('plural', () => {
   });
 
   test('should handle quantities', () => {
-    expect(plural('die', 1)).toBe('1 die');
-    expect(plural('die', 2)).toBe('2 dice');
+    expect(plural('die', 1, false)).toBe('die');
+    expect(plural('die', 2, false)).toBe('dice');
+    expect(plural('die', 1, true)).toBe('1 die');
+    expect(plural('die', 2, true)).toBe('2 dice');
   });
 });

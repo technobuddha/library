@@ -1,4 +1,4 @@
-import { binaryUnits } from './binary-units.js';
+import { binaryUnits } from './binary-units.ts';
 
 describe('binaryUnits', () => {
   test('should handle whole numbers than 1', () => {
@@ -30,5 +30,7 @@ describe('binaryUnits', () => {
     expect(binaryUnits(1234000, { precision: 3 })).toBe('1.177MiB');
   });
 
-  //TODO [2025-04-01]: format
+  test('should handle format', () => {
+    expect(binaryUnits(1000000, { format: '0,0.00' })).toBe('976.56KiB');
+  });
 });

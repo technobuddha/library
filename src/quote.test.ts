@@ -1,4 +1,4 @@
-import { quote } from './quote.js';
+import { quote } from './quote.ts';
 
 describe('quote', () => {
   test('should quote input', () => {

@@ -1,4 +1,4 @@
-import { getIndent } from './get-indent.js';
+import { getIndent } from './get-indent.ts';
 
 describe('getIndent', () => {
   test('should getIndent lines', () => {

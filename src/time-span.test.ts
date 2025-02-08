@@ -1,6 +1,6 @@
-import { TimeSpan } from './time-span.js';
+import { TimeSpan } from './time-span.ts';
 
-describe('time-span', () => {
+describe('TimeSpan', () => {
   test('construct no args', () => {
     const ts = new TimeSpan();
     expect(ts.milliseconds).toBe(0);

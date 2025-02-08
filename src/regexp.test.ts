@@ -1,4 +1,4 @@
-import { domain, email, ipV4, isoDate, numeric } from './regexp.js';
+import { domain, email, ipV4, isoDate, numeric } from './regexp.ts';
 
 describe('regexp', () => {
   test('validate hostname', () => {

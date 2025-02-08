@@ -1,4 +1,4 @@
-import { isMidnight } from './is-midnight.js';
+import { isMidnight } from './is-midnight.ts';
 
 describe('isMidnight', () => {
   test('should detect midnight', () => {

@@ -1,4 +1,4 @@
-import { toFilename } from './to-filename.js';
+import { toFilename } from './to-filename.ts';
 
 describe('toFilename', () => {
   test('should bad characters to be replaces', () => {

@@ -1,7 +1,11 @@
-import { isNil } from 'lodash-es';
+import { compareNumbers } from './compare-numbers.ts';
 
-import { compareNumbers } from './compare-numbers.js';
-
+/**
+ * Options for the {@link compareStrings} function
+ *
+ * @group String
+ * @category Comparison
+ */
 export type CompareStringsOptions = {
   /** if true, strings are to be compared case insensitive */
   caseInsensitive?: boolean;
@@ -21,37 +25,38 @@ export type CompareStringsOptions = {
  * @defaultValue natural false
  * @defaultValue version false
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
- *
+ * @group String
+ * @category Comparison
  */
 export function compareStrings(
   a: string | null,
   b: string | null,
   { caseInsensitive = false, natural = false, version = false }: CompareStringsOptions = {},
 ): -1 | 0 | 1 {
-  let stra = a;
-  let strb = b;
+  let strA = a;
+  let strB = b;
 
-  if (stra === strb) {
+  if (strA === strB) {
     return 0;
   }
-  if (isNil(stra)) {
+  if (strA == null) {
     return -1;
   }
-  if (isNil(strb)) {
+  if (strB == null) {
     return 1;
   }
 
   if (caseInsensitive) {
-    stra = stra.toLocaleLowerCase();
-    strb = strb.toLocaleLowerCase();
-    if (stra === strb) {
+    strA = strA.toLocaleLowerCase();
+    strB = strB.toLocaleLowerCase();
+    if (strA === strB) {
       return 0;
     }
   }
 
   if (version) {
-    const v1 = stra.trim().split(/[.-]/u);
-    const v2 = strb.trim().split(/[.-]/u);
+    const v1 = strA.trim().split(/[.-]/u);
+    const v2 = strB.trim().split(/[.-]/u);
     const count = Math.max(v1.length, v2.length);
     let order = 0 as -1 | 0 | 1;
 
@@ -61,8 +66,8 @@ export function compareStrings(
 
     return order || compareNumbers(v1.length, v2.length);
   } else if (natural) {
-    const t1 = stra.match(/(\.\d+|\d+|\D+)/gu) ?? [];
-    const t2 = strb.match(/(\.\d+|\d+|\D+)/gu) ?? [];
+    const t1 = strA.match(/(\.\d+|\d+|\D+)/gu) ?? [];
+    const t2 = strB.match(/(\.\d+|\d+|\D+)/gu) ?? [];
     const count = Math.min(t1.length, t2.length);
     let order = 0 as -1 | 0 | 1;
 
@@ -80,5 +85,5 @@ export function compareStrings(
 
     return order || compareNumbers(t1.length, t2.length);
   }
-  return stra < strb ? -1 : 1;
+  return strA < strB ? -1 : 1;
 }

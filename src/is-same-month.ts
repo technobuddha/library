@@ -1,6 +1,12 @@
-import { isSameYear } from './is-same-year.js';
+import { isSameYear } from './is-same-year.ts';
 
-export type IsSameMonthOptions = {
+/**
+ * Options for the {@link isSameMonth} function
+ *
+ * @group Time
+ * @category Month
+ */
+export type SameMonthOptions = {
   /** use the utc timezone */
   utc?: boolean;
 };
@@ -10,14 +16,16 @@ export type IsSameMonthOptions = {
  *
  * @param input1 - The first date
  * @param input2 - The second date
- * @param __namedParameters - see {@link IsSameMonthOptions}
+ * @param options - see {@link SameMonthOptions}
  * @defaultValue utc false
  * @returns true, if the two dates occur in the same month
+ * @group Time
+ * @category Month
  */
 export function isSameMonth(
   input1: Date,
   input2: Date,
-  { utc = false }: IsSameMonthOptions = {},
+  { utc = false }: SameMonthOptions = {},
 ): boolean {
   if (utc) {
     return input1.getUTCMonth() === input2.getUTCMonth() && isSameYear(input1, input2, { utc });
