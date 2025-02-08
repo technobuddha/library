@@ -1,32 +1,41 @@
 import { encodeUTF8 } from './encode-utf8.js';
 
+const REPLACEMENT = [0xef, 0x8f, 0xbd];
+function na(u: Uint8Array): number[] {
+  return Array.from(u);
+}
+
 describe('encodeUTF8', () => {
   test('should not change ASCII', () => {
-    expect(encodeUTF8('abcdef')).toBe('abcdef');
-    expect(encodeUTF8('\u0000\u0001\u0002\u0003\u007F')).toBe('\u0000\u0001\u0002\u0003\u007F');
+    expect(na(encodeUTF8('abcdef'))).toStrictEqual([0x61, 0x62, 0x63, 0x64, 0x65, 0x66]);
+    expect(na(encodeUTF8('\u0000\u0001\u0002\u0003\u007F'))).toStrictEqual([
+      0x00, 0x01, 0x02, 0x03, 0x7f,
+    ]);
   });
 
   test('should encode codepoints < 0x8000', () => {
-    expect(encodeUTF8('¼½¾')).toBe('\u00C2\u00BC\u00C2\u00BD\u00C2\u00BE');
-    expect(encodeUTF8('ΑΒΓΔ')).toBe('\u00CE\u0091\u00CE\u0092\u00CE\u0093\u00CE\u0094');
+    expect(na(encodeUTF8('¼½¾'))).toStrictEqual([0xc2, 0xbc, 0xc2, 0xbd, 0xc2, 0x0be]);
+    expect(na(encodeUTF8('ΑΒΓΔ'))).toStrictEqual([0xce, 0x91, 0xce, 0x92, 0xce, 0x93, 0xce, 0x94]);
   });
 
   test('should use encode non astral codepoints', () => {
-    expect(encodeUTF8('♀♂')).toBe('\u00E2\u0099\u0080\u00E2\u0099\u0082');
-    expect(encodeUTF8('ꭓꭔꭕ')).toBe('\u00EA\u00AD\u0093\u00EA\u00AD\u0094\u00EA\u00AD\u0095');
+    expect(na(encodeUTF8('♀♂'))).toStrictEqual([0xe2, 0x99, 0x80, 0xe2, 0x99, 0x82]);
+    expect(na(encodeUTF8('ꭓꭔꭕ'))).toStrictEqual([
+      0x0ea, 0xad, 0x93, 0xea, 0xad, 0x94, 0xea, 0xad, 0x95,
+    ]);
   });
 
   test('should should encode astral codepoints', () => {
-    expect(encodeUTF8('😀😁😂')).toBe(
-      '\u00F0\u009F\u0098\u0080\u00F0\u009F\u0098\u0081\u00F0\u009F\u0098\u0082',
-    );
-    expect(encodeUTF8('𝐀𝐁𝐂')).toBe(
-      '\u00F0\u009D\u0090\u0080\u00F0\u009D\u0090\u0081\u00F0\u009D\u0090\u0082',
-    );
+    expect(na(encodeUTF8('😀😁😂'))).toStrictEqual([
+      0xf0, 0x9f, 0x98, 0x80, 0xf0, 0x9f, 0x98, 0x81, 0xf0, 0x9f, 0x98, 0x82,
+    ]);
+    expect(na(encodeUTF8('𝐀𝐁𝐂'))).toStrictEqual([
+      0xf0, 0x9d, 0x90, 0x80, 0xf0, 0x9d, 0x90, 0x81, 0xf0, 0x9d, 0x90, 0x82,
+    ]);
   });
 
   test('should trap bad surrogate pairs', () => {
-    expect(() => encodeUTF8('\uD83D')).toThrow();
-    expect(() => encodeUTF8('\uD83D\u0000')).toThrow();
+    expect(na(encodeUTF8('\uD83D'))).toStrictEqual(REPLACEMENT);
+    expect(na(encodeUTF8('\uD83D\u0000'))).toStrictEqual(REPLACEMENT);
   });
 });

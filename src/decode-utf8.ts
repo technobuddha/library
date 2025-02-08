@@ -1,80 +1,86 @@
-import { empty } from './constants.js';
+const REPLACEMENT = 0xfffd;
 
+/* eslint-disable no-bitwise */
 /**
  * Decode a UTF8 encoded string into unicode
  *
  * @param input - the utf encoded string
  * @returns the decoded strings (which is encoded as UTF-16 by javascript)
  */
-/* eslint-disable no-bitwise */
-export function decodeUTF8(input: string): string {
-  let result = empty;
+export function decodeUTF8(
+  input:
+    | ArrayBufferLike
+    | Int8Array
+    | Uint8Array
+    | Uint8ClampedArray
+    | Int16Array
+    | Uint16Array
+    | Int32Array
+    | Uint32Array
+    | Float32Array
+    | Float64Array
+    | BigInt64Array
+    | BigUint64Array,
+): string {
+  const buffer =
+    ArrayBuffer.isView(input) ?
+      new Uint8Array(input.buffer, input.byteOffset, input.byteLength)
+    : new Uint8Array(input);
 
-  for (let i = 0; i < input.length; ++i) {
-    // eslint-disable-next-line unicorn/prefer-code-point
-    let c0: number = input.charCodeAt(i);
+  const result: number[] = [];
+  for (let i = 0; i < buffer.byteLength; ++i) {
+    let c0: number = buffer[i];
     let c1: number;
     let c2: number;
     let c3: number;
 
-    if (c0 > 0x007f) {
-      if (c0 > 0x00bf && c0 < 0x00e0) {
-        // eslint-disable-next-line unicorn/prefer-code-point
-        c1 = input.charCodeAt(++i);
-        if (i >= input.length) {
-          throw new Error('Incomplete 2-byte sequence');
-        }
-        if ((c1 & 0xc0) !== 0x80) {
-          throw new Error('Incorrect 2 byte sequence');
-        }
-
-        c0 = ((c0 & 0x001f) << 6) | (c1 & 0x003f);
-      } else if (c0 >= 0x00e0 && c0 < 0x00f0) {
-        // eslint-disable-next-line unicorn/prefer-code-point
-        c1 = input.charCodeAt(++i);
-        // eslint-disable-next-line unicorn/prefer-code-point
-        c2 = input.charCodeAt(++i);
-        if (i >= input.length) {
-          throw new Error('Incomplete 3-byte sequence');
-        }
-        if ((c1 & 0xc0) !== 0x80 || (c2 & 0xc0) !== 0x80) {
-          throw new Error('Incorrect 3 byte sequence');
-        }
-
-        c0 = ((c0 & 0x000f) << 12) | ((c1 & 0x003f) << 6) | (c2 & 0x003f);
-      } else if (c0 >= 0x00f0 && c0 < 0x00f8) {
-        // eslint-disable-next-line unicorn/prefer-code-point
-        c1 = input.charCodeAt(++i);
-        // eslint-disable-next-line unicorn/prefer-code-point
-        c2 = input.charCodeAt(++i);
-        // eslint-disable-next-line unicorn/prefer-code-point
-        c3 = input.charCodeAt(++i);
-        if (i >= input.length) {
-          throw new Error('incomplete 4 byte sequence');
-        }
-        if ((c1 & 0xc0) !== 0x80 || (c2 & 0xc0) !== 0x80 || (c3 & 0xc0) !== 0x80) {
-          throw new Error('Incorrect 3 byte sequence');
-        }
-
-        c0 = ((c0 & 0x000f) << 18) | ((c1 & 0x003f) << 12) | ((c2 & 0x003f) << 6) | (c3 & 0x003f);
+    if (c0 > 0x7f) {
+      if (c0 > 0xbf && c0 < 0xe0) {
+        // two byte utf-8 sequence
+        c1 = buffer[++i];
+        c0 =
+          i >= buffer.byteLength || (c1 & 0x00c0) !== 0x80 ?
+            REPLACEMENT
+          : ((c0 & 0x1f) << 6) | (c1 & 0x3f);
+      } else if (c0 >= 0xe0 && c0 < 0xf0) {
+        // three byte utf-8 sequence
+        c1 = buffer[++i];
+        c2 = buffer[++i];
+        c0 =
+          i >= buffer.byteLength || (c1 & 0xc0) !== 0x80 || (c2 & 0xc0) !== 0x80 ?
+            REPLACEMENT
+          : ((c0 & 0x0f) << 12) | ((c1 & 0x3f) << 6) | (c2 & 0x3f);
+      } else if (c0 >= 0xf0 && c0 < 0xf8) {
+        // four byte utf-8 sequence
+        c1 = buffer[++i];
+        c2 = buffer[++i];
+        c3 = buffer[++i];
+        c0 =
+          (
+            i >= buffer.byteLength ||
+            (c1 & 0xc0) !== 0x80 ||
+            (c2 & 0xc0) !== 0x80 ||
+            (c3 & 0xc0) !== 0x80
+          ) ?
+            REPLACEMENT
+          : ((c0 & 0x0f) << 18) | ((c1 & 0x3f) << 12) | ((c2 & 0x3f) << 6) | (c3 & 0x3f);
       } else {
-        throw new Error(`unknown multibyte start 0x${c0.toString(16)} @${i}`);
+        c0 = REPLACEMENT;
       }
     }
 
+    // re-encode the result as UTF-16
     if (c0 <= 0xffff) {
-      // eslint-disable-next-line unicorn/prefer-code-point
-      result += String.fromCharCode(c0);
+      result.push(c0);
     } else if (c0 <= 0x0010ffff) {
       c0 -= 0x00010000;
-      result +=
-        // eslint-disable-next-line unicorn/prefer-code-point
-        String.fromCharCode((c0 >> 10) | 0xd800) + String.fromCharCode((c0 & 0x03ff) | 0xdc00);
+      result.push((c0 >> 10) | 0xd800, (c0 & 0x03ff) | 0xdc00);
     } else {
-      throw new Error(`code point 0x${c0.toString(16)} exceeds UTF-16 reach`);
+      result.push(REPLACEMENT);
     }
   }
 
-  return result;
+  // eslint-disable-next-line unicorn/prefer-code-point
+  return String.fromCharCode(...result);
 }
 /* eslint-enable no-bitwise */

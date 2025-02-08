@@ -6,7 +6,7 @@
 
 # Function: encodeUTF8()
 
-> **encodeUTF8**(`input`): `string`
+> **encodeUTF8**(`input`): `Uint8Array`
 
 Defined in: [encode-utf8.ts:10](https://github.com/technobuddha/library/blob/main/src/encode-utf8.ts#L10)
 
@@ -22,6 +22,6 @@ The string to encode
 
 ## Returns
 
-`string`
+`Uint8Array`
 
 The UTF-8 encoded string

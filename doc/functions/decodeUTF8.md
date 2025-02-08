@@ -16,9 +16,9 @@ Decode a UTF8 encoded string into unicode
 
 ### input
 
-`string`
-
 the utf encoded string
+
+`ArrayBufferLike` | `Uint8Array` | `Int8Array` | `Uint8ClampedArray` | `Int16Array` | `Uint16Array` | `Int32Array` | `Uint32Array` | `Float32Array` | `Float64Array` | `BigInt64Array` | `BigUint64Array`
 
 ## Returns
 
