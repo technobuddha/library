@@ -1,6 +1,6 @@
-import clean from './clean.js';
+import { clean } from './clean.js';
 
-type Options = {
+export type SortOrderOptions = {
   /** Ignore a leading quote (") */
   ignoreQuotes?: boolean;
   /** move article (a, an, the) to the end of the string */
@@ -11,32 +11,36 @@ type Options = {
  * Convert a string into a sortable string
  *
  * @remarks for example "The Beatles" becomes "Beatles, The"
- * @param input string to convert
- * @param __namedParameters see {@link Options}
- * @return sortable string
+ * @param text - string to convert
+ * @param __namedParameters - see {@link SortOrderOptions}
+ * @returns sortable string
  */
 export function sortOrder(
-  input: string,
-  { ignoreQuotes = true, moveArticles = true }: Options = {},
+  text: string,
+  { ignoreQuotes = true, moveArticles = true }: SortOrderOptions = {},
 ): string {
-  let text = clean(input);
+  let input = clean(text);
 
-  if (ignoreQuotes && text.startsWith('"')) {
-    const quote = text.slice(0, 1);
-    text = text.slice(1);
+  if (ignoreQuotes && input.startsWith('"')) {
+    const quote = input.slice(0, 1);
+    input = input.slice(1);
 
-    const index = text.indexOf(quote, 1);
-    if (index >= 0) text = text.slice(0, index) + text.slice(index + 1);
+    const index = input.indexOf(quote, 1);
+    if (index >= 0) {
+      input = input.slice(0, index) + input.slice(index + 1);
+    }
   }
 
-  const lc = text.toLowerCase();
+  const lc = input.toLocaleLowerCase();
   if (moveArticles) {
-    if (lc.startsWith('a ')) text = `${text.slice(2)}, ${text.slice(0, 1)}`;
-    else if (lc.startsWith('an ')) text = `${text.slice(3)}, ${text.slice(0, 2)}`;
-    else if (lc.startsWith('the ')) text = `${text.slice(4)}, ${text.slice(0, 3)}`;
+    if (lc.startsWith('a ')) {
+      input = `${input.slice(2)}, ${input.slice(0, 1)}`;
+    } else if (lc.startsWith('an ')) {
+      input = `${input.slice(3)}, ${input.slice(0, 2)}`;
+    } else if (lc.startsWith('the ')) {
+      input = `${input.slice(4)}, ${input.slice(0, 3)}`;
+    }
   }
 
-  return text;
+  return input;
 }
-
-export default sortOrder;

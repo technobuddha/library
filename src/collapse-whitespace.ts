@@ -1,7 +1,7 @@
-import clean from './clean.js';
+import { clean } from './clean.js';
 import { space } from './constants.js';
 
-export type Options = {
+export type CollapseWhitespaceOptions = {
   /** If true, trim  */
   trim?: boolean;
 };
@@ -9,12 +9,15 @@ export type Options = {
 /**
  * Replace all whitespace within a string with a single space
  *
- * @param input The string
- * @param trim If true, remove leading and trailing whitespace
+ * @param input - The string
+ * @param trim - If true, remove leading and trailing whitespace
  */
-export function collapseWhitespace(input: string, { trim = true }: Options = {}): string {
-  if (trim) return clean(input.replaceAll(/\s+/gu, space), space);
+export function collapseWhitespace(
+  input: string,
+  { trim = true }: CollapseWhitespaceOptions = {},
+): string {
+  if (trim) {
+    return clean(input.replaceAll(/\s+/gu, space), space);
+  }
   return input.replaceAll(/\s+/gu, space);
 }
-
-export default collapseWhitespace;

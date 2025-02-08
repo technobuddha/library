@@ -1,10 +1,10 @@
-import  { type DayOfWeek } from './constants.js';
-import { day,daysPerWeek } from './constants.js';
-import modulo from './modulo.js';
+import { type DayOfWeek } from './constants.js';
+import { day, daysPerWeek } from './constants.js';
+import { modulo } from './modulo.js';
 
-type Options = {
-  /** Use the UTC timezone */
-  UTC?: boolean;
+export type GetEndOfWeekOptions = {
+  /** Use the utc timezone */
+  utc?: boolean;
   /** The day that is considered the 'first' day of the week */
   firstDayOfWeek?: DayOfWeek;
 };
@@ -12,17 +12,16 @@ type Options = {
 /**
  * Determine the last day of the week containing a date
  *
- * @param input The date
- * @param __namedParameters see {@link Options}
- * @default UTC false
- * @default firstDayOfWeek Sunday
+ * @param input - The date
+ * @param __namedParameters - see {@link GetEndOfWeekOptions}
+ * @defaultValue utc false
  * @returns Midnight of the last day of the week containing the input date
  */
 export function getEndOfWeek(
   input: Date,
-  { UTC = false, firstDayOfWeek = day.sunday }: Options = {},
+  { utc = false, firstDayOfWeek = day.sunday }: GetEndOfWeekOptions = {},
 ): Date {
-  if (UTC)
+  if (utc) {
     return new Date(
       Date.UTC(
         input.getUTCFullYear(),
@@ -31,6 +30,7 @@ export function getEndOfWeek(
           modulo(daysPerWeek - input.getUTCDay() + firstDayOfWeek - 1, daysPerWeek),
       ),
     );
+  }
 
   return new Date(
     input.getFullYear(),
@@ -38,5 +38,3 @@ export function getEndOfWeek(
     input.getDate() + modulo(daysPerWeek - input.getDay() + firstDayOfWeek - 1, daysPerWeek),
   );
 }
-
-export default getEndOfWeek;

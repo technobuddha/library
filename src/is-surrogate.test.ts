@@ -1,4 +1,4 @@
-import isSurrogate from './is-surrogate.js';
+import { isSurrogate } from './is-surrogate.js';
 
 describe('isSurrogate', () => {
   test('should detect surrogates', () => {

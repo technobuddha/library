@@ -34,7 +34,9 @@ describe('compare', () => {
   });
 
   test('should compare undefined', () => {
+    expect(compare(undefined, undefined)).toBe(0);
     expect(compare(undefined, 0)).toBe(-1);
+    expect(compare(0, undefined)).toBe(1);
   });
 
   test('should compare null', () => {

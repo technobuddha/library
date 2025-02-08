@@ -1,4 +1,4 @@
-export type Options = {
+export type ToSmallWordsCaseOptions = {
   /** Convert other characters in the string to upper case */
   upperCase?: boolean;
 };
@@ -6,12 +6,15 @@ export type Options = {
 /**
  * Convert the first letter of each word in a string to lower case
  *
- * @param input The string to make small case
- * @default upperCase false
+ * @param input - The string to make small case
+ * @defaultValue upperCase false
  * @returns string in small case
  */
-export function toSmallWordsCase(input: string, { upperCase = false }: Options = {}): string {
-  return (upperCase ? input.toUpperCase() : input).replaceAll(/\b\w/gu, (c) => c.toLowerCase());
+export function toSmallWordsCase(
+  input: string,
+  { upperCase = false }: ToSmallWordsCaseOptions = {},
+): string {
+  return (upperCase ? input.toLocaleUpperCase() : input).replaceAll(/\b\w/gu, (c) =>
+    c.toLocaleLowerCase(),
+  );
 }
-
-export default toSmallWordsCase;

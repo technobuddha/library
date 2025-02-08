@@ -1,19 +1,21 @@
 import { isUndefined } from 'lodash-es';
 
 import { empty, space } from './constants.js';
-import matchCase from './match-case.js';
+import { matchCase } from './match-case.js';
 
 /**
  * Return the plural version of the input string
  *
- * @param input The word to pluralize
- * @param quantity The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
+ * @param input - The word to pluralize
+ * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
  */
 export function plural(input: string, quantity?: number): string {
-  if (quantity === 1 || quantity === -1) return quantity.toString() + space + input;
+  if (quantity === 1 || quantity === -1) {
+    return quantity.toString() + space + input;
+  }
 
-  let lc = input.toLowerCase();
+  let lc = input.toLocaleLowerCase();
   let suffix = empty;
   let prefix = empty;
   let result = null as string | null;
@@ -34,10 +36,13 @@ export function plural(input: string, quantity?: number): string {
     }
   }
 
-  if (database.uncountableWords.includes(lc)) result = matchCase(prefix + lc + suffix, input);
+  if (database.uncountableWords.includes(lc)) {
+    result = matchCase(prefix + lc + suffix, input);
+  }
 
-  if (!result && lc in database.irregulars)
+  if (!result && lc in database.irregulars) {
     result = matchCase(prefix + database.irregulars[lc] + suffix, input);
+  }
 
   if (!result) {
     for (const v of database.uncountableRules) {
@@ -57,7 +62,9 @@ export function plural(input: string, quantity?: number): string {
     }
   }
 
-  if (!result) result = matchCase(`${prefix}${lc}s${suffix}`, input);
+  if (!result) {
+    result = matchCase(`${prefix}${lc}s${suffix}`, input);
+  }
 
   return isUndefined(quantity) ? result : quantity.toString() + space + result;
 }
@@ -72,7 +79,6 @@ type DBEntry = {
 };
 
 const database: DBEntry = {
-  /* cspell:disable */
   rules: [
     [/(stig|sto|dog|sche|anathe)ma$/iu, '$1mata'],
     [/(alumn|alg|antenn|ecclesi|faun|formul|larv|nebul|vertebr)a$/iu, '$1ae'],
@@ -171,7 +177,6 @@ const database: DBEntry = {
     /moose$/iu,
     /trout$/iu,
   ],
-  /* cspell: enable */
   uncountableWords: [
     'abroad',
     'acoustics',
@@ -451,9 +456,6 @@ const database: DBEntry = {
     die: 'dice',
     ox: 'oxen',
   },
-  /* cspell: disable */
   suffixes: ['-up', '-out', '-in-law', '-in-trade'],
   prefixes: ['anti-', 'bi-', 'co-', 'semi-', 'mal-', 'ex-', 'sub-', 'dis-', 'non-', 'un-', 'over-'],
-  /* cspell: enable */
 };
-export default plural;

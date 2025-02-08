@@ -1,19 +1,17 @@
-import { ceil as lodashCeil } from 'lodash-es';
+import { ceil as lodash_ceil } from 'lodash-es';
 
-type Options = {
+export type CeilOptions = {
   tolerance?: number;
   precision?: number;
 };
 
 /**
- * A tweaked variant of {@code Math.ceil}. See {@code goog.math.safeFloor} for
+ * A tweaked variant of @see Math.ceil. See @see goog.math.safeFloor for
  * details.
- * @param input        A number.
- * @param precision    The precision to round up to.
- * @return                The smallest integer greater than or equal to {@code input}.
+ * @param input - A number.
+ * @param precision - The precision to round up to.
+ * @returns The smallest integer greater than or equal to @see input.
  */
-export function ceil(input: number, { tolerance = 0, precision = 0 }: Options = {}): number {
-  return lodashCeil(input - Math.sign(input) * tolerance - Number.EPSILON, precision);
+export function ceil(input: number, { tolerance = 0, precision = 0 }: CeilOptions = {}): number {
+  return lodash_ceil(input - Math.sign(input) * tolerance - Number.EPSILON, precision);
 }
-
-export default ceil;

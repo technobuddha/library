@@ -13,8 +13,8 @@ export type TimeIncrement = {
  *
  * @remarks Negative values will subtract from the Date
  *
- * @param input Starting date
- * @param __namedParameters Amount of time to increment
+ * @param input - Starting date
+ * @param __namedParameters - Amount of time to increment
  * @returns Adjusted date.
  */
 export function addTime(
@@ -39,5 +39,3 @@ export function addTime(
     input.getMilliseconds() + milliseconds,
   );
 }
-
-export default addTime;

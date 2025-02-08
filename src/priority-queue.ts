@@ -3,15 +3,15 @@
  */
 export class PriorityQueue<T> {
   /**
-   * @param comparator Function to compare two elements and puts them in priority order.  Takes two elements as arguments and returns a number greater, less
+   * @param comparator - Function to compare two elements and puts them in priority order.  Takes two elements as arguments and returns a number greater, less
    * then or equal to zero.
-   * @param contents Initial contents of the queue
+   * @param contents - Initial contents of the queue
    */
   public constructor(
     private comparator: (a: T, b: T) => number,
     contents?: Iterable<T>,
   ) {
-    this.contents = [...(contents ?? [])];
+    this.contents = Array.from<T>(contents ?? []);
     this.sorted = false;
   }
 
@@ -25,7 +25,7 @@ export class PriorityQueue<T> {
 
   /**
    * Add an element to the queue
-   * @param o element to be added
+   * @param o - element to be added
    */
   public push(...o: T[]): void {
     this.contents.push(...o);
@@ -38,7 +38,9 @@ export class PriorityQueue<T> {
    * @returns queue element
    */
   public pop(): T | undefined {
-    if (!this.sorted) this.sort();
+    if (!this.sorted) {
+      this.sort();
+    }
     return this.contents.shift();
   }
 
@@ -48,7 +50,9 @@ export class PriorityQueue<T> {
    * @returns generator function
    */
   public *[Symbol.iterator](): Iterator<T> {
-    if (!this.sorted) this.sort();
+    if (!this.sorted) {
+      this.sort();
+    }
     yield* this.contents;
   }
 
@@ -64,24 +68,23 @@ export class PriorityQueue<T> {
   /**
    * Transform all elements in the queue
    *
-   * @param f Function to transforme each element of the queue
+   * @param f - Function to transforme each element of the queue
    * @returns array of transformed queue elements
    */
   public map<S>(f: (value: T, index: number, array: T[]) => S): S[] {
-    if (!this.sorted) this.sort();
-    // eslint-disable-next-line unicorn/no-array-callback-reference
+    if (!this.sorted) {
+      this.sort();
+    }
     return this.contents.map(f);
   }
 
   /**
    * Change the function used to order the queue
    *
-   * @param newComparator function to compare elements of the queue
+   * @param newComparator - function to compare elements of the queue
    */
   public reorder(newComparator: (a: T, b: T) => number): void {
     this.comparator = newComparator;
     this.sorted = false;
   }
 }
-
-export default PriorityQueue;

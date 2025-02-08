@@ -1,7 +1,7 @@
 import { empty, space } from './constants.js';
-import splitWords from './split-words.js';
+import { splitWords } from './split-words.js';
 
-type Options = {
+export type WordwrapOptions = {
   /** The width to wrap to */
   width?: number;
   /** Line separator */
@@ -15,17 +15,17 @@ type Options = {
 /**
  * Wrap text so that it fits within a area of fixed width
  *
- * @param input the text to wrap
- * @param options
- * @default width 75
- * @default separator \n
- * @default cut default false
- * @default trailingSpaces false
+ * @param input - the text to wrap
+ * @param options - see {@link WordwrapOptions}
+ * @defaultValue width 75
+ * @defaultValue separator \\n
+ * @defaultValue cut default false
+ * @defaultValue trailingSpaces false
  * @returns wrapped text
  */
 export function wordwrap(
   input: string,
-  { width = 75, separator = '\n', cut = false, trailingSpaces = false }: Options = {},
+  { width = 75, separator = '\n', cut = false, trailingSpaces = false }: WordwrapOptions = {},
 ): string {
   if (width <= 0) {
     return input;
@@ -34,12 +34,16 @@ export function wordwrap(
 
     // walk through each character and add separators where appropriate
     for (let i = 0; i < input.length; ++i) {
-      if (i % width === 0 && i > 0) result += separator;
+      if (i % width === 0 && i > 0) {
+        result += separator;
+      }
       result += input.charAt(i);
     }
 
     // fill the rest of the line with spaces if trailingSpaces option is true
-    if (trailingSpaces) result += space.repeat(width - (input.length % width));
+    if (trailingSpaces) {
+      result += space.repeat(width - (input.length % width));
+    }
 
     return result;
   }
@@ -72,10 +76,10 @@ export function wordwrap(
 
   // fill the rest of the line with spaces if trailingSpaces option is true
   if (trailingSpaces) {
-    while (currentColumn++ < width) result += space;
+    while (currentColumn++ < width) {
+      result += space;
+    }
   }
 
   return result;
 }
-
-export default wordwrap;

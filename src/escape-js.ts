@@ -1,10 +1,10 @@
-import build from './build.js';
-import { escu4, escUU, escx2, isHex, isOct } from './escape.js';
+import { build } from './build.js';
+import { hex, oct, u4, uu, x2 } from './escape.js';
 
 /**
  * Escape a string for use in Javascript
  *
- * @param input The string to escape
+ * @param input - The string to escape
  * @returns Sting escaped for Javascript
  */
 export function escapeJS(input: string): string {
@@ -16,7 +16,7 @@ export function escapeJS(input: string): string {
     if (u0 < 0x00000020) {
       switch (u0) {
         case 0x00000000: {
-          output.push(isOct(u1) ? '\\x00' : '\\0');
+          output.push(oct(u1) ? '\\x00' : '\\0');
           break;
         }
         case 0x00000008: {
@@ -44,7 +44,7 @@ export function escapeJS(input: string): string {
           break;
         }
         default: {
-          output.push(isHex(u1) ? escu4(u0) : escx2(u0));
+          output.push(hex(u1) ? u4(u0) : x2(u0));
         }
       }
     } else if (u0 < 0x0000007f) {
@@ -62,22 +62,22 @@ export function escapeJS(input: string): string {
           break;
         }
         default: {
-          output.push(String.fromCodePoint(u0));
+          // eslint-disable-next-line unicorn/prefer-code-point
+          output.push(String.fromCharCode(u0));
         }
       }
     } else if (u0 < 0x000000a1) {
-      output.push(isHex(u1) ? escu4(u0) : escx2(u0));
+      output.push(hex(u1) ? u4(u0) : x2(u0));
     } else if (u0 < 0x00000100) {
-      output.push(String.fromCodePoint(u0));
+      // eslint-disable-next-line unicorn/prefer-code-point
+      output.push(String.fromCharCode(u0));
     } else if (u0 < 0x00010000) {
-      output.push(escu4(u0));
+      output.push(u4(u0));
     } else {
       ++i;
-      output.push(escUU(u0));
+      output.push(uu(u0));
     }
   }
 
   return build(output);
 }
-
-export default escapeJS;

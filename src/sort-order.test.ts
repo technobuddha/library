@@ -1,4 +1,4 @@
-import sortOrder from './sort-order.js';
+import { sortOrder } from './sort-order.js';
 
 describe('sortOrder', () => {
   test('should add select the proper sort order', () => {

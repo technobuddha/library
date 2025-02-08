@@ -1,4 +1,4 @@
-import indent from './indent.js';
+import { indent } from './indent.js';
 
 describe('indent', () => {
   test('should indent lines', () => {

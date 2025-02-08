@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getISOWeekOfYear from './get-iso-week-of-year.js';
+import { getISOWeekOfYear } from './get-iso-week-of-year.js';
 
 describe('getISOWeekOfYear', () => {
   test('should compute the week of the year', () => {
@@ -72,60 +72,60 @@ describe('getISOWeekOfYear', () => {
   });
 
   test('should compute the week of the UTC year', () => {
-    expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 29)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 29)), { utc: true })).toEqual({
       year: 1999,
       week: 52,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 30)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 30)), { utc: true })).toEqual({
       year: 1999,
       week: 52,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 31)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(1999, month.december, 31)), { utc: true })).toEqual({
       year: 1999,
       week: 52,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 1)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 1)), { utc: true })).toEqual({
       year: 1999,
       week: 52,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 2)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 2)), { utc: true })).toEqual({
       year: 1999,
       week: 52,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 3)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 3)), { utc: true })).toEqual({
       year: 2000,
       week: 1,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 4)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2000, month.january, 4)), { utc: true })).toEqual({
       year: 2000,
       week: 1,
     });
 
-    expect(getISOWeekOfYear(new Date(Date.UTC(2004, month.december, 29)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2004, month.december, 29)), { utc: true })).toEqual({
       year: 2004,
       week: 53,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2004, month.december, 30)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2004, month.december, 30)), { utc: true })).toEqual({
       year: 2004,
       week: 53,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2004, month.december, 31)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2004, month.december, 31)), { utc: true })).toEqual({
       year: 2004,
       week: 53,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 1)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 1)), { utc: true })).toEqual({
       year: 2004,
       week: 53,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 2)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 2)), { utc: true })).toEqual({
       year: 2004,
       week: 53,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 3)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 3)), { utc: true })).toEqual({
       year: 2005,
       week: 1,
     });
-    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 4)), { UTC: true })).toEqual({
+    expect(getISOWeekOfYear(new Date(Date.UTC(2005, month.january, 4)), { utc: true })).toEqual({
       year: 2005,
       week: 1,
     });

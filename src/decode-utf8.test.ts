@@ -1,15 +1,13 @@
-import decodeUTF8 from './decode-utf8.js';
+import { decodeUTF8 } from './decode-utf8.js';
 
-// cspell:ignore ΑΒΓΔ 𝐀𝐁𝐂
 describe('decodeUTF8', () => {
   test('should not change ASCII', () => {
     expect(decodeUTF8('abcdef')).toBe('abcdef');
     expect(decodeUTF8('\u0000\u0001\u0002\u0003\u007F')).toBe('\u0000\u0001\u0002\u0003\u007F');
   });
 
-  test('should decode codepoints < 0x00008000', () => {
+  test('should decode codepoints < 0x8000', () => {
     expect(decodeUTF8('\u00C2\u00BC\u00C2\u00BD\u00C2\u00BE')).toBe('¼½¾');
-    // cspell:disable-next-line
     expect(decodeUTF8('\u00CE\u0091\u00CE\u0092\u00CE\u0093\u00CE\u0094')).toBe('ΑΒΓΔ');
   });
 

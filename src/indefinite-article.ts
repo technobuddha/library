@@ -1,4 +1,3 @@
-// cspell:disable
 const TESTS: [string, RegExp][] = [
   ['an', /^[aefhilmnirsx]([-.]|$|th$)/iu],
   ['a', /^[bcdgjkpqtuvwyz]([-.]|$|th$)/iu],
@@ -17,9 +16,8 @@ const TESTS: [string, RegExp][] = [
   ['an', /^[aeiou]/iu],
   ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/iu],
 ];
-//cspell:enable
 
-type Options = {
+export type IndefiniteArticleOptions = {
   /** only return the indefinite article, do not combine with the input */
   only?: boolean;
 };
@@ -31,13 +29,16 @@ type Options = {
  * to the rules, but the English language has lots of quirks, and this rules engine can not cover them
  * all
  *
- * @param word The word
- * @param __namedParameters see {@link Options}
- * @default only false
+ * @param word - The word
+ * @param __namedParameters - see {@link IndefiniteArticleOptions}
+ * @defaultValue only false
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
  */
-export function indefiniteArticle(word: string, { only = false }: Options = {}): string {
+export function indefiniteArticle(
+  word: string,
+  { only = false }: IndefiniteArticleOptions = {},
+): string {
   let result = 'a';
   for (const [article, rule] of TESTS) {
     if (rule.test(word)) {
@@ -48,5 +49,3 @@ export function indefiniteArticle(word: string, { only = false }: Options = {}):
 
   return only ? result : `${result} ${word}`;
 }
-
-export default indefiniteArticle;

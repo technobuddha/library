@@ -1,4 +1,3 @@
-/* eslint-disable no-bitwise */
 /*
     This implementation of the Mersenne Twister is a port of the a
     C implementation, by Takuji Nishimura and Makoto Matsumoto.
@@ -72,18 +71,23 @@ export class MersenneTwister {
   }
 
   public setSeed(seed: number | number[]): void {
-    if (typeof seed === 'number') this.init_genrand(seed);
-    else this.init_by_array(seed);
+    if (typeof seed === 'number') {
+      this.initGenrand(seed);
+    } else {
+      this.initByArray(seed);
+    }
   }
 
   /* initializes mt[N] with a seed */
-  public init_genrand(seed: number): void {
+  public initGenrand(seed: number): void {
     this.mt[0] = seed;
     this.mti = 1;
 
-    for (this.mti = 1; this.mti < N; ++this.mti)
+    for (this.mti = 1; this.mti < N; ++this.mti) {
       this.mt[this.mti] =
+        // eslint-disable-next-line no-bitwise
         1812433253 * (this.mt[this.mti - 1] ^ (this.mt[this.mti - 1] >>> 30)) + this.mti;
+    }
     /* See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. */
     /* In the previous versions, MSBs of the seed affect   */
     /* only MSBs of the array mt[].                        */
@@ -92,13 +96,14 @@ export class MersenneTwister {
 
   /* initialize by an array with array */
   /* init_key is the array for initializing keys */
-  public init_by_array(key: number[]): void {
-    this.init_genrand(19650218);
+  public initByArray(key: number[]): void {
+    this.initGenrand(19650218);
 
     let i = 1;
     let j = 0;
     for (let k = Math.min(key.length, N); k; --k) {
       this.mt[i] =
+        // eslint-disable-next-line no-bitwise
         (this.mt[i] ^ ((this.mt[i - 1] ^ (this.mt[i - 1] >>> 30)) * 1664525)) +
         key[j] +
         j; /* non linear */
@@ -109,11 +114,14 @@ export class MersenneTwister {
         this.mt[0] = this.mt[N - 1];
         i = 1;
       }
-      if (j >= key.length) j = 0;
+      if (j >= key.length) {
+        j = 0;
+      }
     }
 
     for (let k = N - 1; k; --k) {
       this.mt[i] =
+        // eslint-disable-next-line no-bitwise
         (this.mt[i] ^ ((this.mt[i - 1] ^ (this.mt[i - 1] >> 30)) * 1566083941)) -
         i; /* non linear */
       if (++i >= N) {
@@ -126,22 +134,28 @@ export class MersenneTwister {
   }
 
   /* generates a random number on [0,0xffffffff]-interval */
-  public genrand_int32(): number {
+  public genrandInt32(): number {
     let y;
 
     if (this.mti >= N) {
       let kk;
 
       for (kk = 0; kk < N - M; ++kk) {
+        // eslint-disable-next-line no-bitwise
         y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
+        // eslint-disable-next-line no-bitwise
         this.mt[kk] = this.mt[kk + M] ^ (y >> 1) ^ MAG01[y & 0x1];
       }
       for (; kk < N - 1; ++kk) {
+        // eslint-disable-next-line no-bitwise
         y = (this.mt[kk] & UPPER_MASK) | (this.mt[kk + 1] & LOWER_MASK);
+        // eslint-disable-next-line no-bitwise
         this.mt[kk] = this.mt[kk + (M - N)] ^ (y >> 1) ^ MAG01[y & 0x1];
       }
 
+      // eslint-disable-next-line no-bitwise
       y = (this.mt[N - 1] & UPPER_MASK) | (this.mt[0] & LOWER_MASK);
+      // eslint-disable-next-line no-bitwise
       this.mt[N - 1] = this.mt[M - 1] ^ (y >> 1) ^ MAG01[y & 0x1];
       this.mti = 0;
     }
@@ -149,44 +163,49 @@ export class MersenneTwister {
     y = this.mt[this.mti++];
 
     /* Tempering */
+    // eslint-disable-next-line no-bitwise
     y ^= y >> 11;
+    // eslint-disable-next-line no-bitwise
     y ^= (y << 7) & 0x9d2c5680;
+    // eslint-disable-next-line no-bitwise
     y ^= (y << 15) & 0xefc60000;
+    // eslint-disable-next-line no-bitwise
     y ^= y >> 18;
 
     return y;
   }
 
   /* generates a random number on [0,0x7fffffff]-interval */
-  public genrand_int31(): number {
-    return this.genrand_int32() >>> 1;
+  public genrandInt31(): number {
+    // eslint-disable-next-line no-bitwise
+    return this.genrandInt32() >>> 1;
   }
 
   /* generates a random number on [0,1]-real-interval */
-  public genrand_real1(): number {
-    return this.genrand_int32() / 4294967295.0;
+  public genrandReal1(): number {
+    return this.genrandInt32() / 4294967295.0;
     /* divided by 2^32-1 */
   }
 
   /* generates a random number on [0,1)-real-interval */
-  public genrand_real2(): number {
-    return this.genrand_int32() / 4294967296.0;
+  public genrandReal2(): number {
+    return this.genrandInt32() / 4294967296.0;
     /* divided by 2^32 */
   }
 
   /* generates a random number on (0,1)-real-interval */
-  public genrand_real3(): number {
-    return (this.genrand_int32() + 0.5) / 4294967296.0;
+  public genrandReal3(): number {
+    return (this.genrandInt32() + 0.5) / 4294967296.0;
     /* divided by 2^32 */
   }
 
   /* generates a random number on [0,1) with 53-bit resolution*/
-  public genrand_res53(): number {
-    const a = this.genrand_int32() >> 5;
-    const b = this.genrand_int32() >> 6;
+  public genrandRes53(): number {
+    // eslint-disable-next-line no-bitwise
+    const a = this.genrandInt32() >> 5;
+    // eslint-disable-next-line no-bitwise
+    const b = this.genrandInt32() >> 6;
     return (a * 67108864.0 + b) / 9007199254740992.0;
   }
   /* These real versions are due to Isaku Wada, 2002/01/09 added */
 }
-
-export default MersenneTwister;

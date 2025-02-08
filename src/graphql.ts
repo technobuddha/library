@@ -1,11 +1,11 @@
 import { isArray, isArrayLike, isBoolean, isNull, isNumber, isString, zip } from 'lodash-es';
 
 import { empty, space } from './constants.js';
-import escapeGraphQL from './escape-graphql.js';
+import { escapeGraphQL } from './escape-graphql.js';
 
-type GraphQLObject = { [Key in string]: GraphQLValue };
-type GraphQLArray = GraphQLValue[];
-type GraphQLValue = number | string | null | boolean | GraphQLArray | GraphQLObject;
+export type GraphQLObject = { [Key in string]: GraphQLValue };
+export type GraphQLArray = GraphQLValue[];
+export type GraphQLValue = number | string | null | boolean | GraphQLArray | GraphQLObject;
 
 export function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
 export function graphQL(arg: GraphQLValue): string;
@@ -23,14 +23,22 @@ export function graphQL(
       .trim();
   }
 
-  if (isNumber(template)) return template.toString();
-  if (isString(template)) return `"${escapeGraphQL(template)}"`;
-  if (isNull(template)) return 'null';
-  if (isBoolean(template)) return template ? 'true' : 'false';
-  if (isArray(template)) return `[ ${template.map((a) => graphQL(a)).join(', ')} ]`;
+  if (isNumber(template)) {
+    return template.toString();
+  }
+  if (isString(template)) {
+    return `"${escapeGraphQL(template)}"`;
+  }
+  if (isNull(template)) {
+    return 'null';
+  }
+  if (isBoolean(template)) {
+    return template ? 'true' : 'false';
+  }
+  if (isArray(template)) {
+    return `[ ${template.map((a) => graphQL(a)).join(', ')} ]`;
+  }
   return `{ ${Object.entries(template as Record<string, GraphQLValue>)
     .map(([key, value]) => `${key}: ${graphQL(value)}`)
     .join(', ')} }`;
 }
-
-export default graphQL;

@@ -1,21 +1,21 @@
 import { month } from './constants.js';
-import isLeapYear from './is-leap-year.js';
+import { isLeapYear } from './is-leap-year.js';
 
-type Options = {
-  /** Use the UTC timezone */
-  UTC?: boolean;
+export type GetDaysInMonthOptions = {
+  /** Use the utc timezone */
+  utc?: boolean;
 };
 
 /**
  * Determine the number of days in the month for a date
  *
- * @param input The date
- * @param __namedParameters see {@link Options}
- * @default UTC false
+ * @param input - The date
+ * @param __namedParameters - see {@link GetDaysInMonthOptions}
+ * @defaultValue utc false
  * @returns The number of days in the specified month
  */
-export function getDaysInMonth(input: Date, { UTC = false }: Options = {}): number {
-  switch (UTC ? input.getUTCMonth() : input.getMonth()) {
+export function getDaysInMonth(input: Date, { utc = false }: GetDaysInMonthOptions = {}): number {
+  switch (utc ? input.getUTCMonth() : input.getMonth()) {
     case month.april:
     case month.june:
     case month.september:
@@ -30,5 +30,3 @@ export function getDaysInMonth(input: Date, { UTC = false }: Options = {}): numb
     }
   }
 }
-
-export default getDaysInMonth;

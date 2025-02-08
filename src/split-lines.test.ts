@@ -1,7 +1,6 @@
 import { empty } from './constants.js';
-import splitLines from './split-lines.js';
+import { splitLines } from './split-lines.js';
 
-// cspell:ignore abcdefghi
 describe('splitLines', () => {
   test('should not split strings', () => {
     expect(splitLines('abcdefghi')).toEqual(['abcdefghi']);

@@ -1,14 +1,15 @@
 import { secondsPerHour, secondsPerMinute } from './constants.js';
-import getDayOfWeek from './get-day-of-week.js';
-import getDayOfYear from './get-day-of-year.js';
-import getWeekOfYear from './get-iso-week-of-year.js';
-import getJulian from './get-julian.js';
-import getTimezone from './get-timezone.js';
-import ordinal from './ordinal.js';
-import padNumber from './pad-number.js';
+import { getDayOfWeek } from './get-day-of-week.js';
+import { getDayOfYear } from './get-day-of-year.js';
+import { getISOWeekOfYear } from './get-iso-week-of-year.js';
+import { getJulian } from './get-julian.js';
+import { getTimezone } from './get-timezone.js';
+import { ordinal } from './ordinal.js';
+import { padNumber } from './pad-number.js';
 
 const tokenizer =
   /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/gu;
+
 const masks: Readonly<Record<string, string>> = Object.freeze({
   default: 'YYYY-MM-DD hh:mm:ss.ff',
   rfc1123: 'ddd, DD MMM YYYY hh:mm:ss GMT',
@@ -24,21 +25,21 @@ const masks: Readonly<Record<string, string>> = Object.freeze({
   mediumDateTime: 'MMM D, YYYY H:mm:ss TT',
   longTime: 'H:mm:ss TT GMT',
   longDateTime: 'MMMM D, YYYY H:mm:ss TT GMT',
-  ISODate: 'YYYY-MM-DD',
-  ISODateTime: 'YYYY-MM-DD"T"hh:mm:ss',
-  ISODateFull: 'YYYY-MM-DD"T"hh:mm:ss.ff',
-  ISODateTimeZone: 'YYYY-MM-DD"T"hh:mm:ssTZ',
-  ISODateFullZone: 'YYYY-MM-DD"T"hh:mm:ss.ffTZ',
-  ISOTime: 'hh:mm:ss',
-  ISOTimeFull: 'hh:mm:ss.ff',
-  ISOTimeZone: 'hh:mm:ssTZ',
-  ISOFullZone: 'hh:mm:ss.ffTZ',
-  ISOWeek: 'Wy"W"Www-Wd',
-  ISOWeekTime: 'Wy"W"Www-Wd"T"hh:mm:ss',
-  ISOWeekFull: 'Wy"W"Www-Wd"T"hh:mm:ss.ff',
-  ISOWeekTimeZone: 'Wy"W"Www-Wd"T"hh:mm:ssTZ',
-  ISOWeekFullZone: 'Wy"W"Www-Wd"T"hh:mm:ss.ffTZ',
-  ISOOrdinal: 'YYYY-OO',
+  isoDate: 'YYYY-MM-DD',
+  isoDateTime: 'YYYY-MM-DD"T"hh:mm:ss',
+  isoDateFull: 'YYYY-MM-DD"T"hh:mm:ss.ff',
+  isoDateTimeZone: 'YYYY-MM-DD"T"hh:mm:ssTZ',
+  isoDateFullZone: 'YYYY-MM-DD"T"hh:mm:ss.ffTZ',
+  isoTime: 'hh:mm:ss',
+  isoTimeFull: 'hh:mm:ss.ff',
+  isoTimeZone: 'hh:mm:ssTZ',
+  isoFullZone: 'hh:mm:ss.ffTZ',
+  isoWeek: 'Wy"W"Www-Wd',
+  isoWeekTime: 'Wy"W"Www-Wd"T"hh:mm:ss',
+  isoWeekFull: 'Wy"W"Www-Wd"T"hh:mm:ss.ff',
+  isoWeekTimeZone: 'Wy"W"Www-Wd"T"hh:mm:ssTZ',
+  isoWeekFullZone: 'Wy"W"Www-Wd"T"hh:mm:ss.ffTZ',
+  isoOrdinal: 'YYYY-OO',
 
   cookie: 'dddd, DD MMM YYYY hh:mm:ss GMT',
 });
@@ -75,38 +76,42 @@ const monthName = [
   'December',
 ];
 
-type Options = {
+export type FormatDateOptions = {
   /** Format the date in the UTC timezone */
-  UTC?: boolean;
+  utc?: boolean;
 };
 
 /**
  * Format a date
  *
- * @param input The date
- * @param mask The mask
- * @param __namedParameters see {@link Options}
- * @default UTC false
+ * @param input - The date
+ * @param mask - The mask
+ * @param __namedParameters - see {@link FormatDateOptions}
+ * @defaultValue utc false
  */
-export function formatDate(input: Date, mask?: string, { UTC = false }: Options = {}): string {
-  const myMask =
+export function formatDate(
+  input: Date,
+  mask?: string,
+  { utc = false }: FormatDateOptions = {},
+): string {
+  const argMask =
     mask ?
       mask in masks ?
         masks[mask]
       : mask
     : masks.default;
 
-  const da = UTC ? input.getUTCDate() : input.getDate();
-  const dy = UTC ? input.getUTCDay() : input.getDay();
-  const mo = UTC ? input.getUTCMonth() : input.getMonth();
-  const yr = UTC ? input.getUTCFullYear() : input.getFullYear();
-  const ho = UTC ? input.getUTCHours() : input.getHours();
-  const mi = UTC ? input.getUTCMinutes() : input.getMinutes();
-  const se = UTC ? input.getUTCSeconds() : input.getSeconds();
-  const ms = UTC ? input.getUTCMilliseconds() : input.getMilliseconds();
-  const o = UTC ? 0 : input.getTimezoneOffset();
+  const da = utc ? input.getUTCDate() : input.getDate();
+  const dy = utc ? input.getUTCDay() : input.getDay();
+  const mo = utc ? input.getUTCMonth() : input.getMonth();
+  const yr = utc ? input.getUTCFullYear() : input.getFullYear();
+  const ho = utc ? input.getUTCHours() : input.getHours();
+  const mi = utc ? input.getUTCMinutes() : input.getMinutes();
+  const se = utc ? input.getUTCSeconds() : input.getSeconds();
+  const ms = utc ? input.getUTCMilliseconds() : input.getMilliseconds();
+  const o = utc ? 0 : input.getTimezoneOffset();
 
-  return myMask.replaceAll(tokenizer, (token) => {
+  return argMask.replaceAll(tokenizer, (token) => {
     switch (token) {
       case 'h': {
         return padNumber(ho, 0);
@@ -181,28 +186,28 @@ export function formatDate(input: Date, mask?: string, { UTC = false }: Options 
         return dayName[dy];
       }
       case 'O': {
-        return padNumber(getDayOfYear(input, { UTC }), 0);
+        return padNumber(getDayOfYear(input, { utc }), 0);
       } //Day of Year (1-366)
       case 'OO': {
-        return padNumber(getDayOfYear(input, { UTC }), 3);
+        return padNumber(getDayOfYear(input, { utc }), 3);
       } //Day of Year (1-366)
       case 'Wy': {
-        return padNumber(getWeekOfYear(input, { UTC }).year, 0);
+        return padNumber(getISOWeekOfYear(input, { utc }).year, 0);
       }
       case 'Ww': {
-        return padNumber(getWeekOfYear(input, { UTC }).week, 0);
+        return padNumber(getISOWeekOfYear(input, { utc }).week, 0);
       } //Week of Year (1-53)
       case 'Www': {
-        return padNumber(getWeekOfYear(input, { UTC }).week, 2);
+        return padNumber(getISOWeekOfYear(input, { utc }).week, 2);
       } //
       case 'Wd': {
-        return padNumber(getDayOfWeek(input, { UTC }), 0);
+        return padNumber(getDayOfWeek(input, { utc }), 0);
       }
       case 'TZ': {
         return getTimezone(o);
       }
       case 'GMT': {
-        return getTimezone(o, { GMT: true });
+        return getTimezone(o, { gmt: true });
       }
       case 'AM': {
         return ho < 12 ? 'AM' : '';
@@ -248,5 +253,3 @@ export function formatDate(input: Date, mask?: string, { UTC = false }: Options 
     }
   });
 }
-
-export default formatDate;

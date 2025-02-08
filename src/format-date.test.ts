@@ -1,7 +1,7 @@
-import formatDate from './format-date.js';
-import getTimezone from './get-timezone.js';
+import { formatDate } from './format-date.js';
+import { getTimezone } from './get-timezone.js';
 
-describe('formatNumber', () => {
+describe('formatDate', () => {
   test('support the h format', () => {
     expect(formatDate(new Date('1945-07-16T05:29:45'), 'h')).toBe('5');
   });
@@ -157,7 +157,7 @@ describe('formatNumber', () => {
 
   test('support the GMT format', () => {
     const d = new Date('1969-07-20T15:17');
-    const t = getTimezone(d, { GMT: true });
+    const t = getTimezone(d, { gmt: true });
     expect(formatDate(d, 'GMT')).toBe(t);
   });
 
@@ -228,43 +228,43 @@ describe('formatNumber', () => {
   });
 
   test('support UTC option', () => {
-    expect(formatDate(new Date('2000-01-01T00:00:00Z'), 'hh', { UTC: true })).toBe('00');
+    expect(formatDate(new Date('2000-01-01T00:00:00Z'), 'hh', { utc: true })).toBe('00');
   });
 
   test('support default', () => {
     expect(formatDate(new Date('2000-01-01T00:00:00'))).toBe('2000-01-01 00:00:00.000');
   });
 
-  test('support standard masks', () => {
+  test('support formats', () => {
     const d = new Date('2000-01-01T00:00:00Z');
-    expect(formatDate(d, 'default', { UTC: true })).toBe('2000-01-01 00:00:00.000');
-    expect(formatDate(d, 'rfc1123', { UTC: true })).toBe('Sat, 01 Jan 2000 00:00:00 GMT');
-    expect(formatDate(d, 'asctime', { UTC: true })).toBe('Sat Jan 01 00:00:00');
-    expect(formatDate(d, 'shortDate', { UTC: true })).toBe('1/1/00');
-    expect(formatDate(d, 'mediumDate', { UTC: true })).toBe('Jan 1, 2000');
-    expect(formatDate(d, 'longDate', { UTC: true })).toBe('January 1, 2000');
-    expect(formatDate(d, 'fullDate', { UTC: true })).toBe('Saturday, January 1, 2000');
-    expect(formatDate(d, 'shortTime', { UTC: true })).toBe('12:00 AM');
-    expect(formatDate(d, 'shortDateTime', { UTC: true })).toBe('1/1/2000 12:00 AM');
-    expect(formatDate(d, 'mediumTime', { UTC: true })).toBe('12:00:00 AM');
-    expect(formatDate(d, 'mediumDateTime', { UTC: true })).toBe('Jan 1, 2000 12:00:00 AM');
-    expect(formatDate(d, 'longTime', { UTC: true })).toBe('12:00:00 AM GMT');
-    expect(formatDate(d, 'longDateTime', { UTC: true })).toBe('January 1, 2000 12:00:00 AM GMT');
-    expect(formatDate(d, 'ISODate', { UTC: true })).toBe('2000-01-01');
-    expect(formatDate(d, 'ISODateTime', { UTC: true })).toBe('2000-01-01T00:00:00');
-    expect(formatDate(d, 'ISODateFull', { UTC: true })).toBe('2000-01-01T00:00:00.000');
-    expect(formatDate(d, 'ISODateTimeZone', { UTC: true })).toBe('2000-01-01T00:00:00Z');
-    expect(formatDate(d, 'ISODateFullZone', { UTC: true })).toBe('2000-01-01T00:00:00.000Z');
-    expect(formatDate(d, 'ISOTime', { UTC: true })).toBe('00:00:00');
-    expect(formatDate(d, 'ISOTimeFull', { UTC: true })).toBe('00:00:00.000');
-    expect(formatDate(d, 'ISOTimeZone', { UTC: true })).toBe('00:00:00Z');
-    expect(formatDate(d, 'ISOFullZone', { UTC: true })).toBe('00:00:00.000Z');
-    expect(formatDate(d, 'ISOWeek', { UTC: true })).toBe('1999W52-6');
-    expect(formatDate(d, 'ISOWeekTime', { UTC: true })).toBe('1999W52-6T00:00:00');
-    expect(formatDate(d, 'ISOWeekFull', { UTC: true })).toBe('1999W52-6T00:00:00.000');
-    expect(formatDate(d, 'ISOWeekTimeZone', { UTC: true })).toBe('1999W52-6T00:00:00Z');
-    expect(formatDate(d, 'ISOWeekFullZone', { UTC: true })).toBe('1999W52-6T00:00:00.000Z');
-    expect(formatDate(d, 'ISOOrdinal', { UTC: true })).toBe('2000-001');
-    expect(formatDate(d, 'cookie', { UTC: true })).toBe('Saturday, 01 Jan 2000 00:00:00 GMT');
+    expect(formatDate(d, 'default', { utc: true })).toBe('2000-01-01 00:00:00.000');
+    expect(formatDate(d, 'rfc1123', { utc: true })).toBe('Sat, 01 Jan 2000 00:00:00 GMT');
+    expect(formatDate(d, 'asctime', { utc: true })).toBe('Sat Jan 01 00:00:00');
+    expect(formatDate(d, 'shortDate', { utc: true })).toBe('1/1/00');
+    expect(formatDate(d, 'mediumDate', { utc: true })).toBe('Jan 1, 2000');
+    expect(formatDate(d, 'longDate', { utc: true })).toBe('January 1, 2000');
+    expect(formatDate(d, 'fullDate', { utc: true })).toBe('Saturday, January 1, 2000');
+    expect(formatDate(d, 'shortTime', { utc: true })).toBe('12:00 AM');
+    expect(formatDate(d, 'shortDateTime', { utc: true })).toBe('1/1/2000 12:00 AM');
+    expect(formatDate(d, 'mediumTime', { utc: true })).toBe('12:00:00 AM');
+    expect(formatDate(d, 'mediumDateTime', { utc: true })).toBe('Jan 1, 2000 12:00:00 AM');
+    expect(formatDate(d, 'longTime', { utc: true })).toBe('12:00:00 AM GMT');
+    expect(formatDate(d, 'longDateTime', { utc: true })).toBe('January 1, 2000 12:00:00 AM GMT');
+    expect(formatDate(d, 'isoDate', { utc: true })).toBe('2000-01-01');
+    expect(formatDate(d, 'isoDateTime', { utc: true })).toBe('2000-01-01T00:00:00');
+    expect(formatDate(d, 'isoDateFull', { utc: true })).toBe('2000-01-01T00:00:00.000');
+    expect(formatDate(d, 'isoDateTimeZone', { utc: true })).toBe('2000-01-01T00:00:00Z');
+    expect(formatDate(d, 'isoDateFullZone', { utc: true })).toBe('2000-01-01T00:00:00.000Z');
+    expect(formatDate(d, 'isoTime', { utc: true })).toBe('00:00:00');
+    expect(formatDate(d, 'isoTimeFull', { utc: true })).toBe('00:00:00.000');
+    expect(formatDate(d, 'isoTimeZone', { utc: true })).toBe('00:00:00Z');
+    expect(formatDate(d, 'isoFullZone', { utc: true })).toBe('00:00:00.000Z');
+    expect(formatDate(d, 'isoWeek', { utc: true })).toBe('1999W52-6');
+    expect(formatDate(d, 'isoWeekTime', { utc: true })).toBe('1999W52-6T00:00:00');
+    expect(formatDate(d, 'isoWeekFull', { utc: true })).toBe('1999W52-6T00:00:00.000');
+    expect(formatDate(d, 'isoWeekTimeZone', { utc: true })).toBe('1999W52-6T00:00:00Z');
+    expect(formatDate(d, 'isoWeekFullZone', { utc: true })).toBe('1999W52-6T00:00:00.000Z');
+    expect(formatDate(d, 'isoOrdinal', { utc: true })).toBe('2000-001');
+    expect(formatDate(d, 'cookie', { utc: true })).toBe('Saturday, 01 Jan 2000 00:00:00 GMT');
   });
 });

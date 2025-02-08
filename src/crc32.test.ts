@@ -1,4 +1,4 @@
-import crc32 from './crc32.js';
+import { crc32 } from './crc32.js';
 
 describe('crc32', () => {
   test('computes checksum & build table', () => {

@@ -1,6 +1,5 @@
-import wordwrap from './wordwrap.js';
+import { wordwrap } from './wordwrap.js';
 
-// cspell:ignore nbove
 describe('wordwrap', () => {
   test('wrap words', () => {
     expect(

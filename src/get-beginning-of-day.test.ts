@@ -1,4 +1,4 @@
-import getBeginningOfDay from './get-beginning-of-day.js';
+import { getBeginningOfDay } from './get-beginning-of-day.js';
 
 describe('getBeginningOfDay', () => {
   test('should calculate the beginning of the day', () => {
@@ -9,7 +9,7 @@ describe('getBeginningOfDay', () => {
 
   test('should calculate the beginning of the UTC day', () => {
     expect(
-      getBeginningOfDay(new Date('20 Jul 1969 20:18 GMT-04:00'), { UTC: true }).toString(),
+      getBeginningOfDay(new Date('20 Jul 1969 20:18 GMT-04:00'), { utc: true }).toString(),
     ).toBe(new Date('20 Jul 1969 20:00').toString());
   });
 });

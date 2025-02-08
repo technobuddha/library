@@ -1,4 +1,4 @@
-import toBoolean from './to-boolean.js';
+import { toBoolean } from './to-boolean.js';
 
 describe('toBoolean', () => {
   test('should convert basic boolean values', () => {

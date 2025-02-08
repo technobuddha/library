@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getBeginningOfYear from './get-beginning-of-year.js';
+import { getBeginningOfYear } from './get-beginning-of-year.js';
 
 describe('getBeginningOfYear', () => {
   test('should compute the beginning of the year', () => {
@@ -11,7 +11,7 @@ describe('getBeginningOfYear', () => {
   test('should compute the UTC beginning of the year', () => {
     expect(
       getBeginningOfYear(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.january, 1)).toString());
   });

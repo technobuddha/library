@@ -1,5 +1,5 @@
 import { empty, space } from './constants.js';
-import toPrimitive from './to-primitive.js';
+import { toPrimitive } from './to-primitive.js';
 
 describe('toPrimitive', () => {
   test('should convert strings', () => {
@@ -25,6 +25,7 @@ describe('toPrimitive', () => {
 
   test('should handle null and undefined', () => {
     expect(toPrimitive(null)).toBeNull();
+    expect(toPrimitive(undefined)).toBeUndefined();
   });
 
   test('should handle symbols', () => {

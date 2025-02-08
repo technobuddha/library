@@ -1,4 +1,4 @@
-import toError from './to-error.js';
+import { toError } from './to-error.js';
 
 describe('toError', () => {
   test('should return Error', () => {

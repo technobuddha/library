@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getBeginningOfMonth from './get-beginning-of-month.js';
+import { getBeginningOfMonth } from './get-beginning-of-month.js';
 
 describe('getBeginningOfMonth', () => {
   test('should compute beginning of the month', () => {
@@ -11,7 +11,7 @@ describe('getBeginningOfMonth', () => {
   test('should compute UTC beginning of the month', () => {
     expect(
       getBeginningOfMonth(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 1)).toString());
   });

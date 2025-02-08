@@ -10,5 +10,3 @@ export function toInteger(entity: unknown): number {
     : Number.NaN
   );
 }
-
-export default toInteger;

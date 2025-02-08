@@ -7,7 +7,7 @@ describe('compareStrings', () => {
     expect(compareStrings('b', 'a')).toBe(1);
   });
 
-  test('should compare nulls', () => {
+  test('should compare null', () => {
     expect(compareStrings(null, null)).toBe(0);
     expect(compareStrings(null, 'a')).toBe(-1);
     expect(compareStrings('a', null)).toBe(1);

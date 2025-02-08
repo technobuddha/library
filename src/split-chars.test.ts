@@ -1,7 +1,6 @@
 import { empty } from './constants.js';
-import splitChars from './split-chars.js';
+import { splitChars } from './split-chars.js';
 
-// cspell:ignore abcdefghi
 describe('splitChars', () => {
   test('should split strings', () => {
     expect(splitChars('abcdefghi')).toEqual(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']);

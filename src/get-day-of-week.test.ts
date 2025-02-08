@@ -1,5 +1,5 @@
 import { day } from './constants.js';
-import getDayOfWeek from './get-day-of-week.js';
+import { getDayOfWeek } from './get-day-of-week.js';
 
 describe('getDayOfWeek', () => {
   test('should detect weekday', () => {
@@ -17,30 +17,30 @@ describe('getDayOfWeek', () => {
   });
 
   test('should detect UTC weekday', () => {
-    expect(getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true })).toBe(3);
+    expect(getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true })).toBe(3);
   });
 
   test('should accept UTC alternate start of week', () => {
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.sunday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.sunday }),
     ).toBe(3);
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.monday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.monday }),
     ).toBe(2);
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.tuesday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.tuesday }),
     ).toBe(1);
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.wednesday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.wednesday }),
     ).toBe(0);
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.thursday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.thursday }),
     ).toBe(6);
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.friday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.friday }),
     ).toBe(5);
     expect(
-      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { UTC: true, startOfWeek: day.saturday }),
+      getDayOfWeek(new Date(Date.UTC(2018, 6, 4)), { utc: true, startOfWeek: day.saturday }),
     ).toBe(4);
   });
 });

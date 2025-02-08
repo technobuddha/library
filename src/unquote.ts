@@ -1,8 +1,8 @@
 import { escapeRegExp, isString } from 'lodash-es';
 
-import unescapeJS from './unescape-js.js';
+import { unescapeJS } from './unescape-js.js';
 
-type Options = {
+export type UnquoteOptions = {
   /** The quote character(s) to use */
   quote?: string;
   /** Character sequence to replace the quote mark within the text */
@@ -12,19 +12,23 @@ type Options = {
 /**
  * Remove surrounding quotes from text
  *
- * @param input The text to surrounded by quotes
- * @param __namedParameters see {@link Options}
- * @default quote double-quote (")
- * @default escape unescapeJS
+ * @param input - The text to surrounded by quotes
+ * @param __namedParameters - see {@link UnquoteOptions}
+ * @defaultValue quote double-quote (")
+ * @defaultValue escape unescapeJS
  * @returns the unescaped text with quotes removed
  */
-export function unquote(input: string, { quote = '"', escape = unescapeJS }: Options = {}): string {
-  if (input.startsWith(quote) && input.endsWith(quote)) {
-    const unquoted = input.slice(quote.length, input.length - quote.length);
-    if (isString(escape)) return unquoted.replaceAll(new RegExp(escapeRegExp(escape), 'ug'), quote);
-    return escape(unquoted);
+export function unquote(
+  input: string,
+  { quote = '"', escape = unescapeJS }: UnquoteOptions = {},
+): string {
+  let text = input;
+  if (text.startsWith(quote) && text.endsWith(quote)) {
+    text = text.slice(quote.length, text.length - quote.length);
+    if (isString(escape)) {
+      return text.replaceAll(new RegExp(escapeRegExp(escape), 'gu'), quote);
+    }
+    return escape(text);
   }
-  return input;
+  return text;
 }
-
-export default unquote;

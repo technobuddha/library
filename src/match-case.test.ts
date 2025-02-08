@@ -1,4 +1,4 @@
-import matchCase from './match-case.js';
+import { matchCase } from './match-case.js';
 
 describe('matchCase', () => {
   test('should match case', () => {

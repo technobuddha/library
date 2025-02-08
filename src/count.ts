@@ -1,4 +1,4 @@
-export type Options = {
+export type CountOptions = {
   /** if true, counts overlapping strings */
   overlap?: boolean;
 };
@@ -6,12 +6,16 @@ export type Options = {
 /**
  * Compute the number of times a substring occurs within a string
  *
- * @param input The string
- * @param supstring The substring to look for
- * @param __namedParameters see {@link Options}
- * @return number of times *substring* occurs within *input*
+ * @param input - The string
+ * @param substring - The substring to look for
+ * @param __namedParameters - see {@link CountOptions}
+ * @returns number of times *substring* occurs within *input*
  */
-export function count(input: string, substring: string, { overlap = false }: Options = {}): number {
+export function count(
+  input: string,
+  substring: string,
+  { overlap = false }: CountOptions = {},
+): number {
   const step = overlap ? 1 : substring.length;
   let cnt = 0;
   let pos = 0;
@@ -23,5 +27,3 @@ export function count(input: string, substring: string, { overlap = false }: Opt
 
   return cnt;
 }
-
-export default count;

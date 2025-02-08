@@ -1,11 +1,16 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
 {
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["dom", "esnext"],
-    "rootDir": ".",
-
-    "declaration": true,
-    "outDir": "../dist"
+    "target": "esnext",
+    "lib": ["esnext"],
+    "composite": true,
+    "types": ["node", "jest"],
+    "noEmit": true
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.d.ts", "**/*.test.ts"],
+  "exclude": [],
+  "references": [{ "path": "./tsconfig.code.json" }]
 }

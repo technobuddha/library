@@ -1,13 +1,13 @@
-import toCapitalCase from './to-capital-case.js';
+import { toCapitalCase } from './to-capital-case.js';
 
 /**
  * Convert an identifier string to pascal case
  *
- * @param input The identifier string
+ * @param input - The identifier string
  * @returns the identifier in pascal case
  */
 export function toPascalCase(input: string): string {
-  return toCapitalCase(input.trim().replaceAll(/[-_.\s]+\w/gu, (c) => c.slice(-1).toUpperCase()));
+  return toCapitalCase(
+    input.trim().replaceAll(/[-_.\s]+\w/gu, (c) => c.slice(-1).toLocaleUpperCase()),
+  );
 }
-
-export default toPascalCase;

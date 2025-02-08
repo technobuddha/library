@@ -1,11 +1,10 @@
-/* eslint-disable unicorn/prefer-code-point */
 import { empty } from './constants.js';
-import { escu4, isOct } from './escape.js';
+import { oct, u4 } from './escape.js';
 
 /**
  * Escape a string for use in Java
  *
- * @param input The string to escape
+ * @param input - The string to escape
  * @returns The string escaped for Java
  */
 export function escapeJava(input: string): string {
@@ -17,7 +16,7 @@ export function escapeJava(input: string): string {
     if (u0 < 0x00000020) {
       switch (u0) {
         case 0x00000000: {
-          output.push(isOct(u1) ? '\\000' : '\\0');
+          output.push(oct(u1) ? '\\000' : '\\0');
           break;
         }
         case 0x00000008: {
@@ -41,7 +40,7 @@ export function escapeJava(input: string): string {
           break;
         }
         default: {
-          output.push(escu4(u0));
+          output.push(u4(u0));
         }
       }
     } else if (u0 < 0x0000007f) {
@@ -59,23 +58,25 @@ export function escapeJava(input: string): string {
           break;
         }
         default: {
-          output.push(String.fromCodePoint(u0));
+          // eslint-disable-next-line unicorn/prefer-code-point
+          output.push(String.fromCharCode(u0));
         }
       }
     } else if (u0 < 0x000000a1) {
-      output.push(escu4(u0));
+      output.push(u4(u0));
     } else if (u0 < 0x00000100) {
-      output.push(String.fromCodePoint(u0));
+      // eslint-disable-next-line unicorn/prefer-code-point
+      output.push(String.fromCharCode(u0));
     } else if (u0 < 0x00010000) {
-      output.push(escu4(u0));
+      output.push(u4(u0));
     } else {
-      u0 = input.charCodeAt(i)!;
-      u1 = input.charCodeAt(++i)!;
-      output.push(escu4(u0), escu4(u1));
+      // eslint-disable-next-line unicorn/prefer-code-point
+      u0 = input.charCodeAt(i);
+      // eslint-disable-next-line unicorn/prefer-code-point
+      u1 = input.charCodeAt(++i);
+      output.push(u4(u0), u4(u1));
     }
   }
 
   return output.join(empty);
 }
-
-export default escapeJava;

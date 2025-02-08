@@ -1,10 +1,10 @@
-import normalizeAngle from './normalize-angle.js';
+import { normalizeAngle } from './normalize-angle.js';
 
 /**
  * Computes the difference between startAngle and endAngle (angles in radians).
  *
- * @param startAngle Start angle in radians.
- * @param endAngle End angle in radians.
+ * @param startAngle - Start angle in radians.
+ * @param endAngle - End angle in radians.
  * @returns The number of radians that when added to *startAngle* will result in *endAngle*.
  *
  * @remarks
@@ -24,9 +24,9 @@ import normalizeAngle from './normalize-angle.js';
  */
 export function angleDifference(startAngle: number, endAngle: number): number {
   let d = normalizeAngle(endAngle) - normalizeAngle(startAngle);
-  if (d > Math.PI) d -= Math.PI * 2;
+  if (d > Math.PI) {
+    d -= Math.PI * 2;
+  }
 
-  return d;
+  return d + 0;
 }
-
-export default angleDifference;

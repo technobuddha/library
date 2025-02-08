@@ -1,5 +1,5 @@
-import compareNumbers from './compare-numbers.js';
-import PriorityQueue from './priority-queue.js';
+import { compareNumbers } from './compare-numbers.js';
+import { PriorityQueue } from './priority-queue.js';
 
 describe('priority-queue', () => {
   test('should create a queue', () => {
@@ -14,10 +14,14 @@ describe('priority-queue', () => {
     const q = new PriorityQueue<number>(compareNumbers);
     q.push(1, 3, 2);
     let i = 0;
-    for (const pq of q) expect(pq).toBe(++i);
+    for (const pq of q) {
+      expect(pq).toBe(++i);
+    }
     // iterating should not change contents
     i = 0;
-    for (const pq of q) expect(pq).toBe(++i);
+    for (const pq of q) {
+      expect(pq).toBe(++i);
+    }
   });
 
   test('should return size', () => {

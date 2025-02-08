@@ -1,4 +1,4 @@
-import toInteger from './to-integer.js';
+import { toInteger } from './to-integer.js';
 
 describe('toInteger', () => {
   test('should return numbers', () => {

@@ -1,25 +1,24 @@
-import getDaysInMonth from './get-days-in-month.js';
+import { getDaysInMonth } from './get-days-in-month.js';
 
-type Options = {
-  /** Use the UTC timezone */
-  UTC?: boolean;
+export type GetEndOfMonthOptions = {
+  /** Use the utc timezone */
+  utc?: boolean;
 };
 
 /**
  * Determine the last day of the month containing the input date
  *
- * @param input The date
- * @param __namedParameters see {@link Options}
- * @default UTC false
+ * @param input - The date
+ * @param __namedParameters - see {@link GetEndOfMonthOptions}
+ * @defaultValue utc false
  * @returns Midnight on the last day of the month corresponding to the input date
  */
-export function getEndOfMonth(input: Date, { UTC = false }: Options = {}): Date {
-  if (UTC)
+export function getEndOfMonth(input: Date, { utc = false }: GetEndOfMonthOptions = {}): Date {
+  if (utc) {
     return new Date(
-      Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), getDaysInMonth(input, { UTC })),
+      Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), getDaysInMonth(input, { utc })),
     );
+  }
 
-  return new Date(input.getFullYear(), input.getMonth(), getDaysInMonth(input, { UTC }));
+  return new Date(input.getFullYear(), input.getMonth(), getDaysInMonth(input, { utc }));
 }
-
-export default getEndOfMonth;

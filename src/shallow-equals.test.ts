@@ -1,4 +1,4 @@
-import shallowEquals from './shallow-equals.js';
+import { shallowEquals } from './shallow-equals.js';
 
 describe('shallowEquals', () => {
   test('computes checksum & build table', () => {
@@ -7,7 +7,9 @@ describe('shallowEquals', () => {
 
   test('null == null && undefined == undefined', () => {
     expect(shallowEquals(null, null)).toBeTrue();
+    expect(shallowEquals(undefined, undefined)).toBeTrue();
     expect(shallowEquals(undefined, null)).toBeFalse();
+    expect(shallowEquals(null, undefined)).toBeFalse();
   });
 
   test('object == self', () => {

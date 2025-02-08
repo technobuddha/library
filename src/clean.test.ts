@@ -1,5 +1,3 @@
-// cspell:disable
-
 import { clean, cleanEnd, cleanStart } from './clean.js';
 import { empty } from './constants.js';
 

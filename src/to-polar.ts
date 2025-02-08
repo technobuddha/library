@@ -4,7 +4,7 @@ import { normalizeAngle } from './normalize-angle.js';
 /**
  * Convert cartesian coordinates to polar
  *
- * @param __namedParameters see {@link Cartesian}
+ * @param __namedParameters - see {@link Cartesian}
  * @returns polar coordinated
  */
 export function toPolar({ x, y }: Cartesian): Polar {
@@ -13,5 +13,3 @@ export function toPolar({ x, y }: Cartesian): Polar {
     angle: normalizeAngle(Math.atan2(y, x)),
   };
 }
-
-export default toPolar;

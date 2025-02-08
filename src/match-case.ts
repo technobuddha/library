@@ -1,7 +1,7 @@
-import isLowerCase from './is-lower-case.js';
-import isUpperCase from './is-upper-case.js';
-import toCapitalCase from './to-capital-case.js';
-import toSmallCase from './to-small-case.js';
+import { isLowerCase } from './is-lower-case.js';
+import { isUpperCase } from './is-upper-case.js';
+import { toCapitalCase } from './to-capital-case.js';
+import { toSmallCase } from './to-small-case.js';
 
 /**
  * Attempt to convert the input string into the same case as the target string
@@ -12,18 +12,19 @@ import toSmallCase from './to-small-case.js';
  *  * Capitalcase
  *  * sMALLCASE
  *
- * @param input The input string
- * @param target The target string
+ * @param input - The input string
+ * @param target - The target string
  * @returns The input in the case case as the target string
  */
 export function matchCase(input: string, target: string): string {
-  if (isLowerCase(target)) return input.toLowerCase();
-  else if (isUpperCase(target)) return input.toUpperCase();
-  else if (target.length > 1 && isUpperCase(target[0]) && isLowerCase(target.slice(1)))
+  if (isLowerCase(target)) {
+    return input.toLocaleLowerCase();
+  } else if (isUpperCase(target)) {
+    return input.toLocaleUpperCase();
+  } else if (target.length > 1 && isUpperCase(target[0]) && isLowerCase(target.slice(1))) {
     return toCapitalCase(input, { lowerCase: true });
-  else if (target.length > 1 && isLowerCase(target[0]) && isUpperCase(target.slice(1)))
+  } else if (target.length > 1 && isLowerCase(target[0]) && isUpperCase(target.slice(1))) {
     return toSmallCase(input, { upperCase: true });
+  }
   return input;
 }
-
-export default matchCase;

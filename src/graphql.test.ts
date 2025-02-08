@@ -1,4 +1,4 @@
-import graphQL from './graphql.js';
+import { graphQL } from './graphql.js';
 
 describe('graphQL', () => {
   test('should output numbers', () => {

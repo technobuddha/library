@@ -1,4 +1,4 @@
-import lerp from './lerp.js';
+import { lerp } from './lerp.js';
 
 describe('lerp', () => {
   test('converts left to right range', () => {

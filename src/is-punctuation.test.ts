@@ -1,5 +1,5 @@
 import { empty, space } from './constants.js';
-import isPunctuation from './is-punctuation.js';
+import { isPunctuation } from './is-punctuation.js';
 
 describe('isPunctuation', () => {
   test('should detect punctuation', () => {

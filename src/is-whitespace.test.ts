@@ -1,5 +1,5 @@
 import { empty, space } from './constants.js';
-import isWhitespace from './is-whitespace.js';
+import { isWhitespace } from './is-whitespace.js';
 
 describe('isWhitespace', () => {
   test('should handle empty strings', () => {

@@ -1,6 +1,5 @@
-import toASCII from './to-ascii.js';
+import { toASCII } from './to-ascii.js';
 
-// cspell:ignore ＡＢＣＤ
 describe('toASCII', () => {
   test('should bad characters to be replaces', () => {
     expect(toASCII('crème brûlée')).toBe('creme brulee');

@@ -1,4 +1,4 @@
-import floor from './floor.js';
+import { floor } from './floor.js';
 
 describe('floor', () => {
   test('should handle positive numbers', () => {

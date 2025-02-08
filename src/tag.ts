@@ -1,13 +1,13 @@
-import build from './build.js';
+import { build } from './build.js';
 import { space } from './constants.js';
-import escapeHTML from './escape-html.js';
+import { escapeHTML } from './escape-html.js';
 
 /**
  * Surround text with an HTML tag
  *
- * @param input The text to surround
- * @param tagName The name of the tag
- * @param attributes A dictionary of name value pairs to use for attributes
+ * @param input - The text to surround
+ * @param tagName - The name of the tag
+ * @param attributes - A dictionary of name value pairs to use for attributes
  * @returns HTML tag with text
  */
 export function tag(

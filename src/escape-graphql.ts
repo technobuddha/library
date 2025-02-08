@@ -1,10 +1,10 @@
 import { empty } from './constants.js';
-import { escu4 } from './escape.js';
+import { u4 } from './escape.js';
 
 /**
  * Escape a string for use in GraphQL
  *
- * @param input The string to escape
+ * @param input - The string to escape
  * @returns the escaped string
  */
 export function escapeGraphQL(input: string): string {
@@ -35,7 +35,7 @@ export function escapeGraphQL(input: string): string {
           break;
         }
         default: {
-          output.push(escu4(u));
+          output.push(u4(u));
         }
       }
     } else if (u < 0x0000007f) {
@@ -53,11 +53,12 @@ export function escapeGraphQL(input: string): string {
           break;
         }
         default: {
-          output.push(String.fromCodePoint(u));
+          // eslint-disable-next-line unicorn/prefer-code-point
+          output.push(String.fromCharCode(u));
         }
       }
     } else if (u < 0x000000a1) {
-      output.push(escu4(u));
+      output.push(u4(u));
     } else if (u < 0x00010000) {
       output.push(String.fromCodePoint(u));
     } else {
@@ -68,5 +69,3 @@ export function escapeGraphQL(input: string): string {
 
   return output.join(empty);
 }
-
-export default escapeGraphQL;

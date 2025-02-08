@@ -1,12 +1,12 @@
 import { type DayOfWeek } from './constants.js';
 import { day, month, ticksPerWeek } from './constants.js';
-import floor from './floor.js';
-import getBeginningOfWeek from './get-beginning-of-week.js';
-import getISOWeeksInYear from './get-iso-weeks-in-year.js';
+import { floor } from './floor.js';
+import { getBeginningOfWeek } from './get-beginning-of-week.js';
+import { getISOWeeksInYear } from './get-iso-weeks-in-year.js';
 
-type Options = {
-  /** Use the UTC timezone */
-  UTC?: boolean;
+export type GetISOWeekOfYearOptions = {
+  /** Use the utc timezone */
+  utc?: boolean;
   /** Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it */
   weekOneIncludes?: DayOfWeek;
   /** The first day of the week */
@@ -16,32 +16,36 @@ type Options = {
 /**
  * Determine the ISO week number for a given date
  *
- * @param input The date
- * @param __namedParameteres see {@link Options}
- * @default weekOneIncludes Thursday
- * @default firstDayOfWeek Monday
+ * @param input - The date
+ * @param __namedParameteres - see {@link GetISOWeekOfYearOptions}
+ * @defaultValue weekOneIncludes Thursday
+ * @defaultValue firstDayOfWeek Monday
  * @returns the week number (1-53)
  */
 export function getISOWeekOfYear(
   input: Date,
-  { UTC = false, weekOneIncludes = day.thursday, firstDayOfWeek = day.monday }: Options = {},
+  {
+    utc = false,
+    weekOneIncludes = day.thursday,
+    firstDayOfWeek = day.monday,
+  }: GetISOWeekOfYearOptions = {},
 ): { year: number; week: number } {
-  const bow = getBeginningOfWeek(input, { UTC, firstDayOfWeek });
+  const bow = getBeginningOfWeek(input, { utc, firstDayOfWeek });
 
   const week1 =
-    UTC ?
+    utc ?
       getBeginningOfWeek(new Date(Date.UTC(bow.getUTCFullYear(), month.january, weekOneIncludes)), {
-        UTC,
+        utc,
         firstDayOfWeek,
       })
     : getBeginningOfWeek(new Date(bow.getFullYear(), month.january, weekOneIncludes), {
-        UTC,
+        utc,
         firstDayOfWeek,
       });
 
   let week = 1 + floor((bow.getTime() - week1.getTime()) / ticksPerWeek, { tolerance: 0.05 });
-  let year = UTC ? bow.getUTCFullYear() : bow.getFullYear();
-  const weeks = getISOWeeksInYear(year, { UTC, weekOneIncludes });
+  let year = utc ? bow.getUTCFullYear() : bow.getFullYear();
+  const weeks = getISOWeeksInYear(year, { utc, weekOneIncludes });
 
   if (week > weeks) {
     year += 1;
@@ -50,5 +54,3 @@ export function getISOWeekOfYear(
 
   return { year, week };
 }
-
-export default getISOWeekOfYear;

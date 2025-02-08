@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getEndOfYear from './get-end-of-year.js';
+import { getEndOfYear } from './get-end-of-year.js';
 
 describe('getEndOfYear', () => {
   test('should compute the End of the year', () => {
@@ -10,7 +10,7 @@ describe('getEndOfYear', () => {
 
   test('should compute the UTC End of the year', () => {
     expect(
-      getEndOfYear(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true }).toString(),
+      getEndOfYear(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { utc: true }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.december, 31)).toString());
   });
 });

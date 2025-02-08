@@ -1,6 +1,6 @@
 import { isNil } from 'lodash-es';
 
-export type Options = {
+export type RootOptions = {
   /** The refix string to remove */
   prefix?: string;
   /** The suffix string to remove */
@@ -10,19 +10,19 @@ export type Options = {
 /**
  * Extract the root word, removing a prefix and/or suffix
  *
- * @param input The word, which might have {@code prefix} before it, and {@code suffix} after it.
- * @param __namedParameters see {@link Options}
+ * @param text - The word, which might have @see prefix before it, and @see suffix after it.
+ * @param __namedParameters - see {@link RootOptions}
  * @returns The root word
  */
-export function root(input: string, { prefix, suffix }: Options = {}): string {
-  let text = input;
+export function root(text: string, { prefix, suffix }: RootOptions = {}): string {
+  let input = text;
+  if (!isNil(prefix) && input.startsWith(prefix)) {
+    input = input.slice(prefix.length);
+  }
 
-  if (!isNil(prefix) && text.startsWith(prefix)) text = text.slice(prefix.length);
+  if (!isNil(suffix) && input.endsWith(suffix)) {
+    input = input.slice(0, Math.max(0, input.length - suffix.length));
+  }
 
-  if (!isNil(suffix) && text.endsWith(suffix))
-    text = text.slice(0, Math.max(0, text.length - suffix.length));
-
-  return text;
+  return input;
 }
-
-export default root;

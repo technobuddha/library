@@ -1,4 +1,4 @@
-import parseDate from './parse-date.js';
+import { parseDate } from './parse-date.js';
 
 describe('parseDate', () => {
   test('should parse mdy (num)', () => {

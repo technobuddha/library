@@ -2,7 +2,7 @@ import { toString } from 'lodash-es';
 
 import { empty, space } from './constants.js';
 
-export type Options = {
+export type CoordinateOptions = {
   /** Conjunction to insert in the last position (default 'and') */
   conjunction?: string;
   /** If true, use the oxford comma */
@@ -14,31 +14,31 @@ export type Options = {
 /**
  * Create a string from an array, separating values and inserting a conjunction
  *
- * @param input Array of values
- * @param __namedParameters see {@link Options}
+ * @param input - Array of values
+ * @param __namedParameters - see {@link CoordinateOptions}
  */
 export function coordinate<T = unknown>(
   input: ArrayLike<T>,
-  { conjunction = 'and', oxford = true, separator = ',' }: Options = {},
+  { conjunction = 'and', oxford = true, separator = ',' }: CoordinateOptions = {},
 ): string {
-  const array = Array.from(input);
+  if (input.length > 0) {
+    let text = toString(input[0]);
 
-  if (array.length > 0) {
-    let text = toString(array[0]);
+    let i = 1;
+    for (; i < input.length - 1; i++) {
+      text += separator + space + toString(input[i]);
+    }
 
-    for (let i = 1; i < array.length - 1; i++) text += separator + space + toString(array[i]);
-
-    if (array.length > 1)
+    if (input.length > 1) {
       text +=
-        (oxford && array.length > 2 ? separator : empty) +
+        (oxford && input.length > 2 ? separator : empty) +
         space +
         conjunction +
         space +
-        toString(array.at(-1));
+        toString(input[i]);
+    }
 
     return text;
   }
   return empty;
 }
-
-export default coordinate;

@@ -1,4 +1,4 @@
-import count from './count.js';
+import { count } from './count.js';
 
 describe('count', () => {
   test('should count substrings', () => {

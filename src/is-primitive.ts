@@ -1,7 +1,7 @@
 /**
  * Check to see if an object is a primitive
  *
- * @param input object to test
+ * @param input - object to test
  * @returns true, if the object is a c
  */
 export function isPrimitive(
@@ -17,5 +17,3 @@ export function isPrimitive(
     typeof input === 'symbol'
   );
 }
-
-export default isPrimitive;

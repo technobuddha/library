@@ -1,4 +1,4 @@
-import variance from './variance.js';
+import { variance } from './variance.js';
 
 describe('variance', () => {
   test('should compute variance', () => {

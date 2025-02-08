@@ -1,48 +1,51 @@
 import { isNaN, isNull, isUndefined } from 'lodash-es';
 
-import toPrimitive from './to-primitive.js';
+import { toPrimitive } from './to-primitive.js';
 
 /**
  * Compare two objects
  *
- * @param a First object
- * @param b Second object
- * @returns 0 if a == b; -1 if a < b; 1 if a > b
+ * @param a - First object
+ * @param b - Second object
+ * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
  */
-export function compare(x: unknown, y: unknown): number {
-  const px = toPrimitive(x, 'number');
-  const py = toPrimitive(y, 'number');
+export function compare(a: unknown, b: unknown): number {
+  const pa = toPrimitive(a, 'number');
+  const pb = toPrimitive(b, 'number');
 
-  if (isUndefined(px) && isUndefined(py)) {
+  if (isUndefined(pa) && isUndefined(pb)) {
     return 0;
-  } else if (isUndefined(px)) {
+  } else if (isUndefined(pa)) {
     return -1;
-  } else if (isUndefined(py)) {
+  } else if (isUndefined(pb)) {
     return 1;
-  } else if (isNull(px) && isNull(py)) {
+  } else if (isNull(pa) && isNull(pb)) {
     return 0;
-  } else if (isNull(px)) {
+  } else if (isNull(pa)) {
     return -1;
-  } else if (isNull(py)) {
+  } else if (isNull(pb)) {
     return 1;
-  } else if (typeof px !== 'string' && typeof py !== 'string') {
-    const nx = Number(px);
-    const ny = Number(py);
+  } else if (typeof pa !== 'string' && typeof pb !== 'string') {
+    const na = Number(pa);
+    const nb = Number(pb);
 
-    if (isNaN(nx) && isNaN(py)) return 0;
-    else if (isNaN(nx)) return -1;
-    else if (isNaN(ny)) return 1;
-    else if (nx === ny) return 0;
-    else if (nx < ny) return -1;
+    if (isNaN(na) && isNaN(pb)) {
+      return 0;
+    } else if (isNaN(na)) {
+      return -1;
+    } else if (isNaN(nb)) {
+      return 1;
+    } else if (na === nb) {
+      return 0;
+    } else if (na < nb) {
+      return -1;
+    }
     return 1;
   }
-
-  const sx = px.toString();
-  const sy = py.toString();
-
-  if (sx === sy) return 0;
-  else if (sx < sy) return -1;
+  if (pa === pb) {
+    return 0;
+  } else if ((pa as number) < (pb as number)) {
+    return -1;
+  }
   return 1;
 }
-
-export default compare;

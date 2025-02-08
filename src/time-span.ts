@@ -17,19 +17,41 @@ import {
 export class TimeSpan {
   /**
    *
-   * @param text formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be omitted
-   * @param ticks the number of ticks (milliseconds)
-   * @param d Days
-   * @param h Hours
-   * @param m minutes
-   * @param s seconds
-   * @param ms milliseconds
    */
   public constructor();
+  /**
+   *
+   * @param ticks - the number of ticks (milliseconds)
+   */
   public constructor(ticks: number);
+  /**
+   *
+   * @param h - Hours
+   * @param m - minutes
+   * @param s - seconds
+   */
   public constructor(h: number, m: number, s: number);
+  /**
+   *
+   * @param d - Days
+   * @param h - Hours
+   * @param m - minutes
+   * @param s - seconds
+   */
   public constructor(d: number, h: number, m: number, s: number);
+  /**
+   *
+   * @param d - Days
+   * @param h - Hours
+   * @param m - minutes
+   * @param s - seconds
+   * @param ms - milliseconds
+   */
   public constructor(d: number, h: number, m: number, s: number, ms: number);
+  /**
+   *
+   * @param text - formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be omitted
+   */
   public constructor(text: string);
   public constructor(...args: unknown[]) {
     let sign = 1;
@@ -41,7 +63,11 @@ export class TimeSpan {
 
     switch (args.length) {
       case 0: {
-        d = h = m = s = ms = 0;
+        d = 0;
+        h = 0;
+        m = 0;
+        s = 0;
+        ms = 0;
 
         break;
       }
@@ -71,24 +97,37 @@ export class TimeSpan {
               d = 0;
             }
           } else {
-            d = h = m = s = ms = 0;
+            d = 0;
+            h = 0;
+            m = 0;
+            s = 0;
+            ms = 0;
           }
         } else {
           ms = args[0] as number;
-          d = h = m = s = 0;
+          d = 0;
+          h = 0;
+          m = 0;
+          s = 0;
         }
 
         break;
       }
       case 3: {
         d = 0;
-        [h, m, s] = args as number[];
+        h = args[0] as number;
+        m = args[1] as number;
+        s = args[2] as number;
         ms = 0;
 
         break;
       }
       default: {
-        [d, h, m, s, ms] = args as number[];
+        d = args[0] as number;
+        h = args[1] as number;
+        m = args[2] as number;
+        s = args[3] as number;
+        ms = args[4] as number;
       }
     }
 
@@ -190,7 +229,7 @@ export class TimeSpan {
   /**
    * Format the timespan using a mask
    *
-   * @param mask The mask
+   * @param mask - The mask
    * @returns the formatted TimeSpan
    */
   public format(mask?: string): string {
@@ -213,12 +252,8 @@ export class TimeSpan {
         ff: F.toString().padStart(3, '0'),
       } as { [key: string]: string };
 
-      return mask.replaceAll(
-        // cspell:disable-next-line
-        /[dmhsf]{1,2}|"[^"]*"|'[^']*'/gu,
-        ($0) => {
-          return $0 in flags ? flags[$0] : $0.slice(1, -1);
-        },
+      return mask.replaceAll(/[dmhsf]{1,2}|"[^"]*"|'[^']*'/gu, ($0) =>
+        $0 in flags ? flags[$0] : $0.slice(1, -1),
       );
     }
     const D = this.days;
@@ -228,17 +263,16 @@ export class TimeSpan {
     const F = this.milliseconds;
 
     let str: string;
-    if (D !== 0)
-      str = `${D}d${H.toString().padStart(2, '0')}:${M.toString().padStart(
-        2,
-        '0',
-      )}:${S.toString().padStart(2, '0')}`;
-    else if (H === 0) {
+    if (D !== 0) {
+      str = `${D}d${H.toString().padStart(2, '0')}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
+    } else if (H === 0) {
       str = `${M}:${S.toString().padStart(2, '0')}`;
     } else {
       str = `${H}:${M.toString().padStart(2, '0')}:${S.toString().padStart(2, '0')}`;
     }
-    if (F) str += `.${F.toString().padStart(3, '0')}`;
+    if (F) {
+      str += `.${F.toString().padStart(3, '0')}`;
+    }
     return str;
   }
 
@@ -254,7 +288,7 @@ export class TimeSpan {
   /**
    * Add two timespans
    *
-   * @param other TimeSpan to add to this
+   * @param other - TimeSpan to add to this
    * @returns a TimeSpan that is the sum of two timespans
    */
   public add(other: TimeSpan): TimeSpan {
@@ -264,8 +298,8 @@ export class TimeSpan {
   /**
    * Compare two TimeSpans
    *
-   * @param t1 First TimeSpan
-   * @param t2 Second TimeSpan
+   * @param t1 - First TimeSpan
+   * @param t2 - Second TimeSpan
    * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
    */
   public static compare(t1: TimeSpan, t2: TimeSpan): number {
@@ -276,5 +310,3 @@ export class TimeSpan {
     );
   }
 }
-
-export default TimeSpan;

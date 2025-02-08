@@ -1,6 +1,5 @@
-import splice from './splice.js';
+import { splice } from './splice.js';
 
-// cspell:disable
 describe('splice', () => {
   test('should splice substrings', () => {
     expect(splice('abcdefghi', 0, 0, 'foo')).toBe('fooabcdefghi');

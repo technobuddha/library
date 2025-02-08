@@ -83,6 +83,7 @@ export const month = Object.freeze({
   dec: 11,
 } as Record<string, MonthOfYear>);
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export const charcode = Object.freeze({
   ' ': 32,
   '!': 33,
@@ -180,6 +181,7 @@ export const charcode = Object.freeze({
   '}': 125,
   '~': 126,
 });
+/* eslint-enable @typescript-eslint/naming-convention */
 
 export const mouseButton = Object.freeze({
   left: 0,
@@ -289,30 +291,3 @@ export const keycode = Object.freeze({
   numpad0: 96,
   decimalPoint: 110,
 });
-
-export default {
-  empty,
-  space,
-  nbsp,
-  zwsp,
-  ticksPerSecond,
-  secondsPerMinute,
-  minutesPerHour,
-  hoursPerDay,
-  daysPerWeek,
-  ticksPerMinute,
-  ticksPerHour,
-  ticksPerDay,
-  ticksPerWeek,
-  secondsPerHour,
-  secondsPerDay,
-  secondsPerWeek,
-  minutesPerDay,
-  minutesPerWeek,
-  hoursPerWeek,
-  day,
-  month,
-  charcode,
-  mouseButton,
-  keycode,
-};

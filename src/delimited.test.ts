@@ -1,5 +1,5 @@
 import { empty } from './constants.js';
-import delimited from './delimited.js';
+import { delimited } from './delimited.js';
 
 describe('delimited', () => {
   test('should extract from delimited string', () => {

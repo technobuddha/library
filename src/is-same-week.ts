@@ -1,10 +1,9 @@
-import { type DayOfWeek } from './constants.js';
-import { day } from './constants.js';
-import getBeginningOfWeek from './get-beginning-of-week.js';
+import { day, type DayOfWeek } from './constants.js';
+import { getBeginningOfWeek } from './get-beginning-of-week.js';
 
-type Options = {
-  /** use the UTC timezone */
-  UTC?: boolean;
+export type IsSameWeekOptions = {
+  /** use the utc timezone */
+  utc?: boolean;
   /** which day to use as the first day of the week */
   firstDayOfWeek?: DayOfWeek;
 };
@@ -12,22 +11,19 @@ type Options = {
 /**
  * Determine if two dates occur in the same week
  *
- * @param input1 The first date
- * @param input2 The second date
- * @param __namedParameters see {@link Options}
- * @default UTC false
- * @default firstDayOfWeek Sunday
+ * @param input1 - The first date
+ * @param input2 - The second date
+ * @param __namedParameters - see {@link IsSameWeekOptions}
+ * @defaultValue utc false
  * @returns true, if the two dates occur in the same week
  */
 export function isSameWeek(
   input1: Date,
   input2: Date,
-  { UTC = false, firstDayOfWeek = day.sunday }: Options = {},
+  { utc = false, firstDayOfWeek = day.sunday }: IsSameWeekOptions = {},
 ): boolean {
   return (
-    getBeginningOfWeek(input1, { UTC, firstDayOfWeek }).getTime() ===
-    getBeginningOfWeek(input2, { UTC, firstDayOfWeek }).getTime()
+    getBeginningOfWeek(input1, { utc, firstDayOfWeek }).getTime() ===
+    getBeginningOfWeek(input2, { utc, firstDayOfWeek }).getTime()
   );
 }
-
-export default isSameWeek;

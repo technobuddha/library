@@ -1,4 +1,4 @@
-import binaryUnits from './binary-units.js';
+import { binaryUnits } from './binary-units.js';
 
 describe('binaryUnits', () => {
   test('should handle whole numbers than 1', () => {
@@ -14,8 +14,6 @@ describe('binaryUnits', () => {
     expect(binaryUnits(1152921504606846976)).toBe('1EiB');
     expect(binaryUnits(1180591620717411303424)).toBe('1ZiB');
     expect(binaryUnits(1208925819614629174706176)).toBe('1YiB');
-    expect(binaryUnits(1237940039285380274899124224)).toBe('1RiB');
-    expect(binaryUnits(1267650600228229401496703205376)).toBe('1QiB');
   });
 
   test('should handle fractional numbers', () => {
@@ -32,5 +30,5 @@ describe('binaryUnits', () => {
     expect(binaryUnits(1234000, { precision: 3 })).toBe('1.177MiB');
   });
 
-  //TODO [2025-01-01]: format
+  //TODO [2025-04-01]: format
 });

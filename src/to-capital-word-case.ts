@@ -1,4 +1,4 @@
-type Options = {
+export type ToCapitalWordCaseOptions = {
   /** Convert other characters in the string to lower case */
   lowerCase?: boolean;
 };
@@ -6,12 +6,15 @@ type Options = {
 /**
  * Capitalize the first letter of each word in a string
  *
- * @param input The string to capitalize
- * @param __namedParameters see {@link Options}
- * @default lowercase false
+ * @param input - The string to capitalize
+ * @param __namedParameters - see {@link ToCapitalWordCaseOptions}
+ * @defaultValue lowercase false
  */
-export function toCapitalWordCase(input: string, { lowerCase = false }: Options = {}): string {
-  return (lowerCase ? input.toLowerCase() : input).replaceAll(/\b\w/gu, (l) => l.toUpperCase());
+export function toCapitalWordCase(
+  input: string,
+  { lowerCase = false }: ToCapitalWordCaseOptions = {},
+): string {
+  return (lowerCase ? input.toLocaleLowerCase() : input).replaceAll(/\b\w/gu, (l) =>
+    l.toLocaleUpperCase(),
+  );
 }
-
-export default toCapitalWordCase;

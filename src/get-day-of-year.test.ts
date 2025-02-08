@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getDayOfYear from './get-day-of-year.js';
+import { getDayOfYear } from './get-day-of-year.js';
 
 describe('getDayOfYear', () => {
   test('should convert to day of year', () => {
@@ -8,7 +8,7 @@ describe('getDayOfYear', () => {
   });
 
   test('should convert to UTC day of year', () => {
-    expect(getDayOfYear(new Date(Date.UTC(2004, month.march, 1)), { UTC: true })).toBe(61);
-    expect(getDayOfYear(new Date(Date.UTC(2005, month.march, 1)), { UTC: true })).toBe(60);
+    expect(getDayOfYear(new Date(Date.UTC(2004, month.march, 1)), { utc: true })).toBe(61);
+    expect(getDayOfYear(new Date(Date.UTC(2005, month.march, 1)), { utc: true })).toBe(60);
   });
 });

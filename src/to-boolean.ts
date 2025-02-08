@@ -1,6 +1,6 @@
-import toEnumeration from './to-enumeration.js';
+import { toEnumeration } from './to-enumeration.js';
 
-type Options = {
+export type ToBooleanOptions = {
   /** An iterable list of values that are "true" */
   trueValues?: Iterable<string | RegExp>;
   /** An iterable list of values that are "true" */
@@ -13,16 +13,14 @@ const defaultFalse = ['false', 'no', 'n', 'off', '0'];
 /**
  * Convert a string to a boolean value
  *
- * @param input The string to convert
- * @parm __namedParameters see {@link Options}
- * @defaults trueValues 'true', 'yes', 'y', 'on', or '1'
- * @defaults falseValues 'false', 'no', 'n', 'off', '0'
+ * @param input - The string to convert
+ * @param __namedParameters - see {@link ToBooleanOptions}
+ * @defaultValue trueValues 'true', 'yes', 'y', 'on', or '1'
+ * @defaultValue falseValues 'false', 'no', 'n', 'off', '0'
  */
 export function toBoolean(
   input: string,
-  { trueValues = defaultTrue, falseValues = defaultFalse }: Options = {},
+  { trueValues = defaultTrue, falseValues = defaultFalse }: ToBooleanOptions = {},
 ): boolean | undefined {
   return [true, false, undefined][toEnumeration(input, trueValues, falseValues) ?? 2];
 }
-
-export default toBoolean;

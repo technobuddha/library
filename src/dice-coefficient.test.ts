@@ -1,4 +1,4 @@
-import diceCoefficient from './dice-coefficient.js';
+import { diceCoefficient } from './dice-coefficient.js';
 
 describe('diceCoefficient', () => {
   test('Detect difference between two strings', () => {

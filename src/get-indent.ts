@@ -1,8 +1,8 @@
-import { escapeRegExp,isNil  } from 'lodash-es';
+import { escapeRegExp, isNil } from 'lodash-es';
 
 import { space } from './constants.js';
 
-type Options = {
+export type GetIndentOptions = {
   /** The indentation character */
   indenter?: string;
 };
@@ -10,16 +10,16 @@ type Options = {
 /**
  * Determine the indentation level of text
  *
- * @param input The indented text
- * @param __namedParameters see {@link Options}
- * @default indenter space
+ * @param input - The indented text
+ * @param __namedParameters - see {@link GetIndentOptions}
+ * @defaultValue indenter space
  * @returns The minimum amount of indentation on each line
  */
-export function getIndent(input: string, { indenter = space }: Options = {}): number {
+export function getIndent(input: string, { indenter = space }: GetIndentOptions = {}): number {
   const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'ugm').exec(input);
-  if (isNil(matches)) return 0;
+  if (isNil(matches)) {
+    return 0;
+  }
 
   return Math.min(...matches.map((m) => m.length)) / indenter.length;
 }
-
-export default getIndent;

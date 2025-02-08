@@ -1,4 +1,4 @@
-import longestCommonSubsequence from './longest-common-subsequence.js';
+import { longestCommonSubsequence } from './longest-common-subsequence.js';
 
 describe('longestCommonSubsequence', () => {
   test('should handle basic functionality', () => {

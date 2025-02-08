@@ -1,4 +1,4 @@
-import build from './build.js';
+import { build } from './build.js';
 
 describe('build', () => {
   test('should build strings', () => {

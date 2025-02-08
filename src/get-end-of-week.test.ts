@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getEndOfWeek from './get-end-of-week.js';
+import { getEndOfWeek } from './get-end-of-week.js';
 
 describe('getEndOfWeek', () => {
   test('should find the End of the week', () => {
@@ -34,50 +34,50 @@ describe('getEndOfWeek', () => {
 
   test('should find the UTC End of the week', () => {
     expect(
-      getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true }).toString(),
+      getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { utc: true }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 26)).toString());
   });
 
-  test('should accept alternate UTC start of week', () => {
+  test('should accept alternate start of week UTC', () => {
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 0,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 26)).toString());
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 1,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 20)).toString());
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 2,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 21)).toString());
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 3,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 22)).toString());
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 4,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 23)).toString());
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 5,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 24)).toString());
     expect(
       getEndOfWeek(new Date(Date.UTC(1969, month.july, 20, 20, 18)), {
-        UTC: true,
+        utc: true,
         firstDayOfWeek: 6,
       }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 25)).toString());

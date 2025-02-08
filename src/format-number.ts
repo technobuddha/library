@@ -1,9 +1,9 @@
 import { defaultTo, map } from 'lodash-es';
 
-import build from './build.js';
+import { build } from './build.js';
 import { empty } from './constants.js';
-import padNumber from './pad-number.js';
-import splitChars from './split-chars.js';
+import { padNumber } from './pad-number.js';
+import { splitChars } from './split-chars.js';
 
 //#region parse
 type ParseReturn = {
@@ -42,7 +42,9 @@ function parse(mask: string): ParseReturn {
         for (++i; i < mask.length; ++i) {
           const k = mask.charAt(i);
 
-          if (c === k) break;
+          if (c === k) {
+            break;
+          }
           s += k;
         }
 
@@ -75,7 +77,9 @@ function parse(mask: string): ParseReturn {
       }
 
       case ',': {
-        if (beforeDP) commas++;
+        if (beforeDP) {
+          commas++;
+        }
         break;
       }
 
@@ -133,8 +137,11 @@ function parse(mask: string): ParseReturn {
       }
 
       case '\\': {
-        if (i < mask.length - 1) (beforeDP ? before : after).push(`"${mask.charAt(++i)}`);
-        else (beforeDP ? before : after).push('"\\');
+        if (i < mask.length - 1) {
+          (beforeDP ? before : after).push(`"${mask.charAt(++i)}`);
+        } else {
+          (beforeDP ? before : after).push('"\\');
+        }
         break;
       }
 
@@ -145,7 +152,9 @@ function parse(mask: string): ParseReturn {
     }
 
     if (beforeDP && c !== ',') {
-      if (commas > 0) group = true;
+      if (commas > 0) {
+        group = true;
+      }
       commas = 0;
     }
   }
@@ -183,13 +192,17 @@ function format(
   let exponent = Number(e) + 1; // +1 because we store the number without the decimal point
   const mantissa = m.replace('.', empty).split(empty);
 
-  while (mantissa.length > exponent && mantissa.at(-1) === '0') --mantissa.length;
+  while (mantissa.length > exponent && mantissa.at(-1) === '0') {
+    --mantissa.length;
+  }
 
   const rounder = (num: number): void => {
     let n = num;
 
     if (mantissa.length < n) {
-      while (mantissa.length < n) mantissa.push('0');
+      while (mantissa.length < n) {
+        mantissa.push('0');
+      }
     } else {
       const c = mantissa[n];
       mantissa.length = n;
@@ -249,9 +262,15 @@ function format(
     }
   };
 
-  if (scale !== undefined) exponent += scale;
-  if (round !== undefined) rounder(exponent + round);
-  if (precision !== undefined) rounder(precision);
+  if (scale !== undefined) {
+    exponent += scale;
+  }
+  if (round !== undefined) {
+    rounder(exponent + round);
+  }
+  if (precision !== undefined) {
+    rounder(precision);
+  }
 
   let length = Math.min(exponent, mantissa.length);
 
@@ -269,7 +288,9 @@ function format(
   }
 
   if (trim === 'back' || trim === 'all') {
-    while (mantissa.length > exponent && mantissa.at(-1) === '0') --mantissa.length;
+    while (mantissa.length > exponent && mantissa.at(-1) === '0') {
+      --mantissa.length;
+    }
   }
 
   return new NumberFormatter(sign, mantissa, exponent);
@@ -299,13 +320,17 @@ class NumberFormatter {
 
   public whole(): this {
     const whole = this.mantissa.slice(0, this.exponent);
-    while (whole.length < this.exponent) whole.push('0');
+    while (whole.length < this.exponent) {
+      whole.push('0');
+    }
     this.output.push(whole);
     return this;
   }
 
   public decimal(): this {
-    if (this.exponent < this.mantissa.length) this.output.push('.');
+    if (this.exponent < this.mantissa.length) {
+      this.output.push('.');
+    }
     return this;
   }
 
@@ -338,7 +363,6 @@ class NumberFormatter {
 //#endregion
 //#region formatNumber
 export function formatNumber(input: number, mask: string): string {
-  // cspell:disable-next-line
   if (/^([CDEFGNPX][0-9]*)|R$/iu.test(mask)) {
     const f = mask.charAt(0);
     let prec = Number.parseInt(mask.slice(1));
@@ -415,7 +439,9 @@ export function formatNumber(input: number, mask: string): string {
       case 'r': {
         for (let i = 1; i < 21; ++i) {
           const num = input.toPrecision(i);
-          if (Number.parseFloat(num) === input) return num;
+          if (Number.parseFloat(num) === input) {
+            return num;
+          }
         }
 
         break;
@@ -428,7 +454,9 @@ export function formatNumber(input: number, mask: string): string {
     // eslint-disable-next-line no-bitwise
     let hex = (input >>> 0).toString(16);
     hex = hex.padStart(prec, '0');
-    if (f === 'X') hex = hex.toUpperCase();
+    if (f === 'X') {
+      hex = hex.toLocaleUpperCase();
+    }
 
     return hex;
   }
@@ -436,9 +464,11 @@ export function formatNumber(input: number, mask: string): string {
   const formats = mask.toString().split(';');
 
   let fmt = parse(formats[0]);
-  if (Number.parseFloat((input * fmt.scale).toFixed(fmt.precision)) === 0)
+  if (Number.parseFloat((input * fmt.scale).toFixed(fmt.precision)) === 0) {
     fmt = formats.length < 3 ? fmt : parse(formats[2]);
-  else if (input < 0) fmt = formats.length < 2 ? parse(`-${formats[0]}`) : parse(formats[1]);
+  } else if (input < 0) {
+    fmt = formats.length < 2 ? parse(`-${formats[0]}`) : parse(formats[1]);
+  }
 
   let w: string[];
   let f: string[];
@@ -491,7 +521,9 @@ export function formatNumber(input: number, mask: string): string {
     }
   }
 
-  while (w.length > 0 && w[0] === '0') w.shift();
+  while (w.length > 0 && w[0] === '0') {
+    w.shift();
+  }
 
   let o = empty;
   let d = 0;
@@ -547,11 +579,7 @@ export function formatNumber(input: number, mask: string): string {
           break;
         }
         case '#': {
-          if (
-            f.reduce((acc, val) => {
-              return val === '0' ? acc : true;
-            }, false)
-          ) {
+          if (f.reduce((acc, val) => (val === '0' ? acc : true), false)) {
             a += f.shift()!;
             digits = true;
           }
@@ -584,5 +612,3 @@ export function formatNumber(input: number, mask: string): string {
   return o;
 }
 //#endregion
-
-export default formatNumber;

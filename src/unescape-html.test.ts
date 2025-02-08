@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import unescapeHTML from './unescape-html.js';
+import { unescapeHTML } from './unescape-html.js';
 
-// cspell:ignore ΑΒΓΔΕΖ ΑΒЖК
 describe('unescapeHTML', () => {
   test('should unescape basic characters', () => {
     expect(unescapeHTML('&quot;&amp;&apos;&lt;&gt;')).toBe('"&\'<>');

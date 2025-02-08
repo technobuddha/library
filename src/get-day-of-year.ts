@@ -1,17 +1,15 @@
 import { ticksPerDay } from './constants.js';
-import floor from './floor.js';
-import getBeginningOfYear from './get-beginning-of-year.js';
+import { floor } from './floor.js';
+import { getBeginningOfYear } from './get-beginning-of-year.js';
 
-type Options = {
-  UTC?: boolean;
+export type GetDayOfYearOptions = {
+  utc?: boolean;
 };
 
-export function getDayOfYear(input: Date, { UTC = false }: Options = {}): number {
+export function getDayOfYear(input: Date, { utc = false }: GetDayOfYearOptions = {}): number {
   return (
-    floor((input.getTime() - getBeginningOfYear(input, { UTC }).getTime()) / ticksPerDay, {
+    floor((input.getTime() - getBeginningOfYear(input, { utc }).getTime()) / ticksPerDay, {
       tolerance: 0.05,
     }) + 1
   );
 }
-
-export default getDayOfYear;

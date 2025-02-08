@@ -2,7 +2,7 @@ import { isFinite, isNaN } from 'lodash-es';
 
 import { empty, space } from './constants.js';
 
-export type Options = OptionsCardinal & OptionsIllion;
+export type CardinalOptions = OptionsCardinal & OptionsIllion;
 
 export type OptionsCardinal = {
   /** The number of groups to output, each group consists of three digits. */
@@ -47,50 +47,56 @@ const TEN = 10;
 const TWENTY = 20;
 const ONE_HUNDRED = 100;
 
-// cspell:word uncentillions
 /**
  * Convert a number into text (the cardinal number)
  *
- * @remark There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
+ * @remarks There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
  * up to uncentillions (1e308).
  *
- * @param input The number
- * @param __namedParameters see {@link Options}
+ * @param input - The number
+ * @param __namedParameters - see {@link CardinalOptions}
+ * @defaultValue groups Infinity
+ * @defaultValue digits false
+ * @defaultValue and (empty)
+ * @defaultValue hyphen (space)
  * @returns The number spelled out
- *
- * @default groups Infinity
- * @default digits false
- * @default and (empty)
- * @default hyphen (space)
  */
-export function cardinal(input: number, props: Options = {}): string {
-  let { groups = Infinity, digits = false, ...options } = props;
+export function cardinal(
+  input: number,
+  { groups = Infinity, digits = false, ...options }: CardinalOptions = {},
+): string {
+  let numInput = input;
+  let numGroups = groups;
   const words = [] as (string | string[])[];
 
-  if (isNaN(input)) {
+  if (isNaN(numInput)) {
     words.push('not a number');
   } else {
-    const whole = input < ZERO ? -input : input;
-
-    if (input < ZERO) {
+    if (numInput < ZERO) {
       words.push('negative');
+      numInput = -numInput;
     }
 
-    if (isFinite(whole)) {
-      if (whole === 0) {
+    if (isFinite(numInput)) {
+      if (numInput === 0) {
         words.push(ones[0]);
       } else {
-        let { mantissa, exponent } = breakdown(whole, groups);
+        let { mantissa, exponent } = breakdown(numInput, numGroups);
 
-        while (Number.parseInt(mantissa) > 0 && exponent >= 0 && groups-- > 0) {
+        while (Number.parseInt(mantissa) > 0 && exponent >= 0 && numGroups-- > 0) {
           let word: string | null;
           let quantity: number;
-          ({ quantity, mantissa, exponent, word } = illion({ mantissa, exponent }));
+          ({ quantity, mantissa, exponent, word } = illion(mantissa, exponent));
 
           if (quantity) {
-            if (digits) words.push(quantity.toString());
-            else words.push(ordinal1000(quantity, options));
-            if (word) words.push(word);
+            if (digits) {
+              words.push(quantity.toString());
+            } else {
+              words.push(ordinal1000(quantity, options));
+            }
+            if (word) {
+              words.push(word);
+            }
           }
         }
       }
@@ -119,6 +125,31 @@ function breakdown(value: number, groups: number): { mantissa: string; exponent:
   return { mantissa, exponent };
 }
 
+function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion): string[] {
+  let numInput = input;
+  const words = [] as string[];
+
+  if (numInput >= ONE_HUNDRED) {
+    words.push(ones[Math.floor(numInput / ONE_HUNDRED)], 'hundred');
+    numInput %= ONE_HUNDRED;
+    if (and && numInput > ZERO) {
+      words.push(and);
+    }
+  }
+
+  if (numInput > ZERO) {
+    if (numInput < TWENTY) {
+      words.push(ones[numInput]);
+    } else if (numInput % TEN === ZERO) {
+      words.push(tens[Math.floor(numInput / TEN) - 2]);
+    } else {
+      words.push(tens[Math.floor(numInput / TEN) - 2] + hyphen + ones[numInput % TEN]);
+    }
+  }
+
+  return words;
+}
+
 type IllionReturn = {
   quantity: number;
   mantissa: string;
@@ -126,38 +157,43 @@ type IllionReturn = {
   word: string | null;
 };
 
-function illion(props: { mantissa: string; exponent: number }): IllionReturn {
-  let { mantissa, exponent } = props;
-  let factor = Math.floor((exponent - 3) / 3);
+function illion(mantissa: string, exponent: number): IllionReturn {
+  let numMantissa = mantissa;
+  let numExponent = exponent;
+
+  let factor = Math.floor((numExponent - 3) / 3);
   let quantity = 0;
 
-  switch (exponent - (factor * 3 + 3)) {
+  switch (numExponent - (factor * 3 + 3)) {
     case 0: {
-      quantity = Number.parseInt(mantissa.slice(0, 1));
-      mantissa = mantissa.slice(1);
-      exponent -= 1;
+      quantity = Number.parseInt(numMantissa.slice(0, 1));
+      numMantissa = numMantissa.slice(1);
+      numExponent -= 1;
       break;
     }
     case 1: {
-      quantity = Number.parseInt(mantissa.slice(0, 2));
-      mantissa = mantissa.slice(2);
-      exponent -= 2;
+      quantity = Number.parseInt(numMantissa.slice(0, 2));
+      numMantissa = numMantissa.slice(2);
+      numExponent -= 2;
       break;
     }
     case 2: {
-      quantity = Number.parseInt(mantissa.slice(0, 3));
-      mantissa = mantissa.slice(3);
-      exponent -= 3;
+      quantity = Number.parseInt(numMantissa.slice(0, 3));
+      numMantissa = numMantissa.slice(3);
+      numExponent -= 3;
       break;
     }
 
     // no default
   }
 
-  if (factor < 0) return { quantity, mantissa, exponent, word: null };
-  if (factor === 0) return { quantity, mantissa, exponent, word: 'thousand' };
+  if (factor < 0) {
+    return { quantity, mantissa: numMantissa, exponent: numExponent, word: null };
+  }
+  if (factor === 0) {
+    return { quantity, mantissa: numMantissa, exponent: numExponent, word: 'thousand' };
+  }
 
-  // cspell:disable
   let word = 'on';
   while (factor > 0) {
     let a = false; // ones; use the prefixed form; tens change end from 'i' to 'a'
@@ -446,31 +482,11 @@ function illion(props: { mantissa: string; exponent: number }): IllionReturn {
         // no default
       }
     }
-    // cspell:enable
 
     factor = Math.floor(factor / 1000);
   }
 
-  return { quantity, mantissa, exponent, word };
-}
-
-function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion): string[] {
-  const words: string[] = [];
-
-  let num = input;
-  if (num >= ONE_HUNDRED) {
-    words.push(ones[Math.floor(num / ONE_HUNDRED)], 'hundred');
-    num %= ONE_HUNDRED;
-    if (and && num > ZERO) words.push(and);
-  }
-
-  if (num > ZERO) {
-    if (num < TWENTY) words.push(ones[num]);
-    else if (num % TEN === ZERO) words.push(tens[Math.floor(num / TEN) - 2]);
-    else words.push(tens[Math.floor(num / TEN) - 2] + hyphen + ones[num % TEN]);
-  }
-
-  return words;
+  return { quantity, mantissa: numMantissa, exponent: numExponent, word };
 }
 
 /**
@@ -481,27 +497,25 @@ function ordinal1000(input: number, { and, hyphen = space }: OptionsIllion): str
  *
  * @example 6 is "million"
  * @example 303 is "centillion"
- * @param exponent The exponent to convert
+ * @param exponent - The exponent to convert
  * @returns Order of Magnitude as text
  */
 export function orderOfMagnitude(exponent: number): string | null {
-  return illion({ mantissa: '000', exponent }).word;
+  return illion('000', exponent).word;
 }
 
 /**
  * Get a short description of a number
  *
- * @remarks this is a shortcut to calling cardinal with options {groups: 1, digits: true}
+ * @remarks this is a shortcut to calling cardinal with options \{groups: 1, digits: true\}
  *
  * @example 1000000 "1 million"
  * @example 101323847382459 "101 trillion"
  *
- * @param num number to convert
- * @param options see {@link OptionsIllion}
- * @return number as text
+ * @param input - number to convert
+ * @param options - see {@link OptionsIllion}
+ * @returns number as text
  */
 export function summarize(input: number, options: OptionsIllion = {}): string {
   return cardinal(input, { groups: 1, digits: true, ...options });
 }
-
-export default cardinal;

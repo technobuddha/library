@@ -1,5 +1,5 @@
 import { empty, negativeZero, space } from './constants.js';
-import isNumeric from './is-numeric.js';
+import { isNumeric } from './is-numeric.js';
 
 describe('isNumeric', () => {
   test('should handle numbers', () => {
@@ -42,6 +42,7 @@ describe('isNumeric', () => {
     expect(isNumeric(space)).toBeFalse();
     expect(isNumeric('abcdef')).toBeFalse();
     expect(isNumeric(null)).toBeFalse();
+    expect(isNumeric(undefined)).toBeFalse();
     expect(isNumeric([])).toBeFalse();
     expect(isNumeric({})).toBeFalse();
   });

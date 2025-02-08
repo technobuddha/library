@@ -1,4 +1,4 @@
-import toDegrees from './to-degrees.js';
+import { toDegrees } from './to-degrees.js';
 
 describe('toDegrees', () => {
   test('converts positive angles', () => {

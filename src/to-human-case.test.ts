@@ -1,4 +1,4 @@
-import toHumanCase from './to-human-case.js';
+import { toHumanCase } from './to-human-case.js';
 
 describe('toHumanCase', () => {
   test('should sentences', () => {

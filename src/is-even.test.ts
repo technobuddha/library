@@ -1,5 +1,5 @@
 import { negativeZero } from './constants.js';
-import isEven from './is-even.js';
+import { isEven } from './is-even.js';
 
 describe('isEven', () => {
   test('should work with numbers', () => {

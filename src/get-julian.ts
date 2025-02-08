@@ -5,11 +5,9 @@ import { ticksPerDay } from './constants.js';
  *
  * @remarks Julian dates are always in the UTC timezone
  *
- * @param input The date and time to convert
+ * @param input - The date and time to convert
  * @returns The julian date.
  */
 export function getJulian(input: Date): number {
   return input.getTime() / ticksPerDay + 2440587.5;
 }
-
-export default getJulian;

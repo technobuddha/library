@@ -1,6 +1,6 @@
 import { map } from 'lodash-es';
 
-import build from './build.js';
+import { build } from './build.js';
 
 export type BinaryObject =
   | ArrayBuffer
@@ -18,15 +18,14 @@ export type BinaryObject =
 /**
  * Convert any binary object into a data URL
  *
- * @param input The binary object
- * @param mimeType The MIME type for the URL
+ * @param input - The binary object
+ * @param mimeType - The MIME type for the URL
  * @returns The data URL
  */
 export function dataURL(input: BinaryObject, mimeType: string): string {
   const buffer = input instanceof ArrayBuffer ? input : input.buffer;
   const bytes = new Uint8Array(buffer);
-  return `data:${mimeType};base64,${btoa(build(map(bytes, (c) => String.fromCodePoint(c))))}`;
+  // eslint-disable-next-line unicorn/prefer-code-point
+  return `data:${mimeType};base64,${btoa(build(map(bytes, (c) => String.fromCharCode(c))))}`;
   //return `data:${mimeType};base64,${Buffer.from(buffer).toString('base64')}`;
 }
-
-export default dataURL;

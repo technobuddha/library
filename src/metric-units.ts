@@ -3,9 +3,9 @@ import { isNil, round } from 'lodash-es';
 import { empty } from './constants.js';
 import { formatNumber } from './format-number.js';
 
-export type Options = {
+export type MetricUnitsOptions = {
   /**
-   * format specification to pass to @link{formatNumber}
+   * format specification to pass to {@link formatNumber}
    */
   format?: string;
   /**
@@ -13,11 +13,11 @@ export type Options = {
    */
   pad?: number;
   /**
-   * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'])
+   * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y'])
    */
   macro?: ArrayLike<string>;
   /**
-   * Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y', 'r', 'q'])
+   * Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'])
    */
   micro?: ArrayLike<string>;
   /**
@@ -31,21 +31,21 @@ export type Options = {
 };
 
 /**
- * Abbreviate a number by adding a suffix for metric units (i.e. 1000 => 1K, .0001 = 1m)
+ * Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
  *
- * @param input The number to abbreviate
- * @param __namedParameters {@link MetricUnitOptions}
+ * @param input - The number to abbreviate
+ * @param __namedParameters - {@link MetricUnitsOptions}
  */
 export function metricUnits(
   input: number,
   {
     format,
     pad,
-    macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'], // K = Kilo, M = Mega, G = Giga, T = Tera, P = Peta, E = Exa, Z = Zetta, Y = Yotta, R = Ronna, Q = Quetta
-    micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y', 'r', 'q'], // m = milli, µ = micro, n = nano, p = pico, f = femto, a = atto, z = zepto, y = yocto, r = ronto, q = quento
+    macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'],
+    micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'],
     unit = 1000,
     precision = 2,
-  }: Options = {},
+  }: MetricUnitsOptions = {},
 ): string {
   let number = Math.abs(input);
   let suffix = empty;
@@ -70,5 +70,3 @@ export function metricUnits(
     ).padStart(pad ?? 0) + suffix
   );
 }
-
-export default metricUnits;

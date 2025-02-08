@@ -1,12 +1,12 @@
 import { space } from './constants.js';
-import toCapitalCase from './to-capital-case.js';
+import { toCapitalCase } from './to-capital-case.js';
 
 const re = /\p{Ll}\p{Lu}+/gu;
 
 /**
  * Convert an identifier string to human readable form
  *
- * @param input The identifier string
+ * @param input - The identifier string
  * @returns the identifier in human readable form
  */
 export function toHumanCase(input: string): string {
@@ -18,5 +18,3 @@ export function toHumanCase(input: string): string {
     { lowerCase: true },
   );
 }
-
-export default toHumanCase;

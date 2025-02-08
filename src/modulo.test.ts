@@ -1,4 +1,4 @@
-import modulo from './modulo.js';
+import { modulo } from './modulo.js';
 
 describe('modulo', () => {
   test('should handle positive dividend and divisors', () => {

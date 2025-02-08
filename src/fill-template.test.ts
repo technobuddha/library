@@ -1,4 +1,4 @@
-import fillTemplate from './fill-template.js';
+import { fillTemplate } from './fill-template.js';
 
 describe('fillTemplate', () => {
   test('should handle templates', () => {

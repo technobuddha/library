@@ -1,6 +1,6 @@
-import create2DArray from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.js';
 
-export type Options<T> = {
+export type LongestCommonSubsequenceOptions<T> = {
   /**
    * Function that acts as a custom comparator
    * for the array objects. Function should return true if objects are equal, otherwise false.
@@ -22,11 +22,11 @@ export type Options<T> = {
  *
  * Returns the longest possible array that is subarray of both of given arrays.
  *
- * @param array1 First array of objects.
- * @param array2 Second array of objects.
- * @param __namedParameters see {@link Options}
- * @default compare equality comparison
- * @default collect basic collector
+ * @param array1 - First array of objects.
+ * @param array2 - Second array of objects.
+ * @param __namedParameters - see {@link LongestCommonSubsequenceOptions}
+ * @defaultValue compare equality comparison
+ * @defaultValue collect basic collector
  * @returns A list of objects that are common to both arrays
  * such that there is no common subsequence with size greater than the
  * length of the list.
@@ -34,7 +34,10 @@ export type Options<T> = {
 export function longestCommonSubsequence<T>(
   array1: ArrayLike<T>,
   array2: ArrayLike<T>,
-  { compare = (a, b) => a === b, collect = (i1, _i2) => array1[i1] }: Options<T> = {},
+  {
+    compare = (a, b) => a === b,
+    collect = (i1, _i2) => array1[i1],
+  }: LongestCommonSubsequenceOptions<T> = {},
 ): T[] {
   const l1 = array1.length;
   const l2 = array2.length;
@@ -70,5 +73,3 @@ export function longestCommonSubsequence<T>(
 
   return result;
 }
-
-export default longestCommonSubsequence;

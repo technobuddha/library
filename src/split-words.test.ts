@@ -1,5 +1,5 @@
 import { empty } from './constants.js';
-import splitWords from './split-words.js';
+import { splitWords } from './split-words.js';
 
 describe('splitWords', () => {
   test('should split on whitespace', () => {

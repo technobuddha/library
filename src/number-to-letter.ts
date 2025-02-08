@@ -1,15 +1,18 @@
 import { empty } from './constants.js';
-import floor from './floor.js';
+import { floor } from './floor.js';
 
-// cspell:disable-next-line
+// eslint-disable-next-line no-secrets/no-secrets
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-type Options = {
+export type NumberToLetterOptions = {
   /** The alphabet to use */
   alphabet?: string;
 };
 
-export function numberToLetter(num: number, { alphabet = ALPHABET }: Options = {}): string {
+export function numberToLetter(
+  num: number,
+  { alphabet = ALPHABET }: NumberToLetterOptions = {},
+): string {
   let n = num;
   const base = alphabet.length;
   const letters: string[] = [];
@@ -22,5 +25,3 @@ export function numberToLetter(num: number, { alphabet = ALPHABET }: Options = {
 
   return letters.join(empty);
 }
-
-export default numberToLetter;

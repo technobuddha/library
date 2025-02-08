@@ -1,4 +1,4 @@
-import numberToLetter from './number-to-letter.js';
+import { numberToLetter } from './number-to-letter.js';
 
 describe('numberToLetter', () => {
   test('should convert numbers', () => {
@@ -10,7 +10,6 @@ describe('numberToLetter', () => {
   });
 
   test('should work with alternate alphabets', () => {
-    // cspell:ignore ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ ΥΡΩΧ
     expect(numberToLetter(1, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('Α');
     expect(numberToLetter(26, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('ΑΒ');
     expect(numberToLetter(27, { alphabet: 'ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ' })).toBe('ΑΓ');

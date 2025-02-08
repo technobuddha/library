@@ -1,4 +1,4 @@
-import randomPick from './random-pick.js';
+import { randomPick } from './random-pick.js';
 
 describe('randomPick', () => {
   test('should pick object from list', () => {

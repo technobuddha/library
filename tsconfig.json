@@ -1,12 +1,15 @@
-// ​🚨​
-// ​🚨​ This file is managed by @technobuddha/project
-// ​🚨​
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["ESNext"],
-    "noEmit": true
+    "types": ["node"],
+    "composite": true,
+    "allowJs": true,
+    "noEmit": true,
+    "lib": ["esnext"]
   },
-  "references": [{ "path": "./src" }],
-  "include": ["./prettier.config.js", "./eslint.config.js"]
+  "include": ["*.config.js", "*.config.ts", "*.setup.ts"],
+  "exclude": []
 }

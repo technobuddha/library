@@ -1,4 +1,4 @@
-import toNumber from './to-number.js';
+import { toNumber } from './to-number.js';
 
 describe('toNumber', () => {
   test('should return numbers', () => {

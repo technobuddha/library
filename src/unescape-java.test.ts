@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import unescapeJava from './unescape-java.js';
+import { unescapeJava } from './unescape-java.js';
 
-// cspell:ignore ΑΒΓΔΕΖ
 describe('unescapeJava', () => {
   test('should unescape standard sequences', () => {
     expect(unescapeJava('\\b\\f\\n\\r\\t\\\\\\\'\\"')).toBe('\b\f\n\r\t\\\'"');

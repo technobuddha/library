@@ -1,10 +1,10 @@
-import  { type DayOfWeek } from './constants.js';
-import { day,daysPerWeek } from './constants.js';
-import modulo from './modulo.js';
+import { type DayOfWeek } from './constants.js';
+import { day, daysPerWeek } from './constants.js';
+import { modulo } from './modulo.js';
 
-type Options = {
-  /** Use the UTC timezone */
-  UTC?: boolean;
+export type GetBeginningOfWeekOptions = {
+  /** Use the utc timezone */
+  utc?: boolean;
   /** Which day of the week is considered the beginning */
   firstDayOfWeek?: DayOfWeek;
 };
@@ -12,17 +12,16 @@ type Options = {
 /**
  * Determine the start of the week for a date
  *
- * @param input The date
- * @param __namedParameters see {@link Options}
- * @default UTC false
- * @default firstDayOfWeek Sunday
+ * @param input - The date
+ * @param __namedParameters - see {@link GetBeginningOfWeekOptions}
+ * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified week
  */
 export function getBeginningOfWeek(
   input: Date,
-  { UTC = false, firstDayOfWeek = day.sunday }: Options = {},
+  { utc = false, firstDayOfWeek = day.sunday }: GetBeginningOfWeekOptions = {},
 ): Date {
-  if (UTC)
+  if (utc) {
     return new Date(
       Date.UTC(
         input.getUTCFullYear(),
@@ -30,6 +29,7 @@ export function getBeginningOfWeek(
         input.getUTCDate() - modulo(input.getUTCDay() + daysPerWeek - firstDayOfWeek, daysPerWeek),
       ),
     );
+  }
 
   return new Date(
     input.getFullYear(),
@@ -37,5 +37,3 @@ export function getBeginningOfWeek(
     input.getDate() - modulo(input.getDay() + daysPerWeek - firstDayOfWeek, daysPerWeek),
   );
 }
-
-export default getBeginningOfWeek;

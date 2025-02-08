@@ -1,5 +1,5 @@
 import { negativeZero } from './constants.js';
-import isNegativeZero from './is-negative-zero.js';
+import { isNegativeZero } from './is-negative-zero.js';
 
 describe('isNegativeZero', () => {
   test('should handle testing for negative zero', () => {

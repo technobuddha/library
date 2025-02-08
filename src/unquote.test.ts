@@ -1,5 +1,4 @@
-//
-import unquote from './unquote.js';
+import { unquote } from './unquote.js';
 
 describe('unquote', () => {
   test('should quote input', () => {

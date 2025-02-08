@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getEndOfMonth from './get-end-of-month.js';
+import { getEndOfMonth } from './get-end-of-month.js';
 
 describe('getEndOfMonth', () => {
   test('should compute End of the month', () => {
@@ -10,7 +10,7 @@ describe('getEndOfMonth', () => {
 
   test('should compute UTC End of the month', () => {
     expect(
-      getEndOfMonth(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { UTC: true }).toString(),
+      getEndOfMonth(new Date(Date.UTC(1969, month.july, 20, 20, 18)), { utc: true }).toString(),
     ).toBe(new Date(Date.UTC(1969, month.july, 31)).toString());
   });
 });

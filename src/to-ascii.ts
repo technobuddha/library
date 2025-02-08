@@ -1,16 +1,17 @@
 import { compact } from 'lodash-es';
 
-import build from './build.js';
-import splitChars from './split-chars.js';
+import { build } from './build.js';
+import { splitChars } from './split-chars.js';
 
 /**
  * Change a string to be all from the basic latin unicode plane
- * @param input        The string
+ * @param input - The string
  */
 export function toASCII(input: string): string {
   return build(compact(splitChars(input).map((c) => convertToASCII[c])));
 }
 
+/* eslint-disable @typescript-eslint/naming-convention */
 const convertToASCII: Record<string, string> = {
   '0': '0',
   '1': '1',
@@ -1862,5 +1863,4 @@ const convertToASCII: Record<string, string> = {
   '🄨': '(Y)',
   '🄩': '(Z)',
 };
-
-export default toASCII;
+/* eslint-enable @typescript-eslint/naming-convention */

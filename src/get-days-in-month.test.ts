@@ -1,5 +1,5 @@
 import { month } from './constants.js';
-import getDaysInMonth from './get-days-in-month.js';
+import { getDaysInMonth } from './get-days-in-month.js';
 
 describe('getDaysInMonth', () => {
   test('should convert to day of year', () => {
@@ -19,18 +19,18 @@ describe('getDaysInMonth', () => {
   });
 
   test('should compute the days in a UTC month', () => {
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.january, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.february, 1)), { UTC: true })).toBe(29);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.march, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.april, 1)), { UTC: true })).toBe(30);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.may, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.june, 1)), { UTC: true })).toBe(30);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.july, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.august, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.september, 1)), { UTC: true })).toBe(30);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.october, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.november, 1)), { UTC: true })).toBe(30);
-    expect(getDaysInMonth(new Date(Date.UTC(2000, month.december, 1)), { UTC: true })).toBe(31);
-    expect(getDaysInMonth(new Date(Date.UTC(2001, month.february, 1)), { UTC: true })).toBe(28);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.january, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.february, 1)), { utc: true })).toBe(29);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.march, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.april, 1)), { utc: true })).toBe(30);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.may, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.june, 1)), { utc: true })).toBe(30);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.july, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.august, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.september, 1)), { utc: true })).toBe(30);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.october, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.november, 1)), { utc: true })).toBe(30);
+    expect(getDaysInMonth(new Date(Date.UTC(2000, month.december, 1)), { utc: true })).toBe(31);
+    expect(getDaysInMonth(new Date(Date.UTC(2001, month.february, 1)), { utc: true })).toBe(28);
   });
 });

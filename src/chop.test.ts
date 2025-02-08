@@ -1,4 +1,4 @@
-import chop from './chop.js';
+import { chop } from './chop.js';
 
 describe('chop', () => {
   test('should chop string in to blocks', () => {

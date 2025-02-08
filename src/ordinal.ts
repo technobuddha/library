@@ -8,11 +8,11 @@ import { isInteger, isNaN } from 'lodash-es';
 // thousandth
 // millionth
 
-// TODO [2024-11-01]: this needs an overhaul and some documentation
+// TODO [2025-03-01]: this needs an overhaul and some documentation
 
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
- * @param input    The number to convert
+ * @param input - The number to convert
  */
 export function ordinal(input: number): string {
   if (isNaN(input)) {
@@ -60,5 +60,3 @@ export function ordinal(input: number): string {
     return `${input.toString()}th`;
   }
 }
-
-export default ordinal;

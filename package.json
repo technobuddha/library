@@ -2,62 +2,42 @@
   "name": "@technobuddha/library",
   "version": "1.9.0",
   "description": "A large library of useful functions",
-  "keywords": [
-    "miscellaneous"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/technobuddha/hill.software.git"
-  },
-  "homepage": "https://github.com/technobuddha/hill.software/tree/main/packages/library#technobuddhalibrary",
-  "bugs": {
-    "url": "https://github.com/technobuddha/hill.software/issues",
+  "author": {
+    "name": "Phil Hill",
     "email": "phil@technobuddha.com"
   },
   "license": "MIT",
-  "author": "Phil Hill <phil@technobuddha.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/technobuddha/@technobuddha/library"
+  },
+  "bugs": {
+    "url": "https://github.com/technobuddha/@technobuddha/library/issues"
+  },
+  "homepage": "https://github.com/technobuddha/@technobuddha/library#readme",
+  "scripts": {
+    "test": "TZ=America/New_York vitest"
+  },
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "@technobuddha/project": "0.0.149",
+    "@types/lodash-es": "^4",
+    "jest-matcher-deep-close-to": "3.0.2",
+    "typedoc": "0.27.6",
+    "typedoc-plugin-markdown": "4.4.1",
+    "vite": "6.1.0",
+    "vitest": "3.0.5"
+  },
+  "technobuddhaProject": {
+    "version": "0.0.149",
+    "created": "2020-04-01T04:20:42.694Z",
+    "updated": "2025-02-08T19:43:59.057Z"
+  },
   "type": "module",
   "engines": {
-    "node": ">=16.6.0"
-  },
-  "scripts": {
-    "build": "npm run compile",
-    "postbuild": "../../scripts/bootstrap.ts --update @technobuddha/library",
-    "compile": "scripts/build.ts",
-    "test": "TZ=America/New_York vitest --coverage",
-    "lint": "eslint .",
-    "pub": "npm-run-all clean build:compile pub:version build:copy build:package pub:publish",
-    "pub:version": "npm --no-tag-git-version version prerelease",
-    "pub:publish": "npm publish dist",
-    "clean": "npm-run-all *:clean",
-    "x-version": "npm-run-all clean build document",
-    "x-postversion": "git push && git push --tags",
-    "document": "npm-run-all document:clean document:generate",
-    "document:clean": "rm -rf doc",
-    "document:generate": "typedoc src/*.ts"
-  },
-  "publishConfig": {
-    "cache": "~/.npm",
-    "directory": "dist"
+    "node": ">=22.0.0"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "vite": "^5.4.8"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
-  "devDependencies": {
-    "@technobuddha/project": "^0.0.34",
-    "@types/jest": "^29.5.13",
-    "@types/lodash-es": "^4.17.12",
-    "@types/node": "^22.7.4",
-    "@vitest/coverage-v8": "^2.1.1",
-    "jest-extended": "^4.0.2",
-    "jest-matcher-deep-close-to": "^3.0.2",
-    "prettier": "^3.3.3",
-    "ts-node": "^10.9.2",
-    "typedoc": "^0.26.7",
-    "typedoc-plugin-markdown": "^4.2.8",
-    "typescript": "^5.6.2",
-    "vitest": "^2.1.1"
+    "lodash-es": "4.17.21"
   }
 }

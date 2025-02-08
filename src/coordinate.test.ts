@@ -1,4 +1,4 @@
-import coordinate from './coordinate.js';
+import { coordinate } from './coordinate.js';
 
 describe('coordinate', () => {
   test('should handle basic functionality', () => {

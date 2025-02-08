@@ -1,5 +1,5 @@
 import { negativeZero } from './constants.js';
-import ordinal from './ordinal.js';
+import { ordinal } from './ordinal.js';
 
 describe('ordinal', () => {
   test('should handle positive numbers', () => {

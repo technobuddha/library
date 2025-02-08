@@ -1,8 +1,8 @@
 import { isNil } from 'lodash-es';
 
-import compareNumbers from './compare-numbers.js';
+import { compareNumbers } from './compare-numbers.js';
 
-type Options = {
+export type CompareStringsOptions = {
   /** if true, strings are to be compared case insensitive */
   caseInsensitive?: boolean;
   /** if true, compare numeric portions of the string as numbers */
@@ -14,45 +14,55 @@ type Options = {
 /**
  * Compare two strings
  *
- * @param a First string
- * @param b Second string
- * @param caseInsensitive True if strings are to be compared case insensitive (default false)
- * @returns 0 if a == b; -1 if a < b; 1 if a > b
+ * @param a - First string
+ * @param b - Second string
+ * @param caseInsensitive - True if strings are to be compared case insensitive (default false)
+ * @defaultValue caseInsensitive false
+ * @defaultValue natural false
+ * @defaultValue version false
+ * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
  *
- * @default caseInsensitive false
- * @default natural false
- * @default version false
  */
 export function compareStrings(
-  text1: string | null,
-  text2: string | null,
-  { caseInsensitive = false, natural = false, version = false }: Options = {},
+  a: string | null,
+  b: string | null,
+  { caseInsensitive = false, natural = false, version = false }: CompareStringsOptions = {},
 ): -1 | 0 | 1 {
-  let str1 = text1;
-  let str2 = text2;
-  if (str1 === text2) return 0;
-  if (isNil(str1)) return -1;
-  if (isNil(str2)) return 1;
+  let stra = a;
+  let strb = b;
+
+  if (stra === strb) {
+    return 0;
+  }
+  if (isNil(stra)) {
+    return -1;
+  }
+  if (isNil(strb)) {
+    return 1;
+  }
 
   if (caseInsensitive) {
-    str1 = str1.toLowerCase();
-    str2 = str2.toLowerCase();
-    if (str1 === str2) return 0;
+    stra = stra.toLocaleLowerCase();
+    strb = strb.toLocaleLowerCase();
+    if (stra === strb) {
+      return 0;
+    }
   }
 
   if (version) {
-    const v1 = str1.trim().split(/[.-]/u);
-    const v2 = str2.trim().split(/[.-]/u);
+    const v1 = stra.trim().split(/[.-]/u);
+    const v2 = strb.trim().split(/[.-]/u);
     const count = Math.max(v1.length, v2.length);
     let order = 0 as -1 | 0 | 1;
 
-    for (let i = 0; order === 0 && i < count; ++i)
+    for (let i = 0; order === 0 && i < count; ++i) {
       order = compareStrings(v1[i], v2[i], { natural: true });
+    }
 
     return order || compareNumbers(v1.length, v2.length);
   } else if (natural) {
-    const t1 = str1.match(/(\.\d+|\d+|\D+)/gu) ?? [];
-    const t2 = str2.match(/(\.\d+|\d+|\D+)/gu) ?? [];
+    const t1 = stra.match(/(\.\d+|\d+|\D+)/gu) ?? [];
+    const t2 = strb.match(/(\.\d+|\d+|\D+)/gu) ?? [];
     const count = Math.min(t1.length, t2.length);
     let order = 0 as -1 | 0 | 1;
 
@@ -70,7 +80,5 @@ export function compareStrings(
 
     return order || compareNumbers(t1.length, t2.length);
   }
-  return str1 < str2 ? -1 : 1;
+  return stra < strb ? -1 : 1;
 }
-
-export default compareStrings;

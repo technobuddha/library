@@ -1,4 +1,4 @@
-import matches from './matches.js';
+import { matches } from './matches.js';
 
 describe('matches', () => {
   test('should match string', () => {

@@ -1,7 +1,7 @@
-import build from './build.js';
-import splitChars from './split-chars.js';
+import { build } from './build.js';
+import { splitChars } from './split-chars.js';
 
-type Options = {
+export type EscapeHtmlSettings = {
   /** escape all characters outside the 7-bit ASCII range */
   escapeNonAscii?: boolean;
 };
@@ -9,10 +9,13 @@ type Options = {
 /**
  * Escape a string for use in HTML
  *
- * @param input The string to escape
- * @param __namedParameters see {@link Options}
+ * @param input - The string to escape
+ * @param __namedParameters - see {@link EscapeHtmlSettings}
  */
-export function escapeHTML(input: string, { escapeNonAscii = false }: Options = {}): string {
+export function escapeHTML(
+  input: string,
+  { escapeNonAscii = false }: EscapeHtmlSettings = {},
+): string {
   return build(
     splitChars(input).map(
       (c) =>
@@ -31,5 +34,3 @@ const entities: Readonly<Record<string, string | undefined>> = Object.freeze({
   '<': '&lt;',
   '>': '&gt;',
 });
-
-export default escapeHTML;

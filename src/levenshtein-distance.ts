@@ -1,6 +1,6 @@
-import create2DArray from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.js';
 
-type Options = {
+export type LevenshteinDistanceOptions = {
   /** The compairson will ignore case */
   caseInsensitive?: boolean;
 };
@@ -8,41 +8,46 @@ type Options = {
 /**
  * Compute the levenshtein distance between two strings (similarity)
  *
- * @param text The string
- * @param comparedTo The string to compare to
- * @param __namedParameters see {@link Options}
- * @default caseInsensitive true
+ * @param input - The string
+ * @param comparedTo - The string to compare to
+ * @param __namedParameters - see {@link LevenshteinDistanceOptions}
+ * @defaultValue caseInsensitive true
  * @returns the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
  */
 export function levenshteinDistance(
   input: string,
   comparedTo: string,
-  { caseInsensitive = true }: Options = {},
+  { caseInsensitive = true }: LevenshteinDistanceOptions = {},
 ): number {
-  let text = input;
-  let textCompare = comparedTo;
+  let argInput = input;
+  let argComparedTo = comparedTo;
 
-  if (text.length === 0 || textCompare.length === 0)
-    return Math.max(text.length, textCompare.length);
-
-  if (caseInsensitive) {
-    text = text.toLowerCase();
-    textCompare = textCompare.toLowerCase();
+  if (argInput.length === 0 || comparedTo.length === 0) {
+    return Math.max(argInput.length, comparedTo.length);
   }
 
-  const inputLen = text.length;
-  const comparedToLen = textCompare.length;
+  if (caseInsensitive) {
+    argInput = argInput.toLocaleLowerCase();
+    argComparedTo = argComparedTo.toLocaleLowerCase();
+  }
+
+  const inputLen = argInput.length;
+  const comparedToLen = argComparedTo.length;
   const matrix = create2DArray(inputLen, comparedToLen, 0);
 
   //initialize
-  for (let i = 0; i < inputLen; ++i) matrix[i][0] = i;
-  for (let i = 0; i < comparedToLen; ++i) matrix[0][i] = i;
+  for (let i = 0; i < inputLen; ++i) {
+    matrix[i][0] = i;
+  }
+  for (let i = 0; i < comparedToLen; ++i) {
+    matrix[0][i] = i;
+  }
 
   //analyze
   for (let i = 1; i < inputLen; ++i) {
-    const si = text.charAt(i - 1);
+    const si = argInput.charAt(i - 1);
     for (let j = 1; j < comparedToLen; ++j) {
-      const tj = textCompare.charAt(j - 1);
+      const tj = argComparedTo.charAt(j - 1);
       const cost = si === tj ? 0 : 1;
       const above = matrix[i - 1][j];
       const left = matrix[i][j - 1];
@@ -52,9 +57,15 @@ export function levenshteinDistance(
       //transposition
       if (i > 1 && j > 1) {
         let trans = matrix[i - 2][j - 2] + 1;
-        if (text.charAt(i - 2) !== textCompare.charAt(j - 1)) trans++;
-        if (text.charAt(i - 1) !== textCompare.charAt(j - 2)) trans++;
-        if (cell > trans) cell = trans;
+        if (argInput.charAt(i - 2) !== argComparedTo.charAt(j - 1)) {
+          trans++;
+        }
+        if (argInput.charAt(i - 1) !== argComparedTo.charAt(j - 2)) {
+          trans++;
+        }
+        if (cell > trans) {
+          cell = trans;
+        }
       }
       matrix[i][j] = cell;
     }
@@ -62,5 +73,3 @@ export function levenshteinDistance(
 
   return matrix[inputLen - 1][comparedToLen - 1];
 }
-
-export default levenshteinDistance;

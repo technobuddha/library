@@ -1,21 +1,17 @@
-import matchCase from './match-case.js';
-import removeDiacritics from './remove-diacritics.js';
+import { matchCase } from './match-case.js';
+import { removeDiacritics } from './remove-diacritics.js';
 
 /**
  * Determine the possessive form of a word
  *
- * @param input the word
+ * @param input - the word
  * @returns the posessive form of the word
  */
 export function possessive(input: string): string {
-  if (input.length > 0) {
-    const last = removeDiacritics(input.at(-1)!);
+  const last = removeDiacritics(input).at(-1);
 
-    if (last === 's' || last === 'S') return matchCase(`${input}'`, input);
-    return matchCase(`${input}'s`, input);
+  if (last === 's' || last === 'S') {
+    return matchCase(`${input}'`, input);
   }
-
-  return input;
+  return matchCase(`${input}'s`, input);
 }
-
-export default possessive;

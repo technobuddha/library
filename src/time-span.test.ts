@@ -1,4 +1,4 @@
-import TimeSpan from './time-span.js';
+import { TimeSpan } from './time-span.js';
 
 describe('time-span', () => {
   test('construct no args', () => {
@@ -55,7 +55,7 @@ describe('time-span', () => {
     expect(ts.days).toBe(0);
   });
 
-  test('construct string args .', () => {
+  test('construct string args2', () => {
     const ts = new TimeSpan('1.2');
     expect(ts.milliseconds).toBe(200);
     expect(ts.seconds).toBe(1);
@@ -64,7 +64,7 @@ describe('time-span', () => {
     expect(ts.days).toBe(0);
   });
 
-  test('construct string args :', () => {
+  test('construct string args3', () => {
     const ts = new TimeSpan('1:02');
     expect(ts.milliseconds).toBe(0);
     expect(ts.seconds).toBe(2);
@@ -73,7 +73,16 @@ describe('time-span', () => {
     expect(ts.days).toBe(0);
   });
 
-  test('construct string args ::', () => {
+  test('construct string args4', () => {
+    const ts = new TimeSpan('1:02');
+    expect(ts.milliseconds).toBe(0);
+    expect(ts.seconds).toBe(2);
+    expect(ts.minutes).toBe(1);
+    expect(ts.hours).toBe(0);
+    expect(ts.days).toBe(0);
+  });
+
+  test('construct string args5', () => {
     const ts = new TimeSpan('1:02:03');
     expect(ts.milliseconds).toBe(0);
     expect(ts.seconds).toBe(3);
@@ -82,7 +91,7 @@ describe('time-span', () => {
     expect(ts.days).toBe(0);
   });
 
-  test('construct string args :::', () => {
+  test('construct string args6', () => {
     const ts = new TimeSpan('1:02:03:04');
     expect(ts.milliseconds).toBe(0);
     expect(ts.seconds).toBe(4);
@@ -91,7 +100,7 @@ describe('time-span', () => {
     expect(ts.days).toBe(1);
   });
 
-  test('construct string args -:::', () => {
+  test('construct string args7', () => {
     const ts = new TimeSpan('-1:02:03:04');
     expect(ts.milliseconds).toBe(-0);
     expect(ts.seconds).toBe(-4);
@@ -100,7 +109,7 @@ describe('time-span', () => {
     expect(ts.days).toBe(-1);
   });
 
-  test('construct string args unknown', () => {
+  test('construct string args8', () => {
     const ts = new TimeSpan('unknown');
     expect(ts.milliseconds).toBe(0);
     expect(ts.seconds).toBe(0);
@@ -145,7 +154,7 @@ describe('time-span', () => {
     expect(ts2.days).toBe(2);
   });
 
-  test('compare', () => {
+  test('add2', () => {
     const ts1 = new TimeSpan(1, 2, 3, 4, 5);
     const ts2 = new TimeSpan(1, 2, 3, 4, 0);
     expect(TimeSpan.compare(ts1, ts1)).toBe(0);

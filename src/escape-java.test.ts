@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import escapeJava from './escape-java.js';
+import { escapeJava } from './escape-java.js';
 
-// cspell:ignore unnnn ΑΒΓΔΕΖ
 describe('escapeJava', () => {
   test('should escape standard sequences', () => {
     expect(escapeJava('\b\f\n\r\t\\\'"')).toBe('\\b\\f\\n\\r\\t\\\\\\\'\\"');

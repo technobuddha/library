@@ -1,4 +1,4 @@
-import normalizeAngle from './normalize-angle.js';
+import { normalizeAngle } from './normalize-angle.js';
 
 describe('normalizeAngle', () => {
   test('converts positive angles', () => {

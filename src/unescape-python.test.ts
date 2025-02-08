@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import unescapePython from './unescape-python.js';
+import { unescapePython } from './unescape-python.js';
 
-// cspell:ignore ΑΒΓΔΕΖ
 describe('unescapePython', () => {
   test('should unescape standard sequences', () => {
     expect(unescapePython('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"')).toBe('\u0007\b\f\n\r\t\v\\\'"');

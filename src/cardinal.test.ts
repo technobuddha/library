@@ -1,6 +1,4 @@
-// cspell:disable
-
-import cardinal, { orderOfMagnitude, summarize } from './cardinal.js';
+import { cardinal, orderOfMagnitude, summarize } from './cardinal.js';
 
 describe('cardinal', () => {
   test('should handle simple numbers', () => {

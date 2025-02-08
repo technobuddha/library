@@ -1,4 +1,4 @@
-import addTime from './add-time.js';
+import { addTime } from './add-time.js';
 import {
   secondsPerDay,
   secondsPerHour,
@@ -6,12 +6,12 @@ import {
   space,
   ticksPerSecond,
 } from './constants.js';
-import floor from './floor.js';
-import formatDate from './format-date.js';
-import isSameDay from './is-same-day.js';
-import plural from './plural.js';
+import { floor } from './floor.js';
+import { formatDate } from './format-date.js';
+import { isSameDay } from './is-same-day.js';
+import { plural } from './plural.js';
 
-export type Options = {
+export type RelativeTimeOptions = {
   /** Describe the time difference as a time on a nearby day  */
   todayTomorrowYesterday?: boolean;
   /** Passed to {@link formatDate} to display a time */
@@ -25,9 +25,9 @@ export type Options = {
 /**
  * Describe the difference between two dates in a simple format
  *
- * @param input The date
- * @param relativeTo The date to compare to
- * @param __namedParameters see {@link Options}
+ * @param input - The date
+ * @param relativeTo - The date to compare to
+ * @param __namedParameters - see {@link RelativeTimeOptions}
  * @returns string describing the time difference between the two dates
  */
 export function relativeTime(
@@ -38,16 +38,18 @@ export function relativeTime(
     timeFormat = 'H:mm TT',
     ymdFormat = 'MMMM D YYYY',
     mdFormat = 'MMMM D',
-  }: Options = {},
+  }: RelativeTimeOptions = {},
 ): string {
   const text = [] as string[];
 
   if (todayTomorrowYesterday) {
-    if (isSameDay(input, relativeTo)) text.push(`today ${formatDate(input, timeFormat)} -`);
-    else if (isSameDay(input, addTime(relativeTo, { days: 1 })))
+    if (isSameDay(input, relativeTo)) {
+      text.push(`today ${formatDate(input, timeFormat)} -`);
+    } else if (isSameDay(input, addTime(relativeTo, { days: 1 }))) {
       text.push(`tomorrow ${formatDate(input, timeFormat)} -`);
-    else if (isSameDay(input, addTime(relativeTo, { days: -1 })))
+    } else if (isSameDay(input, addTime(relativeTo, { days: -1 }))) {
       text.push(`yesterday ${formatDate(input, timeFormat)} -`);
+    }
   }
 
   let diff = (input.getTime() - relativeTo.getTime()) / ticksPerSecond;
@@ -74,21 +76,29 @@ export function relativeTime(
     sign = 0;
   } else if (d > 0) {
     text.push(plural('day', d));
-    if (d < 4 && h > 1) text.push(plural('hour', h));
+    if (d < 4 && h > 1) {
+      text.push(plural('hour', h));
+    }
   } else if (h > 0) {
     text.push(plural('hour', h));
-    if (h < 4 && m > 0) text.push(plural('minute', m));
+    if (h < 4 && m > 0) {
+      text.push(plural('minute', m));
+    }
   } else if (m > 0) {
     text.push(plural('minute', m));
-    if (m < 4 && s > 0) text.push(plural('second', s));
+    if (m < 4 && s > 0) {
+      text.push(plural('second', s));
+    }
   } else if (s > 0) {
     text.push(plural('second', s));
   }
 
-  if (sign === -1) text.push('ago');
-  if (sign === 1) text.push(d || h || m || s ? 'from now' : 'now');
+  if (sign === -1) {
+    text.push('ago');
+  }
+  if (sign === 1) {
+    text.push(d || h || m || s ? 'from now' : 'now');
+  }
 
   return text.join(space);
 }
-
-export default relativeTime;

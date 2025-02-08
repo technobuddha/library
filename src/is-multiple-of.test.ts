@@ -1,5 +1,5 @@
 import { negativeZero } from './constants.js';
-import isMultipleOf from './is-multiple-of.js';
+import { isMultipleOf } from './is-multiple-of.js';
 
 describe('isMultipleOf', () => {
   test('should work with numbers', () => {

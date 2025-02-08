@@ -1,4 +1,4 @@
-import standardDeviation from './standard-deviation.js';
+import { standardDeviation } from './standard-deviation.js';
 
 describe('standardDeviation', () => {
   test('should compute standardDeviation', () => {

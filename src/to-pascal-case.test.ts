@@ -1,4 +1,4 @@
-import toPascalCase from './to-pascal-case.js';
+import { toPascalCase } from './to-pascal-case.js';
 
 describe('toPascalCase', () => {
   test('should sentences', () => {

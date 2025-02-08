@@ -1,14 +1,13 @@
-import { type AngleUnit } from './angle-units.js';
-import { angleUnits } from './angle-units.js';
+import { type AngleUnit } from './angle.js';
+import { units } from './angle.js';
 
 /**
  * Convert an angle from radians to degrees
  *
- * @param radians Angle in radians
+ * @param angle - Angle
+ * @param unit - Unit of the angle (default: radians)
  * @returns angle in degrees
  */
 export function toDegrees(angle: number, unit: AngleUnit = 'radians'): number {
-  return (angleUnits.degrees * angle) / angleUnits[unit];
+  return (units.degrees * angle) / units[unit];
 }
-
-export default toDegrees;

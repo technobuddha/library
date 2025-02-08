@@ -1,4 +1,4 @@
-type Options = {
+export type IndentOptions = {
   /** The indentation character */
   indenter?: string;
 };
@@ -6,13 +6,11 @@ type Options = {
 /**
  * Indent each line of a string
  *
- * @param input The string to indent
- * @param __namedParameters see {@Options}
- * @default indenter space
+ * @param input - The string to indent
+ * @param __namedParameters - see {@link IndentOptions}
+ * @defaultValue indenter space
  * @returns string with each line indented
  */
-export function indent(input: string, { indenter = ' ' }: Options = {}): string {
+export function indent(input: string, { indenter = ' ' }: IndentOptions = {}): string {
   return input.replaceAll(/^/gmu, indenter);
 }
-
-export default indent;

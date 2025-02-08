@@ -1,10 +1,10 @@
-import build from './build.js';
-import { escu4, escU8, escx2, isHex, isOct } from './escape.js';
+import { build } from './build.js';
+import { hex, oct, u4, u8, x2 } from './escape.js';
 
 /**
  * Escape a string for use in Python
  *
- * @param input The string to escape
+ * @param input - The string to escape
  * @returns the string escapes for use in python
  */
 export function escapePython(input: string): string {
@@ -16,7 +16,7 @@ export function escapePython(input: string): string {
     if (u0 < 0x00000020) {
       switch (u0) {
         case 0x00000000: {
-          output.push(isOct(u1) ? '\\000' : '\\0');
+          output.push(oct(u1) ? '\\000' : '\\0');
           break;
         }
         case 0x00000007: {
@@ -48,7 +48,7 @@ export function escapePython(input: string): string {
           break;
         }
         default: {
-          output.push(isHex(u1) ? escu4(u0) : escx2(u0));
+          output.push(hex(u1) ? u4(u0) : x2(u0));
         }
       }
     } else if (u0 < 0x0000007f) {
@@ -66,22 +66,22 @@ export function escapePython(input: string): string {
           break;
         }
         default: {
-          output.push(String.fromCodePoint(u0));
+          // eslint-disable-next-line unicorn/prefer-code-point
+          output.push(String.fromCharCode(u0));
         }
       }
     } else if (u0 < 0x000000a1) {
-      output.push(isHex(u1) ? escu4(u0) : escx2(u0));
+      output.push(hex(u1) ? u4(u0) : x2(u0));
     } else if (u0 < 0x00000100) {
-      output.push(String.fromCodePoint(u0));
+      // eslint-disable-next-line unicorn/prefer-code-point
+      output.push(String.fromCharCode(u0));
     } else if (u0 < 0x00010000) {
-      output.push(escu4(u0));
+      output.push(u4(u0));
     } else {
       ++i;
-      output.push(escU8(u0));
+      output.push(u8(u0));
     }
   }
 
   return build(output);
 }
-
-export default escapePython;

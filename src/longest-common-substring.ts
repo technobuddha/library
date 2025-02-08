@@ -1,6 +1,6 @@
-import create2DArray from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.js';
 
-type Options = {
+export type LongestCommonSubstringOptions = {
   /** compare the two strings in case insensitive mode */
   caseInsensitive?: boolean;
 };
@@ -11,18 +11,18 @@ type Options = {
  *
  * Returns the longest possible substring that is substring of both of given strings.
  *
- * @param array1 First string.
- * @param array2 Second string.
+ * @param string1 - First string.
+ * @param string2 - Second string.
  * @returns A string that is common to both strings such that there is no
  * common substring with size greater than the length of the string.
  */
 export function longestCommonSubstring(
   string1: string,
   string2: string,
-  { caseInsensitive = false }: Options = {},
+  { caseInsensitive = false }: LongestCommonSubstringOptions = {},
 ): string {
-  const ci1 = caseInsensitive ? string1.toLowerCase() : string1;
-  const ci2 = caseInsensitive ? string2.toLowerCase() : string2;
+  const ci1 = caseInsensitive ? string1.toLocaleLowerCase() : string1;
+  const ci2 = caseInsensitive ? string2.toLocaleLowerCase() : string2;
 
   const comparsions = create2DArray(ci1.length + 1, ci2.length + 1, 0);
   let maxSubStrLength = 0;
@@ -49,5 +49,3 @@ export function longestCommonSubstring(
 
   return string1.slice(lastMaxSubStrIndex - maxSubStrLength + 1, lastMaxSubStrIndex + 1);
 }
-
-export default longestCommonSubstring;

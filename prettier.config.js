@@ -1,3 +1,6 @@
-import { project } from '@technobuddha/project';
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+import { app } from '@technobuddha/project';
 
-export default project.prettier();
+export default app.prettier();

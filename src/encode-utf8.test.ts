@@ -1,6 +1,5 @@
-import encodeUTF8 from './encode-utf8.js';
+import { encodeUTF8 } from './encode-utf8.js';
 
-// cspell:ignore ΑΒΓΔ 𝐀𝐁𝐂
 describe('encodeUTF8', () => {
   test('should not change ASCII', () => {
     expect(encodeUTF8('abcdef')).toBe('abcdef');

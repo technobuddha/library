@@ -1,15 +1,15 @@
 import { escapeRegExp, isRegExp, isString } from 'lodash-es';
 
 import { empty } from './constants.js';
-import splitChars from './split-chars.js';
+import { splitChars } from './split-chars.js';
 
 const trimEquivalent = /[\s\uFEFF\u00A0]/u;
 
 /**
  * Remove all occurrences of characters from the beginning and end of the string
  *
- * @param input  The string
- * @param characters The characters(s) to remove
+ * @param input - The string
+ * @param characters - The characters(s) to remove
  */
 export function clean(
   input: string,
@@ -37,8 +37,8 @@ export function clean(
 /**
  * Remove all occurrences of characters from the end of the string
  *
- * @param input  The string
- * @param characters  he characters(s) to remove
+ * @param input - The string
+ * @param characters - the characters(s) to remove
  */
 export function cleanEnd(
   input: string,
@@ -66,8 +66,8 @@ export function cleanEnd(
 /**
  * Remove all occurrences of characters from the start of the string
  *
- * @param input The string
- * @param characters The characters(s) to remove
+ * @param input - The string
+ * @param characters - The characters(s) to remove
  */
 export function cleanStart(
   input: string,
@@ -91,5 +91,3 @@ export function cleanStart(
 
   return input.replace(new RegExp(`^(${re})+`, 'u'), empty);
 }
-
-export default clean;

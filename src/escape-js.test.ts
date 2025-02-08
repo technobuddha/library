@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import escapeJS from './escape-js.js';
+import { escapeJS } from './escape-js.js';
 
-// cspell:ignore ΑΒΓΔΕΖ
 describe('escapeJS', () => {
   test('should escape standard sequences', () => {
     expect(escapeJS('\b\f\n\r\t\v\\\'"')).toBe('\\b\\f\\n\\r\\t\\v\\\\\\\'\\"');

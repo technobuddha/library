@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import unescapeC from './unescape-c.js';
+import { unescapeC } from './unescape-c.js';
 
-// cspell:ignore ΑΒΓΔΕΖ
 describe('unescapeC', () => {
   test('should unescape standard sequences', () => {
     expect(unescapeC('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"\\?\\e')).toBe(

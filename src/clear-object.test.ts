@@ -1,4 +1,4 @@
-import clearObject from './clear-object.js';
+import { clearObject } from './clear-object.js';
 
 describe('clearObject', () => {
   test('should clear objects', () => {

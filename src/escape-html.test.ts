@@ -1,7 +1,6 @@
 import { space } from './constants.js';
-import escapeHTML from './escape-html.js';
+import { escapeHTML } from './escape-html.js';
 
-// cspell:ignore ΑΒΓΔΕΖ
 describe('escapeHTML', () => {
   test('should escape basic characters', () => {
     expect(escapeHTML('"&\'<>')).toBe('&quot;&amp;&apos;&lt;&gt;');

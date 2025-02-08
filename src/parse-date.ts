@@ -1,6 +1,6 @@
 import { compact, isNil, zip } from 'lodash-es';
 
-import build from './build.js';
+import { build } from './build.js';
 import { month } from './constants.js';
 
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
@@ -50,7 +50,7 @@ const yNumeric = re`${yyyy}`;
  * @remarks this is a little more generous about what formats it will take for a date, and if it can't match the input to one of it's supported formats it falls
  * back to new Date(text)
  *
- * @param input The string containing a date
+ * @param input - The string containing a date
  * @returns new Date object
  */
 export function parseDate(input: string): Date {
@@ -65,7 +65,7 @@ export function parseDate(input: string): Date {
   let zH = null as number | null;
   let zM = null as number | null;
 
-  const text = input.toLowerCase();
+  const text = input.toLocaleLowerCase();
 
   let match: RegExpExecArray | null;
   if ((match = mdyNumeric.exec(text)) !== null) {
@@ -132,8 +132,11 @@ export function parseDate(input: string): Date {
     tM = isNil(match[5]) ? 0 : Number.parseInt(match[5]);
     tS = isNil(match[6]) ? 0 : Number.parseInt(match[6]);
     tF = isNil(match[7]) ? 0 : Number.parseFloat(`0.${match[7]}`) * 1000;
-    if (!isNil(match[8]) && match[8].toLowerCase() === 'p' && tH !== 12) tH += 12;
-    else if (!isNil(match[8]) && match[8].toLowerCase() === 'a' && tH === 12) tH -= 12;
+    if (!isNil(match[8]) && match[8].toLocaleLowerCase() === 'p' && tH !== 12) {
+      tH += 12;
+    } else if (!isNil(match[8]) && match[8].toLocaleLowerCase() === 'a' && tH === 12) {
+      tH -= 12;
+    }
 
     if (!isNil(match[9])) {
       zH = isNil(match[10]) ? 0 : Number.parseInt(match[10]);
@@ -157,5 +160,3 @@ export function parseDate(input: string): Date {
 
   return now;
 }
-
-export default parseDate;

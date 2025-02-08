@@ -1,4 +1,4 @@
-import addTime from './add-time.js';
+import { addTime } from './add-time.js';
 
 describe('addTime', () => {
   test('should add years', () => {

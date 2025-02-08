@@ -1,10 +1,10 @@
-import  { type DayOfWeek } from './constants.js';
+import { type DayOfWeek } from './constants.js';
 import { day, daysPerWeek } from './constants.js';
-import modulo from './modulo.js';
+import { modulo } from './modulo.js';
 
-type GetDayOfWeekOptions = {
-  /** Use the UTC timezone */
-  UTC?: boolean;
+export type GetDayOfWeekOptions = {
+  /** Use the utc timezone */
+  utc?: boolean;
   /** Which day of the week is considered the beginning */
   startOfWeek?: DayOfWeek;
 };
@@ -12,19 +12,18 @@ type GetDayOfWeekOptions = {
 /**
  * Determine the day of the week for a specific date
  *
- * @param input The date
- * @param __namedParameters see {@link Options}
- * @default UTC false
- * @default startOfWeek Monday
+ * @param input - The date
+ * @param __namedParameters - see {@link GetDayOfWeekOptions}
+ * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified year
  */
 export function getDayOfWeek(
   input: Date,
-  { UTC = false, startOfWeek = day.sunday }: GetDayOfWeekOptions = {},
+  { utc = false, startOfWeek = day.sunday }: GetDayOfWeekOptions = {},
 ): DayOfWeek {
-  if (UTC) return modulo(input.getUTCDay() + daysPerWeek - startOfWeek, daysPerWeek) as DayOfWeek;
+  if (utc) {
+    return modulo(input.getUTCDay() + daysPerWeek - startOfWeek, daysPerWeek) as DayOfWeek;
+  }
 
   return modulo(input.getDay() + daysPerWeek - startOfWeek, daysPerWeek) as DayOfWeek;
 }
-
-export default getDayOfWeek;

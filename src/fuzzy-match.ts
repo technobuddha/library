@@ -1,8 +1,8 @@
-import diceCoefficient from './dice-coefficient.js';
-import levenshteinDistance from './levenshtein-distance.js';
-import longestCommonSubstring from './longest-common-substring.js';
+import { diceCoefficient } from './dice-coefficient.js';
+import { levenshteinDistance } from './levenshtein-distance.js';
+import { longestCommonSubstring } from './longest-common-substring.js';
 
-type Options = {
+export type FuzzyMatchOptions = {
   /** The compairson will ignore case */
   caseInsensitive?: boolean;
   /** Weight of levenshtein distance */
@@ -21,7 +21,7 @@ export function fuzzyMatch(
     weightLevenshteinDistance = 5,
     weightDiceCoefficient = 3,
     weightLongestCommonSubstring = 2,
-  }: Options = {},
+  }: FuzzyMatchOptions = {},
 ): number {
   const len = Math.max(input.length, comparedTo.length);
   let wgt = 0;
@@ -50,5 +50,3 @@ export function fuzzyMatch(
 
   return wgt === 0 ? 0 : sum / wgt;
 }
-
-export default fuzzyMatch;

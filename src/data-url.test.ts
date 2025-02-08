@@ -1,4 +1,4 @@
-import dataURL from './data-url.js';
+import { dataURL } from './data-url.js';
 
 describe('dataURL', () => {
   test('should create dataURLs', () => {

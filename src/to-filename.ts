@@ -1,12 +1,12 @@
 import { escapeRegExp } from 'lodash-es';
 
-import clean from './clean.js';
-import collapseWhitespace from './collapse-whitespace.js';
+import { clean } from './clean.js';
+import { collapseWhitespace } from './collapse-whitespace.js';
 import { empty } from './constants.js';
 
 const badChars = /[/\\:*?<>|.]+/gu;
 
-export type Options = {
+export type ToFilenameOptions = {
   /** the file name will be truncated to this length */
   maxLength?: number;
   /** character to use to replace "bad" characters */
@@ -20,46 +20,49 @@ export type Options = {
 /**
  * Convert a string so that it can be used as a filename
  *
- * @param input The string to escape
- * @param __namedParameters see {@link Options}
- * @default maxLength 64
- * @default replacement - (dash)
- * @default disambiguate 10
- * @default separator … (ellipsis)
+ * @param input - The string to escape
+ * @param __namedParameters - see {@link ToFilenameOptions}
  * @returns the file name
  */
 export function toFilename(
   input: string,
-  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: Options = {},
+  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: ToFilenameOptions = {},
 ): string {
+  let argInput = input;
   let suffix = empty;
   const compress = new RegExp(
     `\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`,
     'ug',
   );
 
-  let filename = clean(
+  argInput = clean(
     collapseWhitespace(
-      input.normalize('NFC').replaceAll('"', "'").replaceAll(badChars, replacement),
+      argInput.normalize('NFC').replaceAll('"', "'").replaceAll(badChars, replacement),
     ).replaceAll(compress, replacement),
     replacement,
   );
 
-  if (suffix.length === 0 && filename.length > maxLength) {
-    suffix = filename.slice(-disambiguate);
-    filename = filename.slice(0, Math.max(0, filename.length - suffix.length));
+  if (suffix.length === 0 && argInput.length > maxLength) {
+    suffix = argInput.slice(-disambiguate);
+    argInput = argInput.slice(0, Math.max(0, argInput.length - suffix.length));
   }
 
-  if (suffix.length > maxLength) suffix = suffix.slice(0, Math.max(0, maxLength));
+  if (suffix.length > maxLength) {
+    suffix = suffix.slice(0, Math.max(0, maxLength));
+  }
 
   const length = maxLength - suffix.length;
 
-  if (filename.length > length) filename = filename.slice(0, Math.max(0, length));
+  if (argInput.length > length) {
+    argInput = argInput.slice(0, Math.max(0, length));
+  }
 
-  if (filename.length === 0) filename = replacement;
+  if (argInput.length === 0) {
+    argInput = replacement;
+  }
 
-  if (suffix.length > 0) return filename + separator + suffix;
-  return filename;
+  if (suffix.length > 0) {
+    return argInput + separator + suffix;
+  }
+  return argInput;
 }
-
-export default toFilename;

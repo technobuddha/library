@@ -1,11 +1,9 @@
-/* eslint-disable no-implicit-coercion */
-
-import almostEquals from './almost-equals.js';
+import { almostEquals } from './almost-equals.js';
 
 describe('almostEquals', () => {
   test('should handle numbers within EPSILON distance', () => {
-    expect(almostEquals(1, 1 + Number.EPSILON * 1)).toBeTrue();
-    expect(almostEquals(1, 1 - Number.EPSILON * 1)).toBeTrue();
+    expect(almostEquals(1, 1 + Number(Number.EPSILON))).toBeTrue();
+    expect(almostEquals(1, 1 - Number(Number.EPSILON))).toBeTrue();
     expect(almostEquals(1, 1 + Number.EPSILON * 2)).toBeFalse();
     expect(almostEquals(1, 1 - Number.EPSILON * 2)).toBeFalse();
   });

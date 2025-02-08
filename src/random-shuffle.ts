@@ -11,5 +11,3 @@ export function randomShuffle<T>(deck: T[], random: () => number = Math.random):
 
   return items;
 }
-
-export default randomShuffle;

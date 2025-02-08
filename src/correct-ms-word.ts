@@ -31,11 +31,9 @@ const replace: Readonly<Record<string, string>> = Object.freeze({
 /**
  * Correct character sequences that Microsoft Word changes to make it look prettier
  *
- * @param input The mangled string
+ * @param input - The mangled string
  * @returns string with special characters corrected
  */
 export function correctMSWord(input: string): string {
   return input.replaceAll(find, (a) => replace[a]);
 }
-
-export default correctMSWord;

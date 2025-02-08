@@ -1,4 +1,4 @@
-import isValidDate from './is-valid-date.js';
+import { isValidDate } from './is-valid-date.js';
 
 describe('isValidDate', () => {
   test('should detect invalid dates', () => {
