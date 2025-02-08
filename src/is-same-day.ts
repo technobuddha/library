@@ -1,6 +1,12 @@
-import { isSameMonth } from './is-same-month.js';
+import { isSameMonth } from './is-same-month.ts';
 
-export type IsSameDayOptions = {
+/**
+ * Options for the {@link isSameDay} function
+ *
+ * @group Time
+ * @category Day
+ */
+export type SameDayOptions = {
   /** use the utc timezone */
   utc?: boolean;
 };
@@ -10,14 +16,16 @@ export type IsSameDayOptions = {
  *
  * @param input1 - The first date
  * @param input2 - The second date
- * @param __namedParameters - see {@link IsSameDayOptions}
+ * @param options - see {@link SameDayOptions}
  * @defaultValue utc false
  * @returns true, if the two dates fall on the same day
+ * @group Time
+ * @category Day
  */
 export function isSameDay(
   input1: Date,
   input2: Date,
-  { utc = false }: IsSameDayOptions = {},
+  { utc = false }: SameDayOptions = {},
 ): boolean {
   if (utc) {
     return input1.getUTCDate() === input2.getUTCDate() && isSameMonth(input1, input2, { utc });

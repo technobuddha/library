@@ -1,4 +1,4 @@
-import { groupCode } from './group-code.js';
+import { groupCode } from './group-code.ts';
 
 describe('groupCode', () => {
   test('should add select the proper sort order', () => {

@@ -1,4 +1,4 @@
-import { longestCommonSubstring } from './longest-common-substring.js';
+import { longestCommonSubstring } from './longest-common-substring.ts';
 
 describe('longestCommonSubstring', () => {
   test('should handle basic functionality', () => {

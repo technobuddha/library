@@ -1,4 +1,4 @@
-import { empty } from './constants.js';
+import { empty } from './constants.ts';
 
 const re = /\p{Mn}/gu;
 
@@ -7,6 +7,8 @@ const re = /\p{Mn}/gu;
  *
  * @param input - The string
  * @returns string with diacritics removed
+ * @group Unicode
+ * @category Normalization
  */
 export function removeDiacritics(input: string): string {
   return input.normalize('NFD').replaceAll(re, empty).normalize('NFC');

@@ -1,4 +1,5 @@
 const TESTS: [string, RegExp][] = [
+  // cspell:disable
   ['an', /^[aefhilmnirsx]([-.]|$|th$)/iu],
   ['a', /^[bcdgjkpqtuvwyz]([-.]|$|th$)/iu],
   ['an', /^(euler|hour(?!i)|heir|honest|hono)/iu],
@@ -15,8 +16,15 @@ const TESTS: [string, RegExp][] = [
   ['a', /^U[NK][AIEO]?/u],
   ['an', /^[aeiou]/iu],
   ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/iu],
+  // cspell:enable
 ];
 
+/**
+ * Options for determining the indefinite article to use with a word.
+ *
+ * @group English
+ * @category Parts of Speech
+ */
 export type IndefiniteArticleOptions = {
   /** only return the indefinite article, do not combine with the input */
   only?: boolean;
@@ -30,10 +38,12 @@ export type IndefiniteArticleOptions = {
  * all
  *
  * @param word - The word
- * @param __namedParameters - see {@link IndefiniteArticleOptions}
+ * @param options - see {@link IndefiniteArticleOptions}
  * @defaultValue only false
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
+ * @group English
+ * @category Parts of Speech
  */
 export function indefiniteArticle(
   word: string,

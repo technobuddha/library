@@ -1,6 +1,6 @@
-import { fuzzyMatch } from './fuzzy-match.js';
+import { fuzzyMatch } from './fuzzy-match.ts';
 
-describe('levenshteinDistance', () => {
+describe('fuzzyMatch', () => {
   test('Detect difference between two strings', () => {
     expect(fuzzyMatch('Drink Coca Cola', 'Drink Pepsi Cola')).toBe(0.6049568965517242);
     expect(fuzzyMatch('Drink Coca Cola', 'DRINK PEPSI COLA')).toBe(0.6049568965517242);

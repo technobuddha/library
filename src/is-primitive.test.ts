@@ -1,4 +1,4 @@
-import { isPrimitive } from './is-primitive.js';
+import { isPrimitive } from './is-primitive.ts';
 
 describe('isPrimitive', () => {
   test('should detect primitives', () => {

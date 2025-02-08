@@ -1,6 +1,12 @@
-import { empty, space } from './constants.js';
-import { splitWords } from './split-words.js';
+import { empty, space } from './constants.ts';
+import { splitWords } from './split-words.ts';
 
+/**
+ * Options for the {@link wordwrap} function
+ *
+ * @group String
+ * @category Word Wrapping
+ */
 export type WordwrapOptions = {
   /** The width to wrap to */
   width?: number;
@@ -22,6 +28,8 @@ export type WordwrapOptions = {
  * @defaultValue cut default false
  * @defaultValue trailingSpaces false
  * @returns wrapped text
+ * @group String
+ * @category Word Wrapping
  */
 export function wordwrap(
   input: string,
@@ -63,7 +71,7 @@ export function wordwrap(
       currentColumn = 0;
     }
 
-    // if not at the begining of the line, add a space in front of the word
+    // if not at the beginning of the line, add a space in front of the word
     if (currentColumn > 0) {
       result += space;
       currentColumn++;

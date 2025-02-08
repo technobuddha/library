@@ -1,4 +1,4 @@
-import { levenshteinDistance } from './levenshtein-distance.js';
+import { levenshteinDistance } from './levenshtein-distance.ts';
 
 describe('levenshteinDistance', () => {
   test('Detect difference between two strings', () => {
@@ -13,6 +13,7 @@ describe('levenshteinDistance', () => {
   });
 
   test('Detect letter transposition', () => {
+    // cspell:ignore Cloa
     expect(levenshteinDistance('Drink Coca Cola', 'Drink Coca Cloa')).toBe(1);
   });
 

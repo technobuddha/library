@@ -1,4 +1,4 @@
-import { MersenneTwister } from './mersenne-twister.js';
+import { MersenneTwister } from './mersenne-twister.ts';
 
 describe('MersenneTwister', () => {
   test('should generate same random int32 from seed', () => {

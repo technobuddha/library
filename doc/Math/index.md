@@ -1,0 +1,78 @@
+<!-- markdownlint-disable -->
+
+# @technobuddha/library
+
+## Math
+
+### Arithmetic
+
+| Name | Description |
+| ------ | ------ |
+| [CeilOptions](CeilOptions.md) | Options for the [ceil](ceil.md) function |
+| [FloorOptions](FloorOptions.md) | Options for the [floor](floor.md) function |
+| [RoundOptions](RoundOptions.md) | Options for the [round](round.md) function |
+| [ceil](ceil.md) | Returns the smallest integer greater than or equal to the given number, with optional tolerance and precision adjustments. |
+| [crossProduct](crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
+| [floor](floor.md) | Returns the largest integer less than or equal to the given number, with optional tolerance and precision adjustments. |
+| [lerp](lerp.md) | Performs linear interpolation between values a and b. Returns the value between a and b proportional to x (when x is between 0 and 1. When x is outside this range, the return value is a linear extrapolation). |
+| [modulo](modulo.md) | The % operator in JavaScript returns the remainder of a / b, but differs from some other languages in that the result will have the same sign as the dividend. For example, -1 % 8 == -1, whereas in some other languages (such as Python) the result would be 7. This function emulates the more correct modulo behavior, which is useful for certain applications such as calculating an offset index in a circular list. |
+| [round](round.md) | Returns the nearest integer to the given number, with optional precision adjustments. |
+
+### Comparison
+
+| Name | Description |
+| ------ | ------ |
+| [ApproximatelyEqualsOptions](ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](approximatelyEquals.md) function |
+| [approximatelyEquals](approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
+| [compareNumbers](compareNumbers.md) | Compare two numbers |
+| [isNegativeZero](isNegativeZero.md) | Tests to see if the specified value is negative zero |
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [cardinalOnes](cardinalOnes.md) | Words for unit numbers 0-19 |
+| [cardinalTens](cardinalTens.md) | Words for tens 20-90 |
+| [negativeZero](negativeZero.md) | Negative Zero |
+| [ordinalOnes](ordinalOnes.md) | Words for ordinal numbers 0-19 |
+| [ordinalTens](ordinalTens.md) | Words for ordinal tens 20-90 |
+
+### Numbers
+
+| Name | Description |
+| ------ | ------ |
+| [CardinalOptions](CardinalOptions.md) | Configuration options for cardinal number conversion. |
+| [DeconstructedNumber](DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
+| [FractionOptions](FractionOptions.md) | Options for customizing the output and behavior of fraction number representations. |
+| [Numbering](Numbering.md) | Options for controlling how numbers are converted to words or symbols. |
+| [OrdinalOptions](OrdinalOptions.md) | Options for formatting ordinal numbers. |
+| [RomanOptions](RomanOptions.md) | Options for converting numbers to Roman numerals. |
+| [cardinal](cardinal.md) | Convert a number into text (the cardinal number) |
+| [deconstructNumber](deconstructNumber.md) | Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts. |
+| [formatNumber](formatNumber.md) | Formats a number according to the specified mask. |
+| [fraction](fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
+| [orderOfMagnitude](orderOfMagnitude.md) | Get the spelled out word for an exponent |
+| [ordinal](ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
+| [padNumber](padNumber.md) | Add leading zeros to a number to ensure a string of a minimum length |
+| [parseRoman](parseRoman.md) | Parse a roman numeral string into it's integer value. |
+| [summarize](summarize.md) | Get a short description of a number |
+| [toRoman](toRoman.md) | Parse number into a roman numeral string |
+
+### Parity
+
+| Function | Description |
+| ------ | ------ |
+| [isEven](isEven.md) | Tests to see if the specified value is an even integer |
+| [isMultipleOf](isMultipleOf.md) | Tests to see if the specified value is an multiple of *multiplier* |
+| [isOdd](isOdd.md) | Tests to see if the specified value is an odd integer |
+
+### Statistics
+
+| Function | Description |
+| ------ | ------ |
+| [mean](mean.md) | Calculates the arithmetic mean (average) of an array of numbers. |
+| [median](median.md) | Calculates the median value of an array of numbers. |
+| [mode](mode.md) | Returns the mode (the most frequently occurring element) of the given array. If multiple elements have the same highest frequency, the first encountered is returned. Returns `undefined` if the array is empty. |
+| [standardDeviation](standardDeviation.md) | Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments. |
+| [sum](sum.md) | Calculates the sum of an array of numbers. |
+| [variance](variance.md) | Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments. |

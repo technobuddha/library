@@ -1,11 +1,13 @@
-import { empty } from './constants.js';
-import { hex, oct, u4, u8, x2 } from './escape.js';
+import { empty } from './constants.ts';
+import { hex, oct, u4, u8, x2 } from './escape.ts';
 
 /**
  * Escape a string for use in C/C++
  *
  * @param input - The string to escape
  * @returns the escaped string
+ * @group Encoding
+ * @category Escaping
  */
 export function escapeC(input: string): string {
   const output: string[] = [];

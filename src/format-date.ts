@@ -1,11 +1,11 @@
-import { secondsPerHour, secondsPerMinute } from './constants.js';
-import { getDayOfWeek } from './get-day-of-week.js';
-import { getDayOfYear } from './get-day-of-year.js';
-import { getISOWeekOfYear } from './get-iso-week-of-year.js';
-import { getJulian } from './get-julian.js';
-import { getTimezone } from './get-timezone.js';
-import { ordinal } from './ordinal.js';
-import { padNumber } from './pad-number.js';
+import { empty, secondsPerHour, secondsPerMinute } from './constants.ts';
+import { dayOfWeek } from './day-of-week.ts';
+import { dayOfYear } from './day-of-year.ts';
+import { isoWeekOfYear } from './iso-week-of-year.ts';
+import { julian } from './julian.ts';
+import { ordinal } from './numbering/ordinal.ts';
+import { padNumber } from './pad-number.ts';
+import { timezone } from './timezone.ts';
 
 const tokenizer =
   /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/gu;
@@ -76,6 +76,11 @@ const monthName = [
   'December',
 ];
 
+/**
+ * Options for formatting a date
+ * @group Time
+ * @category Formatting
+ */
 export type FormatDateOptions = {
   /** Format the date in the UTC timezone */
   utc?: boolean;
@@ -86,8 +91,10 @@ export type FormatDateOptions = {
  *
  * @param input - The date
  * @param mask - The mask
- * @param __namedParameters - see {@link FormatDateOptions}
+ * @param options - see {@link FormatDateOptions}
  * @defaultValue utc false
+ * @group Time
+ * @category Formatting
  */
 export function formatDate(
   input: Date,
@@ -186,34 +193,34 @@ export function formatDate(
         return dayName[dy];
       }
       case 'O': {
-        return padNumber(getDayOfYear(input, { utc }), 0);
+        return padNumber(dayOfYear(input, { utc }), 0);
       } //Day of Year (1-366)
       case 'OO': {
-        return padNumber(getDayOfYear(input, { utc }), 3);
+        return padNumber(dayOfYear(input, { utc }), 3);
       } //Day of Year (1-366)
       case 'Wy': {
-        return padNumber(getISOWeekOfYear(input, { utc }).year, 0);
+        return padNumber(isoWeekOfYear(input, { utc }).year, 0);
       }
       case 'Ww': {
-        return padNumber(getISOWeekOfYear(input, { utc }).week, 0);
+        return padNumber(isoWeekOfYear(input, { utc }).week, 0);
       } //Week of Year (1-53)
       case 'Www': {
-        return padNumber(getISOWeekOfYear(input, { utc }).week, 2);
+        return padNumber(isoWeekOfYear(input, { utc }).week, 2);
       } //
       case 'Wd': {
-        return padNumber(getDayOfWeek(input, { utc }), 0);
+        return padNumber(dayOfWeek(input, { utc }), 0);
       }
       case 'TZ': {
-        return getTimezone(o);
+        return timezone(o);
       }
       case 'GMT': {
-        return getTimezone(o, { gmt: true });
+        return timezone(o, { gmt: true });
       }
       case 'AM': {
-        return ho < 12 ? 'AM' : '';
+        return ho < 12 ? 'AM' : empty;
       } //AM  / --
       case 'PM': {
-        return ho < 12 ? '' : 'PM';
+        return ho < 12 ? empty : 'PM';
       } //--  / PM
       case 'T': {
         return ho < 12 ? 'A' : 'P';
@@ -222,16 +229,16 @@ export function formatDate(
         return ho < 12 ? 'AM' : 'PM';
       } //AM  / PM
       case 'AD': {
-        return yr < 1 ? '' : 'AD';
+        return yr < 1 ? empty : 'AD';
       } //--  / AD
       case 'BC': {
-        return yr < 1 ? 'BC' : '';
+        return yr < 1 ? 'BC' : empty;
       } //BC  / --
       case 'CE': {
-        return yr < 1 ? '' : 'CE';
+        return yr < 1 ? empty : 'CE';
       } //--  / CE
       case 'BCE': {
-        return yr < 1 ? 'BCE' : '';
+        return yr < 1 ? 'BCE' : empty;
       } //BCE / --
       case 'EE': {
         return yr < 1 ? 'BC' : 'AD';
@@ -240,7 +247,7 @@ export function formatDate(
         return yr < 1 ? 'BCE' : 'CE';
       } //BCE / CE
       case 'J': {
-        return padNumber(Math.floor(getJulian(input)), 0);
+        return padNumber(Math.floor(julian(input)), 0);
       }
       case 'Q': {
         return padNumber(Math.floor((mo + 3) / 3), 0);

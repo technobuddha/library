@@ -1,4 +1,4 @@
-import { possessive } from './possessive.js';
+import { possessive } from './possessive.ts';
 
 describe('possessive', () => {
   test('should handle simple possessives', () => {

@@ -1,6 +1,12 @@
-import { space } from './constants.js';
-import { splitChars } from './split-chars.js';
+import { space } from './constants.ts';
+import { splitChars } from './split-chars.ts';
 
+/**
+ * Options for the {@link mask} function
+ *
+ * @group String
+ * @category Mask
+ */
 export type MaskOptions = {
   /** if the mask is longer, fill with character */
   missing?: string;
@@ -16,9 +22,11 @@ const tokenizer = /\\#|#|./gu;
  *
  * @param input - The string
  * @param simpleMask - The mask
- * @param __namedParameters - see {@link MaskOptions}
+ * @param options - see {@link MaskOptions}
  * @defaultValue missing space
  * @returns The mask filled with characters from the string
+ * @group String
+ * @category Mask
  */
 export function mask(
   input: string,

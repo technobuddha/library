@@ -1,4 +1,4 @@
-import { isOdd } from './is-odd.js';
+import { isOdd } from './is-odd.ts';
 
 describe('isOdd', () => {
   test('should handle testing for odd numbers', () => {

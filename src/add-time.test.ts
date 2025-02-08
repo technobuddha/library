@@ -1,4 +1,4 @@
-import { addTime } from './add-time.js';
+import { addTime } from './add-time.ts';
 
 describe('addTime', () => {
   test('should add years', () => {
@@ -127,7 +127,7 @@ describe('addTime', () => {
     ).toBe(new Date(2001, 2, 4, 6, 8, 10, 12).toString());
   });
 
-  test('should take no paramater', () => {
+  test('should take no parameter', () => {
     expect(addTime(new Date(2000, 0, 1, 2, 3, 4, 5)).toString()).toBe(
       new Date(2000, 0, 1, 2, 3, 4, 5).toString(),
     );

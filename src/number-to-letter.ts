@@ -1,14 +1,28 @@
-import { empty } from './constants.js';
-import { floor } from './floor.js';
+import { empty } from './constants.ts';
+import { floor } from './floor.ts';
 
 // eslint-disable-next-line no-secrets/no-secrets
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+/**
+ * Options for the {@link numberToLetter} function
+ *
+ * @group String
+ * @category Sorting
+ */
 export type NumberToLetterOptions = {
   /** The alphabet to use */
   alphabet?: string;
 };
 
+/**
+ * Convert a number to a letter, using the alphabet (default: A-Z)
+ * @param num - The number to convert
+ * @param options - see {@link NumberToLetterOptions}
+ * @returns The letter
+ * @group String
+ * @category Sorting
+ */
 export function numberToLetter(
   num: number,
   { alphabet = ALPHABET }: NumberToLetterOptions = {},

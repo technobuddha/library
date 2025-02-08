@@ -1,18 +1,19 @@
-import { isUndefined } from 'lodash-es';
-
-import { empty, space } from './constants.js';
-import { matchCase } from './match-case.js';
+import { empty, space } from './constants.ts';
+import { matchCase } from './match-case.ts';
 
 /**
  * Return the plural version of the input string
  *
  * @param input - The word to pluralize
  * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
+ * @param include - If true and quantity is supplied, the quantity is prepended to the output.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
+ * @group English
+ * @category Parts of Speech
  */
-export function plural(input: string, quantity?: number): string {
+export function plural(input: string, quantity?: number, include = false): string {
   if (quantity === 1 || quantity === -1) {
-    return quantity.toString() + space + input;
+    return include ? quantity.toString() + space + input : input;
   }
 
   let lc = input.toLocaleLowerCase();
@@ -62,11 +63,9 @@ export function plural(input: string, quantity?: number): string {
     }
   }
 
-  if (!result) {
-    result = matchCase(`${prefix}${lc}s${suffix}`, input);
-  }
+  result ??= matchCase(`${prefix}${lc}s${suffix}`, input);
 
-  return isUndefined(quantity) ? result : quantity.toString() + space + result;
+  return include && quantity != null ? `${quantity}${space}${result}` : result;
 }
 
 type DBEntry = {
@@ -80,6 +79,7 @@ type DBEntry = {
 
 const database: DBEntry = {
   rules: [
+    // cspell:disable
     [/(stig|sto|dog|sche|anathe)ma$/iu, '$1mata'],
     [/(alumn|alg|antenn|ecclesi|faun|formul|larv|nebul|vertebr)a$/iu, '$1ae'],
 
@@ -169,7 +169,7 @@ const database: DBEntry = {
     /llows$/iu,
     /ment$/iu,
     /friut$/iu,
-    /tion$/iu,
+    /(?<!func)tion$/iu,
     /work$/iu,
     /ing$/iu,
     /ism$/iu,
@@ -177,6 +177,8 @@ const database: DBEntry = {
     /moose$/iu,
     /trout$/iu,
   ],
+  // cspell:enable
+
   uncountableWords: [
     'abroad',
     'acoustics',

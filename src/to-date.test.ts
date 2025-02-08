@@ -1,4 +1,4 @@
-import { toDate } from './to-date.js';
+import { toDate } from './to-date.ts';
 
 describe('toDate', () => {
   test('should return dates', () => {

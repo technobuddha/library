@@ -1,5 +1,11 @@
-import { clean } from './clean.js';
+import { clean } from './clean.ts';
 
+/**
+ * Options for the {@link sortOrder} function
+ *
+ * @group String
+ * @category Sorting
+ */
 export type SortOrderOptions = {
   /** Ignore a leading quote (") */
   ignoreQuotes?: boolean;
@@ -12,8 +18,10 @@ export type SortOrderOptions = {
  *
  * @remarks for example "The Beatles" becomes "Beatles, The"
  * @param text - string to convert
- * @param __namedParameters - see {@link SortOrderOptions}
+ * @param options - see {@link SortOrderOptions}
  * @returns sortable string
+ * @group String
+ * @category Sorting
  */
 export function sortOrder(
   text: string,

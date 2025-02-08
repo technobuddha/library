@@ -1,4 +1,6 @@
-import { count } from './count.js';
+// cspell:ignore foofoo foofoofoofoofoo
+
+import { count } from './count.ts';
 
 describe('count', () => {
   test('should count substrings', () => {

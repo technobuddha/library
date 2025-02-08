@@ -1,8 +1,14 @@
-import { clean } from './clean.js';
-import { space } from './constants.js';
+import { clean } from './clean.ts';
+import { space } from './constants.ts';
 
+/**
+ * Options for the {@link collapseBreakingSpace} function
+ *
+ * @group String
+ * @category Collapse
+ */
 export type CollapseBreakingSpaceOptions = {
-  /** If true, trim  */
+  /** If true, trim leading and trailing whitespace */
   trim?: boolean;
 };
 
@@ -11,8 +17,10 @@ export type CollapseBreakingSpaceOptions = {
  *
  * @param input - The string
  * @param trim - If true, remove leading and trailing whitespace
+ * @group String
+ * @category Collapse
  */
-export function collapseBreakingspace(
+export function collapseBreakingSpace(
   input: string,
   { trim = true }: CollapseBreakingSpaceOptions = {},
 ): string {

@@ -1,5 +1,5 @@
-import { empty, space } from './constants.js';
-import { isUpperCase } from './is-upper-case.js';
+import { empty, space } from './constants.ts';
+import { isUpperCase } from './is-upper-case.ts';
 
 describe('isUpperCase', () => {
   test('should detect lower case', () => {

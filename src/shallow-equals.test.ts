@@ -1,4 +1,4 @@
-import { shallowEquals } from './shallow-equals.js';
+import { shallowEquals } from './shallow-equals.ts';
 
 describe('shallowEquals', () => {
   test('computes checksum & build table', () => {
