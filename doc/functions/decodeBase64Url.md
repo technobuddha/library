@@ -2,15 +2,15 @@
 
 ***
 
-[@technobuddha/library](../README.md) / decodeBase64
+[@technobuddha/library](../README.md) / decodeBase64Url
 
-# Function: decodeBase64()
+# Function: decodeBase64Url()
 
 ## Call Signature
 
-> **decodeBase64**(`input`): `Uint8Array`
+> **decodeBase64Url**(`input`): `Uint8Array`
 
-Defined in: [decode-base64.ts:82](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L82)
+Defined in: [decode-base64.ts:107](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L107)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -49,9 +49,9 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 ## Call Signature
 
-> **decodeBase64**(`input`, `encoding`): `string`
+> **decodeBase64Url**(`input`, `encoding`): `string`
 
-Defined in: [decode-base64.ts:83](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L83)
+Defined in: [decode-base64.ts:108](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L108)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.

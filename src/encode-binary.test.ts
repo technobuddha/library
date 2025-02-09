@@ -5,6 +5,10 @@ describe('encodeBinary', () => {
     expect(encodeBinary(new Uint8Array([0, 1, 2, 3]), 'base64')).toBe('AAECAw==');
   });
 
+  test('base64Url', () => {
+    expect(encodeBinary(new Uint8Array([0, 1, 2, 3]), 'base64url')).toBe('AAECAw');
+  });
+
   test('hex', () => {
     expect(encodeBinary(new Uint8Array([0, 1, 2, 3]), 'hex')).toBe('00010203');
   });

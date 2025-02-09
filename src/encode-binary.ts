@@ -1,4 +1,4 @@
-import { encodeBase64 } from './encode-base64.js';
+import { encodeBase64, encodeBase64Url } from './encode-base64.js';
 
 export type BinaryEncoding = 'base64' | 'base64url' | 'hex' | 'binary';
 
@@ -7,7 +7,8 @@ export type BinaryEncoding = 'base64' | 'base64url' | 'hex' | 'binary';
  *
  * The string can be in *base64*, *base64url*, *hex*, or *binary* format.
  *
- * base64 or base64url: The binary object is encoded using {@link encodeBase64}
+ * base64: The binary object is encoded using {@link encodeBase64}
+ * base64url: The binary object is encoded using {@link encodeBase64Url}
  * hex: each byte in the binary object is converted to a series of 2-digit hexadecimal numbers
  * binary: each byte in the binary object is converted to a characters
  *
@@ -22,7 +23,7 @@ export function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): strin
     }
 
     case 'base64url': {
-      throw new Error('Not implemented');
+      return encodeBase64Url(input);
     }
 
     case 'hex': {

@@ -14,6 +14,8 @@
 
 - [AlmostEqualsOptions](type-aliases/AlmostEqualsOptions.md)
 - [AngleUnit](type-aliases/AngleUnit.md)
+- [BaseCharset](type-aliases/BaseCharset.md)
+- [BinaryEncoding](type-aliases/BinaryEncoding.md)
 - [BinaryObject](type-aliases/BinaryObject.md)
 - [BinaryUnitsOptions](type-aliases/BinaryUnitsOptions.md)
 - [CardinalOptions](type-aliases/CardinalOptions.md)
@@ -89,7 +91,8 @@
 
 ## Variables
 
-- [b64](variables/b64.md)
+- [base64Charset](variables/base64Charset.md)
+- [base64UrlCharset](variables/base64UrlCharset.md)
 - [charcode](variables/charcode.md)
 - [day](variables/day.md)
 - [daysPerWeek](variables/daysPerWeek.md)
@@ -152,10 +155,14 @@
 - [create2DArray](functions/create2DArray.md)
 - [dataURL](functions/dataURL.md)
 - [decodeBase64](functions/decodeBase64.md)
+- [decodeBase64Url](functions/decodeBase64Url.md)
+- [decodeBinary](functions/decodeBinary.md)
 - [decodeText](functions/decodeText.md)
 - [delimited](functions/delimited.md)
 - [diceCoefficient](functions/diceCoefficient.md)
 - [encodeBase64](functions/encodeBase64.md)
+- [encodeBase64Url](functions/encodeBase64Url.md)
+- [encodeBinary](functions/encodeBinary.md)
 - [encodeText](functions/encodeText.md)
 - [ensurePrefix](functions/ensurePrefix.md)
 - [ensureSuffix](functions/ensureSuffix.md)

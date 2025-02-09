@@ -1,5 +1,5 @@
 import { chop } from './chop.js';
-import { decodeBase64 } from './decode-base64.js';
+import { decodeBase64, decodeBase64Url } from './decode-base64.js';
 import { type BinaryEncoding } from './encode-binary.js';
 
 /**
@@ -22,7 +22,7 @@ export function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Arra
     }
 
     case 'base64url': {
-      throw new Error('Not implemented');
+      return decodeBase64Url(input);
     }
 
     case 'hex': {

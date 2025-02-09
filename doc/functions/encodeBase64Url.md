@@ -2,15 +2,15 @@
 
 ***
 
-[@technobuddha/library](../README.md) / encodeBase64
+[@technobuddha/library](../README.md) / encodeBase64Url
 
-# Function: encodeBase64()
+# Function: encodeBase64Url()
 
 ## Call Signature
 
-> **encodeBase64**(`chars`, `encoding`): `string`
+> **encodeBase64Url**(`chars`, `encoding`): `string`
 
-Defined in: [encode-base64.ts:76](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L76)
+Defined in: [encode-base64.ts:116](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L116)
 
 Creates a Base64-encoded ASCII string from a string.
 
@@ -48,9 +48,9 @@ encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
 
 ## Call Signature
 
-> **encodeBase64**(`binary`): `string`
+> **encodeBase64Url**(`binary`): `string`
 
-Defined in: [encode-base64.ts:91](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L91)
+Defined in: [encode-base64.ts:131](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L131)
 
 Creates a Base64-encoded ASCII string from a binary source.
 
