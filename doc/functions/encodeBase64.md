@@ -1,6 +1,6 @@
 [**@technobuddha/library**](../README.md)
 
----
+***
 
 [@technobuddha/library](../README.md) / encodeBase64
 
@@ -18,7 +18,7 @@ You can use this method to encode data which may otherwise cause communication p
 transmit it, then use the [decodeBase64](decodeBase64.md) method to decode the data again. For example, you can
 encode control characters such as ASCII values 0 through 31.
 
-Before encoding, the string is converted to binary using [encodeText](encodeText.md) and the supplied **encoding**
+Before encoding, the string is converted to binary using [encodeText](encodeText.md) and the supplied ***encoding***
 
 ### Parameters
 
@@ -64,7 +64,7 @@ encode control characters such as ASCII values 0 through 31.
 
 `Uint8Array`
 
-The _binary data_ to encode
+The *binary data* to encode
 
 ### Returns
 
