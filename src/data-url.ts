@@ -1,6 +1,4 @@
-import { map } from 'lodash-es';
-
-import { build } from './build.js';
+import { encodeBase64 } from './encode-base64.js';
 
 export type BinaryObject =
   | ArrayBuffer
@@ -25,7 +23,5 @@ export type BinaryObject =
 export function dataURL(input: BinaryObject, mimeType: string): string {
   const buffer = input instanceof ArrayBuffer ? input : input.buffer;
   const bytes = new Uint8Array(buffer);
-  // eslint-disable-next-line unicorn/prefer-code-point
-  return `data:${mimeType};base64,${btoa(build(map(bytes, (c) => String.fromCharCode(c))))}`;
-  //return `data:${mimeType};base64,${Buffer.from(buffer).toString('base64')}`;
+  return `data:${mimeType};base64,${encodeBase64(bytes)}`;
 }

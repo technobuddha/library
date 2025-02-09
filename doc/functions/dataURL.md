@@ -8,7 +8,7 @@
 
 > **dataURL**(`input`, `mimeType`): `string`
 
-Defined in: [data-url.ts:25](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L25)
+Defined in: [data-url.ts:23](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L23)
 
 Convert any binary object into a data URL
 
