@@ -8,4 +8,4 @@
 
 > **Encoding**: `"utf-8"` \| `"utf8"`
 
-Defined in: encode-text.ts:4
+Defined in: [encode-text.ts:4](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L4)

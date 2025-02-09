@@ -89,6 +89,7 @@
 
 ## Variables
 
+- [b64](variables/b64.md)
 - [charcode](variables/charcode.md)
 - [day](variables/day.md)
 - [daysPerWeek](variables/daysPerWeek.md)
@@ -150,9 +151,11 @@
 - [crc32](functions/crc32.md)
 - [create2DArray](functions/create2DArray.md)
 - [dataURL](functions/dataURL.md)
+- [decodeBase64](functions/decodeBase64.md)
 - [decodeText](functions/decodeText.md)
 - [delimited](functions/delimited.md)
 - [diceCoefficient](functions/diceCoefficient.md)
+- [encodeBase64](functions/encodeBase64.md)
 - [encodeText](functions/encodeText.md)
 - [ensurePrefix](functions/ensurePrefix.md)
 - [ensureSuffix](functions/ensureSuffix.md)

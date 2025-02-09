@@ -8,7 +8,7 @@
 
 > **decodeText**(`input`, `_encoding`): `string`
 
-Defined in: decode-text.ts:12
+Defined in: [decode-text.ts:12](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L12)
 
 Decode a UTF8 encoded string into unicode
 
