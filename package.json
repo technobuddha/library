@@ -20,7 +20,7 @@
   },
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
-    "@technobuddha/project": "0.0.149",
+    "@technobuddha/project": "0.0.152",
     "@types/lodash-es": "^4",
     "jest-matcher-deep-close-to": "3.0.2",
     "typedoc": "0.27.6",
@@ -29,9 +29,9 @@
     "vitest": "3.0.5"
   },
   "technobuddhaProject": {
-    "version": "0.0.149",
+    "version": "0.0.152",
     "created": "2020-04-01T04:20:42.694Z",
-    "updated": "2025-02-08T19:43:59.057Z"
+    "updated": "2025-02-12T13:35:04.290Z"
   },
   "type": "module",
   "engines": {

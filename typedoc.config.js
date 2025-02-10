@@ -6,7 +6,7 @@ const config = {
   out: 'doc',
   readme: 'none',
   excludePrivate: true,
-  plugin: ['typedoc-plugin-markdown'],
+  plugin: ['typedoc-plugin-markdown', './typedoc-markdown-plugin.js'],
   gitRevision: 'main',
 };
 

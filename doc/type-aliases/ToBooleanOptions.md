@@ -1,3 +1,5 @@
+<!-- markdownlint-disable -->
+
 [**@technobuddha/library**](../README.md)
 
 ***

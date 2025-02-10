@@ -1,24 +1,26 @@
+// @ts-check
 // 🚨
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 import { app } from '@technobuddha/project';
 
-export default [
+/**
+ * @import { type Linter } from 'eslint';
+ * @type {Linter.Config[]}
+ */
+const config = [
   // src/tsconfig.code.json
   app.lint({
     files: ['src/**/*.ts'],
     ignores: ['src/**/*.test.ts'],
-    environment: 'node',
     tsConfig: 'src/tsconfig.code.json',
-    typescript: true,
   }),
   // src/tsconfig.json
   app.lint({
     files: ['src/**/*.test.ts', 'src/**/*.d.ts'],
     ignores: [],
-    environment: 'node',
     tsConfig: 'src/tsconfig.json',
-    typescript: true,
+    environment: 'node',
     jest: true,
   }),
   // tsconfig.json
@@ -28,3 +30,5 @@ export default [
   // tsconfig.json
   app.lint({ files: ['*.setup.ts'], ignores: [], environment: 'node' }),
 ];
+
+export default config;

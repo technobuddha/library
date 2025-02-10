@@ -896,7 +896,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
-    "@technobuddha/project": "npm:0.0.149"
+    "@technobuddha/project": "npm:0.0.152"
     "@types/lodash-es": "npm:^4"
     jest-matcher-deep-close-to: "npm:3.0.2"
     lodash-es: "npm:4.17.21"
@@ -907,9 +907,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.0.149":
-  version: 0.0.149
-  resolution: "@technobuddha/project@npm:0.0.149"
+"@technobuddha/project@npm:0.0.152":
+  version: 0.0.152
+  resolution: "@technobuddha/project@npm:0.0.152"
   dependencies:
     "@eslint/js": "npm:9.19.0"
     "@inquirer/prompts": "npm:7.2.3"
@@ -958,7 +958,7 @@ __metadata:
     watch: "npm:^1.0.2"
   bin:
     tbproject: dist/bin/tbproject
-  checksum: 10c0/9656a004dff823e6ab20ee87ce4cf502011d70c00fee40a8f636d17399fb4a47507bc76de1f36a3cf7fb1ee9ef329281a668f8d0f39ee9f8e33d4bfeeaa17a8b
+  checksum: 10c0/13844f1283c5d6b65dffebdecf91e526c5f702f3d53e03115a38241814383bc1f095d3a47f0344f8ca2049a8736bc94555ca28a683556f4c76f871f791f9dcb8
   languageName: node
   linkType: hard
 
