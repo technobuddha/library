@@ -2,7 +2,17 @@
 import { type BinaryEncoding, encodeBinary } from './encode-binary.js';
 import { encodeText, type Encoding } from './encode-text.js';
 
-export abstract class Hash {
+/**
+ *
+ */
+export interface HashClass {
+  digest(): Uint8Array;
+  digest(encoding: BinaryEncoding): string;
+  update(data: TypedArray | ArrayBuffer): this;
+  update(data: string, encoding?: Encoding): this;
+}
+
+export abstract class HashBase implements HashClass {
   protected readonly block: Uint8Array;
   protected readonly blockSize: number;
   protected readonly finalSize: number;
@@ -18,11 +28,6 @@ export abstract class Hash {
   protected abstract hash(): Uint8Array;
 
   protected abstract updateCounters(buffer: Uint8Array): void;
-
-  // eslint-disable-next-line @typescript-eslint/class-methods-use-this
-  public copy(/* stream transform options */): this {
-    throw new Error('Not implemented');
-  }
 
   public digest(): Uint8Array;
   public digest(encoding: BinaryEncoding): string;

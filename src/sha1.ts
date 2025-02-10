@@ -7,7 +7,7 @@
  * Distributed under the BSD License
  * See http://pajhome.org.uk/crypt/md5 for details.
  */
-import { Hash } from './hash.js';
+import { HashBase } from './hash.js';
 
 function rotl1(num: number): number {
   return (num << 1) | (num >>> 31);
@@ -38,7 +38,7 @@ function int32(x: number): number {
   return x | 0;
 }
 
-export class Sha1 extends Hash {
+export class Sha1 extends HashBase {
   private a = 0x67452301;
   private b = 0xefcdab89;
   private c = 0x98badcfe;

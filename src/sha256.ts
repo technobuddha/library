@@ -1,6 +1,6 @@
 /* eslint-disable no-bitwise */
 
-import { Hash } from './hash.js';
+import { HashBase } from './hash.js';
 
 const K = [
   0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
@@ -42,7 +42,7 @@ function gamma1(x: number): number {
   return ((x >>> 17) | (x << 15)) ^ ((x >>> 19) | (x << 13)) ^ (x >>> 10);
 }
 
-export class Sha256 extends Hash {
+export class Sha256 extends HashBase {
   private a = 0x6a09e667;
   private b = 0xbb67ae85;
   private c = 0x3c6ef372;

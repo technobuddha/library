@@ -64,6 +64,7 @@ export * from './get-occurrence-in-month.js';
 export * from './get-timezone.js';
 export * from './graphql.js';
 export * from './group-code.js';
+export * from './hash.js';
 export * from './indefinite-article.js';
 export * from './indent.js';
 export * from './is-alpha.js';

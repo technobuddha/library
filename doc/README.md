@@ -6,9 +6,15 @@
 
 ## Classes
 
+- [Crc32](classes/Crc32.md)
+- [HashBase](classes/HashBase.md)
 - [MersenneTwister](classes/MersenneTwister.md)
 - [PriorityQueue](classes/PriorityQueue.md)
 - [TimeSpan](classes/TimeSpan.md)
+
+## Interfaces
+
+- [HashClass](interfaces/HashClass.md)
 
 ## Type Aliases
 
@@ -151,7 +157,6 @@
 - [coordinate](functions/coordinate.md)
 - [correctMSWord](functions/correctMSWord.md)
 - [count](functions/count.md)
-- [crc32](functions/crc32.md)
 - [create2DArray](functions/create2DArray.md)
 - [dataURL](functions/dataURL.md)
 - [decodeBase64](functions/decodeBase64.md)
