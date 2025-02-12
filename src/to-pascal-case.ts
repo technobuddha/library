@@ -5,6 +5,8 @@ import { toCapitalCase } from './to-capital-case.js';
  *
  * @param input - The identifier string
  * @returns the identifier in pascal case
+ * @group String
+ * @category Case Conversion
  */
 export function toPascalCase(input: string): string {
   return toCapitalCase(

@@ -7,6 +7,8 @@ import { isMultipleOf } from './is-multiple-of.js';
  *
  * @param input - The number to test
  * @returns true if the number is an even integer
+ * @group Math
+ * @category Parity
  */
 export function isEven(input: number): boolean {
   return isInteger(input) && isMultipleOf(input, 2);

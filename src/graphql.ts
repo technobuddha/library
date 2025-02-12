@@ -3,10 +3,26 @@ import { isArray, isArrayLike, isBoolean, isNull, isNumber, isString, zip } from
 import { empty, space } from './constants.js';
 import { escapeGraphQL } from './escape-graphql.js';
 
+/**
+ * @group Template
+ * @category GraphQl
+ */
 export type GraphQLObject = { [Key in string]: GraphQLValue };
+/**
+ * @group Template
+ * @category GraphQl
+ */
 export type GraphQLArray = GraphQLValue[];
+/**
+ * @group Template
+ * @category GraphQl
+ */
 export type GraphQLValue = number | string | null | boolean | GraphQLArray | GraphQLObject;
 
+/**
+ * @group Template
+ * @category GraphQl
+ */
 export function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
 export function graphQL(arg: GraphQLValue): string;
 export function graphQL(

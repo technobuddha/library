@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / space
+[@technobuddha/library](../INDEX.md) / space
 
 # Variable: space
 
 > `const` **space**: `" "` = `' '`
 
-Defined in: [constants.ts:2](https://github.com/technobuddha/library/blob/main/src/constants.ts#L2)
+Defined in: [constants.ts:10](https://github.com/technobuddha/library/blob/main/src/constants.ts#L10)

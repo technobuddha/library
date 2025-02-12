@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / matchCase
+[@technobuddha/library](../INDEX.md) / matchCase
 
 # Function: matchCase()
 
-> **matchCase**(`input`, `target`): `string`
+> **matchCase**(`input`: `string`, `target`: `string`): `string`
 
-Defined in: [match-case.ts:19](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L19)
+Defined in: [match-case.ts:21](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L21)
 
 Attempt to convert the input string into the same case as the target string
 
 ## Parameters
 
-### input
-
-`string`
-
-The input string
-
-### target
-
-`string`
-
-The target string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The input string |
+| `target` | `string` | The target string |
 
 ## Returns
 

@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / reviver
+[@technobuddha/library](../INDEX.md) / reviver
 
 # Function: reviver()
 
-> **reviver**(`this`, `_key`, `value`): `unknown`
+> **reviver**(`this`: `unknown`, `_key`: `string`, `value`: `unknown`): `unknown`
 
-Defined in: [json.ts:38](https://github.com/technobuddha/library/blob/main/src/json.ts#L38)
+Defined in: [json.ts:52](https://github.com/technobuddha/library/blob/main/src/json.ts#L52)
 
 Used with JSON.parse to decode objected encoded by [replacer](replacer.md)
 
 ## Parameters
 
-### this
-
-`unknown`
-
-The raw object
-
-### \_key
-
-`string`
-
-The key
-
-### value
-
-`unknown`
-
-The value
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `this` | `unknown` | The raw object |
+| `_key` | `string` | The key |
+| `value` | `unknown` | The value |
 
 ## Returns
 

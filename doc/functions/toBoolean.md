@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toBoolean
+[@technobuddha/library](../INDEX.md) / toBoolean
 
 # Function: toBoolean()
 
-> **toBoolean**(`input`, `__namedParameters`): `boolean` \| `undefined`
+> **toBoolean**(`input`: `string`, `__namedParameters`: [`ToBooleanOptions`](../type-aliases/ToBooleanOptions.md)): `boolean` \| `undefined`
 
-Defined in: [to-boolean.ts:21](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L21)
+Defined in: [to-boolean.ts:27](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L27)
 
 Convert a string to a boolean value
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to convert
-
-### \_\_namedParameters
-
-[`ToBooleanOptions`](../type-aliases/ToBooleanOptions.md) = `{}`
-
-see [ToBooleanOptions](../type-aliases/ToBooleanOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to convert |
+| `__namedParameters` | [`ToBooleanOptions`](../type-aliases/ToBooleanOptions.md) | see [ToBooleanOptions](../type-aliases/ToBooleanOptions.md) |
 
 ## Returns
 

@@ -17,6 +17,10 @@ const TESTS: [string, RegExp][] = [
   ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/iu],
 ];
 
+/**
+ * @group English
+ * @category Indefinite Article
+ */
 export type IndefiniteArticleOptions = {
   /** only return the indefinite article, do not combine with the input */
   only?: boolean;
@@ -34,6 +38,8 @@ export type IndefiniteArticleOptions = {
  * @defaultValue only false
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
+ * @group English
+ * @category Indefinite Article
  */
 export function indefiniteArticle(
   word: string,

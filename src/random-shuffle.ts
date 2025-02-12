@@ -1,3 +1,7 @@
+/**
+ * @group Random
+ * @category Shuffle
+ */
 export function randomShuffle<T>(deck: T[], random: () => number = Math.random): T[] {
   const items = [...deck];
   let index = items.length;

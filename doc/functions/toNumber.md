@@ -1,23 +1,23 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toNumber
+[@technobuddha/library](../INDEX.md) / toNumber
 
 # Function: toNumber()
 
-> **toNumber**(`entity`): `number`
+> **toNumber**(`entity`: `unknown`): `number`
 
-Defined in: [to-number.ts:3](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L3)
+Defined in: [to-number.ts:11](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L11)
+
+Convert an entity to a number.
 
 ## Parameters
 
-### entity
-
-`unknown`
+| Parameter | Type |
+| ------ | ------ |
+| `entity` | `unknown` |
 
 ## Returns
 
 `number`
+
+The entiry as a number, or NaN if it cannot be converted

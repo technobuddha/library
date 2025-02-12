@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ensureSuffix
+[@technobuddha/library](../INDEX.md) / ensureSuffix
 
 # Function: ensureSuffix()
 
-> **ensureSuffix**(`input`, `suffix`): `string`
+> **ensureSuffix**(`input`: `string`, `suffix`: `string`): `string`
 
-Defined in: [ensure-suffix.ts:8](https://github.com/technobuddha/library/blob/main/src/ensure-suffix.ts#L8)
+Defined in: [ensure-suffix.ts:10](https://github.com/technobuddha/library/blob/main/src/ensure-suffix.ts#L10)
 
 Add a suffix to a string, if it does not already have the suffix
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### suffix
-
-`string`
-
-The suffix
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
+| `suffix` | `string` | The suffix |
 
 ## Returns
 

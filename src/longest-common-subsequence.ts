@@ -1,10 +1,13 @@
 import { create2DArray } from './create-2d-array.js';
 
+/**
+ * @group Array
+ * @category Longest Common Subsequence
+ */
 export type LongestCommonSubsequenceOptions<T> = {
   /**
    * Function that acts as a custom comparator
    * for the array objects. Function should return true if objects are equal, otherwise false.
-   *
    */
   compare?(this: void, a: T, b: T): boolean;
   /**
@@ -17,19 +20,29 @@ export type LongestCommonSubsequenceOptions<T> = {
 };
 
 /**
+ * determine the longest possible array that is subarray of both of given arrays.
+ *
+ * @remarks
  * Implementation of Longest Common Subsequence problem.
  * http://en.wikipedia.org/wiki/Longest_common_subsequence
  *
- * Returns the longest possible array that is subarray of both of given arrays.
+ * @example
+ * ```ts
+ * longestCommonSubsequence(
+ *  ['a', 'b', 'c', ' ', 'd', 'e', 'f'],
+ *  ['a', 'c', ' ', 'd', 'e', 'c'],
+ * ); // ['a', 'c', ' ', 'd', 'e']
+ * ```
  *
+ * @typeParam T - Type of objects in the arrays.
  * @param array1 - First array of objects.
  * @param array2 - Second array of objects.
- * @param __namedParameters - see {@link LongestCommonSubsequenceOptions}
- * @defaultValue compare equality comparison
- * @defaultValue collect basic collector
+ * @param options - functions to compare and collect elements from the two arrays
  * @returns A list of objects that are common to both arrays
  * such that there is no common subsequence with size greater than the
  * length of the list.
+ * @group Array
+ * @category Longest Common Subsequence
  */
 export function longestCommonSubsequence<T>(
   array1: ArrayLike<T>,

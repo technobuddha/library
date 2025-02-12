@@ -1,16 +1,12 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / decodeBinary
+[@technobuddha/library](../INDEX.md) / decodeBinary
 
 # Function: decodeBinary()
 
-> **decodeBinary**(`input`, `encoding`): `Uint8Array`
+> **decodeBinary**(`input`: `string`, `encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [decode-binary.ts:18](https://github.com/technobuddha/library/blob/main/src/decode-binary.ts#L18)
+Defined in: [decode-binary.ts:20](https://github.com/technobuddha/library/blob/main/src/decode-binary.ts#L20)
 
 Decode a string into a binary object
 
@@ -22,20 +18,13 @@ binary: each byte in the binary object is converted to a characters
 
 ## Parameters
 
-### input
-
-`string`
-
-binary object
-
-### encoding
-
-[`BinaryEncoding`](../type-aliases/BinaryEncoding.md)
-
-The encoding to use
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | binary object |
+| `encoding` | [`BinaryEncoding`](../type-aliases/BinaryEncoding.md) | The encoding to use |
 
 ## Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 encoded string

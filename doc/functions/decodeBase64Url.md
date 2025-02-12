@@ -1,18 +1,14 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / decodeBase64Url
+[@technobuddha/library](../INDEX.md) / decodeBase64Url
 
 # Function: decodeBase64Url()
 
 ## Call Signature
 
-> **decodeBase64Url**(`input`): `Uint8Array`
+> **decodeBase64Url**(`input`: `string`): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [decode-base64.ts:107](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L107)
+Defined in: [decode-base64.ts:115](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L115)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -23,15 +19,13 @@ For example, you can encode, transmit, and decode control characters such as ASC
 
 ### Parameters
 
-#### input
-
-`string`
-
-A string containing the Base64 encoded data to decode.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | A string containing the Base64 encoded data to decode. |
 
 ### Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 An ASCII string containing decoded dat
 
@@ -51,9 +45,9 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 ## Call Signature
 
-> **decodeBase64Url**(`input`, `encoding`): `string`
+> **decodeBase64Url**(`input`: `string`, `encoding`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `string`
 
-Defined in: [decode-base64.ts:108](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L108)
+Defined in: [decode-base64.ts:116](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L116)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -64,15 +58,10 @@ For example, you can encode, transmit, and decode control characters such as ASC
 
 ### Parameters
 
-#### input
-
-`string`
-
-A string containing the Base64 encoded data to decode.
-
-#### encoding
-
-[`Encoding`](../type-aliases/Encoding.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | A string containing the Base64 encoded data to decode. |
+| `encoding` | [`TextEncoding`](../type-aliases/TextEncoding.md) | - |
 
 ### Returns
 

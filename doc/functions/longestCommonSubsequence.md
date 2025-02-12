@@ -1,45 +1,28 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / longestCommonSubsequence
+[@technobuddha/library](../INDEX.md) / longestCommonSubsequence
 
 # Function: longestCommonSubsequence()
 
-> **longestCommonSubsequence**\<`T`\>(`array1`, `array2`, `__namedParameters`): `T`[]
+> **longestCommonSubsequence**\<`T`\>(`array1`: `ArrayLike`\<`T`\>, `array2`: `ArrayLike`\<`T`\>, `options`: [`LongestCommonSubsequenceOptions`](../type-aliases/LongestCommonSubsequenceOptions.md)\<`T`\>): `T`[]
 
-Defined in: [longest-common-subsequence.ts:34](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L34)
+Defined in: [longest-common-subsequence.ts:47](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L47)
 
-Implementation of Longest Common Subsequence problem.
-http://en.wikipedia.org/wiki/Longest_common_subsequence
-
-Returns the longest possible array that is subarray of both of given arrays.
+determine the longest possible array that is subarray of both of given arrays.
 
 ## Type Parameters
 
-• **T**
+| Type Parameter | Description |
+| ------ | ------ |
+| `T` | Type of objects in the arrays. |
 
 ## Parameters
 
-### array1
-
-`ArrayLike`\<`T`\>
-
-First array of objects.
-
-### array2
-
-`ArrayLike`\<`T`\>
-
-Second array of objects.
-
-### \_\_namedParameters
-
-[`LongestCommonSubsequenceOptions`](../type-aliases/LongestCommonSubsequenceOptions.md)\<`T`\> = `{}`
-
-see [LongestCommonSubsequenceOptions](../type-aliases/LongestCommonSubsequenceOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `array1` | `ArrayLike`\<`T`\> | First array of objects. |
+| `array2` | `ArrayLike`\<`T`\> | Second array of objects. |
+| `options` | [`LongestCommonSubsequenceOptions`](../type-aliases/LongestCommonSubsequenceOptions.md)\<`T`\> | functions to compare and collect elements from the two arrays |
 
 ## Returns
 
@@ -49,14 +32,16 @@ A list of objects that are common to both arrays
 such that there is no common subsequence with size greater than the
 length of the list.
 
-## Default Value
+## Remarks
+
+Implementation of Longest Common Subsequence problem.
+http://en.wikipedia.org/wiki/Longest_common_subsequence
+
+## Example
 
 ```ts
-compare equality comparison
-```
-
-## Default Value
-
-```ts
-collect basic collector
+longestCommonSubsequence(
+ ['a', 'b', 'c', ' ', 'd', 'e', 'f'],
+ ['a', 'c', ' ', 'd', 'e', 'c'],
+); // ['a', 'c', ' ', 'd', 'e']
 ```

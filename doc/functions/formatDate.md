@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / formatDate
+[@technobuddha/library](../INDEX.md) / formatDate
 
 # Function: formatDate()
 
-> **formatDate**(`input`, `mask`?, `__namedParameters`?): `string`
+> **formatDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `mask`?: `string`, `__namedParameters`?: [`FormatDateOptions`](../type-aliases/FormatDateOptions.md)): `string`
 
-Defined in: [format-date.ts:92](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L92)
+Defined in: [format-date.ts:99](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L99)
 
 Format a date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### mask?
-
-`string`
-
-The mask
-
-### \_\_namedParameters?
-
-[`FormatDateOptions`](../type-aliases/FormatDateOptions.md) = `{}`
-
-see [FormatDateOptions](../type-aliases/FormatDateOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `mask`? | `string` | The mask |
+| `__namedParameters`? | [`FormatDateOptions`](../type-aliases/FormatDateOptions.md) | see [FormatDateOptions](../type-aliases/FormatDateOptions.md) |
 
 ## Returns
 

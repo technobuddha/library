@@ -15,6 +15,8 @@ import { toSmallCase } from './to-small-case.js';
  * @param input - The input string
  * @param target - The target string
  * @returns The input in the case case as the target string
+ * @group String
+ * @category Case Conversion
  */
 export function matchCase(input: string, target: string): string {
   if (isLowerCase(target)) {

@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ToSmallCaseOptions
+[@technobuddha/library](../INDEX.md) / ToSmallCaseOptions
 
 # Type Alias: ToSmallCaseOptions
 
-> **ToSmallCaseOptions**: `object`
+> **ToSmallCaseOptions**: \{ `upperCase`: `boolean`; \}
 
-Defined in: [to-small-case.ts:1](https://github.com/technobuddha/library/blob/main/src/to-small-case.ts#L1)
+Defined in: [to-small-case.ts:5](https://github.com/technobuddha/library/blob/main/src/to-small-case.ts#L5)
 
 ## Type declaration
 
-### upperCase?
-
-> `optional` **upperCase**: `boolean`
-
-Convert other characters in the string to upper case
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="uppercase"></a> `upperCase`? | `boolean` | Convert other characters in the string to upper case | [to-small-case.ts:7](https://github.com/technobuddha/library/blob/main/src/to-small-case.ts#L7) |

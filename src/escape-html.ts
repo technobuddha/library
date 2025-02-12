@@ -1,6 +1,11 @@
 import { build } from './build.js';
 import { splitChars } from './split-chars.js';
 
+/**
+ * Options for {@link escapeHTML}
+ * @group Encoding
+ * @category HTML
+ */
 export type EscapeHtmlSettings = {
   /** escape all characters outside the 7-bit ASCII range */
   escapeNonAscii?: boolean;
@@ -11,6 +16,8 @@ export type EscapeHtmlSettings = {
  *
  * @param input - The string to escape
  * @param __namedParameters - see {@link EscapeHtmlSettings}
+ * @group Encoding
+ * @category HTML
  */
 export function escapeHTML(
   input: string,

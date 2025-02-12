@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getDayOfWeek
+[@technobuddha/library](../INDEX.md) / getDayOfWeek
 
 # Function: getDayOfWeek()
 
-> **getDayOfWeek**(`input`, `__namedParameters`): [`DayOfWeek`](../type-aliases/DayOfWeek.md)
+> **getDayOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetDayOfWeekOptions`](../type-aliases/GetDayOfWeekOptions.md)): [`DayOfWeek`](../type-aliases/DayOfWeek.md)
 
-Defined in: [get-day-of-week.ts:20](https://github.com/technobuddha/library/blob/main/src/get-day-of-week.ts#L20)
+Defined in: [get-day-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/get-day-of-week.ts#L26)
 
 Determine the day of the week for a specific date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### \_\_namedParameters
-
-[`GetDayOfWeekOptions`](../type-aliases/GetDayOfWeekOptions.md) = `{}`
-
-see [GetDayOfWeekOptions](../type-aliases/GetDayOfWeekOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `__namedParameters` | [`GetDayOfWeekOptions`](../type-aliases/GetDayOfWeekOptions.md) | see [GetDayOfWeekOptions](../type-aliases/GetDayOfWeekOptions.md) |
 
 ## Returns
 

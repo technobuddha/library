@@ -11,6 +11,10 @@ import { formatDate } from './format-date.js';
 import { isSameDay } from './is-same-day.js';
 import { plural } from './plural.js';
 
+/**
+ * @group Time
+ * @category Relative Time
+ */
 export type RelativeTimeOptions = {
   /** Describe the time difference as a time on a nearby day  */
   todayTomorrowYesterday?: boolean;
@@ -29,6 +33,8 @@ export type RelativeTimeOptions = {
  * @param relativeTo - The date to compare to
  * @param __namedParameters - see {@link RelativeTimeOptions}
  * @returns string describing the time difference between the two dates
+ * @group Time
+ * @category Relative Time
  */
 export function relativeTime(
   input: Date,

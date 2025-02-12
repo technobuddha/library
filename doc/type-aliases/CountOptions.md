@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / CountOptions
+[@technobuddha/library](../INDEX.md) / CountOptions
 
 # Type Alias: CountOptions
 
-> **CountOptions**: `object`
+> **CountOptions**: \{ `overlap`: `boolean`; \}
 
-Defined in: [count.ts:1](https://github.com/technobuddha/library/blob/main/src/count.ts#L1)
+Defined in: [count.ts:5](https://github.com/technobuddha/library/blob/main/src/count.ts#L5)
 
 ## Type declaration
 
-### overlap?
-
-> `optional` **overlap**: `boolean`
-
-if true, counts overlapping strings
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="overlap"></a> `overlap`? | `boolean` | if true, counts overlapping strings | [count.ts:7](https://github.com/technobuddha/library/blob/main/src/count.ts#L7) |

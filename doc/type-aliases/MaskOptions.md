@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / MaskOptions
+[@technobuddha/library](../INDEX.md) / MaskOptions
 
 # Type Alias: MaskOptions
 
-> **MaskOptions**: `object`
+> **MaskOptions**: \{ `missing`: `string`; \}
 
-Defined in: [mask.ts:4](https://github.com/technobuddha/library/blob/main/src/mask.ts#L4)
+Defined in: [mask.ts:8](https://github.com/technobuddha/library/blob/main/src/mask.ts#L8)
 
 ## Type declaration
 
-### missing?
-
-> `optional` **missing**: `string`
-
-if the mask is longer, fill with character
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="missing"></a> `missing`? | `string` | if the mask is longer, fill with character | [mask.ts:10](https://github.com/technobuddha/library/blob/main/src/mask.ts#L10) |

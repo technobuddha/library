@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import { HashBase } from './hash.js';
+import { HashBase } from './hash-base.js';
 
 const K = [
   0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd, 0xb5c0fbcf, 0xec4d3b2f, 0xe9b5dba5, 0x8189dbbc,
@@ -65,6 +65,11 @@ function getCarry(a: number, b: number): number {
   return a >>> 0 < b >>> 0 ? 1 : 0;
 }
 
+/**
+ * Secure Hash Algorithm, SHA2 SHA-384
+ * @group Crypto
+ * @category SHA2: SHA384
+ */
 export class Sha384 extends HashBase {
   private ah = 0xcbbb9d5d;
   private bh = 0x629a292a;

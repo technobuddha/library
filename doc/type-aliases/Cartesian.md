@@ -1,23 +1,16 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / Cartesian
+[@technobuddha/library](../INDEX.md) / Cartesian
 
 # Type Alias: Cartesian
 
-> **Cartesian**: `object`
+> **Cartesian**: \{ `x`: `number`; `y`: `number`; \}
 
-Defined in: [coordinates.ts:1](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L1)
+Defined in: [coordinates.ts:5](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L5)
 
 ## Type declaration
 
-### x
-
-> **x**: `number`
-
-### y
-
-> **y**: `number`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="x"></a> `x` | `number` | [coordinates.ts:6](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L6) |
+| <a id="y"></a> `y` | `number` | [coordinates.ts:7](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L7) |

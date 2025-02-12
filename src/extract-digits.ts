@@ -5,6 +5,8 @@ import { empty } from './constants.js';
  *
  * @param input - The string
  * @returns digits from the string
+ * @group String
+ * @category Extraction
  */
 export function extractDigits(input: string): string {
   return input.replaceAll(/\D/gu, empty);

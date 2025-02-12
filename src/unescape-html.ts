@@ -3,6 +3,8 @@
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @group Encoding
+ * @category HTML
  */
 export function unescapeHTML(input: string): string {
   return input.replaceAll(/&((#[0-9]+)|(#x[0-9a-f]+)|([a-z][a-z0-9]+));/giu, (entity) => {

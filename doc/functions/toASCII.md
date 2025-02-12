@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toASCII
+[@technobuddha/library](../INDEX.md) / toASCII
 
 # Function: toASCII()
 
-> **toASCII**(`input`): `string`
+> **toASCII**(`input`: `string`): `string`
 
-Defined in: [to-ascii.ts:10](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L10)
+Defined in: [to-ascii.ts:12](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L12)
 
 Change a string to be all from the basic latin unicode plane
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
 
 ## Returns
 

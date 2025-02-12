@@ -3,6 +3,10 @@ import { isNil, round } from 'lodash-es';
 import { empty } from './constants.js';
 import { formatNumber } from './format-number.js';
 
+/**
+ * @group String
+ * @category Units
+ */
 export type MetricUnitsOptions = {
   /**
    * format specification to pass to {@link formatNumber}
@@ -35,6 +39,8 @@ export type MetricUnitsOptions = {
  *
  * @param input - The number to abbreviate
  * @param __namedParameters - {@link MetricUnitsOptions}
+ * @group String
+ * @category Units
  */
 export function metricUnits(
   input: number,

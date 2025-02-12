@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / cleanStart
+[@technobuddha/library](../INDEX.md) / cleanStart
 
 # Function: cleanStart()
 
-> **cleanStart**(`input`, `characters`): `string`
+> **cleanStart**(`input`: `string`, `characters`: `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp))[]): `string`
 
-Defined in: [clean.ts:72](https://github.com/technobuddha/library/blob/main/src/clean.ts#L72)
+Defined in: [clean.ts:78](https://github.com/technobuddha/library/blob/main/src/clean.ts#L78)
 
 Remove all occurrences of characters from the start of the string
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### characters
-
-The characters(s) to remove
-
-`string` | `RegExp` | (`string` \| `RegExp`)[]
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `input` | `string` | `undefined` | The string |
+| `characters` | `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp))[] | `trimEquivalent` | The characters(s) to remove |
 
 ## Returns
 

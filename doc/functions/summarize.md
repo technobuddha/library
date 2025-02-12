@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / summarize
+[@technobuddha/library](../INDEX.md) / summarize
 
 # Function: summarize()
 
-> **summarize**(`input`, `options`): `string`
+> **summarize**(`input`: `number`, `options`: [`OptionsIllion`](../type-aliases/OptionsIllion.md)): `string`
 
-Defined in: [cardinal.ts:519](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L519)
+Defined in: [cardinal.ts:537](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L537)
 
 Get a short description of a number
 
 ## Parameters
 
-### input
-
-`number`
-
-number to convert
-
-### options
-
-[`OptionsIllion`](../type-aliases/OptionsIllion.md) = `{}`
-
-see [OptionsIllion](../type-aliases/OptionsIllion.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | number to convert |
+| `options` | [`OptionsIllion`](../type-aliases/OptionsIllion.md) | see [OptionsIllion](../type-aliases/OptionsIllion.md) |
 
 ## Returns
 

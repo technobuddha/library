@@ -1,5 +1,9 @@
 import { isNil } from 'lodash-es';
 
+/**
+ * @group String
+ * @category Affix
+ */
 export type RootOptions = {
   /** The refix string to remove */
   prefix?: string;
@@ -13,6 +17,8 @@ export type RootOptions = {
  * @param text - The word, which might have @see prefix before it, and @see suffix after it.
  * @param __namedParameters - see {@link RootOptions}
  * @returns The root word
+ * @group String
+ * @category Affix
  */
 export function root(text: string, { prefix, suffix }: RootOptions = {}): string {
   let input = text;

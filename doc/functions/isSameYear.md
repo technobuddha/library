@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isSameYear
+[@technobuddha/library](../INDEX.md) / isSameYear
 
 # Function: isSameYear()
 
-> **isSameYear**(`input1`, `input2`, `__namedParameters`): `boolean`
+> **isSameYear**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsSameYearOptions`](../type-aliases/IsSameYearOptions.md)): `boolean`
 
-Defined in: [is-same-year.ts:15](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L15)
+Defined in: [is-same-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L21)
 
 Determine if two dates occur in the same year
 
 ## Parameters
 
-### input1
-
-`Date`
-
-The first date
-
-### input2
-
-`Date`
-
-The second date
-
-### \_\_namedParameters
-
-[`IsSameYearOptions`](../type-aliases/IsSameYearOptions.md) = `{}`
-
-see [IsSameYearOptions](../type-aliases/IsSameYearOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input1` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The first date |
+| `input2` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The second date |
+| `__namedParameters` | [`IsSameYearOptions`](../type-aliases/IsSameYearOptions.md) | see [IsSameYearOptions](../type-aliases/IsSameYearOptions.md) |
 
 ## Returns
 

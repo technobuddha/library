@@ -3,6 +3,8 @@
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @group Encoding
+ * @category C/C++
  */
 export function unescapeC(input: string): string {
   return input.replaceAll(

@@ -1,6 +1,7 @@
 /* eslint-disable no-bitwise */
-import { base64Charset, base64UrlCharset, type BaseCharset } from './constants.js';
-import { encodeText, type Encoding } from './encode-text.js';
+import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.js';
+import { encodeText } from './encode-text.js';
+import { type TextEncoding } from './text-encoding.js';
 
 /**
  * Gather 3 bytes from the input buffer and yield theim.
@@ -23,12 +24,13 @@ function* pull3(input: Uint8Array): Generator<number[]> {
     yield bytes;
   }
 }
-function encode(charset: BaseCharset, chars: string, encoding: Encoding): string;
-function encode(charset: BaseCharset, binary: Uint8Array): string;
+
+function encode(charset: Base64Configuration, chars: string, encoding: TextEncoding): string;
+function encode(charset: Base64Configuration, binary: Uint8Array): string;
 function encode(
-  charset: BaseCharset,
+  charset: Base64Configuration,
   arg: string | Uint8Array,
-  encoding: Encoding = 'utf8',
+  encoding: TextEncoding = 'utf8',
 ): string {
   const input = typeof arg === 'string' ? encodeText(arg, encoding) : arg;
   const chars: string[] = [];
@@ -72,8 +74,10 @@ function encode(
  * @param chars - The string to encode
  * @param encoding - The encoding of the input string
  * @returns An ASCII string containing the Base64 representation
+ * @group Encoding
+ * @category Base64
  */
-export function encodeBase64(chars: string, encoding: Encoding): string;
+export function encodeBase64(chars: string, encoding: TextEncoding): string;
 /**
  * Creates a Base64-encoded ASCII string from a binary source.
  *
@@ -87,12 +91,12 @@ export function encodeBase64(chars: string, encoding: Encoding): string;
  * ```
  * @param binary - The *binary data* to encode
  * @returns An ASCII string containing the Base64 representation
+ * @group Encoding
+ * @category Base64
  */
 export function encodeBase64(binary: Uint8Array): string;
-export function encodeBase64(arg: string | Uint8Array, encoding?: Encoding): string {
-  return typeof arg === 'string' ?
-      encode(base64Charset, arg, encoding!)
-    : encode(base64Charset, arg);
+export function encodeBase64(arg: string | Uint8Array, encoding?: TextEncoding): string {
+  return typeof arg === 'string' ? encode(base64Config, arg, encoding!) : encode(base64Config, arg);
 }
 
 /**
@@ -112,8 +116,10 @@ export function encodeBase64(arg: string | Uint8Array, encoding?: Encoding): str
  * @param chars - The string to encode
  * @param encoding - The encoding of the input string
  * @returns An ASCII string containing the Base64 representation
+ * @group Encoding
+ * @category Base64
  */
-export function encodeBase64Url(chars: string, encoding: Encoding): string;
+export function encodeBase64Url(chars: string, encoding: TextEncoding): string;
 /**
  * Creates a Base64-encoded ASCII string from a binary source.
  *
@@ -127,10 +133,12 @@ export function encodeBase64Url(chars: string, encoding: Encoding): string;
  * ```
  * @param binary - The *binary data* to encode
  * @returns An ASCII string containing the Base64 representation
+ * @group Encoding
+ * @category Base64
  */
 export function encodeBase64Url(binary: Uint8Array): string;
-export function encodeBase64Url(arg: string | Uint8Array, encoding?: Encoding): string {
+export function encodeBase64Url(arg: string | Uint8Array, encoding?: TextEncoding): string {
   return typeof arg === 'string' ?
-      encode(base64UrlCharset, arg, encoding!)
-    : encode(base64UrlCharset, arg);
+      encode(base64UrlConfig, arg, encoding!)
+    : encode(base64UrlConfig, arg);
 }

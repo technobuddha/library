@@ -5,6 +5,8 @@
  * @param random - Random number generator
  * @defaultValue random  Math.random
  * @returns Randomly selected item
+ * @group Random
+ * @category Pick
  */
 export function randomPick<T = unknown>(
   list: T[],

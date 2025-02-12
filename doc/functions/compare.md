@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / compare
+[@technobuddha/library](../INDEX.md) / compare
 
 # Function: compare()
 
-> **compare**(`a`, `b`): `number`
+> **compare**(`a`: `unknown`, `b`: `unknown`): `number`
 
-Defined in: [compare.ts:12](https://github.com/technobuddha/library/blob/main/src/compare.ts#L12)
+Defined in: [compare.ts:14](https://github.com/technobuddha/library/blob/main/src/compare.ts#L14)
 
 Compare two objects
 
 ## Parameters
 
-### a
-
-`unknown`
-
-First object
-
-### b
-
-`unknown`
-
-Second object
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `a` | `unknown` | First object |
+| `b` | `unknown` | Second object |
 
 ## Returns
 

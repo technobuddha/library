@@ -1,4 +1,4 @@
-import { type Encoding } from './encode-text.js';
+import { type TextEncoding } from './text-encoding.js';
 
 const REPLACEMENT = 0xfffd;
 
@@ -8,6 +8,8 @@ const REPLACEMENT = 0xfffd;
  *
  * @param input - the utf encoded string
  * @returns the decoded strings (which is encoded as UTF-16 by javascript)
+ * @group Unicode
+ * @category Encoding
  */
 export function decodeText(
   input:
@@ -23,7 +25,7 @@ export function decodeText(
     | Float64Array
     | BigInt64Array
     | BigUint64Array,
-  _encoding: Encoding = 'utf8',
+  _encoding: TextEncoding = 'utf8',
 ): string {
   const buffer =
     ArrayBuffer.isView(input) ?

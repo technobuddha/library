@@ -1,5 +1,9 @@
 import { isSameMonth } from './is-same-month.js';
 
+/**
+ * @group Time
+ * @category Day
+ */
 export type IsSameDayOptions = {
   /** use the utc timezone */
   utc?: boolean;
@@ -13,6 +17,8 @@ export type IsSameDayOptions = {
  * @param __namedParameters - see {@link IsSameDayOptions}
  * @defaultValue utc false
  * @returns true, if the two dates fall on the same day
+ * @group Time
+ * @category Day
  */
 export function isSameDay(
   input1: Date,

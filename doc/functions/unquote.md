@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / unquote
+[@technobuddha/library](../INDEX.md) / unquote
 
 # Function: unquote()
 
-> **unquote**(`input`, `__namedParameters`): `string`
+> **unquote**(`input`: `string`, `__namedParameters`: [`UnquoteOptions`](../type-aliases/UnquoteOptions.md)): `string`
 
-Defined in: [unquote.ts:21](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L21)
+Defined in: [unquote.ts:27](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L27)
 
 Remove surrounding quotes from text
 
 ## Parameters
 
-### input
-
-`string`
-
-The text to surrounded by quotes
-
-### \_\_namedParameters
-
-[`UnquoteOptions`](../type-aliases/UnquoteOptions.md) = `{}`
-
-see [UnquoteOptions](../type-aliases/UnquoteOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The text to surrounded by quotes |
+| `__namedParameters` | [`UnquoteOptions`](../type-aliases/UnquoteOptions.md) | see [UnquoteOptions](../type-aliases/UnquoteOptions.md) |
 
 ## Returns
 

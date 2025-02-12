@@ -1,27 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / variance
+[@technobuddha/library](../INDEX.md) / variance
 
 # Function: variance()
 
-> **variance**(...`datapoints`): `number`
+> **variance**(...`datapoints`: `number`[]): `number`
 
-Defined in: [variance.ts:12](https://github.com/technobuddha/library/blob/main/src/variance.ts#L12)
+Defined in: [variance.ts:14](https://github.com/technobuddha/library/blob/main/src/variance.ts#L14)
 
 Returns the unbiased sample variance of the arguments. For a definition,
 see http://en.wikipedia.org/wiki/Variance
 
 ## Parameters
 
-### datapoints
-
-...`number`[]
-
-Number samples to analyze.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| ...`datapoints` | `number`[] | Number samples to analyze. |
 
 ## Returns
 

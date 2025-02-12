@@ -1,5 +1,9 @@
 import { create2DArray } from './create-2d-array.js';
 
+/**
+ * @group String
+ * @category Fuzzy Match
+ */
 export type LongestCommonSubstringOptions = {
   /** compare the two strings in case insensitive mode */
   caseInsensitive?: boolean;
@@ -15,6 +19,8 @@ export type LongestCommonSubstringOptions = {
  * @param string2 - Second string.
  * @returns A string that is common to both strings such that there is no
  * common substring with size greater than the length of the string.
+ * @group String
+ * @category Fuzzy Match
  */
 export function longestCommonSubstring(
   string1: string,

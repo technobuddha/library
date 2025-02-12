@@ -1,27 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / re
+[@technobuddha/library](../INDEX.md) / re
 
 # Function: re()
 
-> **re**(`template`, ...`args`): `RegExp`
+> **re**(`template`: `TemplateStringsArray`, ...`args`: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)[]): [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [regexp.ts:9](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L9)
+Defined in: [regexp.ts:13](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L13)
 
 ## Parameters
 
-### template
-
-`TemplateStringsArray`
-
-### args
-
-...`RegExp`[]
+| Parameter | Type |
+| ------ | ------ |
+| `template` | `TemplateStringsArray` |
+| ...`args` | [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)[] |
 
 ## Returns
 
-`RegExp`
+[`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)

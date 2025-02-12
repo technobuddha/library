@@ -8,6 +8,8 @@ import { mean, sum } from 'lodash-es';
  * @returns The unbiased sample variance of the arguments (0 if fewer
  * than two samples were provided, or @see NaN if any of the samples is
  * not a valid number).
+ * @group Math
+ * @category Statistics
  */
 export function variance(...datapoints: number[]): number {
   const sampleSize = datapoints.length;

@@ -8,6 +8,8 @@ import { toPrimitive } from './to-primitive.js';
  * @param a - First object
  * @param b - Second object
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
+ * @group Object
+ * @category Comparison
  */
 export function compare(a: unknown, b: unknown): number {
   const pa = toPrimitive(a, 'number');

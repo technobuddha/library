@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / root
+[@technobuddha/library](../INDEX.md) / root
 
 # Function: root()
 
-> **root**(`text`, `__namedParameters`): `string`
+> **root**(`text`: `string`, `__namedParameters`: [`RootOptions`](../type-aliases/RootOptions.md)): `string`
 
-Defined in: [root.ts:17](https://github.com/technobuddha/library/blob/main/src/root.ts#L17)
+Defined in: [root.ts:23](https://github.com/technobuddha/library/blob/main/src/root.ts#L23)
 
 Extract the root word, removing a prefix and/or suffix
 
 ## Parameters
 
-### text
-
-`string`
-
-The word, which might have
-
-### \_\_namedParameters
-
-[`RootOptions`](../type-aliases/RootOptions.md) = `{}`
-
-see [RootOptions](../type-aliases/RootOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `text` | `string` | The word, which might have |
+| `__namedParameters` | [`RootOptions`](../type-aliases/RootOptions.md) | see [RootOptions](../type-aliases/RootOptions.md) |
 
 ## Returns
 

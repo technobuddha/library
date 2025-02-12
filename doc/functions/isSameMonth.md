@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isSameMonth
+[@technobuddha/library](../INDEX.md) / isSameMonth
 
 # Function: isSameMonth()
 
-> **isSameMonth**(`input1`, `input2`, `__namedParameters`): `boolean`
+> **isSameMonth**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsSameMonthOptions`](../type-aliases/IsSameMonthOptions.md)): `boolean`
 
-Defined in: [is-same-month.ts:17](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L17)
+Defined in: [is-same-month.ts:23](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L23)
 
 Determine if two dates occur in the same month
 
 ## Parameters
 
-### input1
-
-`Date`
-
-The first date
-
-### input2
-
-`Date`
-
-The second date
-
-### \_\_namedParameters
-
-[`IsSameMonthOptions`](../type-aliases/IsSameMonthOptions.md) = `{}`
-
-see [IsSameMonthOptions](../type-aliases/IsSameMonthOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input1` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The first date |
+| `input2` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The second date |
+| `__namedParameters` | [`IsSameMonthOptions`](../type-aliases/IsSameMonthOptions.md) | see [IsSameMonthOptions](../type-aliases/IsSameMonthOptions.md) |
 
 ## Returns
 

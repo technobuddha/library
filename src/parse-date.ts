@@ -52,6 +52,8 @@ const yNumeric = re`${yyyy}`;
  *
  * @param input - The string containing a date
  * @returns new Date object
+ * @group Time
+ * @category Parsing
  */
 export function parseDate(input: string): Date {
   const now = new Date();

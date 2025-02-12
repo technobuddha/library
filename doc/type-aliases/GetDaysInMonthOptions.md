@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetDaysInMonthOptions
+[@technobuddha/library](../INDEX.md) / GetDaysInMonthOptions
 
 # Type Alias: GetDaysInMonthOptions
 
-> **GetDaysInMonthOptions**: `object`
+> **GetDaysInMonthOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [get-days-in-month.ts:4](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L4)
+Defined in: [get-days-in-month.ts:8](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L8)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [get-days-in-month.ts:10](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L10) |

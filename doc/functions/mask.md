@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / mask
+[@technobuddha/library](../INDEX.md) / mask
 
 # Function: mask()
 
-> **mask**(`input`, `simpleMask`, `__namedParameters`): `string`
+> **mask**(`input`: `string`, `simpleMask`: `string`, `__namedParameters`: [`MaskOptions`](../type-aliases/MaskOptions.md)): `string`
 
-Defined in: [mask.ts:23](https://github.com/technobuddha/library/blob/main/src/mask.ts#L23)
+Defined in: [mask.ts:29](https://github.com/technobuddha/library/blob/main/src/mask.ts#L29)
 
 Use a simple mask to display a string
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### simpleMask
-
-`string`
-
-The mask
-
-### \_\_namedParameters
-
-[`MaskOptions`](../type-aliases/MaskOptions.md) = `{}`
-
-see [MaskOptions](../type-aliases/MaskOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
+| `simpleMask` | `string` | The mask |
+| `__namedParameters` | [`MaskOptions`](../type-aliases/MaskOptions.md) | see [MaskOptions](../type-aliases/MaskOptions.md) |
 
 ## Returns
 

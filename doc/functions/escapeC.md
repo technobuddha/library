@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / escapeC
+[@technobuddha/library](../INDEX.md) / escapeC
 
 # Function: escapeC()
 
-> **escapeC**(`input`): `string`
+> **escapeC**(`input`: `string`): `string`
 
-Defined in: [escape-c.ts:10](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L10)
+Defined in: [escape-c.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L12)
 
 Escape a string for use in C/C++
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to escape
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to escape |
 
 ## Returns
 

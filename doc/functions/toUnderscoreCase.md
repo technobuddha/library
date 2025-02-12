@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toUnderscoreCase
+[@technobuddha/library](../INDEX.md) / toUnderscoreCase
 
 # Function: toUnderscoreCase()
 
-> **toUnderscoreCase**(`input`): `string`
+> **toUnderscoreCase**(`input`: `string`): `string`
 
-Defined in: [to-underscore-case.ts:7](https://github.com/technobuddha/library/blob/main/src/to-underscore-case.ts#L7)
+Defined in: [to-underscore-case.ts:9](https://github.com/technobuddha/library/blob/main/src/to-underscore-case.ts#L9)
 
 Convert an identifier string to underscore case
 
 ## Parameters
 
-### input
-
-`string`
-
-The identifier string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The identifier string |
 
 ## Returns
 

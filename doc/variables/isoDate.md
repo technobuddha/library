@@ -1,13 +1,11 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isoDate
+[@technobuddha/library](../INDEX.md) / isoDate
 
 # Variable: isoDate
 
-> `const` **isoDate**: `RegExp`
+> `const` **isoDate**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [regexp.ts:64](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L64)
+Defined in: [regexp.ts:81](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L81)
+
+Validate a ISO formatted date

@@ -5,6 +5,8 @@ import { empty } from './constants.js';
  *
  * @param input - The string to split
  * @returns array of lines
+ * @group String
+ * @category Split
  */
 export function splitLines(input: string): string[] {
   if (input === empty) {

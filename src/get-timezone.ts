@@ -3,6 +3,10 @@ import { isDate } from 'lodash-es';
 import { empty } from './constants.js';
 import { padNumber } from './pad-number.js';
 
+/**
+ * @group Time
+ * @category Time Zone
+ */
 export type GetTimezoneOptions = {
   /** Display 'gmt' in time zones */
   gmt?: boolean;
@@ -20,6 +24,8 @@ export type GetTimezoneOptions = {
  * @defaultValue z true
  * @returns the timezone offset formatted like '±hh:mm' the string is prefixed by 'gmt' if the option is set.  If the z option is set 'z' is returned for the
  * gmt+00:00 timezone
+ * @group Time
+ * @category Time Zone
  */
 export function getTimezone(
   input: Date | number,

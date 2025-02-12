@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / DiceCoefficientOptions
+[@technobuddha/library](../INDEX.md) / DiceCoefficientOptions
 
 # Type Alias: DiceCoefficientOptions
 
-> **DiceCoefficientOptions**: `object`
+> **DiceCoefficientOptions**: \{ `caseInsensitive`: `boolean`; \}
 
-Defined in: [dice-coefficient.ts:3](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L3)
+Defined in: [dice-coefficient.ts:7](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L7)
 
 ## Type declaration
 
-### caseInsensitive?
-
-> `optional` **caseInsensitive**: `boolean`
-
-compare the two strings in case insensitive mode
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="caseinsensitive"></a> `caseInsensitive`? | `boolean` | compare the two strings in case insensitive mode | [dice-coefficient.ts:9](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L9) |

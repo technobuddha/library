@@ -13,6 +13,8 @@ import {
 
 /**
  * Store and manipulate a duration of time
+ * @group Time
+ * @category Time Span
  */
 export class TimeSpan {
   /**

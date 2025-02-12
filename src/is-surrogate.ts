@@ -1,3 +1,8 @@
+/**
+ * Options for {@link isSurrogate}
+ * @group Unicode
+ * @category Is Surrogate
+ */
 export type IsSurrogateOptions = {
   /** test for high surrogates (D800-DBFF) */
   high?: boolean;
@@ -13,6 +18,8 @@ export type IsSurrogateOptions = {
  * @defaultValue high true
  * @defaultValue low true
  * @returns true if the specified character is a unicode surrogate
+ * @group Unicode
+ * @category Is Surrogate
  */
 export function isSurrogate(
   input: string,

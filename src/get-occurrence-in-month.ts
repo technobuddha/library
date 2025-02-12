@@ -5,6 +5,10 @@ import { getBeginningOfMonth } from './get-beginning-of-month.js';
 import { getDaysInMonth } from './get-days-in-month.js';
 import { modulo } from './modulo.js';
 
+/**
+ * @group Time
+ * @category Day
+ */
 export type GetOccurrenceInMonthOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -19,6 +23,8 @@ export type GetOccurrenceInMonthOptions = {
  * @param __namedParameters - see {@link GetOccurrenceInMonthOptions}
  * @defaultValue utc false
  * @returns A date object corresponding to the occurrence requested, or null if no such date exists in the month
+ * @group Time
+ * @category Day
  */
 export function getOccurrenceInMonth(
   input: Date,

@@ -1,23 +1,19 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toDate
+[@technobuddha/library](../INDEX.md) / toDate
 
 # Function: toDate()
 
-> **toDate**(`entity`): `Date`
+> **toDate**(`entity`: `unknown`): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [to-date.ts:3](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L3)
+Defined in: [to-date.ts:7](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L7)
 
 ## Parameters
 
-### entity
-
-`unknown`
+| Parameter | Type |
+| ------ | ------ |
+| `entity` | `unknown` |
 
 ## Returns
 
-`Date`
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)

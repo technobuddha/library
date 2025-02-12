@@ -1,36 +1,25 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getBeginningOfDay
+[@technobuddha/library](../INDEX.md) / getBeginningOfDay
 
 # Function: getBeginningOfDay()
 
-> **getBeginningOfDay**(`input`, `__namedParameters`): `Date`
+> **getBeginningOfDay**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetBeginningOfDayOptions`](../type-aliases/GetBeginningOfDayOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-day.ts:14](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L14)
+Defined in: [get-beginning-of-day.ts:20](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L20)
 
 Determine the start of the day for a date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### \_\_namedParameters
-
-[`GetBeginningOfDayOptions`](../type-aliases/GetBeginningOfDayOptions.md) = `{}`
-
-see [GetBeginningOfDayOptions](../type-aliases/GetBeginningOfDayOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `__namedParameters` | [`GetBeginningOfDayOptions`](../type-aliases/GetBeginningOfDayOptions.md) | see [GetBeginningOfDayOptions](../type-aliases/GetBeginningOfDayOptions.md) |
 
 ## Returns
 
-`Date`
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 The date value for midnight on the specified day
 

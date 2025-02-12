@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / syllables
+[@technobuddha/library](../INDEX.md) / syllables
 
 # Function: syllables()
 
-> **syllables**(`input`): `number`
+> **syllables**(`input`: `string`): `number`
 
-Defined in: [syllables.ts:11](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L11)
+Defined in: [syllables.ts:13](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L13)
 
 Approximate the number of syllables in a string
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
 
 ## Returns
 

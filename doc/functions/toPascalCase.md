@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toPascalCase
+[@technobuddha/library](../INDEX.md) / toPascalCase
 
 # Function: toPascalCase()
 
-> **toPascalCase**(`input`): `string`
+> **toPascalCase**(`input`: `string`): `string`
 
-Defined in: [to-pascal-case.ts:9](https://github.com/technobuddha/library/blob/main/src/to-pascal-case.ts#L9)
+Defined in: [to-pascal-case.ts:11](https://github.com/technobuddha/library/blob/main/src/to-pascal-case.ts#L11)
 
 Convert an identifier string to pascal case
 
 ## Parameters
 
-### input
-
-`string`
-
-The identifier string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The identifier string |
 
 ## Returns
 

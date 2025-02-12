@@ -1,30 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toSmallWordsCase
+[@technobuddha/library](../INDEX.md) / toSmallWordsCase
 
 # Function: toSmallWordsCase()
 
-> **toSmallWordsCase**(`input`, `__namedParameters`): `string`
+> **toSmallWordsCase**(`input`: `string`, `__namedParameters`: [`ToSmallWordsCaseOptions`](../type-aliases/ToSmallWordsCaseOptions.md)): `string`
 
-Defined in: [to-small-words-case.ts:13](https://github.com/technobuddha/library/blob/main/src/to-small-words-case.ts#L13)
+Defined in: [to-small-words-case.ts:19](https://github.com/technobuddha/library/blob/main/src/to-small-words-case.ts#L19)
 
 Convert the first letter of each word in a string to lower case
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to make small case
-
-### \_\_namedParameters
-
-[`ToSmallWordsCaseOptions`](../type-aliases/ToSmallWordsCaseOptions.md) = `{}`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to make small case |
+| `__namedParameters` | [`ToSmallWordsCaseOptions`](../type-aliases/ToSmallWordsCaseOptions.md) | - |
 
 ## Returns
 

@@ -1,27 +1,16 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / QuoteOptions
+[@technobuddha/library](../INDEX.md) / QuoteOptions
 
 # Type Alias: QuoteOptions
 
-> **QuoteOptions**: `object`
+> **QuoteOptions**: \{ `escape`: `string` \| (`input`: `string`) => `string`; `quote`: `string`; \}
 
-Defined in: [quote.ts:6](https://github.com/technobuddha/library/blob/main/src/quote.ts#L6)
+Defined in: [quote.ts:10](https://github.com/technobuddha/library/blob/main/src/quote.ts#L10)
 
 ## Type declaration
 
-### escape?
-
-> `optional` **escape**: `string` \| (`input`) => `string`
-
-Character sequence to replace the quote mark within the text, or function to return the properly escaped text
-
-### quote?
-
-> `optional` **quote**: `string`
-
-The quote character(s) to use
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="escape"></a> `escape`? | `string` \| (`input`: `string`) => `string` | Character sequence to replace the quote mark within the text, or function to return the properly escaped text | [quote.ts:14](https://github.com/technobuddha/library/blob/main/src/quote.ts#L14) |
+| <a id="quote"></a> `quote`? | `string` | The quote character(s) to use | [quote.ts:12](https://github.com/technobuddha/library/blob/main/src/quote.ts#L12) |

@@ -7,6 +7,8 @@ import { isWhitespace } from './is-whitespace.js';
  *
  * @param input - the object to test
  * @returns true, if the object is a number, or can be converted to a number
+ * @group String
+ * @category Categorization
  */
 export function isNumeric(input: unknown): input is number | string {
   return (

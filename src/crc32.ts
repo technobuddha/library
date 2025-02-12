@@ -1,7 +1,9 @@
 /* eslint-disable no-bitwise */
-import { type BinaryEncoding, encodeBinary } from './encode-binary.js';
-import { encodeText, type Encoding } from './encode-text.js';
-import { type HashClass } from './hash.js';
+import { type BinaryEncoding } from './binary-encoding.js';
+import { encodeBinary } from './encode-binary.js';
+import { encodeText } from './encode-text.js';
+import { type HashClass } from './hash-base.js';
+import { type TextEncoding } from './text-encoding.js';
 
 const crcTable: number[] = [
   0, 1996959894, -301047508, -1727442502, 124634137, 1886057615, -379345611, -1637575261, 249268274,
@@ -48,12 +50,10 @@ const crcTable: number[] = [
 // }
 
 /**
- * Compute the CRC32 checksum for a string
- *
- * @param input - The string
- * @returns the CRC32 checksum
+ * Compute the CRC32 checksum
+ * @group Crypto
+ * @category CRC32
  */
-
 export class Crc32 implements HashClass {
   private crc: number;
 
@@ -62,8 +62,8 @@ export class Crc32 implements HashClass {
   }
 
   public update(data: TypedArray | ArrayBuffer): this;
-  public update(data: string, encoding?: Encoding): this;
-  public update(data: TypedArray | ArrayBuffer | string, encoding: Encoding = 'utf8'): this {
+  public update(data: string, encoding?: TextEncoding): this;
+  public update(data: TypedArray | ArrayBuffer | string, encoding: TextEncoding = 'utf8'): this {
     const buffer =
       typeof data === 'string' ? encodeText(data, encoding)
       : ArrayBuffer.isView(data) ? new Uint8Array(data.buffer, data.byteOffset, data.byteLength)

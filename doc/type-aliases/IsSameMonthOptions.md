@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / IsSameMonthOptions
+[@technobuddha/library](../INDEX.md) / IsSameMonthOptions
 
 # Type Alias: IsSameMonthOptions
 
-> **IsSameMonthOptions**: `object`
+> **IsSameMonthOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [is-same-month.ts:3](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L3)
+Defined in: [is-same-month.ts:7](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L7)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | use the utc timezone | [is-same-month.ts:9](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L9) |

@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / correctMSWord
+[@technobuddha/library](../INDEX.md) / correctMSWord
 
 # Function: correctMSWord()
 
-> **correctMSWord**(`input`): `string`
+> **correctMSWord**(`input`: `string`): `string`
 
-Defined in: [correct-ms-word.ts:37](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L37)
+Defined in: [correct-ms-word.ts:39](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L39)
 
 Correct character sequences that Microsoft Word changes to make it look prettier
 
 ## Parameters
 
-### input
-
-`string`
-
-The mangled string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The mangled string |
 
 ## Returns
 

@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isEven
+[@technobuddha/library](../INDEX.md) / isEven
 
 # Function: isEven()
 
-> **isEven**(`input`): `boolean`
+> **isEven**(`input`: `number`): `boolean`
 
-Defined in: [is-even.ts:11](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L11)
+Defined in: [is-even.ts:13](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L13)
 
 Tests to see if the specified value is an even integer
 
 ## Parameters
 
-### input
-
-`number`
-
-The number to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number to test |
 
 ## Returns
 

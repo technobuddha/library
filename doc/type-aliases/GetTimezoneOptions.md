@@ -1,27 +1,16 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetTimezoneOptions
+[@technobuddha/library](../INDEX.md) / GetTimezoneOptions
 
 # Type Alias: GetTimezoneOptions
 
-> **GetTimezoneOptions**: `object`
+> **GetTimezoneOptions**: \{ `gmt`: `boolean`; `z`: `boolean`; \}
 
-Defined in: [get-timezone.ts:6](https://github.com/technobuddha/library/blob/main/src/get-timezone.ts#L6)
+Defined in: [get-timezone.ts:10](https://github.com/technobuddha/library/blob/main/src/get-timezone.ts#L10)
 
 ## Type declaration
 
-### gmt?
-
-> `optional` **gmt**: `boolean`
-
-Display 'gmt' in time zones
-
-### z?
-
-> `optional` **z**: `boolean`
-
-Display 'z' for the gmt time zone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="gmt"></a> `gmt`? | `boolean` | Display 'gmt' in time zones | [get-timezone.ts:12](https://github.com/technobuddha/library/blob/main/src/get-timezone.ts#L12) |
+| <a id="z"></a> `z`? | `boolean` | Display 'z' for the gmt time zone | [get-timezone.ts:14](https://github.com/technobuddha/library/blob/main/src/get-timezone.ts#L14) |

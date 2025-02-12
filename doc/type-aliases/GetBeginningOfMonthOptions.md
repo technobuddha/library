@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetBeginningOfMonthOptions
+[@technobuddha/library](../INDEX.md) / GetBeginningOfMonthOptions
 
 # Type Alias: GetBeginningOfMonthOptions
 
-> **GetBeginningOfMonthOptions**: `object`
+> **GetBeginningOfMonthOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [get-beginning-of-month.ts:1](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L1)
+Defined in: [get-beginning-of-month.ts:5](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L5)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [get-beginning-of-month.ts:7](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L7) |

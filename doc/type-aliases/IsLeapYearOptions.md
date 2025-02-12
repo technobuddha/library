@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / IsLeapYearOptions
+[@technobuddha/library](../INDEX.md) / IsLeapYearOptions
 
 # Type Alias: IsLeapYearOptions
 
-> **IsLeapYearOptions**: `object`
+> **IsLeapYearOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [is-leap-year.ts:3](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L3)
+Defined in: [is-leap-year.ts:7](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L7)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [is-leap-year.ts:9](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L9) |

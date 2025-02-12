@@ -1,28 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / graphQL
+[@technobuddha/library](../INDEX.md) / graphQL
 
 # Function: graphQL()
 
 ## Call Signature
 
-> **graphQL**(`template`, ...`args`): `string`
+> **graphQL**(`template`: `TemplateStringsArray`, ...`args`: [`GraphQLValue`](../type-aliases/GraphQLValue.md)[]): `string`
 
-Defined in: [graphql.ts:10](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L10)
+Defined in: [graphql.ts:26](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L26)
 
 ### Parameters
 
-#### template
-
-`TemplateStringsArray`
-
-#### args
-
-...[`GraphQLValue`](../type-aliases/GraphQLValue.md)[]
+| Parameter | Type |
+| ------ | ------ |
+| `template` | `TemplateStringsArray` |
+| ...`args` | [`GraphQLValue`](../type-aliases/GraphQLValue.md)[] |
 
 ### Returns
 
@@ -30,15 +23,15 @@ Defined in: [graphql.ts:10](https://github.com/technobuddha/library/blob/main/sr
 
 ## Call Signature
 
-> **graphQL**(`arg`): `string`
+> **graphQL**(`arg`: [`GraphQLValue`](../type-aliases/GraphQLValue.md)): `string`
 
-Defined in: [graphql.ts:11](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L11)
+Defined in: [graphql.ts:27](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L27)
 
 ### Parameters
 
-#### arg
-
-[`GraphQLValue`](../type-aliases/GraphQLValue.md)
+| Parameter | Type |
+| ------ | ------ |
+| `arg` | [`GraphQLValue`](../type-aliases/GraphQLValue.md) |
 
 ### Returns
 

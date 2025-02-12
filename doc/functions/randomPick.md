@@ -1,36 +1,27 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / randomPick
+[@technobuddha/library](../INDEX.md) / randomPick
 
 # Function: randomPick()
 
-> **randomPick**\<`T`\>(`list`, `random`): `T` \| `undefined`
+> **randomPick**\<`T`\>(`list`: `T`[], `random`: () => `number`): `T` \| `undefined`
 
-Defined in: [random-pick.ts:9](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L9)
+Defined in: [random-pick.ts:11](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L11)
 
 Pick a random items from a list.
 
 ## Type Parameters
 
-• **T** = `unknown`
+| Type Parameter | Default type |
+| ------ | ------ |
+| `T` | `unknown` |
 
 ## Parameters
 
-### list
-
-`T`[]
-
-Array of items to pick from
-
-### random
-
-() => `number`
-
-Random number generator
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `list` | `T`[] | `undefined` | Array of items to pick from |
+| `random` | () => `number` | `Math.random` | Random number generator |
 
 ## Returns
 

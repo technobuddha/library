@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / domain
+[@technobuddha/library](../INDEX.md) / domain
 
 # Variable: domain
 
-> `const` **domain**: `RegExp`
+> `const` **domain**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [regexp.ts:71](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L71)
+Defined in: [regexp.ts:96](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L96)

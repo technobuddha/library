@@ -3,6 +3,8 @@
  *
  * @param input - The identifier string
  * @returns the identifier in dash form
+ * @group String
+ * @category Case Conversion
  */
 export function toDashCase(input: string): string {
   return input

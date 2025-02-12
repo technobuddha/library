@@ -76,6 +76,11 @@ const monthName = [
   'December',
 ];
 
+/**
+ * Options for formatting a date
+ * @group Time
+ * @category Formatting
+ */
 export type FormatDateOptions = {
   /** Format the date in the UTC timezone */
   utc?: boolean;
@@ -88,6 +93,8 @@ export type FormatDateOptions = {
  * @param mask - The mask
  * @param __namedParameters - see {@link FormatDateOptions}
  * @defaultValue utc false
+ * @group Time
+ * @category Formatting
  */
 export function formatDate(
   input: Date,

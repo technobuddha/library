@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isMultipleOf
+[@technobuddha/library](../INDEX.md) / isMultipleOf
 
 # Function: isMultipleOf()
 
-> **isMultipleOf**(`input`, `multiplier`): `boolean`
+> **isMultipleOf**(`input`: `number`, `multiplier`: `number`): `boolean`
 
-Defined in: [is-multiple-of.ts:10](https://github.com/technobuddha/library/blob/main/src/is-multiple-of.ts#L10)
+Defined in: [is-multiple-of.ts:12](https://github.com/technobuddha/library/blob/main/src/is-multiple-of.ts#L12)
 
 Tests to see if the specified value is an multiple of *multiplier*
 
 ## Parameters
 
-### input
-
-`number`
-
-The number to test
-
-### multiplier
-
-`number`
-
-The multiplier
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number to test |
+| `multiplier` | `number` | The multiplier |
 
 ## Returns
 

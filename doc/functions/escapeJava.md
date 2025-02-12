@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / escapeJava
+[@technobuddha/library](../INDEX.md) / escapeJava
 
 # Function: escapeJava()
 
-> **escapeJava**(`input`): `string`
+> **escapeJava**(`input`: `string`): `string`
 
-Defined in: [escape-java.ts:10](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L10)
+Defined in: [escape-java.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L12)
 
 Escape a string for use in Java
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to escape
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to escape |
 
 ## Returns
 

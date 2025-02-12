@@ -2,6 +2,10 @@ import { isNil } from 'lodash-es';
 
 import { compareNumbers } from './compare-numbers.js';
 
+/**
+ * @group String
+ * @category Comparison
+ */
 export type CompareStringsOptions = {
   /** if true, strings are to be compared case insensitive */
   caseInsensitive?: boolean;
@@ -21,7 +25,8 @@ export type CompareStringsOptions = {
  * @defaultValue natural false
  * @defaultValue version false
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
- *
+ * @group String
+ * @category Comparison
  */
 export function compareStrings(
   a: string | null,

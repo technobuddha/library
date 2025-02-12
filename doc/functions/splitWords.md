@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / splitWords
+[@technobuddha/library](../INDEX.md) / splitWords
 
 # Function: splitWords()
 
-> **splitWords**(`input`, `__namedParameters`): `string`[]
+> **splitWords**(`input`: `string`, `__namedParameters`: [`SplitWordsOptions`](../type-aliases/SplitWordsOptions.md)): `string`[]
 
-Defined in: [split-words.ts:17](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L17)
+Defined in: [split-words.ts:23](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L23)
 
 Split a string into an array of words
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to split
-
-### \_\_namedParameters
-
-[`SplitWordsOptions`](../type-aliases/SplitWordsOptions.md) = `{}`
-
-see [SplitWordsOptions](../type-aliases/SplitWordsOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to split |
+| `__namedParameters` | [`SplitWordsOptions`](../type-aliases/SplitWordsOptions.md) | see [SplitWordsOptions](../type-aliases/SplitWordsOptions.md) |
 
 ## Returns
 

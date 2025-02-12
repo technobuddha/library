@@ -1,5 +1,9 @@
 import { getDaysInMonth } from './get-days-in-month.js';
 
+/**
+ * @group Time
+ * @category Month
+ */
 export type GetEndOfMonthOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -12,6 +16,8 @@ export type GetEndOfMonthOptions = {
  * @param __namedParameters - see {@link GetEndOfMonthOptions}
  * @defaultValue utc false
  * @returns Midnight on the last day of the month corresponding to the input date
+ * @group Time
+ * @category Month
  */
 export function getEndOfMonth(input: Date, { utc = false }: GetEndOfMonthOptions = {}): Date {
   if (utc) {

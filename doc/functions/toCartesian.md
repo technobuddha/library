@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toCartesian
+[@technobuddha/library](../INDEX.md) / toCartesian
 
 # Function: toCartesian()
 
-> **toCartesian**(`__namedParameters`): [`Cartesian`](../type-aliases/Cartesian.md)
+> **toCartesian**(`__namedParameters`: [`Polar`](../type-aliases/Polar.md)): [`Cartesian`](../type-aliases/Cartesian.md)
 
-Defined in: [to-cartesian.ts:8](https://github.com/technobuddha/library/blob/main/src/to-cartesian.ts#L8)
+Defined in: [to-cartesian.ts:10](https://github.com/technobuddha/library/blob/main/src/to-cartesian.ts#L10)
 
 Convert polar coordinates to cartesian
 
 ## Parameters
 
-### \_\_namedParameters
-
-[`Polar`](../type-aliases/Polar.md)
-
-radius, angle in radians (zero points in +X direction).
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `__namedParameters` | [`Polar`](../type-aliases/Polar.md) | radius, angle in radians (zero points in +X direction). |
 
 ## Returns
 

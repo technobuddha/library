@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / indefiniteArticle
+[@technobuddha/library](../INDEX.md) / indefiniteArticle
 
 # Function: indefiniteArticle()
 
-> **indefiniteArticle**(`word`, `__namedParameters`): `string`
+> **indefiniteArticle**(`word`: `string`, `__namedParameters`: [`IndefiniteArticleOptions`](../type-aliases/IndefiniteArticleOptions.md)): `string`
 
-Defined in: [indefinite-article.ts:38](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L38)
+Defined in: [indefinite-article.ts:44](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L44)
 
 Determine the appropriate indefinite article to use with a word.
 
 ## Parameters
 
-### word
-
-`string`
-
-The word
-
-### \_\_namedParameters
-
-[`IndefiniteArticleOptions`](../type-aliases/IndefiniteArticleOptions.md) = `{}`
-
-see [IndefiniteArticleOptions](../type-aliases/IndefiniteArticleOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `word` | `string` | The word |
+| `__namedParameters` | [`IndefiniteArticleOptions`](../type-aliases/IndefiniteArticleOptions.md) | see [IndefiniteArticleOptions](../type-aliases/IndefiniteArticleOptions.md) |
 
 ## Returns
 

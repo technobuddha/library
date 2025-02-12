@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / shallowEquals
+[@technobuddha/library](../INDEX.md) / shallowEquals
 
 # Function: shallowEquals()
 
-> **shallowEquals**(`objA`, `objB`, `exclude`): `boolean`
+> **shallowEquals**(`objA`: `undefined` \| `null` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\>, `objB`: `undefined` \| `null` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\>, `exclude`: `string`[]): `boolean`
 
-Defined in: [shallow-equals.ts:17](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L17)
+Defined in: [shallow-equals.ts:19](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L19)
 
 Compare two object for equality.  Testing goes one level deep.
 
 ## Parameters
 
-### objA
-
-First object to compare
-
-`undefined` | `null` | `Record`\<`string`, `unknown`\>
-
-### objB
-
-Second object to compare
-
-`undefined` | `null` | `Record`\<`string`, `unknown`\>
-
-### exclude
-
-`string`[] = `[]`
-
-Array of key names to exclude from the comparison
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `objA` | `undefined` \| `null` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | `undefined` | First object to compare |
+| `objB` | `undefined` \| `null` \| [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | `undefined` | Second object to compare |
+| `exclude` | `string`[] | `[]` | Array of key names to exclude from the comparison |
 
 ## Returns
 

@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / collapseBreakingspace
+[@technobuddha/library](../INDEX.md) / collapseBreakingspace
 
 # Function: collapseBreakingspace()
 
-> **collapseBreakingspace**(`input`, `trim`): `string`
+> **collapseBreakingspace**(`input`: `string`, `trim`: [`CollapseBreakingSpaceOptions`](../type-aliases/CollapseBreakingSpaceOptions.md)): `string`
 
-Defined in: [collapse-breaking-space.ts:15](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L15)
+Defined in: [collapse-breaking-space.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L21)
 
 Replace all breaking space (space, tab, carriage return, new line) with a single space
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### trim
-
-[`CollapseBreakingSpaceOptions`](../type-aliases/CollapseBreakingSpaceOptions.md) = `{}`
-
-If true, remove leading and trailing whitespace
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
+| `trim` | [`CollapseBreakingSpaceOptions`](../type-aliases/CollapseBreakingSpaceOptions.md) | If true, remove leading and trailing whitespace |
 
 ## Returns
 

@@ -1,26 +1,19 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / matches
+[@technobuddha/library](../INDEX.md) / matches
 
 # Function: matches()
 
-> **matches**(`text`, `match`): `boolean`
+> **matches**(`text`: `string`, `match`: `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\>): `boolean`
 
-Defined in: [matches.ts:3](https://github.com/technobuddha/library/blob/main/src/matches.ts#L3)
+Defined in: [matches.ts:7](https://github.com/technobuddha/library/blob/main/src/matches.ts#L7)
 
 ## Parameters
 
-### text
-
-`string`
-
-### match
-
-`string` | `RegExp` | `Iterable`\<`string` \| `RegExp`\>
+| Parameter | Type |
+| ------ | ------ |
+| `text` | `string` |
+| `match` | `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\> |
 
 ## Returns
 

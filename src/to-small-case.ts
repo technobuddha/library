@@ -1,3 +1,7 @@
+/**
+ * @group String
+ * @category Case Conversion
+ */
 export type ToSmallCaseOptions = {
   /** Convert other characters in the string to upper case */
   upperCase?: boolean;
@@ -9,6 +13,8 @@ export type ToSmallCaseOptions = {
  * @param input - The string to make small case
  * @defaultValue upperCase false
  * @returns the string in small case
+ * @group String
+ * @category Case Conversion
  */
 export function toSmallCase(input: string, { upperCase = false }: ToSmallCaseOptions = {}): string {
   return (

@@ -1,19 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetDayOfYearOptions
+[@technobuddha/library](../INDEX.md) / GetDayOfYearOptions
 
 # Type Alias: GetDayOfYearOptions
 
-> **GetDayOfYearOptions**: `object`
+> **GetDayOfYearOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [get-day-of-year.ts:5](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L5)
+Defined in: [get-day-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L9)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | [get-day-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L10) |

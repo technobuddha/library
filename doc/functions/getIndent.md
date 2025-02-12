@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getIndent
+[@technobuddha/library](../INDEX.md) / getIndent
 
 # Function: getIndent()
 
-> **getIndent**(`input`, `__namedParameters`): `number`
+> **getIndent**(`input`: `string`, `__namedParameters`: [`GetIndentOptions`](../type-aliases/GetIndentOptions.md)): `number`
 
-Defined in: [get-indent.ts:18](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L18)
+Defined in: [get-indent.ts:24](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L24)
 
 Determine the indentation level of text
 
 ## Parameters
 
-### input
-
-`string`
-
-The indented text
-
-### \_\_namedParameters
-
-[`GetIndentOptions`](../type-aliases/GetIndentOptions.md) = `{}`
-
-see [GetIndentOptions](../type-aliases/GetIndentOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The indented text |
+| `__namedParameters` | [`GetIndentOptions`](../type-aliases/GetIndentOptions.md) | see [GetIndentOptions](../type-aliases/GetIndentOptions.md) |
 
 ## Returns
 

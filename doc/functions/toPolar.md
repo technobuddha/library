@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toPolar
+[@technobuddha/library](../INDEX.md) / toPolar
 
 # Function: toPolar()
 
-> **toPolar**(`__namedParameters`): [`Polar`](../type-aliases/Polar.md)
+> **toPolar**(`__namedParameters`: [`Cartesian`](../type-aliases/Cartesian.md)): [`Polar`](../type-aliases/Polar.md)
 
-Defined in: [to-polar.ts:10](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L10)
+Defined in: [to-polar.ts:12](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L12)
 
 Convert cartesian coordinates to polar
 
 ## Parameters
 
-### \_\_namedParameters
-
-[`Cartesian`](../type-aliases/Cartesian.md)
-
-see [Cartesian](../type-aliases/Cartesian.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `__namedParameters` | [`Cartesian`](../type-aliases/Cartesian.md) | see [Cartesian](../type-aliases/Cartesian.md) |
 
 ## Returns
 

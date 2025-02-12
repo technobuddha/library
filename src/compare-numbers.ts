@@ -6,6 +6,8 @@ import { isNil } from 'lodash-es';
  * @param a - First object
  * @param b -  Second object
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
+ * @group Math
+ * @category Comparison
  */
 export function compareNumbers(a: number | null, b: number | null): -1 | 0 | 1 {
   if (a === b) {

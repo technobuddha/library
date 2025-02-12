@@ -1,3 +1,7 @@
+/**
+ * @group Time
+ * @category Day
+ */
 export type GetBeginningOfDayOptions = {
   /** Use the UTC timezone */
   utc?: boolean;
@@ -10,6 +14,8 @@ export type GetBeginningOfDayOptions = {
  * @param __namedParameters - see {@link GetBeginningOfDayOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the specified day
+ * @group Time
+ * @category Day
  */
 export function getBeginningOfDay(
   input: Date,

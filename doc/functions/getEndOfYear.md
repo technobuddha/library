@@ -1,36 +1,25 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getEndOfYear
+[@technobuddha/library](../INDEX.md) / getEndOfYear
 
 # Function: getEndOfYear()
 
-> **getEndOfYear**(`input`, `__namedParameters`): `Date`
+> **getEndOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetEndOfYearOptions`](../type-aliases/GetEndOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-end-of-year.ts:17](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L17)
+Defined in: [get-end-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L22)
 
 Determine the last day of the year containing a date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### \_\_namedParameters
-
-[`GetEndOfYearOptions`](../type-aliases/GetEndOfYearOptions.md) = `{}`
-
-see [GetEndOfYearOptions](../type-aliases/GetEndOfYearOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `__namedParameters` | [`GetEndOfYearOptions`](../type-aliases/GetEndOfYearOptions.md) | see [GetEndOfYearOptions](../type-aliases/GetEndOfYearOptions.md) |
 
 ## Returns
 
-`Date`
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 Midnight of the last day of the year containing the input date
 

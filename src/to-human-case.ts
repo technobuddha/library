@@ -8,6 +8,8 @@ const re = /\p{Ll}\p{Lu}+/gu;
  *
  * @param input - The identifier string
  * @returns the identifier in human readable form
+ * @group String
+ * @category Case Conversion
  */
 export function toHumanCase(input: string): string {
   return toCapitalCase(

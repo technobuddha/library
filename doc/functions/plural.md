@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / plural
+[@technobuddha/library](../INDEX.md) / plural
 
 # Function: plural()
 
-> **plural**(`input`, `quantity`?): `string`
+> **plural**(`input`: `string`, `quantity`?: `number`): `string`
 
-Defined in: [plural.ts:13](https://github.com/technobuddha/library/blob/main/src/plural.ts#L13)
+Defined in: [plural.ts:15](https://github.com/technobuddha/library/blob/main/src/plural.ts#L15)
 
 Return the plural version of the input string
 
 ## Parameters
 
-### input
-
-`string`
-
-The word to pluralize
-
-### quantity?
-
-`number`
-
-The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The word to pluralize |
+| `quantity`? | `number` | The quantity to prepend to the word. If omitted nothing is prepended. If quantity is one the singular form is returned. |
 
 ## Returns
 

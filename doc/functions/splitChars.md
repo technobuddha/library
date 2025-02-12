@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / splitChars
+[@technobuddha/library](../INDEX.md) / splitChars
 
 # Function: splitChars()
 
-> **splitChars**(`input`): `string`[]
+> **splitChars**(`input`: `string`): `string`[]
 
-Defined in: [split-chars.ts:7](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L7)
+Defined in: [split-chars.ts:9](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L9)
 
 Split a string into an array of characters
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
 
 ## Returns
 

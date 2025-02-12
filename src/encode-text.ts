@@ -1,16 +1,17 @@
-const REPLACEMENT = [0xef, 0x8f, 0xbd];
+import { type TextEncoding } from './text-encoding.js';
 
-// eslint-disable-next-line unicorn/text-encoding-identifier-case
-export type Encoding = 'utf-8' | 'utf8';
+const REPLACEMENT = [0xef, 0x8f, 0xbd];
 
 /**
  * Encode a unicode (UTF-16 encoded javascript) string into UTF8
  *
  * @param input - The string to encode
  * @returns The UTF-8 encoded string
+ * @group Unicode
+ * @category Encoding
  */
 /* eslint-disable no-bitwise */
-export function encodeText(input: string, _encoding?: Encoding): Uint8Array {
+export function encodeText(input: string, _encoding?: TextEncoding): Uint8Array {
   const result: number[] = [];
 
   for (let i = 0; i < input.length; ++i) {

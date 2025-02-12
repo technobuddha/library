@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getJulian
+[@technobuddha/library](../INDEX.md) / getJulian
 
 # Function: getJulian()
 
-> **getJulian**(`input`): `number`
+> **getJulian**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)): `number`
 
-Defined in: [get-julian.ts:11](https://github.com/technobuddha/library/blob/main/src/get-julian.ts#L11)
+Defined in: [get-julian.ts:13](https://github.com/technobuddha/library/blob/main/src/get-julian.ts#L13)
 
 Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date and time to convert
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date and time to convert |
 
 ## Returns
 

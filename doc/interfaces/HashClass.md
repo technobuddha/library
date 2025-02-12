@@ -1,14 +1,12 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / HashClass
+[@technobuddha/library](../INDEX.md) / HashClass
 
 # Interface: HashClass
 
-Defined in: [hash.ts:8](https://github.com/technobuddha/library/blob/main/src/hash.ts#L8)
+Defined in: [hash-base.ts:12](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L12)
+
+The base interface for hash classes
 
 ## Methods
 
@@ -16,25 +14,25 @@ Defined in: [hash.ts:8](https://github.com/technobuddha/library/blob/main/src/ha
 
 #### Call Signature
 
-> **digest**(): `Uint8Array`
+> **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [hash.ts:9](https://github.com/technobuddha/library/blob/main/src/hash.ts#L9)
+Defined in: [hash-base.ts:13](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L13)
 
 ##### Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 #### Call Signature
 
-> **digest**(`encoding`): `string`
+> **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
-Defined in: [hash.ts:10](https://github.com/technobuddha/library/blob/main/src/hash.ts#L10)
+Defined in: [hash-base.ts:14](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L14)
 
 ##### Parameters
 
-###### encoding
-
-[`BinaryEncoding`](../type-aliases/BinaryEncoding.md)
+| Parameter | Type |
+| ------ | ------ |
+| `encoding` | [`BinaryEncoding`](../type-aliases/BinaryEncoding.md) |
 
 ##### Returns
 
@@ -46,15 +44,15 @@ Defined in: [hash.ts:10](https://github.com/technobuddha/library/blob/main/src/h
 
 #### Call Signature
 
-> **update**(`data`): `this`
+> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
 
-Defined in: [hash.ts:11](https://github.com/technobuddha/library/blob/main/src/hash.ts#L11)
+Defined in: [hash-base.ts:15](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L15)
 
 ##### Parameters
 
-###### data
-
-`ArrayBuffer` | `TypedArray`
+| Parameter | Type |
+| ------ | ------ |
+| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray` |
 
 ##### Returns
 
@@ -62,19 +60,16 @@ Defined in: [hash.ts:11](https://github.com/technobuddha/library/blob/main/src/h
 
 #### Call Signature
 
-> **update**(`data`, `encoding`?): `this`
+> **update**(`data`: `string`, `encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
 
-Defined in: [hash.ts:12](https://github.com/technobuddha/library/blob/main/src/hash.ts#L12)
+Defined in: [hash-base.ts:16](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L16)
 
 ##### Parameters
 
-###### data
-
-`string`
-
-###### encoding?
-
-[`Encoding`](../type-aliases/Encoding.md)
+| Parameter | Type |
+| ------ | ------ |
+| `data` | `string` |
+| `encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) |
 
 ##### Returns
 

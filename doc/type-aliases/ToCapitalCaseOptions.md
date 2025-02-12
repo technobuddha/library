@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ToCapitalCaseOptions
+[@technobuddha/library](../INDEX.md) / ToCapitalCaseOptions
 
 # Type Alias: ToCapitalCaseOptions
 
-> **ToCapitalCaseOptions**: `object`
+> **ToCapitalCaseOptions**: \{ `lowerCase`: `boolean`; \}
 
-Defined in: [to-capital-case.ts:1](https://github.com/technobuddha/library/blob/main/src/to-capital-case.ts#L1)
+Defined in: [to-capital-case.ts:5](https://github.com/technobuddha/library/blob/main/src/to-capital-case.ts#L5)
 
 ## Type declaration
 
-### lowerCase?
-
-> `optional` **lowerCase**: `boolean`
-
-Convert the rest of the string to lower case
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="lowercase"></a> `lowerCase`? | `boolean` | Convert the rest of the string to lower case | [to-capital-case.ts:7](https://github.com/technobuddha/library/blob/main/src/to-capital-case.ts#L7) |

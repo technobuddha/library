@@ -300,6 +300,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@giancosta86/typedoc-readonly@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@giancosta86/typedoc-readonly@npm:1.0.1"
+  peerDependencies:
+    typedoc: ^0.27.0
+  checksum: 10c0/59fa0b99483573b6cca0d23944578e22c46498a0318f270523670ce9d1ca39317e89c58b7a8c66196ee20f4ec4024a93f15eb3387f739b115f50622faddcda0f
+  languageName: node
+  linkType: hard
+
 "@github/browserslist-config@npm:^1.0.0":
   version: 1.0.0
   resolution: "@github/browserslist-config@npm:1.0.0"
@@ -896,12 +905,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
+    "@giancosta86/typedoc-readonly": "npm:1.0.1"
     "@technobuddha/project": "npm:0.0.152"
     "@types/lodash-es": "npm:^4"
     jest-matcher-deep-close-to: "npm:3.0.2"
     lodash-es: "npm:4.17.21"
     typedoc: "npm:0.27.6"
     typedoc-plugin-markdown: "npm:4.4.1"
+    typedoc-plugin-mdn-links: "npm:4.0.12"
     vite: "npm:6.1.0"
     vitest: "npm:3.0.5"
   languageName: unknown
@@ -5976,6 +5987,15 @@ __metadata:
   peerDependencies:
     typedoc: 0.27.x
   checksum: 10c0/54c9a25aed64d07258033c4d060acac15a618ee0494cbb2bc70fd10d03c82b3434715b6db01fbeb09d672cff736340666d70da1be83188e3a994048a0a0c6b65
+  languageName: node
+  linkType: hard
+
+"typedoc-plugin-mdn-links@npm:4.0.12":
+  version: 4.0.12
+  resolution: "typedoc-plugin-mdn-links@npm:4.0.12"
+  peerDependencies:
+    typedoc: 0.26.x || 0.27.x
+  checksum: 10c0/dad1a12e57fda8191da80d578e37fb9c0193632e20722aec40231b79d5ad8e520468876c83eee5a020e41d2a2686bb683f61ce77ad8d6effa8d3c6d4c5c6ff00
   languageName: node
   linkType: hard
 

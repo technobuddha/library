@@ -1,5 +1,7 @@
 /**
  * A simple priority queue
+ * @group Utility
+ * @category Classes
  */
 export class PriorityQueue<T> {
   /**

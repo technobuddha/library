@@ -2,6 +2,10 @@ import { type DayOfWeek } from './constants.js';
 import { day, daysPerWeek } from './constants.js';
 import { modulo } from './modulo.js';
 
+/**
+ * @group Time
+ * @category Week
+ */
 export type GetEndOfWeekOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -16,6 +20,8 @@ export type GetEndOfWeekOptions = {
  * @param __namedParameters - see {@link GetEndOfWeekOptions}
  * @defaultValue utc false
  * @returns Midnight of the last day of the week containing the input date
+ * @group Time
+ * @category Week
  */
 export function getEndOfWeek(
   input: Date,

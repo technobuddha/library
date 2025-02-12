@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isAlphaNumeric
+[@technobuddha/library](../INDEX.md) / isAlphaNumeric
 
 # Function: isAlphaNumeric()
 
-> **isAlphaNumeric**(`input`): `boolean`
+> **isAlphaNumeric**(`input`: `string`): `boolean`
 
-Defined in: [is-alpha-numeric.ts:9](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L9)
+Defined in: [is-alpha-numeric.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L11)
 
 Test a string for all alphanumeric characters
 
 ## Parameters
 
-### input
-
-`string`
-
-string to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | string to test |
 
 ## Returns
 

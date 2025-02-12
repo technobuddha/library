@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / IsSameYearOptions
+[@technobuddha/library](../INDEX.md) / IsSameYearOptions
 
 # Type Alias: IsSameYearOptions
 
-> **IsSameYearOptions**: `object`
+> **IsSameYearOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [is-same-year.ts:1](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L1)
+Defined in: [is-same-year.ts:5](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L5)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | use the utc timezone | [is-same-year.ts:7](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L7) |

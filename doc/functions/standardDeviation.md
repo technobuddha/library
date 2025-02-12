@@ -1,27 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / standardDeviation
+[@technobuddha/library](../INDEX.md) / standardDeviation
 
 # Function: standardDeviation()
 
-> **standardDeviation**(...`datapoints`): `number`
+> **standardDeviation**(...`datapoints`: `number`[]): `number`
 
-Defined in: [standard-deviation.ts:12](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L12)
+Defined in: [standard-deviation.ts:14](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L14)
 
 Returns the sample standard deviation of the arguments.  For a definition of
 sample standard deviation, see http://en.wikipedia.org/wiki/Standard_deviation
 
 ## Parameters
 
-### datapoints
-
-...`number`[]
-
-samples to analyze.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| ...`datapoints` | `number`[] | samples to analyze. |
 
 ## Returns
 

@@ -1,5 +1,9 @@
 import { compareStrings } from './compare-strings.js';
 
+/**
+ * @group String
+ * @category Fuzzy Match
+ */
 export type DiceCoefficientOptions = {
   /** compare the two strings in case insensitive mode */
   caseInsensitive?: boolean;
@@ -12,6 +16,8 @@ export type DiceCoefficientOptions = {
  * @param compareTo - The second string
  * @param __nameParameters - see {@link DiceCoefficientOptions}
  * @returns a number from 0 (not similar) to 1 (equal) measuring the similarity
+ * @group String
+ * @category Fuzzy Match
  */
 export function diceCoefficient(
   input: string,

@@ -3,6 +3,8 @@
  *
  * @param input - The identifier string
  * @returns the identifier in dot form
+ * @group String
+ * @category Case Conversion
  */
 export function toDotCase(input: string): string {
   return input

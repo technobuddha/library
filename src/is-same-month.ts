@@ -1,5 +1,9 @@
 import { isSameYear } from './is-same-year.js';
 
+/**
+ * @group Time
+ * @category Month
+ */
 export type IsSameMonthOptions = {
   /** use the utc timezone */
   utc?: boolean;
@@ -13,6 +17,8 @@ export type IsSameMonthOptions = {
  * @param __namedParameters - see {@link IsSameMonthOptions}
  * @defaultValue utc false
  * @returns true, if the two dates occur in the same month
+ * @group Time
+ * @category Month
  */
 export function isSameMonth(
   input1: Date,

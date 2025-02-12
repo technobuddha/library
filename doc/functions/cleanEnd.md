@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / cleanEnd
+[@technobuddha/library](../INDEX.md) / cleanEnd
 
 # Function: cleanEnd()
 
-> **cleanEnd**(`input`, `characters`): `string`
+> **cleanEnd**(`input`: `string`, `characters`: `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp))[]): `string`
 
-Defined in: [clean.ts:43](https://github.com/technobuddha/library/blob/main/src/clean.ts#L43)
+Defined in: [clean.ts:47](https://github.com/technobuddha/library/blob/main/src/clean.ts#L47)
 
 Remove all occurrences of characters from the end of the string
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### characters
-
-the characters(s) to remove
-
-`string` | `RegExp` | (`string` \| `RegExp`)[]
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `input` | `string` | `undefined` | The string |
+| `characters` | `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp))[] | `trimEquivalent` | the characters(s) to remove |
 
 ## Returns
 

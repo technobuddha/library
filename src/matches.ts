@@ -1,5 +1,9 @@
 import { isRegExp, isString } from 'lodash-es';
 
+/**
+ * @group RegExp
+ * @category Matching
+ */
 export function matches(text: string, match: string | RegExp | Iterable<string | RegExp>): boolean {
   const str = text.trim().toLocaleLowerCase();
 

@@ -2,6 +2,10 @@ import { escapeRegExp, isString } from 'lodash-es';
 
 import { unescapeJS } from './unescape-js.js';
 
+/**
+ * @group String
+ * @category Quoting
+ */
 export type UnquoteOptions = {
   /** The quote character(s) to use */
   quote?: string;
@@ -17,6 +21,8 @@ export type UnquoteOptions = {
  * @defaultValue quote double-quote (")
  * @defaultValue escape unescapeJS
  * @returns the unescaped text with quotes removed
+ * @group String
+ * @category Quoting
  */
 export function unquote(
   input: string,

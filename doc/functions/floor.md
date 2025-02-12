@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / floor
+[@technobuddha/library](../INDEX.md) / floor
 
 # Function: floor()
 
-> **floor**(`input`, `precision`): `number`
+> **floor**(`input`: `number`, `precision`: [`FloorOptions`](../type-aliases/FloorOptions.md)): `number`
 
-Defined in: [floor.ts:18](https://github.com/technobuddha/library/blob/main/src/floor.ts#L18)
+Defined in: [floor.ts:24](https://github.com/technobuddha/library/blob/main/src/floor.ts#L24)
 
 A tweaked variant of
 
 ## Parameters
 
-### input
-
-`number`
-
-A number.
-
-### precision
-
-[`FloorOptions`](../type-aliases/FloorOptions.md) = `{}`
-
-The prevision to round down to.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | A number. |
+| `precision` | [`FloorOptions`](../type-aliases/FloorOptions.md) | The prevision to round down to. |
 
 ## Returns
 

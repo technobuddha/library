@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / escapeJS
+[@technobuddha/library](../INDEX.md) / escapeJS
 
 # Function: escapeJS()
 
-> **escapeJS**(`input`): `string`
+> **escapeJS**(`input`: `string`): `string`
 
-Defined in: [escape-js.ts:10](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L10)
+Defined in: [escape-js.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L12)
 
 Escape a string for use in Javascript
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to escape
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to escape |
 
 ## Returns
 

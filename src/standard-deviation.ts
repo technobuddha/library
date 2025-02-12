@@ -8,6 +8,8 @@ import { variance } from './variance.js';
  * @returns The sample standard deviation of the arguments (0 if fewer
  * than two samples were provided, or NaN if any of the samples is
  * not a valid number).
+ * @group Math
+ * @category Statistics
  */
 export function standardDeviation(...datapoints: number[]): number {
   return Math.sqrt(variance(...datapoints));

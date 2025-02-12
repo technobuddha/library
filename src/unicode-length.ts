@@ -5,6 +5,8 @@
  *
  * @param input - the unicode string
  * @returns the number of code points
+ * @group Unicode
+ * @category String Length
  */
 export function unicodeLength(input: string): number {
   // eslint-disable-next-line require-unicode-regexp

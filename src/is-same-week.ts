@@ -1,6 +1,10 @@
 import { day, type DayOfWeek } from './constants.js';
 import { getBeginningOfWeek } from './get-beginning-of-week.js';
 
+/**
+ * @group Time
+ * @category Week
+ */
 export type IsSameWeekOptions = {
   /** use the utc timezone */
   utc?: boolean;
@@ -16,6 +20,8 @@ export type IsSameWeekOptions = {
  * @param __namedParameters - see {@link IsSameWeekOptions}
  * @defaultValue utc false
  * @returns true, if the two dates occur in the same week
+ * @group Time
+ * @category Week
  */
 export function isSameWeek(
   input1: Date,

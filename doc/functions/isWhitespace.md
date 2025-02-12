@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isWhitespace
+[@technobuddha/library](../INDEX.md) / isWhitespace
 
 # Function: isWhitespace()
 
-> **isWhitespace**(`input`): `boolean`
+> **isWhitespace**(`input`: `string`): `boolean`
 
-Defined in: [is-whitespace.ts:7](https://github.com/technobuddha/library/blob/main/src/is-whitespace.ts#L7)
+Defined in: [is-whitespace.ts:9](https://github.com/technobuddha/library/blob/main/src/is-whitespace.ts#L9)
 
 Test a string for all white space characters
 
 ## Parameters
 
-### input
-
-`string`
-
-string to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | string to test |
 
 ## Returns
 

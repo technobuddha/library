@@ -6,6 +6,8 @@ import { normalizeAngle } from './normalize-angle.js';
  *
  * @param __namedParameters - see {@link Cartesian}
  * @returns polar coordinated
+ * @group Geometry
+ * @category Cartesian / Polar Coordinates
  */
 export function toPolar({ x, y }: Cartesian): Polar {
   return {

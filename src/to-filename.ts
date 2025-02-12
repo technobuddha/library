@@ -6,6 +6,10 @@ import { empty } from './constants.js';
 
 const badChars = /[/\\:*?<>|.]+/gu;
 
+/**
+ * @group String
+ * @category Conversion
+ */
 export type ToFilenameOptions = {
   /** the file name will be truncated to this length */
   maxLength?: number;
@@ -23,6 +27,8 @@ export type ToFilenameOptions = {
  * @param input - The string to escape
  * @param __namedParameters - see {@link ToFilenameOptions}
  * @returns the file name
+ * @group String
+ * @category Conversion
  */
 export function toFilename(
   input: string,

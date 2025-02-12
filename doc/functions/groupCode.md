@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / groupCode
+[@technobuddha/library](../INDEX.md) / groupCode
 
 # Function: groupCode()
 
-> **groupCode**(`input`): `string`
+> **groupCode**(`input`: `string`): `string`
 
-Defined in: [group-code.ts:14](https://github.com/technobuddha/library/blob/main/src/group-code.ts#L14)
+Defined in: [group-code.ts:16](https://github.com/technobuddha/library/blob/main/src/group-code.ts#L16)
 
 Determine the group code (A-Z, [] or #) to place an item under
 
 ## Parameters
 
-### input
-
-`string`
-
-a description
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | a description |
 
 ## Returns
 

@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isAlpha
+[@technobuddha/library](../INDEX.md) / isAlpha
 
 # Function: isAlpha()
 
-> **isAlpha**(`input`): `boolean`
+> **isAlpha**(`input`: `string`): `boolean`
 
-Defined in: [is-alpha.ts:9](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L9)
+Defined in: [is-alpha.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L11)
 
 Test a string for all alphaetic characters
 
 ## Parameters
 
-### input
-
-`string`
-
-string to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | string to test |
 
 ## Returns
 

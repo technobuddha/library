@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / metricUnits
+[@technobuddha/library](../INDEX.md) / metricUnits
 
 # Function: metricUnits()
 
-> **metricUnits**(`input`, `__namedParameters`): `string`
+> **metricUnits**(`input`: `number`, `__namedParameters`: [`MetricUnitsOptions`](../type-aliases/MetricUnitsOptions.md)): `string`
 
-Defined in: [metric-units.ts:39](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L39)
+Defined in: [metric-units.ts:45](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L45)
 
 Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
 
 ## Parameters
 
-### input
-
-`number`
-
-The number to abbreviate
-
-### \_\_namedParameters
-
-[`MetricUnitsOptions`](../type-aliases/MetricUnitsOptions.md) = `{}`
-
-[MetricUnitsOptions](../type-aliases/MetricUnitsOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number to abbreviate |
+| `__namedParameters` | [`MetricUnitsOptions`](../type-aliases/MetricUnitsOptions.md) | [MetricUnitsOptions](../type-aliases/MetricUnitsOptions.md) |
 
 ## Returns
 

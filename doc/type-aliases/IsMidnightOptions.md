@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / IsMidnightOptions
+[@technobuddha/library](../INDEX.md) / IsMidnightOptions
 
 # Type Alias: IsMidnightOptions
 
-> **IsMidnightOptions**: `object`
+> **IsMidnightOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [is-midnight.ts:1](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L1)
+Defined in: [is-midnight.ts:5](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L5)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [is-midnight.ts:7](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L7) |

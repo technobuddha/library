@@ -1,33 +1,116 @@
+/**
+ * @group String
+ * @category Constants
+ */
 export const empty = '';
+/**
+ * @group String
+ * @category Constants
+ */
 export const space = ' ';
+/**
+ * @group String
+ * @category Constants
+ */
 export const nbsp = '\u00A0';
+/**
+ * @group String
+ * @category Constants
+ */
 export const zwsp = '\u200B';
 
+/**
+ * @group Math
+ * @category Negative Zero
+ */
 export const negativeZero = -0;
 
+/**
+ * @group Time
+ * @category Constants
+ */
 export const ticksPerSecond = 1000;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const secondsPerMinute = 60;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const minutesPerHour = 60;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const hoursPerDay = 24;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const daysPerWeek = 7;
-
+/**
+ * @group Time
+ * @category Constants
+ */
 export const ticksPerMinute = ticksPerSecond * secondsPerMinute;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const ticksPerHour = ticksPerMinute * minutesPerHour;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const ticksPerDay = ticksPerHour * hoursPerDay;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const ticksPerWeek = ticksPerDay * daysPerWeek;
 
+/**
+ * @group Time
+ * @category Constants
+ */
 export const secondsPerHour = secondsPerMinute * minutesPerHour;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const secondsPerDay = secondsPerHour * hoursPerDay;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const secondsPerWeek = secondsPerDay * daysPerWeek;
-
+/**
+ * @group Time
+ * @category Constants
+ */
 export const minutesPerDay = minutesPerHour * hoursPerDay;
+/**
+ * @group Time
+ * @category Constants
+ */
 export const minutesPerWeek = minutesPerDay * daysPerWeek;
-
+/**
+ * @group Time
+ * @category Constants
+ */
 export const hoursPerWeek = hoursPerDay * daysPerWeek;
-
+/**
+ * @group Time
+ * @category Enumerations
+ */
 export type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
-
-export const day = Object.freeze({
+/**
+ * @group Time
+ * @category Enumerations
+ */
+export const day: Readonly<Record<string, DayOfWeek>> = Object.freeze({
   sunday: 0,
   sun: 0,
   su: 0,
@@ -52,11 +135,19 @@ export const day = Object.freeze({
   saturday: 6,
   sat: 6,
   sa: 6,
-} as Record<string, DayOfWeek>);
+});
 
+/**
+ * @group Time
+ * @category Enumerations
+ */
 export type MonthOfYear = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
-export const month = Object.freeze({
+/**
+ * @group Time
+ * @category Enumerations
+ */
+export const month: Readonly<Record<string, MonthOfYear>> = Object.freeze({
   january: 0,
   jan: 0,
   february: 1,
@@ -81,358 +172,4 @@ export const month = Object.freeze({
   nov: 10,
   december: 11,
   dec: 11,
-} as Record<string, MonthOfYear>);
-
-/* eslint-disable @typescript-eslint/naming-convention */
-export const charcode = Object.freeze({
-  ' ': 32,
-  '!': 33,
-  '"': 34,
-  '#': 35,
-  '$': 36,
-  '%': 37,
-  '&': 38,
-  "'": 39,
-  '(': 40,
-  ')': 41,
-  '*': 42,
-  '+': 43,
-  ',': 44,
-  '-': 45,
-  '.': 46,
-  '/': 47,
-  '0': 48,
-  '1': 49,
-  '2': 50,
-  '3': 51,
-  '4': 52,
-  '5': 53,
-  '6': 54,
-  '7': 55,
-  '8': 56,
-  '9': 57,
-  ':': 58,
-  ';': 59,
-  '<': 60,
-  '=': 61,
-  '>': 62,
-  '?': 63,
-  '@': 64,
-  'A': 65,
-  'B': 66,
-  'C': 67,
-  'D': 68,
-  'E': 69,
-  'F': 70,
-  'G': 71,
-  'H': 72,
-  'I': 73,
-  'J': 74,
-  'K': 75,
-  'L': 76,
-  'M': 77,
-  'N': 78,
-  'O': 79,
-  'P': 80,
-  'Q': 81,
-  'R': 82,
-  'S': 83,
-  'T': 84,
-  'U': 85,
-  'V': 86,
-  'W': 87,
-  'X': 88,
-  'Y': 89,
-  'Z': 90,
-  '[': 91,
-  '\\': 92,
-  ']': 93,
-  '^': 94,
-  '_': 95,
-  '`': 96,
-  'a': 97,
-  'b': 98,
-  'c': 99,
-  'd': 100,
-  'e': 101,
-  'f': 102,
-  'g': 103,
-  'h': 104,
-  'i': 105,
-  'j': 106,
-  'k': 107,
-  'l': 108,
-  'm': 109,
-  'n': 110,
-  'o': 111,
-  'p': 112,
-  'q': 113,
-  'r': 114,
-  's': 115,
-  't': 116,
-  'u': 117,
-  'v': 118,
-  'w': 119,
-  'x': 120,
-  'y': 121,
-  'z': 122,
-  '{': 123,
-  '|': 124,
-  '}': 125,
-  '~': 126,
-});
-/* eslint-enable @typescript-eslint/naming-convention */
-
-export const mouseButton = Object.freeze({
-  left: 0,
-  middle: 1,
-  right: 2,
-});
-
-export const keycode = Object.freeze({
-  escape: 27,
-  f1: 112,
-  f2: 113,
-  f3: 114,
-  f4: 115,
-  f5: 116,
-  f6: 117,
-  f7: 118,
-  f8: 119,
-  f9: 120,
-  f10: 121,
-  f11: 122,
-  f12: 123,
-  prtScr: 44,
-  scrollLock: 145,
-  pause: 19,
-  grave: 192,
-  key1: 49,
-  key2: 50,
-  key3: 51,
-  key4: 52,
-  key5: 53,
-  key6: 54,
-  key7: 55,
-  key8: 56,
-  key9: 57,
-  key0: 48,
-  dash: 189,
-  equals: 187,
-  backspace: 8,
-  tab: 9,
-  q: 81,
-  w: 87,
-  e: 69,
-  r: 82,
-  t: 84,
-  y: 89,
-  u: 85,
-  i: 73,
-  o: 79,
-  p: 80,
-  openBracket: 219,
-  closeBracket: 221,
-  backSlash: 220,
-  capsLock: 20,
-  a: 65,
-  s: 83,
-  d: 68,
-  f: 70,
-  g: 71,
-  h: 72,
-  j: 74,
-  k: 75,
-  l: 76,
-  semiColon: 186,
-  quote: 222,
-  enter: 13,
-  shift: 16,
-  z: 90,
-  x: 88,
-  c: 67,
-  v: 86,
-  b: 66,
-  n: 78,
-  m: 77,
-  comma: 188,
-  period: 190,
-  slash: 191,
-  ctrl: 17,
-  leftWindow: 91,
-  alt: 18,
-  space: 32,
-  rightWindow: 92,
-  menu: 93,
-  ins: 45,
-  home: 36,
-  pageUp: 33,
-  del: 46,
-  end: 35,
-  pageDown: 34,
-  arrowUp: 38,
-  arrowLeft: 37,
-  arrowDown: 40,
-  arrowRight: 39,
-  numLock: 144,
-  divide: 111,
-  multiply: 106,
-  subtract: 109,
-  numpad7: 103,
-  numpad8: 104,
-  numpad9: 105,
-  add: 107,
-  numpad4: 100,
-  numpad5: 101,
-  numpad6: 102,
-  numpad1: 97,
-  numpad2: 98,
-  numpad3: 99,
-  numpad0: 96,
-  decimalPoint: 110,
-});
-
-export type BaseCharset = Readonly<{
-  alphabet: string[];
-  padding: string;
-}>;
-
-export const base64Charset: BaseCharset = Object.freeze({
-  alphabet: [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z',
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '+',
-    '/',
-  ],
-  padding: '=',
-});
-
-export const base64UrlCharset: BaseCharset = Object.freeze({
-  alphabet: [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z',
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
-    '8',
-    '9',
-    '-',
-    '_',
-  ],
-  padding: '',
 });

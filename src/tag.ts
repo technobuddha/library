@@ -9,6 +9,8 @@ import { escapeHTML } from './escape-html.js';
  * @param tagName - The name of the tag
  * @param attributes - A dictionary of name value pairs to use for attributes
  * @returns HTML tag with text
+ * @group String
+ * @category HTML
  */
 export function tag(
   input: string,

@@ -1,5 +1,9 @@
 import { create2DArray } from './create-2d-array.js';
 
+/**
+ * @group String
+ * @category Fuzzy Match
+ */
 export type LevenshteinDistanceOptions = {
   /** The compairson will ignore case */
   caseInsensitive?: boolean;
@@ -13,6 +17,8 @@ export type LevenshteinDistanceOptions = {
  * @param __namedParameters - see {@link LevenshteinDistanceOptions}
  * @defaultValue caseInsensitive true
  * @returns the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
+ * @group String
+ * @category Fuzzy Match
  */
 export function levenshteinDistance(
   input: string,

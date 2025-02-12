@@ -5,6 +5,8 @@ const reAlpha = /^\p{L}+$/u;
  *
  * @param input - string to test
  * @returns true, if all characters in the string are alphabetic
+ * @group String
+ * @category Categorization
  */
 export function isAlpha(input: string): boolean {
   return reAlpha.test(input);

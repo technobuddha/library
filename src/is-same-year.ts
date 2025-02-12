@@ -1,3 +1,7 @@
+/**
+ * @group Time
+ * @category Year
+ */
 export type IsSameYearOptions = {
   /** use the utc timezone */
   utc?: boolean;
@@ -11,6 +15,8 @@ export type IsSameYearOptions = {
  * @param __namedParameters - see {@link IsSameYearOptions}
  * @defaultValue utc false
  * @returns true, if the two dates occur in the same year
+ * @group Time
+ * @category Year
  */
 export function isSameYear(
   input1: Date,

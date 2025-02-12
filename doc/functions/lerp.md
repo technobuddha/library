@@ -1,16 +1,12 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / lerp
+[@technobuddha/library](../INDEX.md) / lerp
 
 # Function: lerp()
 
-> **lerp**(`a`, `b`, `proportion`): `number`
+> **lerp**(`a`: `number`, `b`: `number`, `proportion`: `number`): `number`
 
-Defined in: [lerp.ts:11](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L11)
+Defined in: [lerp.ts:13](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L13)
 
 Performs linear interpolation between values a and b. Returns the value
 between a and b proportional to x (when x is between 0 and 1. When x is
@@ -18,23 +14,11 @@ outside this range, the return value is a linear extrapolation).
 
 ## Parameters
 
-### a
-
-`number`
-
-A number.
-
-### b
-
-`number`
-
-A number.
-
-### proportion
-
-`number`
-
-The proportion between a and b.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `a` | `number` | A number. |
+| `b` | `number` | A number. |
+| `proportion` | `number` | The proportion between a and b. |
 
 ## Returns
 

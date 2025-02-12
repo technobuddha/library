@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / orderOfMagnitude
+[@technobuddha/library](../INDEX.md) / orderOfMagnitude
 
 # Function: orderOfMagnitude()
 
-> **orderOfMagnitude**(`exponent`): `string` \| `null`
+> **orderOfMagnitude**(`exponent`: `number`): `string` \| `null`
 
-Defined in: [cardinal.ts:503](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L503)
+Defined in: [cardinal.ts:519](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L519)
 
 Get the spelled out word for an exponent
 
 ## Parameters
 
-### exponent
-
-`number`
-
-The exponent to convert
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `exponent` | `number` | The exponent to convert |
 
 ## Returns
 

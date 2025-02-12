@@ -9,6 +9,8 @@ import { matchCase } from './match-case.js';
  * @param input - The word to pluralize
  * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
+ * @group English
+ * @category Plural
  */
 export function plural(input: string, quantity?: number): string {
   if (quantity === 1 || quantity === -1) {

@@ -10,6 +10,8 @@ import { toASCII } from './to-ascii.js';
  *
  * @param input - a description
  * @returns The group code
+ * @group String
+ * @category Sorting
  */
 export function groupCode(input: string): string {
   const group = toASCII(sortOrder(input).slice(0, 1)).toLocaleUpperCase();

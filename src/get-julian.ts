@@ -7,6 +7,8 @@ import { ticksPerDay } from './constants.js';
  *
  * @param input - The date and time to convert
  * @returns The julian date.
+ * @group Time
+ * @category Julian
  */
 export function getJulian(input: Date): number {
   return input.getTime() / ticksPerDay + 2440587.5;

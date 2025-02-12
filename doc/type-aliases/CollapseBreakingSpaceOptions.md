@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / CollapseBreakingSpaceOptions
+[@technobuddha/library](../INDEX.md) / CollapseBreakingSpaceOptions
 
 # Type Alias: CollapseBreakingSpaceOptions
 
-> **CollapseBreakingSpaceOptions**: `object`
+> **CollapseBreakingSpaceOptions**: \{ `trim`: `boolean`; \}
 
-Defined in: [collapse-breaking-space.ts:4](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L4)
+Defined in: [collapse-breaking-space.ts:8](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L8)
 
 ## Type declaration
 
-### trim?
-
-> `optional` **trim**: `boolean`
-
-If true, trim
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="trim"></a> `trim`? | `boolean` | If true, trim | [collapse-breaking-space.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L10) |

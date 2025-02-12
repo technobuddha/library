@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetEndOfMonthOptions
+[@technobuddha/library](../INDEX.md) / GetEndOfMonthOptions
 
 # Type Alias: GetEndOfMonthOptions
 
-> **GetEndOfMonthOptions**: `object`
+> **GetEndOfMonthOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [get-end-of-month.ts:3](https://github.com/technobuddha/library/blob/main/src/get-end-of-month.ts#L3)
+Defined in: [get-end-of-month.ts:7](https://github.com/technobuddha/library/blob/main/src/get-end-of-month.ts#L7)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [get-end-of-month.ts:9](https://github.com/technobuddha/library/blob/main/src/get-end-of-month.ts#L9) |

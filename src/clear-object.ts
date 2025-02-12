@@ -6,6 +6,8 @@
  * @typeParam T - Type of values within the object
  * @param input - Object to clear all properties
  * @returns Original @see input with all properties deleted.
+ * @group Object
+ * @category Clear Object
  */
 export function clearObject<T = unknown>(
   input: Record<string | number | symbol, T>,

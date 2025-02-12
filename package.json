@@ -20,11 +20,13 @@
   },
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
+    "@giancosta86/typedoc-readonly": "1.0.1",
     "@technobuddha/project": "0.0.152",
     "@types/lodash-es": "^4",
     "jest-matcher-deep-close-to": "3.0.2",
     "typedoc": "0.27.6",
     "typedoc-plugin-markdown": "4.4.1",
+    "typedoc-plugin-mdn-links": "4.0.12",
     "vite": "6.1.0",
     "vitest": "3.0.5"
   },

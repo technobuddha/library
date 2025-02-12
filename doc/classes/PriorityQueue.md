@@ -1,43 +1,33 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / PriorityQueue
+[@technobuddha/library](../INDEX.md) / PriorityQueue
 
 # Class: PriorityQueue\<T\>
 
-Defined in: [priority-queue.ts:4](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L4)
+Defined in: [priority-queue.ts:6](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L6)
 
 A simple priority queue
 
 ## Type Parameters
 
-• **T**
+| Type Parameter |
+| ------ |
+| `T` |
 
 ## Constructors
 
 ### new PriorityQueue()
 
-> **new PriorityQueue**\<`T`\>(`comparator`, `contents`?): [`PriorityQueue`](PriorityQueue.md)\<`T`\>
+> **new PriorityQueue**\<`T`\>(`comparator`: (`a`: `T`, `b`: `T`) => `number`, `contents`?: [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`\>): [`PriorityQueue`](PriorityQueue.md)\<`T`\>
 
-Defined in: [priority-queue.ts:10](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L10)
+Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L12)
 
 #### Parameters
 
-##### comparator
-
-(`a`, `b`) => `number`
-
-Function to compare two elements and puts them in priority order.  Takes two elements as arguments and returns a number greater, less
-then or equal to zero.
-
-##### contents?
-
-`Iterable`\<`T`\>
-
-Initial contents of the queue
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `comparator` | (`a`: `T`, `b`: `T`) => `number` | Function to compare two elements and puts them in priority order. Takes two elements as arguments and returns a number greater, less then or equal to zero. |
+| `contents`? | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`\> | Initial contents of the queue |
 
 #### Returns
 
@@ -51,7 +41,7 @@ Initial contents of the queue
 
 > **get** **size**(): `number`
 
-Defined in: [priority-queue.ts:64](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L64)
+Defined in: [priority-queue.ts:66](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L66)
 
 Determine the number of items in the queue
 
@@ -65,15 +55,15 @@ number of element in the queue
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `Iterator`\<`T`\>
+> **\[iterator\]**(): [`Iterator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator)\<`T`\>
 
-Defined in: [priority-queue.ts:52](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L52)
+Defined in: [priority-queue.ts:54](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L54)
 
 Iterate through all elements in the queue
 
 #### Returns
 
-`Iterator`\<`T`\>
+[`Iterator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator)\<`T`\>
 
 generator function
 
@@ -81,23 +71,23 @@ generator function
 
 ### map()
 
-> **map**\<`S`\>(`f`): `S`[]
+> **map**\<`S`\>(`f`: (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S`): `S`[]
 
-Defined in: [priority-queue.ts:74](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L74)
+Defined in: [priority-queue.ts:76](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L76)
 
 Transform all elements in the queue
 
 #### Type Parameters
 
-• **S**
+| Type Parameter |
+| ------ |
+| `S` |
 
 #### Parameters
 
-##### f
-
-(`value`, `index`, `array`) => `S`
-
-Function to transforme each element of the queue
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `f` | (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S` | Function to transforme each element of the queue |
 
 #### Returns
 
@@ -111,7 +101,7 @@ array of transformed queue elements
 
 > **pop**(): `undefined` \| `T`
 
-Defined in: [priority-queue.ts:40](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L40)
+Defined in: [priority-queue.ts:42](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L42)
 
 Return and remove the highest priority item from the queue
 
@@ -125,19 +115,17 @@ queue element
 
 ### push()
 
-> **push**(...`o`): `void`
+> **push**(...`o`: `T`[]): `void`
 
-Defined in: [priority-queue.ts:30](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L30)
+Defined in: [priority-queue.ts:32](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L32)
 
 Add an element to the queue
 
 #### Parameters
 
-##### o
-
-...`T`[]
-
-element to be added
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| ...`o` | `T`[] | element to be added |
 
 #### Returns
 
@@ -147,19 +135,17 @@ element to be added
 
 ### reorder()
 
-> **reorder**(`newComparator`): `void`
+> **reorder**(`newComparator`: (`a`: `T`, `b`: `T`) => `number`): `void`
 
-Defined in: [priority-queue.ts:86](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L86)
+Defined in: [priority-queue.ts:88](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L88)
 
 Change the function used to order the queue
 
 #### Parameters
 
-##### newComparator
-
-(`a`, `b`) => `number`
-
-function to compare elements of the queue
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `newComparator` | (`a`: `T`, `b`: `T`) => `number` | function to compare elements of the queue |
 
 #### Returns
 

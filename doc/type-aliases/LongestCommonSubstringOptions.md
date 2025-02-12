@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / LongestCommonSubstringOptions
+[@technobuddha/library](../INDEX.md) / LongestCommonSubstringOptions
 
 # Type Alias: LongestCommonSubstringOptions
 
-> **LongestCommonSubstringOptions**: `object`
+> **LongestCommonSubstringOptions**: \{ `caseInsensitive`: `boolean`; \}
 
-Defined in: [longest-common-substring.ts:3](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L3)
+Defined in: [longest-common-substring.ts:7](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L7)
 
 ## Type declaration
 
-### caseInsensitive?
-
-> `optional` **caseInsensitive**: `boolean`
-
-compare the two strings in case insensitive mode
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="caseinsensitive"></a> `caseInsensitive`? | `boolean` | compare the two strings in case insensitive mode | [longest-common-substring.ts:9](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L9) |

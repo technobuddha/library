@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isLeapYear
+[@technobuddha/library](../INDEX.md) / isLeapYear
 
 # Function: isLeapYear()
 
-> **isLeapYear**(`input`, `__namedParameters`): `boolean`
+> **isLeapYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsLeapYearOptions`](../type-aliases/IsLeapYearOptions.md)): `boolean`
 
-Defined in: [is-leap-year.ts:15](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L15)
+Defined in: [is-leap-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L21)
 
 Determine if a year is a leap year
 
 ## Parameters
 
-### input
-
-A date, or a year number
-
-`number` | `Date`
-
-### \_\_namedParameters
-
-[`IsLeapYearOptions`](../type-aliases/IsLeapYearOptions.md) = `{}`
-
-see [IsLeapYearOptions](../type-aliases/IsLeapYearOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date, or a year number |
+| `__namedParameters` | [`IsLeapYearOptions`](../type-aliases/IsLeapYearOptions.md) | see [IsLeapYearOptions](../type-aliases/IsLeapYearOptions.md) |
 
 ## Returns
 

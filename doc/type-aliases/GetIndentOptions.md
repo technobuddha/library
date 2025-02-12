@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetIndentOptions
+[@technobuddha/library](../INDEX.md) / GetIndentOptions
 
 # Type Alias: GetIndentOptions
 
-> **GetIndentOptions**: `object`
+> **GetIndentOptions**: \{ `indenter`: `string`; \}
 
-Defined in: [get-indent.ts:5](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L5)
+Defined in: [get-indent.ts:9](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L9)
 
 ## Type declaration
 
-### indenter?
-
-> `optional` **indenter**: `string`
-
-The indentation character
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="indenter"></a> `indenter`? | `string` | The indentation character | [get-indent.ts:11](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L11) |

@@ -13,6 +13,8 @@ import { isInteger, isNaN } from 'lodash-es';
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
  * @param input - The number to convert
+ * @group Math
+ * @category Numbering
  */
 export function ordinal(input: number): string {
   if (isNaN(input)) {

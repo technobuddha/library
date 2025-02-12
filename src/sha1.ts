@@ -7,7 +7,7 @@
  * Distributed under the BSD License
  * See http://pajhome.org.uk/crypt/md5 for details.
  */
-import { HashBase } from './hash.js';
+import { HashBase } from './hash-base.js';
 
 function rotl1(num: number): number {
   return (num << 1) | (num >>> 31);
@@ -38,6 +38,11 @@ function int32(x: number): number {
   return x | 0;
 }
 
+/**
+ * Secure Hash Algorithm, SHA-1
+ * @group Crypto
+ * @category SHA1
+ */
 export class Sha1 extends HashBase {
   private a = 0x67452301;
   private b = 0xefcdab89;

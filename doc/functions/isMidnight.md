@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isMidnight
+[@technobuddha/library](../INDEX.md) / isMidnight
 
 # Function: isMidnight()
 
-> **isMidnight**(`input`, `__namedParamaters`): `boolean`
+> **isMidnight**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParamaters`: [`IsMidnightOptions`](../type-aliases/IsMidnightOptions.md)): `boolean`
 
-Defined in: [is-midnight.ts:13](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L13)
+Defined in: [is-midnight.ts:19](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L19)
 
 Determine if a date is at midnight
 
 ## Parameters
 
-### input
-
-`Date`
-
-A date
-
-### \_\_namedParamaters
-
-[`IsMidnightOptions`](../type-aliases/IsMidnightOptions.md) = `{}`
-
-see [IsMidnightOptions](../type-aliases/IsMidnightOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date |
+| `__namedParamaters` | [`IsMidnightOptions`](../type-aliases/IsMidnightOptions.md) | see [IsMidnightOptions](../type-aliases/IsMidnightOptions.md) |
 
 ## Returns
 

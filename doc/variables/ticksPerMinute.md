@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ticksPerMinute
+[@technobuddha/library](../INDEX.md) / ticksPerMinute
 
 # Variable: ticksPerMinute
 
 > `const` **ticksPerMinute**: `number`
 
-Defined in: [constants.ts:14](https://github.com/technobuddha/library/blob/main/src/constants.ts#L14)
+Defined in: [constants.ts:57](https://github.com/technobuddha/library/blob/main/src/constants.ts#L57)

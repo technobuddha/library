@@ -1,23 +1,16 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / Polar
+[@technobuddha/library](../INDEX.md) / Polar
 
 # Type Alias: Polar
 
-> **Polar**: `object`
+> **Polar**: \{ `angle`: `number`; `radius`: `number`; \}
 
-Defined in: [coordinates.ts:6](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L6)
+Defined in: [coordinates.ts:14](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L14)
 
 ## Type declaration
 
-### angle
-
-> **angle**: `number`
-
-### radius
-
-> **radius**: `number`
+| Name | Type | Defined in |
+| ------ | ------ | ------ |
+| <a id="angle"></a> `angle` | `number` | [coordinates.ts:16](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L16) |
+| <a id="radius"></a> `radius` | `number` | [coordinates.ts:15](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L15) |

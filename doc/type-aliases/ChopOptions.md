@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ChopOptions
+[@technobuddha/library](../INDEX.md) / ChopOptions
 
 # Type Alias: ChopOptions
 
-> **ChopOptions**: `object`
+> **ChopOptions**: \{ `truncate`: `boolean`; \}
 
-Defined in: [chop.ts:5](https://github.com/technobuddha/library/blob/main/src/chop.ts#L5)
+Defined in: [chop.ts:9](https://github.com/technobuddha/library/blob/main/src/chop.ts#L9)
 
 ## Type declaration
 
-### truncate?
-
-> `optional` **truncate**: `boolean`
-
-If true, the last block will be omitted if has insufficient characters *
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="truncate"></a> `truncate`? | `boolean` | If true, the last block will be omitted if has insufficient characters * | [chop.ts:11](https://github.com/technobuddha/library/blob/main/src/chop.ts#L11) |

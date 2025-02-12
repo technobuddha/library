@@ -1,5 +1,9 @@
 import { isDate, isNumber, isString, toString } from 'lodash-es';
 
+/**
+ * @group Time
+ * @category Conversion
+ */
 export function toDate(entity: unknown): Date {
   if (entity === null || entity === undefined) {
     return new Date(Number.NaN);

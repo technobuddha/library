@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toHumanCase
+[@technobuddha/library](../INDEX.md) / toHumanCase
 
 # Function: toHumanCase()
 
-> **toHumanCase**(`input`): `string`
+> **toHumanCase**(`input`: `string`): `string`
 
-Defined in: [to-human-case.ts:12](https://github.com/technobuddha/library/blob/main/src/to-human-case.ts#L12)
+Defined in: [to-human-case.ts:14](https://github.com/technobuddha/library/blob/main/src/to-human-case.ts#L14)
 
 Convert an identifier string to human readable form
 
 ## Parameters
 
-### input
-
-`string`
-
-The identifier string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The identifier string |
 
 ## Returns
 

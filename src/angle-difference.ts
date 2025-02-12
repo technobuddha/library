@@ -21,6 +21,8 @@ import { normalizeAngle } from './normalize-angle.js';
  * angleDifference(PI * 11/6, PI * 1/6) is PI * 2/6
  *
  * angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
+ * @group Geometry
+ * @category Angle Difference
  */
 export function angleDifference(startAngle: number, endAngle: number): number {
   let d = normalizeAngle(endAngle) - normalizeAngle(startAngle);

@@ -1,5 +1,9 @@
 import { floor as lodash_floor } from 'lodash-es';
 
+/**
+ * @group Math
+ * @category Ceiling / Floor
+ */
 export type FloorOptions = {
   tolerance?: number;
   precision?: number;
@@ -14,6 +18,8 @@ export type FloorOptions = {
  * @param input - A number.
  * @param precision - The prevision to round down to.
  * @returns The largest integer less than or equal to @see num.
+ * @group Math
+ * @category Ceiling / Floor
  */
 export function floor(input: number, { tolerance = 0, precision = 0 }: FloorOptions = {}): number {
   return lodash_floor(input + Math.sign(input) * tolerance + Number.EPSILON, precision);

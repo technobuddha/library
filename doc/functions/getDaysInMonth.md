@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getDaysInMonth
+[@technobuddha/library](../INDEX.md) / getDaysInMonth
 
 # Function: getDaysInMonth()
 
-> **getDaysInMonth**(`input`, `__namedParameters`): `number`
+> **getDaysInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetDaysInMonthOptions`](../type-aliases/GetDaysInMonthOptions.md)): `number`
 
-Defined in: [get-days-in-month.ts:17](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L17)
+Defined in: [get-days-in-month.ts:23](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L23)
 
 Determine the number of days in the month for a date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### \_\_namedParameters
-
-[`GetDaysInMonthOptions`](../type-aliases/GetDaysInMonthOptions.md) = `{}`
-
-see [GetDaysInMonthOptions](../type-aliases/GetDaysInMonthOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `__namedParameters` | [`GetDaysInMonthOptions`](../type-aliases/GetDaysInMonthOptions.md) | see [GetDaysInMonthOptions](../type-aliases/GetDaysInMonthOptions.md) |
 
 ## Returns
 

@@ -1,16 +1,12 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / longestCommonSubstring
+[@technobuddha/library](../INDEX.md) / longestCommonSubstring
 
 # Function: longestCommonSubstring()
 
-> **longestCommonSubstring**(`string1`, `string2`, `__namedParameters`): `string`
+> **longestCommonSubstring**(`string1`: `string`, `string2`: `string`, `__namedParameters`: [`LongestCommonSubstringOptions`](../type-aliases/LongestCommonSubstringOptions.md)): `string`
 
-Defined in: [longest-common-substring.ts:19](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L19)
+Defined in: [longest-common-substring.ts:25](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L25)
 
 Implementation of Longest Common Substring problem.
 https://en.wikipedia.org/wiki/Longest_common_substring_problem
@@ -19,21 +15,11 @@ Returns the longest possible substring that is substring of both of given string
 
 ## Parameters
 
-### string1
-
-`string`
-
-First string.
-
-### string2
-
-`string`
-
-Second string.
-
-### \_\_namedParameters
-
-[`LongestCommonSubstringOptions`](../type-aliases/LongestCommonSubstringOptions.md) = `{}`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `string1` | `string` | First string. |
+| `string2` | `string` | Second string. |
+| `__namedParameters` | [`LongestCommonSubstringOptions`](../type-aliases/LongestCommonSubstringOptions.md) | - |
 
 ## Returns
 

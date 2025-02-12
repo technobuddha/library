@@ -5,6 +5,8 @@ const titles = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?
  *
  * @param input - the string to make title case
  * @returns the string in title case
+ * @group String
+ * @category Case Conversion
  */
 export function toTitleCase(input: string): string {
   return input.replaceAll(

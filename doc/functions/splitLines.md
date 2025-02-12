@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / splitLines
+[@technobuddha/library](../INDEX.md) / splitLines
 
 # Function: splitLines()
 
-> **splitLines**(`input`): `string`[]
+> **splitLines**(`input`: `string`): `string`[]
 
-Defined in: [split-lines.ts:9](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L9)
+Defined in: [split-lines.ts:11](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L11)
 
 Split a string into an array of lines
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to split
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to split |
 
 ## Returns
 

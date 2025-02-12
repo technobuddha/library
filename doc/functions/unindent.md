@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / unindent
+[@technobuddha/library](../INDEX.md) / unindent
 
 # Function: unindent()
 
-> **unindent**(`input`, `pattern`): `string`
+> **unindent**(`input`: `string`, `pattern`: [`UnindentOptions`](../type-aliases/UnindentOptions.md)): `string`
 
-Defined in: [unindent.ts:17](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L17)
+Defined in: [unindent.ts:23](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L23)
 
 Remove indentation from text
 
 ## Parameters
 
-### input
-
-`string`
-
-The indented text
-
-### pattern
-
-[`UnindentOptions`](../type-aliases/UnindentOptions.md) = `{}`
-
-(space)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The indented text |
+| `pattern` | [`UnindentOptions`](../type-aliases/UnindentOptions.md) | (space) |
 
 ## Returns
 

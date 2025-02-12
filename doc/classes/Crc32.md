@@ -1,20 +1,12 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / Crc32
+[@technobuddha/library](../INDEX.md) / Crc32
 
 # Class: Crc32
 
 Defined in: [crc32.ts:57](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L57)
 
-Compute the CRC32 checksum for a string
-
-## Param
-
-The string
+Compute the CRC32 checksum
 
 ## Implements
 
@@ -38,13 +30,13 @@ Defined in: [crc32.ts:60](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **digest**(): `Uint8Array`
+> **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 Defined in: [crc32.ts:79](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L79)
 
 ##### Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 ##### Implementation of
 
@@ -52,15 +44,15 @@ Defined in: [crc32.ts:79](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **digest**(`encoding`): `string`
+> **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
 Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L80)
 
 ##### Parameters
 
-###### encoding
-
-[`BinaryEncoding`](../type-aliases/BinaryEncoding.md)
+| Parameter | Type |
+| ------ | ------ |
+| `encoding` | [`BinaryEncoding`](../type-aliases/BinaryEncoding.md) |
 
 ##### Returns
 
@@ -76,15 +68,15 @@ Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **update**(`data`): `this`
+> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
 
 Defined in: [crc32.ts:64](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L64)
 
 ##### Parameters
 
-###### data
-
-`ArrayBuffer` | `TypedArray`
+| Parameter | Type |
+| ------ | ------ |
+| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray` |
 
 ##### Returns
 
@@ -96,19 +88,16 @@ Defined in: [crc32.ts:64](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **update**(`data`, `encoding`?): `this`
+> **update**(`data`: `string`, `encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
 
 Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L65)
 
 ##### Parameters
 
-###### data
-
-`string`
-
-###### encoding?
-
-[`Encoding`](../type-aliases/Encoding.md)
+| Parameter | Type |
+| ------ | ------ |
+| `data` | `string` |
+| `encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) |
 
 ##### Returns
 

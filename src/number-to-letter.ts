@@ -4,11 +4,23 @@ import { floor } from './floor.js';
 // eslint-disable-next-line no-secrets/no-secrets
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+/**
+ * @group String
+ * @category Sorting
+ */
 export type NumberToLetterOptions = {
   /** The alphabet to use */
   alphabet?: string;
 };
 
+/**
+ * Convert a number to a letter, using the alphabet (default: A-Z)
+ * @param num - The number to convert
+ * @param __namedParameters - see {@link NumberToLetterOptions}
+ * @returns The letter
+ * @group String
+ * @category Sorting
+ */
 export function numberToLetter(
   num: number,
   { alphabet = ALPHABET }: NumberToLetterOptions = {},

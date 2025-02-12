@@ -1,7 +1,10 @@
 import { escapeRegExp } from 'lodash-es';
 
 import { empty } from './constants.js';
-
+/**
+ * @group String
+ * @category Templates
+ */
 export type FillTemplateOptions = {
   /** The opening field delimiter */
   open?: string;
@@ -17,6 +20,8 @@ export type FillTemplateOptions = {
  * @defaultValue open '\{\{'
  * @defaultValue close '\}\}'
  * @returns template with values replaced
+ * @group String
+ * @category Templates
  */
 export function fillTemplate(
   input: string,

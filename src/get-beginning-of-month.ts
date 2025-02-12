@@ -1,3 +1,7 @@
+/**
+ * @group Time
+ * @category Month
+ */
 export type GetBeginningOfMonthOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -10,6 +14,8 @@ export type GetBeginningOfMonthOptions = {
  * @param __namedParamaters - see {@link GetBeginningOfMonthOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified month
+ * @group Time
+ * @category Month
  */
 export function getBeginningOfMonth(
   input: Date,

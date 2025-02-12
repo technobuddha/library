@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toCamelCase
+[@technobuddha/library](../INDEX.md) / toCamelCase
 
 # Function: toCamelCase()
 
-> **toCamelCase**(`input`): `string`
+> **toCamelCase**(`input`: `string`): `string`
 
-Defined in: [to-camel-case.ts:9](https://github.com/technobuddha/library/blob/main/src/to-camel-case.ts#L9)
+Defined in: [to-camel-case.ts:11](https://github.com/technobuddha/library/blob/main/src/to-camel-case.ts#L11)
 
 Convert an identifier string to a camel case
 
 ## Parameters
 
-### input
-
-`string`
-
-The identifier string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The identifier string |
 
 ## Returns
 

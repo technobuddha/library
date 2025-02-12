@@ -1,6 +1,10 @@
 import { clean } from './clean.js';
 import { isWhitespace } from './is-whitespace.js';
 
+/**
+ * @group String
+ * @category Split
+ */
 export type SplitWordsOptions = {
   /** The delimiter between words */
   delimiter?: string | RegExp;
@@ -13,6 +17,8 @@ export type SplitWordsOptions = {
  * @param __namedParameters - see {@link SplitWordsOptions}
  * @defaultValue delimiter whitespace
  * @returns array of words
+ * @group String
+ * @category Split
  */
 export function splitWords(
   input: string,

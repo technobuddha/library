@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / possessive
+[@technobuddha/library](../INDEX.md) / possessive
 
 # Function: possessive()
 
-> **possessive**(`input`): `string`
+> **possessive**(`input`: `string`): `string`
 
-Defined in: [possessive.ts:10](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L10)
+Defined in: [possessive.ts:12](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L12)
 
 Determine the possessive form of a word
 
 ## Parameters
 
-### input
-
-`string`
-
-the word
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | the word |
 
 ## Returns
 

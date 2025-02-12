@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isUpperCase
+[@technobuddha/library](../INDEX.md) / isUpperCase
 
 # Function: isUpperCase()
 
-> **isUpperCase**(`input`): `boolean`
+> **isUpperCase**(`input`: `string`): `boolean`
 
-Defined in: [is-upper-case.ts:9](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L9)
+Defined in: [is-upper-case.ts:11](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L11)
 
 Test a string for all upper case characters
 
 ## Parameters
 
-### input
-
-`string`
-
-string to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | string to test |
 
 ## Returns
 

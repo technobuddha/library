@@ -1,6 +1,10 @@
 import { empty, space } from './constants.js';
 import { splitWords } from './split-words.js';
 
+/**
+ * @group String
+ * @category Word Wrapping
+ */
 export type WordwrapOptions = {
   /** The width to wrap to */
   width?: number;
@@ -22,6 +26,8 @@ export type WordwrapOptions = {
  * @defaultValue cut default false
  * @defaultValue trailingSpaces false
  * @returns wrapped text
+ * @group String
+ * @category Word Wrapping
  */
 export function wordwrap(
   input: string,

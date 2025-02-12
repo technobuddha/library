@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / unescapeJS
+[@technobuddha/library](../INDEX.md) / unescapeJS
 
 # Function: unescapeJS()
 
-> **unescapeJS**(`input`): `string`
+> **unescapeJS**(`input`: `string`): `string`
 
-Defined in: [unescape-js.ts:7](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L7)
+Defined in: [unescape-js.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L9)
 
 Unescape a string encoded in Javascript style
 
 ## Parameters
 
-### input
-
-`string`
-
-the string to unescape
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | the string to unescape |
 
 ## Returns
 

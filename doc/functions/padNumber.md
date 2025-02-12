@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / padNumber
+[@technobuddha/library](../INDEX.md) / padNumber
 
 # Function: padNumber()
 
-> **padNumber**(`input`, `length`): `string`
+> **padNumber**(`input`: `number`, `length`: `number`): `string`
 
-Defined in: [pad-number.ts:10](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L10)
+Defined in: [pad-number.ts:12](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L12)
 
 Add leading zeros to a number to ensure a string of a minimum length
 
 ## Parameters
 
-### input
-
-`number`
-
-The number to pad
-
-### length
-
-`number` = `2`
-
-The minimum length of the resulting string
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `input` | `number` | `undefined` | The number to pad |
+| `length` | `number` | `2` | The minimum length of the resulting string |
 
 ## Returns
 

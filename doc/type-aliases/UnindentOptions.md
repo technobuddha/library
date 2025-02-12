@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / UnindentOptions
+[@technobuddha/library](../INDEX.md) / UnindentOptions
 
 # Type Alias: UnindentOptions
 
-> **UnindentOptions**: `object`
+> **UnindentOptions**: \{ `indenter`: `string`; \}
 
-Defined in: [unindent.ts:6](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L6)
+Defined in: [unindent.ts:10](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L10)
 
 ## Type declaration
 
-### indenter?
-
-> `optional` **indenter**: `string`
-
-the indentation character
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="indenter"></a> `indenter`? | `string` | the indentation character | [unindent.ts:12](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L12) |

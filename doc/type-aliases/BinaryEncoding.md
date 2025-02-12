@@ -1,13 +1,11 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / BinaryEncoding
+[@technobuddha/library](../INDEX.md) / BinaryEncoding
 
 # Type Alias: BinaryEncoding
 
 > **BinaryEncoding**: `"base64"` \| `"base64url"` \| `"hex"` \| `"binary"`
 
-Defined in: [encode-binary.ts:3](https://github.com/technobuddha/library/blob/main/src/encode-binary.ts#L3)
+Defined in: [binary-encoding.ts:6](https://github.com/technobuddha/library/blob/main/src/binary-encoding.ts#L6)
+
+The binary encoding to use

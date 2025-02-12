@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toDotCase
+[@technobuddha/library](../INDEX.md) / toDotCase
 
 # Function: toDotCase()
 
-> **toDotCase**(`input`): `string`
+> **toDotCase**(`input`: `string`): `string`
 
-Defined in: [to-dot-case.ts:7](https://github.com/technobuddha/library/blob/main/src/to-dot-case.ts#L7)
+Defined in: [to-dot-case.ts:9](https://github.com/technobuddha/library/blob/main/src/to-dot-case.ts#L9)
 
 Convert an identifier string to a dot form
 
 ## Parameters
 
-### input
-
-`string`
-
-The identifier string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The identifier string |
 
 ## Returns
 

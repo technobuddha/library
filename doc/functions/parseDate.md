@@ -1,30 +1,24 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / parseDate
+[@technobuddha/library](../INDEX.md) / parseDate
 
 # Function: parseDate()
 
-> **parseDate**(`input`): `Date`
+> **parseDate**(`input`: `string`): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [parse-date.ts:56](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L56)
+Defined in: [parse-date.ts:58](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L58)
 
 Parse a string into a Date object
 
 ## Parameters
 
-### input
-
-`string`
-
-The string containing a date
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string containing a date |
 
 ## Returns
 
-`Date`
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 new Date object
 

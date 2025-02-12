@@ -1,21 +1,17 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / EscapeHtmlSettings
+[@technobuddha/library](../INDEX.md) / EscapeHtmlSettings
 
 # Type Alias: EscapeHtmlSettings
 
-> **EscapeHtmlSettings**: `object`
+> **EscapeHtmlSettings**: \{ `escapeNonAscii`: `boolean`; \}
 
-Defined in: [escape-html.ts:4](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L4)
+Defined in: [escape-html.ts:9](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L9)
+
+Options for [escapeHTML](../functions/escapeHTML.md)
 
 ## Type declaration
 
-### escapeNonAscii?
-
-> `optional` **escapeNonAscii**: `boolean`
-
-escape all characters outside the 7-bit ASCII range
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="escapenonascii"></a> `escapeNonAscii`? | `boolean` | escape all characters outside the 7-bit ASCII range | [escape-html.ts:11](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L11) |

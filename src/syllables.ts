@@ -7,6 +7,8 @@ import { toASCII } from './to-ascii.js';
  *
  * @param input - The string
  * @returns the number of syllables
+ * @group English
+ * @category Syllables
  */
 export function syllables(input: string): number {
   return splitWords(toASCII(input.toLocaleLowerCase())).reduce((c, w) => {

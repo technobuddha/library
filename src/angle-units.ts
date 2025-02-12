@@ -1,9 +1,20 @@
-export type AngleUnit = 'degrees' | 'rads' | 'radians' | 'grads' | 'gradians' | 'turns';
-export const angleUnits: Record<AngleUnit, number> = {
+/**
+ * Angle units.
+ * @group Geometry
+ * @category Angle Conversion
+ */
+export const angleUnits = {
   degrees: 360,
-  rads: Math.PI * 2,
-  radians: Math.PI * 2,
+  rads: 6.283185307179586, // Math.PI * 2,
+  radians: 6.283185307179586, // Math.PI * 2,
   grads: 400,
   gradians: 400,
   turns: 1,
 };
+
+/**
+ * Angle units.
+ * @group Geometry
+ * @category Angle Conversion
+ */
+export type AngleUnit = keyof typeof angleUnits;

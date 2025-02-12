@@ -1,18 +1,14 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / encodeBase64
+[@technobuddha/library](../INDEX.md) / encodeBase64
 
 # Function: encodeBase64()
 
 ## Call Signature
 
-> **encodeBase64**(`chars`, `encoding`): `string`
+> **encodeBase64**(`chars`: `string`, `encoding`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `string`
 
-Defined in: [encode-base64.ts:76](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L76)
+Defined in: [encode-base64.ts:80](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L80)
 
 Creates a Base64-encoded ASCII string from a string.
 
@@ -24,17 +20,10 @@ Before encoding, the string is converted to binary using [encodeText](encodeText
 
 ### Parameters
 
-#### chars
-
-`string`
-
-The string to encode
-
-#### encoding
-
-[`Encoding`](../type-aliases/Encoding.md)
-
-The encoding of the input string
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `chars` | `string` | The string to encode |
+| `encoding` | [`TextEncoding`](../type-aliases/TextEncoding.md) | The encoding of the input string |
 
 ### Returns
 
@@ -50,9 +39,9 @@ encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
 
 ## Call Signature
 
-> **encodeBase64**(`binary`): `string`
+> **encodeBase64**(`binary`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)): `string`
 
-Defined in: [encode-base64.ts:91](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L91)
+Defined in: [encode-base64.ts:97](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L97)
 
 Creates a Base64-encoded ASCII string from a binary source.
 
@@ -62,11 +51,9 @@ encode control characters such as ASCII values 0 through 31.
 
 ### Parameters
 
-#### binary
-
-`Uint8Array`
-
-The *binary data* to encode
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `binary` | [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | The *binary data* to encode |
 
 ### Returns
 

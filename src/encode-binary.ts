@@ -1,6 +1,5 @@
+import { type BinaryEncoding } from './binary-encoding.js';
 import { encodeBase64, encodeBase64Url } from './encode-base64.js';
-
-export type BinaryEncoding = 'base64' | 'base64url' | 'hex' | 'binary';
 
 /**
  * Encode an binary object into a string
@@ -15,6 +14,8 @@ export type BinaryEncoding = 'base64' | 'base64url' | 'hex' | 'binary';
  * @param input - binary object
  * @param encoding - The encoding to use
  * @returns encoded string
+ * @group Encoding
+ * @category Binary
  */
 export function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): string {
   switch (encoding) {

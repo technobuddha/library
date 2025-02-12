@@ -2,6 +2,10 @@ import { type DayOfWeek } from './constants.js';
 import { day, daysPerWeek } from './constants.js';
 import { modulo } from './modulo.js';
 
+/**
+ * @group Time
+ * @category Week
+ */
 export type GetBeginningOfWeekOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -16,6 +20,8 @@ export type GetBeginningOfWeekOptions = {
  * @param __namedParameters - see {@link GetBeginningOfWeekOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified week
+ * @group Time
+ * @category Week
  */
 export function getBeginningOfWeek(
   input: Date,

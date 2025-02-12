@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetBeginningOfDayOptions
+[@technobuddha/library](../INDEX.md) / GetBeginningOfDayOptions
 
 # Type Alias: GetBeginningOfDayOptions
 
-> **GetBeginningOfDayOptions**: `object`
+> **GetBeginningOfDayOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [get-beginning-of-day.ts:1](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L1)
+Defined in: [get-beginning-of-day.ts:5](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L5)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the UTC timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the UTC timezone | [get-beginning-of-day.ts:7](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L7) |

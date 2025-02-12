@@ -1,30 +1,25 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / randomShuffle
+[@technobuddha/library](../INDEX.md) / randomShuffle
 
 # Function: randomShuffle()
 
-> **randomShuffle**\<`T`\>(`deck`, `random`): `T`[]
+> **randomShuffle**\<`T`\>(`deck`: `T`[], `random`: () => `number`): `T`[]
 
-Defined in: [random-shuffle.ts:1](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L1)
+Defined in: [random-shuffle.ts:5](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L5)
 
 ## Type Parameters
 
-• **T**
+| Type Parameter |
+| ------ |
+| `T` |
 
 ## Parameters
 
-### deck
-
-`T`[]
-
-### random
-
-() => `number`
+| Parameter | Type | Default value |
+| ------ | ------ | ------ |
+| `deck` | `T`[] | `undefined` |
+| `random` | () => `number` | `Math.random` |
 
 ## Returns
 

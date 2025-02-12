@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / IndefiniteArticleOptions
+[@technobuddha/library](../INDEX.md) / IndefiniteArticleOptions
 
 # Type Alias: IndefiniteArticleOptions
 
-> **IndefiniteArticleOptions**: `object`
+> **IndefiniteArticleOptions**: \{ `only`: `boolean`; \}
 
-Defined in: [indefinite-article.ts:20](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L20)
+Defined in: [indefinite-article.ts:24](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L24)
 
 ## Type declaration
 
-### only?
-
-> `optional` **only**: `boolean`
-
-only return the indefinite article, do not combine with the input
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="only"></a> `only`? | `boolean` | only return the indefinite article, do not combine with the input | [indefinite-article.ts:26](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L26) |

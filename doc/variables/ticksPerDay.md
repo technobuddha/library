@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ticksPerDay
+[@technobuddha/library](../INDEX.md) / ticksPerDay
 
 # Variable: ticksPerDay
 
 > `const` **ticksPerDay**: `number`
 
-Defined in: [constants.ts:16](https://github.com/technobuddha/library/blob/main/src/constants.ts#L16)
+Defined in: [constants.ts:67](https://github.com/technobuddha/library/blob/main/src/constants.ts#L67)

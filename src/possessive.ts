@@ -6,6 +6,8 @@ import { removeDiacritics } from './remove-diacritics.js';
  *
  * @param input - the word
  * @returns the posessive form of the word
+ * @group English
+ * @category Possessive
  */
 export function possessive(input: string): string {
   const last = removeDiacritics(input).at(-1);

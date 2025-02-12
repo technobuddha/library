@@ -1,33 +1,17 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetISOWeekOfYearOptions
+[@technobuddha/library](../INDEX.md) / GetISOWeekOfYearOptions
 
 # Type Alias: GetISOWeekOfYearOptions
 
-> **GetISOWeekOfYearOptions**: `object`
+> **GetISOWeekOfYearOptions**: \{ `firstDayOfWeek`: [`DayOfWeek`](DayOfWeek.md); `utc`: `boolean`; `weekOneIncludes`: [`DayOfWeek`](DayOfWeek.md); \}
 
-Defined in: [get-iso-week-of-year.ts:7](https://github.com/technobuddha/library/blob/main/src/get-iso-week-of-year.ts#L7)
+Defined in: [get-iso-week-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/get-iso-week-of-year.ts#L11)
 
 ## Type declaration
 
-### firstDayOfWeek?
-
-> `optional` **firstDayOfWeek**: [`DayOfWeek`](DayOfWeek.md)
-
-The first day of the week
-
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
-
-### weekOneIncludes?
-
-> `optional` **weekOneIncludes**: [`DayOfWeek`](DayOfWeek.md)
-
-Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="firstdayofweek"></a> `firstDayOfWeek`? | [`DayOfWeek`](DayOfWeek.md) | The first day of the week | [get-iso-week-of-year.ts:17](https://github.com/technobuddha/library/blob/main/src/get-iso-week-of-year.ts#L17) |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [get-iso-week-of-year.ts:13](https://github.com/technobuddha/library/blob/main/src/get-iso-week-of-year.ts#L13) |
+| <a id="weekoneincludes"></a> `weekOneIncludes`? | [`DayOfWeek`](DayOfWeek.md) | Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it | [get-iso-week-of-year.ts:15](https://github.com/technobuddha/library/blob/main/src/get-iso-week-of-year.ts#L15) |

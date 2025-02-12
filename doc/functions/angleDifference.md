@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / angleDifference
+[@technobuddha/library](../INDEX.md) / angleDifference
 
 # Function: angleDifference()
 
-> **angleDifference**(`startAngle`, `endAngle`): `number`
+> **angleDifference**(`startAngle`: `number`, `endAngle`: `number`): `number`
 
-Defined in: [angle-difference.ts:25](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L25)
+Defined in: [angle-difference.ts:27](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L27)
 
 Computes the difference between startAngle and endAngle (angles in radians).
 
 ## Parameters
 
-### startAngle
-
-`number`
-
-Start angle in radians.
-
-### endAngle
-
-`number`
-
-End angle in radians.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `startAngle` | `number` | Start angle in radians. |
+| `endAngle` | `number` | End angle in radians. |
 
 ## Returns
 

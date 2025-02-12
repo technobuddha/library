@@ -5,6 +5,8 @@ import { modulo } from './modulo.js';
  * be normalized to be the equivalent angle with that range.
  * @param angle - Angle in radians.
  * @returns Standardized angle.
+ * @group Geometry
+ * @category Normalize Angle
  */
 export function normalizeAngle(angle: number): number {
   return modulo(angle, Math.PI * 2);

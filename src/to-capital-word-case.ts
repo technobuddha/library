@@ -1,3 +1,7 @@
+/**
+ * @group String
+ * @category Case Conversion
+ */
 export type ToCapitalWordCaseOptions = {
   /** Convert other characters in the string to lower case */
   lowerCase?: boolean;
@@ -9,6 +13,8 @@ export type ToCapitalWordCaseOptions = {
  * @param input - The string to capitalize
  * @param __namedParameters - see {@link ToCapitalWordCaseOptions}
  * @defaultValue lowercase false
+ * @group String
+ * @category Case Conversion
  */
 export function toCapitalWordCase(
   input: string,

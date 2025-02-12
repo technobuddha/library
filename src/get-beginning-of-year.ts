@@ -1,5 +1,9 @@
 import { month } from './constants.js';
 
+/**
+ * @group Time
+ * @category Year
+ */
 export type GetBeginningOfYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -12,6 +16,8 @@ export type GetBeginningOfYearOptions = {
  * @param __namedParameters - see {@link GetBeginningOfYearOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified year
+ * @group Time
+ * @category Year
  */
 export function getBeginningOfYear(
   input: Date,

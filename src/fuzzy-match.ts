@@ -2,6 +2,10 @@ import { diceCoefficient } from './dice-coefficient.js';
 import { levenshteinDistance } from './levenshtein-distance.js';
 import { longestCommonSubstring } from './longest-common-substring.js';
 
+/**
+ * @group String
+ * @category Fuzzy Match
+ */
 export type FuzzyMatchOptions = {
   /** The compairson will ignore case */
   caseInsensitive?: boolean;
@@ -13,6 +17,10 @@ export type FuzzyMatchOptions = {
   weightLongestCommonSubstring?: number;
 };
 
+/**
+ * @group String
+ * @category Fuzzy Match
+ */
 export function fuzzyMatch(
   input: string,
   comparedTo: string,

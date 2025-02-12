@@ -1,36 +1,25 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getBeginningOfYear
+[@technobuddha/library](../INDEX.md) / getBeginningOfYear
 
 # Function: getBeginningOfYear()
 
-> **getBeginningOfYear**(`input`, `__namedParameters`): `Date`
+> **getBeginningOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetBeginningOfYearOptions`](../type-aliases/GetBeginningOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-year.ts:16](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L16)
+Defined in: [get-beginning-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L22)
 
 Determine the start of the year for a date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### \_\_namedParameters
-
-[`GetBeginningOfYearOptions`](../type-aliases/GetBeginningOfYearOptions.md) = `{}`
-
-see [GetBeginningOfYearOptions](../type-aliases/GetBeginningOfYearOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `__namedParameters` | [`GetBeginningOfYearOptions`](../type-aliases/GetBeginningOfYearOptions.md) | see [GetBeginningOfYearOptions](../type-aliases/GetBeginningOfYearOptions.md) |
 
 ## Returns
 
-`Date`
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 The date value for midnight on the first day of the specified year
 

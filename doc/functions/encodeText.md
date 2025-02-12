@@ -1,33 +1,24 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / encodeText
+[@technobuddha/library](../INDEX.md) / encodeText
 
 # Function: encodeText()
 
-> **encodeText**(`input`, `_encoding`?): `Uint8Array`
+> **encodeText**(`input`: `string`, `_encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [encode-text.ts:13](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L13)
+Defined in: [encode-text.ts:14](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L14)
 
 Encode a unicode (UTF-16 encoded javascript) string into UTF8
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to encode
-
-### \_encoding?
-
-[`Encoding`](../type-aliases/Encoding.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to encode |
+| `_encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) | - |
 
 ## Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 The UTF-8 encoded string

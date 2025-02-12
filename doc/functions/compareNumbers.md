@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / compareNumbers
+[@technobuddha/library](../INDEX.md) / compareNumbers
 
 # Function: compareNumbers()
 
-> **compareNumbers**(`a`, `b`): `-1` \| `0` \| `1`
+> **compareNumbers**(`a`: `null` \| `number`, `b`: `null` \| `number`): `-1` \| `0` \| `1`
 
-Defined in: [compare-numbers.ts:10](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L10)
+Defined in: [compare-numbers.ts:12](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L12)
 
 Compare two numbers
 
 ## Parameters
 
-### a
-
-First object
-
-`null` | `number`
-
-### b
-
-Second object
-
-`null` | `number`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `a` | `null` \| `number` | First object |
+| `b` | `null` \| `number` | Second object |
 
 ## Returns
 

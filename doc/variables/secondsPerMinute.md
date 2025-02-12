@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / secondsPerMinute
+[@technobuddha/library](../INDEX.md) / secondsPerMinute
 
 # Variable: secondsPerMinute
 
 > `const` **secondsPerMinute**: `60` = `60`
 
-Defined in: [constants.ts:9](https://github.com/technobuddha/library/blob/main/src/constants.ts#L9)
+Defined in: [constants.ts:37](https://github.com/technobuddha/library/blob/main/src/constants.ts#L37)

@@ -2,6 +2,10 @@ import { toString } from 'lodash-es';
 
 import { empty, space } from './constants.js';
 
+/**
+ * @group English
+ * @category Coordinate
+ */
 export type CoordinateOptions = {
   /** Conjunction to insert in the last position (default 'and') */
   conjunction?: string;
@@ -16,6 +20,8 @@ export type CoordinateOptions = {
  *
  * @param input - Array of values
  * @param __namedParameters - see {@link CoordinateOptions}
+ * @group English
+ * @category Coordinate
  */
 export function coordinate<T = unknown>(
   input: ArrayLike<T>,

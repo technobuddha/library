@@ -2,8 +2,16 @@ import { isFinite, isNaN } from 'lodash-es';
 
 import { empty, space } from './constants.js';
 
+/**
+ * @group Math
+ * @category Numbering
+ */
 export type CardinalOptions = OptionsCardinal & OptionsIllion;
 
+/**
+ * @group Math
+ * @category Numbering
+ */
 export type OptionsCardinal = {
   /** The number of groups to output, each group consists of three digits. */
   groups?: number;
@@ -11,6 +19,10 @@ export type OptionsCardinal = {
   digits?: boolean;
 };
 
+/**
+ * @group Math
+ * @category Numbering
+ */
 export type OptionsIllion = {
   /** Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" */
   and?: string;
@@ -60,6 +72,8 @@ const ONE_HUNDRED = 100;
  * @defaultValue and (empty)
  * @defaultValue hyphen (space)
  * @returns The number spelled out
+ * @group Math
+ * @category Numbering
  */
 export function cardinal(
   input: number,
@@ -499,6 +513,8 @@ function illion(mantissa: string, exponent: number): IllionReturn {
  * @example 303 is "centillion"
  * @param exponent - The exponent to convert
  * @returns Order of Magnitude as text
+ * @group Math
+ * @category Numbering
  */
 export function orderOfMagnitude(exponent: number): string | null {
   return illion('000', exponent).word;
@@ -515,6 +531,8 @@ export function orderOfMagnitude(exponent: number): string | null {
  * @param input - number to convert
  * @param options - see {@link OptionsIllion}
  * @returns number as text
+ * @group Math
+ * @category Numbering
  */
 export function summarize(input: number, options: OptionsIllion = {}): string {
   return cardinal(input, { groups: 1, digits: true, ...options });

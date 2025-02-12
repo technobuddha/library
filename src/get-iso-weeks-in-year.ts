@@ -4,6 +4,10 @@ import { type DayOfWeek } from './constants.js';
 import { day, daysPerWeek, month } from './constants.js';
 import { modulo } from './modulo.js';
 
+/**
+ * @group Time
+ * @category Week
+ */
 export type GetISOWeeksInYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -18,6 +22,8 @@ export type GetISOWeeksInYearOptions = {
  * @param __namedParameters - see {@link GetISOWeeksInYearOptions}
  * @defaultValue weekOneIncludes Thursday
  * @returns The number of weeks in the year (52 or 53)
+ * @group Time
+ * @category Week
  */
 export function getISOWeeksInYear(
   input: Date | number,

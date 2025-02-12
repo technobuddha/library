@@ -2,7 +2,9 @@
  * Check to see if an object is a primitive
  *
  * @param input - object to test
- * @returns true, if the object is a c
+ * @returns true, if the object is a primitive
+ * @group Object
+ * @category Primitive
  */
 export function isPrimitive(
   input: unknown,

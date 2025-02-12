@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toCapitalWordCase
+[@technobuddha/library](../INDEX.md) / toCapitalWordCase
 
 # Function: toCapitalWordCase()
 
-> **toCapitalWordCase**(`input`, `__namedParameters`): `string`
+> **toCapitalWordCase**(`input`: `string`, `__namedParameters`: [`ToCapitalWordCaseOptions`](../type-aliases/ToCapitalWordCaseOptions.md)): `string`
 
-Defined in: [to-capital-word-case.ts:13](https://github.com/technobuddha/library/blob/main/src/to-capital-word-case.ts#L13)
+Defined in: [to-capital-word-case.ts:19](https://github.com/technobuddha/library/blob/main/src/to-capital-word-case.ts#L19)
 
 Capitalize the first letter of each word in a string
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to capitalize
-
-### \_\_namedParameters
-
-[`ToCapitalWordCaseOptions`](../type-aliases/ToCapitalWordCaseOptions.md) = `{}`
-
-see [ToCapitalWordCaseOptions](../type-aliases/ToCapitalWordCaseOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to capitalize |
+| `__namedParameters` | [`ToCapitalWordCaseOptions`](../type-aliases/ToCapitalWordCaseOptions.md) | see [ToCapitalWordCaseOptions](../type-aliases/ToCapitalWordCaseOptions.md) |
 
 ## Returns
 

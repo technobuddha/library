@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isOdd
+[@technobuddha/library](../INDEX.md) / isOdd
 
 # Function: isOdd()
 
-> **isOdd**(`input`): `boolean`
+> **isOdd**(`input`: `number`): `boolean`
 
-Defined in: [is-odd.ts:11](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L11)
+Defined in: [is-odd.ts:13](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L13)
 
 Tests to see if the specified value is an odd integer
 
 ## Parameters
 
-### input
-
-`number`
-
-The number to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number to test |
 
 ## Returns
 

@@ -1,30 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / fuzzyMatch
+[@technobuddha/library](../INDEX.md) / fuzzyMatch
 
 # Function: fuzzyMatch()
 
-> **fuzzyMatch**(`input`, `comparedTo`, `__namedParameters`): `number`
+> **fuzzyMatch**(`input`: `string`, `comparedTo`: `string`, `__namedParameters`: [`FuzzyMatchOptions`](../type-aliases/FuzzyMatchOptions.md)): `number`
 
-Defined in: [fuzzy-match.ts:16](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L16)
+Defined in: [fuzzy-match.ts:24](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L24)
 
 ## Parameters
 
-### input
-
-`string`
-
-### comparedTo
-
-`string`
-
-### \_\_namedParameters
-
-[`FuzzyMatchOptions`](../type-aliases/FuzzyMatchOptions.md) = `{}`
+| Parameter | Type |
+| ------ | ------ |
+| `input` | `string` |
+| `comparedTo` | `string` |
+| `__namedParameters` | [`FuzzyMatchOptions`](../type-aliases/FuzzyMatchOptions.md) |
 
 ## Returns
 

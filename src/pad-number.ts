@@ -6,6 +6,8 @@ import { isNaN } from 'lodash-es';
  * @param input - The number to pad
  * @param length - The minimum length of the resulting string
  * @returns number as a string with leading zeros as needed
+ * @group Number
+ * @category Format
  */
 export function padNumber(input: number, length = 2): string {
   if (isNaN(input) || input === Infinity || input === -Infinity) {

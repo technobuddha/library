@@ -3,6 +3,10 @@ import { escapeRegExp } from 'lodash-es';
 import { empty, space } from './constants.js';
 import { getIndent } from './get-indent.js';
 
+/**
+ * @group String
+ * @category Indentation
+ */
 export type UnindentOptions = {
   /** the indentation character */
   indenter?: string;
@@ -13,6 +17,8 @@ export type UnindentOptions = {
  *
  * @param input - The indented text
  * @param pattern - (space)
+ * @group String
+ * @category Indentation
  */
 export function unindent(input: string, { indenter = space }: UnindentOptions = {}): string {
   const indent = getIndent(input, { indenter });

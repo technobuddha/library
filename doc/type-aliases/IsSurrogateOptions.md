@@ -1,27 +1,18 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / IsSurrogateOptions
+[@technobuddha/library](../INDEX.md) / IsSurrogateOptions
 
 # Type Alias: IsSurrogateOptions
 
-> **IsSurrogateOptions**: `object`
+> **IsSurrogateOptions**: \{ `high`: `boolean`; `low`: `boolean`; \}
 
-Defined in: [is-surrogate.ts:1](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L1)
+Defined in: [is-surrogate.ts:6](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L6)
+
+Options for [isSurrogate](../functions/isSurrogate.md)
 
 ## Type declaration
 
-### high?
-
-> `optional` **high**: `boolean`
-
-test for high surrogates (D800-DBFF)
-
-### low?
-
-> `optional` **low**: `boolean`
-
-test for low surrogates (DC00-DFFF)
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="high"></a> `high`? | `boolean` | test for high surrogates (D800-DBFF) | [is-surrogate.ts:8](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L8) |
+| <a id="low"></a> `low`? | `boolean` | test for low surrogates (DC00-DFFF) | [is-surrogate.ts:10](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L10) |

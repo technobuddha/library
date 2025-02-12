@@ -1,14 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / HashBase
+[@technobuddha/library](../INDEX.md) / HashBase
 
 # Class: `abstract` HashBase
 
-Defined in: [hash.ts:15](https://github.com/technobuddha/library/blob/main/src/hash.ts#L15)
+Defined in: [hash-base.ts:25](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L25)
+
+The base class for most cryptographic hash functions
+
+## Extended by
+
+- [`Sha1`](Sha1.md)
+- [`Sha224`](Sha224.md)
+- [`Sha256`](Sha256.md)
+- [`Sha384`](Sha384.md)
+- [`Sha512`](Sha512.md)
 
 ## Implements
 
@@ -18,19 +24,16 @@ Defined in: [hash.ts:15](https://github.com/technobuddha/library/blob/main/src/h
 
 ### new HashBase()
 
-> **new HashBase**(`blockSize`, `finalSize`): [`HashBase`](HashBase.md)
+> **new HashBase**(`blockSize`: `number`, `finalSize`: `number`): [`HashBase`](HashBase.md)
 
-Defined in: [hash.ts:21](https://github.com/technobuddha/library/blob/main/src/hash.ts#L21)
+Defined in: [hash-base.ts:31](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L31)
 
 #### Parameters
 
-##### blockSize
-
-`number`
-
-##### finalSize
-
-`number`
+| Parameter | Type |
+| ------ | ------ |
+| `blockSize` | `number` |
+| `finalSize` | `number` |
 
 #### Returns
 
@@ -38,27 +41,11 @@ Defined in: [hash.ts:21](https://github.com/technobuddha/library/blob/main/src/h
 
 ## Properties
 
-### block
-
-> `protected` `readonly` **block**: `Uint8Array`
-
-Defined in: [hash.ts:16](https://github.com/technobuddha/library/blob/main/src/hash.ts#L16)
-
-***
-
-### blockSize
-
-> `protected` `readonly` **blockSize**: `number`
-
-Defined in: [hash.ts:17](https://github.com/technobuddha/library/blob/main/src/hash.ts#L17)
-
-***
-
-### finalSize
-
-> `protected` `readonly` **finalSize**: `number`
-
-Defined in: [hash.ts:18](https://github.com/technobuddha/library/blob/main/src/hash.ts#L18)
+| Property | Modifier | Type | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="block"></a> `block` | `readonly` | [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [hash-base.ts:26](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L26) |
+| <a id="blocksize-1"></a> `blockSize` | `readonly` | `number` | [hash-base.ts:27](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L27) |
+| <a id="finalsize-1"></a> `finalSize` | `readonly` | `number` | [hash-base.ts:28](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L28) |
 
 ## Methods
 
@@ -66,13 +53,13 @@ Defined in: [hash.ts:18](https://github.com/technobuddha/library/blob/main/src/h
 
 #### Call Signature
 
-> **digest**(): `Uint8Array`
+> **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [hash.ts:32](https://github.com/technobuddha/library/blob/main/src/hash.ts#L32)
+Defined in: [hash-base.ts:42](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L42)
 
 ##### Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 ##### Implementation of
 
@@ -80,15 +67,15 @@ Defined in: [hash.ts:32](https://github.com/technobuddha/library/blob/main/src/h
 
 #### Call Signature
 
-> **digest**(`encoding`): `string`
+> **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
-Defined in: [hash.ts:33](https://github.com/technobuddha/library/blob/main/src/hash.ts#L33)
+Defined in: [hash-base.ts:43](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L43)
 
 ##### Parameters
 
-###### encoding
-
-[`BinaryEncoding`](../type-aliases/BinaryEncoding.md)
+| Parameter | Type |
+| ------ | ------ |
+| `encoding` | [`BinaryEncoding`](../type-aliases/BinaryEncoding.md) |
 
 ##### Returns
 
@@ -102,13 +89,13 @@ Defined in: [hash.ts:33](https://github.com/technobuddha/library/blob/main/src/h
 
 ### hash()
 
-> `abstract` `protected` **hash**(): `Uint8Array`
+> `abstract` `protected` **hash**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [hash.ts:28](https://github.com/technobuddha/library/blob/main/src/hash.ts#L28)
+Defined in: [hash-base.ts:38](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L38)
 
 #### Returns
 
-`Uint8Array`
+[`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 ***
 
@@ -116,15 +103,15 @@ Defined in: [hash.ts:28](https://github.com/technobuddha/library/blob/main/src/h
 
 #### Call Signature
 
-> **update**(`data`): `this`
+> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
 
-Defined in: [hash.ts:74](https://github.com/technobuddha/library/blob/main/src/hash.ts#L74)
+Defined in: [hash-base.ts:84](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L84)
 
 ##### Parameters
 
-###### data
-
-`ArrayBuffer` | `TypedArray`
+| Parameter | Type |
+| ------ | ------ |
+| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray` |
 
 ##### Returns
 
@@ -136,19 +123,16 @@ Defined in: [hash.ts:74](https://github.com/technobuddha/library/blob/main/src/h
 
 #### Call Signature
 
-> **update**(`data`, `encoding`?): `this`
+> **update**(`data`: `string`, `encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
 
-Defined in: [hash.ts:75](https://github.com/technobuddha/library/blob/main/src/hash.ts#L75)
+Defined in: [hash-base.ts:85](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L85)
 
 ##### Parameters
 
-###### data
-
-`string`
-
-###### encoding?
-
-[`Encoding`](../type-aliases/Encoding.md)
+| Parameter | Type |
+| ------ | ------ |
+| `data` | `string` |
+| `encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) |
 
 ##### Returns
 
@@ -162,15 +146,15 @@ Defined in: [hash.ts:75](https://github.com/technobuddha/library/blob/main/src/h
 
 ### updateCounters()
 
-> `abstract` `protected` **updateCounters**(`buffer`): `void`
+> `abstract` `protected` **updateCounters**(`buffer`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)): `void`
 
-Defined in: [hash.ts:30](https://github.com/technobuddha/library/blob/main/src/hash.ts#L30)
+Defined in: [hash-base.ts:40](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L40)
 
 #### Parameters
 
-##### buffer
-
-`Uint8Array`
+| Parameter | Type |
+| ------ | ------ |
+| `buffer` | [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) |
 
 #### Returns
 

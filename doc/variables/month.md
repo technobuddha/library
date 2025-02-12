@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / month
+[@technobuddha/library](../INDEX.md) / month
 
 # Variable: month
 
-> `const` **month**: `Readonly`\<`Record`\<`string`, [`MonthOfYear`](../type-aliases/MonthOfYear.md)\>\>
+> `const` **month**: [`Readonly`](https://www.typescriptlang.org/docs/handbook/utility-types.html#readonlytype)\<[`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, [`MonthOfYear`](../type-aliases/MonthOfYear.md)\>\>
 
-Defined in: [constants.ts:59](https://github.com/technobuddha/library/blob/main/src/constants.ts#L59)
+Defined in: [constants.ts:150](https://github.com/technobuddha/library/blob/main/src/constants.ts#L150)

@@ -3,6 +3,8 @@
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @group Encoding
+ * @category Java
  */
 export function unescapeJava(input: string): string {
   return input.replaceAll(/\\(([bfnrt"'\\])|([0-7]{1,3})|(u[0-9a-fA-F]{4}))/gu, (escape) => {

@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / unescapeJava
+[@technobuddha/library](../INDEX.md) / unescapeJava
 
 # Function: unescapeJava()
 
-> **unescapeJava**(`input`): `string`
+> **unescapeJava**(`input`: `string`): `string`
 
-Defined in: [unescape-java.ts:7](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L7)
+Defined in: [unescape-java.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L9)
 
 Unescape a string encoded in Java style
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to unescape
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to unescape |
 
 ## Returns
 

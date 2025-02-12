@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / CollapseWhitespaceOptions
+[@technobuddha/library](../INDEX.md) / CollapseWhitespaceOptions
 
 # Type Alias: CollapseWhitespaceOptions
 
-> **CollapseWhitespaceOptions**: `object`
+> **CollapseWhitespaceOptions**: \{ `trim`: `boolean`; \}
 
-Defined in: [collapse-whitespace.ts:4](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L4)
+Defined in: [collapse-whitespace.ts:8](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L8)
 
 ## Type declaration
 
-### trim?
-
-> `optional` **trim**: `boolean`
-
-If true, trim
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="trim"></a> `trim`? | `boolean` | If true, trim | [collapse-whitespace.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L10) |

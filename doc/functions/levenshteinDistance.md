@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / levenshteinDistance
+[@technobuddha/library](../INDEX.md) / levenshteinDistance
 
 # Function: levenshteinDistance()
 
-> **levenshteinDistance**(`input`, `comparedTo`, `__namedParameters`): `number`
+> **levenshteinDistance**(`input`: `string`, `comparedTo`: `string`, `__namedParameters`: [`LevenshteinDistanceOptions`](../type-aliases/LevenshteinDistanceOptions.md)): `number`
 
-Defined in: [levenshtein-distance.ts:17](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L17)
+Defined in: [levenshtein-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L23)
 
 Compute the levenshtein distance between two strings (similarity)
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### comparedTo
-
-`string`
-
-The string to compare to
-
-### \_\_namedParameters
-
-[`LevenshteinDistanceOptions`](../type-aliases/LevenshteinDistanceOptions.md) = `{}`
-
-see [LevenshteinDistanceOptions](../type-aliases/LevenshteinDistanceOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
+| `comparedTo` | `string` | The string to compare to |
+| `__namedParameters` | [`LevenshteinDistanceOptions`](../type-aliases/LevenshteinDistanceOptions.md) | see [LevenshteinDistanceOptions](../type-aliases/LevenshteinDistanceOptions.md) |
 
 ## Returns
 

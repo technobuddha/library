@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / dataURL
+[@technobuddha/library](../INDEX.md) / dataURL
 
 # Function: dataURL()
 
-> **dataURL**(`input`, `mimeType`): `string`
+> **dataURL**(`input`: [`BinaryObject`](../type-aliases/BinaryObject.md), `mimeType`: `string`): `string`
 
-Defined in: [data-url.ts:23](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L23)
+Defined in: [data-url.ts:13](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L13)
 
 Convert any binary object into a data URL
 
 ## Parameters
 
-### input
-
-[`BinaryObject`](../type-aliases/BinaryObject.md)
-
-The binary object
-
-### mimeType
-
-`string`
-
-The MIME type for the URL
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`BinaryObject`](../type-aliases/BinaryObject.md) | The binary object |
+| `mimeType` | `string` | The MIME type for the URL |
 
 ## Returns
 

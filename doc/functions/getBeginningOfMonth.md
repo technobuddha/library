@@ -1,36 +1,25 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / getBeginningOfMonth
+[@technobuddha/library](../INDEX.md) / getBeginningOfMonth
 
 # Function: getBeginningOfMonth()
 
-> **getBeginningOfMonth**(`input`, `__namedParamaters`): `Date`
+> **getBeginningOfMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParamaters`: [`GetBeginningOfMonthOptions`](../type-aliases/GetBeginningOfMonthOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-month.ts:14](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L14)
+Defined in: [get-beginning-of-month.ts:20](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L20)
 
 Determine the start of the month for a dateDetermine the start of the month for a date
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date
-
-### \_\_namedParamaters
-
-[`GetBeginningOfMonthOptions`](../type-aliases/GetBeginningOfMonthOptions.md) = `{}`
-
-see [GetBeginningOfMonthOptions](../type-aliases/GetBeginningOfMonthOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `__namedParamaters` | [`GetBeginningOfMonthOptions`](../type-aliases/GetBeginningOfMonthOptions.md) | see [GetBeginningOfMonthOptions](../type-aliases/GetBeginningOfMonthOptions.md) |
 
 ## Returns
 
-`Date`
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 The date value for midnight on the first day of the specified month
 

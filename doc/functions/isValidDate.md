@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isValidDate
+[@technobuddha/library](../INDEX.md) / isValidDate
 
 # Function: isValidDate()
 
-> **isValidDate**(`input`): `boolean`
+> **isValidDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)): `boolean`
 
-Defined in: [is-valid-date.ts:10](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L10)
+Defined in: [is-valid-date.ts:12](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L12)
 
 Determine if a date is valid
 
 ## Parameters
 
-### input
-
-`Date`
-
-The date to check
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date to check |
 
 ## Returns
 

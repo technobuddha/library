@@ -1,16 +1,12 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / modulo
+[@technobuddha/library](../INDEX.md) / modulo
 
 # Function: modulo()
 
-> **modulo**(`dividend`, `divisor`): `number`
+> **modulo**(`dividend`: `number`, `divisor`: `number`): `number`
 
-Defined in: [modulo.ts:14](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L14)
+Defined in: [modulo.ts:16](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L16)
 
 The % operator in JavaScript returns the remainder of a / b, but differs from
 some other languages in that the result will have the same sign as the
@@ -21,17 +17,10 @@ calculating an offset index in a circular list.
 
 ## Parameters
 
-### dividend
-
-`number`
-
-The dividend.
-
-### divisor
-
-`number`
-
-The divisor.
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `dividend` | `number` | The dividend. |
+| `divisor` | `number` | The divisor. |
 
 ## Returns
 

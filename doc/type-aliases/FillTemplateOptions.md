@@ -1,27 +1,16 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / FillTemplateOptions
+[@technobuddha/library](../INDEX.md) / FillTemplateOptions
 
 # Type Alias: FillTemplateOptions
 
-> **FillTemplateOptions**: `object`
+> **FillTemplateOptions**: \{ `close`: `string`; `open`: `string`; \}
 
-Defined in: [fill-template.ts:5](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L5)
+Defined in: [fill-template.ts:8](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L8)
 
 ## Type declaration
 
-### close?
-
-> `optional` **close**: `string`
-
-The closing field delimiter
-
-### open?
-
-> `optional` **open**: `string`
-
-The opening field delimiter
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="close"></a> `close`? | `string` | The closing field delimiter | [fill-template.ts:12](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L12) |
+| <a id="open"></a> `open`? | `string` | The opening field delimiter | [fill-template.ts:10](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L10) |

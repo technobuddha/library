@@ -6,6 +6,8 @@ import { hex, oct, u4, u8, x2 } from './escape.js';
  *
  * @param input - The string to escape
  * @returns the escaped string
+ * @group Encoding
+ * @category C/C++
  */
 export function escapeC(input: string): string {
   const output: string[] = [];

@@ -1,21 +1,15 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / GetBeginningOfYearOptions
+[@technobuddha/library](../INDEX.md) / GetBeginningOfYearOptions
 
 # Type Alias: GetBeginningOfYearOptions
 
-> **GetBeginningOfYearOptions**: `object`
+> **GetBeginningOfYearOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [get-beginning-of-year.ts:3](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L3)
+Defined in: [get-beginning-of-year.ts:7](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L7)
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Use the utc timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [get-beginning-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L9) |

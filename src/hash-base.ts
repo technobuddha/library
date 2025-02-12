@@ -1,17 +1,27 @@
 /* eslint-disable no-bitwise */
-import { type BinaryEncoding, encodeBinary } from './encode-binary.js';
-import { encodeText, type Encoding } from './encode-text.js';
+import { type BinaryEncoding } from './binary-encoding.js';
+import { encodeBinary } from './encode-binary.js';
+import { encodeText } from './encode-text.js';
+import { type TextEncoding } from './text-encoding.js';
 
 /**
- *
+ * The base interface for hash classes
+ * @group Crypto
+ * @category Hash Base
  */
 export interface HashClass {
   digest(): Uint8Array;
   digest(encoding: BinaryEncoding): string;
   update(data: TypedArray | ArrayBuffer): this;
-  update(data: string, encoding?: Encoding): this;
+  update(data: string, encoding?: TextEncoding): this;
 }
 
+/**
+ * The base class for most cryptographic hash functions
+ *
+ * @group Crypto
+ * @category Hash Base
+ */
 export abstract class HashBase implements HashClass {
   protected readonly block: Uint8Array;
   protected readonly blockSize: number;
@@ -72,8 +82,8 @@ export abstract class HashBase implements HashClass {
   }
 
   public update(data: TypedArray | ArrayBuffer): this;
-  public update(data: string, encoding?: Encoding): this;
-  public update(data: string | TypedArray | ArrayBuffer, encoding: Encoding = 'utf8'): this {
+  public update(data: string, encoding?: TextEncoding): this;
+  public update(data: string | TypedArray | ArrayBuffer, encoding: TextEncoding = 'utf8'): this {
     const buffer =
       typeof data === 'string' ? encodeText(data, encoding)
       : ArrayBuffer.isView(data) ? new Uint8Array(data.buffer, data.byteOffset, data.byteLength)

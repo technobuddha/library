@@ -1,5 +1,9 @@
 import { toEnumeration } from './to-enumeration.js';
 
+/**
+ * @group String
+ * @category Conversion
+ */
 export type ToBooleanOptions = {
   /** An iterable list of values that are "true" */
   trueValues?: Iterable<string | RegExp>;
@@ -17,6 +21,8 @@ const defaultFalse = ['false', 'no', 'n', 'off', '0'];
  * @param __namedParameters - see {@link ToBooleanOptions}
  * @defaultValue trueValues 'true', 'yes', 'y', 'on', or '1'
  * @defaultValue falseValues 'false', 'no', 'n', 'off', '0'
+ * @group String
+ * @category Conversion
  */
 export function toBoolean(
   input: string,

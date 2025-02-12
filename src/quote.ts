@@ -3,6 +3,10 @@ import { escapeRegExp, isFunction } from 'lodash-es';
 import { build } from './build.js';
 import { escapeJS } from './escape-js.js';
 
+/**
+ * @group String
+ * @category Quoting
+ */
 export type QuoteOptions = {
   /** The quote character(s) to use */
   quote?: string;
@@ -18,6 +22,8 @@ export type QuoteOptions = {
  * @defaultValue quote double-quote (")
  * @defaultValue escape {@link escapeJS}
  * @returns text surrounded by quotes
+ * @group String
+ * @category Quoting
  */
 export function quote(
   input: string,

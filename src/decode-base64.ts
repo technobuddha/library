@@ -1,7 +1,7 @@
 /* eslint-disable no-bitwise */
-import { base64Charset, base64UrlCharset, type BaseCharset } from './constants.js';
+import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.js';
 import { decodeText } from './decode-text.js';
-import { type Encoding } from './encode-text.js';
+import { type TextEncoding } from './text-encoding.js';
 
 /**
  * Gather 4 characters from the input string and yield their indices in the base64 alphabet.
@@ -9,7 +9,7 @@ import { type Encoding } from './encode-text.js';
  * @param input - The string to decode
  * @returns A generator that yields the indices of the characters in the base64 alphabet
  */
-function* pull4(input: string, charset: BaseCharset): Generator<number[]> {
+function* pull4(input: string, charset: Base64Configuration): Generator<number[]> {
   let indices: number[] = [];
 
   for (const c of input) {
@@ -41,9 +41,13 @@ function* pull4(input: string, charset: BaseCharset): Generator<number[]> {
   }
 }
 
-function decode(charset: BaseCharset, input: string): Uint8Array;
-function decode(charset: BaseCharset, input: string, encoding: Encoding): string;
-function decode(charset: BaseCharset, input: string, encoding?: Encoding): Uint8Array | string {
+function decode(charset: Base64Configuration, input: string): Uint8Array;
+function decode(charset: Base64Configuration, input: string, encoding: TextEncoding): string;
+function decode(
+  charset: Base64Configuration,
+  input: string,
+  encoding?: TextEncoding,
+): Uint8Array | string {
   const result: number[] = [];
 
   for (const [c0, c1, c2, c3] of pull4(input, charset)) {
@@ -78,11 +82,13 @@ function decode(charset: BaseCharset, input: string, encoding?: Encoding): Uint8
  * @param input - A string containing the Base64 encoded data to decode.
  * @returns An ASCII string containing decoded dat
  * @throws `TypeError` If the input string is not correctly encoded.
+ * @group Encoding
+ * @category Base64
  */
 export function decodeBase64(input: string): Uint8Array;
-export function decodeBase64(input: string, encoding: Encoding): string;
-export function decodeBase64(input: string, encoding?: Encoding): Uint8Array | string {
-  return encoding ? decode(base64Charset, input, encoding) : decode(base64Charset, input);
+export function decodeBase64(input: string, encoding: TextEncoding): string;
+export function decodeBase64(input: string, encoding?: TextEncoding): Uint8Array | string {
+  return encoding ? decode(base64Config, input, encoding) : decode(base64Config, input);
 }
 
 /**
@@ -103,9 +109,11 @@ export function decodeBase64(input: string, encoding?: Encoding): Uint8Array | s
  * @param input - A string containing the Base64 encoded data to decode.
  * @returns An ASCII string containing decoded dat
  * @throws `TypeError` If the input string is not correctly encoded.
+ * @group Encoding
+ * @category Base64
  */
 export function decodeBase64Url(input: string): Uint8Array;
-export function decodeBase64Url(input: string, encoding: Encoding): string;
-export function decodeBase64Url(input: string, encoding?: Encoding): Uint8Array | string {
-  return encoding ? decode(base64UrlCharset, input, encoding) : decode(base64UrlCharset, input);
+export function decodeBase64Url(input: string, encoding: TextEncoding): string;
+export function decodeBase64Url(input: string, encoding?: TextEncoding): Uint8Array | string {
+  return encoding ? decode(base64UrlConfig, input, encoding) : decode(base64UrlConfig, input);
 }

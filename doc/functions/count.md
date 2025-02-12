@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / count
+[@technobuddha/library](../INDEX.md) / count
 
 # Function: count()
 
-> **count**(`input`, `substring`, `__namedParameters`): `number`
+> **count**(`input`: `string`, `substring`: `string`, `__namedParameters`: [`CountOptions`](../type-aliases/CountOptions.md)): `number`
 
-Defined in: [count.ts:14](https://github.com/technobuddha/library/blob/main/src/count.ts#L14)
+Defined in: [count.ts:20](https://github.com/technobuddha/library/blob/main/src/count.ts#L20)
 
 Compute the number of times a substring occurs within a string
 
 ## Parameters
 
-### input
-
-`string`
-
-The string
-
-### substring
-
-`string`
-
-The substring to look for
-
-### \_\_namedParameters
-
-[`CountOptions`](../type-aliases/CountOptions.md) = `{}`
-
-see [CountOptions](../type-aliases/CountOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string |
+| `substring` | `string` | The substring to look for |
+| `__namedParameters` | [`CountOptions`](../type-aliases/CountOptions.md) | see [CountOptions](../type-aliases/CountOptions.md) |
 
 ## Returns
 

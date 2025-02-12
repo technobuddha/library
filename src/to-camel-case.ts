@@ -5,6 +5,8 @@ import { toSmallCase } from './to-small-case.js';
  *
  * @param input - The identifier string
  * @returns string in camel case
+ * @group String
+ * @category Case Conversion
  */
 export function toCamelCase(input: string): string {
   return toSmallCase(

@@ -1,6 +1,10 @@
 import { clean } from './clean.js';
 import { space } from './constants.js';
 
+/**
+ * @group String
+ * @category Collapse
+ */
 export type CollapseWhitespaceOptions = {
   /** If true, trim  */
   trim?: boolean;
@@ -11,6 +15,8 @@ export type CollapseWhitespaceOptions = {
  *
  * @param input - The string
  * @param trim - If true, remove leading and trailing whitespace
+ * @group String
+ * @category Collapse
  */
 export function collapseWhitespace(
   input: string,

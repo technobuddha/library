@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / unescapePython
+[@technobuddha/library](../INDEX.md) / unescapePython
 
 # Function: unescapePython()
 
-> **unescapePython**(`input`): `string`
+> **unescapePython**(`input`: `string`): `string`
 
-Defined in: [unescape-python.ts:7](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L7)
+Defined in: [unescape-python.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L9)
 
 Unescape a string encoded in Python style
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to unescape
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to unescape |
 
 ## Returns
 

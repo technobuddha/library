@@ -1,38 +1,22 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / replacer
+[@technobuddha/library](../INDEX.md) / replacer
 
 # Function: replacer()
 
-> **replacer**(`this`, `key`, `value`): `unknown`
+> **replacer**(`this`: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\>, `key`: `string`, `value`: `unknown`): `unknown`
 
-Defined in: [json.ts:15](https://github.com/technobuddha/library/blob/main/src/json.ts#L15)
+Defined in: [json.ts:27](https://github.com/technobuddha/library/blob/main/src/json.ts#L27)
 
 Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with [reviver](reviver.md)
 
 ## Parameters
 
-### this
-
-`Record`\<`string`, `unknown`\>
-
-The raw object being stringified
-
-### key
-
-`string`
-
-The key for the field
-
-### value
-
-`unknown`
-
-The value (may have already been encoded into a string)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `this` | [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\> | The raw object being stringified |
+| `key` | `string` | The key for the field |
+| `value` | `unknown` | The value (may have already been encoded into a string) |
 
 ## Returns
 

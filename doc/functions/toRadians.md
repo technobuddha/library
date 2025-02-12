@@ -1,30 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toRadians
+[@technobuddha/library](../INDEX.md) / toRadians
 
 # Function: toRadians()
 
-> **toRadians**(`angle`, `unit`): `number`
+> **toRadians**(`angle`: `number`, `unit`: `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"`): `number`
 
-Defined in: [to-radians.ts:10](https://github.com/technobuddha/library/blob/main/src/to-radians.ts#L10)
+Defined in: [to-radians.ts:11](https://github.com/technobuddha/library/blob/main/src/to-radians.ts#L11)
 
 Converts degrees to radians.
 
 ## Parameters
 
-### angle
-
-`number`
-
-Angle in degrees.
-
-### unit
-
-`"degrees"` | `"rads"` | `"radians"` | `"grads"` | `"gradians"` | `"turns"`
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `angle` | `number` | `undefined` | Angle in degrees. |
+| `unit` | `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"` | `'degrees'` | - |
 
 ## Returns
 

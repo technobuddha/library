@@ -1,13 +1,11 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / specialBegin
+[@technobuddha/library](../INDEX.md) / specialBegin
 
 # Variable: specialBegin
 
 > `const` **specialBegin**: `"﴾"` = `'﴾'`
 
-Defined in: [json.ts:3](https://github.com/technobuddha/library/blob/main/src/json.ts#L3)
+Defined in: [json.ts:8](https://github.com/technobuddha/library/blob/main/src/json.ts#L8)
+
+The beginning of a special JSON value

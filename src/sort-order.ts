@@ -1,5 +1,9 @@
 import { clean } from './clean.js';
 
+/**
+ * @group String
+ * @category Sorting
+ */
 export type SortOrderOptions = {
   /** Ignore a leading quote (") */
   ignoreQuotes?: boolean;
@@ -14,6 +18,8 @@ export type SortOrderOptions = {
  * @param text - string to convert
  * @param __namedParameters - see {@link SortOrderOptions}
  * @returns sortable string
+ * @group String
+ * @category Sorting
  */
 export function sortOrder(
   text: string,

@@ -1,3 +1,7 @@
+/**
+ * @group Math
+ * @category Almost Equals
+ */
 export type AlmostEqualsOptions = {
   /** Tolerance range. If specified, should be greater than 0. **/
   tolerance?: number;
@@ -12,6 +16,8 @@ export type AlmostEqualsOptions = {
  * @param __namedParameters - see {@link AlmostEqualsOptions}
  * @defaultValue tolerance 0
  * @returns true if *a* and *b* are nearly equal.
+ * @group Math
+ * @category Almost Equals
  */
 export function almostEquals(
   a: number,

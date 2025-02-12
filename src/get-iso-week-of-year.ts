@@ -4,6 +4,10 @@ import { floor } from './floor.js';
 import { getBeginningOfWeek } from './get-beginning-of-week.js';
 import { getISOWeeksInYear } from './get-iso-weeks-in-year.js';
 
+/**
+ * @group Time
+ * @category Week
+ */
 export type GetISOWeekOfYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
@@ -21,6 +25,8 @@ export type GetISOWeekOfYearOptions = {
  * @defaultValue weekOneIncludes Thursday
  * @defaultValue firstDayOfWeek Monday
  * @returns the week number (1-53)
+ * @group Time
+ * @category Week
  */
 export function getISOWeekOfYear(
   input: Date,

@@ -10,6 +10,8 @@ const trimEquivalent = /[\s\uFEFF\u00A0]/u;
  *
  * @param input - The string
  * @param characters - The characters(s) to remove
+ * @group String
+ * @category Clean
  */
 export function clean(
   input: string,
@@ -39,6 +41,8 @@ export function clean(
  *
  * @param input - The string
  * @param characters - the characters(s) to remove
+ * @group String
+ * @category Clean
  */
 export function cleanEnd(
   input: string,
@@ -68,6 +72,8 @@ export function cleanEnd(
  *
  * @param input - The string
  * @param characters - The characters(s) to remove
+ * @group String
+ * @category Clean
  */
 export function cleanStart(
   input: string,

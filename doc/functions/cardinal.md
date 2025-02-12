@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / cardinal
+[@technobuddha/library](../INDEX.md) / cardinal
 
 # Function: cardinal()
 
-> **cardinal**(`input`, `__namedParameters`): `string`
+> **cardinal**(`input`: `number`, `__namedParameters`: [`CardinalOptions`](../type-aliases/CardinalOptions.md)): `string`
 
-Defined in: [cardinal.ts:64](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L64)
+Defined in: [cardinal.ts:78](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L78)
 
 Convert a number into text (the cardinal number)
 
 ## Parameters
 
-### input
-
-`number`
-
-The number
-
-### \_\_namedParameters
-
-[`CardinalOptions`](../type-aliases/CardinalOptions.md) = `{}`
-
-see [CardinalOptions](../type-aliases/CardinalOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number |
+| `__namedParameters` | [`CardinalOptions`](../type-aliases/CardinalOptions.md) | see [CardinalOptions](../type-aliases/CardinalOptions.md) |
 
 ## Returns
 

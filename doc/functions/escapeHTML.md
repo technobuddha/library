@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / escapeHTML
+[@technobuddha/library](../INDEX.md) / escapeHTML
 
 # Function: escapeHTML()
 
-> **escapeHTML**(`input`, `__namedParameters`): `string`
+> **escapeHTML**(`input`: `string`, `__namedParameters`: [`EscapeHtmlSettings`](../type-aliases/EscapeHtmlSettings.md)): `string`
 
-Defined in: [escape-html.ts:15](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L15)
+Defined in: [escape-html.ts:22](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L22)
 
 Escape a string for use in HTML
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to escape
-
-### \_\_namedParameters
-
-[`EscapeHtmlSettings`](../type-aliases/EscapeHtmlSettings.md) = `{}`
-
-see [EscapeHtmlSettings](../type-aliases/EscapeHtmlSettings.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to escape |
+| `__namedParameters` | [`EscapeHtmlSettings`](../type-aliases/EscapeHtmlSettings.md) | see [EscapeHtmlSettings](../type-aliases/EscapeHtmlSettings.md) |
 
 ## Returns
 

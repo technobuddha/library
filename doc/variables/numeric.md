@@ -1,15 +1,11 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / numeric
+[@technobuddha/library](../INDEX.md) / numeric
 
 # Variable: numeric
 
-> `const` **numeric**: `RegExp`
+> `const` **numeric**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [regexp.ts:67](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L67)
+Defined in: [regexp.ts:88](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L88)
 
-validate a valid number
+Validate a valid number

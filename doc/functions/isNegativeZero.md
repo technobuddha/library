@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isNegativeZero
+[@technobuddha/library](../INDEX.md) / isNegativeZero
 
 # Function: isNegativeZero()
 
-> **isNegativeZero**(`input`): `boolean`
+> **isNegativeZero**(`input`: `number`): `boolean`
 
-Defined in: [is-negative-zero.ts:7](https://github.com/technobuddha/library/blob/main/src/is-negative-zero.ts#L7)
+Defined in: [is-negative-zero.ts:9](https://github.com/technobuddha/library/blob/main/src/is-negative-zero.ts#L9)
 
 Tests to see if the specified value is negative zero
 
 ## Parameters
 
-### input
-
-`number`
-
-The number to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number to test |
 
 ## Returns
 

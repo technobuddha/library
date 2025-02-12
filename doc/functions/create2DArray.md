@@ -1,42 +1,28 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / create2DArray
+[@technobuddha/library](../INDEX.md) / create2DArray
 
 # Function: create2DArray()
 
-> **create2DArray**\<`T`\>(`width`, `height`, `fill`): `T`[][]
+> **create2DArray**\<`T`\>(`width`: `number`, `height`: `number`, `fill`: `T` \| (`x`: `number`, `y`: `number`) => `T`): `T`[][]
 
-Defined in: [create-2d-array.ts:12](https://github.com/technobuddha/library/blob/main/src/create-2d-array.ts#L12)
+Defined in: [create-2d-array.ts:19](https://github.com/technobuddha/library/blob/main/src/create-2d-array.ts#L19)
 
 Create a two dimensional array with all elements initialized
 
 ## Type Parameters
 
-• **T**
+| Type Parameter | Description |
+| ------ | ------ |
+| `T` | Type of the elements in the array |
 
 ## Parameters
 
-### width
-
-`number`
-
-Width of the array
-
-### height
-
-`number`
-
-Height of the array
-
-### fill
-
-value to fill the array, or a function returning the fill value for each element
-
-`T` | (`x`, `y`) => `T`
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `width` | `number` | Width of the array |
+| `height` | `number` | Height of the array |
+| `fill` | `T` \| (`x`: `number`, `y`: `number`) => `T` | value to fill the array, or a function returning the fill value for each element |
 
 ## Returns
 
@@ -45,3 +31,9 @@ value to fill the array, or a function returning the fill value for each element
 ## Remarks
 
 Array is accessed by array[w][h]
+
+## Example
+
+```ts
+create2DArray(2, 3, 0);  // [[0, 0, 0], [0, 0, 0]]
+```

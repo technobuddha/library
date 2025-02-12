@@ -1,15 +1,11 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / ipV4
+[@technobuddha/library](../INDEX.md) / ipV4
 
 # Variable: ipV4
 
-> `const` **ipV4**: `RegExp`
+> `const` **ipV4**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [regexp.ts:43](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L43)
+Defined in: [regexp.ts:51](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L51)
 
 validate an IPv4 address

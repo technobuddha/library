@@ -1,26 +1,20 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / isLowerCase
+[@technobuddha/library](../INDEX.md) / isLowerCase
 
 # Function: isLowerCase()
 
-> **isLowerCase**(`input`): `boolean`
+> **isLowerCase**(`input`: `string`): `boolean`
 
-Defined in: [is-lower-case.ts:9](https://github.com/technobuddha/library/blob/main/src/is-lower-case.ts#L9)
+Defined in: [is-lower-case.ts:11](https://github.com/technobuddha/library/blob/main/src/is-lower-case.ts#L11)
 
 Test a string for all lower case characters
 
 ## Parameters
 
-### input
-
-`string`
-
-string to test
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | string to test |
 
 ## Returns
 

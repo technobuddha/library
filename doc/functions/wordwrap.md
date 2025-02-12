@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / wordwrap
+[@technobuddha/library](../INDEX.md) / wordwrap
 
 # Function: wordwrap()
 
-> **wordwrap**(`input`, `options`): `string`
+> **wordwrap**(`input`: `string`, `options`: [`WordwrapOptions`](../type-aliases/WordwrapOptions.md)): `string`
 
-Defined in: [wordwrap.ts:26](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L26)
+Defined in: [wordwrap.ts:32](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L32)
 
 Wrap text so that it fits within a area of fixed width
 
 ## Parameters
 
-### input
-
-`string`
-
-the text to wrap
-
-### options
-
-[`WordwrapOptions`](../type-aliases/WordwrapOptions.md) = `{}`
-
-see [WordwrapOptions](../type-aliases/WordwrapOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | the text to wrap |
+| `options` | [`WordwrapOptions`](../type-aliases/WordwrapOptions.md) | see [WordwrapOptions](../type-aliases/WordwrapOptions.md) |
 
 ## Returns
 

@@ -175,7 +175,11 @@ function parse(mask: string): ParseReturn {
 }
 //#endregion
 //#region format
-type FormatOptions = {
+/**
+ * @group Number
+ * @category Format
+ */
+export type FormatOptions = {
   round?: number;
   precision?: number;
   scale?: number;
@@ -362,6 +366,10 @@ class NumberFormatter {
 }
 //#endregion
 //#region formatNumber
+/**
+ * @group Number
+ * @category Format
+ */
 export function formatNumber(input: number, mask: string): string {
   if (/^([CDEFGNPX][0-9]*)|R$/iu.test(mask)) {
     const f = mask.charAt(0);

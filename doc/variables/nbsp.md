@@ -1,13 +1,9 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / nbsp
+[@technobuddha/library](../INDEX.md) / nbsp
 
 # Variable: nbsp
 
 > `const` **nbsp**: `" "` = `'\u00A0'`
 
-Defined in: [constants.ts:3](https://github.com/technobuddha/library/blob/main/src/constants.ts#L3)
+Defined in: [constants.ts:15](https://github.com/technobuddha/library/blob/main/src/constants.ts#L15)

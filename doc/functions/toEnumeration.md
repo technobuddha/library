@@ -1,32 +1,21 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / toEnumeration
+[@technobuddha/library](../INDEX.md) / toEnumeration
 
 # Function: toEnumeration()
 
-> **toEnumeration**(`input`, ...`tests`): `number` \| `undefined`
+> **toEnumeration**(`input`: `string`, ...`tests`: (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\>)[]): `number` \| `undefined`
 
-Defined in: [to-enumeration.ts:10](https://github.com/technobuddha/library/blob/main/src/to-enumeration.ts#L10)
+Defined in: [to-enumeration.ts:12](https://github.com/technobuddha/library/blob/main/src/to-enumeration.ts#L12)
 
 Convert a string to a numeric value
 
 ## Parameters
 
-### input
-
-`string`
-
-The string to convert
-
-### tests
-
-...(`string` \| `RegExp` \| `Iterable`\<`string` \| `RegExp`\>)[]
-
-Array of tests (string value or regular expressions)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `string` | The string to convert |
+| ...`tests` | (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\>)[] | Array of tests (string value or regular expressions) |
 
 ## Returns
 

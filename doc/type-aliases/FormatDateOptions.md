@@ -1,21 +1,17 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / FormatDateOptions
+[@technobuddha/library](../INDEX.md) / FormatDateOptions
 
 # Type Alias: FormatDateOptions
 
-> **FormatDateOptions**: `object`
+> **FormatDateOptions**: \{ `utc`: `boolean`; \}
 
-Defined in: [format-date.ts:79](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L79)
+Defined in: [format-date.ts:84](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L84)
+
+Options for formatting a date
 
 ## Type declaration
 
-### utc?
-
-> `optional` **utc**: `boolean`
-
-Format the date in the UTC timezone
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="utc"></a> `utc`? | `boolean` | Format the date in the UTC timezone | [format-date.ts:86](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L86) |

@@ -1,39 +1,18 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / FuzzyMatchOptions
+[@technobuddha/library](../INDEX.md) / FuzzyMatchOptions
 
 # Type Alias: FuzzyMatchOptions
 
-> **FuzzyMatchOptions**: `object`
+> **FuzzyMatchOptions**: \{ `caseInsensitive`: `boolean`; `weightDiceCoefficient`: `number`; `weightLevenshteinDistance`: `number`; `weightLongestCommonSubstring`: `number`; \}
 
-Defined in: [fuzzy-match.ts:5](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L5)
+Defined in: [fuzzy-match.ts:9](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L9)
 
 ## Type declaration
 
-### caseInsensitive?
-
-> `optional` **caseInsensitive**: `boolean`
-
-The compairson will ignore case
-
-### weightDiceCoefficient?
-
-> `optional` **weightDiceCoefficient**: `number`
-
-Weight of diceCoefficient
-
-### weightLevenshteinDistance?
-
-> `optional` **weightLevenshteinDistance**: `number`
-
-Weight of levenshtein distance
-
-### weightLongestCommonSubstring?
-
-> `optional` **weightLongestCommonSubstring**: `number`
-
-Weight of longestCommonSubstring
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="caseinsensitive"></a> `caseInsensitive`? | `boolean` | The compairson will ignore case | [fuzzy-match.ts:11](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L11) |
+| <a id="weightdicecoefficient"></a> `weightDiceCoefficient`? | `number` | Weight of diceCoefficient | [fuzzy-match.ts:15](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L15) |
+| <a id="weightlevenshteindistance"></a> `weightLevenshteinDistance`? | `number` | Weight of levenshtein distance | [fuzzy-match.ts:13](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L13) |
+| <a id="weightlongestcommonsubstring"></a> `weightLongestCommonSubstring`? | `number` | Weight of longestCommonSubstring | [fuzzy-match.ts:17](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L17) |

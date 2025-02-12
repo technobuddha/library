@@ -3,6 +3,8 @@
  *
  * @param input - The identifier string
  * @returns the identifier in underscore case
+ * @group String
+ * @category Case Conversion
  */
 export function toUnderscoreCase(input: string): string {
   return input

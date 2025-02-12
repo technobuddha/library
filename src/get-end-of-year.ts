@@ -1,8 +1,11 @@
 import { month } from './constants.js';
 
+/**
+ * @group Time
+ * @category Year
+ */
 export type GetEndOfYearOptions = {
   /** Use the utc timezone */
-
   utc?: boolean;
 };
 
@@ -13,6 +16,8 @@ export type GetEndOfYearOptions = {
  * @param __namedParameters - see {@link GetEndOfYearOptions}
  * @defaultValue utc false
  * @returns Midnight of the last day of the year containing the input date
+ * @group Time
+ * @category Year
  */
 export function getEndOfYear(input: Date, { utc = false }: GetEndOfYearOptions = {}): Date {
   if (utc) {

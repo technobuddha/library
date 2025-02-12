@@ -5,6 +5,8 @@ const re = /^(\p{P})+$/u;
  *
  * @param input - string to test
  * @returns true, if all characters in the string are punctuation
+ * @group String
+ * @category Categorization
  */
 export function isPunctuation(input: string): boolean {
   return re.test(input);

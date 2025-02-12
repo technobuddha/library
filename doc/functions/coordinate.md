@@ -1,36 +1,27 @@
 <!-- markdownlint-disable -->
 
-[**@technobuddha/library**](../README.md)
-
-***
-
-[@technobuddha/library](../README.md) / coordinate
+[@technobuddha/library](../INDEX.md) / coordinate
 
 # Function: coordinate()
 
-> **coordinate**\<`T`\>(`input`, `__namedParameters`): `string`
+> **coordinate**\<`T`\>(`input`: `ArrayLike`\<`T`\>, `__namedParameters`: [`CoordinateOptions`](../type-aliases/CoordinateOptions.md)): `string`
 
-Defined in: [coordinate.ts:20](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L20)
+Defined in: [coordinate.ts:26](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L26)
 
 Create a string from an array, separating values and inserting a conjunction
 
 ## Type Parameters
 
-• **T** = `unknown`
+| Type Parameter | Default type |
+| ------ | ------ |
+| `T` | `unknown` |
 
 ## Parameters
 
-### input
-
-`ArrayLike`\<`T`\>
-
-Array of values
-
-### \_\_namedParameters
-
-[`CoordinateOptions`](../type-aliases/CoordinateOptions.md) = `{}`
-
-see [CoordinateOptions](../type-aliases/CoordinateOptions.md)
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `ArrayLike`\<`T`\> | Array of values |
+| `__namedParameters` | [`CoordinateOptions`](../type-aliases/CoordinateOptions.md) | see [CoordinateOptions](../type-aliases/CoordinateOptions.md) |
 
 ## Returns
 
