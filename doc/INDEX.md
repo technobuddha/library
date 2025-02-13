@@ -275,6 +275,13 @@
 | [negativeZero](variables/negativeZero.md) | - |
 | [isNegativeZero](functions/isNegativeZero.md) | Tests to see if the specified value is negative zero |
 
+### Numberinc
+
+| Function | Description |
+| ------ | ------ |
+| [parseRoman](functions/parseRoman.md) | Parse a roman numeral string into it's integer value. |
+| [toRoman](functions/toRoman.md) | Parse number into a roman numeral string |
+
 ### Numbering
 
 | Name | Description |

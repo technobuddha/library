@@ -116,6 +116,7 @@ export * from './random-shuffle.js';
 export * from './regexp.js';
 export * from './relative-time.js';
 export * from './remove-diacritics.js';
+export * from './roman-numeral.js';
 export * from './root.js';
 export * from './sha1.js';
 export * from './sha224.js';
