@@ -42,7 +42,7 @@ const config = {
   navigation: {
     includeCategories: true,
     includeGroups: true,
-    includeFolders: true,
+    includeFolders: false,
     compactFolders: false,
     excludeReferences: true,
   },

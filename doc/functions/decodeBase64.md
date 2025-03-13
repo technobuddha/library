@@ -8,12 +8,13 @@
 
 > **decodeBase64**(`input`: `string`): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [decode-base64.ts:88](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L88)
+Defined in: [decode-base64.ts:89](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L89)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
-You can use the btoa() method to encode and transmit data which may otherwise cause
-communication problems, then transmit it and use the atob() method to decode the data again.
+
+You can use the **decodeBase64** method to encode and transmit data which may otherwise cause
+communication problems, then transmit it and use the [encodeBase64](encodeBase64.md) method to decode the data again.
 For example, you can encode, transmit, and decode control characters such as ASCII values
 0 through 31.
 
@@ -47,12 +48,13 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 > **decodeBase64**(`input`: `string`, `encoding`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `string`
 
-Defined in: [decode-base64.ts:89](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L89)
+Defined in: [decode-base64.ts:90](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L90)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
-You can use the btoa() method to encode and transmit data which may otherwise cause
-communication problems, then transmit it and use the atob() method to decode the data again.
+
+You can use the **decodeBase64** method to encode and transmit data which may otherwise cause
+communication problems, then transmit it and use the [encodeBase64](encodeBase64.md) method to decode the data again.
 For example, you can encode, transmit, and decode control characters such as ASCII values
 0 through 31.
 

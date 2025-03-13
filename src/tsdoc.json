@@ -10,11 +10,6 @@
       "tagName": "@category",
       "syntaxKind": "block",
       "allowMultiple": true
-    },
-    {
-      "tagName": "@module",
-      "syntaxKind": "block",
-      "allowMultiple": true
     }
   ]
 }

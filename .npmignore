@@ -1,2 +1,12 @@
-node_modules
-doc
+node_modules/
+doc/
+.vscode/
+.editorconfig
+.gitattributes
+.prettierignore
+.yarnrc
+*.config.js
+*.config.ts
+*.setup.ts
+tsconfig.*
+typedoc-markdown-plugin.js

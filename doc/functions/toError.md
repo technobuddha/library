@@ -14,7 +14,7 @@ Convert the entity to an Error object.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `entity` | `unknown` | The entiry to convert, if it is already an error ir will be returned otherswise a new Error object will be created. |
+| `entity` | `unknown` | The entity to convert, if it is already an error ir will be returned otherswise a new Error object will be created. |
 
 ## Returns
 

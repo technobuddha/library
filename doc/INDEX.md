@@ -89,7 +89,7 @@
 | [Base64Configuration](type-aliases/Base64Configuration.md) | Configuration for Base64 based encoding schemes |
 | [base64Config](variables/base64Config.md) | Configuration for Base64 encoding |
 | [base64UrlConfig](variables/base64UrlConfig.md) | Configuration for Base64Url encoding |
-| [decodeBase64](functions/decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31. |
+| [decodeBase64](functions/decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBase64Url](functions/decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31. |
 | [encodeBase64](functions/encodeBase64.md) | Creates a Base64-encoded ASCII string from a string. |
 | [encodeBase64Url](functions/encodeBase64Url.md) | Creates a Base64-encoded ASCII string from a string. |

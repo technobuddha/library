@@ -12,12 +12,12 @@ Convert an entity to a integer number.
 
 ## Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `entity` | `unknown` |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `entity` | `unknown` | The entity to convert, the entity will attempt to be converted as a number, a boolean or a string |
 
 ## Returns
 
 `number`
 
-The entiry as a number, or NaN if it cannot be converted
+The entity as a number, or NaN if it cannot be converted

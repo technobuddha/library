@@ -5,7 +5,24 @@
  */
 const config = {
   lint: {
-    rules: {},
+    rules: {
+      'technobuddha/optimize-imports': {
+        rule: [
+          'error',
+          {
+            ancestor: 'alias',
+            sibling: 'path',
+            descendant: 'shortest',
+            alias: 'alias',
+            base: 'path',
+            package: 'alias',
+            extension: 'js',
+            index: true,
+          },
+        ],
+        typescript: true,
+      },
+    },
   },
   directories: {
     src: {
