@@ -221,6 +221,7 @@
 
 | Name | Description |
 | ------ | ------ |
+| [CartesianMap](classes/CartesianMap.md) | Represents a map with keys of cartesian coordinates, optimized for efficient storage and lookup. |
 | [CartesianSet](classes/CartesianSet.md) | Represents a set of 2D cartesian, optimized for efficient storage and lookup. |
 | [Cartesian](type-aliases/Cartesian.md) | - |
 | [Polar](type-aliases/Polar.md) | - |
@@ -257,6 +258,7 @@
 | [Polygon](type-aliases/Polygon.md) | - |
 | [area](functions/area.md) | Calculates the area of a polygon given its vertices. |
 | [bounds](functions/bounds.md) | Calculates the axis-aligned bounding rectangle for a given polygon. |
+| [edgeAngles](functions/edgeAngles.md) | Generate normalized edge angles from polygon edges. |
 | [isPointInPolygon](functions/isPointInPolygon.md) | Determines whether a given point is inside or on the edge of a polygon. |
 | [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
 | [regularPolygon](functions/regularPolygon.md) | Generates the vertices of a regular polygon as an array of Cartesian points. |

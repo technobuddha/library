@@ -173,6 +173,7 @@ export * from './to-integer.ts';
 export * from './to-number.ts';
 export * from './to-pascal-case.ts';
 export * from './to-polar.ts';
+export * from './to-polygon.ts';
 export * from './to-primitive.ts';
 export * from './to-radians.ts';
 export * from './to-small-case.ts';
