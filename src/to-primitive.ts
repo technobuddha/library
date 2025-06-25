@@ -1,6 +1,6 @@
 import { isNull, isObject, isUndefined } from 'lodash-es';
 
-import { isPrimitive } from './is-primitive.js';
+import { isPrimitive } from './is-primitive.ts';
 
 /**
  * Convert an object into its primitive (string, number, etc.) value

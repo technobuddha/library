@@ -1,4 +1,4 @@
-import { empty } from './constants.js';
+import { empty } from './constants.ts';
 
 /**
  * Split a string into an array of lines

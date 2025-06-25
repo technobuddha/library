@@ -4,13 +4,22 @@
 
 # Type Alias: Polar
 
-> **Polar**: \{ `angle`: `number`; `radius`: `number`; \}
+> **Polar** = \{ `angle`: `number`; `radius`: `number`; \}
 
-Defined in: [coordinates.ts:14](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L14)
+Defined in: [geometry.ts:20](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L20)
 
-## Type declaration
+## Properties
 
-| Name | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="angle"></a> `angle` | `number` | [coordinates.ts:16](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L16) |
-| <a id="radius"></a> `radius` | `number` | [coordinates.ts:15](https://github.com/technobuddha/library/blob/main/src/coordinates.ts#L15) |
+### angle
+
+> **angle**: `number`
+
+Defined in: [geometry.ts:22](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L22)
+
+***
+
+### radius
+
+> **radius**: `number`
+
+Defined in: [geometry.ts:21](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L21)

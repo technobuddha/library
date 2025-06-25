@@ -1,6 +1,6 @@
 import { isInteger } from 'lodash-es';
 
-import { isMultipleOf } from './is-multiple-of.js';
+import { isMultipleOf } from './is-multiple-of.ts';
 
 /**
  * Tests to see if the specified value is an odd integer

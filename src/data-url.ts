@@ -1,5 +1,5 @@
-import { type BinaryObject } from './binary-object.js';
-import { encodeBase64 } from './encode-base64.js';
+import { type BinaryObject } from './binary-object.ts';
+import { encodeBase64 } from './encode-base64.ts';
 
 /**
  * Convert any binary object into a data URL

@@ -1,4 +1,4 @@
-import { decodeBinary } from './decode-binary.js';
+import { decodeBinary } from './decode-binary.ts';
 
 describe('decodeBinary', () => {
   test('base64', () => {

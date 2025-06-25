@@ -1,4 +1,4 @@
-import { indefiniteArticle } from './indefinite-article.js';
+import { indefiniteArticle } from './indefinite-article.ts';
 
 describe('indefiniteArticle', () => {
   test('should add select the proper indefinite article', () => {

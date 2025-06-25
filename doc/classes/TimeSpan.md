@@ -10,19 +10,19 @@ Store and manipulate a duration of time
 
 ## Constructors
 
-### new TimeSpan()
+### Constructor
 
-> **new TimeSpan**(): [`TimeSpan`](TimeSpan.md)
+> **new TimeSpan**(): `TimeSpan`
 
 Defined in: [time-span.ts:23](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L23)
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
-### new TimeSpan()
+### Constructor
 
-> **new TimeSpan**(`ticks`: `number`): [`TimeSpan`](TimeSpan.md)
+> **new TimeSpan**(`ticks`: `number`): `TimeSpan`
 
 Defined in: [time-span.ts:28](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L28)
 
@@ -34,11 +34,11 @@ Defined in: [time-span.ts:28](https://github.com/technobuddha/library/blob/main/
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
-### new TimeSpan()
+### Constructor
 
-> **new TimeSpan**(`h`: `number`, `m`: `number`, `s`: `number`): [`TimeSpan`](TimeSpan.md)
+> **new TimeSpan**(`h`: `number`, `m`: `number`, `s`: `number`): `TimeSpan`
 
 Defined in: [time-span.ts:35](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L35)
 
@@ -52,11 +52,11 @@ Defined in: [time-span.ts:35](https://github.com/technobuddha/library/blob/main/
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
-### new TimeSpan()
+### Constructor
 
-> **new TimeSpan**(`d`: `number`, `h`: `number`, `m`: `number`, `s`: `number`): [`TimeSpan`](TimeSpan.md)
+> **new TimeSpan**(`d`: `number`, `h`: `number`, `m`: `number`, `s`: `number`): `TimeSpan`
 
 Defined in: [time-span.ts:43](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L43)
 
@@ -71,11 +71,11 @@ Defined in: [time-span.ts:43](https://github.com/technobuddha/library/blob/main/
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
-### new TimeSpan()
+### Constructor
 
-> **new TimeSpan**(`d`: `number`, `h`: `number`, `m`: `number`, `s`: `number`, `ms`: `number`): [`TimeSpan`](TimeSpan.md)
+> **new TimeSpan**(`d`: `number`, `h`: `number`, `m`: `number`, `s`: `number`, `ms`: `number`): `TimeSpan`
 
 Defined in: [time-span.ts:52](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L52)
 
@@ -91,11 +91,11 @@ Defined in: [time-span.ts:52](https://github.com/technobuddha/library/blob/main/
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
-### new TimeSpan()
+### Constructor
 
-> **new TimeSpan**(`text`: `string`): [`TimeSpan`](TimeSpan.md)
+> **new TimeSpan**(`text`: `string`): `TimeSpan`
 
 Defined in: [time-span.ts:57](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L57)
 
@@ -107,7 +107,7 @@ Defined in: [time-span.ts:57](https://github.com/technobuddha/library/blob/main/
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
 ## Accessors
 
@@ -289,7 +289,7 @@ Get the total number of seconds
 
 ### add()
 
-> **add**(`other`: [`TimeSpan`](TimeSpan.md)): [`TimeSpan`](TimeSpan.md)
+> **add**(`other`: `TimeSpan`): `TimeSpan`
 
 Defined in: [time-span.ts:296](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L296)
 
@@ -299,11 +299,11 @@ Add two timespans
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `other` | [`TimeSpan`](TimeSpan.md) | TimeSpan to add to this |
+| `other` | `TimeSpan` | TimeSpan to add to this |
 
 #### Returns
 
-[`TimeSpan`](TimeSpan.md)
+`TimeSpan`
 
 a TimeSpan that is the sum of two timespans
 
@@ -311,7 +311,7 @@ a TimeSpan that is the sum of two timespans
 
 ### format()
 
-> **format**(`mask`?: `string`): `string`
+> **format**(`mask?`: `string`): `string`
 
 Defined in: [time-span.ts:237](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L237)
 
@@ -321,7 +321,7 @@ Format the timespan using a mask
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `mask`? | `string` | The mask |
+| `mask?` | `string` | The mask |
 
 #### Returns
 
@@ -349,7 +349,7 @@ formatted string
 
 ### compare()
 
-> `static` **compare**(`t1`: [`TimeSpan`](TimeSpan.md), `t2`: [`TimeSpan`](TimeSpan.md)): `number`
+> `static` **compare**(`t1`: `TimeSpan`, `t2`: `TimeSpan`): `number`
 
 Defined in: [time-span.ts:307](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L307)
 
@@ -359,8 +359,8 @@ Compare two TimeSpans
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `t1` | [`TimeSpan`](TimeSpan.md) | First TimeSpan |
-| `t2` | [`TimeSpan`](TimeSpan.md) | Second TimeSpan |
+| `t1` | `TimeSpan` | First TimeSpan |
+| `t2` | `TimeSpan` | Second TimeSpan |
 
 #### Returns
 

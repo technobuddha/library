@@ -1,6 +1,6 @@
-import { empty } from './constants.js';
-import { splitWords } from './split-words.js';
-import { toASCII } from './to-ascii.js';
+import { empty } from './constants.ts';
+import { splitWords } from './split-words.ts';
+import { toASCII } from './to-ascii.ts';
 
 /**
  * Approximate the number of syllables in a string

@@ -8,7 +8,8 @@
     "lib": ["esnext"],
     "composite": true,
     "types": ["node", "jest"],
-    "noEmit": true
+    "noEmit": true,
+    "outDir": "../dist"
   },
   "include": ["**/*.d.ts", "**/*.test.ts"],
   "exclude": [],

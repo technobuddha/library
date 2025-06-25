@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { encodeBase64, encodeBase64Url } from './encode-base64.js';
+import { empty } from './constants.ts';
+import { encodeBase64, encodeBase64Url } from './encode-base64.ts';
 
 describe('encodeBase64', () => {
   test('should encode ASCII', () => {

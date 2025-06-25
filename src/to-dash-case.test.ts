@@ -1,4 +1,4 @@
-import { toDashCase } from './to-dash-case.js';
+import { toDashCase } from './to-dash-case.ts';
 
 describe('toDashCase', () => {
   test('should sentences', () => {

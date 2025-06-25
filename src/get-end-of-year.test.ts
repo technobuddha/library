@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { getEndOfYear } from './get-end-of-year.js';
+import { month } from './constants.ts';
+import { getEndOfYear } from './get-end-of-year.ts';
 
 describe('getEndOfYear', () => {
   test('should compute the End of the year', () => {

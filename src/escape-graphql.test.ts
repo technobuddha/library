@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { escapeGraphQL } from './escape-graphql.js';
+import { space } from './constants.ts';
+import { escapeGraphQL } from './escape-graphql.ts';
 
 describe('escapeGraphQL', () => {
   test('should escape standard sequences', () => {

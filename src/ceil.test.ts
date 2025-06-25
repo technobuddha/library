@@ -1,4 +1,4 @@
-import { ceil } from './ceil.js';
+import { ceil } from './ceil.ts';
 
 describe('safeCeil', () => {
   test('should handle positive numbers', () => {

@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { getDayOfYear } from './get-day-of-year.js';
+import { month } from './constants.ts';
+import { getDayOfYear } from './get-day-of-year.ts';
 
 describe('getDayOfYear', () => {
   test('should convert to day of year', () => {

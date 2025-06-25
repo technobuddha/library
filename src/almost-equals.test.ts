@@ -1,4 +1,4 @@
-import { almostEquals } from './almost-equals.js';
+import { almostEquals } from './almost-equals.ts';
 
 describe('almostEquals', () => {
   test('should handle numbers within EPSILON distance', () => {

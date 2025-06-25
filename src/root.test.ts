@@ -1,4 +1,4 @@
-import { root } from './root.js';
+import { root } from './root.ts';
 
 describe('root', () => {
   test('should extract root word', () => {

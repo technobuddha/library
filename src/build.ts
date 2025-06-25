@@ -1,6 +1,6 @@
 import { compact, isArray, isFunction, isString } from 'lodash-es';
 
-import { empty } from './constants.js';
+import { empty } from './constants.ts';
 
 /**
  * @group String

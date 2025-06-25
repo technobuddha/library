@@ -1,5 +1,5 @@
-import { compareNumbers } from './compare-numbers.js';
-import { PriorityQueue } from './priority-queue.js';
+import { compareNumbers } from './compare-numbers.ts';
+import { PriorityQueue } from './priority-queue.ts';
 
 describe('priority-queue', () => {
   test('should create a queue', () => {

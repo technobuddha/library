@@ -1,7 +1,7 @@
 import { escapeRegExp, isRegExp, isString } from 'lodash-es';
 
-import { empty } from './constants.js';
-import { splitChars } from './split-chars.js';
+import { empty } from './constants.ts';
+import { splitChars } from './split-chars.ts';
 
 const trimEquivalent = /[\s\uFEFF\u00A0]/u;
 

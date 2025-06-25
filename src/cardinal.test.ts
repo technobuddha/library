@@ -1,4 +1,4 @@
-import { cardinal, orderOfMagnitude, summarize } from './cardinal.js';
+import { cardinal, orderOfMagnitude, summarize } from './cardinal.ts';
 
 describe('cardinal', () => {
   test('should handle simple numbers', () => {

@@ -1,6 +1,6 @@
-import { addTime } from './add-time.js';
-import { formatDate } from './format-date.js';
-import { relativeTime } from './relative-time.js';
+import { addTime } from './add-time.ts';
+import { formatDate } from './format-date.ts';
+import { relativeTime } from './relative-time.ts';
 
 describe('relativeTime', () => {
   test('should handle future dates', () => {

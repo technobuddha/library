@@ -4,8 +4,8 @@
 
 # Type Alias: AngleUnit
 
-> **AngleUnit**: keyof *typeof* [`angleUnits`](../variables/angleUnits.md)
+> **AngleUnit** = `"deg"` \| `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"`
 
-Defined in: [angle-units.ts:20](https://github.com/technobuddha/library/blob/main/src/angle-units.ts#L20)
+Defined in: [angle.ts:6](https://github.com/technobuddha/library/blob/main/src/angle.ts#L6)
 
 Angle units.

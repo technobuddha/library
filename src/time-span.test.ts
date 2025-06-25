@@ -1,4 +1,4 @@
-import { TimeSpan } from './time-span.js';
+import { TimeSpan } from './time-span.ts';
 
 describe('time-span', () => {
   test('construct no args', () => {

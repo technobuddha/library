@@ -1,4 +1,4 @@
-import { metricUnits } from './metric-units.js';
+import { metricUnits } from './metric-units.ts';
 
 //TODO [2025-05-30]: add tests for 'pad' option
 describe('metricUnits', () => {

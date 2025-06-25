@@ -1,4 +1,4 @@
-import { randomShuffle } from './random-shuffle.js';
+import { randomShuffle } from './random-shuffle.ts';
 
 describe('randomShuffle', () => {
   test('should shuffle a list', () => {

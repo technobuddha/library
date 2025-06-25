@@ -1,6 +1,6 @@
 import { toString } from 'lodash-es';
 
-import { empty, space } from './constants.js';
+import { empty, space } from './constants.ts';
 
 /**
  * @group English

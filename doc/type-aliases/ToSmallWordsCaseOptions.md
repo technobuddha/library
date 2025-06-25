@@ -4,12 +4,16 @@
 
 # Type Alias: ToSmallWordsCaseOptions
 
-> **ToSmallWordsCaseOptions**: \{ `upperCase`: `boolean`; \}
+> **ToSmallWordsCaseOptions** = \{ `upperCase?`: `boolean`; \}
 
 Defined in: [to-small-words-case.ts:5](https://github.com/technobuddha/library/blob/main/src/to-small-words-case.ts#L5)
 
-## Type declaration
+## Properties
 
-| Name | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="uppercase"></a> `upperCase`? | `boolean` | Convert other characters in the string to upper case | [to-small-words-case.ts:7](https://github.com/technobuddha/library/blob/main/src/to-small-words-case.ts#L7) |
+### upperCase?
+
+> `optional` **upperCase**: `boolean`
+
+Defined in: [to-small-words-case.ts:7](https://github.com/technobuddha/library/blob/main/src/to-small-words-case.ts#L7)
+
+Convert other characters in the string to upper case

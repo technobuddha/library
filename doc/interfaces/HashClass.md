@@ -4,7 +4,7 @@
 
 # Interface: HashClass
 
-Defined in: [hash-base.ts:12](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L12)
+Defined in: [hash-base.ts:13](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L13)
 
 The base interface for hash classes
 
@@ -16,7 +16,7 @@ The base interface for hash classes
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [hash-base.ts:13](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L13)
+Defined in: [hash-base.ts:14](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L14)
 
 ##### Returns
 
@@ -26,7 +26,7 @@ Defined in: [hash-base.ts:13](https://github.com/technobuddha/library/blob/main/
 
 > **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
-Defined in: [hash-base.ts:14](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L14)
+Defined in: [hash-base.ts:15](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L15)
 
 ##### Parameters
 
@@ -46,7 +46,7 @@ Defined in: [hash-base.ts:14](https://github.com/technobuddha/library/blob/main/
 
 > **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
 
-Defined in: [hash-base.ts:15](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L15)
+Defined in: [hash-base.ts:16](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L16)
 
 ##### Parameters
 
@@ -60,16 +60,16 @@ Defined in: [hash-base.ts:15](https://github.com/technobuddha/library/blob/main/
 
 #### Call Signature
 
-> **update**(`data`: `string`, `encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
+> **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
 
-Defined in: [hash-base.ts:16](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L16)
+Defined in: [hash-base.ts:17](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L17)
 
 ##### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `data` | `string` |
-| `encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) |
+| `encoding?` | [`TextEncoding`](../type-aliases/TextEncoding.md) |
 
 ##### Returns
 

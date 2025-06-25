@@ -4,12 +4,16 @@
 
 # Type Alias: CollapseBreakingSpaceOptions
 
-> **CollapseBreakingSpaceOptions**: \{ `trim`: `boolean`; \}
+> **CollapseBreakingSpaceOptions** = \{ `trim?`: `boolean`; \}
 
 Defined in: [collapse-breaking-space.ts:8](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L8)
 
-## Type declaration
+## Properties
 
-| Name | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="trim"></a> `trim`? | `boolean` | If true, trim | [collapse-breaking-space.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L10) |
+### trim?
+
+> `optional` **trim**: `boolean`
+
+Defined in: [collapse-breaking-space.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L10)
+
+If true, trim

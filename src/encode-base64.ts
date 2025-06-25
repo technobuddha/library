@@ -1,7 +1,7 @@
 /* eslint-disable no-bitwise */
-import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.js';
-import { encodeText } from './encode-text.js';
-import { type TextEncoding } from './text-encoding.js';
+import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.ts';
+import { encodeText } from './encode-text.ts';
+import { type TextEncoding } from './text-encoding.ts';
 
 /**
  * Gather 3 bytes from the input buffer and yield theim.

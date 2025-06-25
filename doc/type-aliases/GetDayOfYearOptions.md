@@ -4,12 +4,14 @@
 
 # Type Alias: GetDayOfYearOptions
 
-> **GetDayOfYearOptions**: \{ `utc`: `boolean`; \}
+> **GetDayOfYearOptions** = \{ `utc?`: `boolean`; \}
 
 Defined in: [get-day-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L9)
 
-## Type declaration
+## Properties
 
-| Name | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="utc"></a> `utc`? | `boolean` | [get-day-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L10) |
+### utc?
+
+> `optional` **utc**: `boolean`
+
+Defined in: [get-day-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L10)

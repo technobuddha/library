@@ -1,4 +1,4 @@
-import { ensurePrefix } from './ensure-prefix.js';
+import { ensurePrefix } from './ensure-prefix.ts';
 
 describe('ensurePrefix', () => {
   test('should add prefixes when needed', () => {

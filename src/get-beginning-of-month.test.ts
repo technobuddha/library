@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { getBeginningOfMonth } from './get-beginning-of-month.js';
+import { month } from './constants.ts';
+import { getBeginningOfMonth } from './get-beginning-of-month.ts';
 
 describe('getBeginningOfMonth', () => {
   test('should compute beginning of the month', () => {

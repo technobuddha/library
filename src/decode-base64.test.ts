@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { decodeBase64, decodeBase64Url } from './decode-base64.js';
+import { empty } from './constants.ts';
+import { decodeBase64, decodeBase64Url } from './decode-base64.ts';
 
 describe('decodeBase64', () => {
   test('should decode ASCII', () => {

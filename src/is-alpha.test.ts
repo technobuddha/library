@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { isAlpha } from './is-alpha.js';
+import { empty } from './constants.ts';
+import { isAlpha } from './is-alpha.ts';
 
 describe('isAlpha', () => {
   test('should detect alphabetic strings', () => {

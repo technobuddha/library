@@ -4,12 +4,16 @@
 
 # Type Alias: CountOptions
 
-> **CountOptions**: \{ `overlap`: `boolean`; \}
+> **CountOptions** = \{ `overlap?`: `boolean`; \}
 
 Defined in: [count.ts:5](https://github.com/technobuddha/library/blob/main/src/count.ts#L5)
 
-## Type declaration
+## Properties
 
-| Name | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="overlap"></a> `overlap`? | `boolean` | if true, counts overlapping strings | [count.ts:7](https://github.com/technobuddha/library/blob/main/src/count.ts#L7) |
+### overlap?
+
+> `optional` **overlap**: `boolean`
+
+Defined in: [count.ts:7](https://github.com/technobuddha/library/blob/main/src/count.ts#L7)
+
+if true, counts overlapping strings

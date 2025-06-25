@@ -1,4 +1,4 @@
-import { parseRoman, toRoman } from './roman-numeral.js';
+import { parseRoman, toRoman } from './roman-numeral.ts';
 
 describe('parseRoman', () => {
   test('should parse roman numbers', () => {

@@ -1,8 +1,7 @@
 //@ts-check
-/**
- * @import { TechnobuddhaConfig } from '@technobuddha/project'
- * @type {TechnobuddhaConfig}
- */
+
+// eslint-disable-next-line tsdoc/syntax
+/** @type {import("@technobuddha/project").TechnobuddhaConfig} */
 const config = {
   lint: {
     rules: {
@@ -16,7 +15,7 @@ const config = {
             alias: 'alias',
             base: 'path',
             package: 'alias',
-            extension: 'js',
+            extension: 'ts',
             index: true,
           },
         ],

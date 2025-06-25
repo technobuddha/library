@@ -1,5 +1,5 @@
-import { day, type DayOfWeek } from './constants.js';
-import { getBeginningOfWeek } from './get-beginning-of-week.js';
+import { day, type DayOfWeek } from './constants.ts';
+import { getBeginningOfWeek } from './get-beginning-of-week.ts';
 
 /**
  * @group Time

@@ -4,18 +4,19 @@
 
 # Function: angleDifference()
 
-> **angleDifference**(`startAngle`: `number`, `endAngle`: `number`): `number`
+> **angleDifference**(`startAngle`: `number`, `endAngle`: `number`, `unit`: [`AngleUnit`](../type-aliases/AngleUnit.md)): `number`
 
-Defined in: [angle-difference.ts:27](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L27)
+Defined in: [angle-difference.ts:30](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L30)
 
-Computes the difference between startAngle and endAngle (angles in radians).
+Computes the difference between startAngle and endAngle.
 
 ## Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `startAngle` | `number` | Start angle in radians. |
-| `endAngle` | `number` | End angle in radians. |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `startAngle` | `number` | `undefined` | Start angle in radians. |
+| `endAngle` | `number` | `undefined` | End angle in radians. |
+| `unit` | [`AngleUnit`](../type-aliases/AngleUnit.md) | `'radians'` | The angle unit to use for the output. |
 
 ## Returns
 
@@ -28,16 +29,16 @@ The number of radians that when added to *startAngle* will result in *endAngle*.
 Positive numbers mean that the
 direction is clockwise. Negative numbers indicate a counter-clockwise direction.
 The shortest route (clockwise vs counter-clockwise) between the angles is used.
-When the difference is PI radians, the function returns PI (not -PI)
+When the difference is π radians, the function returns π (not -π)
 
 ## Example
 
 ```ts
-angleDifference(PI * 1/6,  PI * 2/6) is PI * 1/6
+angleDifference(π * 1/6,  π * 2/6) is π * 1/6
 
-angleDifference(PI * 2/6, PI * 1/6)  is -PI * 1/6.
+angleDifference(π * 2/6, π * 1/6)  is -π * 1/6.
 
-angleDifference(PI * 11/6, PI * 1/6) is PI * 2/6
+angleDifference(π * 11/6, π * 1/6) is π * 2/6
 
-angleDifference(PI * 1/6, PI * 11/6) is -PI * 1/6.
+angleDifference(π * 1/6, π * 11/6) is -π * 1/6.
 ```

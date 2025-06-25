@@ -1,4 +1,4 @@
-import { toUnderscoreCase } from './to-underscore-case.js';
+import { toUnderscoreCase } from './to-underscore-case.ts';
 
 describe('toUnderscoreCase', () => {
   test('should sentences', () => {

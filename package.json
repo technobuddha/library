@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.9.2",
+  "version": "1.9.9",
   "description": "A large library of useful functions",
   "author": {
     "name": "Phil Hill",
@@ -17,20 +17,21 @@
   "homepage": "https://github.com/technobuddha/@technobuddha/library#readme",
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "tsc -b src/tsconfig.code.json",
-    "test": "TZ=America/New_York vitest"
+    "build": "tsc -b src/tsconfig.code.json; typedoc",
+    "test": "TZ=America/New_York vitest",
+    "doc": "typedoc"
   },
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
     "@giancosta86/typedoc-readonly": "1.0.1",
-    "@technobuddha/project": "0.0.162",
-    "@types/lodash-es": "^4",
+    "@technobuddha/project": "0.0.176",
+    "@types/lodash-es": "^4.17.12",
     "jest-matcher-deep-close-to": "3.0.2",
-    "typedoc": "0.27.6",
-    "typedoc-plugin-markdown": "4.4.1",
-    "typedoc-plugin-mdn-links": "4.0.12",
-    "vite": "6.1.0",
-    "vitest": "3.0.5"
+    "typedoc": "0.28.4",
+    "typedoc-plugin-markdown": "4.6.3",
+    "typedoc-plugin-mdn-links": "4.0.15",
+    "vite": "6.3.5",
+    "vitest": "3.1.3"
   },
   "technobuddhaProject": {
     "version": "0.0.161",

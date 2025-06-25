@@ -4,7 +4,7 @@
 
 # Type Alias: TextEncoding
 
-> **TextEncoding**: `"utf-8"` \| `"utf8"`
+> **TextEncoding** = `"utf-8"` \| `"utf8"`
 
 Defined in: [text-encoding.ts:7](https://github.com/technobuddha/library/blob/main/src/text-encoding.ts#L7)
 

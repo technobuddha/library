@@ -1,4 +1,4 @@
-import { toASCII } from './to-ascii.js';
+import { toASCII } from './to-ascii.ts';
 
 describe('toASCII', () => {
   test('should bad characters to be replaces', () => {

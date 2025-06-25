@@ -1,7 +1,7 @@
 import { escapeRegExp, isFunction } from 'lodash-es';
 
-import { build } from './build.js';
-import { escapeJS } from './escape-js.js';
+import { build } from './build.ts';
+import { escapeJS } from './escape-js.ts';
 
 /**
  * @group String

@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { isSameWeek } from './is-same-week.js';
+import { month } from './constants.ts';
+import { isSameWeek } from './is-same-week.ts';
 
 describe('isSameWeek', () => {
   test('should check for date similarity', () => {

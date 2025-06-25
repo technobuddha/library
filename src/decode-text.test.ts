@@ -1,4 +1,4 @@
-import { decodeText } from './decode-text.js';
+import { decodeText } from './decode-text.ts';
 
 const RC = '\uFFFD'; // unicode replacement character
 

@@ -3,8 +3,8 @@
 /* eslint-disable no-control-regex */
 import { compact, zip } from 'lodash-es';
 
-import { build } from './build.js';
-import { splitChars } from './split-chars.js';
+import { build } from './build.ts';
+import { splitChars } from './split-chars.ts';
 
 /**
  * @group Template

@@ -1,4 +1,4 @@
-import { matches } from './matches.js';
+import { matches } from './matches.ts';
 
 /**
  * Convert a string to a numeric value

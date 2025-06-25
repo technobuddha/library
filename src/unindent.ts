@@ -1,7 +1,7 @@
 import { escapeRegExp } from 'lodash-es';
 
-import { empty, space } from './constants.js';
-import { getIndent } from './get-indent.js';
+import { empty, space } from './constants.ts';
+import { getIndent } from './get-indent.ts';
 
 /**
  * @group String

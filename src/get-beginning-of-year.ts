@@ -1,4 +1,4 @@
-import { month } from './constants.js';
+import { month } from './constants.ts';
 
 /**
  * @group Time

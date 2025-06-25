@@ -1,5 +1,5 @@
-import { empty, space } from './constants.js';
-import { splitWords } from './split-words.js';
+import { empty, space } from './constants.ts';
+import { splitWords } from './split-words.ts';
 
 /**
  * @group String

@@ -4,12 +4,16 @@
 
 # Type Alias: GetEndOfYearOptions
 
-> **GetEndOfYearOptions**: \{ `utc`: `boolean`; \}
+> **GetEndOfYearOptions** = \{ `utc?`: `boolean`; \}
 
 Defined in: [get-end-of-year.ts:7](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L7)
 
-## Type declaration
+## Properties
 
-| Name | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc`? | `boolean` | Use the utc timezone | [get-end-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L9) |
+### utc?
+
+> `optional` **utc**: `boolean`
+
+Defined in: [get-end-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L9)
+
+Use the utc timezone

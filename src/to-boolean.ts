@@ -1,4 +1,4 @@
-import { toEnumeration } from './to-enumeration.js';
+import { toEnumeration } from './to-enumeration.ts';
 
 /**
  * @group String

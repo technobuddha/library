@@ -1,4 +1,4 @@
-import { toDotCase } from './to-dot-case.js';
+import { toDotCase } from './to-dot-case.ts';
 
 describe('toDotCase', () => {
   test('should sentences', () => {

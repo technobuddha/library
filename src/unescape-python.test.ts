@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { unescapePython } from './unescape-python.js';
+import { space } from './constants.ts';
+import { unescapePython } from './unescape-python.ts';
 
 describe('unescapePython', () => {
   test('should unescape standard sequences', () => {

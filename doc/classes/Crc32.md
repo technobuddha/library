@@ -4,7 +4,7 @@
 
 # Class: Crc32
 
-Defined in: [crc32.ts:57](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L57)
+Defined in: [crc32.ts:58](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L58)
 
 Compute the CRC32 checksum
 
@@ -14,15 +14,15 @@ Compute the CRC32 checksum
 
 ## Constructors
 
-### new Crc32()
+### Constructor
 
-> **new Crc32**(): [`Crc32`](Crc32.md)
+> **new Crc32**(): `Crc32`
 
-Defined in: [crc32.ts:60](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L60)
+Defined in: [crc32.ts:61](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L61)
 
 #### Returns
 
-[`Crc32`](Crc32.md)
+`Crc32`
 
 ## Methods
 
@@ -32,7 +32,7 @@ Defined in: [crc32.ts:60](https://github.com/technobuddha/library/blob/main/src/
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [crc32.ts:79](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L79)
+Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L80)
 
 ##### Returns
 
@@ -46,7 +46,7 @@ Defined in: [crc32.ts:79](https://github.com/technobuddha/library/blob/main/src/
 
 > **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
-Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L80)
+Defined in: [crc32.ts:81](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L81)
 
 ##### Parameters
 
@@ -70,7 +70,7 @@ Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/
 
 > **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
 
-Defined in: [crc32.ts:64](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L64)
+Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L65)
 
 ##### Parameters
 
@@ -88,16 +88,16 @@ Defined in: [crc32.ts:64](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **update**(`data`: `string`, `encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
+> **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
 
-Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L65)
+Defined in: [crc32.ts:66](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L66)
 
 ##### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `data` | `string` |
-| `encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) |
+| `encoding?` | [`TextEncoding`](../type-aliases/TextEncoding.md) |
 
 ##### Returns
 

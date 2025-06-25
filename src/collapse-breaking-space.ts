@@ -1,5 +1,5 @@
-import { clean } from './clean.js';
-import { space } from './constants.js';
+import { clean } from './clean.ts';
+import { space } from './constants.ts';
 
 /**
  * @group String

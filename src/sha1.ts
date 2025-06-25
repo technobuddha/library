@@ -5,9 +5,9 @@
  * Version 2.1a Copyright Paul Johnston 2000 - 2002.
  * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
  * Distributed under the BSD License
- * See http://pajhome.org.uk/crypt/md5 for details.
+ * See [MD5](https://pajhome.org.uk/crypt/md5) for details.
  */
-import { HashBase } from './hash-base.js';
+import { HashBase } from './hash-base.ts';
 
 function rotl1(num: number): number {
   return (num << 1) | (num >>> 31);

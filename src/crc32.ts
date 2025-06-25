@@ -1,9 +1,10 @@
 /* eslint-disable no-bitwise */
-import { type BinaryEncoding } from './binary-encoding.js';
-import { encodeBinary } from './encode-binary.js';
-import { encodeText } from './encode-text.js';
-import { type HashClass } from './hash-base.js';
-import { type TextEncoding } from './text-encoding.js';
+import { type TypedArray } from './@types/typed-array.ts';
+import { type BinaryEncoding } from './binary-encoding.ts';
+import { encodeBinary } from './encode-binary.ts';
+import { encodeText } from './encode-text.ts';
+import { type HashClass } from './hash-base.ts';
+import { type TextEncoding } from './text-encoding.ts';
 
 const crcTable: number[] = [
   0, 1996959894, -301047508, -1727442502, 124634137, 1886057615, -379345611, -1637575261, 249268274,

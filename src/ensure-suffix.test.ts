@@ -1,4 +1,4 @@
-import { ensureSuffix } from './ensure-suffix.js';
+import { ensureSuffix } from './ensure-suffix.ts';
 
 describe('ensureSuffix', () => {
   test('should add Suffixes when needed', () => {

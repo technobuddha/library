@@ -1,7 +1,7 @@
 import { isArray, isArrayLike, isBoolean, isNull, isNumber, isString, zip } from 'lodash-es';
 
-import { empty, space } from './constants.js';
-import { escapeGraphQL } from './escape-graphql.js';
+import { empty, space } from './constants.ts';
+import { escapeGraphQL } from './escape-graphql.ts';
 
 /**
  * @group Template

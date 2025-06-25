@@ -1,4 +1,4 @@
-import { type Cartesian, type Polar } from './coordinates.js';
+import { type Cartesian, type Polar } from './geometry.ts';
 
 describe('coordinates', () => {
   test('Polar', () => {

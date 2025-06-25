@@ -1,6 +1,6 @@
-import { type DayOfWeek } from './constants.js';
-import { day, daysPerWeek } from './constants.js';
-import { modulo } from './modulo.js';
+import { type DayOfWeek } from './constants.ts';
+import { day, daysPerWeek } from './constants.ts';
+import { modulo } from './modulo.ts';
 
 /**
  * @group Time

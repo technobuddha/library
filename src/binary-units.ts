@@ -1,5 +1,5 @@
-import { type MetricUnitsOptions as MetricUnitOptions } from './metric-units.js';
-import { metricUnits } from './metric-units.js';
+import { type MetricUnitsOptions as MetricUnitOptions } from './metric-units.ts';
+import { metricUnits } from './metric-units.ts';
 
 /**
  * @group String

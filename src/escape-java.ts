@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { oct, u4 } from './escape.js';
+import { empty } from './constants.ts';
+import { oct, u4 } from './escape.ts';
 
 /**
  * Escape a string for use in Java

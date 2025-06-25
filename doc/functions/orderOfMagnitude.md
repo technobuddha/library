@@ -4,7 +4,7 @@
 
 # Function: orderOfMagnitude()
 
-> **orderOfMagnitude**(`exponent`: `number`): `string` \| `null`
+> **orderOfMagnitude**(`exponent`: `number`): `null` \| `string`
 
 Defined in: [cardinal.ts:519](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L519)
 
@@ -18,7 +18,7 @@ Get the spelled out word for an exponent
 
 ## Returns
 
-`string` \| `null`
+`null` \| `string`
 
 Order of Magnitude as text
 

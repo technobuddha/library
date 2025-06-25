@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { escapePython } from './escape-python.js';
+import { space } from './constants.ts';
+import { escapePython } from './escape-python.ts';
 
 describe('escapePython', () => {
   test('should escape standard sequences', () => {

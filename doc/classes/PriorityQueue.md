@@ -16,9 +16,9 @@ A simple priority queue
 
 ## Constructors
 
-### new PriorityQueue()
+### Constructor
 
-> **new PriorityQueue**\<`T`\>(`comparator`: (`a`: `T`, `b`: `T`) => `number`, `contents`?: [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`\>): [`PriorityQueue`](PriorityQueue.md)\<`T`\>
+> **new PriorityQueue**\<`T`\>(`comparator`: (`a`: `T`, `b`: `T`) => `number`, `contents?`: [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`, `any`, `any`\>): `PriorityQueue`\<`T`\>
 
 Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L12)
 
@@ -27,11 +27,11 @@ Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `comparator` | (`a`: `T`, `b`: `T`) => `number` | Function to compare two elements and puts them in priority order. Takes two elements as arguments and returns a number greater, less then or equal to zero. |
-| `contents`? | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`\> | Initial contents of the queue |
+| `contents?` | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`, `any`, `any`\> | Initial contents of the queue |
 
 #### Returns
 
-[`PriorityQueue`](PriorityQueue.md)\<`T`\>
+`PriorityQueue`\<`T`\>
 
 ## Accessors
 

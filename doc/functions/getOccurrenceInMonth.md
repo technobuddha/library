@@ -4,7 +4,7 @@
 
 # Function: getOccurrenceInMonth()
 
-> **getOccurrenceInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `dayOfWeek`: [`DayOfWeek`](../type-aliases/DayOfWeek.md), `occurrence`: `number` \| `"last"`, `__namedParameters`: [`GetOccurrenceInMonthOptions`](../type-aliases/GetOccurrenceInMonthOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) \| `null`
+> **getOccurrenceInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `dayOfWeek`: [`DayOfWeek`](../type-aliases/DayOfWeek.md), `occurrence`: `number` \| `"last"`, `__namedParameters`: [`GetOccurrenceInMonthOptions`](../type-aliases/GetOccurrenceInMonthOptions.md)): `null` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 Defined in: [get-occurrence-in-month.ts:29](https://github.com/technobuddha/library/blob/main/src/get-occurrence-in-month.ts#L29)
 
@@ -21,7 +21,7 @@ Determine the date of an occurrence of a weekday within a month
 
 ## Returns
 
-[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) \| `null`
+`null` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 A date object corresponding to the occurrence requested, or null if no such date exists in the month
 

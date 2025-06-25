@@ -1,5 +1,5 @@
-import { negativeZero } from './constants.js';
-import { padNumber } from './pad-number.js';
+import { negativeZero } from './constants.ts';
+import { padNumber } from './pad-number.ts';
 
 describe('padNumber', () => {
   test('should handle positive numbers', () => {

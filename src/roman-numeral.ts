@@ -1,9 +1,8 @@
-import { build } from './build.js';
-import { splitChars } from './split-chars.js';
+import { build } from './build.ts';
+import { splitChars } from './split-chars.ts';
 
 // const validator = /^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/u;
 
-/* eslint-disable @typescript-eslint/naming-convention */
 const glyphs = {
   ↈ: 100000,
   ↇ: 50000,
@@ -76,7 +75,7 @@ const glyphs = {
   Ⅰ: 1,
   ⅰ: 1,
 };
-/* eslint-enable @typescript-eslint/naming-convention */
+
 // Ↄ ↄ
 
 const keyOut = [
@@ -108,7 +107,7 @@ const lastGlpyh = keyOut.at(-1)!.at(-1)!.at(-1)!;
  * @param val - The roman numeral string to parse
  * @returns Parsed roman number
  * @group Math
- * @category Numberinc
+ * @category Numbering
  */
 export function parseRoman(val: string): number {
   const glyphValues = splitChars(val).map((g) => glyphs[g as keyof typeof glyphs]);
@@ -133,7 +132,7 @@ export function parseRoman(val: string): number {
  * @param val - The number to turn into a roman numeral
  * @returns Converted roman numeral
  * @group Math
- * @category Numberinc
+ * @category Numbering
  */
 export function toRoman(val: number): string {
   const digits = splitChars(val.toString());

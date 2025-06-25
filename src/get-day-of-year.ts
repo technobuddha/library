@@ -1,6 +1,6 @@
-import { ticksPerDay } from './constants.js';
-import { floor } from './floor.js';
-import { getBeginningOfYear } from './get-beginning-of-year.js';
+import { ticksPerDay } from './constants.ts';
+import { floor } from './floor.ts';
+import { getBeginningOfYear } from './get-beginning-of-year.ts';
 
 /**
  * @group Time

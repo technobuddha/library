@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { unescapeC } from './unescape-c.js';
+import { space } from './constants.ts';
+import { unescapeC } from './unescape-c.ts';
 
 describe('unescapeC', () => {
   test('should unescape standard sequences', () => {

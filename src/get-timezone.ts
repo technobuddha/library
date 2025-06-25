@@ -1,7 +1,7 @@
 import { isDate } from 'lodash-es';
 
-import { empty } from './constants.js';
-import { padNumber } from './pad-number.js';
+import { empty } from './constants.ts';
+import { padNumber } from './pad-number.ts';
 
 /**
  * @group Time

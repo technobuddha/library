@@ -1,6 +1,6 @@
-import { diceCoefficient } from './dice-coefficient.js';
-import { levenshteinDistance } from './levenshtein-distance.js';
-import { longestCommonSubstring } from './longest-common-substring.js';
+import { diceCoefficient } from './dice-coefficient.ts';
+import { levenshteinDistance } from './levenshtein-distance.ts';
+import { longestCommonSubstring } from './longest-common-substring.ts';
 
 /**
  * @group String

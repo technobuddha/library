@@ -6,9 +6,9 @@
 
 > **longestCommonSubsequence**\<`T`\>(`array1`: `ArrayLike`\<`T`\>, `array2`: `ArrayLike`\<`T`\>, `options`: [`LongestCommonSubsequenceOptions`](../type-aliases/LongestCommonSubsequenceOptions.md)\<`T`\>): `T`[]
 
-Defined in: [longest-common-subsequence.ts:47](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L47)
+Defined in: [longest-common-subsequence.ts:46](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L46)
 
-determine the longest possible array that is subarray of both of given arrays.
+Ddetermine the longest possible array that is subarray of both of given arrays.
 
 ## Type Parameters
 
@@ -34,8 +34,7 @@ length of the list.
 
 ## Remarks
 
-Implementation of Longest Common Subsequence problem.
-http://en.wikipedia.org/wiki/Longest_common_subsequence
+Implementation of [Longest Common Subsequence]( https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
 
 ## Example
 

@@ -1,5 +1,4 @@
-/* eslint-disable no-secrets/no-secrets */
-import { Crc32 } from './crc32.js';
+import { Crc32 } from './crc32.ts';
 
 describe('Crc32', () => {
   test('empty', () => {
@@ -10,7 +9,7 @@ describe('Crc32', () => {
     expect(new Crc32().update('').digest('hex')).toBe('00000000');
   });
 
-  test('hex encoding', () => {1
+  test('hex encoding', () => {
     expect(new Crc32().update('x').digest('hex')).toBe('8cdc1683');
   });
 
@@ -23,15 +22,11 @@ describe('Crc32', () => {
   });
 
   test('binary encoding', () => {
-    expect(new Crc32().update('x').digest('binary')).toBe(
-      '\u008c\u00dc\u0016\u0083',
-    );
+    expect(new Crc32().update('x').digest('binary')).toBe('\u008c\u00dc\u0016\u0083');
   });
 
   test('hash encoding', () => {
-    expect(Array.from(new Crc32().update('x').digest())).toStrictEqual([
-      0x8c, 0xdc, 0x16, 0x83
-    ]);
+    expect(Array.from(new Crc32().update('x').digest())).toStrictEqual([0x8c, 0xdc, 0x16, 0x83]);
   });
 
   test('update with long string', () => {

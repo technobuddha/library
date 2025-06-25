@@ -1,6 +1,6 @@
 import { escapeRegExp, isString } from 'lodash-es';
 
-import { unescapeJS } from './unescape-js.js';
+import { unescapeJS } from './unescape-js.ts';
 
 /**
  * @group String

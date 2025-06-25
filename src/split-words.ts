@@ -1,5 +1,5 @@
-import { clean } from './clean.js';
-import { isWhitespace } from './is-whitespace.js';
+import { clean } from './clean.ts';
+import { isWhitespace } from './is-whitespace.ts';
 
 /**
  * @group String

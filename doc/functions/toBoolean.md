@@ -4,7 +4,7 @@
 
 # Function: toBoolean()
 
-> **toBoolean**(`input`: `string`, `__namedParameters`: [`ToBooleanOptions`](../type-aliases/ToBooleanOptions.md)): `boolean` \| `undefined`
+> **toBoolean**(`input`: `string`, `__namedParameters`: [`ToBooleanOptions`](../type-aliases/ToBooleanOptions.md)): `undefined` \| `boolean`
 
 Defined in: [to-boolean.ts:27](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L27)
 
@@ -19,7 +19,7 @@ Convert a string to a boolean value
 
 ## Returns
 
-`boolean` \| `undefined`
+`undefined` \| `boolean`
 
 ## Default Value
 

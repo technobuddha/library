@@ -1,4 +1,4 @@
-import { getJulian } from './get-julian.js';
+import { getJulian } from './get-julian.ts';
 
 describe('getJulian', () => {
   test('should convert to Julian dates', () => {

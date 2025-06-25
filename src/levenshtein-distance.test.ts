@@ -1,4 +1,4 @@
-import { levenshteinDistance } from './levenshtein-distance.js';
+import { levenshteinDistance } from './levenshtein-distance.ts';
 
 describe('levenshteinDistance', () => {
   test('Detect difference between two strings', () => {

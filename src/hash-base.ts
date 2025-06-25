@@ -1,8 +1,9 @@
 /* eslint-disable no-bitwise */
-import { type BinaryEncoding } from './binary-encoding.js';
-import { encodeBinary } from './encode-binary.js';
-import { encodeText } from './encode-text.js';
-import { type TextEncoding } from './text-encoding.js';
+import { type TypedArray } from './@types/typed-array.ts';
+import { type BinaryEncoding } from './binary-encoding.ts';
+import { encodeBinary } from './encode-binary.ts';
+import { encodeText } from './encode-text.ts';
+import { type TextEncoding } from './text-encoding.ts';
 
 /**
  * The base interface for hash classes

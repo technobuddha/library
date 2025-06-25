@@ -1,4 +1,4 @@
-import { fuzzyMatch } from './fuzzy-match.js';
+import { fuzzyMatch } from './fuzzy-match.ts';
 
 describe('levenshteinDistance', () => {
   test('Detect difference between two strings', () => {

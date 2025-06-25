@@ -1,4 +1,4 @@
-import { wordwrap } from './wordwrap.js';
+import { wordwrap } from './wordwrap.ts';
 
 describe('wordwrap', () => {
   test('wrap words', () => {

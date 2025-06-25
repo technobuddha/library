@@ -6,10 +6,9 @@
 
 > **longestCommonSubstring**(`string1`: `string`, `string2`: `string`, `__namedParameters`: [`LongestCommonSubstringOptions`](../type-aliases/LongestCommonSubstringOptions.md)): `string`
 
-Defined in: [longest-common-substring.ts:25](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L25)
+Defined in: [longest-common-substring.ts:24](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L24)
 
-Implementation of Longest Common Substring problem.
-https://en.wikipedia.org/wiki/Longest_common_substring_problem
+Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm.
 
 Returns the longest possible substring that is substring of both of given strings.
 

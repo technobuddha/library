@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.ts';
 
 /**
  * @group String

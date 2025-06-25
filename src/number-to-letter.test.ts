@@ -1,4 +1,4 @@
-import { numberToLetter } from './number-to-letter.js';
+import { numberToLetter } from './number-to-letter.ts';
 
 describe('numberToLetter', () => {
   test('should convert numbers', () => {

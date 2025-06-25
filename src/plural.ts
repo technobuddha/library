@@ -1,7 +1,7 @@
 import { isUndefined } from 'lodash-es';
 
-import { empty, space } from './constants.js';
-import { matchCase } from './match-case.js';
+import { empty, space } from './constants.ts';
+import { matchCase } from './match-case.ts';
 
 /**
  * Return the plural version of the input string

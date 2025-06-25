@@ -1,7 +1,7 @@
 import { compact } from 'lodash-es';
 
-import { build } from './build.js';
-import { splitChars } from './split-chars.js';
+import { build } from './build.ts';
+import { splitChars } from './split-chars.ts';
 
 /**
  * Change a string to be all from the basic latin unicode plane

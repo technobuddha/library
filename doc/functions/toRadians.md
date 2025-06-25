@@ -4,7 +4,7 @@
 
 # Function: toRadians()
 
-> **toRadians**(`angle`: `number`, `unit`: `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"`): `number`
+> **toRadians**(`angle`: `number`, `unit`: [`AngleUnit`](../type-aliases/AngleUnit.md)): `number`
 
 Defined in: [to-radians.ts:11](https://github.com/technobuddha/library/blob/main/src/to-radians.ts#L11)
 
@@ -15,7 +15,7 @@ Converts degrees to radians.
 | Parameter | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
 | `angle` | `number` | `undefined` | Angle in degrees. |
-| `unit` | `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"` | `'degrees'` | - |
+| `unit` | [`AngleUnit`](../type-aliases/AngleUnit.md) | `'degrees'` | - |
 
 ## Returns
 

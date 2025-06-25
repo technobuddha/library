@@ -1,5 +1,5 @@
-import { empty, negativeZero, space } from './constants.js';
-import { isNumeric } from './is-numeric.js';
+import { empty, negativeZero, space } from './constants.ts';
+import { isNumeric } from './is-numeric.ts';
 
 describe('isNumeric', () => {
   test('should handle numbers', () => {

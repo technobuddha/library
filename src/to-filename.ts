@@ -1,8 +1,8 @@
 import { escapeRegExp } from 'lodash-es';
 
-import { clean } from './clean.js';
-import { collapseWhitespace } from './collapse-whitespace.js';
-import { empty } from './constants.js';
+import { clean } from './clean.ts';
+import { collapseWhitespace } from './collapse-whitespace.ts';
+import { empty } from './constants.ts';
 
 const badChars = /[/\\:*?<>|.]+/gu;
 

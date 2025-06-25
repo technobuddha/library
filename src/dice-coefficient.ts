@@ -1,4 +1,4 @@
-import { compareStrings } from './compare-strings.js';
+import { compareStrings } from './compare-strings.ts';
 
 /**
  * @group String

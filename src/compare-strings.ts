@@ -1,6 +1,6 @@
 import { isNil } from 'lodash-es';
 
-import { compareNumbers } from './compare-numbers.js';
+import { compareNumbers } from './compare-numbers.ts';
 
 /**
  * @group String

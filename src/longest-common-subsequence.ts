@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.ts';
 
 /**
  * @group Array
@@ -20,11 +20,10 @@ export type LongestCommonSubsequenceOptions<T> = {
 };
 
 /**
- * determine the longest possible array that is subarray of both of given arrays.
+ * Ddetermine the longest possible array that is subarray of both of given arrays.
  *
  * @remarks
- * Implementation of Longest Common Subsequence problem.
- * http://en.wikipedia.org/wiki/Longest_common_subsequence
+ * Implementation of [Longest Common Subsequence]( https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
  *
  * @example
  * ```ts

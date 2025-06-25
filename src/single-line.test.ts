@@ -1,4 +1,4 @@
-import { singleLine } from './single-line.js';
+import { singleLine } from './single-line.ts';
 
 describe('singleline', () => {
   test('should strip newlines', () => {

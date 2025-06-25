@@ -1,4 +1,4 @@
-import { collapseBreakingspace } from './collapse-breaking-space.js';
+import { collapseBreakingspace } from './collapse-breaking-space.ts';
 
 describe('collapseBreakingspace', () => {
   test('should collapse Breakingspace', () => {

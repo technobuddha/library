@@ -1,6 +1,6 @@
-import { type BinaryEncoding } from './binary-encoding.js';
-import { chop } from './chop.js';
-import { decodeBase64, decodeBase64Url } from './decode-base64.js';
+import { type BinaryEncoding } from './binary-encoding.ts';
+import { chop } from './chop.ts';
+import { decodeBase64, decodeBase64Url } from './decode-base64.ts';
 
 /**
  * Decode a string into a binary object
@@ -28,7 +28,7 @@ export function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Arra
     }
 
     case 'hex': {
-      // TODO [2025-02-13]: this is not validating the input
+      // TODO [2025-04-01]: this is not validating the input
       return new Uint8Array(chop(input, 2).map((hex) => Number.parseInt(hex, 16)));
     }
 

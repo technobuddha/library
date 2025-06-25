@@ -6,10 +6,9 @@
 
 > **standardDeviation**(...`datapoints`: `number`[]): `number`
 
-Defined in: [standard-deviation.ts:14](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L14)
+Defined in: [standard-deviation.ts:13](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L13)
 
-Returns the sample standard deviation of the arguments.  For a definition of
-sample standard deviation, see http://en.wikipedia.org/wiki/Standard_deviation
+Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments.
 
 ## Parameters
 

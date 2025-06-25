@@ -1,4 +1,4 @@
-import { toCapitalWordCase } from './to-capital-word-case.js';
+import { toCapitalWordCase } from './to-capital-word-case.ts';
 
 describe('toCapitalWordCase', () => {
   test('should sentences', () => {

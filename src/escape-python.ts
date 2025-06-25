@@ -1,5 +1,5 @@
-import { build } from './build.js';
-import { hex, oct, u4, u8, x2 } from './escape.js';
+import { build } from './build.ts';
+import { hex, oct, u4, u8, x2 } from './escape.ts';
 
 /**
  * Escape a string for use in Python

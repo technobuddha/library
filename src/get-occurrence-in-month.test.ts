@@ -1,5 +1,5 @@
-import { day } from './constants.js';
-import { getOccurrenceInMonth } from './get-occurrence-in-month.js';
+import { day } from './constants.ts';
+import { getOccurrenceInMonth } from './get-occurrence-in-month.ts';
 
 describe('getOccurrenceInMonth', () => {
   test('should find the occurrences of a day in a month', () => {

@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { getBeginningOfWeek } from './get-beginning-of-week.js';
+import { month } from './constants.ts';
+import { getBeginningOfWeek } from './get-beginning-of-week.ts';
 
 describe('getBeginningOfWeek', () => {
   test('should find the beginning of the week', () => {

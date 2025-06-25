@@ -1,4 +1,4 @@
-import { toRadians } from './to-radians.js';
+import { toRadians } from './to-radians.ts';
 
 describe('toRadians', () => {
   test('converts positive angles', () => {

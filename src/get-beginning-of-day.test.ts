@@ -1,4 +1,4 @@
-import { getBeginningOfDay } from './get-beginning-of-day.js';
+import { getBeginningOfDay } from './get-beginning-of-day.ts';
 
 describe('getBeginningOfDay', () => {
   test('should calculate the beginning of the day', () => {

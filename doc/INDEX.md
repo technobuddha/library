@@ -1,5 +1,11 @@
 # @technobuddha/library
 
+## Type Aliases
+
+| Type Alias | Description |
+| ------ | ------ |
+| [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
+
 ## Array
 
 ### Create 2D Array
@@ -13,7 +19,7 @@
 | Name | Description |
 | ------ | ------ |
 | [LongestCommonSubsequenceOptions](type-aliases/LongestCommonSubsequenceOptions.md) | - |
-| [longestCommonSubsequence](functions/longestCommonSubsequence.md) | determine the longest possible array that is subarray of both of given arrays. |
+| [longestCommonSubsequence](functions/longestCommonSubsequence.md) | Ddetermine the longest possible array that is subarray of both of given arrays. |
 
 ## Conversion
 
@@ -196,41 +202,75 @@
 
 ## Geometry
 
-### Angle Between Points
-
-| Function | Description |
-| ------ | ------ |
-| [angleBetweenPoints](functions/angleBetweenPoints.md) | Computes the angle between two points (x1,y1) and (x2,y2). Angle zero points in the +X direction, PI/2 radians points in the +Y direction (down) and from there we grow clockwise towards PI*2 radians. |
-
-### Angle Conversion
+### Angle
 
 | Name | Description |
 | ------ | ------ |
 | [AngleUnit](type-aliases/AngleUnit.md) | Angle units. |
 | [angleUnits](variables/angleUnits.md) | Angle units. |
+| [angleBetweenPoints](functions/angleBetweenPoints.md) | Computes the angle between two points (x1,y1) and (x2,y2). Angle zero points in the +X direction, π/2 radians points in the +Y direction (down) and from there we grow clockwise towards π*2 radians. |
+| [angleDifference](functions/angleDifference.md) | Computes the difference between startAngle and endAngle. |
+| [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal azis |
+| [angleReflection](functions/angleReflection.md) | Calculates the reflection of an angle across a specified axis. |
+| [normalizeAngle](functions/normalizeAngle.md) | Normalizes an angle to be in range [0-π*2]. Angles outside this range will be normalized to be the equivalent angle with that range. |
+| [toAngle](functions/toAngle.md) | Converts an angle from one unit to another. |
 | [toDegrees](functions/toDegrees.md) | Convert an angle from radians to degrees |
 | [toRadians](functions/toRadians.md) | Converts degrees to radians. |
 
-### Angle Difference
-
-| Function | Description |
-| ------ | ------ |
-| [angleDifference](functions/angleDifference.md) | Computes the difference between startAngle and endAngle (angles in radians). |
-
-### Cartesian / Polar Coordinates
+### Coordinates
 
 | Name | Description |
 | ------ | ------ |
+| [CartesianSet](classes/CartesianSet.md) | Represents a set of 2D cartesian, optimized for efficient storage and lookup. |
 | [Cartesian](type-aliases/Cartesian.md) | - |
 | [Polar](type-aliases/Polar.md) | - |
+| [ORIGIN](variables/ORIGIN.md) | - |
+| [isCartesian](functions/isCartesian.md) | Determines if the provided value is a Cartesian point. |
+| [isPolar](functions/isPolar.md) | Determines if the provided value is a Polar point. |
 | [toCartesian](functions/toCartesian.md) | Convert polar coordinates to cartesian |
 | [toPolar](functions/toPolar.md) | Convert cartesian coordinates to polar |
 
-### Normalize Angle
+### LineSegment
+
+| Name | Description |
+| ------ | ------ |
+| [LineSegment](type-aliases/LineSegment.md) | - |
+| [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal azis |
+| [lineIntersection](functions/lineIntersection.md) | Calculates the intersection point of two line segments. |
+| [lineLength](functions/lineLength.md) | Calculates the length of a given line segment using the distance formula. |
+| [midpoint](functions/midpoint.md) | Calculates a point at a given fraction (`part`) along a line segment. By default it returns the true midpoint of the line segment |
+
+### Point
 
 | Function | Description |
 | ------ | ------ |
-| [normalizeAngle](functions/normalizeAngle.md) | Normalizes an angle to be in range [0-PI*2]. Angles outside this range will be normalized to be the equivalent angle with that range. |
+| [isPointInPolygon](functions/isPointInPolygon.md) | Determines whether a given point is inside or on the edge of a polygon. |
+| [manhattanDistance](functions/manhattanDistance.md) | Calculates the Manhattan distance between two points in Cartesian coordinates. |
+| [rotate](functions/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
+| [scale](functions/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
+| [translate](functions/translate.md) | Translate a point or an array of points by a specified amount. |
+
+### Polygon
+
+| Name | Description |
+| ------ | ------ |
+| [Polygon](type-aliases/Polygon.md) | - |
+| [area](functions/area.md) | Calculates the area of a polygon given its vertices. |
+| [bounds](functions/bounds.md) | Calculates the axis-aligned bounding rectangle for a given polygon. |
+| [isPointInPolygon](functions/isPointInPolygon.md) | Determines whether a given point is inside or on the edge of a polygon. |
+| [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
+| [regularPolygon](functions/regularPolygon.md) | Generates the vertices of a regular polygon as an array of Cartesian points. |
+| [rotate](functions/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
+| [scale](functions/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
+| [star](functions/star.md) | Generates the vertices of a star-shaped polygon. |
+| [translate](functions/translate.md) | Translate a point or an array of points by a specified amount. |
+
+### Rectangle
+
+| Name | Description |
+| ------ | ------ |
+| [Rect](type-aliases/Rect.md) | - |
+| [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
 
 ## Math
 
@@ -275,13 +315,6 @@
 | [negativeZero](variables/negativeZero.md) | - |
 | [isNegativeZero](functions/isNegativeZero.md) | Tests to see if the specified value is negative zero |
 
-### Numberinc
-
-| Function | Description |
-| ------ | ------ |
-| [parseRoman](functions/parseRoman.md) | Parse a roman numeral string into it's integer value. |
-| [toRoman](functions/toRoman.md) | Parse number into a roman numeral string |
-
 ### Numbering
 
 | Name | Description |
@@ -292,7 +325,9 @@
 | [cardinal](functions/cardinal.md) | Convert a number into text (the cardinal number) |
 | [orderOfMagnitude](functions/orderOfMagnitude.md) | Get the spelled out word for an exponent |
 | [ordinal](functions/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
+| [parseRoman](functions/parseRoman.md) | Parse a roman numeral string into it's integer value. |
 | [summarize](functions/summarize.md) | Get a short description of a number |
+| [toRoman](functions/toRoman.md) | Parse number into a roman numeral string |
 
 ### Parity
 
@@ -306,8 +341,8 @@
 
 | Function | Description |
 | ------ | ------ |
-| [standardDeviation](functions/standardDeviation.md) | Returns the sample standard deviation of the arguments. For a definition of sample standard deviation, see http://en.wikipedia.org/wiki/Standard_deviation |
-| [variance](functions/variance.md) | Returns the unbiased sample variance of the arguments. For a definition, see http://en.wikipedia.org/wiki/Variance |
+| [standardDeviation](functions/standardDeviation.md) | Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments. |
+| [variance](functions/variance.md) | Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments. |
 
 ## Number
 
@@ -353,6 +388,7 @@
 
 | Function | Description |
 | ------ | ------ |
+| [randomDraw](functions/randomDraw.md) | Draw a random item from a list. Returning both the item and the list without the drawn item. |
 | [randomPick](functions/randomPick.md) | Pick a random items from a list. |
 
 ### Shuffle
@@ -528,7 +564,7 @@
 | [diceCoefficient](functions/diceCoefficient.md) | Compute the dice coefficient measure of similarity between two strings |
 | [fuzzyMatch](functions/fuzzyMatch.md) | - |
 | [levenshteinDistance](functions/levenshteinDistance.md) | Compute the levenshtein distance between two strings (similarity) |
-| [longestCommonSubstring](functions/longestCommonSubstring.md) | Implementation of Longest Common Substring problem. https://en.wikipedia.org/wiki/Longest_common_substring_problem |
+| [longestCommonSubstring](functions/longestCommonSubstring.md) | Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm. |
 
 ### HTML
 

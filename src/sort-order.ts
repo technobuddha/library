@@ -1,4 +1,4 @@
-import { clean } from './clean.js';
+import { clean } from './clean.ts';
 
 /**
  * @group String

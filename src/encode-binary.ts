@@ -1,5 +1,5 @@
-import { type BinaryEncoding } from './binary-encoding.js';
-import { encodeBase64, encodeBase64Url } from './encode-base64.js';
+import { type BinaryEncoding } from './binary-encoding.ts';
+import { encodeBase64, encodeBase64Url } from './encode-base64.ts';
 
 /**
  * Encode an binary object into a string

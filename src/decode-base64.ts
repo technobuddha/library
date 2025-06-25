@@ -1,7 +1,7 @@
 /* eslint-disable no-bitwise */
-import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.js';
-import { decodeText } from './decode-text.js';
-import { type TextEncoding } from './text-encoding.js';
+import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.ts';
+import { decodeText } from './decode-text.ts';
+import { type TextEncoding } from './text-encoding.ts';
 
 /**
  * Gather 4 characters from the input string and yield their indices in the base64 alphabet.

@@ -1,5 +1,5 @@
-import { formatDate } from './format-date.js';
-import { getTimezone } from './get-timezone.js';
+import { formatDate } from './format-date.ts';
+import { getTimezone } from './get-timezone.ts';
 
 describe('formatDate', () => {
   test('support the h format', () => {

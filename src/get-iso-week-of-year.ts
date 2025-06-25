@@ -1,8 +1,8 @@
-import { type DayOfWeek } from './constants.js';
-import { day, month, ticksPerWeek } from './constants.js';
-import { floor } from './floor.js';
-import { getBeginningOfWeek } from './get-beginning-of-week.js';
-import { getISOWeeksInYear } from './get-iso-weeks-in-year.js';
+import { type DayOfWeek } from './constants.ts';
+import { day, month, ticksPerWeek } from './constants.ts';
+import { floor } from './floor.ts';
+import { getBeginningOfWeek } from './get-beginning-of-week.ts';
+import { getISOWeeksInYear } from './get-iso-weeks-in-year.ts';
 
 /**
  * @group Time

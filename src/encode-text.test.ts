@@ -1,4 +1,4 @@
-import { encodeText } from './encode-text.js';
+import { encodeText } from './encode-text.ts';
 
 const REPLACEMENT = [0xef, 0x8f, 0xbd];
 function na(u: Uint8Array): number[] {

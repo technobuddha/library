@@ -1,5 +1,5 @@
 /* eslint-disable no-secrets/no-secrets */
-import { Sha256 } from './sha256.js';
+import { Sha256 } from './sha256.ts';
 
 describe('Sha256', () => {
   test('empty', () => {

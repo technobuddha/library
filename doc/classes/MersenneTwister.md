@@ -8,9 +8,9 @@ Defined in: [mersenne-twister.ts:70](https://github.com/technobuddha/library/blo
 
 ## Constructors
 
-### new MersenneTwister()
+### Constructor
 
-> **new MersenneTwister**(`seed`: `number` \| `number`[]): [`MersenneTwister`](MersenneTwister.md)
+> **new MersenneTwister**(`seed`: `number` \| `number`[]): `MersenneTwister`
 
 Defined in: [mersenne-twister.ts:74](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L74)
 
@@ -22,7 +22,7 @@ Defined in: [mersenne-twister.ts:74](https://github.com/technobuddha/library/blo
 
 #### Returns
 
-[`MersenneTwister`](MersenneTwister.md)
+`MersenneTwister`
 
 ## Properties
 

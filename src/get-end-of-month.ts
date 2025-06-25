@@ -1,4 +1,4 @@
-import { getDaysInMonth } from './get-days-in-month.js';
+import { getDaysInMonth } from './get-days-in-month.ts';
 
 /**
  * @group Time

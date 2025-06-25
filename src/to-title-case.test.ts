@@ -1,4 +1,4 @@
-import { toTitleCase } from './to-title-case.js';
+import { toTitleCase } from './to-title-case.ts';
 
 describe('toTitleCase', () => {
   test('should handle sentences', () => {

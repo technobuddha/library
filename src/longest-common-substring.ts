@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2d-array.js';
+import { create2DArray } from './create-2d-array.ts';
 
 /**
  * @group String
@@ -10,8 +10,7 @@ export type LongestCommonSubstringOptions = {
 };
 
 /**
- * Implementation of Longest Common Substring problem.
- * https://en.wikipedia.org/wiki/Longest_common_substring_problem
+ * Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm.
  *
  * Returns the longest possible substring that is substring of both of given strings.
  *

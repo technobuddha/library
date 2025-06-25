@@ -1,5 +1,5 @@
 /* eslint-disable no-secrets/no-secrets */
-import { Sha384 } from './sha384.js';
+import { Sha384 } from './sha384.ts';
 
 describe('Sha384', () => {
   test('empty', () => {

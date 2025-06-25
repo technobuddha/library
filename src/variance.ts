@@ -1,8 +1,7 @@
 import { mean, sum } from 'lodash-es';
 
 /**
- * Returns the unbiased sample variance of the arguments. For a definition,
- * see http://en.wikipedia.org/wiki/Variance
+ * Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments.
  *
  * @param datapoints - Number samples to analyze.
  * @returns The unbiased sample variance of the arguments (0 if fewer

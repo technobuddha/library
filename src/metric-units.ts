@@ -1,7 +1,7 @@
 import { isNil, round } from 'lodash-es';
 
-import { empty } from './constants.js';
-import { formatNumber } from './format-number.js';
+import { empty } from './constants.ts';
+import { formatNumber } from './format-number.ts';
 
 /**
  * @group String

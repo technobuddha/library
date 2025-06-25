@@ -1,4 +1,4 @@
-import { compareNumbers } from './compare-numbers.js';
+import { compareNumbers } from './compare-numbers.ts';
 
 describe('compareNumbers', () => {
   test('should compare strings', () => {

@@ -1,4 +1,4 @@
-import { getTimezone } from './get-timezone.js';
+import { getTimezone } from './get-timezone.ts';
 
 //use(require('chai-match'));
 

@@ -1,4 +1,4 @@
-import { toSmallCase } from './to-small-case.js';
+import { toSmallCase } from './to-small-case.ts';
 
 describe('toSmallCase', () => {
   test('should sentences', () => {

@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import { HashBase } from './hash-base.js';
+import { HashBase } from './hash-base.ts';
 
 const K = [
   0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,

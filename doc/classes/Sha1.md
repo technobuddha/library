@@ -14,27 +14,27 @@ Secure Hash Algorithm, SHA-1
 
 ## Constructors
 
-### new Sha1()
+### Constructor
 
-> **new Sha1**(): [`Sha1`](Sha1.md)
+> **new Sha1**(): `Sha1`
 
 Defined in: [sha1.ts:54](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L54)
 
 #### Returns
 
-[`Sha1`](Sha1.md)
+`Sha1`
 
 #### Overrides
 
-[`HashBase`](HashBase.md).[`constructor`](HashBase.md#constructors)
+[`HashBase`](HashBase.md).[`constructor`](HashBase.md#constructor)
 
 ## Properties
 
 | Property | Modifier | Type | Inherited from | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="block"></a> `block` | `readonly` | [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [`HashBase`](HashBase.md).[`block`](HashBase.md#block) | [hash-base.ts:26](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L26) |
-| <a id="blocksize"></a> `blockSize` | `readonly` | `number` | [`HashBase`](HashBase.md).[`blockSize`](HashBase.md#blocksize-1) | [hash-base.ts:27](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L27) |
-| <a id="finalsize"></a> `finalSize` | `readonly` | `number` | [`HashBase`](HashBase.md).[`finalSize`](HashBase.md#finalsize-1) | [hash-base.ts:28](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L28) |
+| <a id="block"></a> `block` | `readonly` | [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) | [`HashBase`](HashBase.md).[`block`](HashBase.md#block) | [hash-base.ts:27](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L27) |
+| <a id="blocksize"></a> `blockSize` | `readonly` | `number` | [`HashBase`](HashBase.md).[`blockSize`](HashBase.md#blocksize) | [hash-base.ts:28](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L28) |
+| <a id="finalsize"></a> `finalSize` | `readonly` | `number` | [`HashBase`](HashBase.md).[`finalSize`](HashBase.md#finalsize) | [hash-base.ts:29](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L29) |
 
 ## Methods
 
@@ -44,7 +44,7 @@ Defined in: [sha1.ts:54](https://github.com/technobuddha/library/blob/main/src/s
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [hash-base.ts:42](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L42)
+Defined in: [hash-base.ts:43](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L43)
 
 ##### Returns
 
@@ -58,7 +58,7 @@ Defined in: [hash-base.ts:42](https://github.com/technobuddha/library/blob/main/
 
 > **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
-Defined in: [hash-base.ts:43](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L43)
+Defined in: [hash-base.ts:44](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L44)
 
 ##### Parameters
 
@@ -98,7 +98,7 @@ Defined in: [sha1.ts:98](https://github.com/technobuddha/library/blob/main/src/s
 
 > **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
 
-Defined in: [hash-base.ts:84](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L84)
+Defined in: [hash-base.ts:85](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L85)
 
 ##### Parameters
 
@@ -116,16 +116,16 @@ Defined in: [hash-base.ts:84](https://github.com/technobuddha/library/blob/main/
 
 #### Call Signature
 
-> **update**(`data`: `string`, `encoding`?: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
+> **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `this`
 
-Defined in: [hash-base.ts:85](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L85)
+Defined in: [hash-base.ts:86](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L86)
 
 ##### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
 | `data` | `string` |
-| `encoding`? | [`TextEncoding`](../type-aliases/TextEncoding.md) |
+| `encoding?` | [`TextEncoding`](../type-aliases/TextEncoding.md) |
 
 ##### Returns
 

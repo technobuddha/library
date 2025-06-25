@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { unescapeHTML } from './unescape-html.js';
+import { space } from './constants.ts';
+import { unescapeHTML } from './unescape-html.ts';
 
 describe('unescapeHTML', () => {
   test('should unescape basic characters', () => {

@@ -1,4 +1,4 @@
-import { toCamelCase } from './to-camel-case.js';
+import { toCamelCase } from './to-camel-case.ts';
 
 describe('toCamelCase', () => {
   test('should sentences', () => {

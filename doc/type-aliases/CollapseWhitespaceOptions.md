@@ -4,12 +4,16 @@
 
 # Type Alias: CollapseWhitespaceOptions
 
-> **CollapseWhitespaceOptions**: \{ `trim`: `boolean`; \}
+> **CollapseWhitespaceOptions** = \{ `trim?`: `boolean`; \}
 
 Defined in: [collapse-whitespace.ts:8](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L8)
 
-## Type declaration
+## Properties
 
-| Name | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="trim"></a> `trim`? | `boolean` | If true, trim | [collapse-whitespace.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L10) |
+### trim?
+
+> `optional` **trim**: `boolean`
+
+Defined in: [collapse-whitespace.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L10)
+
+If true, trim

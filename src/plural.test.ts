@@ -1,4 +1,4 @@
-import { plural } from './plural.js';
+import { plural } from './plural.ts';
 
 describe('plural', () => {
   test('should handle simple plurals', () => {

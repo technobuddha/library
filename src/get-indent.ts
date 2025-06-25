@@ -1,6 +1,6 @@
 import { escapeRegExp, isNil } from 'lodash-es';
 
-import { space } from './constants.js';
+import { space } from './constants.ts';
 
 /**
  * @group String

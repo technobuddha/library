@@ -1,9 +1,9 @@
-import { addTime } from './add-time.js';
-import { type DayOfWeek } from './constants.js';
-import { daysPerWeek } from './constants.js';
-import { getBeginningOfMonth } from './get-beginning-of-month.js';
-import { getDaysInMonth } from './get-days-in-month.js';
-import { modulo } from './modulo.js';
+import { addTime } from './add-time.ts';
+import { type DayOfWeek } from './constants.ts';
+import { daysPerWeek } from './constants.ts';
+import { getBeginningOfMonth } from './get-beginning-of-month.ts';
+import { getDaysInMonth } from './get-days-in-month.ts';
+import { modulo } from './modulo.ts';
 
 /**
  * @group Time

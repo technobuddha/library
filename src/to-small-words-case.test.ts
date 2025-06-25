@@ -1,4 +1,4 @@
-import { toSmallWordsCase } from './to-small-words-case.js';
+import { toSmallWordsCase } from './to-small-words-case.ts';
 
 describe('toSmallWordsCase', () => {
   test('should sentences', () => {

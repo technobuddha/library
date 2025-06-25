@@ -1,4 +1,4 @@
-import { binaryUnits } from './binary-units.js';
+import { binaryUnits } from './binary-units.ts';
 
 describe('binaryUnits', () => {
   test('should handle whole numbers than 1', () => {

@@ -1,9 +1,9 @@
 import { defaultTo, map } from 'lodash-es';
 
-import { build } from './build.js';
-import { empty } from './constants.js';
-import { padNumber } from './pad-number.js';
-import { splitChars } from './split-chars.js';
+import { build } from './build.ts';
+import { empty } from './constants.ts';
+import { padNumber } from './pad-number.ts';
+import { splitChars } from './split-chars.ts';
 
 //#region parse
 type ParseReturn = {

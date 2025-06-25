@@ -1,4 +1,4 @@
-import { formatNumber } from './format-number.js';
+import { formatNumber } from './format-number.ts';
 
 describe('formatNumber', () => {
   test('should support the C (Currency) format', () => {

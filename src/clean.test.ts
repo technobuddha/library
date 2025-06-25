@@ -1,5 +1,5 @@
-import { clean, cleanEnd, cleanStart } from './clean.js';
-import { empty } from './constants.js';
+import { clean, cleanEnd, cleanStart } from './clean.ts';
+import { empty } from './constants.ts';
 
 describe('clean', () => {
   test('should trim whitespace', () => {

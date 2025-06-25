@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { splitChars } from './split-chars.js';
+import { space } from './constants.ts';
+import { splitChars } from './split-chars.ts';
 
 /**
  * @group String

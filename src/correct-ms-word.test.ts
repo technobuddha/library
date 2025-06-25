@@ -1,4 +1,4 @@
-import { correctMSWord } from './correct-ms-word.js';
+import { correctMSWord } from './correct-ms-word.ts';
 
 describe('correctMSWord', () => {
   test('should handle special characters', () => {

@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { getISOWeekOfYear } from './get-iso-week-of-year.js';
+import { month } from './constants.ts';
+import { getISOWeekOfYear } from './get-iso-week-of-year.ts';
 
 describe('getISOWeekOfYear', () => {
   test('should compute the week of the year', () => {

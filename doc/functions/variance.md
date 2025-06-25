@@ -6,10 +6,9 @@
 
 > **variance**(...`datapoints`: `number`[]): `number`
 
-Defined in: [variance.ts:14](https://github.com/technobuddha/library/blob/main/src/variance.ts#L14)
+Defined in: [variance.ts:13](https://github.com/technobuddha/library/blob/main/src/variance.ts#L13)
 
-Returns the unbiased sample variance of the arguments. For a definition,
-see http://en.wikipedia.org/wiki/Variance
+Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments.
 
 ## Parameters
 

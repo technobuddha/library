@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { escapeHTML } from './escape-html.js';
+import { space } from './constants.ts';
+import { escapeHTML } from './escape-html.ts';
 
 describe('escapeHTML', () => {
   test('should escape basic characters', () => {

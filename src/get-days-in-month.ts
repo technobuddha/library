@@ -1,5 +1,5 @@
-import { month } from './constants.js';
-import { isLeapYear } from './is-leap-year.js';
+import { month } from './constants.ts';
+import { isLeapYear } from './is-leap-year.ts';
 
 /**
  * @group Time

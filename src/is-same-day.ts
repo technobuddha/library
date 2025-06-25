@@ -1,4 +1,4 @@
-import { isSameMonth } from './is-same-month.js';
+import { isSameMonth } from './is-same-month.ts';
 
 /**
  * @group Time

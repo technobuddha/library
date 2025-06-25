@@ -1,5 +1,5 @@
 /* eslint-disable no-secrets/no-secrets */
-import { Sha224 } from './sha224.js';
+import { Sha224 } from './sha224.ts';
 
 describe('Sha224', () => {
   test('empty', () => {

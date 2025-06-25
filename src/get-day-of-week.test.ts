@@ -1,5 +1,5 @@
-import { day } from './constants.js';
-import { getDayOfWeek } from './get-day-of-week.js';
+import { day } from './constants.ts';
+import { getDayOfWeek } from './get-day-of-week.ts';
 
 describe('getDayOfWeek', () => {
   test('should detect weekday', () => {

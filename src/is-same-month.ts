@@ -1,4 +1,4 @@
-import { isSameYear } from './is-same-year.js';
+import { isSameYear } from './is-same-year.ts';
 
 /**
  * @group Time

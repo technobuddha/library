@@ -4,12 +4,16 @@
 
 # Type Alias: ChopOptions
 
-> **ChopOptions**: \{ `truncate`: `boolean`; \}
+> **ChopOptions** = \{ `truncate?`: `boolean`; \}
 
 Defined in: [chop.ts:9](https://github.com/technobuddha/library/blob/main/src/chop.ts#L9)
 
-## Type declaration
+## Properties
 
-| Name | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="truncate"></a> `truncate`? | `boolean` | If true, the last block will be omitted if has insufficient characters * | [chop.ts:11](https://github.com/technobuddha/library/blob/main/src/chop.ts#L11) |
+### truncate?
+
+> `optional` **truncate**: `boolean`
+
+Defined in: [chop.ts:11](https://github.com/technobuddha/library/blob/main/src/chop.ts#L11)
+
+If true, the last block will be omitted if has insufficient characters *

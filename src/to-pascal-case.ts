@@ -1,4 +1,4 @@
-import { toCapitalCase } from './to-capital-case.js';
+import { toCapitalCase } from './to-capital-case.ts';
 
 /**
  * Convert an identifier string to pascal case

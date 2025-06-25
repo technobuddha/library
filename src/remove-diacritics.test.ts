@@ -1,4 +1,4 @@
-import { removeDiacritics } from './remove-diacritics.js';
+import { removeDiacritics } from './remove-diacritics.ts';
 
 describe('removeDiacritics', () => {
   test('should bad characters to be replaces', () => {

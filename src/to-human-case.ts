@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { toCapitalCase } from './to-capital-case.js';
+import { space } from './constants.ts';
+import { toCapitalCase } from './to-capital-case.ts';
 
 const re = /\p{Ll}\p{Lu}+/gu;
 
