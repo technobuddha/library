@@ -1,13 +1,22 @@
 import { bounds } from './bounds.ts';
 import { edgeAngles } from './edge-angles.ts';
 import { type LineSegment, type Polygon, type Rect } from './geometry.ts';
-import { isRectangleInPolygon } from './is-rectangle-in-polygon.ts';
+import { isInPolygon } from './is-in-polygon.ts';
 import { lerp } from './lerp.ts';
 import { lineIntersection } from './line-intersection.ts';
 import { polygonSides } from './polygon-sides.ts';
 import { rotate } from './rotate.ts';
 
-type RotatedRect = Rect & { area: number; angle: number };
+/**
+ * Represents a rectangle that has been rotated by a certain angle.
+ * Extends the `Rect` type with additional properties for the area and rotation angle.
+ */
+export type RotatedRect = Rect & {
+  /* The area of the rotated rectangle. */
+  area: number;
+  /* The rotation angle of the rectangle, in radians. */
+  angle: number;
+};
 
 /**
  * Configuration options for the largest inscribed rectangle algorithm.
@@ -48,7 +57,7 @@ const VERTICAL_LINE_EXTENT = 1e100; // For creating "infinite" vertical lines
  */
 export function largestInscribedRectangle(
   polygon: Polygon,
-  options?: { aligned: true; squareOnly?: boolean },
+  options?: { aligned?: true; squareOnly?: boolean },
 ): Rect;
 export function largestInscribedRectangle(
   polygon: Polygon,
@@ -220,7 +229,7 @@ function getMaxHeightBetweenX(
     const height = intersections[i + 1] - intersections[i];
     const y = intersections[i];
 
-    if (isRectangleInPolygon({ x: x0, y, width: x1 - x0, height }, polygon)) {
+    if (isInPolygon({ x: x0, y, width: x1 - x0, height }, polygon)) {
       if (height > maxHeight) {
         maxHeight = height;
         bestY = y;

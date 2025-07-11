@@ -1,10 +1,10 @@
 <!-- markdownlint-disable -->
 
-[@technobuddha/library](../INDEX.md) / collapseBreakingspace
+[@technobuddha/library](../INDEX.md) / collapseBreakingSpace
 
-# Function: collapseBreakingspace()
+# Function: collapseBreakingSpace()
 
-> **collapseBreakingspace**(`input`: `string`, `trim`: [`CollapseBreakingSpaceOptions`](../type-aliases/CollapseBreakingSpaceOptions.md)): `string`
+> **collapseBreakingSpace**(`input`: `string`, `trim`: [`CollapseBreakingSpaceOptions`](../type-aliases/CollapseBreakingSpaceOptions.md)): `string`
 
 Defined in: [collapse-breaking-space.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L21)
 

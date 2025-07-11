@@ -9,9 +9,10 @@
     "composite": true,
     "types": ["node", "jest"],
     "noEmit": true,
-    "outDir": "../dist"
+    "outDir": "../dist",
+    "rootDir": "."
   },
-  "include": ["**/*.d.ts", "**/*.test.ts"],
+  "include": ["**/*.test.ts", "**/*.d.ts"],
   "exclude": [],
   "references": [{ "path": "./tsconfig.code.json" }]
 }

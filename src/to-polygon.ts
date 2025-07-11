@@ -9,7 +9,6 @@ import { type Cartesian, type Polygon, type Rect } from './geometry.ts';
  *
  * @param pointA - The first corner point of the rectangle (if using points).
  * @param pointB - The opposite corner point of the rectangle (if using points).
- * @param rect - A `Rect` object defining the rectangle (if using a rectangle).
  * @returns A `Polygon` object representing the rectangle.
  *
  * @group Geometry

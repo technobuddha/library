@@ -9,7 +9,7 @@ import { type Cartesian, type LineSegment } from './geometry.ts';
  * @returns The Cartesian coordinates of the calculated point.
  *
  * @group Geometry
- * @category LineSegment
+ * @category Line Segment
  */
 export function midpoint(line: LineSegment, part = 0.5): Cartesian {
   // Calculate the midpoint of the line segment

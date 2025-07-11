@@ -6,9 +6,9 @@
 
 ## Call Signature
 
-> **largestInscribedRectangle**(`polygon`: [`Polygon`](../type-aliases/Polygon.md), `options?`: \{ `aligned`: `true`; `squareOnly?`: `boolean`; \}): [`Rect`](../type-aliases/Rect.md)
+> **largestInscribedRectangle**(`polygon`: [`Polygon`](../type-aliases/Polygon.md), `options?`: \{ `aligned?`: `true`; `squareOnly?`: `boolean`; \}): [`Rect`](../type-aliases/Rect.md)
 
-Defined in: [largest-inscribed-rectangle.ts:49](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L49)
+Defined in: [largest-inscribed-rectangle.ts:58](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L58)
 
 Computes the largest rectangle that can be inscribed within the given polygon.
 
@@ -17,7 +17,7 @@ Computes the largest rectangle that can be inscribed within the given polygon.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `polygon` | [`Polygon`](../type-aliases/Polygon.md) | The polygon within which to inscribe the rectangle. |
-| `options?` | \{ `aligned`: `true`; `squareOnly?`: `boolean`; \} | Configuration options for the computation. |
+| `options?` | \{ `aligned?`: `true`; `squareOnly?`: `boolean`; \} | Configuration options for the computation. |
 | `options.aligned?` | `true` | - |
 | `options.squareOnly?` | `boolean` | - |
 
@@ -33,9 +33,9 @@ Error When polygon has fewer than 3 vertices
 
 ## Call Signature
 
-> **largestInscribedRectangle**(`polygon`: [`Polygon`](../type-aliases/Polygon.md), `options`: \{ `aligned`: `false`; `squareOnly?`: `boolean`; \}): `RotatedRect`
+> **largestInscribedRectangle**(`polygon`: [`Polygon`](../type-aliases/Polygon.md), `options`: \{ `aligned`: `false`; `squareOnly?`: `boolean`; \}): [`RotatedRect`](../type-aliases/RotatedRect.md)
 
-Defined in: [largest-inscribed-rectangle.ts:53](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L53)
+Defined in: [largest-inscribed-rectangle.ts:62](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L62)
 
 Computes the largest rectangle that can be inscribed within the given polygon.
 
@@ -50,7 +50,7 @@ Computes the largest rectangle that can be inscribed within the given polygon.
 
 ### Returns
 
-`RotatedRect`
+[`RotatedRect`](../type-aliases/RotatedRect.md)
 
 The largest inscribed rectangle.
 

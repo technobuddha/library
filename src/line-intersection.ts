@@ -11,7 +11,7 @@ import { type Cartesian, type LineSegment } from './geometry.ts';
  *          Returns `null` if the intersection is outside the segments and `extend` is `false`.
  *
  * @group Geometry
- * @category LineSegment
+ * @category Line Segment
  */
 export function lineIntersection(
   a: LineSegment,

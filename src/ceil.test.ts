@@ -1,6 +1,6 @@
 import { ceil } from './ceil.ts';
 
-describe('safeCeil', () => {
+describe('ceil', () => {
   test('should handle positive numbers', () => {
     expect(ceil(1 + Number.EPSILON)).toBe(1);
     expect(ceil(2 + Number.EPSILON)).toBe(2);

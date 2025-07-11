@@ -18,7 +18,7 @@ export type CollapseBreakingSpaceOptions = {
  * @group String
  * @category Collapse
  */
-export function collapseBreakingspace(
+export function collapseBreakingSpace(
   input: string,
   { trim = true }: CollapseBreakingSpaceOptions = {},
 ): string {

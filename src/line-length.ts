@@ -7,7 +7,7 @@ import { type LineSegment } from './geometry.ts';
  * @returns The length of the line segment.
  *
  * @group Geometry
- * @category LineSegment
+ * @category Line Segment
  */
 export function lineLength(line: LineSegment): number {
   // Calculate the length of the line segment using the distance formula

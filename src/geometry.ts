@@ -30,7 +30,7 @@ export type Polygon = Cartesian[];
 
 /**
  * @group Geometry
- * @category LineSegment
+ * @category Line Segment
  */
 export type LineSegment = {
   x0: number;

@@ -5,6 +5,14 @@
 | Type Alias | Description |
 | ------ | ------ |
 | [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
+| [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
+
+## Functions
+
+| Function | Description |
+| ------ | ------ |
+| [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
+| [toSquare](functions/toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
 
 ## Array
 
@@ -231,21 +239,28 @@
 | [toCartesian](functions/toCartesian.md) | Convert polar coordinates to cartesian |
 | [toPolar](functions/toPolar.md) | Convert cartesian coordinates to polar |
 
-### LineSegment
+### Line Segment
 
 | Name | Description |
 | ------ | ------ |
 | [LineSegment](type-aliases/LineSegment.md) | - |
 | [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal azis |
+| [isLeftOfLine](functions/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
+| [isOnLine](functions/isOnLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
+| [isWithLine](functions/isWithLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
 | [lineIntersection](functions/lineIntersection.md) | Calculates the intersection point of two line segments. |
 | [lineLength](functions/lineLength.md) | Calculates the length of a given line segment using the distance formula. |
 | [midpoint](functions/midpoint.md) | Calculates a point at a given fraction (`part`) along a line segment. By default it returns the true midpoint of the line segment |
+| [topPointFirst](functions/topPointFirst.md) | Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0). If the original line's y1 is greater than y0, the line is returned as-is. Otherwise, the start and end points are swapped. |
 
 ### Point
 
 | Function | Description |
 | ------ | ------ |
-| [isPointInPolygon](functions/isPointInPolygon.md) | Determines whether a given point is inside or on the edge of a polygon. |
+| [isInPolygon](functions/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
+| [isLeftOfLine](functions/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
+| [isOnLine](functions/isOnLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
+| [isWithLine](functions/isWithLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
 | [manhattanDistance](functions/manhattanDistance.md) | Calculates the Manhattan distance between two points in Cartesian coordinates. |
 | [rotate](functions/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
 | [scale](functions/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
@@ -258,14 +273,23 @@
 | [Polygon](type-aliases/Polygon.md) | - |
 | [area](functions/area.md) | Calculates the area of a polygon given its vertices. |
 | [bounds](functions/bounds.md) | Calculates the axis-aligned bounding rectangle for a given polygon. |
+| [centroid](functions/centroid.md) | Calculates the centroid (geometric center) of a polygon given its vertices. |
+| [convexHull](functions/convexHull.md) | Computes the convex hull of a set of 2D points using the Monotone Chain algorithm. |
 | [edgeAngles](functions/edgeAngles.md) | Generate normalized edge angles from polygon edges. |
-| [isPointInPolygon](functions/isPointInPolygon.md) | Determines whether a given point is inside or on the edge of a polygon. |
+| [isInPolygon](functions/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
 | [regularPolygon](functions/regularPolygon.md) | Generates the vertices of a regular polygon as an array of Cartesian points. |
 | [rotate](functions/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
 | [scale](functions/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
 | [star](functions/star.md) | Generates the vertices of a star-shaped polygon. |
+| [toPolygon](functions/toPolygon.md) | Converts two Cartesian points or a rectangle into a `Polygon` object. |
 | [translate](functions/translate.md) | Translate a point or an array of points by a specified amount. |
+
+### Rect
+
+| Function | Description |
+| ------ | ------ |
+| [isRect](functions/isRect.md) | Determines if the provided value is a Rectangle. |
 
 ### Rectangle
 
@@ -273,6 +297,12 @@
 | ------ | ------ |
 | [Rect](type-aliases/Rect.md) | - |
 | [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
+
+### Utility
+
+| Function | Description |
+| ------ | ------ |
+| [crossProduct](functions/crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
 
 ## Math
 
@@ -505,7 +535,7 @@
 | ------ | ------ |
 | [CollapseBreakingSpaceOptions](type-aliases/CollapseBreakingSpaceOptions.md) | - |
 | [CollapseWhitespaceOptions](type-aliases/CollapseWhitespaceOptions.md) | - |
-| [collapseBreakingspace](functions/collapseBreakingspace.md) | Replace all breaking space (space, tab, carriage return, new line) with a single space |
+| [collapseBreakingSpace](functions/collapseBreakingSpace.md) | Replace all breaking space (space, tab, carriage return, new line) with a single space |
 | [collapseWhitespace](functions/collapseWhitespace.md) | Replace all whitespace within a string with a single space |
 
 ### Comparison

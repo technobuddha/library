@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.9.10",
+  "version": "1.9.18",
   "description": "A large library of useful functions",
   "author": {
     "name": "Phil Hill",
@@ -24,19 +24,19 @@
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
     "@giancosta86/typedoc-readonly": "1.0.1",
-    "@technobuddha/project": "0.0.176",
+    "@technobuddha/project": "0.0.178",
     "@types/lodash-es": "^4.17.12",
     "jest-matcher-deep-close-to": "3.0.2",
-    "typedoc": "0.28.4",
-    "typedoc-plugin-markdown": "4.6.3",
-    "typedoc-plugin-mdn-links": "4.0.15",
-    "vite": "6.3.5",
-    "vitest": "3.1.3"
+    "typedoc": "0.28.7",
+    "typedoc-plugin-markdown": "4.7.0",
+    "typedoc-plugin-mdn-links": "5.0.2",
+    "vite": "7.0.0",
+    "vitest": "3.2.4"
   },
   "technobuddhaProject": {
-    "version": "0.0.161",
+    "version": "0.0.178",
     "created": "2020-04-01T04:20:42.694Z",
-    "updated": "2025-03-12T17:15:00.593Z"
+    "updated": "2025-06-30T14:45:53.559Z"
   },
   "type": "module",
   "engines": {

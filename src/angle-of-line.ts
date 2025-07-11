@@ -10,7 +10,7 @@ import { toAngle } from './to-angle.ts';
  * @returns The angle of the line segment in the specified units.
  *
  * @group Geometry
- * @category LineSegment
+ * @category Line Segment
  * @category Angle
  */
 export function angleOfLine(line: LineSegment, units: AngleUnit = 'radians'): number {
