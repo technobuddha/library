@@ -6,7 +6,7 @@
 
 > **toSquare**(`rect`: [`Rect`](../type-aliases/Rect.md)): [`Rect`](../type-aliases/Rect.md)
 
-Defined in: to-square.ts:11
+Defined in: [to-square.ts:11](https://github.com/technobuddha/library/blob/main/src/to-square.ts#L11)
 
 Converts a given rectangle to the largest possible square that fits within it,
 centered along the longer dimension. If the rectangle is already a square,
