@@ -5,6 +5,7 @@
 | Type Alias | Description |
 | ------ | ------ |
 | [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
+| [LookAheadOptions](type-aliases/LookAheadOptions.md) | Options for look-ahead operations. |
 | [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
 | [Weighted](type-aliases/Weighted.md) | - |
 
@@ -13,6 +14,7 @@
 | Function | Description |
 | ------ | ------ |
 | [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
+| [lookAhead](functions/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
 | [randomWeightedPick](functions/randomWeightedPick.md) | Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked. |
 | [toSquare](functions/toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
 

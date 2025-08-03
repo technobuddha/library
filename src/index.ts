@@ -116,6 +116,7 @@ export * from './line-intersection.ts';
 export * from './line-length.ts';
 export * from './longest-common-subsequence.ts';
 export * from './longest-common-substring.ts';
+export * from './look-ahead.ts';
 export * from './manhattan-distance.ts';
 export * from './mask.ts';
 export * from './match-case.ts';
