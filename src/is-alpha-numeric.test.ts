@@ -3,6 +3,7 @@ import { isAlphaNumeric } from './is-alpha-numeric.ts';
 
 describe('isAlphaNumeric', () => {
   test('should detect alphanumeric strings', () => {
+    // cspell:ignore AEIOU
     expect(isAlphaNumeric('AEIOU')).toBeTrue();
     expect(isAlphaNumeric('ÂÊîÔû')).toBeTrue();
     expect(isAlphaNumeric('A B')).toBeFalse();

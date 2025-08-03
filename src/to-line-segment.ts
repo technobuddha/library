@@ -7,7 +7,7 @@ import { type Cartesian, type LineSegment } from './geometry.ts';
  * @param pointB - The ending point of the line segment.
  * @returns A `LineSegment` object representing the line from `pointA` to `pointB`.
  *
- * @group Geomerty
+ * @group Geometry
  * @category Line Segment
  */
 export function toLineSegment(pointA: Cartesian, pointB: Cartesian): LineSegment {

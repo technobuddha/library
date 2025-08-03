@@ -22,7 +22,7 @@ export type RelativeTimeOptions = {
   timeFormat?: string;
   /** Passed to {@link formatDate} to display a year, month and day */
   ymdFormat?: string;
-  /** Passed to {@link formatDate} to dislay a month and day */
+  /** Passed to {@link formatDate} to display a month and day */
   mdFormat?: string;
 };
 

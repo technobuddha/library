@@ -17,6 +17,7 @@ describe('escapeJava', () => {
     expect(escapeJava('ABCdef[~]')).toBe('ABCdef[~]');
   });
 
+  // cspell:ignore unnnn
   test('should escape non printables as \\unnnn', () => {
     expect(escapeJava('\u0001')).toBe('\\u0001');
     expect(escapeJava('\u001f')).toBe('\\u001f');
@@ -29,6 +30,7 @@ describe('escapeJava', () => {
   });
 
   test('should unicode escape BMP characters', () => {
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(escapeJava('ΑΒΓΔΕΖ')).toBe('\\u0391\\u0392\\u0393\\u0394\\u0395\\u0396');
   });
 

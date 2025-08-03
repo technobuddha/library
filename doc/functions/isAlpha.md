@@ -8,7 +8,7 @@
 
 Defined in: [is-alpha.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L11)
 
-Test a string for all alphaetic characters
+Test a string for all alphabetic characters
 
 ## Parameters
 

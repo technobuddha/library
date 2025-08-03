@@ -40,6 +40,7 @@ describe('wordwrap', () => {
         { cut: true },
       ),
     ).toBe(
+      //cspell:ignore nbove
       "If you set your goals ridiculously high and it's a failure, you will fail a\nbove everyone else's success.",
     );
   });

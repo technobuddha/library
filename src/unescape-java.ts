@@ -7,6 +7,7 @@
  * @category Java
  */
 export function unescapeJava(input: string): string {
+  // cspell:ignore bfnrt
   return input.replaceAll(/\\(([bfnrt"'\\])|([0-7]{1,3})|(u[0-9a-fA-F]{4}))/gu, (escape) => {
     const c = escape.charAt(1);
 

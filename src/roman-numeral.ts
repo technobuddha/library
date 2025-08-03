@@ -78,6 +78,7 @@ const glyphs = {
 
 // Ↄ ↄ
 
+// cspell:disable
 const keyOut = [
   ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
   ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
@@ -99,8 +100,9 @@ const keyOut = [
   // ['', '((I))', '((I))((I))', '((I))((I))((I))', '((I))I))', 'I)))', 'I)))((I))', 'I)))((I))((I))', 'I)))((I))((I))((I))', '((I))(((I)))'],
   // ['', '(((I)))', '(((I)))(((I)))', '(((I)))(((I)))(((I)))', '(((I)))I))))', 'I))))', 'I))))(((I)))', 'I))))(((I)))(((I)))', 'I))))(((I)))(((I)))(((I)))', '(((I)))((((I))))'],
 ];
+// cspell:enable
 
-const lastGlpyh = keyOut.at(-1)!.at(-1)!.at(-1)!;
+const lastGlyph = keyOut.at(-1)!.at(-1)!.at(-1)!;
 
 /**
  * Parse a roman numeral string into it's integer value.
@@ -140,5 +142,5 @@ export function toRoman(val: number): string {
   for (let i = 0; i < keyOut.length && digits.length > 0; ++i) {
     roman = keyOut[i][Number.parseInt(digits.pop()!)] + roman;
   }
-  return lastGlpyh.repeat(Number.parseInt(build(digits))) + roman;
+  return lastGlyph.repeat(Number.parseInt(build(digits))) + roman;
 }

@@ -3,6 +3,7 @@ import { isUpperCase } from './is-upper-case.ts';
 import { toCapitalCase } from './to-capital-case.ts';
 import { toSmallCase } from './to-small-case.ts';
 
+// cspell: ignore Capitalcase sMALLCASE
 /**
  * Attempt to convert the input string into the same case as the target string
  *

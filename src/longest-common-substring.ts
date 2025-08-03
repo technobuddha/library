@@ -29,7 +29,7 @@ export function longestCommonSubstring(
   const ci1 = caseInsensitive ? string1.toLocaleLowerCase() : string1;
   const ci2 = caseInsensitive ? string2.toLocaleLowerCase() : string2;
 
-  const comparsions = create2DArray(ci1.length + 1, ci2.length + 1, 0);
+  const comparisons = create2DArray(ci1.length + 1, ci2.length + 1, 0);
   let maxSubStrLength = 0;
   let lastMaxSubStrIndex = -1;
 
@@ -40,13 +40,13 @@ export function longestCommonSubstring(
       const c2 = ci2.charAt(j);
 
       if (c1 === c2) {
-        comparsions[i][j] = i > 0 && j > 0 ? comparsions[i - 1][j - 1] + 1 : 1;
+        comparisons[i][j] = i > 0 && j > 0 ? comparisons[i - 1][j - 1] + 1 : 1;
       } else {
-        comparsions[i][j] = 0;
+        comparisons[i][j] = 0;
       }
 
-      if (comparsions[i][j] > maxSubStrLength) {
-        maxSubStrLength = comparsions[i][j];
+      if (comparisons[i][j] > maxSubStrLength) {
+        maxSubStrLength = comparisons[i][j];
         lastMaxSubStrIndex = i;
       }
     }

@@ -1,4 +1,5 @@
 const TESTS: [string, RegExp][] = [
+  // cspell:disable
   ['an', /^[aefhilmnirsx]([-.]|$|th$)/iu],
   ['a', /^[bcdgjkpqtuvwyz]([-.]|$|th$)/iu],
   ['an', /^(euler|hour(?!i)|heir|honest|hono)/iu],
@@ -15,6 +16,7 @@ const TESTS: [string, RegExp][] = [
   ['a', /^U[NK][AIEO]?/u],
   ['an', /^[aeiou]/iu],
   ['an', /^y(b[lor]|cl[ea]|fere|gg|p[ios]|rou|tt)/iu],
+  // cspell:enable
 ];
 
 /**

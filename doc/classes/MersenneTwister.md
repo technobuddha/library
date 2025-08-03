@@ -4,7 +4,7 @@
 
 # Class: MersenneTwister
 
-Defined in: [mersenne-twister.ts:70](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L70)
+Defined in: [mersenne-twister.ts:72](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L72)
 
 ## Constructors
 
@@ -12,7 +12,7 @@ Defined in: [mersenne-twister.ts:70](https://github.com/technobuddha/library/blo
 
 > **new MersenneTwister**(`seed`: `number` \| `number`[]): `MersenneTwister`
 
-Defined in: [mersenne-twister.ts:74](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L74)
+Defined in: [mersenne-twister.ts:76](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L76)
 
 #### Parameters
 
@@ -28,7 +28,7 @@ Defined in: [mersenne-twister.ts:74](https://github.com/technobuddha/library/blo
 
 | Property | Modifier | Type | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="mt"></a> `mt` | `public` | [`Uint32Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)\<[`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)\> | [mersenne-twister.ts:72](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L72) |
+| <a id="mt"></a> `mt` | `public` | [`Uint32Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)\<[`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)\> | [mersenne-twister.ts:74](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L74) |
 
 ## Methods
 
@@ -36,7 +36,7 @@ Defined in: [mersenne-twister.ts:74](https://github.com/technobuddha/library/blo
 
 > **genrandInt31**(): `number`
 
-Defined in: [mersenne-twister.ts:171](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L171)
+Defined in: [mersenne-twister.ts:174](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L174)
 
 #### Returns
 
@@ -48,7 +48,7 @@ Defined in: [mersenne-twister.ts:171](https://github.com/technobuddha/library/bl
 
 > **genrandInt32**(): `number`
 
-Defined in: [mersenne-twister.ts:139](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L139)
+Defined in: [mersenne-twister.ts:142](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L142)
 
 #### Returns
 
@@ -60,7 +60,7 @@ Defined in: [mersenne-twister.ts:139](https://github.com/technobuddha/library/bl
 
 > **genrandReal1**(): `number`
 
-Defined in: [mersenne-twister.ts:176](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L176)
+Defined in: [mersenne-twister.ts:179](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L179)
 
 #### Returns
 
@@ -72,7 +72,7 @@ Defined in: [mersenne-twister.ts:176](https://github.com/technobuddha/library/bl
 
 > **genrandReal2**(): `number`
 
-Defined in: [mersenne-twister.ts:182](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L182)
+Defined in: [mersenne-twister.ts:185](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L185)
 
 #### Returns
 
@@ -84,7 +84,7 @@ Defined in: [mersenne-twister.ts:182](https://github.com/technobuddha/library/bl
 
 > **genrandReal3**(): `number`
 
-Defined in: [mersenne-twister.ts:188](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L188)
+Defined in: [mersenne-twister.ts:191](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L191)
 
 #### Returns
 
@@ -96,7 +96,7 @@ Defined in: [mersenne-twister.ts:188](https://github.com/technobuddha/library/bl
 
 > **genrandRes53**(): `number`
 
-Defined in: [mersenne-twister.ts:194](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L194)
+Defined in: [mersenne-twister.ts:197](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L197)
 
 #### Returns
 
@@ -108,7 +108,7 @@ Defined in: [mersenne-twister.ts:194](https://github.com/technobuddha/library/bl
 
 > **initByArray**(`key`: `number`[]): `void`
 
-Defined in: [mersenne-twister.ts:103](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L103)
+Defined in: [mersenne-twister.ts:106](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L106)
 
 #### Parameters
 
@@ -126,7 +126,7 @@ Defined in: [mersenne-twister.ts:103](https://github.com/technobuddha/library/bl
 
 > **initGenrand**(`seed`: `number`): `void`
 
-Defined in: [mersenne-twister.ts:87](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L87)
+Defined in: [mersenne-twister.ts:89](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L89)
 
 #### Parameters
 
@@ -144,7 +144,7 @@ Defined in: [mersenne-twister.ts:87](https://github.com/technobuddha/library/blo
 
 > **setSeed**(`seed`: `number` \| `number`[]): `void`
 
-Defined in: [mersenne-twister.ts:78](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L78)
+Defined in: [mersenne-twister.ts:80](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L80)
 
 #### Parameters
 

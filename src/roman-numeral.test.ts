@@ -5,10 +5,12 @@ describe('parseRoman', () => {
     expect(parseRoman('iv')).toBe(4);
     expect(parseRoman('IV')).toBe(4);
 
+    //cspell:disable
     expect(parseRoman('mmxiii')).toBe(2013);
     expect(parseRoman('MMXIII')).toBe(2013);
 
     expect(parseRoman('MCMXCVI')).toBe(1996);
+    //cspell:enable
   });
 
   test('should throw on bad roman numbers', () => {
@@ -19,7 +21,10 @@ describe('parseRoman', () => {
 describe('toRoman', () => {
   test('should convert numbers to roman numerals', () => {
     expect(toRoman(4)).toBe('IV');
+
+    // cspell:disable
     expect(toRoman(2013)).toBe('MMXIII');
     expect(toRoman(1996)).toBe('MCMXCVI');
+    // cspell:enable
   });
 });

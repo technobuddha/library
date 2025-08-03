@@ -11,7 +11,7 @@ Defined in: [manhattan-distance.ts:23](https://github.com/technobuddha/library/b
 Calculates the Manhattan distance between two points in Cartesian coordinates.
 
 The Manhattan distance is the sum of the absolute differences of their Cartesian coordinates.
-It is often used in grid-based pathfinding algorithms.
+It is often used in grid-based path-finding algorithms.
 
 ## Parameters
 

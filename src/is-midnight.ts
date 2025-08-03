@@ -11,7 +11,7 @@ export type IsMidnightOptions = {
  * Determine if a date is at midnight
  *
  * @param input - A date
- * @param __namedParamaters - see {@link IsMidnightOptions}
+ * @param __namedParameters - see {@link IsMidnightOptions}
  * @returns true, if the date is at midnight
  * @group Time
  * @category Day

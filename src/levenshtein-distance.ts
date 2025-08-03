@@ -5,7 +5,7 @@ import { create2DArray } from './create-2d-array.ts';
  * @category Fuzzy Match
  */
 export type LevenshteinDistanceOptions = {
-  /** The compairson will ignore case */
+  /** The comparison will ignore case */
   caseInsensitive?: boolean;
 };
 

@@ -137,7 +137,7 @@ describe('CartesianSet', () => {
     expect(Array.from(intersection)).toEqual([{ x: 3, y: 4 }]);
   });
 
-  test('isDisjoingFrom', () => {
+  test('isDisjointFrom', () => {
     const set1 = new CartesianSet([
       { x: 1, y: 2 },
       { x: 3, y: 4 },

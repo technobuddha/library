@@ -22,6 +22,7 @@ describe('Sha224', () => {
 
   test('base64 encoding', () => {
     expect(new Sha224().update('x').digest('base64')).toBe(
+      //cspell:ignore VKL3+Spfl12Alq93oSbt2n2mDFqocu8bhxcBrg
       'VKL3+Spfl12Alq93oSbt2n2mDFqocu8bhxcBrg==',
     );
   });

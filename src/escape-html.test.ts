@@ -20,6 +20,7 @@ describe('escapeHTML', () => {
 
   test('should not escape Latin-1, BMP or astral', () => {
     expect(escapeHTML('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(escapeHTML('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(escapeHTML('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
   });

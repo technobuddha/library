@@ -1,3 +1,5 @@
+// cspell: ignore AAEC AQID AQIDBA ΑΒΓΔ
+
 import { empty } from './constants.ts';
 import { decodeBase64, decodeBase64Url } from './decode-base64.ts';
 

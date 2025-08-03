@@ -4,7 +4,7 @@
 
 # Function: getISOWeekOfYear()
 
-> **getISOWeekOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameteres`: [`GetISOWeekOfYearOptions`](../type-aliases/GetISOWeekOfYearOptions.md)): \{ `week`: `number`; `year`: `number`; \}
+> **getISOWeekOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetISOWeekOfYearOptions`](../type-aliases/GetISOWeekOfYearOptions.md)): \{ `week`: `number`; `year`: `number`; \}
 
 Defined in: [get-iso-week-of-year.ts:31](https://github.com/technobuddha/library/blob/main/src/get-iso-week-of-year.ts#L31)
 
@@ -15,7 +15,7 @@ Determine the ISO week number for a given date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameteres` | [`GetISOWeekOfYearOptions`](../type-aliases/GetISOWeekOfYearOptions.md) | see [GetISOWeekOfYearOptions](../type-aliases/GetISOWeekOfYearOptions.md) |
+| `__namedParameters` | [`GetISOWeekOfYearOptions`](../type-aliases/GetISOWeekOfYearOptions.md) | see [GetISOWeekOfYearOptions](../type-aliases/GetISOWeekOfYearOptions.md) |
 
 ## Returns
 

@@ -10,7 +10,7 @@ import { toAngle } from './to-angle.ts';
  * @category Coordinates
  */
 export function toCartesian({ radius, angle }: Polar, unit: AngleUnit = 'radians'): Cartesian {
-  const aradians = toAngle(angle, unit, 'radians');
+  const radians = toAngle(angle, unit, 'radians');
 
-  return { x: radius * Math.cos(aradians), y: radius * Math.sin(aradians) };
+  return { x: radius * Math.cos(radians), y: radius * Math.sin(radians) };
 }

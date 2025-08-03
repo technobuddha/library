@@ -20,7 +20,7 @@ export type LongestCommonSubsequenceOptions<T> = {
 };
 
 /**
- * Ddetermine the longest possible array that is subarray of both of given arrays.
+ * Determine the longest possible array that is subarray of both of given arrays.
  *
  * @remarks
  * Implementation of [Longest Common Subsequence]( https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.

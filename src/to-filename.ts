@@ -15,7 +15,7 @@ export type ToFilenameOptions = {
   maxLength?: number;
   /** character to use to replace "bad" characters */
   replacement?: string;
-  /** number of characters to presere at the end of the filename when truncated (for disambiguation) */
+  /** number of characters to preserve at the end of the filename when truncated (for disambiguation) */
   disambiguate?: number;
   /** string to separate the main section from the disambiguated section */
   separator?: string;

@@ -16,7 +16,7 @@ Defined in: [to-filename.ts:13](https://github.com/technobuddha/library/blob/mai
 
 Defined in: [to-filename.ts:19](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L19)
 
-number of characters to presere at the end of the filename when truncated (for disambiguation)
+number of characters to preserve at the end of the filename when truncated (for disambiguation)
 
 ***
 

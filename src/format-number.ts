@@ -371,6 +371,7 @@ class NumberFormatter {
  * @category Format
  */
 export function formatNumber(input: number, mask: string): string {
+  // cspell:ignore CDEFGNPX
   if (/^([CDEFGNPX][0-9]*)|R$/iu.test(mask)) {
     const f = mask.charAt(0);
     let prec = Number.parseInt(mask.slice(1));
@@ -469,7 +470,7 @@ export function formatNumber(input: number, mask: string): string {
     return hex;
   }
 
-  const formats = mask.toString().split(';');
+  const formats = mask.split(';');
 
   let fmt = parse(formats[0]);
   if (Number.parseFloat((input * fmt.scale).toFixed(fmt.precision)) === 0) {

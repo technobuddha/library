@@ -1,3 +1,5 @@
+// cspell:ignore AAEC
+
 import { decodeBinary } from './decode-binary.ts';
 
 describe('decodeBinary', () => {

@@ -162,6 +162,7 @@ export class Sha512 extends HashBase {
       wih = w[j];
       wil = w[j + 1];
 
+      // cspell:ignore majh majl
       const majh = maj(ah, bh, ch);
       const majl = maj(al, bl, cl);
 

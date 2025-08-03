@@ -8,7 +8,7 @@
 
 Defined in: [is-surrogate.ts:24](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L24)
 
-Deterimine is a character is a surrogate
+Determine is a character is a surrogate
 
 ## Parameters
 

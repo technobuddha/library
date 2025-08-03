@@ -60,6 +60,7 @@ const NET192 = /^192[.]168$/;
  */
 export const ipV4Local = re`^(?:${NET10}|${NET172}|${NET192})[.]${IPV4SEG}[.]${IPV4SEG}$`;
 
+//cspell:ignore ZONEPLUG, ZONEMINUS, ZONEPLUS, ZONEHOUR, ZONEMINUTE
 const YEAR = /^\d{4}$/;
 const MONTH = /^(?:0[1-9]|1[0-2])$/;
 const DAY = /^(?:3[0-1]|[1-2][0-9]|0[1-9])$/;
@@ -95,6 +96,7 @@ const TLD = /^[a-z]{2,}$/;
  */
 export const domain = re`^${HOST}+${TLD}$`;
 
+// cspell:ignore EMAILGLYPH, EMAILQUOTE, EMAILESCAPE, EMAILADDRESS
 const EMAILGLYPH = /[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]/;
 const EMAILQUOTE = /[\u0001-\u0008\u000b\u000c\u000e-\u001f\u0021\u0023-\u005b\u005d-\u007f]/;
 const EMAILESCAPE = /\\[\u0001-\u0009\u000b\u000c\u000e-\u007f]/;

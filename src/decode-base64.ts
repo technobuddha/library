@@ -1,4 +1,6 @@
 /* eslint-disable no-bitwise */
+// cspell:ignore Hdvcmxk
+
 import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.ts';
 import { decodeText } from './decode-text.ts';
 import { type TextEncoding } from './text-encoding.ts';

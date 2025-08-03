@@ -123,6 +123,7 @@ describe('cardinal', () => {
     expect(cardinal(999999999, { groups: 2 })).toBe('one billion');
   });
 
+  // cspell:ignore illions
   test('should handle illions', () => {
     expect(cardinal(9)).toBe('nine');
     expect(cardinal(99, { groups: 2 })).toBe('ninety nine');

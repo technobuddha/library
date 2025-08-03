@@ -110,6 +110,7 @@ function findLargestRotatedRectangle(polygon: Polygon, squareOnly: boolean): Rot
   return maxRectangle;
 }
 
+// cspell: ignore sweepline
 /**
  * Generate sample x-coordinates for sweepline algorithm.
  * Combines polygon vertex x-coordinates with evenly spaced sample points.

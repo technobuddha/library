@@ -39,6 +39,7 @@ describe('unescapeJS', () => {
     expect(unescapeJS('ABCabc[~]')).toBe('ABCabc[~]');
     expect(unescapeJS('abcdef')).toBe('abcdef');
     expect(unescapeJS('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(unescapeJS('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(unescapeJS('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
   });

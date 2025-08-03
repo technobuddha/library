@@ -6,4 +6,4 @@
 
 > `const` **domain**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-Defined in: [regexp.ts:96](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L96)
+Defined in: [regexp.ts:97](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L97)

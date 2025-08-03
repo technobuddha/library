@@ -4,7 +4,7 @@
 
 # Function: variance()
 
-> **variance**(...`datapoints`: `number`[]): `number`
+> **variance**(...`dataPoints`: `number`[]): `number`
 
 Defined in: [variance.ts:13](https://github.com/technobuddha/library/blob/main/src/variance.ts#L13)
 
@@ -14,7 +14,7 @@ Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) o
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| ...`datapoints` | `number`[] | Number samples to analyze. |
+| ...`dataPoints` | `number`[] | Number samples to analyze. |
 
 ## Returns
 

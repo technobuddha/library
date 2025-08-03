@@ -8,7 +8,7 @@
 
 Defined in: [angle-of-line.ts:16](https://github.com/technobuddha/library/blob/main/src/angle-of-line.ts#L16)
 
-Calculates the angle of a given line segment, relative to the horizontal azis
+Calculates the angle of a given line segment, relative to the horizontal axis
 
 ## Parameters
 

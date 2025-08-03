@@ -8,6 +8,7 @@
  */
 export function unescapeC(input: string): string {
   return input.replaceAll(
+    // cspell:ignore abefnrtv
     /\\(([abefnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]+)|(U[0-9a-fA-F]{8})|(u[0-9a-fA-F]{4})|.)/gu,
     (escape) => {
       const c = escape.charAt(1);

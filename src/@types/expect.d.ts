@@ -1,4 +1,4 @@
-//import type CustomMatchers from 'jest-extended';
+// cspell:ignore JE JMDCT
 import type JE from 'jest-extended';
 import type JMDCT from 'jest-matcher-deep-close-to';
 

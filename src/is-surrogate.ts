@@ -11,7 +11,7 @@ export type IsSurrogateOptions = {
 };
 
 /**
- * Deterimine is a character is a surrogate
+ * Determine is a character is a surrogate
  *
  * @param input - the character to test
  * @param __namedParameters - see {@link IsSurrogateOptions}

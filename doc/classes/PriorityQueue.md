@@ -87,7 +87,7 @@ Transform all elements in the queue
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `f` | (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S` | Function to transforme each element of the queue |
+| `f` | (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S` | Function to transform each element of the queue |
 
 #### Returns
 

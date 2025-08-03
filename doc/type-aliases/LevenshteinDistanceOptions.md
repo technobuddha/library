@@ -16,4 +16,4 @@ Defined in: [levenshtein-distance.ts:7](https://github.com/technobuddha/library/
 
 Defined in: [levenshtein-distance.ts:9](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L9)
 
-The compairson will ignore case
+The comparison will ignore case

@@ -3,7 +3,7 @@ import { type LineSegment } from './geometry.ts';
 import { toAngle } from './to-angle.ts';
 
 /**
- * Calculates the angle of a given line segment, relative to the horizontal azis
+ * Calculates the angle of a given line segment, relative to the horizontal axis
  *
  * @param line - The line segment for which to calculate the angle.
  * @param units - The unit of the returned angle ('radians' by default).

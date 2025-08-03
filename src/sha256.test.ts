@@ -28,6 +28,7 @@ describe('Sha256', () => {
 
   test('base64url encoding', () => {
     expect(new Sha256().update('x').digest('base64url')).toBe(
+      // cspell:ignore LXEWQrcmsEQBYnyp-6wy9chTD7GQPMTbAiWHF5IaSIE
       'LXEWQrcmsEQBYnyp-6wy9chTD7GQPMTbAiWHF5IaSIE',
     );
   });

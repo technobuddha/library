@@ -1,3 +1,5 @@
+// cspell:ignore foofoo foofoofoofoofoo
+
 import { count } from './count.ts';
 
 describe('count', () => {

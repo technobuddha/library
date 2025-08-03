@@ -11,7 +11,7 @@ export type GetBeginningOfMonthOptions = {
  * Determine the start of the month for a dateDetermine the start of the month for a date
  *
  * @param input - The date
- * @param __namedParamaters - see {@link GetBeginningOfMonthOptions}
+ * @param __namedParameters - see {@link GetBeginningOfMonthOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified month
  * @group Time

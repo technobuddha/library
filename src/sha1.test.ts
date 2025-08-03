@@ -15,6 +15,7 @@ describe('sha1', () => {
   });
 
   test('base64 encoding', () => {
+    //cspell:ignore EfatjsUqKYSrqv18O1FlA3hcIHI
     expect(new Sha1().update('x').digest('base64')).toBe('EfatjsUqKYSrqv18O1FlA3hcIHI=');
   });
 

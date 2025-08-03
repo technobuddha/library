@@ -28,6 +28,7 @@ describe('unescapeJava', () => {
     expect(unescapeJava('ABCabc[~]')).toBe('ABCabc[~]');
     expect(unescapeJava('abcdef')).toBe('abcdef');
     expect(unescapeJava('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+    //cspell:ignore ΑΒΓΔΕΖ
     expect(unescapeJava('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(unescapeJava('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
   });

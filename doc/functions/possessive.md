@@ -20,4 +20,4 @@ Determine the possessive form of a word
 
 `string`
 
-the posessive form of the word
+the possessive form of the word

@@ -3,6 +3,7 @@ import { isAlpha } from './is-alpha.ts';
 
 describe('isAlpha', () => {
   test('should detect alphabetic strings', () => {
+    // cspell:ignore AEIOU
     expect(isAlpha('AEIOU')).toBeTrue();
     expect(isAlpha('ÂÊîÔû')).toBeTrue();
     expect(isAlpha('A B')).toBeFalse();

@@ -18,6 +18,7 @@ export function syllables(input: string): number {
     if (word.length <= 3) {
       count++;
     } else {
+      // cspell:ignore laeiouy
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/u, empty).replace(/^y/u, empty);
 
       const match = word.match(/[aeiouy]{1,2}/gu);

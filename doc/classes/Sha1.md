@@ -4,7 +4,7 @@
 
 # Class: Sha1
 
-Defined in: [sha1.ts:46](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L46)
+Defined in: [sha1.ts:48](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L48)
 
 Secure Hash Algorithm, SHA-1
 
@@ -18,7 +18,7 @@ Secure Hash Algorithm, SHA-1
 
 > **new Sha1**(): `Sha1`
 
-Defined in: [sha1.ts:54](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L54)
+Defined in: [sha1.ts:56](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L56)
 
 #### Returns
 
@@ -80,7 +80,7 @@ Defined in: [hash-base.ts:44](https://github.com/technobuddha/library/blob/main/
 
 > `protected` **hash**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [sha1.ts:98](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L98)
+Defined in: [sha1.ts:100](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L100)
 
 #### Returns
 
@@ -141,7 +141,7 @@ Defined in: [hash-base.ts:86](https://github.com/technobuddha/library/blob/main/
 
 > `protected` **updateCounters**(`buffer`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)): `void`
 
-Defined in: [sha1.ts:59](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L59)
+Defined in: [sha1.ts:61](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L61)
 
 #### Parameters
 

@@ -254,6 +254,7 @@ export class TimeSpan {
         ff: F.toString().padStart(3, '0'),
       } as { [key: string]: string };
 
+      // cspell:ignore dmhsf
       return mask.replaceAll(/[dmhsf]{1,2}|"[^"]*"|'[^']*'/gu, ($0) =>
         $0 in flags ? flags[$0] : $0.slice(1, -1),
       );

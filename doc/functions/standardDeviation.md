@@ -4,7 +4,7 @@
 
 # Function: standardDeviation()
 
-> **standardDeviation**(...`datapoints`: `number`[]): `number`
+> **standardDeviation**(...`dataPoints`: `number`[]): `number`
 
 Defined in: [standard-deviation.ts:13](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L13)
 
@@ -14,7 +14,7 @@ Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_d
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| ...`datapoints` | `number`[] | samples to analyze. |
+| ...`dataPoints` | `number`[] | samples to analyze. |
 
 ## Returns
 

@@ -1,4 +1,6 @@
 /* eslint-disable no-bitwise */
+// cspell:ignore majh majl
+
 import { HashBase } from './hash-base.ts';
 
 const K = [

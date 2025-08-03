@@ -1,3 +1,5 @@
+// cspell:ignore illion septe nove septem novem septen noven centi ducenti trecenti quadringenti quingenti sescenti septingenti octingenti nongenti deci viginti triginta quadragentia triginta quadraginta quadraginti quinquaginta quinquaginta sexaginta sexaginti septuaginta septuaginti octoginta octoginta nonaginta nonginti quattuor quinqua octo quadri quniti secti septi octi sexti noni triginti quinquaginti octoginti
+
 import { isFinite, isNaN } from 'lodash-es';
 
 import { empty, space } from './constants.ts';

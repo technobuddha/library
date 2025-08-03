@@ -1,4 +1,6 @@
 /* eslint-disable no-bitwise */
+// cspell:ignore AQID theim Hdvcmxk
+
 import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.ts';
 import { encodeText } from './encode-text.ts';
 import { type TextEncoding } from './text-encoding.ts';
@@ -120,6 +122,7 @@ export function encodeBase64(arg: string | Uint8Array, encoding?: TextEncoding):
  * @category Base64
  */
 export function encodeBase64Url(chars: string, encoding: TextEncoding): string;
+
 /**
  * Creates a Base64-encoded ASCII string from a binary source.
  *

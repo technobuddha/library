@@ -16,7 +16,7 @@ Defined in: [fuzzy-match.ts:9](https://github.com/technobuddha/library/blob/main
 
 Defined in: [fuzzy-match.ts:11](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L11)
 
-The compairson will ignore case
+The comparison will ignore case
 
 ***
 

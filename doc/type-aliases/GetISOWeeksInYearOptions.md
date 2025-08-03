@@ -26,4 +26,4 @@ Use the utc timezone
 
 Defined in: [get-iso-weeks-in-year.ts:15](https://github.com/technobuddha/library/blob/main/src/get-iso-weeks-in-year.ts#L15)
 
-Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it
+Week 1 is defined as the week with the Gregorian year's first [weekOneIncludes] day in it

@@ -29,7 +29,7 @@
 | Name | Description |
 | ------ | ------ |
 | [LongestCommonSubsequenceOptions](type-aliases/LongestCommonSubsequenceOptions.md) | - |
-| [longestCommonSubsequence](functions/longestCommonSubsequence.md) | Ddetermine the longest possible array that is subarray of both of given arrays. |
+| [longestCommonSubsequence](functions/longestCommonSubsequence.md) | Determine the longest possible array that is subarray of both of given arrays. |
 
 ## Conversion
 
@@ -220,7 +220,7 @@
 | [angleUnits](variables/angleUnits.md) | Angle units. |
 | [angleBetweenPoints](functions/angleBetweenPoints.md) | Computes the angle between two points (x1,y1) and (x2,y2). Angle zero points in the +X direction, π/2 radians points in the +Y direction (down) and from there we grow clockwise towards π*2 radians. |
 | [angleDifference](functions/angleDifference.md) | Computes the difference between startAngle and endAngle. |
-| [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal azis |
+| [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
 | [angleReflection](functions/angleReflection.md) | Calculates the reflection of an angle across a specified axis. |
 | [normalizeAngle](functions/normalizeAngle.md) | Normalizes an angle to be in range [0-π*2]. Angles outside this range will be normalized to be the equivalent angle with that range. |
 | [toAngle](functions/toAngle.md) | Converts an angle from one unit to another. |
@@ -246,7 +246,7 @@
 | Name | Description |
 | ------ | ------ |
 | [LineSegment](type-aliases/LineSegment.md) | - |
-| [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal azis |
+| [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
 | [isLeftOfLine](functions/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
 | [isOnLine](functions/isOnLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
 | [isWithLine](functions/isWithLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
@@ -508,7 +508,7 @@
 
 | Function | Description |
 | ------ | ------ |
-| [isAlpha](functions/isAlpha.md) | Test a string for all alphaetic characters |
+| [isAlpha](functions/isAlpha.md) | Test a string for all alphabetic characters |
 | [isAlphaNumeric](functions/isAlphaNumeric.md) | Test a string for all alphanumeric characters |
 | [isLowerCase](functions/isLowerCase.md) | Test a string for all lower case characters |
 | [isNumeric](functions/isNumeric.md) | Test an object to see if it a number, or a string which can be converted into a number |
@@ -855,7 +855,7 @@
 | Name | Description |
 | ------ | ------ |
 | [IsSurrogateOptions](type-aliases/IsSurrogateOptions.md) | Options for [isSurrogate](functions/isSurrogate.md) |
-| [isSurrogate](functions/isSurrogate.md) | Deterimine is a character is a surrogate |
+| [isSurrogate](functions/isSurrogate.md) | Determine is a character is a surrogate |
 
 ### Normalization
 

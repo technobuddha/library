@@ -5,7 +5,7 @@ import { type Cartesian } from './geometry.ts';
  * The result is positive if the sequence OAB makes a counter-clockwise turn,
  * negative for a clockwise turn, and zero if the points are collinear.
  *
- * @see {@link https://math.stackexchange.com/questions/274712/calculate-on-which-side-of-a-straight-line-is-a-given-point-located| Calculare on which side of a straight line is a given point located}
+ * @see {@link https://math.stackexchange.com/questions/274712/calculate-on-which-side-of-a-straight-line-is-a-given-point-located| Calculate on which side of a straight line is a given point located}
  *
  * @param a - The endpoint of the first vector (OA).
  * @param b - The endpoint of the second vector (OB).

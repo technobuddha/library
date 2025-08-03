@@ -8,6 +8,7 @@
  */
 export function unescapeJS(input: string): string {
   return input.replaceAll(
+    //cspell:ignore bfnrtv
     /\\(([bfnrtv"'\\])|([0-7]{1,3})|(x[0-9a-fA-F]{2})|(u[0-9a-fA-F]{4})|(u\{[0-9a-fA-F]{1,}\})|.)/gu,
     (escape) => {
       const c = escape.charAt(1);

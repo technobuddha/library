@@ -1,3 +1,5 @@
+// cspell:words Takuji Nishimura Makoto Matsumoto Isaku Wada
+
 /* eslint-disable no-bitwise */
 /*
     This implementation of the Mersenne Twister is a port of the a
@@ -92,6 +94,7 @@ export class MersenneTwister {
       this.mt[this.mti] =
         1812433253 * (this.mt[this.mti - 1] ^ (this.mt[this.mti - 1] >>> 30)) + this.mti;
     }
+    // cspell:ignore TAOCP
     /* See Knuth TAOCP Vol2. 3rd Ed. P.106 for multiplier. */
     /* In the previous versions, MSBs of the seed affect   */
     /* only MSBs of the array mt[].                        */

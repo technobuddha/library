@@ -6,7 +6,7 @@
 
 > **IndefiniteArticleOptions** = \{ `only?`: `boolean`; \}
 
-Defined in: [indefinite-article.ts:24](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L24)
+Defined in: [indefinite-article.ts:26](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L26)
 
 ## Properties
 
@@ -14,6 +14,6 @@ Defined in: [indefinite-article.ts:24](https://github.com/technobuddha/library/b
 
 > `optional` **only**: `boolean`
 
-Defined in: [indefinite-article.ts:26](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L26)
+Defined in: [indefinite-article.ts:28](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L28)
 
 only return the indefinite article, do not combine with the input

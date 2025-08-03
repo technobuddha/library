@@ -70,7 +70,7 @@ export class PriorityQueue<T> {
   /**
    * Transform all elements in the queue
    *
-   * @param f - Function to transforme each element of the queue
+   * @param f - Function to transform each element of the queue
    * @returns array of transformed queue elements
    */
   public map<S>(f: (value: T, index: number, array: T[]) => S): S[] {

@@ -11,7 +11,7 @@ import { modulo } from './modulo.ts';
 export type GetISOWeeksInYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
-  /** Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it */
+  /** Week 1 is defined as the week with the Gregorian year's first [weekOneIncludes] day in it */
   weekOneIncludes?: DayOfWeek;
 };
 

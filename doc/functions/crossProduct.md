@@ -28,4 +28,4 @@ The scalar cross product of vectors OA and OB.
 
 ## See
 
-[Calculare on which side of a straight line is a given point located](https://math.stackexchange.com/questions/274712/calculate-on-which-side-of-a-straight-line-is-a-given-point-located|)
+[Calculate on which side of a straight line is a given point located](https://math.stackexchange.com/questions/274712/calculate-on-which-side-of-a-straight-line-is-a-given-point-located|)

@@ -13,6 +13,7 @@ describe('levenshteinDistance', () => {
   });
 
   test('Detect letter transposition', () => {
+    // cspell:ignore Cloa
     expect(levenshteinDistance('Drink Coca Cola', 'Drink Coca Cloa')).toBe(1);
   });
 

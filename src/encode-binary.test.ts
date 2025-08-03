@@ -2,6 +2,7 @@ import { encodeBinary } from './encode-binary.ts';
 
 describe('encodeBinary', () => {
   test('base64', () => {
+    // cspell:ignore AAECAw
     expect(encodeBinary(new Uint8Array([0, 1, 2, 3]), 'base64')).toBe('AAECAw==');
   });
 

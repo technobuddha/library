@@ -1,3 +1,5 @@
+// cspell:ignore unnnn ΑΒΓΔΕΖ
+
 import { space } from './constants.ts';
 import { escapeGraphQL } from './escape-graphql.ts';
 

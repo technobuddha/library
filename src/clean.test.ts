@@ -1,3 +1,5 @@
+// cspell:ignore xyza dxyzxyz
+
 import { clean, cleanEnd, cleanStart } from './clean.ts';
 import { empty } from './constants.ts';
 

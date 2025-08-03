@@ -6,7 +6,7 @@
 
 > **indefiniteArticle**(`word`: `string`, `__namedParameters`: [`IndefiniteArticleOptions`](../type-aliases/IndefiniteArticleOptions.md)): `string`
 
-Defined in: [indefinite-article.ts:44](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L44)
+Defined in: [indefinite-article.ts:46](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L46)
 
 Determine the appropriate indefinite article to use with a word.
 

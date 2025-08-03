@@ -1,3 +1,5 @@
+// cspell:ignore ΑΒΓΔΕΖ, ΑΒΓΔ
+
 import { decodeText } from './decode-text.ts';
 
 const RC = '\uFFFD'; // unicode replacement character

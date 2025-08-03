@@ -16,7 +16,7 @@ Defined in: [relative-time.ts:18](https://github.com/technobuddha/library/blob/m
 
 Defined in: [relative-time.ts:26](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L26)
 
-Passed to [formatDate](../functions/formatDate.md) to dislay a month and day
+Passed to [formatDate](../functions/formatDate.md) to display a month and day
 
 ***
 

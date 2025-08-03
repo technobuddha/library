@@ -291,7 +291,7 @@ Get the total number of seconds
 
 > **add**(`other`: `TimeSpan`): `TimeSpan`
 
-Defined in: [time-span.ts:296](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L296)
+Defined in: [time-span.ts:297](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L297)
 
 Add two timespans
 
@@ -335,7 +335,7 @@ the formatted TimeSpan
 
 > **toString**(): `string`
 
-Defined in: [time-span.ts:286](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L286)
+Defined in: [time-span.ts:287](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L287)
 
 Convert the TimeSpan to a string
 
@@ -351,7 +351,7 @@ formatted string
 
 > `static` **compare**(`t1`: `TimeSpan`, `t2`: `TimeSpan`): `number`
 
-Defined in: [time-span.ts:307](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L307)
+Defined in: [time-span.ts:308](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L308)
 
 Compare two TimeSpans
 

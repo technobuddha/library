@@ -28,6 +28,7 @@ describe('Sha512', () => {
 
   test('base64url encoding', () => {
     expect(new Sha512().update('x').digest('base64url')).toBe(
+      // cspell:ignore pKvURIxJVi2CgRXROh M6pJ UrTVRZKX LQ QtqJI4vBNibkPcs43bCCSIkn7JBPtCBXRDmD6IWFF51QVRr Yg
       'pKvURIxJVi2CgRXROh_M6pJ_UrTVRZKX-LQ-QtqJI4vBNibkPcs43bCCSIkn7JBPtCBXRDmD6IWFF51QVRr-Yg',
     );
   });

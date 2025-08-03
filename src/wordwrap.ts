@@ -69,7 +69,7 @@ export function wordwrap(
       currentColumn = 0;
     }
 
-    // if not at the begining of the line, add a space in front of the word
+    // if not at the beginning of the line, add a space in front of the word
     if (currentColumn > 0) {
       result += space;
       currentColumn++;

@@ -8,7 +8,7 @@
 
 Defined in: [longest-common-subsequence.ts:46](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L46)
 
-Ddetermine the longest possible array that is subarray of both of given arrays.
+Determine the longest possible array that is subarray of both of given arrays.
 
 ## Type Parameters
 

@@ -7,7 +7,7 @@ import { longestCommonSubstring } from './longest-common-substring.ts';
  * @category Fuzzy Match
  */
 export type FuzzyMatchOptions = {
-  /** The compairson will ignore case */
+  /** The comparison will ignore case */
   caseInsensitive?: boolean;
   /** Weight of levenshtein distance */
   weightLevenshteinDistance?: number;

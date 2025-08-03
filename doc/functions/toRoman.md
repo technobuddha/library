@@ -6,7 +6,7 @@
 
 > **toRoman**(`val`: `number`): `string`
 
-Defined in: [roman-numeral.ts:137](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L137)
+Defined in: [roman-numeral.ts:139](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L139)
 
 Parse number into a roman numeral string
 

@@ -5,7 +5,7 @@ import { removeDiacritics } from './remove-diacritics.ts';
  * Determine the possessive form of a word
  *
  * @param input - the word
- * @returns the posessive form of the word
+ * @returns the possessive form of the word
  * @group English
  * @category Possessive
  */

@@ -11,7 +11,7 @@ import { getISOWeeksInYear } from './get-iso-weeks-in-year.ts';
 export type GetISOWeekOfYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
-  /** Week 1 is defined as the week with the Gregorian year's first [weekOneInclues] day in it */
+  /** Week 1 is defined as the week with the Gregorian year's first [weekOneIncludes] day in it */
   weekOneIncludes?: DayOfWeek;
   /** The first day of the week */
   firstDayOfWeek?: DayOfWeek;
@@ -21,7 +21,7 @@ export type GetISOWeekOfYearOptions = {
  * Determine the ISO week number for a given date
  *
  * @param input - The date
- * @param __namedParameteres - see {@link GetISOWeekOfYearOptions}
+ * @param __namedParameters - see {@link GetISOWeekOfYearOptions}
  * @defaultValue weekOneIncludes Thursday
  * @defaultValue firstDayOfWeek Monday
  * @returns the week number (1-53)

@@ -18,7 +18,6 @@ export function unescapeHTML(input: string): string {
   });
 }
 
- 
 const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze({
   Aacute: 'Á',
   aacute: 'á',
@@ -2165,4 +2164,3 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   zwj: '‍',
   zwnj: '‌',
 } as Record<string, string>);
- 

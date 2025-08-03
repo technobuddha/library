@@ -15,6 +15,7 @@ describe('encodeText', () => {
 
   test('should encode codepoints < 0x8000', () => {
     expect(na(encodeText('¼½¾'))).toStrictEqual([0xc2, 0xbc, 0xc2, 0xbd, 0xc2, 0x0be]);
+    // cspell:ignore ΑΒΓΔ
     expect(na(encodeText('ΑΒΓΔ'))).toStrictEqual([0xce, 0x91, 0xce, 0x92, 0xce, 0x93, 0xce, 0x94]);
   });
 

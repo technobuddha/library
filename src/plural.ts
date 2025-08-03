@@ -64,9 +64,7 @@ export function plural(input: string, quantity?: number): string {
     }
   }
 
-  if (!result) {
-    result = matchCase(`${prefix}${lc}s${suffix}`, input);
-  }
+  result ??= matchCase(`${prefix}${lc}s${suffix}`, input);
 
   return isUndefined(quantity) ? result : quantity.toString() + space + result;
 }
@@ -82,6 +80,7 @@ type DBEntry = {
 
 const database: DBEntry = {
   rules: [
+    // cspell:disable
     [/(stig|sto|dog|sche|anathe)ma$/iu, '$1mata'],
     [/(alumn|alg|antenn|ecclesi|faun|formul|larv|nebul|vertebr)a$/iu, '$1ae'],
 
@@ -179,6 +178,8 @@ const database: DBEntry = {
     /moose$/iu,
     /trout$/iu,
   ],
+  // cspell:enable
+
   uncountableWords: [
     'abroad',
     'acoustics',

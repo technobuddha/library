@@ -6,7 +6,7 @@
 
 > **OptionsIllion** = \{ `and?`: `string`; `hyphen?`: `string`; \}
 
-Defined in: [cardinal.ts:26](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L26)
+Defined in: [cardinal.ts:28](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L28)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [cardinal.ts:26](https://github.com/technobuddha/library/blob/main/s
 
 > `optional` **and**: `string`
 
-Defined in: [cardinal.ts:28](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L28)
+Defined in: [cardinal.ts:30](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L30)
 
 Word to place after the hundreds.  "one hundred and one" vs. "one hundred one"
 
@@ -24,6 +24,6 @@ Word to place after the hundreds.  "one hundred and one" vs. "one hundred one"
 
 > `optional` **hyphen**: `string`
 
-Defined in: [cardinal.ts:30](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L30)
+Defined in: [cardinal.ts:32](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L32)
 
 Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one"

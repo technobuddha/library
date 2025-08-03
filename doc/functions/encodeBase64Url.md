@@ -8,7 +8,7 @@
 
 > **encodeBase64Url**(`chars`: `string`, `encoding`: [`TextEncoding`](../type-aliases/TextEncoding.md)): `string`
 
-Defined in: [encode-base64.ts:122](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L122)
+Defined in: [encode-base64.ts:124](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L124)
 
 Creates a Base64-encoded ASCII string from a string.
 
@@ -41,7 +41,7 @@ encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
 
 > **encodeBase64Url**(`binary`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)): `string`
 
-Defined in: [encode-base64.ts:139](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L139)
+Defined in: [encode-base64.ts:142](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L142)
 
 Creates a Base64-encoded ASCII string from a binary source.
 
