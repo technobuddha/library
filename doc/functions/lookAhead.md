@@ -6,7 +6,7 @@
 
 > **lookAhead**\<`T`\>(`array`: `T`[], `options?`: [`LookAheadOptions`](../type-aliases/LookAheadOptions.md)\<`T`\>): [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<\[`T`, `T`\]\>
 
-Defined in: look-ahead.ts:48
+Defined in: [look-ahead.ts:46](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L46)
 
 Generates pairs of consecutive elements from the input array, with optional handling for the last element.
 
