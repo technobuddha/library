@@ -3,6 +3,47 @@ import { isNil, round } from 'lodash-es';
 import { empty } from './constants.ts';
 import { formatNumber } from './format-number.ts';
 
+/*
+ quetta Q   1000000000000000000000000000000
+ ronna  R   1000000000000000000000000000
+ yotta  Y   1000000000000000000000000
+ zetta  Z   1000000000000000000000
+ exa    E   1000000000000000000
+ peta   P   1000000000000000
+ tera   T   1000000000000
+ giga   G   1000000000
+ meta   M   1000000
+ kilo   k   1000
+ hecto  h   100
+ deca   da  10
+ ----   --  ------------------------------
+ deci   d   0.1
+ centi  c   0.01
+ milli  m   0.001
+ micro  µ   0.000001
+ nano   n   0.000000001
+ pico   p   0.000000000001
+ femto  f   0.000000000000001
+ atto   a   0.000000000000000001
+ zepto  z   0.000000000000000000001
+ yocto  y   0.000000000000000000000001
+ ronto  r   0.000000000000000000000000001
+ quecto q   0.000000000000000000000000000001
+*/
+
+/*
+ kilo   K   1000            kibi  Ki  1024
+ mega   M   1000^2          mebi  Mi  1024^2
+ giga   G   1000^3          gibi  Gi  1024^3
+ tera   T   1000^4          tebi  Ti  1024^4
+ peta   P   1000^5          pebi  Pi  1024^5
+ exa    E   1000^6          exbi  Ei  1024^6
+ zetta  Z   1000^7          zebi  Zi  1024^7
+ yotta  Y   1000^8          yobi  Yi  1024^8
+ ronna  R   1000^9          robi  Ri  1024^9
+ quetta Q   1000&^10        qeubi Qi  1025^9
+*/
+
 /**
  * @group String
  * @category Units
@@ -47,8 +88,8 @@ export function metricUnits(
   {
     format,
     pad,
-    macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y'],
-    micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'],
+    macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'],
+    micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y', 'r'],
     unit = 1000,
     precision = 2,
   }: MetricUnitsOptions = {},
