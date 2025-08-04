@@ -173,3 +173,36 @@ export const month: Readonly<Record<string, MonthOfYear>> = Object.freeze({
   december: 11,
   dec: 11,
 });
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const ones = [
+  'zero',
+  'one',
+  'two',
+  'three',
+  'four',
+  'five',
+  'six',
+  'seven',
+  'eight',
+  'nine',
+  'ten',
+  'eleven',
+  'twelve',
+  'thirteen',
+  'fourteen',
+  'fifteen',
+  'sixteen',
+  'seventeen',
+  'eighteen',
+  'nineteen',
+];
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];

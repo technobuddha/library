@@ -1,8 +1,13 @@
-// cspell:ignore illion septe nove septem novem septen noven centi ducenti trecenti quadringenti quingenti sescenti septingenti octingenti nongenti deci viginti triginta quadragentia triginta quadraginta quadraginti quinquaginta quinquaginta sexaginta sexaginti septuaginta septuaginti octoginta octoginta nonaginta nonginti quattuor quinqua octo quadri quniti secti septi octi sexti noni triginti quinquaginti octoginti
+// cspell:ignore illion septe nove septem novem septen noven centi ducenti trecenti quadringenti
+// cspell:ignore quingenti sescenti septingenti octingenti nongenti deci viginti triginta
+// cspell:ignore quadragentia triginta quadraginta quadraginti quinquaginta quinquaginta sexaginta
+// cspell:ignore sexaginti septuaginta septuaginti octoginta octoginta nonaginta nonginti quattuor
+// cspell:ignore quinqua octo quadri quniti secti septi octi sexti noni triginti quinquaginti
+// cspell:ignore octoginti
 
 import { isFinite, isNaN } from 'lodash-es';
 
-import { empty, space } from './constants.ts';
+import { empty, ones, space, tens } from './constants.ts';
 
 /**
  * @group Math
@@ -13,6 +18,7 @@ export type CardinalOptions = OptionsCardinal & OptionsIllion;
 /**
  * @group Math
  * @category Numbering
+ * @category English
  */
 export type OptionsCardinal = {
   /** The number of groups to output, each group consists of three digits. */
@@ -31,30 +37,6 @@ export type OptionsIllion = {
   /** Places a character between the tens units and the ones units.  "twenty-one" vs. "twenty one" */
   hyphen?: string;
 };
-
-const ones = [
-  'zero',
-  'one',
-  'two',
-  'three',
-  'four',
-  'five',
-  'six',
-  'seven',
-  'eight',
-  'nine',
-  'ten',
-  'eleven',
-  'twelve',
-  'thirteen',
-  'fourteen',
-  'fifteen',
-  'sixteen',
-  'seventeen',
-  'eighteen',
-  'nineteen',
-];
-const tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
 
 const ZERO = 0;
 const TEN = 10;

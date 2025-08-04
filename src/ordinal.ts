@@ -1,14 +1,44 @@
-import { isInteger, isNaN } from 'lodash-es';
+import { isFinite, isInteger, isNaN } from 'lodash-es';
 
-//const ones      = [ 'zero', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth',
-//                  'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth', 'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth' ];
-//const tens      = [ 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety' ];
-// twentieth thirtieth fortieth fiftieth sixtieth seventieth eightieth ninetieth
-// hundredth
-// thousandth
-// millionth
+import { cardinal, type CardinalOptions } from './cardinal.ts';
+import { tens } from './constants.ts';
 
-// TODO [2025-04-01]: this needs an overhaul and some documentation
+// prettier-ignore
+const ordinalOnes = [ '', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh',
+  'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth',
+  'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth'
+];
+const ordinalTens = [
+  'twentieth',
+  'thirtieth',
+  'fortieth',
+  'fiftieth',
+  'sixtieth',
+  'seventieth',
+  'eightieth',
+  'ninetieth',
+];
+
+type OrdinalOptionsAlphabetic = {
+  output?: 'alphabetic';
+} & CardinalOptions;
+
+type OrdinalOptionsNumeric = {
+  output?: 'numeric';
+};
+
+type OrdinalOptionsSuffix = {
+  output?: 'suffix';
+};
+
+export type OrdinalOptions =
+  | OrdinalOptionsAlphabetic
+  | OrdinalOptionsNumeric
+  | OrdinalOptionsSuffix;
+
+function card(input: number, option: CardinalOptions): string {
+  return input === 0 ? '' : `${cardinal(input, option)} `;
+}
 
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
@@ -16,49 +46,60 @@ import { isInteger, isNaN } from 'lodash-es';
  * @group Math
  * @category Numbering
  */
-export function ordinal(input: number): string {
-  if (isNaN(input)) {
-    return input.toString();
+export function ordinal(
+  input: number,
+  { output = 'numeric', ...options }: OrdinalOptions = {},
+): string {
+  if (isNaN(input) || !isFinite(input)) {
+    return 'nth';
   } else if (isInteger(input)) {
-    switch (Math.abs(input) % 100) {
-      case 1:
-      case 21:
-      case 31:
-      case 41:
-      case 51:
-      case 61:
-      case 71:
-      case 81:
-      case 91: {
-        return `${input.toString()}st`;
+    const sgn = Math.sign(input);
+    const num = Math.abs(input);
+
+    if (output === 'alphabetic') {
+      const s = sgn < 0 ? 'negative ' : '';
+      const digits2 = num % 100;
+      const rest = num - digits2;
+      if (digits2 === 0) {
+        return rest === 0 ? 'zeroth' : `${cardinal(num, options)}th`;
+      } else if (digits2 >= 0 && digits2 < 20) {
+        return `${s}${card(rest, options)}${ordinalOnes[digits2]}`;
+      } else if (digits2 % 10 === 0) {
+        return `${s}${card(rest, options)}${ordinalTens[Math.floor(digits2 / 10) - 2]}`;
       }
-      case 2:
-      case 22:
-      case 32:
-      case 42:
-      case 52:
-      case 62:
-      case 72:
-      case 82:
-      case 92: {
-        return `${input.toString()}nd`;
+      return `${s}${card(rest, options)}${tens[Math.floor(digits2 / 10) - 2]} ${ordinalOnes[digits2 % 10]}`;
+    } else if (output === 'numeric') {
+      const digits1 = num % 10;
+      const rest = num - digits1;
+
+      if (digits1 === 0) {
+        return rest === 0 ? '0th' : `${sgn * num}th`;
+      } else if (digits1 === 1 && num % 100 !== 11) {
+        return `${sgn * num}st`;
+      } else if (digits1 === 2 && num % 100 !== 12) {
+        return `${sgn * num}nd`;
+      } else if (digits1 === 3 && num % 100 !== 13) {
+        return `${sgn * num}rd`;
       }
-      case 3:
-      case 23:
-      case 33:
-      case 43:
-      case 53:
-      case 63:
-      case 73:
-      case 83:
-      case 93: {
-        return `${input.toString()}rd`;
+      return `${sgn * num}th`;
+    }
+
+    const digits1 = num % 10;
+    switch (digits1) {
+      case 1: {
+        return 'st';
       }
+      case 2: {
+        return 'nd';
+      }
+      case 3: {
+        return 'rd';
+      }
+
       default: {
-        return `${input.toString()}th`;
+        return 'th';
       }
     }
-  } else {
-    return `${input.toString()}th`;
   }
+  return `${input.toString()}th`;
 }
