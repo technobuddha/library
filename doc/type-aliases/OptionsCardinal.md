@@ -6,7 +6,7 @@
 
 > **OptionsCardinal** = \{ `digits?`: `boolean`; `groups?`: `number`; \}
 
-Defined in: [cardinal.ts:17](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L17)
+Defined in: [cardinal.ts:23](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L23)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [cardinal.ts:17](https://github.com/technobuddha/library/blob/main/s
 
 > `optional` **digits**: `boolean`
 
-Defined in: [cardinal.ts:21](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L21)
+Defined in: [cardinal.ts:27](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L27)
 
 Use numbers instead of words for the group value, the group name is still output as text
 
@@ -24,6 +24,6 @@ Use numbers instead of words for the group value, the group name is still output
 
 > `optional` **groups**: `number`
 
-Defined in: [cardinal.ts:19](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L19)
+Defined in: [cardinal.ts:25](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L25)
 
 The number of groups to output, each group consists of three digits.

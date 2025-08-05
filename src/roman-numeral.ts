@@ -1,9 +1,63 @@
-import { build } from './build.ts';
+import { lookAhead } from './look-ahead.ts';
 import { splitChars } from './split-chars.ts';
 
-// const validator = /^M*(?:D?C{0,3}|C[MD])(?:L?X{0,3}|X[CL])(?:V?I{0,3}|I[XV])$/u;
+type Glyph =
+  | 'ↈ'
+  | 'ↇ'
+  | 'ↂ'
+  | 'ↁ'
+  | 'm'
+  | 'M'
+  | 'Ⅿ'
+  | 'ⅿ'
+  | 'ↀ'
+  | 'd'
+  | 'D'
+  | 'Ⅾ'
+  | 'ⅾ'
+  | 'c'
+  | 'C'
+  | 'Ⅽ'
+  | 'ⅽ'
+  | 'l'
+  | 'L'
+  | 'Ⅼ'
+  | 'ⅼ'
+  | 'ↆ'
+  | 'Ⅻ'
+  | 'ⅻ'
+  | 'Ⅺ'
+  | 'ⅺ'
+  | 'x'
+  | 'X'
+  | 'Ⅹ'
+  | 'ⅹ'
+  | 'Ⅸ'
+  | 'ⅸ'
+  | 'Ⅷ'
+  | 'ⅷ'
+  | 'Ⅶ'
+  | 'ⅶ'
+  | 'Ⅵ'
+  | 'ⅵ'
+  | 'ↅ'
+  | 'v'
+  | 'V'
+  | 'Ⅴ'
+  | 'ⅴ'
+  | 'Ⅳ'
+  | 'ⅳ'
+  | 'ⅲ'
+  | 'Ⅲ'
+  | 'ⅱ'
+  | 'Ⅱ'
+  | 'i'
+  | 'I'
+  | 'j'
+  | 'Ⅰ'
+  | 'ⅰ';
 
-const glyphs = {
+const glyphValues: Record<Glyph, number> = {
   ↈ: 100000,
   ↇ: 50000,
   ↂ: 10000,
@@ -76,34 +130,6 @@ const glyphs = {
   ⅰ: 1,
 };
 
-// Ↄ ↄ
-
-// cspell:disable
-const keyOut = [
-  ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
-  ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
-  ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
-  // ['', 'M', 'MM', 'MMM', 'Mↁ', 'ↁ', 'ↁM', 'ↁMM', 'ↁMMM', 'Mↂ'],
-  // ['', 'ↂ', 'ↂↂ', 'ↂↂↂ', 'ↂↁ', 'ↁ', 'ↁↂ', 'ↁↂↂ', 'ↁↂↂↂ', 'ↂↈ'],
-
-  // ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'Cↀ'],
-  // ['', 'ↀ', 'ↀↀ', 'ↀↀↀ', 'ↀↁ', 'ↁ', 'ↁↀ', 'ↁↀↀ', 'ↁↀↀↀ', 'ↀↂ'],
-  // ['', 'ↂ', 'ↂↂ', 'ↂↂↂ', 'ↂↇ', 'ↇ', 'ↇↂ', 'ↇↂↂ', 'ↇↂↂↂ', 'ↂↈ'],
-
-  // ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CCIↃ'],
-  // ['', 'CIↃ', 'CIↃCIↃ', 'CIↃCIↃCIↃ', 'CIↃIↃↃ', 'IↃↃ', 'IↃↃCIↃ', 'IↃↃCIↃCIↃ', 'IↃↃCIↃCIↃCIↃ', 'CIↃCCIↃↃ'],
-  // ['', 'CCIↃↃ', 'CCIↃↃCCIↃↃ', 'CCIↃↃCCIↃↃCCIↃↃ', 'CCIↃↃIↃↃ', 'IↃↃↃ', 'IↃↃↃCCIↃↃ', 'IↃↃↃCCIↃↃCCIↃↃ', 'IↃↃↃCCIↃↃCCIↃↃCCIↃↃ', 'CCIↃↃCCCIↃↃↃ'],
-  // ['', 'CCCIↃↃↃ', 'CCCIↃↃↃCCCIↃↃↃ', 'CCCIↃↃↃCCCIↃↃↃCCCIↃↃↃ', 'CCCIↃↃↃIↃↃↃↃ', 'IↃↃↃↃ', 'IↃↃↃↃCCCIↃↃↃ', 'IↃↃↃↃCCCIↃↃↃCCCIↃↃↃ', 'IↃↃↃↃCCCIↃↃↃCCCIↃↃↃCCCIↃↃↃ', 'CCCIↃↃↃCCCCIↃↃↃↃ'],
-
-  // ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'C(I)'],
-  // ['', '(I)', '(I)(I)', '(I)(I)(I)', '(I)I))', 'I))', 'I))(I)', 'I))(I)(I)', 'I))(I)(I)(I)', '(I)((I))'],
-  // ['', '((I))', '((I))((I))', '((I))((I))((I))', '((I))I))', 'I)))', 'I)))((I))', 'I)))((I))((I))', 'I)))((I))((I))((I))', '((I))(((I)))'],
-  // ['', '(((I)))', '(((I)))(((I)))', '(((I)))(((I)))(((I)))', '(((I)))I))))', 'I))))', 'I))))(((I)))', 'I))))(((I)))(((I)))', 'I))))(((I)))(((I)))(((I)))', '(((I)))((((I))))'],
-];
-// cspell:enable
-
-const lastGlyph = keyOut.at(-1)!.at(-1)!.at(-1)!;
-
 /**
  * Parse a roman numeral string into it's integer value.
  * @param val - The roman numeral string to parse
@@ -112,35 +138,85 @@ const lastGlyph = keyOut.at(-1)!.at(-1)!.at(-1)!;
  * @category Numbering
  */
 export function parseRoman(val: string): number {
-  const glyphValues = splitChars(val).map((g) => glyphs[g as keyof typeof glyphs]);
-  if (glyphValues.some((g) => g === undefined)) {
-    throw new TypeError(`Invalid Roman Numeral: ${val}`);
+  const values = splitChars(val).map((g) => glyphValues[g as Glyph]);
+  if (values.some((g) => g === undefined)) {
+    return Number.NaN;
   }
 
-  for (let i = 0; i < glyphValues.length - 1; ++i) {
-    const glyph = glyphValues[i];
-    const lookahead = glyphValues[i + 1];
-
-    if (glyph < lookahead) {
-      glyphValues[i] *= -1;
+  for (const [thisGlyph, nextGlyph, i] of lookAhead(values)) {
+    if (thisGlyph < nextGlyph) {
+      values[i] *= -1;
     }
   }
 
-  return glyphValues.reduce((total, n) => total + n);
+  return values.reduce((total, n) => total + n);
 }
+
+type Format = 'standard' | 'apostrophus' | 'vinculum';
+
+export type ToRomanOptions = {
+  format?: Format;
+};
 
 /**
  * Parse number into a roman numeral string
- * @param val - The number to turn into a roman numeral
+ * @param input - The number to turn into a roman numeral
  * @returns Converted roman numeral
+ *
  * @group Math
  * @category Numbering
  */
-export function toRoman(val: number): string {
-  const digits = splitChars(val.toString());
-  let roman = '';
-  for (let i = 0; i < keyOut.length && digits.length > 0; ++i) {
-    roman = keyOut[i][Number.parseInt(digits.pop()!)] + roman;
+export function toRoman(input: number, { format = 'standard' }: ToRomanOptions = {}): string {
+  const vg = valueGlyphs[format];
+
+  if (input < 1 || input > vg.limit || !Number.isInteger(input)) {
+    throw new RangeError(`Input must be an integer between 1 and ${vg.limit}`);
   }
-  return lastGlyph.repeat(Number.parseInt(build(digits))) + roman;
+
+  const digits = splitChars(input.toString());
+  let roman = '';
+  for (let i = 0; i < vg.glyphs.length && digits.length > 0; ++i) {
+    roman = vg.glyphs[i][Number.parseInt(digits.pop()!)] + roman;
+  }
+  // return lastGlyph.repeat(Number.parseInt(build(digits))) + roman;
+  return roman;
 }
+
+// cspell:disable
+const valueGlyphs = {
+  standard: {
+    limit: 3999,
+    glyphs: [
+      ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+      ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+      ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
+      ['', 'M', 'MM', 'MMM'],
+    ],
+  },
+  apostrophus: {
+    limit: 399999,
+    glyphs: [
+      ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+      ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+      ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'Cↀ'],
+      ['', 'ↀ', 'ↀↀ', 'ↀↀↀ', 'ↀↁ', 'ↁ', 'ↁↀ', 'ↁↀↀ', 'ↁↀↀↀ', 'ↀↂ'],
+      ['', 'ↂ', 'ↂↂ', 'ↂↂↂ', 'ↂↇ', 'ↇ', 'ↇↂ', 'ↇↂↂ', 'ↇↂↂↂ', 'ↂↈ'],
+      ['', 'ↈ', 'ↈↈ', 'ↈↈↈ'],
+    ],
+  },
+  vinculum: {
+    limit: 899999999,
+    glyphs: [
+      ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+      ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+      ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CI̅'],
+      ['', 'I̅', 'I̅I̅', 'I̅I̅I̅', 'I̅V̅', 'V̅', 'V̅I̅', 'V̅I̅I̅', 'V̅I̅I̅I̅', 'I̅X̅'],
+      ['', 'X̅', 'X̅X̅', 'X̅X̅X̅', 'X̅L̅', 'L̅', 'L̅X̅', 'L̅X̅X̅', 'L̅X̅X̅X̅', 'X̅C̅'],
+      ['', 'C̅', 'C̅C̅', 'C̅C̅C̅', 'C̅D̅', 'D̅', 'D̅C̅', 'D̅C̅C̅', 'D̅C̅C̅C̅', 'C̅I̿'],
+      ['', 'I̿', 'I̿I̿', 'I̿I̿I̿', 'I̿V̿', 'V̿', 'V̿I̿', 'V̿I̿I̿', 'V̿I̿I̿I̿', 'I̿X̿'],
+      ['', 'X̿', 'X̿X̿', 'X̿X̿X̿', 'X̿L̿', 'L̿', 'L̿X̿', 'L̿X̿X̿', 'L̿X̿X̿X̿', 'X̿C̿'],
+      ['', 'C̿', 'C̿C̿', 'C̿C̿C̿', 'C̿D̿', 'D̿', 'D̿C̿', 'D̿C̿C̿', 'D̿C̿C̿C̿'],
+    ],
+  },
+};
+// cspell:enable

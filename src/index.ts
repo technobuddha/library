@@ -56,6 +56,7 @@ export * from './fill-template.ts';
 export * from './floor.ts';
 export * from './format-date.ts';
 export * from './format-number.ts';
+export * from './fraction.ts';
 export * from './fuzzy-match.ts';
 export * from './geometry.ts';
 export * from './get-beginning-of-day.ts';

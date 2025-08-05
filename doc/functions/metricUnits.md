@@ -6,7 +6,7 @@
 
 > **metricUnits**(`input`: `number`, `__namedParameters`: [`MetricUnitsOptions`](../type-aliases/MetricUnitsOptions.md)): `string`
 
-Defined in: [metric-units.ts:45](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L45)
+Defined in: [metric-units.ts:86](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L86)
 
 Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
 

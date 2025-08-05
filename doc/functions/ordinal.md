@@ -4,9 +4,9 @@
 
 # Function: ordinal()
 
-> **ordinal**(`input`: `number`): `string`
+> **ordinal**(`input`: `number`, `__namedParameters`: [`OrdinalOptions`](../type-aliases/OrdinalOptions.md)): `string`
 
-Defined in: [ordinal.ts:19](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L19)
+Defined in: [ordinal.ts:49](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L49)
 
 Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 
@@ -15,6 +15,7 @@ Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` | The number to convert |
+| `__namedParameters` | [`OrdinalOptions`](../type-aliases/OrdinalOptions.md) | - |
 
 ## Returns
 

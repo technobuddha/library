@@ -4,15 +4,19 @@
 
 | Type Alias | Description |
 | ------ | ------ |
+| [FractionOptions](type-aliases/FractionOptions.md) | Options for configuring fraction output. |
 | [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [LookAheadOptions](type-aliases/LookAheadOptions.md) | Options for look-ahead operations. |
+| [OrdinalOptions](type-aliases/OrdinalOptions.md) | - |
 | [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
+| [ToRomanOptions](type-aliases/ToRomanOptions.md) | - |
 | [Weighted](type-aliases/Weighted.md) | - |
 
 ## Functions
 
 | Function | Description |
 | ------ | ------ |
+| [fraction](functions/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
 | [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [lookAhead](functions/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
 | [randomWeightedPick](functions/randomWeightedPick.md) | Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked. |
@@ -331,6 +335,19 @@
 | Function | Description |
 | ------ | ------ |
 | [compareNumbers](functions/compareNumbers.md) | Compare two numbers |
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [ones](variables/ones.md) | - |
+| [tens](variables/tens.md) | - |
+
+### English
+
+| Type Alias | Description |
+| ------ | ------ |
+| [OptionsCardinal](type-aliases/OptionsCardinal.md) | - |
 
 ### Linear Interpolation
 

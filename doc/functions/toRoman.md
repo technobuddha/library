@@ -4,9 +4,9 @@
 
 # Function: toRoman()
 
-> **toRoman**(`val`: `number`): `string`
+> **toRoman**(`input`: `number`, `__namedParameters`: [`ToRomanOptions`](../type-aliases/ToRomanOptions.md)): `string`
 
-Defined in: [roman-numeral.ts:139](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L139)
+Defined in: [roman-numeral.ts:169](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L169)
 
 Parse number into a roman numeral string
 
@@ -14,7 +14,8 @@ Parse number into a roman numeral string
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `val` | `number` | The number to turn into a roman numeral |
+| `input` | `number` | The number to turn into a roman numeral |
+| `__namedParameters` | [`ToRomanOptions`](../type-aliases/ToRomanOptions.md) | - |
 
 ## Returns
 

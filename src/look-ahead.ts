@@ -22,38 +22,45 @@ export type LookAheadOptions<T> =
  * @returns A generator yielding tuples of consecutive elements, and optionally a tuple for the last element as specified by options.
  *
  * @example
+ * Basic usage
  * ```typescript
- * // Basic usage
  * const arr = [1, 2, 3];
  * for (const [current, next] of lookAhead(arr)) {
  *   console.log(current, next);
  * }
- * // Output: [1, 2], [2, 3]
+ * ```
+ * Output: [1, 2], [2, 3]
  *
- * // With wrapAround
+ * With wrapAround
+ * ```typescript
  * for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
  *   console.log(current, next);
  * }
- * // Output: [1, 2], [2, 3], [3, 1]
+ * ```
+ * Output: [1, 2], [2, 3], [3, 1]
  *
- * // With last
+ * With last
+ * ```typescript
  * for (const [current, next] of lookAhead(arr, { last: 0 })) {
  *   console.log(current, next);
  * }
- * // Output: [1, 2], [2, 3], [3, 0]
  * ```
+ * Output: [1, 2], [2, 3], [3, 0]
  */
-export function* lookAhead<T>(array: T[], options?: LookAheadOptions<T>): Generator<[T, T]> {
+export function* lookAhead<T>(
+  array: T[],
+  options?: LookAheadOptions<T>,
+): Generator<[T, T, number]> {
   if (array.length > 0) {
     for (let i = 0; i < array.length - 1; ++i) {
-      yield array.slice(i, i + 2) as [T, T];
+      yield [array[i], array[i + 1], i];
     }
 
     if (options) {
       if ('last' in options) {
-        yield [array.at(-1)!, options.last];
+        yield [array.at(-1)!, options.last, array.length - 1];
       } else if (options.wrapAround) {
-        yield [array.at(-1)!, array.at(0)!];
+        yield [array.at(-1)!, array.at(0)!, array.length - 1];
       }
     }
   }

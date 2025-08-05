@@ -6,7 +6,7 @@
 
 > **summarize**(`input`: `number`, `options`: [`OptionsIllion`](../type-aliases/OptionsIllion.md)): `string`
 
-Defined in: [cardinal.ts:539](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L539)
+Defined in: [cardinal.ts:521](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L521)
 
 Get a short description of a number
 
