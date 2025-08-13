@@ -4,7 +4,7 @@ import { getDayOfYear } from './get-day-of-year.ts';
 import { getISOWeekOfYear } from './get-iso-week-of-year.ts';
 import { getJulian } from './get-julian.ts';
 import { getTimezone } from './get-timezone.ts';
-import { ordinal } from './ordinal.ts';
+import { ordinal } from './numbering/ordinal.ts';
 import { padNumber } from './pad-number.ts';
 
 const tokenizer =

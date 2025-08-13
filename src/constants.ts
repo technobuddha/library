@@ -175,10 +175,46 @@ export const month: Readonly<Record<string, MonthOfYear>> = Object.freeze({
 });
 
 /**
+ * group English
+ * @category Constants
+ */
+export const fractionSlash = '⁄'; // U+2044 FRACTION SLASH
+export const hyphen = '‐'; // U+2010 HYPHEN
+export const nbHyphen = '‑'; // U+2011 NON-BREAKING HYPHEN
+export const softHyphen = '­'; // U+00AD SOFT HYPHEN
+
+/**
  * @group Math
  * @category Constants
  */
-export const ones = [
+export const negativeSign = '˗'; // U+02D7 MODIFIER LETTER MINUS
+export const positiveSign = '˖'; // U+02D8 MODIFIER LETTER PLUS
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const supNegative = '⁻'; // U+207B SUPERSCRIPT MINUS
+export const supPositive = '⁺'; // U+207A SUPERSCRIPT PLUS
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const subNegative = '₋'; // U+208B SUBSCRIPT MINUS
+export const subPositive = '₊'; // U+208A SUBSCRIPT PLUS
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const invisiblePlus = '⁤'; // U+2064 INVISIBLE PLUS
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const cardinalOnes = [
   'zero',
   'one',
   'two',
@@ -205,4 +241,38 @@ export const ones = [
  * @group Math
  * @category Constants
  */
-export const tens = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+export const cardinalTens = [
+  'twenty',
+  'thirty',
+  'forty',
+  'fifty',
+  'sixty',
+  'seventy',
+  'eighty',
+  'ninety',
+];
+
+/**
+ * @group Math
+ * @category Constants
+ */
+// prettier-ignore
+export const ordinalOnes = [ '', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh',
+  'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth',
+  'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth'
+];
+
+/**
+ * @group Math
+ * @category Constants
+ */
+export const ordinalTens = [
+  'twentieth',
+  'thirtieth',
+  'fortieth',
+  'fiftieth',
+  'sixtieth',
+  'seventieth',
+  'eightieth',
+  'ninetieth',
+];

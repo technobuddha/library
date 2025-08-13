@@ -4,9 +4,9 @@
 
 # Function: summarize()
 
-> **summarize**(`input`: `number`, `options`: [`OptionsIllion`](../type-aliases/OptionsIllion.md)): `string`
+> **summarize**(`input`: `number`, `options`: [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`CardinalOptions`](../type-aliases/CardinalOptions.md), `"groups"` \| `"digits"`\>): `string`
 
-Defined in: [cardinal.ts:521](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L521)
+Defined in: [cardinal.ts:517](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L517)
 
 Get a short description of a number
 
@@ -15,7 +15,7 @@ Get a short description of a number
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` | number to convert |
-| `options` | [`OptionsIllion`](../type-aliases/OptionsIllion.md) | see [OptionsIllion](../type-aliases/OptionsIllion.md) |
+| `options` | [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`CardinalOptions`](../type-aliases/CardinalOptions.md), `"groups"` \| `"digits"`\> | see [CardinalOptions](../type-aliases/CardinalOptions.md) |
 
 ## Returns
 

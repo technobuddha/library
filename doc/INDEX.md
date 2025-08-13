@@ -4,12 +4,14 @@
 
 | Type Alias | Description |
 | ------ | ------ |
+| [Format](type-aliases/Format.md) | - |
 | [FractionOptions](type-aliases/FractionOptions.md) | Options for configuring fraction output. |
 | [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [LookAheadOptions](type-aliases/LookAheadOptions.md) | Options for look-ahead operations. |
 | [OrdinalOptions](type-aliases/OrdinalOptions.md) | - |
 | [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
 | [ToRomanOptions](type-aliases/ToRomanOptions.md) | - |
+| [TypedArray](type-aliases/TypedArray.md) | - |
 | [Weighted](type-aliases/Weighted.md) | - |
 
 ## Functions
@@ -340,14 +342,16 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [ones](variables/ones.md) | - |
-| [tens](variables/tens.md) | - |
+| [cardinalOnes](variables/cardinalOnes.md) | - |
+| [cardinalTens](variables/cardinalTens.md) | - |
+| [ordinalOnes](variables/ordinalOnes.md) | - |
+| [ordinalTens](variables/ordinalTens.md) | - |
 
 ### English
 
 | Type Alias | Description |
 | ------ | ------ |
-| [OptionsCardinal](type-aliases/OptionsCardinal.md) | - |
+| [CardinalOptions](type-aliases/CardinalOptions.md) | - |
 
 ### Linear Interpolation
 
@@ -373,8 +377,6 @@
 | Name | Description |
 | ------ | ------ |
 | [CardinalOptions](type-aliases/CardinalOptions.md) | - |
-| [OptionsCardinal](type-aliases/OptionsCardinal.md) | - |
-| [OptionsIllion](type-aliases/OptionsIllion.md) | - |
 | [cardinal](functions/cardinal.md) | Convert a number into text (the cardinal number) |
 | [orderOfMagnitude](functions/orderOfMagnitude.md) | Get the spelled out word for an exponent |
 | [ordinal](functions/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |

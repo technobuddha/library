@@ -81,22 +81,22 @@ export function relativeTime(
     text.push(formatDate(input, mdFormat));
     sign = 0;
   } else if (d > 0) {
-    text.push(plural('day', d));
+    text.push(plural('day', d, true));
     if (d < 4 && h > 1) {
-      text.push(plural('hour', h));
+      text.push(plural('hour', h, true));
     }
   } else if (h > 0) {
-    text.push(plural('hour', h));
+    text.push(plural('hour', h, true));
     if (h < 4 && m > 0) {
-      text.push(plural('minute', m));
+      text.push(plural('minute', m, true));
     }
   } else if (m > 0) {
-    text.push(plural('minute', m));
+    text.push(plural('minute', m, true));
     if (m < 4 && s > 0) {
-      text.push(plural('second', s));
+      text.push(plural('second', s, true));
     }
   } else if (s > 0) {
-    text.push(plural('second', s));
+    text.push(plural('second', s, true));
   }
 
   if (sign === -1) {

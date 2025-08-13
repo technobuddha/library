@@ -68,7 +68,7 @@ Defined in: [crc32.ts:81](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray`): `this`
+> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../type-aliases/TypedArray.md)): `this`
 
 Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L65)
 
@@ -76,7 +76,7 @@ Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `TypedArray` |
+| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../type-aliases/TypedArray.md) |
 
 ##### Returns
 

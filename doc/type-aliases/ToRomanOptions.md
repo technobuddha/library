@@ -4,7 +4,7 @@
 
 # Type Alias: ToRomanOptions
 
-> **ToRomanOptions** = \{ `format?`: `Format`; \}
+> **ToRomanOptions** = \{ `format?`: [`Format`](Format.md); \}
 
 Defined in: [roman-numeral.ts:157](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L157)
 
@@ -12,6 +12,6 @@ Defined in: [roman-numeral.ts:157](https://github.com/technobuddha/library/blob/
 
 ### format?
 
-> `optional` **format**: `Format`
+> `optional` **format**: [`Format`](Format.md)
 
 Defined in: [roman-numeral.ts:158](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L158)

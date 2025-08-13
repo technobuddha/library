@@ -28,6 +28,12 @@
       "addWords": true
     },
     {
+      "name": "more-numbers",
+      "path": "./.cspell/numbers.dic",
+      "description": "Additional numbers keywords",
+      "addWords": true
+    },
+    {
       "name": "more-npm",
       "path": "./.cspell/npm.dic",
       "description": "Additional npm package names",
@@ -86,6 +92,7 @@
     "more-english",
     "more-fonts",
     "more-math",
+    "more-numbers",
     "more-npm",
     "more-programming",
     "more-unicode"

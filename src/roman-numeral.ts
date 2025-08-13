@@ -152,7 +152,7 @@ export function parseRoman(val: string): number {
   return values.reduce((total, n) => total + n);
 }
 
-type Format = 'standard' | 'apostrophus' | 'vinculum';
+export type Format = 'standard' | 'apostrophus' | 'vinculum';
 
 export type ToRomanOptions = {
   format?: Format;

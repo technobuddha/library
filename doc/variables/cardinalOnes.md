@@ -1,9 +1,9 @@
 <!-- markdownlint-disable -->
 
-[@technobuddha/library](../INDEX.md) / ones
+[@technobuddha/library](../INDEX.md) / cardinalOnes
 
-# Variable: ones
+# Variable: cardinalOnes
 
-> `const` **ones**: `string`[]
+> `const` **cardinalOnes**: `string`[]
 
 Defined in: [constants.ts:181](https://github.com/technobuddha/library/blob/main/src/constants.ts#L181)

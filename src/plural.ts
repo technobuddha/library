@@ -12,9 +12,9 @@ import { matchCase } from './match-case.ts';
  * @group English
  * @category Plural
  */
-export function plural(input: string, quantity?: number): string {
+export function plural(input: string, quantity?: number, include = false): string {
   if (quantity === 1 || quantity === -1) {
-    return quantity.toString() + space + input;
+    return include ? quantity.toString() + space + input : input;
   }
 
   let lc = input.toLocaleLowerCase();
@@ -66,7 +66,7 @@ export function plural(input: string, quantity?: number): string {
 
   result ??= matchCase(`${prefix}${lc}s${suffix}`, input);
 
-  return isUndefined(quantity) ? result : quantity.toString() + space + result;
+  return include && !isUndefined(quantity) ? quantity.toString() + space + result : result;
 }
 
 type DBEntry = {
