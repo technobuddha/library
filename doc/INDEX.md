@@ -4,20 +4,42 @@
 
 | Type Alias | Description |
 | ------ | ------ |
+| [DeconstructedNumber](type-aliases/DeconstructedNumber.md) | - |
 | [Format](type-aliases/Format.md) | - |
-| [FractionOptions](type-aliases/FractionOptions.md) | Options for configuring fraction output. |
+| [FractionOptions](type-aliases/FractionOptions.md) | - |
 | [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [LookAheadOptions](type-aliases/LookAheadOptions.md) | Options for look-ahead operations. |
+| [Numbering](type-aliases/Numbering.md) | - |
 | [OrdinalOptions](type-aliases/OrdinalOptions.md) | - |
 | [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
 | [ToRomanOptions](type-aliases/ToRomanOptions.md) | - |
 | [TypedArray](type-aliases/TypedArray.md) | - |
 | [Weighted](type-aliases/Weighted.md) | - |
 
+## Variables
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [fractionSlash](variables/fractionSlash.md) | group English |
+
+### Other
+
+| Variable | Description |
+| ------ | ------ |
+| [hyphen](variables/hyphen.md) | - |
+| [nbHyphen](variables/nbHyphen.md) | - |
+| [positiveSign](variables/positiveSign.md) | - |
+| [softHyphen](variables/softHyphen.md) | - |
+| [subPositive](variables/subPositive.md) | - |
+| [supPositive](variables/supPositive.md) | - |
+
 ## Functions
 
 | Function | Description |
 | ------ | ------ |
+| [deconstructNumber](functions/deconstructNumber.md) | Deconstructs a number into its sign, whole part, and fractional part. |
 | [fraction](functions/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
 | [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [lookAhead](functions/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
@@ -344,14 +366,12 @@
 | ------ | ------ |
 | [cardinalOnes](variables/cardinalOnes.md) | - |
 | [cardinalTens](variables/cardinalTens.md) | - |
+| [invisiblePlus](variables/invisiblePlus.md) | - |
+| [negativeSign](variables/negativeSign.md) | - |
 | [ordinalOnes](variables/ordinalOnes.md) | - |
 | [ordinalTens](variables/ordinalTens.md) | - |
-
-### English
-
-| Type Alias | Description |
-| ------ | ------ |
-| [CardinalOptions](type-aliases/CardinalOptions.md) | - |
+| [subNegative](variables/subNegative.md) | - |
+| [supNegative](variables/supNegative.md) | - |
 
 ### Linear Interpolation
 
@@ -376,7 +396,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CardinalOptions](type-aliases/CardinalOptions.md) | - |
+| [CardinalOptions](type-aliases/CardinalOptions.md) | Configuration options for cardinal number conversion. |
 | [cardinal](functions/cardinal.md) | Convert a number into text (the cardinal number) |
 | [orderOfMagnitude](functions/orderOfMagnitude.md) | Get the spelled out word for an exponent |
 | [ordinal](functions/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |

@@ -6,4 +6,4 @@
 
 > `const` **ordinalTens**: `string`[]
 
-Defined in: [constants.ts:233](https://github.com/technobuddha/library/blob/main/src/constants.ts#L233)
+Defined in: [constants.ts:269](https://github.com/technobuddha/library/blob/main/src/constants.ts#L269)

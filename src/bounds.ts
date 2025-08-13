@@ -5,7 +5,7 @@ import { type Polygon, type Rect } from './geometry.ts';
  *
  * @param vertices - An array of points representing the vertices of the polygon. Each vertex should have `x` and `y` properties.
  * @returns A `Rect` object representing the smallest rectangle that contains all the vertices of the polygon.
- * @throws {@link TypeError} If the polygon has fewer than three vertices.
+ * @throws `TypeError` If the polygon has fewer than three vertices.
  *
  * @group Geometry
  * @category Polygon

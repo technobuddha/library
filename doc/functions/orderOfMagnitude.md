@@ -6,7 +6,7 @@
 
 > **orderOfMagnitude**(`exponent`: `number`): `null` \| `string`
 
-Defined in: [cardinal.ts:499](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L499)
+Defined in: [numbering/order-of-magnitude.ts:16](https://github.com/technobuddha/library/blob/main/src/numbering/order-of-magnitude.ts#L16)
 
 Get the spelled out word for an exponent
 

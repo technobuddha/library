@@ -4,9 +4,9 @@
 
 # Function: cardinal()
 
-> **cardinal**(`input`: `number`, `__namedParameters`: [`CardinalOptions`](../type-aliases/CardinalOptions.md)): `string`
+> **cardinal**(`input`: `number`, `options`: [`CardinalOptions`](../type-aliases/CardinalOptions.md)): `string`
 
-Defined in: [cardinal.ts:50](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L50)
+Defined in: [numbering/cardinal.ts:74](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L74)
 
 Convert a number into text (the cardinal number)
 
@@ -15,7 +15,7 @@ Convert a number into text (the cardinal number)
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` | The number |
-| `__namedParameters` | [`CardinalOptions`](../type-aliases/CardinalOptions.md) | see [CardinalOptions](../type-aliases/CardinalOptions.md) |
+| `options` | [`CardinalOptions`](../type-aliases/CardinalOptions.md) | see [CardinalOptions](../type-aliases/CardinalOptions.md) |
 
 ## Returns
 
@@ -27,27 +27,3 @@ The number spelled out
 
 There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
 up to uncentillions (1e308).
-
-## Default Value
-
-```ts
-groups Infinity
-```
-
-## Default Value
-
-```ts
-digits false
-```
-
-## Default Value
-
-```ts
-and (empty)
-```
-
-## Default Value
-
-```ts
-hyphen (space)
-```

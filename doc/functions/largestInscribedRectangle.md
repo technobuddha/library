@@ -29,7 +29,7 @@ The largest inscribed rectangle.
 
 ### Throws
 
-Error When polygon has fewer than 3 vertices
+`Error` When polygon has fewer than 3 vertices
 
 ## Call Signature
 
@@ -56,4 +56,4 @@ The largest inscribed rectangle.
 
 ### Throws
 
-Error When polygon has fewer than 3 vertices
+`Error` When polygon has fewer than 3 vertices

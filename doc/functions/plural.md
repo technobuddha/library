@@ -4,7 +4,7 @@
 
 # Function: plural()
 
-> **plural**(`input`: `string`, `quantity?`: `number`): `string`
+> **plural**(`input`: `string`, `quantity?`: `number`, `include?`: `boolean`): `string`
 
 Defined in: [plural.ts:15](https://github.com/technobuddha/library/blob/main/src/plural.ts#L15)
 
@@ -12,10 +12,11 @@ Return the plural version of the input string
 
 ## Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `input` | `string` | The word to pluralize |
-| `quantity?` | `number` | The quantity to prepend to the word. If omitted nothing is prepended. If quantity is one the singular form is returned. |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `input` | `string` | `undefined` | The word to pluralize |
+| `quantity?` | `number` | `undefined` | The quantity to prepend to the word. If omitted nothing is prepended. If quantity is one the singular form is returned. |
+| `include?` | `boolean` | `false` | - |
 
 ## Returns
 

@@ -26,4 +26,4 @@ An array of Cartesian points representing the vertices of the regular polygon.
 
 ## Throws
 
-TypeError If the number of sides is less than 3.
+`TypeError` If the number of sides is less than 3.

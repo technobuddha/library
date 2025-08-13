@@ -8,7 +8,7 @@ import { type Cartesian, type Polygon } from './geometry.ts';
  * @param inner - The radius from the origin to the inner vertices (indentations) of the star. Defaults to half of `outer`.
  * @param origin - The center point of the star, as a Cartesian coordinate. Defaults to `{ x: 0, y: 0 }`.
  * @returns An array of `Cartesian` points representing the vertices of the star in drawing order.
- * @throws {@link TypeError} If `sides` is less than 3.
+ * @throws `TypeError` If `sides` is less than 3.
  *
  * @group Geometry
  * @category Polygon

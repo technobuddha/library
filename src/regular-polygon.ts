@@ -7,7 +7,7 @@ import { type Cartesian, ORIGIN, type Polygon } from './geometry.ts';
  * @param radius - The radius of the polygon (distance from the origin to each vertex). Defaults to 1.
  * @param origin - The center point of the polygon as a Cartesian coordinate. Defaults to \{x: 0, y: 0\}.
  * @returns An array of Cartesian points representing the vertices of the regular polygon.
- * @throws {@link TypeError} If the number of sides is less than 3.
+ * @throws `TypeError` If the number of sides is less than 3.
  *
  * @group Geometry
  * @category Polygon

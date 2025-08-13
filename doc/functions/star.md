@@ -27,4 +27,4 @@ An array of `Cartesian` points representing the vertices of the star in drawing 
 
 ## Throws
 
-TypeError If `sides` is less than 3.
+`TypeError` If `sides` is less than 3.

@@ -49,7 +49,7 @@ const VERTICAL_LINE_EXTENT = 1e100; // For creating "infinite" vertical lines
  * @param polygon - The polygon within which to inscribe the rectangle.
  * @param options - Configuration options for the computation.
  * @returns The largest inscribed rectangle.
- * @throws {@link Error} When polygon has fewer than 3 vertices
+ * @throws `Error` When polygon has fewer than 3 vertices
  *
  * @group Geometry
  * @category Polygon

@@ -6,7 +6,7 @@
 
 > **fraction**(`input`: `number`, `options`: [`FractionOptions`](../type-aliases/FractionOptions.md)): `string`
 
-Defined in: [fraction.ts:54](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L54)
+Defined in: [numbering/fraction.ts:67](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L67)
 
 Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form.
 

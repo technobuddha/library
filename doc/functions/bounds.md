@@ -24,4 +24,4 @@ A `Rect` object representing the smallest rectangle that contains all the vertic
 
 ## Throws
 
-TypeError If the polygon has fewer than three vertices.
+`TypeError` If the polygon has fewer than three vertices.

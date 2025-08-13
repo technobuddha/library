@@ -4,20 +4,134 @@
 
 # Type Alias: FractionOptions
 
-> **FractionOptions** = \{ `output?`: `"numeric"` \| `"alphabetic"`; \}
+> **FractionOptions** = \{ `and?`: [`Numbering`](Numbering.md)\[`"and"`\]; `denominators?`: [`Numbering`](Numbering.md)\[`"denominators"`\]; `digits?`: [`Numbering`](Numbering.md)\[`"digits"`\]; `hyphen?`: [`Numbering`](Numbering.md)\[`"hyphen"`\]; `ordinal?`: [`Numbering`](Numbering.md)\[`"ordinal"`\]; `output?`: `"numeric"` \| `"alphabetic"` \| [`Numbering`](Numbering.md)\[`"output"`\]; `precision?`: [`Numbering`](Numbering.md)\[`"precision"`\]; `tolerance?`: [`Numbering`](Numbering.md)\[`"tolerance"`\]; \}
 
-Defined in: [fraction.ts:33](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L33)
-
-Options for configuring fraction output.
+Defined in: [numbering/fraction.ts:5](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L5)
 
 ## Properties
 
+### and?
+
+> `optional` **and**: [`Numbering`](Numbering.md)\[`"and"`\]
+
+Defined in: [numbering/fraction.ts:22](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L22)
+
+Text to use for "and" in compound numbers (e.g., "one hundred and one").
+
+#### Default Value
+
+```ts
+'' (empty string)
+```
+
+***
+
+### denominators?
+
+> `optional` **denominators**: [`Numbering`](Numbering.md)\[`"denominators"`\]
+
+Defined in: [numbering/fraction.ts:40](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L40)
+
+Type of denominators to use when expressing fractions.
+
+#### Default Value
+
+```ts
+'common'
+```
+
+***
+
+### digits?
+
+> `optional` **digits**: [`Numbering`](Numbering.md)\[`"digits"`\]
+
+Defined in: [numbering/fraction.ts:16](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L16)
+
+Whether to output individual digits instead of number words.
+
+#### Default Value
+
+```ts
+false
+```
+
+***
+
+### hyphen?
+
+> `optional` **hyphen**: [`Numbering`](Numbering.md)\[`"hyphen"`\]
+
+Defined in: [numbering/fraction.ts:28](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L28)
+
+Text to use for hyphens in compound numbers (e.g., "twenty-one").
+
+#### Default Value
+
+```ts
+' ' (space)
+```
+
+***
+
+### ordinal?
+
+> `optional` **ordinal**: [`Numbering`](Numbering.md)\[`"ordinal"`\]
+
+Defined in: [numbering/fraction.ts:52](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L52)
+
+Whether to output ordinal numbers (e.g., "first", "second") instead of cardinal numbers.
+
+#### Default Value
+
+```ts
+false
+```
+
+***
+
 ### output?
 
-> `optional` **output**: `"numeric"` \| `"alphabetic"`
+> `optional` **output**: `"numeric"` \| `"alphabetic"` \| [`Numbering`](Numbering.md)\[`"output"`\]
 
-Defined in: [fraction.ts:39](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L39)
+Defined in: [numbering/fraction.ts:10](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L10)
 
-Determines the format of the fraction output.
-  - `'numeric'`: Outputs the fraction in numeric form (e.g., "3/4").
-  - `'alphabetic'`: Outputs the fraction in alphabetic form (e.g., "three-fourths").
+Output format for the number representation.
+
+#### Default Value
+
+```ts
+'alphabetic'
+```
+
+***
+
+### precision?
+
+> `optional` **precision**: [`Numbering`](Numbering.md)\[`"precision"`\]
+
+Defined in: [numbering/fraction.ts:46](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L46)
+
+Precision for decimal/fraction conversion.
+
+#### Default Value
+
+```ts
+9
+```
+
+***
+
+### tolerance?
+
+> `optional` **tolerance**: [`Numbering`](Numbering.md)\[`"tolerance"`\]
+
+Defined in: [numbering/fraction.ts:34](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L34)
+
+Tolerance for floating-point comparison when converting decimals to fractions.
+
+#### Default Value
+
+```ts
+0.01
+```

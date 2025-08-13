@@ -6,4 +6,4 @@
 
 > `const` **cardinalOnes**: `string`[]
 
-Defined in: [constants.ts:181](https://github.com/technobuddha/library/blob/main/src/constants.ts#L181)
+Defined in: [constants.ts:217](https://github.com/technobuddha/library/blob/main/src/constants.ts#L217)
