@@ -1,25 +1,55 @@
 import { cleanEnd } from './clean.ts';
 import { empty } from './constants.ts';
 
+/**
+ * Represents a number that has been deconstructed into its mathematical components.
+ *
+ * @group Math
+ * @category Numbers
+ */
 export type DeconstructedNumber = {
+  /** The original numeric value, rounded to the specified precision */
   value: number;
+  /** The sign of the number, where 1 indicates positive and -1 indicates negative. */
   sign: 1 | -1;
+  /** The mantissa (or significand) part of the number, represented as a string. */
   mantissa: string;
+  /** The exponent part of the number, indicating the power of 10 by which the mantissa is multiplied. */
   exponent: number;
 };
 
-export type DeconstructNumberReturn = DeconstructedNumber & {
+/**
+ * Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
+ *
+ * @param input - The number to deconstruct. Must be a finite number.
+ * @param precision - The number of significant digits to use (default: 9, min: 1, max: 15).
+ * @returns An object containing the normalized value, sign, mantissa, exponent, and separate representations
+ *          of the whole and fractional parts.
+ * @throws {@link TypeError} If the input is NaN or not a finite number.
+ *
+ * @example
+ * ```typescript
+ * const result = deconstructNumber(123.456);
+ * // result = {
+ * //   value: 123.456,
+ * //   sign: 1,
+ * //   mantissa: "123456",
+ * //   exponent: 2,
+ * //   whole: { ... },
+ * //   fraction: { ... }
+ * // }
+ * ```
+ *
+ * @group Math
+ * @category Numbers
+ */
+export function deconstructNumber(
+  input: number,
+  precision = 9,
+): DeconstructedNumber & {
   fraction: DeconstructedNumber;
   whole: DeconstructedNumber;
-};
-
-/**
- * Deconstructs a number into its sign, whole part, and fractional part.
- *
- * @param input - The number to deconstruct.
- * @returns An object containing the sign ('+' or '-'), the whole part, and the fractional part of the input number.
- */
-export function deconstructNumber(input: number, precision = 9): DeconstructNumberReturn {
+} {
   if (Number.isNaN(input) || !Number.isFinite(input)) {
     throw new TypeError('Input must be a finite number.');
   }

@@ -16,7 +16,7 @@ Generates the vertices of a regular polygon as an array of Cartesian points.
 | ------ | ------ | ------ | ------ |
 | `sides` | `number` | `3` | The number of sides of the polygon (must be at least 3). Defaults to 3. |
 | `radius` | `number` | `1` | The radius of the polygon (distance from the origin to each vertex). Defaults to 1. |
-| `origin` | [`Cartesian`](../type-aliases/Cartesian.md) | `ORIGIN` | The center point of the polygon as a Cartesian coordinate. Defaults to {x: 0, y: 0}. |
+| `origin` | [`Cartesian`](../type-aliases/Cartesian.md) | `Origin` | The center point of the polygon as a Cartesian coordinate. Defaults to {x: 0, y: 0}. |
 
 ## Returns
 

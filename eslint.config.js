@@ -4,7 +4,8 @@
 // 🚨
 import { app } from '@technobuddha/project';
 
-/* @type {(import('eslint').Linter.Config[]} */
+// eslint-disable-next-line tsdoc/syntax
+/** @type {import('eslint').Linter.Config[]} */
 const config = [
   // scripts/tsconfig.json
   app.lint({

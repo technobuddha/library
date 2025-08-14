@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 
 /**
  * Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space.
@@ -12,8 +12,8 @@ import { type Cartesian } from './geometry.ts';
  * @param o - The origin point (O) from which both vectors originate.
  * @returns The scalar cross product of vectors OA and OB.
  *
- * @group Geometry
- * @category Utility
+ * @group Math
+ * @category Arithmetic
  */
 export function crossProduct(a: Cartesian, b: Cartesian, o: Cartesian): number {
   return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);

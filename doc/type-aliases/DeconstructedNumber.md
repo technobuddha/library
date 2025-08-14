@@ -6,7 +6,9 @@
 
 > **DeconstructedNumber** = \{ `exponent`: `number`; `mantissa`: `string`; `sign`: `1` \| `-1`; `value`: `number`; \}
 
-Defined in: [deconstruct-number.ts:4](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L4)
+Defined in: [deconstruct-number.ts:10](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L10)
+
+Represents a number that has been deconstructed into its mathematical components.
 
 ## Properties
 
@@ -14,7 +16,9 @@ Defined in: [deconstruct-number.ts:4](https://github.com/technobuddha/library/bl
 
 > **exponent**: `number`
 
-Defined in: [deconstruct-number.ts:8](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L8)
+Defined in: [deconstruct-number.ts:18](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L18)
+
+The exponent part of the number, indicating the power of 10 by which the mantissa is multiplied.
 
 ***
 
@@ -22,7 +26,9 @@ Defined in: [deconstruct-number.ts:8](https://github.com/technobuddha/library/bl
 
 > **mantissa**: `string`
 
-Defined in: [deconstruct-number.ts:7](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L7)
+Defined in: [deconstruct-number.ts:16](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L16)
+
+The mantissa (or significand) part of the number, represented as a string.
 
 ***
 
@@ -30,7 +36,9 @@ Defined in: [deconstruct-number.ts:7](https://github.com/technobuddha/library/bl
 
 > **sign**: `1` \| `-1`
 
-Defined in: [deconstruct-number.ts:6](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L6)
+Defined in: [deconstruct-number.ts:14](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L14)
+
+The sign of the number, where 1 indicates positive and -1 indicates negative.
 
 ***
 
@@ -38,4 +46,6 @@ Defined in: [deconstruct-number.ts:6](https://github.com/technobuddha/library/bl
 
 > **value**: `number`
 
-Defined in: [deconstruct-number.ts:5](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L5)
+Defined in: [deconstruct-number.ts:12](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L12)
+
+The original numeric value, rounded to the specified precision

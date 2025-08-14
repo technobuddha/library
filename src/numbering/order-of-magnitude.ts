@@ -10,8 +10,9 @@ import { illion } from './illion.ts';
  * @example 303 is "centillion"
  * @param exponent - The exponent to convert
  * @returns Order of Magnitude as text
+ *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export function orderOfMagnitude(exponent: number): string | null {
   return illion('000', exponent).word;

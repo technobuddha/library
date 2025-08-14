@@ -3,6 +3,12 @@ import { deconstructNumber } from '../deconstruct-number.ts';
 
 import { type Numbering, numbering } from './numbering.ts';
 
+/**
+ * Options for formatting ordinal numbers.
+ *
+ * @group Math
+ * @category Numbers
+ */
 export type OrdinalOptions = {
   /**
    * Output format for the number representation.
@@ -50,8 +56,9 @@ export type OrdinalOptions = {
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
  * @param input - The number to convert
+ *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export function ordinal(input: number, options: OrdinalOptions = {}): string {
   if (options.output === 'suffix') {

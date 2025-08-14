@@ -1,5 +1,5 @@
+import { type Cartesian, type Polar } from './@types/geometry.ts';
 import { type AngleUnit } from './angle.ts';
-import { type Cartesian, type Polar } from './geometry.ts';
 import { toAngle } from './to-angle.ts';
 
 /**

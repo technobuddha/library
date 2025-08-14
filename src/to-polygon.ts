@@ -1,4 +1,4 @@
-import { type Cartesian, type Polygon, type Rect } from './geometry.ts';
+import { type Cartesian, type Polygon, type Rect } from './@types/geometry.ts';
 
 /**
  * Converts two Cartesian points or a rectangle into a `Polygon` object.

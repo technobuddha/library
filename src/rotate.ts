@@ -1,4 +1,4 @@
-import { type Cartesian, ORIGIN, type Polygon } from './geometry.ts';
+import { type Cartesian, Origin, type Polygon } from './@types/geometry.ts';
 
 function rotatePoint(point: Cartesian, angle: number, origin: Cartesian): Cartesian {
   return {
@@ -37,7 +37,7 @@ export function rotate(point: Polygon, angle: number, origin?: Cartesian): Polyg
 export function rotate(
   point: Cartesian | Polygon,
   angle: number,
-  origin = ORIGIN,
+  origin = Origin,
 ): Cartesian | Polygon {
   if (Array.isArray(point)) {
     return point.map((p) => rotatePoint(p, angle, origin));

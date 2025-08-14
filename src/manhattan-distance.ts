@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 
 /**
  * Calculates the Manhattan distance between two points in Cartesian coordinates.

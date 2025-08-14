@@ -6,11 +6,11 @@
 
 > **Rect** = [`Cartesian`](Cartesian.md) & \{ `height`: `number`; `width`: `number`; \}
 
-Defined in: [geometry.ts:46](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L46)
+Defined in: @types/geometry.ts:56
 
 ## Type declaration
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| `height` | `number` | [geometry.ts:48](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L48) |
-| `width` | `number` | [geometry.ts:47](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L47) |
+| `height` | `number` | @types/geometry.ts:58 |
+| `width` | `number` | @types/geometry.ts:57 |

@@ -1,5 +1,5 @@
+import { type Polygon } from './@types/geometry.ts';
 import { bounds } from './bounds.ts';
-import { type Polygon } from './geometry.ts';
 
 describe('bounds', () => {
   test('calculates bounds for a simple triangle', () => {

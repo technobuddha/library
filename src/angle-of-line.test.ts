@@ -1,5 +1,5 @@
+import { type LineSegment } from './@types/geometry.ts';
 import { angleOfLine } from './angle-of-line.ts';
-import { type LineSegment } from './geometry.ts';
 
 describe('angleOfLine', () => {
   test('should return 0 for horizontal line to the right (radians)', () => {

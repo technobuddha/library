@@ -1,6 +1,6 @@
+import { type LineSegment, type Polygon, type Rect } from './@types/geometry.ts';
 import { bounds } from './bounds.ts';
 import { edgeAngles } from './edge-angles.ts';
-import { type LineSegment, type Polygon, type Rect } from './geometry.ts';
 import { isInPolygon } from './is-in-polygon.ts';
 import { lerp } from './lerp.ts';
 import { lineIntersection } from './line-intersection.ts';
@@ -10,6 +10,9 @@ import { rotate } from './rotate.ts';
 /**
  * Represents a rectangle that has been rotated by a certain angle.
  * Extends the `Rect` type with additional properties for the area and rotation angle.
+ *
+ * @group Geometry
+ * @category Rectangle
  */
 export type RotatedRect = Rect & {
   /* The area of the rotated rectangle. */
@@ -20,6 +23,9 @@ export type RotatedRect = Rect & {
 
 /**
  * Configuration options for the largest inscribed rectangle algorithm.
+ *
+ * @group Geometry
+ * @category Rectangle
  */
 export type LargestInscribedRectangleOptions = {
   /**

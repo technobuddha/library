@@ -6,4 +6,6 @@
 
 > `const` **softHyphen**: `"­"` = `'­'`
 
-Defined in: [constants.ts:184](https://github.com/technobuddha/library/blob/main/src/constants.ts#L184)
+Defined in: [constants.ts:206](https://github.com/technobuddha/library/blob/main/src/constants.ts#L206)
+
+Soft Hyphen

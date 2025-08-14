@@ -6,7 +6,7 @@
 
 > **isIntersecting**(`shape`: [`LineSegment`](../type-aliases/LineSegment.md) \| [`Polygon`](../type-aliases/Polygon.md), `polygon`: [`Polygon`](../type-aliases/Polygon.md)): `boolean`
 
-Defined in: [is-intersecting.ts:37](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L37)
+Defined in: [is-intersecting.ts:25](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L25)
 
 Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon.
 

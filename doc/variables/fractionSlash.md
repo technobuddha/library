@@ -6,6 +6,6 @@
 
 > `const` **fractionSlash**: `"⁄"` = `'⁄'`
 
-Defined in: [constants.ts:181](https://github.com/technobuddha/library/blob/main/src/constants.ts#L181)
+Defined in: [constants.ts:185](https://github.com/technobuddha/library/blob/main/src/constants.ts#L185)
 
-group English
+Fraction Slash

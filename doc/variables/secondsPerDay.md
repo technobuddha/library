@@ -6,4 +6,4 @@
 
 > `const` **secondsPerDay**: `number`
 
-Defined in: [constants.ts:83](https://github.com/technobuddha/library/blob/main/src/constants.ts#L83)
+Defined in: [constants.ts:85](https://github.com/technobuddha/library/blob/main/src/constants.ts#L85)

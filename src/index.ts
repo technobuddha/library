@@ -2,6 +2,7 @@
 
 export * from './@types/binary-encoding.ts';
 export * from './@types/binary-object.ts';
+export * from './@types/geometry.ts';
 export * from './@types/text-encoding.ts';
 export * from './@types/typed-array.ts';
 export * from './add-time.ts';
@@ -61,7 +62,6 @@ export * from './floor.ts';
 export * from './format-date.ts';
 export * from './format-number.ts';
 export * from './fuzzy-match.ts';
-export * from './geometry.ts';
 export * from './get-beginning-of-day.ts';
 export * from './get-beginning-of-month.ts';
 export * from './get-beginning-of-week.ts';

@@ -1,4 +1,4 @@
-import { type Cartesian, type LineSegment } from './geometry.ts';
+import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 import { isRightOfLine } from './is-right-of-line.ts';
 
 // Helper to create a line segment

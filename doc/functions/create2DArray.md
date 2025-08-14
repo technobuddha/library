@@ -6,7 +6,7 @@
 
 > **create2DArray**\<`T`\>(`width`: `number`, `height`: `number`, `fill`: `T` \| (`x`: `number`, `y`: `number`) => `T`): `T`[][]
 
-Defined in: [create-2d-array.ts:19](https://github.com/technobuddha/library/blob/main/src/create-2d-array.ts#L19)
+Defined in: [create-2d-array.ts:20](https://github.com/technobuddha/library/blob/main/src/create-2d-array.ts#L20)
 
 Create a two dimensional array with all elements initialized
 

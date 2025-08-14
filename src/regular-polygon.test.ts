@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 import { regularPolygon } from './regular-polygon.ts';
 
 describe('regularPolygon', () => {

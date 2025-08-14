@@ -1,5 +1,5 @@
+import { type Polygon } from './@types/geometry.ts';
 import { convexHull } from './convex-hull.ts';
-import { type Polygon } from './geometry.ts';
 
 describe('convexHull', () => {
   test('should return undefined for empty array', () => {

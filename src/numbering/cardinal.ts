@@ -6,7 +6,7 @@ import { type Numbering, numbering } from './numbering.ts';
  * Configuration options for cardinal number conversion.
  *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export type CardinalOptions = {
   /**
@@ -63,7 +63,7 @@ export type CardinalOptions = {
  * @returns The number spelled out
  *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export function cardinal(input: number, options: CardinalOptions = {}): string {
   const numberingOptions: Numbering = {

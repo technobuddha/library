@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 
-import { type Cartesian, type Rect } from './geometry.ts';
+import { type Cartesian, type Rect } from './@types/geometry.ts';
 import { toPolygon } from './to-polygon.ts';
 
 describe('toPolygon', () => {

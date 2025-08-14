@@ -1,12 +1,14 @@
 /**
- * Angle units.
+ * Types of angle units
+ *
  * @group Geometry
  * @category Angle
  */
 export type AngleUnit = 'deg' | 'degrees' | 'rads' | 'radians' | 'grads' | 'gradians' | 'turns';
 
 /**
- * Angle units.
+ * Number of units in a circle
+ *
  * @group Geometry
  * @category Angle
  */

@@ -2,12 +2,13 @@ import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig(() => ({
   test: {
-    include: ['./src/**/*.test.ts'],
+    root: './src',
+    include: ['**/*.test.ts'],
     globals: true,
     setupFiles: ['./vitest.setup.ts'],
     coverage: {
+      skipFull: true,
       enabled: true,
-      include: ['src/**'],
       exclude: [
         '**/*.test.*',
         '**/*.config.*',

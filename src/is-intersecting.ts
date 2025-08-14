@@ -1,25 +1,10 @@
-import { type LineSegment, type Polygon } from './geometry.ts';
+import { type LineSegment, type Polygon } from './@types/geometry.ts';
 import { isOnLine } from './is-on-line.ts';
 import { isPolygon } from './is-polygon.ts';
 import { lineIntersection } from './line-intersection.ts';
 import { toClosed } from './to-closed.ts';
 import { toLineSegment } from './to-line-segment.ts';
 
-/**
- * Determines whether a given line segment intersects with a polygon.
- *
- * Iterates through each edge of the polygon and checks if the provided line segment
- * intersects with any of the polygon's edges. Also considers the case where both
- * vertices of a polygon edge lie on the line segment.
- *
- * @param shape - The line segment to test for intersection.
- * @param polygon - The polygon to test against.
- * @returns `true` if the line segment intersects with the polygon, otherwise `false`.
- *
- * @group Geometry
- * @category Line Segment
- * @category Polygon
- */
 /**
  * Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon.
  *
@@ -32,6 +17,10 @@ import { toLineSegment } from './to-line-segment.ts';
  *   or if two of its vertices lie on the polygon.
  * - If `shape` is a LineSegment, the function checks if it intersects with any edge of the polygon,
  *   or if both endpoints of a polygon edge lie on the line segment.
+ *
+ * @group Geometry
+ * @category Line Segment
+ * @category Polygon
  */
 export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean;
 export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean {

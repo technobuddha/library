@@ -1,4 +1,4 @@
-import { type Polygon } from './geometry.ts';
+import { type Polygon } from './@types/geometry.ts';
 import { lineLength } from './line-length.ts';
 import { modulo } from './modulo.ts';
 
@@ -7,6 +7,9 @@ import { modulo } from './modulo.ts';
  *
  * @param vertices - An array of points representing the vertices of the polygon in order.
  * @returns The total perimeter length of the polygon.
+ *
+ * @group Geometry
+ * @category Polygon
  */
 export function perimeter(vertices: Polygon): number {
   let total = 0;

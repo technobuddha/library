@@ -160,7 +160,7 @@ An iterator of `[Cartesian, *V*]` pairs.
 
 ### forEach()
 
-> **forEach**(`callback`: (`value`: `V`, `key`: [`Cartesian`](../type-aliases/Cartesian.md), `map`: `CartesianMap`\<`V`\>) => `void`, `thisArg?`: `this`): `void`
+> **forEach**(`callback`: (`value`: `V`, `key`: [`Cartesian`](../type-aliases/Cartesian.md), `map`: `CartesianMap`\<`V`\>) => `void`, `thisArg?`: `unknown`): `void`
 
 Defined in: [cartesian-map.ts:91](https://github.com/technobuddha/library/blob/main/src/cartesian-map.ts#L91)
 
@@ -171,7 +171,7 @@ Executes a provided function once for each coordinate in the set.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `callback` | (`value`: `V`, `key`: [`Cartesian`](../type-aliases/Cartesian.md), `map`: `CartesianMap`\<`V`\>) => `void` | Function to execute for each coordinate. |
-| `thisArg?` | `this` | Value to use as `this` when executing `callback`. |
+| `thisArg?` | `unknown` | Value to use as `this` when executing `callback`. |
 
 #### Returns
 

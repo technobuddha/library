@@ -8,7 +8,7 @@
 
 > **largestInscribedRectangle**(`polygon`: [`Polygon`](../type-aliases/Polygon.md), `options?`: \{ `aligned?`: `true`; `squareOnly?`: `boolean`; \}): [`Rect`](../type-aliases/Rect.md)
 
-Defined in: [largest-inscribed-rectangle.ts:58](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L58)
+Defined in: [largest-inscribed-rectangle.ts:64](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L64)
 
 Computes the largest rectangle that can be inscribed within the given polygon.
 
@@ -35,7 +35,7 @@ The largest inscribed rectangle.
 
 > **largestInscribedRectangle**(`polygon`: [`Polygon`](../type-aliases/Polygon.md), `options`: \{ `aligned`: `false`; `squareOnly?`: `boolean`; \}): [`RotatedRect`](../type-aliases/RotatedRect.md)
 
-Defined in: [largest-inscribed-rectangle.ts:62](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L62)
+Defined in: [largest-inscribed-rectangle.ts:68](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L68)
 
 Computes the largest rectangle that can be inscribed within the given polygon.
 

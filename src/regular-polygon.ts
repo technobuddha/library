@@ -1,4 +1,4 @@
-import { type Cartesian, ORIGIN, type Polygon } from './geometry.ts';
+import { type Cartesian, Origin, type Polygon } from './@types/geometry.ts';
 
 /**
  * Generates the vertices of a regular polygon as an array of Cartesian points.
@@ -12,7 +12,7 @@ import { type Cartesian, ORIGIN, type Polygon } from './geometry.ts';
  * @group Geometry
  * @category Polygon
  */
-export function regularPolygon(sides = 3, radius = 1, origin: Cartesian = ORIGIN): Polygon {
+export function regularPolygon(sides = 3, radius = 1, origin: Cartesian = Origin): Polygon {
   if (sides < 3) {
     throw new TypeError('A polygon must have at least 3 sides.');
   }

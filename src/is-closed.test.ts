@@ -1,4 +1,4 @@
-import { type Polygon } from './geometry.ts';
+import { type Polygon } from './@types/geometry.ts';
 import { isClosed } from './is-closed.ts';
 
 describe('isClosed', () => {

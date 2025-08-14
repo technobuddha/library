@@ -6,7 +6,9 @@
 
 > **AlmostEqualsOptions** = \{ `tolerance?`: `number`; \}
 
-Defined in: [almost-equals.ts:5](https://github.com/technobuddha/library/blob/main/src/almost-equals.ts#L5)
+Defined in: [almost-equals.ts:7](https://github.com/technobuddha/library/blob/main/src/almost-equals.ts#L7)
+
+Options for the [almostEquals](../functions/almostEquals.md) function
 
 ## Properties
 
@@ -14,6 +16,6 @@ Defined in: [almost-equals.ts:5](https://github.com/technobuddha/library/blob/ma
 
 > `optional` **tolerance**: `number`
 
-Defined in: [almost-equals.ts:7](https://github.com/technobuddha/library/blob/main/src/almost-equals.ts#L7)
+Defined in: [almost-equals.ts:9](https://github.com/technobuddha/library/blob/main/src/almost-equals.ts#L9)
 
 Tolerance range. If specified, should be greater than 0. *

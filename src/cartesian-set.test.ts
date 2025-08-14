@@ -1,5 +1,5 @@
+import { type Cartesian } from './@types/geometry.ts';
 import { CartesianSet } from './cartesian-set.ts';
-import { type Cartesian } from './geometry.ts';
 
 describe('CartesianSet', () => {
   test('constructor', () => {

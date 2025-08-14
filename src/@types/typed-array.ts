@@ -1,3 +1,9 @@
+/**
+ * Any of the built-in typed array types in JavaScript.
+ *
+ * @group Utility
+ * @category Global Types
+ */
 export type TypedArray =
   | Int8Array
   | Uint8Array

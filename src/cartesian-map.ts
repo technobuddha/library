@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 
 /**
  * Represents a map with keys of cartesian coordinates, optimized for efficient storage and lookup.

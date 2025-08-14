@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 import { isCartesian } from './is-cartesian.ts';
 
 describe('isCartesian', () => {

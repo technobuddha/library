@@ -1,4 +1,4 @@
-import { type Cartesian, type Polygon, type Rect } from './geometry.ts';
+import { type Cartesian, type Polygon, type Rect } from './@types/geometry.ts';
 import { isIntersecting } from './is-intersecting.ts';
 import { isOnLine } from './is-on-line.ts';
 import { isPolygon } from './is-polygon.ts';

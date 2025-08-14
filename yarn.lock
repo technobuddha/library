@@ -1683,7 +1683,7 @@ __metadata:
   resolution: "@technobuddha/library@workspace:."
   dependencies:
     "@giancosta86/typedoc-readonly": "npm:1.0.1"
-    "@technobuddha/project": "npm:0.0.178"
+    "@technobuddha/project": "npm:0.0.180"
     "@types/lodash-es": "npm:^4.17.12"
     "@vitest/coverage-v8": "npm:3.2.4"
     cspell: "npm:9.1.5"
@@ -1692,14 +1692,14 @@ __metadata:
     typedoc: "npm:0.28.7"
     typedoc-plugin-markdown: "npm:4.7.0"
     typedoc-plugin-mdn-links: "npm:5.0.2"
-    vite: "npm:7.0.0"
+    vite: "npm:7.0.5"
     vitest: "npm:3.2.4"
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.0.178":
-  version: 0.0.178
-  resolution: "@technobuddha/project@npm:0.0.178"
+"@technobuddha/project@npm:0.0.180":
+  version: 0.0.180
+  resolution: "@technobuddha/project@npm:0.0.180"
   dependencies:
     "@eslint/js": "npm:9.26.0"
     "@inquirer/prompts": "npm:7.5.0"
@@ -1747,7 +1747,7 @@ __metadata:
     watch: "npm:1.0.2"
   bin:
     tbproject: dist/bin/tbproject
-  checksum: 10c0/6c50e95b4d952aa35bffd1e4f72ad29dd3a4b3a9873f222b1c05a273e0a4e98e978b0562af00beaf4de4091b63ce7979463081ee39e0b2ff5f17f31f29ae23fe
+  checksum: 10c0/b88452f4d90bb749cc9c030a06843aa287761004da67ba1fec088e4e9a7c44e8d4585bb4978d3f672ce91bc7263d60293b9e6557294cb2f710f3de0e98ca63ff
   languageName: node
   linkType: hard
 
@@ -8307,7 +8307,62 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:7.0.0, vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0":
+"vite@npm:7.0.5":
+  version: 7.0.5
+  resolution: "vite@npm:7.0.5"
+  dependencies:
+    esbuild: "npm:^0.25.0"
+    fdir: "npm:^6.4.6"
+    fsevents: "npm:~2.3.3"
+    picomatch: "npm:^4.0.2"
+    postcss: "npm:^8.5.6"
+    rollup: "npm:^4.40.0"
+    tinyglobby: "npm:^0.2.14"
+  peerDependencies:
+    "@types/node": ^20.19.0 || >=22.12.0
+    jiti: ">=1.21.0"
+    less: ^4.0.0
+    lightningcss: ^1.21.0
+    sass: ^1.70.0
+    sass-embedded: ^1.70.0
+    stylus: ">=0.54.8"
+    sugarss: ^5.0.0
+    terser: ^5.16.0
+    tsx: ^4.8.1
+    yaml: ^2.4.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    jiti:
+      optional: true
+    less:
+      optional: true
+    lightningcss:
+      optional: true
+    sass:
+      optional: true
+    sass-embedded:
+      optional: true
+    stylus:
+      optional: true
+    sugarss:
+      optional: true
+    terser:
+      optional: true
+    tsx:
+      optional: true
+    yaml:
+      optional: true
+  bin:
+    vite: bin/vite.js
+  checksum: 10c0/95fb7f393adc2d2428e0e033ed4ea599323118f645415c35db3df40bd2c5a2962b0b4c967f35cfb80ca04efb1eb51bdb5f4b63529bb5f9aa3603d9fbeb50543f
+  languageName: node
+  linkType: hard
+
+"vite@npm:^5.0.0 || ^6.0.0 || ^7.0.0-0":
   version: 7.0.0
   resolution: "vite@npm:7.0.0"
   dependencies:

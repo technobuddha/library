@@ -1,60 +1,19 @@
 # @technobuddha/library
 
-## Type Aliases
-
-| Type Alias | Description |
-| ------ | ------ |
-| [DeconstructedNumber](type-aliases/DeconstructedNumber.md) | - |
-| [DeconstructNumberReturn](type-aliases/DeconstructNumberReturn.md) | - |
-| [Format](type-aliases/Format.md) | - |
-| [FractionOptions](type-aliases/FractionOptions.md) | - |
-| [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
-| [LookAheadOptions](type-aliases/LookAheadOptions.md) | Options for look-ahead operations. |
-| [Numbering](type-aliases/Numbering.md) | - |
-| [OrdinalOptions](type-aliases/OrdinalOptions.md) | - |
-| [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
-| [ToRomanOptions](type-aliases/ToRomanOptions.md) | - |
-| [TypedArray](type-aliases/TypedArray.md) | - |
-| [Weighted](type-aliases/Weighted.md) | - |
-
-## Variables
-
-### Constants
-
-| Variable | Description |
-| ------ | ------ |
-| [fractionSlash](variables/fractionSlash.md) | group English |
-
-### Other
-
-| Variable | Description |
-| ------ | ------ |
-| [hyphen](variables/hyphen.md) | - |
-| [nbHyphen](variables/nbHyphen.md) | - |
-| [positiveSign](variables/positiveSign.md) | - |
-| [softHyphen](variables/softHyphen.md) | - |
-| [subPositive](variables/subPositive.md) | - |
-| [supPositive](variables/supPositive.md) | - |
-
-## Functions
-
-| Function | Description |
-| ------ | ------ |
-| [deconstructNumber](functions/deconstructNumber.md) | Deconstructs a number into its sign, whole part, and fractional part. |
-| [fraction](functions/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
-| [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
-| [lookAhead](functions/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
-| [perimeter](functions/perimeter.md) | Calculates the perimeter of a polygon given its vertices. |
-| [randomWeightedPick](functions/randomWeightedPick.md) | Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked. |
-| [toSquare](functions/toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
-
 ## Array
 
-### Create 2D Array
+### 2D
 
 | Function | Description |
 | ------ | ------ |
 | [create2DArray](functions/create2DArray.md) | Create a two dimensional array with all elements initialized |
+
+### Iteration
+
+| Name | Description |
+| ------ | ------ |
+| [LookAheadOptions](type-aliases/LookAheadOptions.md) | Options for look-ahead operations. |
+| [lookAhead](functions/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
 
 ### Longest Common Subsequence
 
@@ -214,14 +173,14 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CoordinateOptions](type-aliases/CoordinateOptions.md) | - |
+| [CoordinateOptions](type-aliases/CoordinateOptions.md) | Options for creating a coordinate string |
 | [coordinate](functions/coordinate.md) | Create a string from an array, separating values and inserting a conjunction |
 
 ### Indefinite Article
 
 | Name | Description |
 | ------ | ------ |
-| [IndefiniteArticleOptions](type-aliases/IndefiniteArticleOptions.md) | - |
+| [IndefiniteArticleOptions](type-aliases/IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
 | [indefiniteArticle](functions/indefiniteArticle.md) | Determine the appropriate indefinite article to use with a word. |
 
 ### Plural
@@ -242,14 +201,22 @@
 | ------ | ------ |
 | [syllables](functions/syllables.md) | Approximate the number of syllables in a string |
 
+### Unicode
+
+| Variable | Description |
+| ------ | ------ |
+| [hyphen](variables/hyphen.md) | Hyphen |
+| [nbHyphen](variables/nbHyphen.md) | Non-Breaking Hyphen |
+| [softHyphen](variables/softHyphen.md) | Soft Hyphen |
+
 ## Geometry
 
 ### Angle
 
 | Name | Description |
 | ------ | ------ |
-| [AngleUnit](type-aliases/AngleUnit.md) | Angle units. |
-| [angleUnits](variables/angleUnits.md) | Angle units. |
+| [AngleUnit](type-aliases/AngleUnit.md) | Types of angle units |
+| [angleUnits](variables/angleUnits.md) | Number of units in a circle |
 | [angleBetweenPoints](functions/angleBetweenPoints.md) | Computes the angle between two points (x1,y1) and (x2,y2). Angle zero points in the +X direction, π/2 radians points in the +Y direction (down) and from there we grow clockwise towards π*2 radians. |
 | [angleDifference](functions/angleDifference.md) | Computes the difference between startAngle and endAngle. |
 | [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
@@ -265,9 +232,9 @@
 | ------ | ------ |
 | [CartesianMap](classes/CartesianMap.md) | Represents a map with keys of cartesian coordinates, optimized for efficient storage and lookup. |
 | [CartesianSet](classes/CartesianSet.md) | Represents a set of 2D cartesian, optimized for efficient storage and lookup. |
-| [Cartesian](type-aliases/Cartesian.md) | - |
-| [Polar](type-aliases/Polar.md) | - |
-| [ORIGIN](variables/ORIGIN.md) | - |
+| [Cartesian](type-aliases/Cartesian.md) | Cartesian coordinate (x, y) |
+| [Polar](type-aliases/Polar.md) | Polar coordinate (angle, radius) |
+| [Origin](variables/Origin.md) | The origin of cartesian coordinates (0, 0) |
 | [isCartesian](functions/isCartesian.md) | Determines if the provided value is a Cartesian point. |
 | [isPolar](functions/isPolar.md) | Determines if the provided value is a Polar point. |
 | [toCartesian](functions/toCartesian.md) | Convert polar coordinates to cartesian |
@@ -277,8 +244,9 @@
 
 | Name | Description |
 | ------ | ------ |
-| [LineSegment](type-aliases/LineSegment.md) | - |
+| [LineSegment](type-aliases/LineSegment.md) | A line segments (defined by two endpoints) |
 | [angleOfLine](functions/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
+| [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [isLeftOfLine](functions/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
 | [isOnLine](functions/isOnLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
 | [isWithLine](functions/isWithLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
@@ -304,14 +272,16 @@
 
 | Name | Description |
 | ------ | ------ |
-| [Polygon](type-aliases/Polygon.md) | - |
+| [Polygon](type-aliases/Polygon.md) | A polygon (a set of cartesian coordinates) |
 | [area](functions/area.md) | Calculates the area of a polygon given its vertices. |
 | [bounds](functions/bounds.md) | Calculates the axis-aligned bounding rectangle for a given polygon. |
 | [centroid](functions/centroid.md) | Calculates the centroid (geometric center) of a polygon given its vertices. |
 | [convexHull](functions/convexHull.md) | Computes the convex hull of a set of 2D points using the Monotone Chain algorithm. |
 | [edgeAngles](functions/edgeAngles.md) | Generate normalized edge angles from polygon edges. |
 | [isInPolygon](functions/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
+| [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
+| [perimeter](functions/perimeter.md) | Calculates the perimeter of a polygon given its vertices. |
 | [regularPolygon](functions/regularPolygon.md) | Generates the vertices of a regular polygon as an array of Cartesian points. |
 | [rotate](functions/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
 | [scale](functions/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
@@ -319,87 +289,62 @@
 | [toPolygon](functions/toPolygon.md) | Converts two Cartesian points or a rectangle into a `Polygon` object. |
 | [translate](functions/translate.md) | Translate a point or an array of points by a specified amount. |
 
-### Rect
-
-| Function | Description |
-| ------ | ------ |
-| [isRect](functions/isRect.md) | Determines if the provided value is a Rectangle. |
-
 ### Rectangle
 
 | Name | Description |
 | ------ | ------ |
+| [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [Rect](type-aliases/Rect.md) | - |
+| [RotatedRect](type-aliases/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
+| [isRect](functions/isRect.md) | Determines if the provided value is a Rectangle. |
 | [largestInscribedRectangle](functions/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
-
-### Utility
-
-| Function | Description |
-| ------ | ------ |
-| [crossProduct](functions/crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
+| [toSquare](functions/toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
 
 ## Math
 
-### Almost Equals
+### Arithmetic
 
 | Name | Description |
 | ------ | ------ |
-| [AlmostEqualsOptions](type-aliases/AlmostEqualsOptions.md) | - |
-| [almostEquals](functions/almostEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
-
-### Ceiling / Floor
-
-| Name | Description |
-| ------ | ------ |
-| [CeilOptions](type-aliases/CeilOptions.md) | - |
-| [FloorOptions](type-aliases/FloorOptions.md) | - |
-| [ceil](functions/ceil.md) | A tweaked variant of |
-| [floor](functions/floor.md) | A tweaked variant of |
+| [CeilOptions](type-aliases/CeilOptions.md) | Options for the [ceil](functions/ceil.md) function |
+| [FloorOptions](type-aliases/FloorOptions.md) | Options for the [floor](functions/floor.md) function |
+| [ceil](functions/ceil.md) | A tweaked variant of [Math.ceil](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil). See |
+| [crossProduct](functions/crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
+| [floor](functions/floor.md) | A tweaked variant of [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) which tolerates if the passed number is infinitesimally smaller than the closest integer. It often happens with the results of floating point calculations because of the finite precision of the intermediate results. For example Math.floor(Math.log(1000) / Math.LN10) == 2, not 3 as one would expect. |
+| [lerp](functions/lerp.md) | Performs linear interpolation between values a and b. Returns the value between a and b proportional to x (when x is between 0 and 1. When x is outside this range, the return value is a linear extrapolation). |
+| [modulo](functions/modulo.md) | The % operator in JavaScript returns the remainder of a / b, but differs from some other languages in that the result will have the same sign as the dividend. For example, -1 % 8 == -1, whereas in some other languages (such as Python) the result would be 7. This function emulates the more correct modulo behavior, which is useful for certain applications such as calculating an offset index in a circular list. |
 
 ### Comparison
 
-| Function | Description |
+| Name | Description |
 | ------ | ------ |
+| [AlmostEqualsOptions](type-aliases/AlmostEqualsOptions.md) | Options for the [almostEquals](functions/almostEquals.md) function |
+| [almostEquals](functions/almostEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
 | [compareNumbers](functions/compareNumbers.md) | Compare two numbers |
+| [isNegativeZero](functions/isNegativeZero.md) | Tests to see if the specified value is negative zero |
 
 ### Constants
 
 | Variable | Description |
 | ------ | ------ |
-| [cardinalOnes](variables/cardinalOnes.md) | - |
-| [cardinalTens](variables/cardinalTens.md) | - |
-| [invisiblePlus](variables/invisiblePlus.md) | - |
-| [negativeSign](variables/negativeSign.md) | - |
-| [ordinalOnes](variables/ordinalOnes.md) | - |
-| [ordinalTens](variables/ordinalTens.md) | - |
-| [subNegative](variables/subNegative.md) | - |
-| [supNegative](variables/supNegative.md) | - |
+| [cardinalOnes](variables/cardinalOnes.md) | Words for unit numbers 0-19 |
+| [cardinalTens](variables/cardinalTens.md) | Words for tens 20-90 |
+| [negativeZero](variables/negativeZero.md) | Negative Zero |
+| [ordinalOnes](variables/ordinalOnes.md) | Words for ordinal numbers 0-19 |
+| [ordinalTens](variables/ordinalTens.md) | Words for ordinal tens 20-90 |
 
-### Linear Interpolation
-
-| Function | Description |
-| ------ | ------ |
-| [lerp](functions/lerp.md) | Performs linear interpolation between values a and b. Returns the value between a and b proportional to x (when x is between 0 and 1. When x is outside this range, the return value is a linear extrapolation). |
-
-### Modulo
-
-| Function | Description |
-| ------ | ------ |
-| [modulo](functions/modulo.md) | The % operator in JavaScript returns the remainder of a / b, but differs from some other languages in that the result will have the same sign as the dividend. For example, -1 % 8 == -1, whereas in some other languages (such as Python) the result would be 7. This function emulates the more correct modulo behavior, which is useful for certain applications such as calculating an offset index in a circular list. |
-
-### Negative Zero
-
-| Name | Description |
-| ------ | ------ |
-| [negativeZero](variables/negativeZero.md) | - |
-| [isNegativeZero](functions/isNegativeZero.md) | Tests to see if the specified value is negative zero |
-
-### Numbering
+### Numbers
 
 | Name | Description |
 | ------ | ------ |
 | [CardinalOptions](type-aliases/CardinalOptions.md) | Configuration options for cardinal number conversion. |
+| [DeconstructedNumber](type-aliases/DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
+| [FractionOptions](type-aliases/FractionOptions.md) | Options for customizing the output and behavior of fraction number representations. |
+| [OrdinalOptions](type-aliases/OrdinalOptions.md) | Options for formatting ordinal numbers. |
+| [ToRomanOptions](type-aliases/ToRomanOptions.md) | Options for converting numbers to Roman numerals. |
 | [cardinal](functions/cardinal.md) | Convert a number into text (the cardinal number) |
+| [deconstructNumber](functions/deconstructNumber.md) | Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts. |
+| [fraction](functions/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
 | [orderOfMagnitude](functions/orderOfMagnitude.md) | Get the spelled out word for an exponent |
 | [ordinal](functions/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
 | [parseRoman](functions/parseRoman.md) | Parse a roman numeral string into it's integer value. |
@@ -420,6 +365,19 @@
 | ------ | ------ |
 | [standardDeviation](functions/standardDeviation.md) | Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments. |
 | [variance](functions/variance.md) | Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments. |
+
+### Unicode
+
+| Variable | Description |
+| ------ | ------ |
+| [fractionSlash](variables/fractionSlash.md) | Fraction Slash |
+| [invisiblePlus](variables/invisiblePlus.md) | Invisible Plus sign |
+| [negativeSign](variables/negativeSign.md) | Negative Sign |
+| [positiveSign](variables/positiveSign.md) | Positive Sign |
+| [subNegative](variables/subNegative.md) | Subscript Negative |
+| [subPositive](variables/subPositive.md) | Subscript Positive |
+| [supNegative](variables/supNegative.md) | Superscript Negative |
+| [supPositive](variables/supPositive.md) | Superscript Positive |
 
 ## Number
 
@@ -463,10 +421,12 @@
 
 ### Pick
 
-| Function | Description |
+| Name | Description |
 | ------ | ------ |
+| [Weighted](type-aliases/Weighted.md) | Represents an object with an associated weight value. |
 | [randomDraw](functions/randomDraw.md) | Draw a random item from a list. Returning both the item and the list without the drawn item. |
 | [randomPick](functions/randomPick.md) | Pick a random items from a list. |
+| [randomWeightedPick](functions/randomWeightedPick.md) | Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked. |
 
 ### Shuffle
 
@@ -919,3 +879,9 @@
 | Class | Description |
 | ------ | ------ |
 | [PriorityQueue](classes/PriorityQueue.md) | A simple priority queue |
+
+### Global Types
+
+| Type Alias | Description |
+| ------ | ------ |
+| [TypedArray](type-aliases/TypedArray.md) | Any of the built-in typed array types in JavaScript. |

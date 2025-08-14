@@ -20,8 +20,10 @@ export const nbsp = '\u00A0';
 export const zwsp = '\u200B';
 
 /**
+ * Negative Zero
+ *
  * @group Math
- * @category Negative Zero
+ * @category Constants
  */
 export const negativeZero = -0;
 
@@ -175,104 +177,134 @@ export const month: Readonly<Record<string, MonthOfYear>> = Object.freeze({
 });
 
 /**
- * group English
- * @category Constants
+ * Fraction Slash
+ *
+ * @group Math
+ * @category Unicode
  */
 export const fractionSlash = '⁄'; // U+2044 FRACTION SLASH
+/**
+ * Hyphen
+ *
+ * @group English
+ * @category Unicode
+ */
 export const hyphen = '‐'; // U+2010 HYPHEN
+/**
+ * Non-Breaking Hyphen
+ *
+ * @group English
+ * @category Unicode
+ */
 export const nbHyphen = '‑'; // U+2011 NON-BREAKING HYPHEN
+/**
+ * Soft Hyphen
+ *
+ * @group English
+ * @category Unicode
+ */
 export const softHyphen = '­'; // U+00AD SOFT HYPHEN
 
 /**
+ * Negative Sign
+ *
  * @group Math
- * @category Constants
+ * @category Unicode
  */
 export const negativeSign = '˗'; // U+02D7 MODIFIER LETTER MINUS
+/**
+ * Positive Sign
+ *
+ * @group Math
+ * @category Unicode
+ */
 export const positiveSign = '˖'; // U+02D8 MODIFIER LETTER PLUS
 
 /**
+ * Superscript Negative
+ *
  * @group Math
- * @category Constants
+ * @category Unicode
  */
 export const supNegative = '⁻'; // U+207B SUPERSCRIPT MINUS
+/**
+ * Superscript Positive
+ *
+ * @group Math
+ * @category Unicode
+ */
 export const supPositive = '⁺'; // U+207A SUPERSCRIPT PLUS
 
 /**
+ * Subscript Negative
+ *
  * @group Math
- * @category Constants
+ * @category Unicode
  */
 export const subNegative = '₋'; // U+208B SUBSCRIPT MINUS
+/**
+ * Subscript Positive
+ *
+ * @group Math
+ * @category Unicode
+ */
 export const subPositive = '₊'; // U+208A SUBSCRIPT PLUS
 
 /**
+ * Invisible Plus sign
+ *
  * @group Math
- * @category Constants
+ * @category Unicode
  */
 export const invisiblePlus = '⁤'; // U+2064 INVISIBLE PLUS
 
 /**
- * @group Math
- * @category Constants
- */
-export const cardinalOnes = [
-  'zero',
-  'one',
-  'two',
-  'three',
-  'four',
-  'five',
-  'six',
-  'seven',
-  'eight',
-  'nine',
-  'ten',
-  'eleven',
-  'twelve',
-  'thirteen',
-  'fourteen',
-  'fifteen',
-  'sixteen',
-  'seventeen',
-  'eighteen',
-  'nineteen',
-];
-
-/**
- * @group Math
- * @category Constants
- */
-export const cardinalTens = [
-  'twenty',
-  'thirty',
-  'forty',
-  'fifty',
-  'sixty',
-  'seventy',
-  'eighty',
-  'ninety',
-];
-
-/**
+ * Words for unit numbers 0-19
+ *
  * @group Math
  * @category Constants
  */
 // prettier-ignore
-export const ordinalOnes = [ '', 'first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh',
-  'eighth', 'ninth', 'tenth', 'eleventh', 'twelfth', 'thirteenth', 'fourteenth', 'fifteenth',
-  'sixteenth', 'seventeenth', 'eighteenth', 'nineteenth'
+export const cardinalOnes = [
+  'zero',         'one',          'two',          'three',        'four',
+  'five',         'six',          'seven',        'eight',        'nine',
+  'ten',          'eleven',       'twelve',       'thirteen',     'fourteen',
+  'fifteen',      'sixteen',      'seventeen',    'eighteen',     'nineteen',
 ];
 
 /**
+ * Words for tens 20-90
  * @group Math
  * @category Constants
  */
+// prettier-ignore
+export const cardinalTens = [
+  'twenty',       'thirty',       'forty',        'fifty',
+  'sixty',        'seventy',      'eighty',       'ninety',
+];
+
+/**
+ * Words for ordinal numbers 0-19
+ *
+ * @group Math
+ * @category Constants
+ */
+// prettier-ignore
+export const ordinalOnes = [
+  '',             'first',        'second',       'third',      'fourth',
+  'fifth',        'sixth',        'seventh',      'eighth',     'ninth',
+  'tenth',        'eleventh',     'twelfth',      'thirteenth', 'fourteenth',
+  'fifteenth',    'sixteenth',    'seventeenth',  'eighteenth', 'nineteenth'
+];
+
+/**
+ * Words for ordinal tens 20-90
+ *
+ * @group Math
+ * @category Constants
+ */
+// prettier-ignore
 export const ordinalTens = [
-  'twentieth',
-  'thirtieth',
-  'fortieth',
-  'fiftieth',
-  'sixtieth',
-  'seventieth',
-  'eightieth',
-  'ninetieth',
+  'twentieth',    'thirtieth',    'fortieth',     'fiftieth',
+  'sixtieth',     'seventieth',   'eightieth',    'ninetieth',
 ];

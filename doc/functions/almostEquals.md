@@ -6,7 +6,7 @@
 
 > **almostEquals**(`a`: `number`, `b`: `number`, `__namedParameters`: [`AlmostEqualsOptions`](../type-aliases/AlmostEqualsOptions.md)): `boolean`
 
-Defined in: [almost-equals.ts:22](https://github.com/technobuddha/library/blob/main/src/almost-equals.ts#L22)
+Defined in: [almost-equals.ts:24](https://github.com/technobuddha/library/blob/main/src/almost-equals.ts#L24)
 
 Tests whether the two values are equal to each other, within a certain
 tolerance, taking into account floating point errors (numbers within EPSILON).

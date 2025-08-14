@@ -1,5 +1,5 @@
+import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 import { crossProduct } from './cross-product.ts';
-import { type Cartesian, type LineSegment } from './geometry.ts';
 import { topPointFirst } from './top-point-first.ts';
 
 /**

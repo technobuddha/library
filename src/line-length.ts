@@ -1,4 +1,4 @@
-import { type LineSegment } from './geometry.ts';
+import { type LineSegment } from './@types/geometry.ts';
 
 /**
  * Calculates the length of a given line segment using the distance formula.

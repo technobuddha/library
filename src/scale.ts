@@ -1,4 +1,4 @@
-import { type Cartesian, type Polygon } from './geometry.ts';
+import { type Cartesian, type Polygon } from './@types/geometry.ts';
 
 function scalePoint(point: Cartesian, amount: number | Cartesian, origin: Cartesian): Cartesian {
   const { x, y } = point;

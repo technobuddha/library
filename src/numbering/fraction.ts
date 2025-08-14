@@ -2,6 +2,12 @@ import { empty, space } from '../constants.ts';
 
 import { type Numbering, numbering } from './numbering.ts';
 
+/**
+ * Options for customizing the output and behavior of fraction number representations.
+ *
+ * @group Math
+ * @category Numbers
+ */
 export type FractionOptions = {
   /**
    * Output format for the number representation.
@@ -57,6 +63,9 @@ export type FractionOptions = {
  * @param input - The number to convert to a fraction string.
  * @param options - An optional object specifying the output format.
  * @returns The formatted fraction string.
+ *
+ * @group Math
+ * @category Numbers
  */
 export function fraction(input: number, options: FractionOptions = {}): string {
   const numberingOptions: Numbering = {

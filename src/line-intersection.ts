@@ -1,4 +1,4 @@
-import { type Cartesian, type LineSegment } from './geometry.ts';
+import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 
 /**
  * Calculates the intersection point of two line segments.

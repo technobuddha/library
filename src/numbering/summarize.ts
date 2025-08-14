@@ -12,8 +12,9 @@ import { numbering } from './numbering.ts';
  *
  * @param input - number to convert
  * @returns number as text
+ *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export function summarize(input: number): string {
   return numbering(input, {

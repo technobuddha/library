@@ -6,4 +6,4 @@
 
 > `const` **hoursPerWeek**: `number`
 
-Defined in: [constants.ts:103](https://github.com/technobuddha/library/blob/main/src/constants.ts#L103)
+Defined in: [constants.ts:105](https://github.com/technobuddha/library/blob/main/src/constants.ts#L105)

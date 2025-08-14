@@ -6,4 +6,6 @@
 
 > `const` **negativeSign**: `"˗"` = `'˗'`
 
-Defined in: [constants.ts:190](https://github.com/technobuddha/library/blob/main/src/constants.ts#L190)
+Defined in: [constants.ts:214](https://github.com/technobuddha/library/blob/main/src/constants.ts#L214)
+
+Negative Sign

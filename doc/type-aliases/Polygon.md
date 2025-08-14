@@ -6,4 +6,6 @@
 
 > **Polygon** = [`Cartesian`](Cartesian.md)[]
 
-Defined in: [geometry.ts:29](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L29)
+Defined in: @types/geometry.ts:37
+
+A polygon (a set of cartesian coordinates)

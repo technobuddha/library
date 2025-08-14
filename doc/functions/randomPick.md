@@ -6,7 +6,7 @@
 
 > **randomPick**\<`T`\>(`list`: readonly `T`[], `random`: () => `number`): `undefined` \| `T`
 
-Defined in: [random-pick.ts:11](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L11)
+Defined in: [random-pick.ts:12](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L12)
 
 Pick a random items from a list.
 

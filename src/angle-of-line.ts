@@ -1,5 +1,5 @@
+import { type LineSegment } from './@types/geometry.ts';
 import { type AngleUnit } from './angle.ts';
-import { type LineSegment } from './geometry.ts';
 import { toAngle } from './to-angle.ts';
 
 /**

@@ -1,4 +1,4 @@
-import { type Rect } from './geometry.ts';
+import { type Rect } from './@types/geometry.ts';
 import { toSquare } from './to-square.ts';
 
 describe('toSquare', () => {

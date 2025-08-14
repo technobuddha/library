@@ -20,6 +20,8 @@ const TESTS: [string, RegExp][] = [
 ];
 
 /**
+ * Options for determining the indefinite article to use with a word.
+ *
  * @group English
  * @category Indefinite Article
  */

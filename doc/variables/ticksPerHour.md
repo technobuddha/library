@@ -6,4 +6,4 @@
 
 > `const` **ticksPerHour**: `number`
 
-Defined in: [constants.ts:62](https://github.com/technobuddha/library/blob/main/src/constants.ts#L62)
+Defined in: [constants.ts:64](https://github.com/technobuddha/library/blob/main/src/constants.ts#L64)

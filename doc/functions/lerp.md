@@ -6,7 +6,7 @@
 
 > **lerp**(`a`: `number`, `b`: `number`, `proportion`: `number`): `number`
 
-Defined in: [lerp.ts:13](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L13)
+Defined in: [lerp.ts:14](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L14)
 
 Performs linear interpolation between values a and b. Returns the value
 between a and b proportional to x (when x is between 0 and 1. When x is

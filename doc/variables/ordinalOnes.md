@@ -6,4 +6,6 @@
 
 > `const` **ordinalOnes**: `string`[]
 
-Defined in: [constants.ts:260](https://github.com/technobuddha/library/blob/main/src/constants.ts#L260)
+Defined in: [constants.ts:293](https://github.com/technobuddha/library/blob/main/src/constants.ts#L293)
+
+Words for ordinal numbers 0-19

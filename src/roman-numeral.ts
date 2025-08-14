@@ -1,60 +1,12 @@
 import { lookAhead } from './look-ahead.ts';
 import { splitChars } from './split-chars.ts';
 
+// prettier-ignore
 type Glyph =
-  | 'ↈ'
-  | 'ↇ'
-  | 'ↂ'
-  | 'ↁ'
-  | 'm'
-  | 'M'
-  | 'Ⅿ'
-  | 'ⅿ'
-  | 'ↀ'
-  | 'd'
-  | 'D'
-  | 'Ⅾ'
-  | 'ⅾ'
-  | 'c'
-  | 'C'
-  | 'Ⅽ'
-  | 'ⅽ'
-  | 'l'
-  | 'L'
-  | 'Ⅼ'
-  | 'ⅼ'
-  | 'ↆ'
-  | 'Ⅻ'
-  | 'ⅻ'
-  | 'Ⅺ'
-  | 'ⅺ'
-  | 'x'
-  | 'X'
-  | 'Ⅹ'
-  | 'ⅹ'
-  | 'Ⅸ'
-  | 'ⅸ'
-  | 'Ⅷ'
-  | 'ⅷ'
-  | 'Ⅶ'
-  | 'ⅶ'
-  | 'Ⅵ'
-  | 'ⅵ'
-  | 'ↅ'
-  | 'v'
-  | 'V'
-  | 'Ⅴ'
-  | 'ⅴ'
-  | 'Ⅳ'
-  | 'ⅳ'
-  | 'ⅲ'
-  | 'Ⅲ'
-  | 'ⅱ'
-  | 'Ⅱ'
-  | 'i'
-  | 'I'
-  | 'j'
-  | 'Ⅰ'
+  | 'ↈ' | 'ↇ' | 'ↂ' | 'ↁ' | 'm' | 'M' | 'Ⅿ' | 'ⅿ' | 'ↀ' | 'd' | 'D' | 'Ⅾ' | 'ⅾ'
+  | 'c' | 'C' | 'Ⅽ' | 'ⅽ' | 'l' | 'L' | 'Ⅼ' | 'ⅼ' | 'ↆ' | 'Ⅻ' | 'ⅻ' | 'Ⅺ' | 'ⅺ' | 'x'
+  | 'X' | 'Ⅹ' | 'ⅹ' | 'Ⅸ' | 'ⅸ' | 'Ⅷ' | 'ⅷ' | 'Ⅶ' | 'ⅶ' | 'Ⅵ' | 'ⅵ' | 'ↅ'
+  | 'v' | 'V' | 'Ⅴ' | 'ⅴ' | 'Ⅳ' | 'ⅳ' | 'ⅲ' | 'Ⅲ' | 'ⅱ' | 'Ⅱ' | 'i' | 'I' | 'j' | 'Ⅰ'
   | 'ⅰ';
 
 const glyphValues: Record<Glyph, number> = {
@@ -134,8 +86,9 @@ const glyphValues: Record<Glyph, number> = {
  * Parse a roman numeral string into it's integer value.
  * @param val - The roman numeral string to parse
  * @returns Parsed roman number
+ *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export function parseRoman(val: string): number {
   const values = splitChars(val).map((g) => glyphValues[g as Glyph]);
@@ -152,10 +105,15 @@ export function parseRoman(val: string): number {
   return values.reduce((total, n) => total + n);
 }
 
-export type Format = 'standard' | 'apostrophus' | 'vinculum';
-
+/**
+ * Options for converting numbers to Roman numerals.
+ *
+ * @group Math
+ * @category Numbers
+ */
 export type ToRomanOptions = {
-  format?: Format;
+  /** Specifies the output format for the Roman numeral. */
+  format?: 'standard' | 'apostrophus' | 'vinculum';
 };
 
 /**
@@ -164,7 +122,7 @@ export type ToRomanOptions = {
  * @returns Converted roman numeral
  *
  * @group Math
- * @category Numbering
+ * @category Numbers
  */
 export function toRoman(input: number, { format = 'standard' }: ToRomanOptions = {}): string {
   const vg = valueGlyphs[format];

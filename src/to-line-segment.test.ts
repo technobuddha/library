@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 import { toLineSegment } from './to-line-segment.ts';
 
 describe('toLineSegment', () => {

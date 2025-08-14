@@ -6,7 +6,7 @@
 
 > **summarize**(`input`: `number`): `string`
 
-Defined in: [numbering/summarize.ts:18](https://github.com/technobuddha/library/blob/main/src/numbering/summarize.ts#L18)
+Defined in: [numbering/summarize.ts:19](https://github.com/technobuddha/library/blob/main/src/numbering/summarize.ts#L19)
 
 Get a short description of a number
 

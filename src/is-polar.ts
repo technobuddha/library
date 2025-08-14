@@ -1,4 +1,4 @@
-import { type Polar } from './geometry.ts';
+import { type Polar } from './@types/geometry.ts';
 
 /**
  * Determines if the provided value is a Polar point.

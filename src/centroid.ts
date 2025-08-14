@@ -1,4 +1,4 @@
-import { type Cartesian, type Polygon } from './geometry.ts';
+import { type Cartesian, type Polygon } from './@types/geometry.ts';
 import { modulo } from './modulo.ts';
 
 /**

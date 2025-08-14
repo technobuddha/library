@@ -1,4 +1,4 @@
-import { type LineSegment, type Polygon } from './geometry.ts';
+import { type LineSegment, type Polygon } from './@types/geometry.ts';
 import { modulo } from './modulo.ts';
 import { toLineSegment } from './to-line-segment.ts';
 

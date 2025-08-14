@@ -1,4 +1,4 @@
-import { type Cartesian, type Polar } from './geometry.ts';
+import { type Cartesian, type Polar } from './@types/geometry.ts';
 
 describe('coordinates', () => {
   test('Polar', () => {

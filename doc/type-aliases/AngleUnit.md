@@ -6,6 +6,6 @@
 
 > **AngleUnit** = `"deg"` \| `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"`
 
-Defined in: [angle.ts:6](https://github.com/technobuddha/library/blob/main/src/angle.ts#L6)
+Defined in: [angle.ts:7](https://github.com/technobuddha/library/blob/main/src/angle.ts#L7)
 
-Angle units.
+Types of angle units

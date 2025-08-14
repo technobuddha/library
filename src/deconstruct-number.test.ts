@@ -1,4 +1,6 @@
-import { deconstructNumber, type DeconstructNumberReturn } from './deconstruct-number.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
+
+type DeconstructNumberReturn = ReturnType<typeof deconstructNumber>;
 
 describe('deconstructNumber', () => {
   test('should deconstruct positive integers', () => {

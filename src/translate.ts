@@ -1,4 +1,4 @@
-import { type Cartesian, type Polygon } from './geometry.ts';
+import { type Cartesian, type Polygon } from './@types/geometry.ts';
 
 function translatePoint(point: Cartesian, amount: Cartesian): Cartesian {
   return { x: point.x + amount.x, y: point.y + amount.y };

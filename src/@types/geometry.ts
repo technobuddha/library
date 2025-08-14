@@ -1,4 +1,6 @@
 /**
+ * Cartesian coordinate (x, y)
+ *
  * @group Geometry
  * @category Coordinates
  */
@@ -8,12 +10,16 @@ export type Cartesian = {
 };
 
 /**
+ * The origin of cartesian coordinates (0, 0)
+ *
  * @group Geometry
  * @category Coordinates
  */
-export const ORIGIN: Cartesian = { x: 0, y: 0 };
+export const Origin: Cartesian = { x: 0, y: 0 };
 
 /**
+ * Polar coordinate (angle, radius)
+ *
  * @group Geometry
  * @category Coordinates
  */
@@ -23,12 +29,16 @@ export type Polar = {
 };
 
 /**
+ * A polygon (a set of cartesian coordinates)
+ *
  * @group Geometry
  * @category Polygon
  */
 export type Polygon = Cartesian[];
 
 /**
+ * A line segments (defined by two endpoints)
+ *
  * @group Geometry
  * @category Line Segment
  */

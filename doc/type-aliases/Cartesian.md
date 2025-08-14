@@ -6,7 +6,9 @@
 
 > **Cartesian** = \{ `x`: `number`; `y`: `number`; \}
 
-Defined in: [geometry.ts:5](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L5)
+Defined in: @types/geometry.ts:7
+
+Cartesian coordinate (x, y)
 
 ## Properties
 
@@ -14,7 +16,7 @@ Defined in: [geometry.ts:5](https://github.com/technobuddha/library/blob/main/sr
 
 > **x**: `number`
 
-Defined in: [geometry.ts:6](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L6)
+Defined in: @types/geometry.ts:8
 
 ***
 
@@ -22,4 +24,4 @@ Defined in: [geometry.ts:6](https://github.com/technobuddha/library/blob/main/sr
 
 > **y**: `number`
 
-Defined in: [geometry.ts:7](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L7)
+Defined in: @types/geometry.ts:9

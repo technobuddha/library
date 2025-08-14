@@ -1,4 +1,4 @@
-import { type Cartesian, type LineSegment } from './geometry.ts';
+import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 import { isOnLine } from './is-on-line.ts';
 
 function makeLine(a: [number, number], b: [number, number]): LineSegment {

@@ -6,4 +6,4 @@
 
 > `const` **secondsPerWeek**: `number`
 
-Defined in: [constants.ts:88](https://github.com/technobuddha/library/blob/main/src/constants.ts#L88)
+Defined in: [constants.ts:90](https://github.com/technobuddha/library/blob/main/src/constants.ts#L90)

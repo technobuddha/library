@@ -6,4 +6,6 @@
 
 > `const` **cardinalOnes**: `string`[]
 
-Defined in: [constants.ts:217](https://github.com/technobuddha/library/blob/main/src/constants.ts#L217)
+Defined in: [constants.ts:268](https://github.com/technobuddha/library/blob/main/src/constants.ts#L268)
+
+Words for unit numbers 0-19

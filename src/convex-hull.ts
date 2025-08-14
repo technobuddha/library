@@ -1,5 +1,5 @@
+import { type Polygon } from './@types/geometry.ts';
 import { crossProduct } from './cross-product.ts';
-import { type Polygon } from './geometry.ts';
 
 /**
  * Computes the convex hull of a set of 2D points using the Monotone Chain algorithm.

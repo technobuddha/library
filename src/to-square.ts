@@ -1,4 +1,4 @@
-import { type Rect } from './geometry.ts';
+import { type Rect } from './@types/geometry.ts';
 
 /**
  * Converts a given rectangle to the largest possible square that fits within it,
@@ -7,6 +7,9 @@ import { type Rect } from './geometry.ts';
  *
  * @param rect - The rectangle to convert, with properties `x`, `y`, `width`, and `height`.
  * @returns A new `Rect` object representing the largest centered square within the original rectangle.
+ *
+ * @group Geometry
+ * @category Rectangle
  */
 export function toSquare(rect: Rect): Rect {
   if (rect.width > rect.height) {

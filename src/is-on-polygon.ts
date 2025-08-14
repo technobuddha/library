@@ -1,4 +1,4 @@
-import { type Cartesian, type Polygon } from './geometry.ts';
+import { type Cartesian, type Polygon } from './@types/geometry.ts';
 import { isOnLine } from './is-on-line.ts';
 import { toClosed } from './to-closed.ts';
 import { toLineSegment } from './to-line-segment.ts';

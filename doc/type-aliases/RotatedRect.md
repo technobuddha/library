@@ -6,7 +6,7 @@
 
 > **RotatedRect** = [`Rect`](Rect.md) & \{ `angle`: `number`; `area`: `number`; \}
 
-Defined in: [largest-inscribed-rectangle.ts:14](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L14)
+Defined in: [largest-inscribed-rectangle.ts:17](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L17)
 
 Represents a rectangle that has been rotated by a certain angle.
 Extends the `Rect` type with additional properties for the area and rotation angle.
@@ -15,5 +15,5 @@ Extends the `Rect` type with additional properties for the area and rotation ang
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| `angle` | `number` | [largest-inscribed-rectangle.ts:18](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L18) |
-| `area` | `number` | [largest-inscribed-rectangle.ts:16](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L16) |
+| `angle` | `number` | [largest-inscribed-rectangle.ts:21](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L21) |
+| `area` | `number` | [largest-inscribed-rectangle.ts:19](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L19) |

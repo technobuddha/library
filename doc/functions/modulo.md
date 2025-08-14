@@ -6,7 +6,7 @@
 
 > **modulo**(`dividend`: `number`, `divisor`: `number`): `number`
 
-Defined in: [modulo.ts:16](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L16)
+Defined in: [modulo.ts:17](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L17)
 
 The % operator in JavaScript returns the remainder of a / b, but differs from
 some other languages in that the result will have the same sign as the

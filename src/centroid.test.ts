@@ -1,5 +1,5 @@
+import { type Polygon } from './@types/geometry.ts';
 import { centroid } from './centroid.ts';
-import { type Polygon } from './geometry.ts';
 
 describe('centroid', () => {
   test('should calculate centroid of a triangle', () => {

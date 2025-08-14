@@ -6,7 +6,7 @@
 
 > **parseRoman**(`val`: `string`): `number`
 
-Defined in: [roman-numeral.ts:140](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L140)
+Defined in: [roman-numeral.ts:93](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L93)
 
 Parse a roman numeral string into it's integer value.
 

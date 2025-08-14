@@ -6,7 +6,7 @@
 
 > **toRoman**(`input`: `number`, `__namedParameters`: [`ToRomanOptions`](../type-aliases/ToRomanOptions.md)): `string`
 
-Defined in: [roman-numeral.ts:169](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L169)
+Defined in: [roman-numeral.ts:127](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L127)
 
 Parse number into a roman numeral string
 

@@ -2,6 +2,9 @@
  * Options for look-ahead operations.
  *
  * @typeParam T - The type of the items in the sequence.
+ *
+ * @group Array
+ * @category Iteration
  */
 export type LookAheadOptions<T> =
   | {
@@ -46,6 +49,9 @@ export type LookAheadOptions<T> =
  * }
  * ```
  * Output: [1, 2], [2, 3], [3, 0]
+ *
+ * @group Array
+ * @category Iteration
  */
 export function* lookAhead<T>(
   array: T[],

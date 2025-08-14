@@ -1,4 +1,4 @@
-import { type Cartesian } from './geometry.ts';
+import { type Cartesian } from './@types/geometry.ts';
 
 /**
  * Represents a set of 2D cartesian, optimized for efficient storage and lookup.

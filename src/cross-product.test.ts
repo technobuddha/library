@@ -1,5 +1,5 @@
+import { type Cartesian } from './@types/geometry.ts';
 import { crossProduct } from './cross-product.ts';
-import { type Cartesian } from './geometry.ts';
 
 describe('crossProduct', () => {
   test('should return positive value for counter-clockwise turn', () => {

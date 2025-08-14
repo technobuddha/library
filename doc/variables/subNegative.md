@@ -6,4 +6,6 @@
 
 > `const` **subNegative**: `"₋"` = `'₋'`
 
-Defined in: [constants.ts:204](https://github.com/technobuddha/library/blob/main/src/constants.ts#L204)
+Defined in: [constants.ts:244](https://github.com/technobuddha/library/blob/main/src/constants.ts#L244)
+
+Subscript Negative

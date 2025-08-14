@@ -3,6 +3,8 @@ import { toString } from 'lodash-es';
 import { empty, space } from './constants.ts';
 
 /**
+ * Options for creating a coordinate string
+ *
  * @group English
  * @category Coordinate
  */

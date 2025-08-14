@@ -6,7 +6,7 @@
 
 > **perimeter**(`vertices`: [`Polygon`](../type-aliases/Polygon.md)): `number`
 
-Defined in: [perimeter.ts:11](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L11)
+Defined in: [perimeter.ts:14](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L14)
 
 Calculates the perimeter of a polygon given its vertices.
 

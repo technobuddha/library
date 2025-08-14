@@ -6,7 +6,7 @@
 
 > **ordinal**(`input`: `number`, `options`: [`OrdinalOptions`](../type-aliases/OrdinalOptions.md)): `string`
 
-Defined in: [numbering/ordinal.ts:56](https://github.com/technobuddha/library/blob/main/src/numbering/ordinal.ts#L56)
+Defined in: [numbering/ordinal.ts:63](https://github.com/technobuddha/library/blob/main/src/numbering/ordinal.ts#L63)
 
 Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 

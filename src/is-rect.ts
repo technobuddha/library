@@ -1,4 +1,4 @@
-import { type Rect } from './geometry.ts';
+import { type Rect } from './@types/geometry.ts';
 
 /**
  * Determines if the provided value is a Rectangle.
@@ -10,7 +10,7 @@ import { type Rect } from './geometry.ts';
  * @returns `true` if the value is a Rectangle, otherwise `false`.
  *
  * @group Geometry
- * @category Rect
+ * @category Rectangle
  */
 export function isRect(object: unknown): object is Rect {
   return (

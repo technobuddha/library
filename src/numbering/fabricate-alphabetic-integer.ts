@@ -1,7 +1,5 @@
-import { cleanEnd } from '../clean.ts';
-import { cardinalOnes, space } from '../constants.ts';
+import { space } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
-import { splitChars } from '../split-chars.ts';
 
 import { hundreds } from './hundreds.ts';
 import { illion } from './illion.ts';

@@ -1,4 +1,4 @@
-import { type Polygon, type Rect } from './geometry.ts';
+import { type Polygon, type Rect } from './@types/geometry.ts';
 import { isInPolygon } from './is-in-polygon.ts';
 
 // Helper polygons

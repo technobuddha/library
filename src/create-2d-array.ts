@@ -13,8 +13,9 @@ import { isFunction } from 'lodash-es';
  * @param width - Width of the array
  * @param height - Height of the array
  * @param fill - value to fill the array, or a function returning the fill value for each element
+ *
  * @group Array
- * @category Create 2D Array
+ * @category 2D
  */
 export function create2DArray<T>(
   width: number,

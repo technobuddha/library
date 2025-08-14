@@ -6,7 +6,9 @@
 
 > **LineSegment** = \{ `x0`: `number`; `x1`: `number`; `y0`: `number`; `y1`: `number`; \}
 
-Defined in: [geometry.ts:35](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L35)
+Defined in: @types/geometry.ts:45
+
+A line segments (defined by two endpoints)
 
 ## Properties
 
@@ -14,7 +16,7 @@ Defined in: [geometry.ts:35](https://github.com/technobuddha/library/blob/main/s
 
 > **x0**: `number`
 
-Defined in: [geometry.ts:36](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L36)
+Defined in: @types/geometry.ts:46
 
 ***
 
@@ -22,7 +24,7 @@ Defined in: [geometry.ts:36](https://github.com/technobuddha/library/blob/main/s
 
 > **x1**: `number`
 
-Defined in: [geometry.ts:38](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L38)
+Defined in: @types/geometry.ts:48
 
 ***
 
@@ -30,7 +32,7 @@ Defined in: [geometry.ts:38](https://github.com/technobuddha/library/blob/main/s
 
 > **y0**: `number`
 
-Defined in: [geometry.ts:37](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L37)
+Defined in: @types/geometry.ts:47
 
 ***
 
@@ -38,4 +40,4 @@ Defined in: [geometry.ts:37](https://github.com/technobuddha/library/blob/main/s
 
 > **y1**: `number`
 
-Defined in: [geometry.ts:39](https://github.com/technobuddha/library/blob/main/src/geometry.ts#L39)
+Defined in: @types/geometry.ts:49

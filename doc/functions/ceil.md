@@ -6,9 +6,9 @@
 
 > **ceil**(`input`: `number`, `precision`: [`CeilOptions`](../type-aliases/CeilOptions.md)): `number`
 
-Defined in: [ceil.ts:21](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L21)
+Defined in: [ceil.ts:24](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L24)
 
-A tweaked variant of
+A tweaked variant of [Math.ceil](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil). See
 
 ## Parameters
 
@@ -25,7 +25,6 @@ The smallest integer greater than or equal to
 
 ## See
 
- - Math.ceil. See
  - goog.math.safeFloor for
 details.
  - input.

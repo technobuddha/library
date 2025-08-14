@@ -1,4 +1,4 @@
-import { type Cartesian, type LineSegment } from './geometry.ts';
+import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 
 /**
  * Converts two Cartesian points into a `LineSegment` object.

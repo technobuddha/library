@@ -1,4 +1,4 @@
-import { type Cartesian, type LineSegment } from './geometry.ts';
+import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 
 /**
  * Calculates a point at a given fraction (`part`) along a line segment.  By default it returns the

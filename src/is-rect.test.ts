@@ -1,4 +1,4 @@
-import { type Rect } from './geometry.ts';
+import { type Rect } from './@types/geometry.ts';
 import { isRect } from './is-rect.ts';
 
 describe('isRect', () => {

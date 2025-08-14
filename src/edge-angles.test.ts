@@ -1,5 +1,5 @@
+import { type Polygon } from './@types/geometry.ts';
 import { edgeAngles } from './edge-angles.ts';
-import { type Polygon } from './geometry.ts';
 
 describe('edgeAngles', () => {
   test('generates angles for a horizontal line triangle', () => {

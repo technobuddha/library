@@ -6,6 +6,6 @@
 
 > `const` **angleUnits**: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<[`AngleUnit`](../type-aliases/AngleUnit.md), `number`\>
 
-Defined in: [angle.ts:13](https://github.com/technobuddha/library/blob/main/src/angle.ts#L13)
+Defined in: [angle.ts:15](https://github.com/technobuddha/library/blob/main/src/angle.ts#L15)
 
-Angle units.
+Number of units in a circle

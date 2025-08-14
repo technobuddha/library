@@ -1,7 +1,7 @@
 import { describe, expect, test } from 'vitest';
 
+import { type Cartesian } from './@types/geometry.ts';
 import { CartesianMap } from './cartesian-map.ts';
-import { type Cartesian } from './geometry.ts';
 
 describe('CartesianMap', () => {
   test('creates empty map when no initial data provided', () => {

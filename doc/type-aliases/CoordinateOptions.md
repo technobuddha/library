@@ -6,7 +6,9 @@
 
 > **CoordinateOptions** = \{ `conjunction?`: `string`; `oxford?`: `boolean`; `separator?`: `string`; \}
 
-Defined in: [coordinate.ts:9](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L9)
+Defined in: [coordinate.ts:11](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L11)
+
+Options for creating a coordinate string
 
 ## Properties
 
@@ -14,7 +16,7 @@ Defined in: [coordinate.ts:9](https://github.com/technobuddha/library/blob/main/
 
 > `optional` **conjunction**: `string`
 
-Defined in: [coordinate.ts:11](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L11)
+Defined in: [coordinate.ts:13](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L13)
 
 Conjunction to insert in the last position (default 'and')
 
@@ -24,7 +26,7 @@ Conjunction to insert in the last position (default 'and')
 
 > `optional` **oxford**: `boolean`
 
-Defined in: [coordinate.ts:13](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L13)
+Defined in: [coordinate.ts:15](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L15)
 
 If true, use the oxford comma
 
@@ -34,6 +36,6 @@ If true, use the oxford comma
 
 > `optional` **separator**: `string`
 
-Defined in: [coordinate.ts:15](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L15)
+Defined in: [coordinate.ts:17](https://github.com/technobuddha/library/blob/main/src/coordinate.ts#L17)
 
 String used to separate values (default ',')

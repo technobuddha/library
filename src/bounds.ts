@@ -1,4 +1,4 @@
-import { type Polygon, type Rect } from './geometry.ts';
+import { type Polygon, type Rect } from './@types/geometry.ts';
 
 /**
  * Calculates the axis-aligned bounding rectangle for a given polygon.

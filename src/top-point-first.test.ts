@@ -1,4 +1,4 @@
-import { type LineSegment } from './geometry.ts';
+import { type LineSegment } from './@types/geometry.ts';
 import { topPointFirst } from './top-point-first.ts';
 
 describe('topPointFirst', () => {

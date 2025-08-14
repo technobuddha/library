@@ -1,4 +1,4 @@
-import { type LineSegment } from './geometry.ts';
+import { type LineSegment } from './@types/geometry.ts';
 
 /**
  * Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0).
