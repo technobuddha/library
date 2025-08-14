@@ -1,3 +1,5 @@
+import { type DeconstructedNumber } from '../deconstruct-number.ts';
+
 import { getDenominators } from './get-denominators.ts';
 import { type Numbering } from './numbering.ts';
 
@@ -14,20 +16,20 @@ type FractionResult = {
  * @returns An object containing the numerator and denominator of the closest fraction.
  */
 export function deriveFraction(
-  input: number,
+  input: DeconstructedNumber,
   options: Pick<Numbering, 'tolerance' | 'precision' | 'denominators'>,
 ): FractionResult {
-  if (Number.isNaN(input) || !Number.isFinite(input)) {
-    return { numerator: input, denominator: 1 };
+  if (Number.isNaN(input.value) || !Number.isFinite(input.value)) {
+    return { numerator: input.value, denominator: 1 };
   }
 
-  const { tolerance, precision } = options;
+  const { tolerance } = options;
   const denominators = getDenominators(options.denominators);
 
   const matches = denominators
     .map((d) => {
-      const numerator = Math.round(input * d);
-      const difference = Number(Math.abs(input - numerator / d).toFixed(8));
+      const numerator = Math.round(input.value * d);
+      const difference = Number(Math.abs(input.value - numerator / d).toFixed(8));
       return { denominator: d, numerator, difference };
     })
     .filter(({ numerator, difference }) => numerator !== 0 && difference <= tolerance)
@@ -36,9 +38,9 @@ export function deriveFraction(
   let denominator: number;
   let numerator: number;
 
-  if (matches.length === 0 || (matches[0].denominator === 1 && input < 1)) {
-    denominator = 10 ** precision;
-    numerator = Math.round(input * denominator);
+  if (matches.length === 0 || (matches[0].denominator === 1 && input.value < 1)) {
+    denominator = 10 ** (input.mantissa.length - input.exponent);
+    numerator = Math.round(input.value * denominator);
 
     while (numerator % 10 === 0 && denominator > 1) {
       numerator /= 10;

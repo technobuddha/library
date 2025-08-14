@@ -6,7 +6,7 @@
 
 > **cardinal**(`input`: `number`, `options`: [`CardinalOptions`](../type-aliases/CardinalOptions.md)): `string`
 
-Defined in: [numbering/cardinal.ts:74](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L74)
+Defined in: [numbering/cardinal.ts:68](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L68)
 
 Convert a number into text (the cardinal number)
 

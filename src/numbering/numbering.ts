@@ -9,12 +9,10 @@ import { makeOrdinal } from './make-ordinal.ts';
 
 export type Numbering = {
   output: {
-    integer: 'numeric' | 'alphabetic';
+    integer: 'numeric' | 'alphabetic' | 'hybrid';
     fraction: 'numeric' | 'alphabetic';
   };
 
-  /** Use numbers instead of words for the group value, the group name is still output as text */
-  digits: boolean;
   /** Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" */
   and: string;
   /** Character to place between the tens units and the ones units.  "twenty-one" vs. "twenty one" */
@@ -57,22 +55,22 @@ export function numbering(input: number, options: Numbering): string {
     );
   }
 
-  const { sign, whole, fractional } = deconstructNumber(input, precision);
+  const { sign, whole, fraction } = deconstructNumber(input, precision);
   const s = output.integer === 'numeric' ? signSymbol(sign) : signWord(sign);
 
-  if (whole === 0 && fractional === 0) {
+  if (whole.value === 0 && fraction.value === 0) {
     const words = output.integer === 'alphabetic' ? `${s}zero` : `${s}0`;
     return ordinal ? makeOrdinal(words) : words;
   }
 
   const fractionalPart =
     output.fraction === 'numeric' ?
-      fabricateNumericFraction(fractional, options)
-    : fabricateAlphabeticFraction(fractional, options);
+      fabricateNumericFraction(fraction, options)
+    : fabricateAlphabeticFraction(fraction, options);
 
-  if (whole === 0) {
+  if (whole.value === 0) {
     if (ordinal) {
-      const word = output.integer === 'numeric' ? '0th' : 'zeroth';
+      const word = output.integer === 'alphabetic' ? 'zeroth' : '0th';
       return fractionalPart ? `${word} and ${fractionalPart}` : word;
     }
 
@@ -80,16 +78,20 @@ export function numbering(input: number, options: Numbering): string {
   }
 
   const integerPart =
-    output.integer === 'alphabetic' ?
-      fabricateAlphabeticInteger(whole, options)
-    : fabricateNumericInteger(whole, options);
+    output.integer === 'alphabetic' || output.integer === 'hybrid' ?
+      fabricateAlphabeticInteger(whole.value, options)
+    : fabricateNumericInteger(whole.value, options);
 
-  if (fractional === 0) {
+  if (fraction.value === 0) {
     return `${s}${integerPart}`;
   }
 
   const join =
-    (output.integer === 'alphabetic' && output.fraction === 'alphabetic') || ordinal ?
+    (
+      ((output.integer === 'alphabetic' || output.integer === 'hybrid') &&
+        output.fraction === 'alphabetic') ||
+      ordinal
+    ) ?
       ' and '
     : space;
 

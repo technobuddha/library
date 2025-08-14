@@ -5,6 +5,7 @@
 | Type Alias | Description |
 | ------ | ------ |
 | [DeconstructedNumber](type-aliases/DeconstructedNumber.md) | - |
+| [DeconstructNumberReturn](type-aliases/DeconstructNumberReturn.md) | - |
 | [Format](type-aliases/Format.md) | - |
 | [FractionOptions](type-aliases/FractionOptions.md) | - |
 | [LargestInscribedRectangleOptions](type-aliases/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |

@@ -1,11 +1,16 @@
+import { cleanEnd } from './clean.ts';
 import { empty } from './constants.ts';
 
 export type DeconstructedNumber = {
+  value: number;
   sign: 1 | -1;
-  whole: number;
-  fractional: number;
   mantissa: string;
   exponent: number;
+};
+
+export type DeconstructNumberReturn = DeconstructedNumber & {
+  fraction: DeconstructedNumber;
+  whole: DeconstructedNumber;
 };
 
 /**
@@ -14,7 +19,7 @@ export type DeconstructedNumber = {
  * @param input - The number to deconstruct.
  * @returns An object containing the sign ('+' or '-'), the whole part, and the fractional part of the input number.
  */
-export function deconstructNumber(input: number, precision = 9): DeconstructedNumber {
+export function deconstructNumber(input: number, precision = 9): DeconstructNumberReturn {
   if (Number.isNaN(input) || !Number.isFinite(input)) {
     throw new TypeError('Input must be a finite number.');
   }
@@ -25,30 +30,75 @@ export function deconstructNumber(input: number, precision = 9): DeconstructedNu
   const positive = Math.abs(input);
 
   const numeric = positive.toExponential(prec - 1);
+  const value = Number.parseFloat(numeric);
   const [m, e] = numeric.split('e');
-  const mantissa = m.replace('.', empty);
+  const mantissa = cleanEnd(m.replace('.', empty), '0');
   const exponent = Number.parseInt(e);
 
   if (exponent < 0) {
-    const whole = 0;
-    const fractional = positive;
-
-    return { sign, whole, fractional, mantissa, exponent };
+    return {
+      value,
+      sign,
+      mantissa,
+      exponent,
+      whole: {
+        sign,
+        value: 0,
+        mantissa: empty,
+        exponent: 0,
+      },
+      fraction: {
+        sign,
+        value,
+        mantissa,
+        exponent,
+      },
+    };
   }
 
-  if (exponent < precision) {
-    const whole = Number.parseFloat(
-      `${mantissa.slice(0, 1)}.${mantissa.slice(1, exponent + 1)}e${e}`,
-    );
-    const fractional = Number.parseFloat(
-      `0.${mantissa.slice(exponent + 1)}e${Number(e) - exponent}`,
-    );
+  if (exponent < mantissa.length) {
+    const wholeMantissa = `${mantissa.slice(0, 1)}.${mantissa.slice(1, exponent + 1)}`;
+    const fractionMantissa = mantissa.slice(exponent + 1);
 
-    return { sign, whole, fractional, mantissa, exponent };
+    const whole = Number.parseFloat(`${wholeMantissa}e${exponent}`);
+    const fraction = Number.parseFloat(`0.${fractionMantissa}e0`);
+
+    return {
+      value,
+      sign,
+      mantissa,
+      exponent,
+      whole: {
+        sign,
+        value: whole,
+        mantissa: whole === 0 ? empty : wholeMantissa.replace('.', empty),
+        exponent: whole === 0 ? 0 : exponent,
+      },
+      fraction: {
+        sign,
+        value: fraction,
+        mantissa: fraction === 0 ? empty : fractionMantissa.replace('.', empty),
+        exponent: fraction === 0 ? 0 : -1,
+      },
+    };
   }
 
-  const whole = positive;
-  const fractional = 0;
-
-  return { sign, whole, fractional, mantissa, exponent };
+  return {
+    value,
+    sign,
+    mantissa,
+    exponent,
+    whole: {
+      sign,
+      value,
+      mantissa,
+      exponent,
+    },
+    fraction: {
+      sign,
+      value: 0,
+      mantissa: empty,
+      exponent: 0,
+    },
+  };
 }

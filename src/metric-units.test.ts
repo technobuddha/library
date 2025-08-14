@@ -1,6 +1,6 @@
+import { space } from './constants.ts';
 import { metricUnits } from './metric-units.ts';
 
-//TODO [2025-05-30]: add tests for 'pad' option
 describe('metricUnits', () => {
   test('should handle numbers greater than 1', () => {
     expect(metricUnits(1)).toBe('1');
@@ -44,6 +44,12 @@ describe('metricUnits', () => {
     expect(metricUnits(1230000, { precision: 3 })).toBe('1.23M');
     expect(metricUnits(1234000, { precision: 3 })).toBe('1.234M');
     expect(metricUnits(1234500, { precision: 3 })).toBe('1.235M');
+  });
+
+  test('should handle padding', () => {
+    expect(metricUnits(1, { pad: 3 })).toBe(`${space}${space}1`);
+    expect(metricUnits(10, { pad: 3 })).toBe(`${space}10`);
+    expect(metricUnits(100, { pad: 3 })).toBe(`100`);
   });
 
   test('should handle macro', () => {

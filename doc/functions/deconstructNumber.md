@@ -4,9 +4,9 @@
 
 # Function: deconstructNumber()
 
-> **deconstructNumber**(`input`: `number`, `precision`: `number`): [`DeconstructedNumber`](../type-aliases/DeconstructedNumber.md)
+> **deconstructNumber**(`input`: `number`, `precision`: `number`): [`DeconstructNumberReturn`](../type-aliases/DeconstructNumberReturn.md)
 
-Defined in: [deconstruct-number.ts:17](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L17)
+Defined in: [deconstruct-number.ts:22](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L22)
 
 Deconstructs a number into its sign, whole part, and fractional part.
 
@@ -19,6 +19,6 @@ Deconstructs a number into its sign, whole part, and fractional part.
 
 ## Returns
 
-[`DeconstructedNumber`](../type-aliases/DeconstructedNumber.md)
+[`DeconstructNumberReturn`](../type-aliases/DeconstructNumberReturn.md)
 
 An object containing the sign ('+' or '-'), the whole part, and the fractional part of the input number.

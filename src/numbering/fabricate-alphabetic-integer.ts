@@ -9,7 +9,7 @@ import { makeOrdinal } from './make-ordinal.ts';
 import { type Numbering } from './numbering.ts';
 
 export function fabricateAlphabeticInteger(input: number, options: Numbering): string {
-  const { digits, precision, ordinal } = options;
+  const { output, precision, ordinal } = options;
 
   const words: string[] = [];
 
@@ -22,15 +22,18 @@ export function fabricateAlphabeticInteger(input: number, options: Numbering): s
     ({ quantity, mantissa, exponent, word } = illion(mantissa, exponent));
 
     if (quantity) {
-      if (digits) {
+      if (output.integer === 'hybrid') {
         words.push(quantity.toString());
       } else {
-        const { whole, fractional } = deconstructNumber(quantity, 15);
+        const {
+          whole: { value: whole },
+          fraction: { value: fraction },
+        } = deconstructNumber(quantity, 15);
 
         words.push(...hundreds(whole, options));
-        if (fractional > 0) {
+        if (fraction > 0) {
           words.push('point');
-          const frac = splitChars(cleanEnd(fractional.toFixed(2).slice(2), '0'));
+          const frac = splitChars(cleanEnd(fraction.toFixed(2).slice(2), '0'));
           for (const digit of frac) {
             words.push(cardinalOnes[Number.parseInt(digit)]);
           }

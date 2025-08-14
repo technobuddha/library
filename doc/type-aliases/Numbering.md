@@ -4,7 +4,7 @@
 
 # Type Alias: Numbering
 
-> **Numbering** = \{ `and`: `string`; `denominators`: `"common"` \| `"wrench"` \| `number`[]; `digits`: `boolean`; `hyphen`: `string`; `ordinal?`: `boolean`; `output`: \{ `fraction`: `"numeric"` \| `"alphabetic"`; `integer`: `"numeric"` \| `"alphabetic"`; \}; `precision`: `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9`; `tolerance`: `number`; \}
+> **Numbering** = \{ `and`: `string`; `denominators`: `"common"` \| `"wrench"` \| `number`[]; `hyphen`: `string`; `ordinal?`: `boolean`; `output`: \{ `fraction`: `"numeric"` \| `"alphabetic"`; `integer`: `"numeric"` \| `"alphabetic"` \| `"hybrid"`; \}; `precision`: `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9`; `tolerance`: `number`; \}
 
 Defined in: [numbering/numbering.ts:10](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L10)
 
@@ -14,7 +14,7 @@ Defined in: [numbering/numbering.ts:10](https://github.com/technobuddha/library/
 
 > **and**: `string`
 
-Defined in: [numbering/numbering.ts:19](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L19)
+Defined in: [numbering/numbering.ts:17](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L17)
 
 Word to place after the hundreds.  "one hundred and one" vs. "one hundred one"
 
@@ -24,17 +24,7 @@ Word to place after the hundreds.  "one hundred and one" vs. "one hundred one"
 
 > **denominators**: `"common"` \| `"wrench"` \| `number`[]
 
-Defined in: [numbering/numbering.ts:24](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L24)
-
-***
-
-### digits
-
-> **digits**: `boolean`
-
-Defined in: [numbering/numbering.ts:17](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L17)
-
-Use numbers instead of words for the group value, the group name is still output as text
+Defined in: [numbering/numbering.ts:22](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L22)
 
 ***
 
@@ -42,7 +32,7 @@ Use numbers instead of words for the group value, the group name is still output
 
 > **hyphen**: `string`
 
-Defined in: [numbering/numbering.ts:21](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L21)
+Defined in: [numbering/numbering.ts:19](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L19)
 
 Character to place between the tens units and the ones units.  "twenty-one" vs. "twenty one"
 
@@ -52,20 +42,20 @@ Character to place between the tens units and the ones units.  "twenty-one" vs. 
 
 > `optional` **ordinal**: `boolean`
 
-Defined in: [numbering/numbering.ts:26](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L26)
+Defined in: [numbering/numbering.ts:24](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L24)
 
 ***
 
 ### output
 
-> **output**: \{ `fraction`: `"numeric"` \| `"alphabetic"`; `integer`: `"numeric"` \| `"alphabetic"`; \}
+> **output**: \{ `fraction`: `"numeric"` \| `"alphabetic"`; `integer`: `"numeric"` \| `"alphabetic"` \| `"hybrid"`; \}
 
 Defined in: [numbering/numbering.ts:11](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L11)
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
 | `fraction` | `"numeric"` \| `"alphabetic"` | [numbering/numbering.ts:13](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L13) |
-| `integer` | `"numeric"` \| `"alphabetic"` | [numbering/numbering.ts:12](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L12) |
+| `integer` | `"numeric"` \| `"alphabetic"` \| `"hybrid"` | [numbering/numbering.ts:12](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L12) |
 
 ***
 
@@ -73,7 +63,7 @@ Defined in: [numbering/numbering.ts:11](https://github.com/technobuddha/library/
 
 > **precision**: `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9`
 
-Defined in: [numbering/numbering.ts:25](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L25)
+Defined in: [numbering/numbering.ts:23](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L23)
 
 ***
 
@@ -81,4 +71,4 @@ Defined in: [numbering/numbering.ts:25](https://github.com/technobuddha/library/
 
 > **tolerance**: `number`
 
-Defined in: [numbering/numbering.ts:23](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L23)
+Defined in: [numbering/numbering.ts:21](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L21)

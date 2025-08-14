@@ -4,7 +4,7 @@
 
 # Type Alias: CardinalOptions
 
-> **CardinalOptions** = \{ `and?`: [`Numbering`](Numbering.md)\[`"and"`\]; `denominators?`: [`Numbering`](Numbering.md)\[`"denominators"`\]; `digits?`: [`Numbering`](Numbering.md)\[`"digits"`\]; `hyphen?`: [`Numbering`](Numbering.md)\[`"hyphen"`\]; `ordinal?`: [`Numbering`](Numbering.md)\[`"ordinal"`\]; `output?`: `"numeric"` \| `"alphabetic"` \| [`Numbering`](Numbering.md)\[`"output"`\]; `precision?`: [`Numbering`](Numbering.md)\[`"precision"`\]; `tolerance?`: [`Numbering`](Numbering.md)\[`"tolerance"`\]; \}
+> **CardinalOptions** = \{ `and?`: [`Numbering`](Numbering.md)\[`"and"`\]; `denominators?`: [`Numbering`](Numbering.md)\[`"denominators"`\]; `hyphen?`: [`Numbering`](Numbering.md)\[`"hyphen"`\]; `ordinal?`: [`Numbering`](Numbering.md)\[`"ordinal"`\]; `output?`: `"numeric"` \| `"alphabetic"` \| `"hybrid"` \| [`Numbering`](Numbering.md)\[`"output"`\]; `precision?`: [`Numbering`](Numbering.md)\[`"precision"`\]; `tolerance?`: [`Numbering`](Numbering.md)\[`"tolerance"`\]; \}
 
 Defined in: [numbering/cardinal.ts:11](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L11)
 
@@ -16,7 +16,7 @@ Configuration options for cardinal number conversion.
 
 > `optional` **and**: [`Numbering`](Numbering.md)\[`"and"`\]
 
-Defined in: [numbering/cardinal.ts:28](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L28)
+Defined in: [numbering/cardinal.ts:22](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L22)
 
 Text to use for "and" in compound numbers (e.g., "one hundred and one").
 
@@ -32,7 +32,7 @@ Text to use for "and" in compound numbers (e.g., "one hundred and one").
 
 > `optional` **denominators**: [`Numbering`](Numbering.md)\[`"denominators"`\]
 
-Defined in: [numbering/cardinal.ts:46](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L46)
+Defined in: [numbering/cardinal.ts:40](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L40)
 
 Type of denominators to use when expressing fractions.
 
@@ -44,27 +44,11 @@ Type of denominators to use when expressing fractions.
 
 ***
 
-### digits?
-
-> `optional` **digits**: [`Numbering`](Numbering.md)\[`"digits"`\]
-
-Defined in: [numbering/cardinal.ts:22](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L22)
-
-Whether to output individual digits instead of number words.
-
-#### Default Value
-
-```ts
-false
-```
-
-***
-
 ### hyphen?
 
 > `optional` **hyphen**: [`Numbering`](Numbering.md)\[`"hyphen"`\]
 
-Defined in: [numbering/cardinal.ts:34](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L34)
+Defined in: [numbering/cardinal.ts:28](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L28)
 
 Text to use for hyphens in compound numbers (e.g., "twenty-one").
 
@@ -80,7 +64,7 @@ Text to use for hyphens in compound numbers (e.g., "twenty-one").
 
 > `optional` **ordinal**: [`Numbering`](Numbering.md)\[`"ordinal"`\]
 
-Defined in: [numbering/cardinal.ts:58](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L58)
+Defined in: [numbering/cardinal.ts:52](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L52)
 
 Whether to output ordinal numbers (e.g., "first", "second") instead of cardinal numbers.
 
@@ -94,7 +78,7 @@ false
 
 ### output?
 
-> `optional` **output**: `"numeric"` \| `"alphabetic"` \| [`Numbering`](Numbering.md)\[`"output"`\]
+> `optional` **output**: `"numeric"` \| `"alphabetic"` \| `"hybrid"` \| [`Numbering`](Numbering.md)\[`"output"`\]
 
 Defined in: [numbering/cardinal.ts:16](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L16)
 
@@ -112,7 +96,7 @@ Output format for the number representation.
 
 > `optional` **precision**: [`Numbering`](Numbering.md)\[`"precision"`\]
 
-Defined in: [numbering/cardinal.ts:52](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L52)
+Defined in: [numbering/cardinal.ts:46](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L46)
 
 Precision for decimal/fraction conversion.
 
@@ -128,7 +112,7 @@ Precision for decimal/fraction conversion.
 
 > `optional` **tolerance**: [`Numbering`](Numbering.md)\[`"tolerance"`\]
 
-Defined in: [numbering/cardinal.ts:40](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L40)
+Defined in: [numbering/cardinal.ts:34](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L34)
 
 Tolerance for floating-point comparison when converting decimals to fractions.
 

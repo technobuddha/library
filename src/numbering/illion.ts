@@ -1,8 +1,8 @@
 type IllionReturn = {
   quantity: number;
+  word: string | null;
   mantissa: string;
   exponent: number;
-  word: string | null;
 };
 
 export function illion(argMantissa: string, argExponent: number): IllionReturn {

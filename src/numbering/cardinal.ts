@@ -13,13 +13,7 @@ export type CardinalOptions = {
    * Output format for the number representation.
    * @defaultValue 'alphabetic'
    */
-  output?: 'numeric' | 'alphabetic' | Numbering['output'];
-
-  /**
-   * Whether to output individual digits instead of number words.
-   * @defaultValue false
-   */
-  digits?: Numbering['digits'];
+  output?: 'numeric' | 'alphabetic' | 'hybrid' | Numbering['output'];
 
   /**
    * Text to use for "and" in compound numbers (e.g., "one hundred and one").
@@ -75,15 +69,18 @@ export function cardinal(input: number, options: CardinalOptions = {}): string {
   const numberingOptions: Numbering = {
     output: {
       integer:
-        (options?.output === 'alphabetic' || options?.output === 'numeric' ?
+        ((
+          options?.output === 'alphabetic' ||
+          options?.output === 'numeric' ||
+          options?.output === 'hybrid'
+        ) ?
           options.output
         : options.output?.integer) ?? 'alphabetic',
       fraction:
-        (options?.output === 'alphabetic' || options?.output === 'numeric' ?
-          options.output
+        (options?.output === 'alphabetic' || options?.output === 'numeric' ? options.output
+        : options?.output === 'hybrid' ? 'alphabetic'
         : options.output?.fraction) ?? 'alphabetic',
     },
-    digits: options?.digits ?? false,
     and: options?.and ?? empty,
     hyphen: options?.hyphen ?? space,
     tolerance: options?.tolerance ?? 0.01,

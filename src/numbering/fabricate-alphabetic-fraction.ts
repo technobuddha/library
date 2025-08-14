@@ -1,4 +1,5 @@
 import { empty, hyphen, space } from '../constants.ts';
+import { type DeconstructedNumber } from '../deconstruct-number.ts';
 import { plural } from '../plural.ts';
 
 import { deriveFraction } from './derive-fraction.ts';
@@ -18,7 +19,10 @@ function fractionWord(denominator: number): string {
   return words.startsWith('one ') ? words.slice(4) : words;
 }
 
-export function fabricateAlphabeticFraction(input: number, options: Numbering): string | null {
+export function fabricateAlphabeticFraction(
+  input: DeconstructedNumber,
+  options: Numbering,
+): string | null {
   const { numerator, denominator } = deriveFraction(input, options);
 
   if (numerator === 0) {
@@ -32,7 +36,6 @@ export function fabricateAlphabeticFraction(input: number, options: Numbering): 
       integer: 'alphabetic',
       fraction: 'alphabetic',
     },
-    digits: false,
     and: empty,
     hyphen: space,
     tolerance: 0.01,

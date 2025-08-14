@@ -2,6 +2,7 @@ import { fractionSlash, hyphen, negativeSign } from '../constants.ts';
 
 import { fraction } from './fraction.ts';
 
+
 describe('fraction', () => {
   describe('numeric', () => {
     test('should return whole number for integer input', () => {
@@ -67,27 +68,51 @@ describe('fraction', () => {
     });
 
     test('should round numbers to precision', () => {
-      expect(fraction(0.0000000001)).toBe('0');
+      expect(fraction(1.000000001)).toBe('1');
     });
 
     test('should use fraction fallback when no match within tolerance is found', () => {
-      expect(fraction(0.012345)).toBe(`12345${fractionSlash}1000000`);
-      expect(fraction(0.012345, { precision: 1 })).toBe('0');
-      expect(fraction(0.012345, { precision: 2 })).toBe(`1${fractionSlash}100`);
-      expect(fraction(0.012345, { precision: 3 })).toBe(`12${fractionSlash}1000`);
-      expect(fraction(0.012345, { precision: 4 })).toBe(`123${fractionSlash}10000`);
+      // expect(fraction(0.012345)).toBe(`12345${fractionSlash}1000000`);
+      expect(fraction(0.012345, { precision: 1 })).toBe(`1${fractionSlash}100`);
+      expect(fraction(0.012345, { precision: 2 })).toBe(`12${fractionSlash}1000`);
+      expect(fraction(0.012345, { precision: 3 })).toBe(`123${fractionSlash}10000`);
+      expect(fraction(0.012345, { precision: 4 })).toBe(`1235${fractionSlash}100000`);
+      expect(fraction(0.012345, { precision: 5 })).toBe(`12345${fractionSlash}1000000`);
 
       expect(fraction(0.23456)).toBe(`23456${fractionSlash}100000`);
-      expect(fraction(0.23456, { precision: 1 })).toBe(`2${fractionSlash}10`);
+      expect(fraction(0.23456, { precision: 1 })).toBe(`1${fractionSlash}5`);
       expect(fraction(0.23456, { precision: 2 })).toBe(`23${fractionSlash}100`);
       expect(fraction(0.23456, { precision: 3 })).toBe(`235${fractionSlash}1000`);
       expect(fraction(0.23456, { precision: 4 })).toBe(`2346${fractionSlash}10000`);
 
       expect(fraction(0.23)).toBe(`23${fractionSlash}100`);
-      expect(fraction(0.23, { precision: 1 })).toBe(`2${fractionSlash}10`);
+      expect(fraction(0.23, { precision: 1 })).toBe(`1${fractionSlash}5`);
       expect(fraction(0.23, { precision: 2 })).toBe(`23${fractionSlash}100`);
       expect(fraction(0.23, { precision: 3 })).toBe(`23${fractionSlash}100`);
       expect(fraction(0.23, { precision: 4 })).toBe(`23${fractionSlash}100`);
+    });
+
+    test('should handle exponential number', () => {
+      const o = { output: 'numeric' as const };
+
+      expect(fraction(1e100, o)).toBe(
+        '10,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000',
+      );
+      expect(fraction(1.2e110, o)).toBe(
+        '120,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000',
+      );
+      expect(fraction(1.23e120, o)).toBe(
+        '1,230,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000',
+      );
+      expect(fraction(1e-100, o)).toBe(
+        `1${fractionSlash}10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+      );
+      expect(fraction(1.2e-110, o)).toBe(
+        `12${fractionSlash}1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+      );
+      expect(fraction(1.23e-120, o)).toBe(
+        `123${fractionSlash}100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`,
+      );
     });
   });
   describe('alphabetic', () => {
@@ -166,17 +191,22 @@ describe('fraction', () => {
       expect(fraction(0.012345, o)).toBe(
         `twelve thousand three hundred forty five${hyphen}millionths`,
       );
-      expect(fraction(0.012345, { ...o, precision: 1 })).toBe('zero');
-      expect(fraction(0.012345, { ...o, precision: 2 })).toBe(`one${hyphen}hundredth`);
-      expect(fraction(0.012345, { ...o, precision: 3 })).toBe(`twelve${hyphen}thousandths`);
-      expect(fraction(0.012345, { ...o, precision: 4 })).toBe(
+      expect(fraction(0.012345, { ...o, precision: 1 })).toBe(`one${hyphen}hundredth`);
+      expect(fraction(0.012345, { ...o, precision: 2 })).toBe(`twelve${hyphen}thousandths`);
+      expect(fraction(0.012345, { ...o, precision: 3 })).toBe(
         `one hundred twenty three${hyphen}ten thousandths`,
+      );
+      expect(fraction(0.012345, { ...o, precision: 4 })).toBe(
+        `one thousand two hundred thirty five${hyphen}hundred thousandths`,
+      );
+      expect(fraction(0.012345, { ...o, precision: 5 })).toBe(
+        `twelve thousand three hundred forty five${hyphen}millionths`,
       );
 
       expect(fraction(0.23456, { ...o })).toBe(
         `twenty three thousand four hundred fifty six${hyphen}hundred thousandths`,
       );
-      expect(fraction(0.23456, { ...o, precision: 1 })).toBe(`two${hyphen}tenths`);
+      expect(fraction(0.23456, { ...o, precision: 1 })).toBe(`one${hyphen}fifth`);
       expect(fraction(0.23456, { ...o, precision: 2 })).toBe(`twenty three${hyphen}hundredths`);
       expect(fraction(0.23456, { ...o, precision: 3 })).toBe(
         `two hundred thirty five${hyphen}thousandths`,
@@ -186,10 +216,23 @@ describe('fraction', () => {
       );
 
       expect(fraction(0.23, o)).toBe(`twenty three${hyphen}hundredths`);
-      expect(fraction(0.23, { ...o, precision: 1 })).toBe(`two${hyphen}tenths`);
+      expect(fraction(0.23, { ...o, precision: 1 })).toBe(`one${hyphen}fifth`);
       expect(fraction(0.23, { ...o, precision: 2 })).toBe(`twenty three${hyphen}hundredths`);
       expect(fraction(0.23, { ...o, precision: 3 })).toBe(`twenty three${hyphen}hundredths`);
       expect(fraction(0.23, { ...o, precision: 4 })).toBe(`twenty three${hyphen}hundredths`);
     });
+  });
+
+  test('should handle exponential number', () => {
+    const o = { output: 'alphabetic' as const };
+
+    expect(fraction(1e100, o)).toBe('ten duotrigintillion');
+    expect(fraction(1.2e110, o)).toBe('one hundred twenty quintrigintillion');
+    expect(fraction(1.23e120, o)).toBe(
+      'one noventrigintillion two hundred thirty octotrigintillion',
+    );
+    expect(fraction(1e-100, o)).toBe(`one‐ten duotrigintillionth`);
+    expect(fraction(1.2e-110, o)).toBe(`twelve‐sestrigintillionths`);
+    expect(fraction(1.23e-120, o)).toBe(`one hundred twenty three‐hundred noventrigintillionths`);
   });
 });

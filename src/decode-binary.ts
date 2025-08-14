@@ -28,7 +28,6 @@ export function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Arra
     }
 
     case 'hex': {
-      // TODO [2025-04-01]: this is not validating the input
       return new Uint8Array(chop(input, 2).map((hex) => Number.parseInt(hex, 16)));
     }
 

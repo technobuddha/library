@@ -17,8 +17,7 @@ import { numbering } from './numbering.ts';
  */
 export function summarize(input: number): string {
   return numbering(input, {
-    output: { integer: 'alphabetic', fraction: 'alphabetic' },
-    digits: true,
+    output: { integer: 'hybrid', fraction: 'alphabetic' },
     and: empty,
     hyphen: space,
     tolerance: 0.01,

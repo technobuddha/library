@@ -7,13 +7,7 @@ export type FractionOptions = {
    * Output format for the number representation.
    * @defaultValue 'alphabetic'
    */
-  output?: 'numeric' | 'alphabetic' | Numbering['output'];
-
-  /**
-   * Whether to output individual digits instead of number words.
-   * @defaultValue false
-   */
-  digits?: Numbering['digits'];
+  output?: 'numeric' | 'alphabetic' | 'hybrid' | Numbering['output'];
 
   /**
    * Text to use for "and" in compound numbers (e.g., "one hundred and one").
@@ -68,15 +62,18 @@ export function fraction(input: number, options: FractionOptions = {}): string {
   const numberingOptions: Numbering = {
     output: {
       integer:
-        (options?.output === 'alphabetic' || options?.output === 'numeric' ?
+        ((
+          options?.output === 'alphabetic' ||
+          options?.output === 'numeric' ||
+          options?.output === 'hybrid'
+        ) ?
           options.output
         : options.output?.integer) ?? 'numeric',
       fraction:
-        (options?.output === 'alphabetic' || options?.output === 'numeric' ?
-          options.output
+        (options?.output === 'alphabetic' || options?.output === 'numeric' ? options.output
+        : options?.output === 'hybrid' ? 'alphabetic'
         : options.output?.fraction) ?? 'numeric',
     },
-    digits: options?.digits ?? false,
     and: options?.and ?? empty,
     hyphen: options?.hyphen ?? space,
     tolerance: options?.tolerance ?? 0.01,

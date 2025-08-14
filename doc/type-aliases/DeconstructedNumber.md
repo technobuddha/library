@@ -4,9 +4,9 @@
 
 # Type Alias: DeconstructedNumber
 
-> **DeconstructedNumber** = \{ `exponent`: `number`; `fractional`: `number`; `mantissa`: `string`; `sign`: `1` \| `-1`; `whole`: `number`; \}
+> **DeconstructedNumber** = \{ `exponent`: `number`; `mantissa`: `string`; `sign`: `1` \| `-1`; `value`: `number`; \}
 
-Defined in: [deconstruct-number.ts:3](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L3)
+Defined in: [deconstruct-number.ts:4](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L4)
 
 ## Properties
 
@@ -15,14 +15,6 @@ Defined in: [deconstruct-number.ts:3](https://github.com/technobuddha/library/bl
 > **exponent**: `number`
 
 Defined in: [deconstruct-number.ts:8](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L8)
-
-***
-
-### fractional
-
-> **fractional**: `number`
-
-Defined in: [deconstruct-number.ts:6](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L6)
 
 ***
 
@@ -38,12 +30,12 @@ Defined in: [deconstruct-number.ts:7](https://github.com/technobuddha/library/bl
 
 > **sign**: `1` \| `-1`
 
-Defined in: [deconstruct-number.ts:4](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L4)
+Defined in: [deconstruct-number.ts:6](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L6)
 
 ***
 
-### whole
+### value
 
-> **whole**: `number`
+> **value**: `number`
 
 Defined in: [deconstruct-number.ts:5](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L5)

@@ -77,8 +77,10 @@ describe('cardinal', () => {
   });
 
   test('should honor the digits option', () => {
-    expect(cardinal(1e6, { digits: true })).toBe('1 million');
-    expect(cardinal(1.23456789e45, { digits: true })).toBe(
+    const o = { output: 'hybrid' as const };
+
+    expect(cardinal(1e6, o)).toBe('1 million');
+    expect(cardinal(1.23456789e45, o)).toBe(
       '1 quattuordecillion 234 tredecillion 570 duodecillion',
     );
   });
@@ -145,10 +147,10 @@ describe('cardinal', () => {
   });
 
   test('should handle non-integersI', () => {
-    // expect(cardinal(1.5)).toBe(`one and one${hyphen}half`);
+    expect(cardinal(1.5)).toBe(`one and one${hyphen}half`);
     expect(cardinal(2.71828)).toBe(`two and five${hyphen}sevenths`);
     expect(cardinal(-3.14)).toBe(`negative three and one${hyphen}seventh`);
-    expect(cardinal(0.0000001)).toBe('zero');
+    expect(cardinal(0.0000001)).toBe(`one${hyphen}ten millionth`);
     expect(cardinal(0.9876543)).toBe(
       `nine hundred eighty seven thousand six hundred fifty four${hyphen}millionths`,
     );
@@ -161,7 +163,7 @@ describe('cardinal', () => {
     expect(cardinal(1.5, o)).toBe(`1 1${fractionSlash}2`);
     expect(cardinal(2.71828, o)).toBe(`2 5${fractionSlash}7`);
     expect(cardinal(-3.14, o)).toBe(`${negativeSign}3 1${fractionSlash}7`);
-    expect(cardinal(0.0000001, o)).toBe('0');
+    expect(cardinal(0.0000001, o)).toBe(`1${fractionSlash}10000000`);
     expect(cardinal(0.987654, o)).toBe(`987654${fractionSlash}1000000`);
     expect(cardinal(0.9999999, o)).toBe('1');
   });

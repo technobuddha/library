@@ -8,13 +8,7 @@ export type OrdinalOptions = {
    * Output format for the number representation.
    * @defaultValue 'alphabetic'
    */
-  output?: 'suffix' | 'numeric' | 'alphabetic' | Numbering['output'];
-
-  /**
-   * Whether to output individual digits instead of number words.
-   * @defaultValue false
-   */
-  digits?: Numbering['digits'];
+  output?: 'suffix' | 'numeric' | 'alphabetic' | 'hybrid' | Numbering['output'];
 
   /**
    * Text to use for "and" in compound numbers (e.g., "one hundred and one").
@@ -67,11 +61,11 @@ export function ordinal(input: number, options: OrdinalOptions = {}): string {
 
     const { whole } = deconstructNumber(input, Infinity);
 
-    if (whole % 10 === 1 && whole % 100 !== 11) {
+    if (whole.value % 10 === 1 && whole.value % 100 !== 11) {
       return 'st';
-    } else if (whole % 10 === 2 && whole % 100 !== 12) {
+    } else if (whole.value % 10 === 2 && whole.value % 100 !== 12) {
       return 'nd';
-    } else if (whole % 10 === 3 && whole % 100 !== 13) {
+    } else if (whole.value % 10 === 3 && whole.value % 100 !== 13) {
       return 'rd';
     }
 
@@ -81,15 +75,18 @@ export function ordinal(input: number, options: OrdinalOptions = {}): string {
   const numberingOptions: Numbering = {
     output: {
       integer:
-        (options?.output === 'alphabetic' || options?.output === 'numeric' ?
+        ((
+          options?.output === 'alphabetic' ||
+          options?.output === 'numeric' ||
+          options?.output === 'hybrid'
+        ) ?
           options.output
         : options.output?.integer) ?? 'numeric',
       fraction:
-        (options?.output === 'alphabetic' || options?.output === 'numeric' ?
-          options.output
+        (options?.output === 'alphabetic' || options?.output === 'numeric' ? options.output
+        : options?.output === 'hybrid' ? 'alphabetic'
         : options.output?.fraction) ?? 'numeric',
     },
-    digits: options?.digits ?? false,
     and: options?.and ?? empty,
     hyphen: options?.hyphen ?? space,
     tolerance: options?.tolerance ?? 0.01,
