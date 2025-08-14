@@ -1,3 +1,8 @@
+/* v8 ignore file */
+
+export * from './@types/binary-encoding.ts';
+export * from './@types/binary-object.ts';
+export * from './@types/text-encoding.ts';
 export * from './@types/typed-array.ts';
 export * from './add-time.ts';
 export * from './almost-equals.ts';
@@ -8,8 +13,6 @@ export * from './angle-of-line.ts';
 export * from './angle-reflection.ts';
 export * from './area.ts';
 export * from './base64.ts';
-export * from './binary-encoding.ts';
-export * from './binary-object.ts';
 export * from './binary-units.ts';
 export * from './bounds.ts';
 export * from './build.ts';
@@ -131,6 +134,7 @@ export * from './number-to-letter.ts';
 export * from './numbering/index.ts';
 export * from './pad-number.ts';
 export * from './parse-date.ts';
+export * from './perimeter.ts';
 export * from './plural.ts';
 export * from './possessive.ts';
 export * from './priority-queue.ts';
@@ -163,7 +167,6 @@ export * from './standard-deviation.ts';
 export * from './star.ts';
 export * from './syllables.ts';
 export * from './tag.ts';
-export * from './text-encoding.ts';
 export * from './time-span.ts';
 export * from './to-angle.ts';
 export * from './to-ascii.ts';

@@ -103,7 +103,7 @@ Defined in: [hash-base.ts:39](https://github.com/technobuddha/library/blob/main/
 
 #### Call Signature
 
-> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../type-aliases/TypedArray.md)): `this`
+> **update**(`data`: [`TypedArray`](../type-aliases/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)): `this`
 
 Defined in: [hash-base.ts:85](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L85)
 
@@ -111,7 +111,7 @@ Defined in: [hash-base.ts:85](https://github.com/technobuddha/library/blob/main/
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../type-aliases/TypedArray.md) |
+| `data` | [`TypedArray`](../type-aliases/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) |
 
 ##### Returns
 

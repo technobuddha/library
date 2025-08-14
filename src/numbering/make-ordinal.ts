@@ -55,9 +55,5 @@ export function makeOrdinal(word: string): string {
     return `${word.slice(0, -2)}tieth`;
   }
 
-  if (word.endsWith('th')) {
-    return `${word}${hyphen}th`;
-  }
-
   return `${word}th`;
 }

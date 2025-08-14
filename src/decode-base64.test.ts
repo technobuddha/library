@@ -72,6 +72,10 @@ describe('decodeBase64', () => {
   test('should decode binary of length 4', () => {
     expect(Array.from(decodeBase64('AQIDBA=='))).toStrictEqual([1, 2, 3, 4]);
   });
+
+  test('should throw on bad input', () => {
+    expect(() => decodeBase64('!!!!!')).toThrow();
+  });
 });
 
 describe('decodeBase64Url', () => {
@@ -142,5 +146,9 @@ describe('decodeBase64Url', () => {
 
   test('should decode binary of length 4', () => {
     expect(Array.from(decodeBase64Url('AQIDBA'))).toStrictEqual([1, 2, 3, 4]);
+  });
+
+  test('should throw on bad input', () => {
+    expect(() => decodeBase64Url('!!!!!')).toThrow();
   });
 });

@@ -71,10 +71,10 @@ export function numbering(input: number, options: Numbering): string {
   if (whole.value === 0) {
     if (ordinal) {
       const word = output.integer === 'alphabetic' ? 'zeroth' : '0th';
-      return fractionalPart ? `${word} and ${fractionalPart}` : word;
+      return `${word} and ${fractionalPart}`;
     }
 
-    return `${s}${fractionalPart ?? (output.fraction === 'numeric' ? '0' : 'zero')}`;
+    return `${s}${fractionalPart}`;
   }
 
   const integerPart =
@@ -95,5 +95,5 @@ export function numbering(input: number, options: Numbering): string {
       ' and '
     : space;
 
-  return `${s}${integerPart}${join}${fractionalPart ?? empty}`.trim();
+  return `${s}${integerPart}${join}${fractionalPart}`.trim();
 }

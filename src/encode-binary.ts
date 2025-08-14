@@ -1,4 +1,4 @@
-import { type BinaryEncoding } from './binary-encoding.ts';
+import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { encodeBase64, encodeBase64Url } from './encode-base64.ts';
 
 /**

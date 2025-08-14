@@ -144,4 +144,14 @@ describe('Crc32', () => {
         .digest('hex'),
     ).toBe('04188ade');
   });
+
+  test('update with typed array', () => {
+    const typedArray = new Uint16Array([1, 2, 3, 4]);
+    expect(new Crc32().update(typedArray).digest('hex')).toBe('92991416');
+  });
+
+  test('update with array', () => {
+    const array = [1, 2, 3, 4];
+    expect(new Crc32().update(array).digest('hex')).toBe('b63cfbcd');
+  });
 });

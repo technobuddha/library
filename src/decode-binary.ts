@@ -1,4 +1,4 @@
-import { type BinaryEncoding } from './binary-encoding.ts';
+import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { chop } from './chop.ts';
 import { decodeBase64, decodeBase64Url } from './decode-base64.ts';
 

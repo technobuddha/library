@@ -286,4 +286,13 @@ describe('ordinal', () => {
       expect(ordinal(-Infinity, o)).toBe('th');
     });
   });
+
+  describe('different outputs', () => {
+    test('call with different outputs', () => {
+      expect(ordinal(100.001, { output: { integer: 'alphabetic', fraction: 'numeric' } })).toBe(
+        `one hundredth and 1${fractionSlash}1000`,
+      );
+      expect(ordinal(100.001, { output: 'hybrid' })).toBe(`100th and one${hyphen}thousandth`);
+    });
+  });
 });

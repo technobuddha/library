@@ -2,7 +2,6 @@ import { fractionSlash, hyphen, negativeSign } from '../constants.ts';
 
 import { fraction } from './fraction.ts';
 
-
 describe('fraction', () => {
   describe('numeric', () => {
     test('should return whole number for integer input', () => {
@@ -234,5 +233,12 @@ describe('fraction', () => {
     expect(fraction(1e-100, o)).toBe(`one‐ten duotrigintillionth`);
     expect(fraction(1.2e-110, o)).toBe(`twelve‐sestrigintillionths`);
     expect(fraction(1.23e-120, o)).toBe(`one hundred twenty three‐hundred noventrigintillionths`);
+  });
+
+  test('call with different outputs', () => {
+    expect(fraction(100.001, { output: { integer: 'alphabetic', fraction: 'numeric' } })).toBe(
+      `one hundred 1${fractionSlash}1000`,
+    );
+    expect(fraction(100.001, { output: 'hybrid' })).toBe(`100 and one${hyphen}thousandth`);
   });
 });

@@ -44,6 +44,7 @@
 | [fraction](functions/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
 | [isIntersecting](functions/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [lookAhead](functions/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
+| [perimeter](functions/perimeter.md) | Calculates the perimeter of a polygon given its vertices. |
 | [randomWeightedPick](functions/randomWeightedPick.md) | Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked. |
 | [toSquare](functions/toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
 

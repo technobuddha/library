@@ -5,6 +5,7 @@
 const config = {
   lint: {
     rules: {
+      'jest/require-hook': { rule: 'off' },
       'technobuddha/optimize-imports': {
         rule: [
           'error',

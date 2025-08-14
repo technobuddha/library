@@ -2,8 +2,8 @@ import { almostEquals } from './almost-equals.ts';
 
 describe('almostEquals', () => {
   test('should handle numbers within EPSILON distance', () => {
-    expect(almostEquals(1, 1 + Number(Number.EPSILON))).toBeTrue();
-    expect(almostEquals(1, 1 - Number(Number.EPSILON))).toBeTrue();
+    expect(almostEquals(1, 1 + Number.EPSILON)).toBeTrue();
+    expect(almostEquals(1, 1 - Number.EPSILON)).toBeTrue();
     expect(almostEquals(1, 1 + Number.EPSILON * 2)).toBeFalse();
     expect(almostEquals(1, 1 - Number.EPSILON * 2)).toBeFalse();
   });

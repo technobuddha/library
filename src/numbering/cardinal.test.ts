@@ -33,13 +33,16 @@ describe('cardinal', () => {
   });
 
   test('should handle unusual numbers', () => {
-    expect(cardinal(Infinity)).toBe('infinity');
+    expect(cardinal(Number.POSITIVE_INFINITY)).toBe('infinity');
+    expect(cardinal(Number.POSITIVE_INFINITY, { output: 'numeric' })).toBe('∞');
+    expect(cardinal(Number.NEGATIVE_INFINITY)).toBe('negative infinity');
+    expect(cardinal(Number.NEGATIVE_INFINITY, { output: 'numeric' })).toBe(`${negativeSign}∞`);
     expect(cardinal(Number.NaN)).toBe('not a number');
+    expect(cardinal(Number.NaN, { output: 'numeric' })).toBe('NaN');
   });
 
   test('should handle negative numbers', () => {
     expect(cardinal(-123)).toBe('negative one hundred twenty three');
-    expect(cardinal(-Infinity)).toBe('negative infinity');
   });
 
   test('should handle large numbers', () => {
@@ -61,6 +64,16 @@ describe('cardinal', () => {
     //Angstroms in a parsec
     expect(cardinal(3.08567782e26)).toBe(
       'three hundred eight septillion five hundred sixty eight sextillion',
+    );
+  });
+
+  test('call with and', () => {
+    expect(cardinal(101, { and: 'boogie' })).toBe('one hundred boogie one');
+  });
+
+  test('call with different outputs', () => {
+    expect(cardinal(100.001, { output: { integer: 'alphabetic', fraction: 'numeric' } })).toBe(
+      `one hundred 1${fractionSlash}1000`,
     );
   });
 

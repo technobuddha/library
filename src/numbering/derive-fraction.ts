@@ -19,10 +19,6 @@ export function deriveFraction(
   input: DeconstructedNumber,
   options: Pick<Numbering, 'tolerance' | 'precision' | 'denominators'>,
 ): FractionResult {
-  if (Number.isNaN(input.value) || !Number.isFinite(input.value)) {
-    return { numerator: input.value, denominator: 1 };
-  }
-
   const { tolerance } = options;
   const denominators = getDenominators(options.denominators);
 

@@ -1,4 +1,5 @@
-import { type TextEncoding } from './text-encoding.ts';
+import { type TextEncoding } from './@types/text-encoding.ts';
+import { type TypedArray } from './@types/typed-array.ts';
 
 const REPLACEMENT = 0xfffd;
 
@@ -12,19 +13,7 @@ const REPLACEMENT = 0xfffd;
  * @category Encoding
  */
 export function decodeText(
-  input:
-    | ArrayBufferLike
-    | Int8Array
-    | Uint8Array
-    | Uint8ClampedArray
-    | Int16Array
-    | Uint16Array
-    | Int32Array
-    | Uint32Array
-    | Float32Array
-    | Float64Array
-    | BigInt64Array
-    | BigUint64Array,
+  input: ArrayLike<number> | TypedArray | ArrayBuffer,
   _encoding: TextEncoding = 'utf8',
 ): string {
   const buffer =

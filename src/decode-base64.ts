@@ -1,9 +1,9 @@
 /* eslint-disable no-bitwise */
 // cspell:ignore Hdvcmxk
 
+import { type TextEncoding } from './@types/text-encoding.ts';
 import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.ts';
 import { decodeText } from './decode-text.ts';
-import { type TextEncoding } from './text-encoding.ts';
 
 /**
  * Gather 4 characters from the input string and yield their indices in the base64 alphabet.

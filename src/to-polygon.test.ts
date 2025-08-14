@@ -1,6 +1,7 @@
-import { describe, test, expect } from 'vitest';
+import { describe, expect, test } from 'vitest';
+
+import { type Cartesian, type Rect } from './geometry.ts';
 import { toPolygon } from './to-polygon.ts';
-import { type Cartesian, type Polygon, type Rect } from './geometry.ts';
 
 describe('toPolygon', () => {
   describe('from Rect object', () => {
@@ -10,10 +11,10 @@ describe('toPolygon', () => {
 
       expect(polygon).toHaveLength(4);
       expect(polygon).toEqual([
-        { x: 10, y: 20 },     // top-left
-        { x: 40, y: 20 },     // top-right
-        { x: 40, y: 60 },     // bottom-right
-        { x: 10, y: 60 },     // bottom-left
+        { x: 10, y: 20 }, // top-left
+        { x: 40, y: 20 }, // top-right
+        { x: 40, y: 60 }, // bottom-right
+        { x: 10, y: 60 }, // bottom-left
       ]);
     });
 
@@ -98,10 +99,10 @@ describe('toPolygon', () => {
 
       expect(polygon).toHaveLength(4);
       expect(polygon).toEqual([
-        { x: 1, y: 2 },     // pointA
-        { x: 5, y: 2 },     // pointB.x, pointA.y
-        { x: 5, y: 8 },     // pointB
-        { x: 1, y: 8 },     // pointA.x, pointB.y
+        { x: 1, y: 2 }, // pointA
+        { x: 5, y: 2 }, // pointB.x, pointA.y
+        { x: 5, y: 8 }, // pointB
+        { x: 1, y: 8 }, // pointA.x, pointB.y
       ]);
     });
 
@@ -213,7 +214,7 @@ describe('toPolygon', () => {
     test('always returns exactly 4 vertices', () => {
       const rect: Rect = { x: 0, y: 0, width: 10, height: 10 };
       const polygonFromRect = toPolygon(rect);
-      
+
       const pointA: Cartesian = { x: 0, y: 0 };
       const pointB: Cartesian = { x: 10, y: 10 };
       const polygonFromPoints = toPolygon(pointA, pointB);
@@ -228,7 +229,7 @@ describe('toPolygon', () => {
 
       // Check that opposite corners have the expected relationships
       const [topLeft, topRight, bottomRight, bottomLeft] = polygon;
-      
+
       expect(topLeft.x).toBe(topRight.x - rect.width);
       expect(topLeft.y).toBe(bottomLeft.y - rect.height);
       expect(topRight.x).toBe(bottomRight.x);
@@ -240,7 +241,7 @@ describe('toPolygon', () => {
     test('creates same polygon from equivalent Rect and points', () => {
       const rect: Rect = { x: 2, y: 3, width: 5, height: 7 };
       const polygonFromRect = toPolygon(rect);
-      
+
       const pointA: Cartesian = { x: 2, y: 3 };
       const pointB: Cartesian = { x: 7, y: 10 };
       const polygonFromPoints = toPolygon(pointA, pointB);

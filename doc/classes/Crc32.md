@@ -32,7 +32,7 @@ Defined in: [crc32.ts:61](https://github.com/technobuddha/library/blob/main/src/
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L80)
+Defined in: [crc32.ts:83](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L83)
 
 ##### Returns
 
@@ -46,7 +46,7 @@ Defined in: [crc32.ts:80](https://github.com/technobuddha/library/blob/main/src/
 
 > **digest**(`encoding`: [`BinaryEncoding`](../type-aliases/BinaryEncoding.md)): `string`
 
-Defined in: [crc32.ts:81](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L81)
+Defined in: [crc32.ts:84](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L84)
 
 ##### Parameters
 
@@ -68,7 +68,7 @@ Defined in: [crc32.ts:81](https://github.com/technobuddha/library/blob/main/src/
 
 #### Call Signature
 
-> **update**(`data`: [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../type-aliases/TypedArray.md)): `this`
+> **update**(`data`: [`TypedArray`](../type-aliases/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
 
 Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L65)
 
@@ -76,7 +76,7 @@ Defined in: [crc32.ts:65](https://github.com/technobuddha/library/blob/main/src/
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| [`TypedArray`](../type-aliases/TypedArray.md) |
+| `data` | [`TypedArray`](../type-aliases/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> |
 
 ##### Returns
 

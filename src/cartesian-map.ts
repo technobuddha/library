@@ -90,7 +90,7 @@ export class CartesianMap<V> implements Map<Cartesian, V> {
    */
   public forEach(
     callback: (value: V, key: Cartesian, map: CartesianMap<V>) => void,
-    thisArg?: this,
+    thisArg?: unknown,
   ): void {
     for (const [key, value] of this.entries()) {
       callback.call(thisArg, value, key, this);

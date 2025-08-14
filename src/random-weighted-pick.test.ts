@@ -4,7 +4,7 @@ type Item = { name: string; weight: number };
 
 describe('randomWeightedPick', () => {
   test('returns undefined for empty list', () => {
-    expect(randomWeightedPick([])).toBeUndefined();
+    expect(void randomWeightedPick([])).toBeUndefined();
   });
 
   test('returns the only item if list has one element', () => {

@@ -6,6 +6,6 @@
 
 > **TextEncoding** = `"utf-8"` \| `"utf8"`
 
-Defined in: [text-encoding.ts:7](https://github.com/technobuddha/library/blob/main/src/text-encoding.ts#L7)
+Defined in: @types/text-encoding.ts:7
 
 Valid Text Encoding Types

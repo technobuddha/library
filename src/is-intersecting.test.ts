@@ -162,4 +162,19 @@ describe('isIntersecting', () => {
     const empty: Polygon = [];
     expect(isIntersecting(triangle, empty)).toBeFalse();
   });
+
+  test('polygon with two vertices on another polygon boundary', () => {
+    const triangle: Polygon = [
+      { x: 0, y: 0.5 }, // On square's left edge
+      { x: 1, y: 0.5 }, // On square's right edge
+      { x: 0.5, y: -1 }, // Outside square
+    ];
+    const square: Polygon = [
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: 1, y: 1 },
+      { x: 0, y: 1 },
+    ];
+    expect(isIntersecting(triangle, square)).toBeTrue();
+  });
 });

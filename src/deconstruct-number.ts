@@ -71,8 +71,8 @@ export function deconstructNumber(input: number, precision = 9): DeconstructNumb
       whole: {
         sign,
         value: whole,
-        mantissa: whole === 0 ? empty : wholeMantissa.replace('.', empty),
-        exponent: whole === 0 ? 0 : exponent,
+        mantissa: wholeMantissa.replace('.', empty),
+        exponent: exponent,
       },
       fraction: {
         sign,

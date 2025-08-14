@@ -1,4 +1,4 @@
-import { type TextEncoding } from './text-encoding.ts';
+import { type TextEncoding } from './@types/text-encoding.ts';
 
 const REPLACEMENT = [0xef, 0x8f, 0xbd];
 

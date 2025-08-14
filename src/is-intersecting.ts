@@ -1,6 +1,5 @@
 import { type LineSegment, type Polygon } from './geometry.ts';
 import { isOnLine } from './is-on-line.ts';
-import { isOnPolygon } from './is-on-polygon.ts';
 import { isPolygon } from './is-polygon.ts';
 import { lineIntersection } from './line-intersection.ts';
 import { toClosed } from './to-closed.ts';
@@ -38,7 +37,6 @@ export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): 
 export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean {
   if (isPolygon(shape)) {
     let intersects = false;
-    let onCount = 0;
     const closed = toClosed(shape);
 
     for (let i = 0, l = closed.length - 1; i < l; i++) {
@@ -46,15 +44,6 @@ export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): 
       const v1 = closed[i + 1];
 
       if (isIntersecting(toLineSegment(v0, v1), polygon)) {
-        intersects = true;
-        break;
-      }
-
-      if (isOnPolygon(v0, polygon)) {
-        ++onCount;
-      }
-
-      if (onCount === 2) {
         intersects = true;
         break;
       }

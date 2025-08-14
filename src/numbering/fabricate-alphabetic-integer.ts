@@ -25,19 +25,16 @@ export function fabricateAlphabeticInteger(input: number, options: Numbering): s
       if (output.integer === 'hybrid') {
         words.push(quantity.toString());
       } else {
-        const {
-          whole: { value: whole },
-          fraction: { value: fraction },
-        } = deconstructNumber(quantity, 15);
+        const { whole /*, fraction*/ } = deconstructNumber(quantity, Infinity);
 
-        words.push(...hundreds(whole, options));
-        if (fraction > 0) {
-          words.push('point');
-          const frac = splitChars(cleanEnd(fraction.toFixed(2).slice(2), '0'));
-          for (const digit of frac) {
-            words.push(cardinalOnes[Number.parseInt(digit)]);
-          }
-        }
+        words.push(...hundreds(whole.value, options));
+        // if (fraction.value > 0) {
+        //   words.push('point');
+        //   const frac = splitChars(cleanEnd(fraction.value.toFixed(2).slice(2), '0'));
+        //   for (const digit of frac) {
+        //     words.push(cardinalOnes[Number.parseInt(digit)]);
+        //   }
+        // }
       }
       if (word) {
         words.push(word);

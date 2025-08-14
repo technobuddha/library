@@ -151,4 +151,22 @@ describe('sha1', () => {
         .digest('hex'),
     ).toBe('2927490ade868795ecdd8febe05214cbd243ef35');
   });
+
+  test('update for overflow', () => {
+    expect(
+      new Sha1().update('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA').digest('hex'),
+    ).toBe('6b45e3cf1eb3324b9fd4df3b83d89c4c2c4ca896');
+  });
+
+  test('update with number array', () => {
+    expect(new Sha1().update([1, 2, 3, 4, 5, 6]).digest('hex')).toBe(
+      '5d211bad8f4ee70e16c7d343a838fc344a1ed961',
+    );
+  });
+
+  test('update with Uint8Array', () => {
+    expect(new Sha1().update(new Uint8Array([1, 2, 3, 4, 5, 6])).digest('hex')).toBe(
+      '5d211bad8f4ee70e16c7d343a838fc344a1ed961',
+    );
+  });
 });

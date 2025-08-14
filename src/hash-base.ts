@@ -1,9 +1,9 @@
 /* eslint-disable no-bitwise */
+import { type BinaryEncoding } from './@types/binary-encoding.ts';
+import { type TextEncoding } from './@types/text-encoding.ts';
 import { type TypedArray } from './@types/typed-array.ts';
-import { type BinaryEncoding } from './binary-encoding.ts';
 import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
-import { type TextEncoding } from './text-encoding.ts';
 
 /**
  * The base interface for hash classes
@@ -55,7 +55,7 @@ export abstract class HashBase implements HashClass {
 
     const bits = this.len * 8;
 
-    if (bits <= 0xffffffff) {
+    if (bits <= 32) {
       // uint32
       this.block[this.blockSize - 4] = (bits & 0xff000000) >>> 24;
       this.block[this.blockSize - 3] = (bits & 0x00ff0000) >>> 16;
@@ -82,9 +82,12 @@ export abstract class HashBase implements HashClass {
     return encoding ? encodeBinary(hash, encoding) : hash;
   }
 
-  public update(data: TypedArray | ArrayBuffer): this;
+  public update(data: TypedArray | ArrayBuffer | ArrayLike<number>): this;
   public update(data: string, encoding?: TextEncoding): this;
-  public update(data: string | TypedArray | ArrayBuffer, encoding: TextEncoding = 'utf8'): this {
+  public update(
+    data: string | TypedArray | ArrayBuffer | ArrayLike<number>,
+    encoding: TextEncoding = 'utf8',
+  ): this {
     const buffer =
       typeof data === 'string' ? encodeText(data, encoding)
       : ArrayBuffer.isView(data) ? new Uint8Array(data.buffer, data.byteOffset, data.byteLength)

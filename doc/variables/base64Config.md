@@ -6,6 +6,6 @@
 
 > `const` **base64Config**: [`Base64Configuration`](../type-aliases/Base64Configuration.md)
 
-Defined in: [base64.ts:17](https://github.com/technobuddha/library/blob/main/src/base64.ts#L17)
+Defined in: [base64.ts:18](https://github.com/technobuddha/library/blob/main/src/base64.ts#L18)
 
 Configuration for Base64 encoding

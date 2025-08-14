@@ -23,7 +23,7 @@ const concave: Polygon = [
   { x: 0, y: 10 },
 ];
 
-describe('isPointInPolygon', () => {
+describe('isInPolygon', () => {
   test('returns true for a point clearly inside a square', () => {
     expect(isInPolygon({ x: 5, y: 5 }, square)).toBeTrue();
   });
@@ -192,5 +192,47 @@ describe('isPointInPolygon', () => {
     ];
     const rect: Rect = { x: 1, y: 0, width: 2, height: 2 };
     expect(isInPolygon(rect, line)).toBeFalse();
+  });
+
+  test('polygon completely inside another polygon', () => {
+    const innerTriangle: Polygon = [
+      { x: 0.2, y: 0.2 },
+      { x: 0.8, y: 0.2 },
+      { x: 0.5, y: 0.8 },
+    ];
+    const outerSquare: Polygon = [
+      { x: 0, y: 0 },
+      { x: 1, y: 0 },
+      { x: 1, y: 1 },
+      { x: 0, y: 1 },
+    ];
+    expect(isInPolygon(innerTriangle, outerSquare)).toBeTrue();
+  });
+
+  test('polygon partially outside another polygon', () => {
+    const partialTriangle: Polygon = [
+      { x: 5, y: 5 },
+      { x: 15, y: 5 },
+      { x: 10, y: 15 },
+    ];
+    expect(isInPolygon(partialTriangle, square)).toBeFalse();
+  });
+
+  test('polygon completely outside another polygon', () => {
+    const outsideTriangle: Polygon = [
+      { x: 20, y: 20 },
+      { x: 30, y: 20 },
+      { x: 25, y: 30 },
+    ];
+    expect(isInPolygon(outsideTriangle, square)).toBeFalse();
+  });
+
+  test('polygon edge intersects with another polygon', () => {
+    const intersectingTriangle: Polygon = [
+      { x: 5, y: -5 },
+      { x: 15, y: 5 },
+      { x: 5, y: 15 },
+    ];
+    expect(isInPolygon(intersectingTriangle, square)).toBeFalse();
   });
 });

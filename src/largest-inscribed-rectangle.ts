@@ -86,10 +86,6 @@ export function largestInscribedRectangle(
  * @returns The largest inscribed rectangle with area and angle properties
  */
 function findLargestRotatedRectangle(polygon: Polygon, squareOnly: boolean): RotatedRect {
-  if (polygon.length < 3) {
-    throw new Error('Polygon must have at least 3 vertices');
-  }
-
   let maxRectangle: RotatedRect = { x: 0, y: 0, width: 0, height: 0, area: 0, angle: 0 };
 
   // Use π/2 normalization since rectangles have 4-fold symmetry
