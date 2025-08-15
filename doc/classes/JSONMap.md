@@ -4,7 +4,7 @@
 
 # Class: JSONMap\<K, V\>
 
-Defined in: json-map.ts:5
+Defined in: [json-map.ts:5](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L5)
 
 ## Type Parameters
 
@@ -23,7 +23,7 @@ Defined in: json-map.ts:5
 
 > **new JSONMap**\<`K`, `V`\>(`values?`: `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`K`, `V`\], `any`, `any`\>): `JSONMap`\<`K`, `V`\>
 
-Defined in: json-map.ts:8
+Defined in: [json-map.ts:8](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L8)
 
 #### Parameters
 
@@ -39,8 +39,8 @@ Defined in: json-map.ts:8
 
 | Property | Modifier | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONMap"` | `'JSONMap'` | json-map.ts:16 |
-| <a id="map"></a> `map` | `protected` | [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, `V`\> | `undefined` | json-map.ts:6 |
+| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONMap"` | `'JSONMap'` | [json-map.ts:16](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L16) |
+| <a id="map"></a> `map` | `protected` | [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, `V`\> | `undefined` | [json-map.ts:6](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L6) |
 
 ## Accessors
 
@@ -50,7 +50,7 @@ Defined in: json-map.ts:8
 
 > **get** **size**(): `number`
 
-Defined in: json-map.ts:23
+Defined in: [json-map.ts:23](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L23)
 
 ##### Returns
 
@@ -68,7 +68,7 @@ the number of elements in the Map.
 
 > **\[iterator\]**(): `MapIterator`\<\[`K`, `V`\]\>
 
-Defined in: json-map.ts:73
+Defined in: [json-map.ts:73](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L73)
 
 #### Returns
 
@@ -84,7 +84,7 @@ Defined in: json-map.ts:73
 
 > **clear**(): `void`
 
-Defined in: json-map.ts:27
+Defined in: [json-map.ts:27](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L27)
 
 #### Returns
 
@@ -100,7 +100,7 @@ Defined in: json-map.ts:27
 
 > **delete**(`value`: `K`): `boolean`
 
-Defined in: json-map.ts:31
+Defined in: [json-map.ts:31](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L31)
 
 #### Parameters
 
@@ -124,7 +124,7 @@ true if an element in the Map existed and has been removed, or false if the elem
 
 > **entries**(): `MapIterator`\<\[`K`, `V`\]\>
 
-Defined in: json-map.ts:35
+Defined in: [json-map.ts:35](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L35)
 
 Returns an iterable of key, value pairs for every entry in the map.
 
@@ -142,7 +142,7 @@ Returns an iterable of key, value pairs for every entry in the map.
 
 > **forEach**(`callback`: (`value`: `V`, `key`: `K`, `map`: `JSONMap`\<`K`, `V`\>) => `void`, `thisArg?`: `unknown`): `void`
 
-Defined in: json-map.ts:41
+Defined in: [json-map.ts:41](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L41)
 
 Executes a provided function once per each key/value pair in the Map, in insertion order.
 
@@ -167,7 +167,7 @@ Executes a provided function once per each key/value pair in the Map, in inserti
 
 > **get**(`key`: `K`): `undefined` \| `V`
 
-Defined in: json-map.ts:50
+Defined in: [json-map.ts:50](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L50)
 
 Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
 
@@ -193,7 +193,7 @@ Returns the element associated with the specified key. If no element is associat
 
 > **has**(`value`: `K`): `boolean`
 
-Defined in: json-map.ts:54
+Defined in: [json-map.ts:54](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L54)
 
 #### Parameters
 
@@ -217,7 +217,7 @@ boolean indicating whether an element with the specified key exists or not.
 
 > **keys**(): `MapIterator`\<`K`\>
 
-Defined in: json-map.ts:58
+Defined in: [json-map.ts:58](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L58)
 
 Returns an iterable of keys in the map
 
@@ -235,7 +235,7 @@ Returns an iterable of keys in the map
 
 > `protected` **replicate**\<`X`\>(`values?`: `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`X`, `any`, `any`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`X`\>
 
-Defined in: json-map.ts:18
+Defined in: [json-map.ts:18](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L18)
 
 #### Type Parameters
 
@@ -259,7 +259,7 @@ Defined in: json-map.ts:18
 
 > **set**(`key`: `K`, `value`: `V`): `this`
 
-Defined in: json-map.ts:64
+Defined in: [json-map.ts:64](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L64)
 
 Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
 
@@ -284,7 +284,7 @@ Adds a new element with a specified key and value to the Map. If an element with
 
 > **values**(): `MapIterator`\<`V`\>
 
-Defined in: json-map.ts:69
+Defined in: [json-map.ts:69](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L69)
 
 Returns an iterable of values in the map
 

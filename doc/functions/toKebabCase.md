@@ -6,7 +6,7 @@
 
 > **toKebabCase**(`input`: `string`): `string`
 
-Defined in: to-kebab-case.ts:9
+Defined in: [to-kebab-case.ts:9](https://github.com/technobuddha/library/blob/main/src/to-kebab-case.ts#L9)
 
 Convert an identifier string to a kebab-case form
 

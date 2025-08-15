@@ -6,7 +6,7 @@
 
 > **sortKeys**\<`T`\>(`object`: `T`): `T`
 
-Defined in: sort-keys.ts:15
+Defined in: [sort-keys.ts:15](https://github.com/technobuddha/library/blob/main/src/sort-keys.ts#L15)
 
 Recursively sorts the keys of an object in lexicographical order.
 
