@@ -1,0 +1,297 @@
+<!-- markdownlint-disable -->
+
+[@technobuddha/library](../INDEX.md) / JSONMap
+
+# Class: JSONMap\<K, V\>
+
+Defined in: json-map.ts:5
+
+## Type Parameters
+
+| Type Parameter |
+| ------ |
+| `K` *extends* `JsonObject` |
+| `V` |
+
+## Implements
+
+- [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`K`, `V`\>
+
+## Constructors
+
+### Constructor
+
+> **new JSONMap**\<`K`, `V`\>(`values?`: `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`K`, `V`\], `any`, `any`\>): `JSONMap`\<`K`, `V`\>
+
+Defined in: json-map.ts:8
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `values?` | `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<\[`K`, `V`\], `any`, `any`\> |
+
+#### Returns
+
+`JSONMap`\<`K`, `V`\>
+
+## Properties
+
+| Property | Modifier | Type | Default value | Defined in |
+| ------ | ------ | ------ | ------ | ------ |
+| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONMap"` | `'JSONMap'` | json-map.ts:16 |
+| <a id="map"></a> `map` | `protected` | [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, `V`\> | `undefined` | json-map.ts:6 |
+
+## Accessors
+
+### size
+
+#### Get Signature
+
+> **get** **size**(): `number`
+
+Defined in: json-map.ts:23
+
+##### Returns
+
+`number`
+
+the number of elements in the Map.
+
+#### Implementation of
+
+`Map.size`
+
+## Methods
+
+### \[iterator\]()
+
+> **\[iterator\]**(): `MapIterator`\<\[`K`, `V`\]\>
+
+Defined in: json-map.ts:73
+
+#### Returns
+
+`MapIterator`\<\[`K`, `V`\]\>
+
+#### Implementation of
+
+`Map.[iterator]`
+
+***
+
+### clear()
+
+> **clear**(): `void`
+
+Defined in: json-map.ts:27
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+`Map.clear`
+
+***
+
+### delete()
+
+> **delete**(`value`: `K`): `boolean`
+
+Defined in: json-map.ts:31
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `value` | `K` |
+
+#### Returns
+
+`boolean`
+
+true if an element in the Map existed and has been removed, or false if the element does not exist.
+
+#### Implementation of
+
+`Map.delete`
+
+***
+
+### entries()
+
+> **entries**(): `MapIterator`\<\[`K`, `V`\]\>
+
+Defined in: json-map.ts:35
+
+Returns an iterable of key, value pairs for every entry in the map.
+
+#### Returns
+
+`MapIterator`\<\[`K`, `V`\]\>
+
+#### Implementation of
+
+`Map.entries`
+
+***
+
+### forEach()
+
+> **forEach**(`callback`: (`value`: `V`, `key`: `K`, `map`: `JSONMap`\<`K`, `V`\>) => `void`, `thisArg?`: `unknown`): `void`
+
+Defined in: json-map.ts:41
+
+Executes a provided function once per each key/value pair in the Map, in insertion order.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `callback` | (`value`: `V`, `key`: `K`, `map`: `JSONMap`\<`K`, `V`\>) => `void` |
+| `thisArg?` | `unknown` |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+`Map.forEach`
+
+***
+
+### get()
+
+> **get**(`key`: `K`): `undefined` \| `V`
+
+Defined in: json-map.ts:50
+
+Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `key` | `K` |
+
+#### Returns
+
+`undefined` \| `V`
+
+Returns the element associated with the specified key. If no element is associated with the specified key, undefined is returned.
+
+#### Implementation of
+
+`Map.get`
+
+***
+
+### has()
+
+> **has**(`value`: `K`): `boolean`
+
+Defined in: json-map.ts:54
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `value` | `K` |
+
+#### Returns
+
+`boolean`
+
+boolean indicating whether an element with the specified key exists or not.
+
+#### Implementation of
+
+`Map.has`
+
+***
+
+### keys()
+
+> **keys**(): `MapIterator`\<`K`\>
+
+Defined in: json-map.ts:58
+
+Returns an iterable of keys in the map
+
+#### Returns
+
+`MapIterator`\<`K`\>
+
+#### Implementation of
+
+`Map.keys`
+
+***
+
+### replicate()
+
+> `protected` **replicate**\<`X`\>(`values?`: `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`X`, `any`, `any`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`X`\>
+
+Defined in: json-map.ts:18
+
+#### Type Parameters
+
+| Type Parameter | Default type |
+| ------ | ------ |
+| `X` | `K` |
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `values?` | `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`X`, `any`, `any`\> |
+
+#### Returns
+
+[`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`X`\>
+
+***
+
+### set()
+
+> **set**(`key`: `K`, `value`: `V`): `this`
+
+Defined in: json-map.ts:64
+
+Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `key` | `K` |
+| `value` | `V` |
+
+#### Returns
+
+`this`
+
+#### Implementation of
+
+`Map.set`
+
+***
+
+### values()
+
+> **values**(): `MapIterator`\<`V`\>
+
+Defined in: json-map.ts:69
+
+Returns an iterable of values in the map
+
+#### Returns
+
+`MapIterator`\<`V`\>
+
+#### Implementation of
+
+`Map.values`

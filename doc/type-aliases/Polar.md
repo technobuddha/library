@@ -6,7 +6,7 @@
 
 > **Polar** = \{ `angle`: `number`; `radius`: `number`; \}
 
-Defined in: @types/geometry.ts:26
+Defined in: [@types/geometry.ts:26](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L26)
 
 Polar coordinate (angle, radius)
 
@@ -16,7 +16,7 @@ Polar coordinate (angle, radius)
 
 > **angle**: `number`
 
-Defined in: @types/geometry.ts:28
+Defined in: [@types/geometry.ts:28](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L28)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: @types/geometry.ts:28
 
 > **radius**: `number`
 
-Defined in: @types/geometry.ts:27
+Defined in: [@types/geometry.ts:27](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L27)

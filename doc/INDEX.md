@@ -1,5 +1,18 @@
 # @technobuddha/library
 
+## Classes
+
+| Class | Description |
+| ------ | ------ |
+| [JSONMap](classes/JSONMap.md) | - |
+| [JSONSet](classes/JSONSet.md) | - |
+
+## Functions
+
+| Function | Description |
+| ------ | ------ |
+| [sortKeys](functions/sortKeys.md) | Recursively sorts the keys of an object in lexicographical order. |
+
 ## Array
 
 ### 2D
@@ -230,8 +243,6 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CartesianMap](classes/CartesianMap.md) | Represents a map with keys of cartesian coordinates, optimized for efficient storage and lookup. |
-| [CartesianSet](classes/CartesianSet.md) | Represents a set of 2D cartesian, optimized for efficient storage and lookup. |
 | [Cartesian](type-aliases/Cartesian.md) | Cartesian coordinate (x, y) |
 | [Polar](type-aliases/Polar.md) | Polar coordinate (angle, radius) |
 | [Origin](variables/Origin.md) | The origin of cartesian coordinates (0, 0) |
@@ -498,9 +509,9 @@
 | [toCamelCase](functions/toCamelCase.md) | Convert an identifier string to a camel case |
 | [toCapitalCase](functions/toCapitalCase.md) | Capitalize the first letter of a string |
 | [toCapitalWordCase](functions/toCapitalWordCase.md) | Capitalize the first letter of each word in a string |
-| [toDashCase](functions/toDashCase.md) | Convert an identifier string to a dash form |
 | [toDotCase](functions/toDotCase.md) | Convert an identifier string to a dot form |
 | [toHumanCase](functions/toHumanCase.md) | Convert an identifier string to human readable form |
+| [toKebabCase](functions/toKebabCase.md) | Convert an identifier string to a kebab-case form |
 | [toPascalCase](functions/toPascalCase.md) | Convert an identifier string to pascal case |
 | [toSmallCase](functions/toSmallCase.md) | Convert the first letter of a string to lower case |
 | [toSmallWordsCase](functions/toSmallWordsCase.md) | Convert the first letter of each word in a string to lower case |

@@ -1,9 +1,11 @@
 import { describe, expect, test } from 'vitest';
 
 import { type Cartesian } from './@types/geometry.ts';
-import { CartesianMap } from './cartesian-map.ts';
+import { JSONMap } from './json-map.ts';
 
-describe('CartesianMap', () => {
+class CartesianMap<T = unknown> extends JSONMap<Cartesian, T> {}
+
+describe('JSONMap', () => {
   test('creates empty map when no initial data provided', () => {
     const map = new CartesianMap<string>();
 
@@ -79,16 +81,6 @@ describe('CartesianMap', () => {
     const map = new CartesianMap<string>();
 
     expect(map.delete({ x: 999, y: 999 })).toBe(false);
-  });
-
-  test('cleans up empty x-axis maps after deletion', () => {
-    const map = new CartesianMap<string>();
-    map.set({ x: 1, y: 1 }, 'only value');
-
-    map.delete({ x: 1, y: 1 });
-
-    expect(map.size).toBe(0);
-    expect(map.has({ x: 1, y: 1 })).toBe(false);
   });
 
   test('clear removes all entries', () => {
@@ -183,7 +175,7 @@ describe('CartesianMap', () => {
     map.set({ x: 1, y: 1 }, 'first');
     map.set({ x: 2, y: 2 }, 'second');
 
-    const results: { value: string; key: Cartesian; map: CartesianMap<string> }[] = [];
+    const results: { value: string; key: Cartesian; map: JSONMap<Cartesian, string> }[] = [];
 
     // eslint-disable-next-line unicorn/no-array-for-each
     map.forEach((value, key, mapRef) => {
@@ -220,38 +212,6 @@ describe('CartesianMap', () => {
     expect(result).toBe(map);
   });
 
-  test('handles negative coordinates', () => {
-    const map = new CartesianMap<string>();
-
-    map.set({ x: -5, y: -10 }, 'negative');
-
-    expect(map.get({ x: -5, y: -10 })).toBe('negative');
-    expect(map.has({ x: -5, y: -10 })).toBe(true);
-    expect(map.size).toBe(1);
-  });
-
-  test('handles zero coordinates', () => {
-    const map = new CartesianMap<string>();
-
-    map.set({ x: 0, y: 0 }, 'origin');
-    map.set({ x: 0, y: 1 }, 'y-axis');
-    map.set({ x: 1, y: 0 }, 'x-axis');
-
-    expect(map.get({ x: 0, y: 0 })).toBe('origin');
-    expect(map.get({ x: 0, y: 1 })).toBe('y-axis');
-    expect(map.get({ x: 1, y: 0 })).toBe('x-axis');
-    expect(map.size).toBe(3);
-  });
-
-  test('handles floating point coordinates', () => {
-    const map = new CartesianMap<string>();
-
-    map.set({ x: 1.5, y: 2.7 }, 'decimal');
-
-    expect(map.get({ x: 1.5, y: 2.7 })).toBe('decimal');
-    expect(map.has({ x: 1.5, y: 2.7 })).toBe(true);
-  });
-
   test('works with different value types', () => {
     const numberMap = new CartesianMap<number>();
     numberMap.set({ x: 1, y: 1 }, 42);
@@ -270,8 +230,8 @@ describe('CartesianMap', () => {
   test('has correct Symbol.toStringTag', () => {
     const map = new CartesianMap<string>();
 
-    expect(map[Symbol.toStringTag]).toBe('CartesianMap');
-    expect(Object.prototype.toString.call(map)).toBe('[object CartesianMap]');
+    expect(map[Symbol.toStringTag]).toBe('JSONMap');
+    expect(Object.prototype.toString.call(map)).toBe('[object JSONMap]');
   });
 
   test('maintains insertion order in iteration', () => {

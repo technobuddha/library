@@ -1,7 +1,9 @@
 import { type Cartesian } from './@types/geometry.ts';
-import { CartesianSet } from './cartesian-set.ts';
+import { JSONSet } from './json-set.ts';
 
-describe('CartesianSet', () => {
+class CartesianSet extends JSONSet<Cartesian> {}
+
+describe('JSONSet', () => {
   test('constructor', () => {
     expect(new CartesianSet()).toBeInstanceOf(CartesianSet);
     expect(
@@ -34,10 +36,8 @@ describe('CartesianSet', () => {
     expect(set.size).toBe(1);
     set.add({ x: 3, y: 4 });
     expect(set.size).toBe(2);
-    set.add([
-      { x: 5, y: 6 },
-      { x: 7, y: 8 },
-    ]);
+    set.add({ x: 5, y: 6 });
+    set.add({ x: 7, y: 8 });
     expect(set.size).toBe(4);
     set.add({ x: 1, y: 2 }); // Duplicate
     expect(set.size).toBe(4);
@@ -245,7 +245,7 @@ describe('CartesianSet', () => {
 
   test('[toStringTag]', () => {
     const set = new CartesianSet();
-    expect(set[Symbol.toStringTag]).toBe('CartesianSet');
+    expect(set[Symbol.toStringTag]).toBe('JSONSet');
   });
 
   test('iterator', () => {
