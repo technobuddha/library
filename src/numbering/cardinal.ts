@@ -50,6 +50,9 @@ export type CardinalOptions = {
    * @defaultValue false
    */
   ordinal?: Numbering['ordinal'];
+
+  // TODO [2025-08-15]: write desc
+  shift?: Numbering['shift'];
 };
 
 /**
@@ -87,6 +90,7 @@ export function cardinal(input: number, options: CardinalOptions = {}): string {
     denominators: options?.denominators ?? 'common',
     precision: options?.precision ?? 6,
     ordinal: options?.ordinal ?? false,
+    shift: options?.shift ?? false,
   };
 
   return numbering(input, numberingOptions);

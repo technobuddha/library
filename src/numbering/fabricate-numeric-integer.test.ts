@@ -2,7 +2,7 @@ import { fabricateNumericInteger } from './fabricate-numeric-integer.ts';
 
 describe('fabricateNumericInteger', () => {
   test('should handle single digit numbers', () => {
-    const o = { ordinal: false, precision: 9 as const };
+    const o = { ordinal: false, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(0, o)).toBe('0');
     expect(fabricateNumericInteger(5, o)).toBe('5');
@@ -10,7 +10,7 @@ describe('fabricateNumericInteger', () => {
   });
 
   test('should handle multi-digit numbers', () => {
-    const o = { ordinal: false, precision: 9 as const };
+    const o = { ordinal: false, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(12, o)).toBe('12');
     expect(fabricateNumericInteger(123, o)).toBe('123');
@@ -20,7 +20,7 @@ describe('fabricateNumericInteger', () => {
   });
 
   test('should pad groups with zeros', () => {
-    const o = { ordinal: false, precision: 9 as const };
+    const o = { ordinal: false, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(1002, o)).toBe('1,002');
     expect(fabricateNumericInteger(1000002, o)).toBe('1,000,002');
@@ -28,7 +28,7 @@ describe('fabricateNumericInteger', () => {
   });
 
   test('should handle large numbers', () => {
-    const o = { ordinal: false, precision: 9 as const };
+    const o = { ordinal: false, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(9876543210, o)).toBe('9,876,543,210');
     expect(fabricateNumericInteger(1e10, o)).toBe('10,000,000,000');
@@ -38,7 +38,7 @@ describe('fabricateNumericInteger', () => {
   });
 
   test('should handle the ordinal option', () => {
-    const o = { ordinal: true, precision: 9 as const };
+    const o = { ordinal: true, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(1, o)).toBe('1st');
     expect(fabricateNumericInteger(2, o)).toBe('2nd');
@@ -50,13 +50,13 @@ describe('fabricateNumericInteger', () => {
   });
 
   test('should handle zero with ordinal', () => {
-    const o = { ordinal: true, precision: 9 as const };
+    const o = { ordinal: true, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(0, o)).toBe('0th');
   });
 
   test('should handle negative numbers as string (no sign)', () => {
-    const o = { ordinal: false, precision: 9 as const };
+    const o = { ordinal: false, precision: 9 as const, shift: false };
 
     expect(fabricateNumericInteger(-1234, o)).toBe('1,234');
   });

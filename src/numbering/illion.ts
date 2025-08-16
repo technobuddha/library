@@ -1,3 +1,5 @@
+import { type Numbering } from './numbering.ts';
+
 type IllionReturn = {
   quantity: number;
   word: string | null;
@@ -5,7 +7,11 @@ type IllionReturn = {
   exponent: number;
 };
 
-export function illion(argMantissa: string, argExponent: number): IllionReturn {
+export function illion(
+  argMantissa: string,
+  argExponent: number,
+  shift: Numbering['shift'],
+): IllionReturn {
   let mantissa = argMantissa;
   let exponent = argExponent;
 
@@ -35,11 +41,11 @@ export function illion(argMantissa: string, argExponent: number): IllionReturn {
     // no default
   }
 
-  // if (mantissa.length > 0 && mantissa.length < 3 && Number.parseInt(mantissa) > 0) {
-  //   quantity = Number.parseFloat(`${quantity}.${mantissa}`);
-  //   exponent -= mantissa.length;
-  //   mantissa = '';
-  // }
+  if (shift && mantissa.length > 0 && mantissa.length < 3 && Number.parseInt(mantissa) > 0) {
+    quantity = Number.parseFloat(`${quantity}.${mantissa}`);
+    exponent -= mantissa.length;
+    mantissa = '';
+  }
 
   if (factor < 0) {
     return { quantity, mantissa, exponent, word: null };

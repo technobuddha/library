@@ -14,9 +14,9 @@ import { type Numbering } from './numbering.ts';
  */
 export function fabricateNumericInteger(
   input: number,
-  options: Pick<Numbering, 'ordinal' | 'precision'>,
+  options: Pick<Numbering, 'ordinal' | 'precision' | 'shift'>,
 ): string {
-  const { ordinal, precision } = options;
+  const { ordinal, precision, shift } = options;
   const words: string[] = [];
 
   let { mantissa, exponent } = deconstructNumber(input, precision);
@@ -25,7 +25,7 @@ export function fabricateNumericInteger(
   while (exponent >= 0) {
     let quantity: number;
 
-    ({ quantity, mantissa, exponent } = illion(mantissa, exponent));
+    ({ quantity, mantissa, exponent } = illion(mantissa, exponent, shift));
 
     if (first) {
       words.push(quantity.toString());

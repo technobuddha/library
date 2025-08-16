@@ -1,13 +1,16 @@
-import { space } from '../constants.ts';
+import { cleanEnd } from '../clean.ts';
+import { cardinalOnes, space } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
+import { splitChars } from '../split-chars.ts';
 
+import { fraction } from './fraction.ts';
 import { hundreds } from './hundreds.ts';
 import { illion } from './illion.ts';
 import { makeOrdinal } from './make-ordinal.ts';
 import { type Numbering } from './numbering.ts';
 
 export function fabricateAlphabeticInteger(input: number, options: Numbering): string {
-  const { output, precision, ordinal } = options;
+  const { output, precision, ordinal, shift } = options;
 
   const words: string[] = [];
 
@@ -17,22 +20,32 @@ export function fabricateAlphabeticInteger(input: number, options: Numbering): s
     let word: string | null;
     let quantity: number;
 
-    ({ quantity, mantissa, exponent, word } = illion(mantissa, exponent));
+    ({ quantity, mantissa, exponent, word } = illion(mantissa, exponent, shift));
+    const { whole, fractional } = deconstructNumber(quantity, Infinity);
 
     if (quantity) {
       if (output.integer === 'hybrid') {
-        words.push(quantity.toString());
+        if (fractional.value > 0) {
+          if (shift === 'decimal') {
+            words.push(quantity.toString());
+          } else {
+            words.push(fraction(quantity, { output: 'numeric' }));
+          }
+        } else {
+          words.push(quantity.toString());
+        }
+      } else if (fractional.value > 0) {
+        if (shift === 'decimal') {
+          words.push(...hundreds(whole.value, options), 'point');
+          const frac = splitChars(cleanEnd(fractional.value.toFixed(2).slice(2), '0'));
+          for (const digit of frac) {
+            words.push(cardinalOnes[Number.parseInt(digit)]);
+          }
+        } else {
+          words.push(fraction(quantity, { output: 'alphabetic' }));
+        }
       } else {
-        const { whole /*, fraction*/ } = deconstructNumber(quantity, Infinity);
-
         words.push(...hundreds(whole.value, options));
-        // if (fraction.value > 0) {
-        //   words.push('point');
-        //   const frac = splitChars(cleanEnd(fraction.value.toFixed(2).slice(2), '0'));
-        //   for (const digit of frac) {
-        //     words.push(cardinalOnes[Number.parseInt(digit)]);
-        //   }
-        // }
       }
       if (word) {
         words.push(word);

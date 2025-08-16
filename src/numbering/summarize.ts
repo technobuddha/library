@@ -23,6 +23,8 @@ export function summarize(input: number): string {
     hyphen: space,
     tolerance: 0.01,
     denominators: 'common',
-    precision: 2,
+    precision: 3,
+    ordinal: false,
+    shift: 'decimal',
   });
 }

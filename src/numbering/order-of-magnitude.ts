@@ -15,5 +15,5 @@ import { illion } from './illion.ts';
  * @category Numbers
  */
 export function orderOfMagnitude(exponent: number): string | null {
-  return illion('000', exponent).word;
+  return illion('000', exponent, false).word;
 }

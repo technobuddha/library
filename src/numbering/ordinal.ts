@@ -51,6 +51,9 @@ export type OrdinalOptions = {
    * @defaultValue false
    */
   ordinal?: Numbering['ordinal'];
+
+  // TODO [2025-08-15]: desc
+  shift?: Numbering['shift'];
 };
 
 /**
@@ -100,6 +103,7 @@ export function ordinal(input: number, options: OrdinalOptions = {}): string {
     denominators: options?.denominators ?? 'common',
     precision: options?.precision ?? 9,
     ordinal: options?.ordinal ?? true,
+    shift: options?.shift ?? false,
   };
 
   return numbering(input, numberingOptions);

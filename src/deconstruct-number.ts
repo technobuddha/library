@@ -47,7 +47,7 @@ export function deconstructNumber(
   input: number,
   precision = 9,
 ): DeconstructedNumber & {
-  fraction: DeconstructedNumber;
+  fractional: DeconstructedNumber;
   whole: DeconstructedNumber;
 } {
   if (Number.isNaN(input) || !Number.isFinite(input)) {
@@ -77,7 +77,7 @@ export function deconstructNumber(
         mantissa: empty,
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign,
         value,
         mantissa,
@@ -104,7 +104,7 @@ export function deconstructNumber(
         mantissa: wholeMantissa.replace('.', empty),
         exponent: exponent,
       },
-      fraction: {
+      fractional: {
         sign,
         value: fraction,
         mantissa: fraction === 0 ? empty : fractionMantissa.replace('.', empty),
@@ -124,7 +124,7 @@ export function deconstructNumber(
       mantissa,
       exponent,
     },
-    fraction: {
+    fractional: {
       sign,
       value: 0,
       mantissa: empty,

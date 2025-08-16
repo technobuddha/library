@@ -21,7 +21,8 @@ export type Numbering = {
   tolerance: number;
   denominators: 'common' | 'wrench' | number[];
   precision: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-  ordinal?: boolean;
+  ordinal: boolean;
+  shift: false | 'decimal' | 'fraction';
 };
 
 export function signWord(sign: 1 | -1): string {
@@ -55,18 +56,18 @@ export function numbering(input: number, options: Numbering): string {
     );
   }
 
-  const { sign, whole, fraction } = deconstructNumber(input, precision);
+  const { sign, whole, fractional } = deconstructNumber(input, precision);
   const s = output.integer === 'numeric' ? signSymbol(sign) : signWord(sign);
 
-  if (whole.value === 0 && fraction.value === 0) {
+  if (whole.value === 0 && fractional.value === 0) {
     const words = output.integer === 'alphabetic' ? `${s}zero` : `${s}0`;
     return ordinal ? makeOrdinal(words) : words;
   }
 
   const fractionalPart =
     output.fraction === 'numeric' ?
-      fabricateNumericFraction(fraction, options)
-    : fabricateAlphabeticFraction(fraction, options);
+      fabricateNumericFraction(fractional, options)
+    : fabricateAlphabeticFraction(fractional, options);
 
   if (whole.value === 0) {
     if (ordinal) {
@@ -82,7 +83,7 @@ export function numbering(input: number, options: Numbering): string {
       fabricateAlphabeticInteger(whole.value, options)
     : fabricateNumericInteger(whole.value, options);
 
-  if (fraction.value === 0) {
+  if (fractional.value === 0) {
     return `${s}${integerPart}`;
   }
 

@@ -15,7 +15,7 @@ describe('deconstructNumber', () => {
         mantissa: '42',
         exponent: 1,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 0,
         mantissa: '',
@@ -33,7 +33,7 @@ describe('deconstructNumber', () => {
         mantissa: '',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 0,
         mantissa: '',
@@ -54,7 +54,7 @@ describe('deconstructNumber', () => {
         mantissa: '7',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: -1,
         value: 0,
         mantissa: '',
@@ -75,7 +75,7 @@ describe('deconstructNumber', () => {
         mantissa: '3',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 0.14159265,
         mantissa: '14159265',
@@ -93,7 +93,7 @@ describe('deconstructNumber', () => {
         mantissa: '2',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: -1,
         value: 0.71828183,
         mantissa: '71828183',
@@ -114,7 +114,7 @@ describe('deconstructNumber', () => {
         mantissa: '',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 1.23456789e-30,
         mantissa: '123456789',
@@ -135,7 +135,7 @@ describe('deconstructNumber', () => {
         mantissa: '123456789',
         exponent: 30,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 0,
         mantissa: '',
@@ -156,7 +156,7 @@ describe('deconstructNumber', () => {
         mantissa: '',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 0.999999999,
         mantissa: '999999999',
@@ -174,7 +174,7 @@ describe('deconstructNumber', () => {
         mantissa: '1',
         exponent: 0,
       },
-      fraction: {
+      fractional: {
         sign: 1,
         value: 0,
         mantissa: '',

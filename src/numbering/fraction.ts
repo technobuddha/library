@@ -50,6 +50,9 @@ export type FractionOptions = {
    * @defaultValue false
    */
   ordinal?: Numbering['ordinal'];
+
+  // TODO [2025-08-15]: desc
+  shift?: Numbering['shift'];
 };
 
 /**
@@ -89,6 +92,7 @@ export function fraction(input: number, options: FractionOptions = {}): string {
     denominators: options?.denominators ?? 'common',
     precision: options?.precision ?? 6,
     ordinal: options?.ordinal ?? false,
+    shift: options?.shift ?? false,
   };
 
   return numbering(input, numberingOptions);

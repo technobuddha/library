@@ -15,11 +15,6 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
 
   public readonly [Symbol.toStringTag] = 'JSONMap';
 
-  protected replicate<X = K>(values?: Iterable<X> | null): Set<X> {
-    const Maker = this.constructor as new (values?: Iterable<X> | null) => Set<X>;
-    return new Maker(values);
-  }
-
   public get size(): number {
     return this.map.size;
   }

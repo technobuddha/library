@@ -41,6 +41,8 @@ export function fabricateAlphabeticFraction(
     tolerance: 0.01,
     denominators: 'common',
     precision: 9,
+    ordinal: false,
+    shift: false,
   });
 
   return `${integerPart}${hyphen}${fractionPart}`;

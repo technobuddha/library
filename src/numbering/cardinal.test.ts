@@ -180,4 +180,44 @@ describe('cardinal', () => {
     expect(cardinal(0.987654, o)).toBe(`987654${fractionSlash}1000000`);
     expect(cardinal(0.9999999, o)).toBe('1');
   });
+
+  test('should shift decimals in hybrid mode', () => {
+    const o = { output: 'hybrid' as const, shift: 'decimal' as const, precision: 3 as const };
+
+    expect(cardinal(1000000, o)).toBe('1 million');
+    expect(cardinal(1200000, o)).toBe('1.2 million');
+    expect(cardinal(1230000, o)).toBe('1.23 million');
+    expect(cardinal(1234000, o)).toBe('1.23 million');
+    expect(cardinal(1235000, o)).toBe('1.24 million');
+  });
+
+  test('should shift fractions in hybrid mode', () => {
+    const o = { output: 'hybrid' as const, shift: 'fraction' as const, precision: 3 as const };
+
+    expect(cardinal(1000000, o)).toBe('1 million');
+    expect(cardinal(1200000, o)).toBe(`1 1${fractionSlash}5 million`);
+    expect(cardinal(1230000, o)).toBe(`1 23${fractionSlash}100 million`);
+    expect(cardinal(1234000, o)).toBe(`1 23${fractionSlash}100 million`);
+    expect(cardinal(1235000, o)).toBe(`1 1${fractionSlash}4 million`);
+  });
+
+  test('should shift decimals in alphabetic mode', () => {
+    const o = { output: 'alphabetic' as const, shift: 'decimal' as const, precision: 3 as const };
+
+    expect(cardinal(1000000, o)).toBe('one million');
+    expect(cardinal(1200000, o)).toBe('one point two million');
+    expect(cardinal(1230000, o)).toBe('one point two three million');
+    expect(cardinal(1234000, o)).toBe('one point two three million');
+    expect(cardinal(1235000, o)).toBe('one point two four million');
+  });
+
+  test('should shift fractions in alphabetic mode', () => {
+    const o = { output: 'alphabetic' as const, shift: 'fraction' as const, precision: 3 as const };
+
+    expect(cardinal(1000000, o)).toBe('one million');
+    expect(cardinal(1200000, o)).toBe(`one and one${hyphen}fifth million`);
+    expect(cardinal(1230000, o)).toBe(`one and twenty three${hyphen}hundredths million`);
+    expect(cardinal(1234000, o)).toBe(`one and twenty three${hyphen}hundredths million`);
+    expect(cardinal(1235000, o)).toBe(`one and one${hyphen}quarter million`);
+  });
 });
