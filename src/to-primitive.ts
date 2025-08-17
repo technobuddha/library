@@ -8,8 +8,8 @@ import { isPrimitive } from './is-primitive.ts';
  * @param input - the object
  * @param hint - A "hint" as to what the type should be.  "string", "number" or "default"
  * @returns primitive value
- * @group Object
- * @category Primitive
+ * @group Primitive
+ * @category Conversion
  */
 export function toPrimitive(
   input: unknown,

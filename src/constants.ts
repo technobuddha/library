@@ -179,82 +179,82 @@ export const month: Readonly<Record<string, MonthOfYear>> = Object.freeze({
 /**
  * Fraction Slash
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const fractionSlash = '⁄'; // U+2044 FRACTION SLASH
 /**
  * Hyphen
  *
- * @group English
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const hyphen = '‐'; // U+2010 HYPHEN
 /**
  * Non-Breaking Hyphen
  *
- * @group English
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const nbHyphen = '‑'; // U+2011 NON-BREAKING HYPHEN
 /**
  * Soft Hyphen
  *
- * @group English
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const softHyphen = '­'; // U+00AD SOFT HYPHEN
 
 /**
  * Negative Sign
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const negativeSign = '˗'; // U+02D7 MODIFIER LETTER MINUS
 /**
  * Positive Sign
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const positiveSign = '˖'; // U+02D8 MODIFIER LETTER PLUS
 
 /**
  * Superscript Negative
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const supNegative = '⁻'; // U+207B SUPERSCRIPT MINUS
 /**
  * Superscript Positive
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const supPositive = '⁺'; // U+207A SUPERSCRIPT PLUS
 
 /**
  * Subscript Negative
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const subNegative = '₋'; // U+208B SUBSCRIPT MINUS
 /**
  * Subscript Positive
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const subPositive = '₊'; // U+208A SUBSCRIPT PLUS
 
 /**
  * Invisible Plus sign
  *
- * @group Math
- * @category Unicode
+ * @group Unicode
+ * @category Characters
  */
 export const invisiblePlus = '⁤'; // U+2064 INVISIBLE PLUS
 
@@ -266,7 +266,7 @@ export const invisiblePlus = '⁤'; // U+2064 INVISIBLE PLUS
  */
 // prettier-ignore
 export const cardinalOnes = [
-  'zero',         'one',          'two',          'three',        'four',
+  empty,          'one',          'two',          'three',        'four',
   'five',         'six',          'seven',        'eight',        'nine',
   'ten',          'eleven',       'twelve',       'thirteen',     'fourteen',
   'fifteen',      'sixteen',      'seventeen',    'eighteen',     'nineteen',
@@ -291,7 +291,7 @@ export const cardinalTens = [
  */
 // prettier-ignore
 export const ordinalOnes = [
-  '',             'first',        'second',       'third',      'fourth',
+  'first',        'second',       'third',      'fourth',
   'fifth',        'sixth',        'seventh',      'eighth',     'ninth',
   'tenth',        'eleventh',     'twelfth',      'thirteenth', 'fourteenth',
   'fifteenth',    'sixteenth',    'seventeenth',  'eighteenth', 'nineteenth'

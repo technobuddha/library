@@ -4,7 +4,7 @@
  * @param input - The string to unescape
  * @returns the string with escapes resolved
  * @group Encoding
- * @category Java
+ * @category Escaping
  */
 export function unescapeJava(input: string): string {
   // cspell:ignore bfnrt

@@ -7,8 +7,18 @@ import { build } from './build.ts';
 import { splitChars } from './split-chars.ts';
 
 /**
- * @group Template
- * @category RegExp
+ * Constructs a new `RegExp` by interpolating template strings and provided regular expressions.
+ *
+ * This function allows you to compose regular expressions using template literals,
+ * automatically merging flags and wrapping interpolated regex sources as non-capturing groups
+ * when appropriate.
+ *
+ * @param template - The template string array containing the literal parts of the pattern.
+ * @param args - The regular expressions to interpolate into the template.
+ * @returns A new `RegExp` object with the combined pattern and merged flags.
+ *
+ * @group RegExp
+ * @category Template
  */
 export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   const flags = new Set<string>(['u']);
@@ -46,7 +56,7 @@ const IPV4SEG = /(25[0-5]|(?:2[0-4]|1[0-9]|0?[0-9]|0{0,2})[0-9])/;
 /**
  * validate an IPv4 address
  * @group RegExp
- * @category Internet Protocol
+ * @category Validation
  */
 export const ipV4 = re`^${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}$`;
 
@@ -56,7 +66,7 @@ const NET192 = /^192[.]168$/;
 /**
  * determine if Ipv4 address is local
  * @group RegExp
- * @category Internet Protocol
+ * @category Validation
  */
 export const ipV4Local = re`^(?:${NET10}|${NET172}|${NET192})[.]${IPV4SEG}[.]${IPV4SEG}$`;
 
@@ -77,22 +87,33 @@ const TIMEZONE = re`^(?:(?:${ZONEHOUR}(?::${ZONEMINUTE})?)|Z)$`;
 /**
  * Validate a ISO formatted date
  * @group RegExp
- * @category Date
+ * @category Validation
  */
 export const isoDate = re`^${YEAR}-${MONTH}-${DAY}T${HOUR}:${MINUTE}(?::${SECOND}(?:[.]${FRACTION})?)?${TIMEZONE}$`;
 
 /**
  * Validate a valid number
  * @group RegExp
- * @category Number
+ * @category Validation
  */
 export const numeric = /^((?:NaN|[+-]?(?:(?:\d+|\d*[.]\d+)(?:[Ee][+-]?\d+)?|[+-]?Infinity)))$/;
 
 const HOST = /^(?!-)[a-zA-Z0-9-]{1,63}(?<!-)[.]$/;
 const TLD = /^[a-z]{2,}$/;
 /**
+ * Regular expression for matching a domain name composed of a host and a top-level domain (TLD).
+ *
+ * @remarks
+ * This regular expression uses the `re` tagged template literal to construct the pattern.
+ * The pattern expects one or more occurrences of `HOST` followed by `TLD`, anchored to the start and end of the string.
+ *
+ * @example
+ * ```typescript
+ * const isDomain = domain.test('example.com');
+ * ```
+ *
  * @group RegExp
- * @category Internet Protocol
+ * @category Validation
  */
 export const domain = re`^${HOST}+${TLD}$`;
 
@@ -104,6 +125,6 @@ const EMAILADDRESS = re`(?:${EMAILGLYPH}+(?:[.]${EMAILGLYPH}+)*|"(?:${EMAILQUOTE
 /**
  * validate an valid email address
  * @group RegExp
- * @category Email
+ * @category Validation
  */
 export const email = re`${EMAILADDRESS}@(?:\\[${ipV4}\\]|${domain})$`;

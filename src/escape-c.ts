@@ -7,7 +7,7 @@ import { hex, oct, u4, u8, x2 } from './escape.ts';
  * @param input - The string to escape
  * @returns the escaped string
  * @group Encoding
- * @category C/C++
+ * @category Escaping
  */
 export function escapeC(input: string): string {
   const output: string[] = [];

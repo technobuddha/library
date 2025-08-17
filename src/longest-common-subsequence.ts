@@ -1,6 +1,8 @@
 import { create2DArray } from './create-2d-array.ts';
 
 /**
+ * Options for configuring the longest common subsequence calculation.
+ *
  * @group Array
  * @category Longest Common Subsequence
  */

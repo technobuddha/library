@@ -5,8 +5,8 @@ import { isBoolean, isNumber, isString } from 'lodash-es';
  *
  * @param entity - The entity to convert, the entity will attempt to be converted as a number, a boolean or a string
  * @returns The entity as a number, or NaN if it cannot be converted
- * @group Conversion
- * @category To Integer
+ * @group Primitive
+ * @category Conversion
  */
 export function toInteger(entity: unknown): number {
   return (

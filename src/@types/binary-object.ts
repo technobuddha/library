@@ -1,6 +1,8 @@
 /**
+ * A type that represents various binary object types in JavaScript.
+ *
  * @group Encoding
- * @category Data URL
+ * @category Binary
  */
 export type BinaryObject =
   | ArrayBuffer

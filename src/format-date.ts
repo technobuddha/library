@@ -1,4 +1,4 @@
-import { secondsPerHour, secondsPerMinute } from './constants.ts';
+import { empty, secondsPerHour, secondsPerMinute } from './constants.ts';
 import { getDayOfWeek } from './get-day-of-week.ts';
 import { getDayOfYear } from './get-day-of-year.ts';
 import { getISOWeekOfYear } from './get-iso-week-of-year.ts';
@@ -217,10 +217,10 @@ export function formatDate(
         return getTimezone(o, { gmt: true });
       }
       case 'AM': {
-        return ho < 12 ? 'AM' : '';
+        return ho < 12 ? 'AM' : empty;
       } //AM  / --
       case 'PM': {
-        return ho < 12 ? '' : 'PM';
+        return ho < 12 ? empty : 'PM';
       } //--  / PM
       case 'T': {
         return ho < 12 ? 'A' : 'P';
@@ -229,16 +229,16 @@ export function formatDate(
         return ho < 12 ? 'AM' : 'PM';
       } //AM  / PM
       case 'AD': {
-        return yr < 1 ? '' : 'AD';
+        return yr < 1 ? empty : 'AD';
       } //--  / AD
       case 'BC': {
-        return yr < 1 ? 'BC' : '';
+        return yr < 1 ? 'BC' : empty;
       } //BC  / --
       case 'CE': {
-        return yr < 1 ? '' : 'CE';
+        return yr < 1 ? empty : 'CE';
       } //--  / CE
       case 'BCE': {
-        return yr < 1 ? 'BCE' : '';
+        return yr < 1 ? 'BCE' : empty;
       } //BCE / --
       case 'EE': {
         return yr < 1 ? 'BC' : 'AD';

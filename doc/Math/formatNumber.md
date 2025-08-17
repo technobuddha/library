@@ -1,0 +1,42 @@
+<!-- markdownlint-disable -->
+
+[@technobuddha/library](../index.md) / formatNumber
+
+# Function: formatNumber()
+
+> **formatNumber**(`input`: `number`, `mask`: `string`): `string`
+
+Defined in: [format-number.ts:532](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L532)
+
+Formats a number according to the specified mask.
+
+The mask can be a standard numeric format string (e.g., "C", "D", "E", "F", "G", "N", "P", "R", "X")
+with an optional precision specifier, or a custom numeric format string with optional sections for
+positive, negative, and zero values separated by semicolons.
+
+Standard format specifiers:
+- "C" or "c": Currency format.
+- "D" or "d": Decimal format.
+- "E" or "e": Scientific (exponential) format.
+- "F" or "f": Fixed-point format.
+- "G" or "g": General format (compact representation).
+- "N" or "n": Number format with group separators.
+- "P" or "p": Percent format.
+- "R" or "r": Round-trip format (ensures that a number converted to a string and back again yields the same number).
+- "X" or "x": Hexadecimal format.
+
+Custom format strings can include digit placeholders, group separators, decimal points, and
+optional sections for positive, negative, and zero values.
+
+## Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | `number` | The number to format. |
+| `mask` | `string` | The format mask string. |
+
+## Returns
+
+`string`
+
+The formatted number as a string.

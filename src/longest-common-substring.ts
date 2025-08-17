@@ -1,6 +1,8 @@
 import { create2DArray } from './create-2d-array.ts';
 
 /**
+ * Options for configuring the longest common substring calculation.
+ *
  * @group String
  * @category Fuzzy Match
  */
@@ -18,6 +20,7 @@ export type LongestCommonSubstringOptions = {
  * @param string2 - Second string.
  * @returns A string that is common to both strings such that there is no
  * common substring with size greater than the length of the string.
+ *
  * @group String
  * @category Fuzzy Match
  */

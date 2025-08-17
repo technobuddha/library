@@ -43,7 +43,7 @@ function int32(x: number): number {
 /**
  * Secure Hash Algorithm, SHA-1
  * @group Crypto
- * @category SHA1
+ * @category Hash
  */
 export class Sha1 extends HashBase {
   private a = 0x67452301;

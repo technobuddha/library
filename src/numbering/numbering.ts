@@ -7,21 +7,52 @@ import { fabricateNumericFraction } from './fabricate-numeric-fraction.ts';
 import { fabricateNumericInteger } from './fabricate-numeric-integer.ts';
 import { makeOrdinal } from './make-ordinal.ts';
 
+/**
+ * Options for controlling how numbers are converted to words or symbols.
+ *
+ * @group Math
+ * @category Numbers
+ */
 export type Numbering = {
+  /**
+   * Output format for integer and fraction parts.
+   * - integer: 'numeric' | 'alphabetic' | 'hybrid'
+   * - fraction: 'numeric' | 'alphabetic'
+   */
   output: {
     integer: 'numeric' | 'alphabetic' | 'hybrid';
     fraction: 'numeric' | 'alphabetic';
   };
 
-  /** Word to place after the hundreds.  "one hundred and one" vs. "one hundred one" */
+  /** Word to place after the hundreds.  E.g., "one hundred and one" vs. "one hundred one" */
   and: string;
-  /** Character to place between the tens units and the ones units.  "twenty-one" vs. "twenty one" */
+
+  /** Character to place between the tens and ones units. E.g., "twenty-one" vs. "twenty one" */
   hyphen: string;
 
+  /** Maximum allowed difference between the actual and represented value. */
   tolerance: number;
+
+  /**
+   * Allowed denominators for fractions.
+   * - 'common': typical denominators (2, 3, 4, etc.)
+   * - 'wrench': denominators used in wrench sizes
+   * - number[]: custom denominators
+   */
   denominators: 'common' | 'wrench' | number[];
+
+  /** Number of decimal places or significant digits to use (1-9). */
   precision: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+
+  /** Whether to use ordinal form (e.g., "first", "second", "third"). */
   ordinal: boolean;
+
+  /**
+   * Whether to shift the output.
+   * - false: no shift
+   * - 'decimal': shift decimal part
+   * - 'fraction': shift fraction part
+   */
   shift: false | 'decimal' | 'fraction';
 };
 

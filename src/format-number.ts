@@ -6,18 +6,126 @@ import { padNumber } from './pad-number.ts';
 import { splitChars } from './split-chars.ts';
 
 //#region parse
+/**
+ * Internal type representing the parsed components of a number format mask.
+ *
+ * @remarks
+ * This type is used internally by the {@link parse} function to decompose a format mask
+ * into its constituent parts for number formatting operations.
+ *
+ * @example
+ * ```typescript
+ * // For mask "#,##0.00"
+ * const parsed: ParseReturn = {
+ *   aMask: ['0', '0'],           // After decimal point
+ *   aDigits: 2,                  // 2 digits after decimal
+ *   bMask: ['#', '#', '#', '0'], // Before decimal point
+ *   bDigits: 4,                  // 4 digit positions before decimal
+ *   scale: 1,                    // No scaling
+ *   group: true,                 // Grouping enabled (commas)
+ *   exponent: 0,                 // No scientific notation
+ *   signExponent: false,         // No explicit sign in exponent
+ *   precision: 2                 // 2 decimal places
+ * };
+ * ```
+ *
+ * @internal
+ */
 type ParseReturn = {
+  /**
+   * Format mask components after the decimal point.
+   * Each element represents a formatting directive ('0', '#', or literal text).
+   */
   aMask: string[];
+
+  /**
+   * Number of digit placeholders after the decimal point.
+   * Counts only '0' and '#' characters in {@link aMask}.
+   */
   aDigits: number;
+
+  /**
+   * Format mask components before the decimal point.
+   * Each element represents a formatting directive ('0', '#', or literal text).
+   */
   bMask: string[];
+
+  /**
+   * Number of digit placeholders before the decimal point.
+   * Counts only '0' and '#' characters in {@link bMask}.
+   */
   bDigits: number;
+
+  /**
+   * Scaling factor to apply to the number before formatting.
+   * - `1` = no scaling
+   * - `100` = percentage (%)
+   * - `1000` = per mille (‰)
+   * - `10000` = per ten thousand (‱)
+   * - Also affected by comma positioning for thousands scaling
+   */
   scale: number;
+
+  /**
+   * Whether to include thousands grouping separators (commas).
+   * Set to `true` when commas are present in the format mask.
+   */
   group: boolean;
+
+  /**
+   * Number of digits in the exponent for scientific notation.
+   * `0` indicates no scientific notation formatting.
+   */
   exponent: number;
+
+  /**
+   * Whether to always show the sign (+/-) in scientific notation exponent.
+   * Only relevant when {@link exponent} \> 0.
+   */
   signExponent: boolean;
+
+  /**
+   * Maximum number of digits after the decimal point.
+   * Used to determine rounding and padding behavior.
+   */
   precision: number;
 };
 
+/**
+ * Parses a numeric format mask string and extracts formatting information.
+ *
+ * The function analyzes the provided mask to determine digit placeholders,
+ * grouping, scaling (e.g., percent, per mille), decimal precision, exponent formatting,
+ * and literal characters. It returns an object describing the parsed mask.
+ *
+ * @param mask - The numeric format mask string to parse (e.g., "#,##0.00%").
+ * @returns An object containing:
+ * - `aMask`: Array of mask tokens after the decimal point.
+ * - `aDigits`: Number of digit placeholders after the decimal point.
+ * - `bMask`: Array of mask tokens before the decimal point.
+ * - `bDigits`: Number of digit placeholders before the decimal point.
+ * - `scale`: Numeric scale factor (e.g., 100 for %, 1000 for ‰).
+ * - `group`: Whether digit grouping (e.g., thousands separator) is used.
+ * - `exponent`: Number of digits in the exponent (if scientific notation is used).
+ * - `signExponent`: Whether the exponent includes a sign.
+ * - `precision`: Number of digits after the decimal point.
+ *
+ * @example
+ * ```typescript
+ * const result = parse("#,##0.00%");
+ * // result = {
+ * //   aMask: ['0', '0'],
+ * //   aDigits: 2,
+ * //   bMask: ['#', ',', '#', '#', '0', '"%'],
+ * //   bDigits: 4,
+ * //   scale: 100,
+ * //   group: true,
+ * //   exponent: 0,
+ * //   signExponent: false,
+ * //   precision: 2
+ * // }
+ * ```
+ */
 function parse(mask: string): ParseReturn {
   let scale = 1;
   let beforeDP = true;
@@ -176,14 +284,26 @@ function parse(mask: string): ParseReturn {
 //#endregion
 //#region format
 /**
- * @group Number
- * @category Format
+ * Options for formatting numbers.
+ *
+ * @internal
  */
-export type FormatOptions = {
+type FormatOptions = {
+  /** The number of decimal places to round the number to. If undefined, no rounding is applied. */
   round?: number;
+  /** The total number of significant digits to display. If undefined, precision is not enforced. */
   precision?: number;
+  /** A multiplier to scale the number before formatting. For example, a scale of 100 will convert 1.23 to 123. */
   scale?: number;
+  /** The minimum number of integer digits to display, padding with leading zeros if necessary. */
   lead?: number;
+  /**
+   * Specifies which zeros to trim from the formatted number:
+   * - 'none': Do not trim any zeros.
+   * - 'front': Trim leading zeros.
+   * - 'back': Trim trailing zeros.
+   * - 'all': Trim both leading and trailing zeros.
+   */
   trim?: 'none' | 'front' | 'back' | 'all';
 };
 
@@ -300,6 +420,21 @@ function format(
   return new NumberFormatter(sign, mantissa, exponent);
 }
 
+/**
+ * Formats numbers by manipulating their sign, mantissa, and exponent components.
+ *
+ * The `NumberFormatter` class provides a fluent API for constructing formatted number strings,
+ * supporting features such as sign handling, digit grouping, decimal and fractional parts,
+ * and scientific notation. The output is built incrementally and can be retrieved as a string.
+ *
+ * @example
+ * ```typescript
+ * const formatter = new NumberFormatter(1, ['1', '2', '3', '4'], 2);
+ * const result = formatter.grouped().decimal().fraction().build(); // "1,2.34"
+ * ```
+ *
+ * @internal
+ */
 class NumberFormatter {
   public constructor(
     public sign: number,
@@ -367,8 +502,32 @@ class NumberFormatter {
 //#endregion
 //#region formatNumber
 /**
- * @group Number
- * @category Format
+ * Formats a number according to the specified mask.
+ *
+ * The mask can be a standard numeric format string (e.g., "C", "D", "E", "F", "G", "N", "P", "R", "X")
+ * with an optional precision specifier, or a custom numeric format string with optional sections for
+ * positive, negative, and zero values separated by semicolons.
+ *
+ * Standard format specifiers:
+ * - "C" or "c": Currency format.
+ * - "D" or "d": Decimal format.
+ * - "E" or "e": Scientific (exponential) format.
+ * - "F" or "f": Fixed-point format.
+ * - "G" or "g": General format (compact representation).
+ * - "N" or "n": Number format with group separators.
+ * - "P" or "p": Percent format.
+ * - "R" or "r": Round-trip format (ensures that a number converted to a string and back again yields the same number).
+ * - "X" or "x": Hexadecimal format.
+ *
+ * Custom format strings can include digit placeholders, group separators, decimal points, and
+ * optional sections for positive, negative, and zero values.
+ *
+ * @param input - The number to format.
+ * @param mask - The format mask string.
+ * @returns The formatted number as a string.
+ *
+ * @group Math
+ * @category Numbers
  */
 export function formatNumber(input: number, mask: string): string {
   // cspell:ignore CDEFGNPX

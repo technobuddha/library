@@ -4,7 +4,7 @@
  * @param input - the string to unescape
  * @returns the string with escapes resolved
  * @group Encoding
- * @category JavaScript / TypeScript
+ * @category Escaping
  */
 export function unescapeJS(input: string): string {
   return input.replaceAll(

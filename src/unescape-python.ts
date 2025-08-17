@@ -4,7 +4,7 @@
  * @param input - The string to unescape
  * @returns the string with escapes resolved
  * @group Encoding
- * @category Python
+ * @category Escaping
  */
 export function unescapePython(input: string): string {
   return input.replaceAll(

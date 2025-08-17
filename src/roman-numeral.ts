@@ -1,3 +1,4 @@
+import { empty } from './constants.ts';
 import { lookAhead } from './look-ahead.ts';
 import { splitChars } from './split-chars.ts';
 
@@ -111,7 +112,7 @@ export function parseRoman(val: string): number {
  * @group Math
  * @category Numbers
  */
-export type ToRomanOptions = {
+export type RomanOptions = {
   /** Specifies the output format for the Roman numeral. */
   format?: 'standard' | 'apostrophus' | 'vinculum';
 };
@@ -124,7 +125,7 @@ export type ToRomanOptions = {
  * @group Math
  * @category Numbers
  */
-export function toRoman(input: number, { format = 'standard' }: ToRomanOptions = {}): string {
+export function toRoman(input: number, { format = 'standard' }: RomanOptions = {}): string {
   const vg = valueGlyphs[format];
 
   if (input < 1 || input > vg.limit || !Number.isInteger(input)) {
@@ -132,7 +133,7 @@ export function toRoman(input: number, { format = 'standard' }: ToRomanOptions =
   }
 
   const digits = splitChars(input.toString());
-  let roman = '';
+  let roman = empty;
   for (let i = 0; i < vg.glyphs.length && digits.length > 0; ++i) {
     roman = vg.glyphs[i][Number.parseInt(digits.pop()!)] + roman;
   }
@@ -145,35 +146,35 @@ const valueGlyphs = {
   standard: {
     limit: 3999,
     glyphs: [
-      ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
-      ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
-      ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
-      ['', 'M', 'MM', 'MMM'],
+      [empty, 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+      [empty, 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+      [empty, 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
+      [empty, 'M', 'MM', 'MMM'],
     ],
   },
   apostrophus: {
     limit: 399999,
     glyphs: [
-      ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
-      ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
-      ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'Cↀ'],
-      ['', 'ↀ', 'ↀↀ', 'ↀↀↀ', 'ↀↁ', 'ↁ', 'ↁↀ', 'ↁↀↀ', 'ↁↀↀↀ', 'ↀↂ'],
-      ['', 'ↂ', 'ↂↂ', 'ↂↂↂ', 'ↂↇ', 'ↇ', 'ↇↂ', 'ↇↂↂ', 'ↇↂↂↂ', 'ↂↈ'],
-      ['', 'ↈ', 'ↈↈ', 'ↈↈↈ'],
+      [empty, 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+      [empty, 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+      [empty, 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'Cↀ'],
+      [empty, 'ↀ', 'ↀↀ', 'ↀↀↀ', 'ↀↁ', 'ↁ', 'ↁↀ', 'ↁↀↀ', 'ↁↀↀↀ', 'ↀↂ'],
+      [empty, 'ↂ', 'ↂↂ', 'ↂↂↂ', 'ↂↇ', 'ↇ', 'ↇↂ', 'ↇↂↂ', 'ↇↂↂↂ', 'ↂↈ'],
+      [empty, 'ↈ', 'ↈↈ', 'ↈↈↈ'],
     ],
   },
   vinculum: {
     limit: 899999999,
     glyphs: [
-      ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
-      ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
-      ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CI̅'],
-      ['', 'I̅', 'I̅I̅', 'I̅I̅I̅', 'I̅V̅', 'V̅', 'V̅I̅', 'V̅I̅I̅', 'V̅I̅I̅I̅', 'I̅X̅'],
-      ['', 'X̅', 'X̅X̅', 'X̅X̅X̅', 'X̅L̅', 'L̅', 'L̅X̅', 'L̅X̅X̅', 'L̅X̅X̅X̅', 'X̅C̅'],
-      ['', 'C̅', 'C̅C̅', 'C̅C̅C̅', 'C̅D̅', 'D̅', 'D̅C̅', 'D̅C̅C̅', 'D̅C̅C̅C̅', 'C̅I̿'],
-      ['', 'I̿', 'I̿I̿', 'I̿I̿I̿', 'I̿V̿', 'V̿', 'V̿I̿', 'V̿I̿I̿', 'V̿I̿I̿I̿', 'I̿X̿'],
-      ['', 'X̿', 'X̿X̿', 'X̿X̿X̿', 'X̿L̿', 'L̿', 'L̿X̿', 'L̿X̿X̿', 'L̿X̿X̿X̿', 'X̿C̿'],
-      ['', 'C̿', 'C̿C̿', 'C̿C̿C̿', 'C̿D̿', 'D̿', 'D̿C̿', 'D̿C̿C̿', 'D̿C̿C̿C̿'],
+      [empty, 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+      [empty, 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+      [empty, 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CI̅'],
+      [empty, 'I̅', 'I̅I̅', 'I̅I̅I̅', 'I̅V̅', 'V̅', 'V̅I̅', 'V̅I̅I̅', 'V̅I̅I̅I̅', 'I̅X̅'],
+      [empty, 'X̅', 'X̅X̅', 'X̅X̅X̅', 'X̅L̅', 'L̅', 'L̅X̅', 'L̅X̅X̅', 'L̅X̅X̅X̅', 'X̅C̅'],
+      [empty, 'C̅', 'C̅C̅', 'C̅C̅C̅', 'C̅D̅', 'D̅', 'D̅C̅', 'D̅C̅C̅', 'D̅C̅C̅C̅', 'C̅I̿'],
+      [empty, 'I̿', 'I̿I̿', 'I̿I̿I̿', 'I̿V̿', 'V̿', 'V̿I̿', 'V̿I̿I̿', 'V̿I̿I̿I̿', 'I̿X̿'],
+      [empty, 'X̿', 'X̿X̿', 'X̿X̿X̿', 'X̿L̿', 'L̿', 'L̿X̿', 'L̿X̿X̿', 'L̿X̿X̿X̿', 'X̿C̿'],
+      [empty, 'C̿', 'C̿C̿', 'C̿C̿C̿', 'C̿D̿', 'D̿', 'D̿C̿', 'D̿C̿C̿', 'D̿C̿C̿C̿'],
     ],
   },
 };

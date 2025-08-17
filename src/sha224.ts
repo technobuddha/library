@@ -44,7 +44,7 @@ function gamma1(x: number): number {
 /**
  * Secure Hash Algorithm, SHA2 SHA-224
  * @group Crypto
- * @category SHA2: SHA224
+ * @category Hash
  */
 export class Sha224 extends HashBase {
   private a = 0xc1059ed8;

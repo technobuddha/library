@@ -6,9 +6,9 @@ import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
 
 /**
- * The base interface for hash classes
+ * The  interface for hash classes
  * @group Crypto
- * @category Hash Base
+ * @category Hash
  */
 export interface HashClass {
   digest(): Uint8Array;
@@ -18,10 +18,10 @@ export interface HashClass {
 }
 
 /**
- * The base class for most cryptographic hash functions
+ * The  class for most cryptographic hash functions
  *
  * @group Crypto
- * @category Hash Base
+ * @category Hash
  */
 export abstract class HashBase implements HashClass {
   protected readonly block: Uint8Array;

@@ -1,44 +1,30 @@
 //@ts-check
-/**
- * @import { TypeDocOptions } from 'typedoc';
- * @import { PluginOptions } from 'typedoc-plugin-markdown';
- */
 
-/**
- * @type Partial<TypeDocOptions & PluginOptions>
- */
+import { OptionDefaults } from 'typedoc';
+
+/** @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').PluginOptions} */
 const config = {
-  entryPoints: ['src/index.ts'],
-  exclude: [],
+  // typedoc
+  //  Configuration
   tsconfig: 'src/tsconfig.code.json',
-  out: 'doc',
-
-  expandObjects: true,
-  expandParameters: true,
-
-  indexFormat: 'table',
-  parametersFormat: 'table',
-  interfacePropertiesFormat: 'table',
-  classPropertiesFormat: 'table',
-  enumMembersFormat: 'table',
-  propertyMembersFormat: 'table',
-  typeDeclarationFormat: 'table',
-
-  typeDeclarationVisibility: 'verbose',
-
-  hidePageHeader: true,
-  entryFileName: 'INDEX.md',
-  readme: 'none',
-  excludePrivate: true,
   plugin: [
     'typedoc-plugin-markdown',
     'typedoc-plugin-mdn-links',
     '@giancosta86/typedoc-readonly',
     './typedoc-markdown-plugin.js',
   ],
+  //  Input
+  entryPoints: ['src/index.ts'],
+  exclude: [],
+  excludeInternal: true,
+  excludePrivate: true,
+  excludeProtected: false,
   gitRevision: 'main',
-
-  categorizeByGroup: true,
+  readme: 'none',
+  //  Output
+  out: 'doc',
+  router: 'group',
+  basePath: 'src',
   navigation: {
     includeCategories: true,
     includeGroups: true,
@@ -46,6 +32,31 @@ const config = {
     compactFolders: false,
     excludeReferences: true,
   },
+  blockTags: [...OptionDefaults.blockTags],
+  inlineTags: [...OptionDefaults.inlineTags],
+  modifierTags: [...OptionDefaults.modifierTags],
+  //  Organization
+  categorizeByGroup: true,
+  defaultCategory: 'Uncategorized',
+  categoryOrder: ['Uncategorized', '*'],
+
+
+  // typedoc-plugin-markdown
+  //  File Options
+  entryFileName: 'index.md',
+  //  Display
+  hidePageHeader: true,
+  expandObjects: true,
+  expandParameters: true,
+  indexFormat: 'table',
+  parametersFormat: 'table',
+  interfacePropertiesFormat: 'table',
+  classPropertiesFormat: 'table',
+  typeAliasPropertiesFormat: 'table',
+  enumMembersFormat: 'table',
+  propertyMembersFormat: 'table',
+  typeDeclarationFormat: 'table',
+  typeDeclarationVisibility: 'verbose',
 };
 
 export default config;

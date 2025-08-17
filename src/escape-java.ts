@@ -7,7 +7,7 @@ import { oct, u4 } from './escape.ts';
  * @param input - The string to escape
  * @returns The string escaped for Java
  * @group Encoding
- * @category Java
+ * @category Escaping
  */
 export function escapeJava(input: string): string {
   const output: string[] = [];

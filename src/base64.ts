@@ -1,3 +1,5 @@
+import { empty } from './constants.ts';
+
 /**
  * Configuration for Base64 based encoding schemes
  *
@@ -38,5 +40,5 @@ export const base64UrlConfig: Base64Configuration = Object.freeze({
     '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
     '-', '_',
   ],
-  padding: '',
+  padding: empty,
 });

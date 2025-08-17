@@ -18,7 +18,7 @@ export type OrdinalOptions = {
 
   /**
    * Text to use for "and" in compound numbers (e.g., "one hundred and one").
-   * @defaultValue '' (empty string)
+   * @defaultValue (empty string)
    */
   and?: Numbering['and'];
 

@@ -11,6 +11,9 @@ import { isPrimitive } from './is-primitive.ts';
  * @typeParam T - The type of the input value, extending JsonValue.
  * @param object - The object or value whose keys should be sorted.
  * @returns A new object with keys sorted, or the original value if it is a primitive or array.
+ *
+ * @group Object
+ * @category Utility
  */
 export function sortKeys<T extends JsonValue>(object: T): T {
   if (isPrimitive(object)) {

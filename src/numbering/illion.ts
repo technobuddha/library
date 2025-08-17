@@ -1,3 +1,5 @@
+import { empty } from '../constants.ts';
+
 import { type Numbering } from './numbering.ts';
 
 type IllionReturn = {
@@ -44,7 +46,7 @@ export function illion(
   if (shift && mantissa.length > 0 && mantissa.length < 3 && Number.parseInt(mantissa) > 0) {
     quantity = Number.parseFloat(`${quantity}.${mantissa}`);
     exponent -= mantissa.length;
-    mantissa = '';
+    mantissa = empty;
   }
 
   if (factor < 0) {

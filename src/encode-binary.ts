@@ -1,4 +1,5 @@
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
+import { empty } from './constants.ts';
 import { encodeBase64, encodeBase64Url } from './encode-base64.ts';
 
 /**
@@ -28,7 +29,7 @@ export function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): strin
     }
 
     case 'hex': {
-      return [...input].map((byte) => byte.toString(16).padStart(2, '0')).join('');
+      return [...input].map((byte) => byte.toString(16).padStart(2, '0')).join(empty);
     }
 
     case 'binary': {

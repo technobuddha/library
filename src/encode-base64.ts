@@ -3,6 +3,7 @@
 
 import { type TextEncoding } from './@types/text-encoding.ts';
 import { base64Config, type Base64Configuration, base64UrlConfig } from './base64.ts';
+import { empty } from './constants.ts';
 import { encodeText } from './encode-text.ts';
 
 /**
@@ -56,7 +57,7 @@ function encode(
     }
   }
 
-  return chars.join('');
+  return chars.join(empty);
 }
 
 /**

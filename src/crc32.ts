@@ -53,7 +53,7 @@ const crcTable: number[] = [
 /**
  * Compute the CRC32 checksum
  * @group Crypto
- * @category CRC32
+ * @category Hash
  */
 export class Crc32 implements HashClass {
   private crc: number;

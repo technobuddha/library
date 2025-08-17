@@ -7,7 +7,7 @@ import { hex, oct, u4, u8, x2 } from './escape.ts';
  * @param input - The string to escape
  * @returns the string escapes for use in python
  * @group Encoding
- * @category Python
+ * @category Escaping
  */
 export function escapePython(input: string): string {
   const output: string[] = [];

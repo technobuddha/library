@@ -2,14 +2,14 @@ import { isFinite, isNaN } from 'lodash-es';
 
 /**
  * The beginning of a special JSON value
- * @group Encoding
- * @category JSON
+ * @group JSON
+ * @category Serialization
  */
 export const specialBegin = '﴾';
 /**
  * The end of a special JSON value
- * @group Encoding
- * @category JSON
+ * @group JSON
+ * @category Serialization
  */
 export const specialFinish = '﴿';
 
@@ -21,8 +21,8 @@ export const specialFinish = '﴿';
  * @param key - The key for the field
  * @param value - The value (may have already been encoded into a string)
  * @returns the encoded value
- * @group Encoding
- * @category JSON
+ * @group JSON
+ * @category Serialization
  */
 export function replacer(this: Record<string, unknown>, key: string, value: unknown): unknown {
   const raw = this[key];
@@ -46,8 +46,8 @@ export function replacer(this: Record<string, unknown>, key: string, value: unkn
  * @param _key - The key
  * @param value - The value
  * @returns the decoded value
- * @group Encoding
- * @category JSON
+ * @group JSON
+ * @category Serialization
  */
 export function reviver(this: unknown, _key: string, value: unknown): unknown {
   if (

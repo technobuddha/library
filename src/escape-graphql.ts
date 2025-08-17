@@ -7,7 +7,7 @@ import { u4 } from './escape.ts';
  * @param input - The string to escape
  * @returns the escaped string
  * @group Encoding
- * @category GraphQL
+ * @category Escaping
  */
 export function escapeGraphQL(input: string): string {
   const output: string[] = [];

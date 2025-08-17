@@ -70,7 +70,7 @@ function getCarry(a: number, b: number): number {
 /**
  * Secure Hash Algorithm, SHA2 SHA-384
  * @group Crypto
- * @category SHA2: SHA384
+ * @category Hash
  */
 export class Sha384 extends HashBase {
   private ah = 0xcbbb9d5d;
