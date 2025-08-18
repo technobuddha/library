@@ -1,8 +1,10 @@
 /**
+ * Options for the {@link toSmallCase} function
+ *
  * @group String
  * @category Case Conversion
  */
-export type ToSmallCaseOptions = {
+export type SmallCaseOptions = {
   /** Convert other characters in the string to upper case */
   upperCase?: boolean;
 };
@@ -16,7 +18,7 @@ export type ToSmallCaseOptions = {
  * @group String
  * @category Case Conversion
  */
-export function toSmallCase(input: string, { upperCase = false }: ToSmallCaseOptions = {}): string {
+export function toSmallCase(input: string, { upperCase = false }: SmallCaseOptions = {}): string {
   return (
     input[0].toLocaleLowerCase() + (upperCase ? input.slice(1).toLocaleUpperCase() : input.slice(1))
   );

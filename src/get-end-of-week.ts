@@ -3,10 +3,12 @@ import { day, daysPerWeek } from './constants.ts';
 import { modulo } from './modulo.ts';
 
 /**
+ * Options for the {@link getEndOfWeek} function
+ *
  * @group Time
  * @category Week
  */
-export type GetEndOfWeekOptions = {
+export type EndOfWeekOptions = {
   /** Use the utc timezone */
   utc?: boolean;
   /** The day that is considered the 'first' day of the week */
@@ -17,7 +19,7 @@ export type GetEndOfWeekOptions = {
  * Determine the last day of the week containing a date
  *
  * @param input - The date
- * @param __namedParameters - see {@link GetEndOfWeekOptions}
+ * @param options - see {@link EndOfWeekOptions}
  * @defaultValue utc false
  * @returns Midnight of the last day of the week containing the input date
  * @group Time
@@ -25,7 +27,7 @@ export type GetEndOfWeekOptions = {
  */
 export function getEndOfWeek(
   input: Date,
-  { utc = false, firstDayOfWeek = day.sunday }: GetEndOfWeekOptions = {},
+  { utc = false, firstDayOfWeek = day.sunday }: EndOfWeekOptions = {},
 ): Date {
   if (utc) {
     return new Date(

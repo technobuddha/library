@@ -4,9 +4,9 @@
 
 # Function: isMidnight()
 
-> **isMidnight**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsMidnightOptions`](IsMidnightOptions.md)): `boolean`
+> **isMidnight**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`MidnightOptions`](MidnightOptions.md)): `boolean`
 
-Defined in: [is-midnight.ts:19](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L19)
+Defined in: [is-midnight.ts:21](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L21)
 
 Determine if a date is at midnight
 
@@ -15,7 +15,7 @@ Determine if a date is at midnight
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date |
-| `__namedParameters` | [`IsMidnightOptions`](IsMidnightOptions.md) | see [IsMidnightOptions](IsMidnightOptions.md) |
+| `options` | [`MidnightOptions`](MidnightOptions.md) | see [MidnightOptions](MidnightOptions.md) |
 
 ## Returns
 

@@ -3,10 +3,12 @@ import { day, daysPerWeek } from './constants.ts';
 import { modulo } from './modulo.ts';
 
 /**
+ * Options for the {@link getDayOfWeek} function
+ *
  * @group Time
  * @category Week
  */
-export type GetDayOfWeekOptions = {
+export type DayOfWeekOptions = {
   /** Use the utc timezone */
   utc?: boolean;
   /** Which day of the week is considered the beginning */
@@ -17,7 +19,7 @@ export type GetDayOfWeekOptions = {
  * Determine the day of the week for a specific date
  *
  * @param input - The date
- * @param __namedParameters - see {@link GetDayOfWeekOptions}
+ * @param options - see {@link DayOfWeekOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified year
  * @group Time
@@ -25,7 +27,7 @@ export type GetDayOfWeekOptions = {
  */
 export function getDayOfWeek(
   input: Date,
-  { utc = false, startOfWeek = day.sunday }: GetDayOfWeekOptions = {},
+  { utc = false, startOfWeek = day.sunday }: DayOfWeekOptions = {},
 ): DayOfWeek {
   if (utc) {
     return modulo(input.getUTCDay() + daysPerWeek - startOfWeek, daysPerWeek) as DayOfWeek;

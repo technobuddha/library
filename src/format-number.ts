@@ -14,7 +14,7 @@ import { splitChars } from './split-chars.ts';
  * into its constituent parts for number formatting operations.
  *
  * @example
- * ```typescript
+ * ```ts
  * // For mask "#,##0.00"
  * const parsed: ParseReturn = {
  *   aMask: ['0', '0'],           // After decimal point
@@ -111,7 +111,7 @@ type ParseReturn = {
  * - `precision`: Number of digits after the decimal point.
  *
  * @example
- * ```typescript
+ * ```ts
  * const result = parse("#,##0.00%");
  * // result = {
  * //   aMask: ['0', '0'],
@@ -428,7 +428,7 @@ function format(
  * and scientific notation. The output is built incrementally and can be retrieved as a string.
  *
  * @example
- * ```typescript
+ * ```ts
  * const formatter = new NumberFormatter(1, ['1', '2', '3', '4'], 2);
  * const result = formatter.grouped().decimal().fraction().build(); // "1,2.34"
  * ```

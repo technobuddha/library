@@ -6,6 +6,6 @@
 
 > `const` **nbHyphen**: `"‑"` = `'‑'`
 
-Defined in: [constants.ts:199](https://github.com/technobuddha/library/blob/main/src/constants.ts#L199)
+Defined in: [constants.ts:259](https://github.com/technobuddha/library/blob/main/src/constants.ts#L259)
 
 Non-Breaking Hyphen

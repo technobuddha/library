@@ -67,7 +67,7 @@ function getCarry(a: number, b: number): number {
 
 /**
  * Secure Hash Algorithm, SHA2 SHA-512
- * @group Crypto
+ * @group Encoding
  * @category Hash
  */
 export class Sha512 extends HashBase {
@@ -90,6 +90,13 @@ export class Sha512 extends HashBase {
   private hl = 0x137e2179;
   private readonly w: number[];
 
+  /**
+   * Creates a new SHA-512 hash instance and initializes its internal state.
+   *
+   * @remarks
+   * The internal state variables are set to the initial SHA-512 constants as specified
+   * in FIPS PUB 180-4. Use {@link update} to process data and {@link digest} to retrieve the hash.
+   */
   public constructor() {
     super(128, 112);
     this.w = Array.from({ length: 160 });

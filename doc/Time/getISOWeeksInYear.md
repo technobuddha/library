@@ -4,9 +4,9 @@
 
 # Function: getISOWeeksInYear()
 
-> **getISOWeeksInYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetISOWeeksInYearOptions`](GetISOWeeksInYearOptions.md)): `number`
+> **getISOWeeksInYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`ISOWeeksInYearOptions`](ISOWeeksInYearOptions.md)): `number`
 
-Defined in: [get-iso-weeks-in-year.ts:28](https://github.com/technobuddha/library/blob/main/src/get-iso-weeks-in-year.ts#L28)
+Defined in: [get-iso-weeks-in-year.ts:29](https://github.com/technobuddha/library/blob/main/src/get-iso-weeks-in-year.ts#L29)
 
 Determine the number of ISO weeks within a year
 
@@ -15,7 +15,7 @@ Determine the number of ISO weeks within a year
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date within the year, or a year number |
-| `__namedParameters` | [`GetISOWeeksInYearOptions`](GetISOWeeksInYearOptions.md) | see [GetISOWeeksInYearOptions](GetISOWeeksInYearOptions.md) |
+| `options` | [`ISOWeeksInYearOptions`](ISOWeeksInYearOptions.md) | see [ISOWeeksInYearOptions](ISOWeeksInYearOptions.md) |
 
 ## Returns
 

@@ -26,7 +26,7 @@ The technobuddha library is released under the [MIT license](LICENSE).
 
 With ES6 import:
 
-```typescript
+```ts
 import name from '@technobuddha/library/name';
 
 // for example

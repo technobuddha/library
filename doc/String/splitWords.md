@@ -4,9 +4,9 @@
 
 # Function: splitWords()
 
-> **splitWords**(`input`: `string`, `__namedParameters`: [`SplitWordsOptions`](SplitWordsOptions.md)): `string`[]
+> **splitWords**(`input`: `string`, `options`: [`SplitWordsOptions`](SplitWordsOptions.md)): `string`[]
 
-Defined in: [split-words.ts:23](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L23)
+Defined in: [split-words.ts:25](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L25)
 
 Split a string into an array of words
 
@@ -15,7 +15,7 @@ Split a string into an array of words
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to split |
-| `__namedParameters` | [`SplitWordsOptions`](SplitWordsOptions.md) | see [SplitWordsOptions](SplitWordsOptions.md) |
+| `options` | [`SplitWordsOptions`](SplitWordsOptions.md) | see [SplitWordsOptions](SplitWordsOptions.md) |
 
 ## Returns
 

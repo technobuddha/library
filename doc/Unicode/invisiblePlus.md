@@ -6,6 +6,6 @@
 
 > `const` **invisiblePlus**: `"⁤"` = `'⁤'`
 
-Defined in: [constants.ts:259](https://github.com/technobuddha/library/blob/main/src/constants.ts#L259)
+Defined in: [constants.ts:319](https://github.com/technobuddha/library/blob/main/src/constants.ts#L319)
 
 Invisible Plus sign

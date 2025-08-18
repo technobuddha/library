@@ -4,7 +4,7 @@
 
 # Function: indefiniteArticle()
 
-> **indefiniteArticle**(`word`: `string`, `__namedParameters`: [`IndefiniteArticleOptions`](IndefiniteArticleOptions.md)): `string`
+> **indefiniteArticle**(`word`: `string`, `options`: [`IndefiniteArticleOptions`](IndefiniteArticleOptions.md)): `string`
 
 Defined in: [indefinite-article.ts:48](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L48)
 
@@ -15,7 +15,7 @@ Determine the appropriate indefinite article to use with a word.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `word` | `string` | The word |
-| `__namedParameters` | [`IndefiniteArticleOptions`](IndefiniteArticleOptions.md) | see [IndefiniteArticleOptions](IndefiniteArticleOptions.md) |
+| `options` | [`IndefiniteArticleOptions`](IndefiniteArticleOptions.md) | see [IndefiniteArticleOptions](IndefiniteArticleOptions.md) |
 
 ## Returns
 

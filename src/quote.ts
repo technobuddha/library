@@ -4,6 +4,7 @@ import { build } from './build.ts';
 import { escapeJS } from './escape-js.ts';
 
 /**
+ * Options for the {@link quote} and {@link unquote} function
  * @group String
  * @category Quoting
  */
@@ -18,7 +19,7 @@ export type QuoteOptions = {
  * Surround text with quotes
  *
  * @param input - The text to surround
- * @param __namedParameters - see {@link QuoteOptions}
+ * @param options - see {@link QuoteOptions}
  * @defaultValue quote double-quote (")
  * @defaultValue escape {@link escapeJS}
  * @returns text surrounded by quotes

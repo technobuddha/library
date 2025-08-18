@@ -6,4 +6,6 @@
 
 > **DayOfWeek** = `0` \| `1` \| `2` \| `3` \| `4` \| `5` \| `6`
 
-Defined in: [constants.ts:110](https://github.com/technobuddha/library/blob/main/src/constants.ts#L110)
+Defined in: [constants.ts:163](https://github.com/technobuddha/library/blob/main/src/constants.ts#L163)
+
+Days of the week

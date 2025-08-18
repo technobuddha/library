@@ -1,10 +1,12 @@
 import { getDaysInMonth } from './get-days-in-month.ts';
 
 /**
+ * Options for the {@link getEndOfMonth} function
+ *
  * @group Time
  * @category Month
  */
-export type GetEndOfMonthOptions = {
+export type EndOfMonthOptions = {
   /** Use the utc timezone */
   utc?: boolean;
 };
@@ -13,13 +15,13 @@ export type GetEndOfMonthOptions = {
  * Determine the last day of the month containing the input date
  *
  * @param input - The date
- * @param __namedParameters - see {@link GetEndOfMonthOptions}
+ * @param options - see {@link EndOfMonthOptions}
  * @defaultValue utc false
  * @returns Midnight on the last day of the month corresponding to the input date
  * @group Time
  * @category Month
  */
-export function getEndOfMonth(input: Date, { utc = false }: GetEndOfMonthOptions = {}): Date {
+export function getEndOfMonth(input: Date, { utc = false }: EndOfMonthOptions = {}): Date {
   if (utc) {
     return new Date(
       Date.UTC(input.getUTCFullYear(), input.getUTCMonth(), getDaysInMonth(input, { utc })),

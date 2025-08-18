@@ -10,6 +10,7 @@ import { decodeText } from './decode-text.ts';
  * Ignoring whitespace characters
  * @param input - The string to decode
  * @returns A generator that yields the indices of the characters in the base64 alphabet
+ * @internal
  */
 function* pull4(input: string, charset: Base64Configuration): Generator<number[]> {
   let indices: number[] = [];
@@ -43,6 +44,24 @@ function* pull4(input: string, charset: Base64Configuration): Generator<number[]
   }
 }
 
+/**
+ * Decodes a Base64-encoded string using the specified character set configuration.
+ *
+ * @remarks
+ * This function is used internally by {@link decodeBase64} and {@link decodeBase64Url}
+ * to perform the actual decoding logic. It supports decoding to a `Uint8Array` or,
+ * if an encoding is specified, to a decoded string using {@link decodeText}.
+ *
+ * Whitespace in the input string is ignored. If the input contains invalid Base64 characters,
+ * a `TypeError` is thrown.
+ *
+ * @param charset - The Base64 alphabet and configuration to use for decoding.
+ * @param input - The Base64-encoded string to decode.
+ * @param encoding - (Optional) The text encoding to use for the output. If provided, the result is a string; otherwise, a `Uint8Array` is returned.
+ * @returns The decoded data as a `Uint8Array` or a string, depending on the `encoding` parameter.
+ * @throws {@link TypeError} If the input string contains invalid Base64 characters.
+ * @internal
+ */
 function decode(charset: Base64Configuration, input: string): Uint8Array;
 function decode(charset: Base64Configuration, input: string, encoding: TextEncoding): string;
 function decode(
@@ -78,7 +97,7 @@ function decode(
  * @remarks Whitespace withing the Base64 encoded string is ignored.
  *
  * @example
- * ```typescript
+ * ```ts
  * atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
  * ```
  *
@@ -86,7 +105,7 @@ function decode(
  * @returns An ASCII string containing decoded dat
  * @throws `TypeError` If the input string is not correctly encoded.
  * @group Encoding
- * @category Base64
+ * @category Binary
  */
 export function decodeBase64(input: string): Uint8Array;
 export function decodeBase64(input: string, encoding: TextEncoding): string;
@@ -97,15 +116,15 @@ export function decodeBase64(input: string, encoding?: TextEncoding): Uint8Array
 /**
  * Decodes a string of data which has been encoded using
  * [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
- * You can use the btoa() method to encode and transmit data which may otherwise cause
- * communication problems, then transmit it and use the atob() method to decode the data again.
+ * You can use the {@link encodeBase64Url} method to encode and transmit data which may otherwise cause
+ * communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again.
  * For example, you can encode, transmit, and decode control characters such as ASCII values
  * 0 through 31.
  *
  * @remarks Whitespace withing the Base64 encoded string is ignored.
  *
  * @example
- * ```typescript
+ * ```ts
  * atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
  * ```
  *
@@ -113,7 +132,7 @@ export function decodeBase64(input: string, encoding?: TextEncoding): Uint8Array
  * @returns An ASCII string containing decoded dat
  * @throws `TypeError` If the input string is not correctly encoded.
  * @group Encoding
- * @category Base64
+ * @category Binary
  */
 export function decodeBase64Url(input: string): Uint8Array;
 export function decodeBase64Url(input: string, encoding: TextEncoding): string;

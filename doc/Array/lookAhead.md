@@ -6,9 +6,10 @@
 
 > **lookAhead**\<`T`\>(`array`: `T`[], `options?`: [`LookAheadOptions`](LookAheadOptions.md)\<`T`\>): [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<\[`T`, `T`, `number`\]\>
 
-Defined in: [look-ahead.ts:56](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L56)
+Defined in: [look-ahead.ts:63](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L63)
 
-Generates pairs of consecutive elements from the input array, with optional handling for the last element.
+Generates pairs of consecutive elements from the input array, with optional handling for the last
+element.
 
 ## Type Parameters
 
@@ -27,12 +28,14 @@ Generates pairs of consecutive elements from the input array, with optional hand
 
 [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<\[`T`, `T`, `number`\]\>
 
-A generator yielding tuples of consecutive elements, and optionally a tuple for the last element as specified by options.
+A generator yielding a tuple containing each element, the next element in the sequence,
+and the index of the element within the sequence.  Optionally, a tuple is generated for the last
+element as specified by options.
 
 ## Example
 
 Basic usage
-```typescript
+```ts
 const arr = [1, 2, 3];
 for (const [current, next] of lookAhead(arr)) {
   console.log(current, next);
@@ -41,7 +44,7 @@ for (const [current, next] of lookAhead(arr)) {
 Output: [1, 2], [2, 3]
 
 With wrapAround
-```typescript
+```ts
 for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
   console.log(current, next);
 }
@@ -49,7 +52,7 @@ for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
 Output: [1, 2], [2, 3], [3, 1]
 
 With last
-```typescript
+```ts
 for (const [current, next] of lookAhead(arr, { last: 0 })) {
   console.log(current, next);
 }

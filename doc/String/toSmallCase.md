@@ -4,9 +4,9 @@
 
 # Function: toSmallCase()
 
-> **toSmallCase**(`input`: `string`, `__namedParameters`: [`ToSmallCaseOptions`](ToSmallCaseOptions.md)): `string`
+> **toSmallCase**(`input`: `string`, `__namedParameters`: [`SmallCaseOptions`](SmallCaseOptions.md)): `string`
 
-Defined in: [to-small-case.ts:19](https://github.com/technobuddha/library/blob/main/src/to-small-case.ts#L19)
+Defined in: [to-small-case.ts:21](https://github.com/technobuddha/library/blob/main/src/to-small-case.ts#L21)
 
 Convert the first letter of a string to lower case
 
@@ -15,7 +15,7 @@ Convert the first letter of a string to lower case
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to make small case |
-| `__namedParameters` | [`ToSmallCaseOptions`](ToSmallCaseOptions.md) | - |
+| `__namedParameters` | [`SmallCaseOptions`](SmallCaseOptions.md) | - |
 
 ## Returns
 

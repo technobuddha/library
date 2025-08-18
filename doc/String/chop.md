@@ -6,7 +6,7 @@
 
 > **chop**(`input`: `string`, `length`: `number`, `__namedParameters`: [`ChopOptions`](ChopOptions.md)): `string`[]
 
-Defined in: [chop.ts:23](https://github.com/technobuddha/library/blob/main/src/chop.ts#L23)
+Defined in: [chop.ts:25](https://github.com/technobuddha/library/blob/main/src/chop.ts#L25)
 
 Break a string into equal sized segments of characters
 

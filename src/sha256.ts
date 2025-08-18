@@ -44,7 +44,7 @@ function gamma1(x: number): number {
 
 /**
  * Secure Hash Algorithm, SHA2 SHA-256
- * @group Crypto
+ * @group Encoding
  * @category Hash
  */
 export class Sha256 extends HashBase {
@@ -58,6 +58,13 @@ export class Sha256 extends HashBase {
   private h = 0x5be0cd19;
   private readonly w: number[];
 
+  /**
+   * Creates a new SHA-256 hash instance and initializes its internal state.
+   *
+   * @remarks
+   * The internal state variables are set to the initial SHA-256 constants as specified
+   * in FIPS PUB 180-4. Use {@link update} to process data and {@link digest} to retrieve the hash.
+   */
   public constructor() {
     super(64, 56);
     this.w = Array.from({ length: 64 });

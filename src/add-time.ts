@@ -1,4 +1,6 @@
 /**
+ * Represents amount of time to use for {@link addTime}
+ *
  * @group Time
  * @category Alteration
  */

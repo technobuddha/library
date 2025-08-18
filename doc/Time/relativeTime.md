@@ -4,9 +4,9 @@
 
 # Function: relativeTime()
 
-> **relativeTime**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `relativeTo`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`RelativeTimeOptions`](RelativeTimeOptions.md)): `string`
+> **relativeTime**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `relativeTo`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`RelativeTimeOptions`](RelativeTimeOptions.md)): `string`
 
-Defined in: [relative-time.ts:39](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L39)
+Defined in: [relative-time.ts:41](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L41)
 
 Describe the difference between two dates in a simple format
 
@@ -16,7 +16,7 @@ Describe the difference between two dates in a simple format
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
 | `relativeTo` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date to compare to |
-| `__namedParameters` | [`RelativeTimeOptions`](RelativeTimeOptions.md) | see [RelativeTimeOptions](RelativeTimeOptions.md) |
+| `options` | [`RelativeTimeOptions`](RelativeTimeOptions.md) | see [RelativeTimeOptions](RelativeTimeOptions.md) |
 
 ## Returns
 

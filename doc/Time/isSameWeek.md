@@ -4,9 +4,9 @@
 
 # Function: isSameWeek()
 
-> **isSameWeek**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsSameWeekOptions`](IsSameWeekOptions.md)): `boolean`
+> **isSameWeek**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameWeekOptions`](SameWeekOptions.md)): `boolean`
 
-Defined in: [is-same-week.ts:26](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L26)
+Defined in: [is-same-week.ts:28](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L28)
 
 Determine if two dates occur in the same week
 
@@ -16,7 +16,7 @@ Determine if two dates occur in the same week
 | ------ | ------ | ------ |
 | `input1` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The first date |
 | `input2` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The second date |
-| `__namedParameters` | [`IsSameWeekOptions`](IsSameWeekOptions.md) | see [IsSameWeekOptions](IsSameWeekOptions.md) |
+| `options` | [`SameWeekOptions`](SameWeekOptions.md) | see [SameWeekOptions](SameWeekOptions.md) |
 
 ## Returns
 

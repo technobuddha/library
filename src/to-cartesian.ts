@@ -4,7 +4,7 @@ import { toAngle } from './to-angle.ts';
 
 /**
  * Convert polar coordinates to cartesian
- * @param __namedParameters - radius, angle in radians (zero points in +X direction).
+ * @param options - radius, angle in radians (zero points in +X direction).
  * @returns Object containing the X and Y-distance for the angle and radius.
  * @group Geometry
  * @category Coordinates

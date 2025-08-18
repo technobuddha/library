@@ -52,12 +52,19 @@ const crcTable: number[] = [
 
 /**
  * Compute the CRC32 checksum
- * @group Crypto
+ * @group Encoding
  * @category Hash
  */
 export class Crc32 implements HashClass {
   private crc: number;
 
+  /**
+   * Creates a new CRC32 hash instance and initializes its internal state.
+   *
+   * @remarks
+   * The CRC value is initialized to -1, as required by the CRC32 algorithm specification.
+   * Use {@link update} to process data and {@link digest} to obtain the final hash value.
+   */
   public constructor() {
     this.crc = -1;
   }

@@ -2,6 +2,8 @@ import { escapeRegExp } from 'lodash-es';
 
 import { empty } from './constants.ts';
 /**
+ * Options for the {@link fillTemplate} function
+ *
  * @group String
  * @category Templates
  */
@@ -16,7 +18,7 @@ export type FillTemplateOptions = {
  * Fill a template with supplied values
  * @param input - The template
  * @param values - A dictionary of name-values used to fill in values in the template
- * @param __namedParameters - see {@link FillTemplateOptions}
+ * @param options - see {@link FillTemplateOptions}
  * @defaultValue open '\{\{'
  * @defaultValue close '\}\}'
  * @returns template with values replaced

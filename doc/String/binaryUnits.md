@@ -4,9 +4,9 @@
 
 # Function: binaryUnits()
 
-> **binaryUnits**(`input`: `number`, `__namedParameters`: [`BinaryUnitsOptions`](BinaryUnitsOptions.md)): `string`
+> **binaryUnits**(`input`: `number`, `options`: [`BinaryUnitsOptions`](BinaryUnitsOptions.md)): `string`
 
-Defined in: [binary-units.ts:17](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L17)
+Defined in: [binary-units.ts:19](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L19)
 
 Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K)
 
@@ -15,7 +15,7 @@ Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` | The number to abbreviate |
-| `__namedParameters` | [`BinaryUnitsOptions`](BinaryUnitsOptions.md) | see [BinaryUnitsOptions](BinaryUnitsOptions.md) |
+| `options` | [`BinaryUnitsOptions`](BinaryUnitsOptions.md) | see [BinaryUnitsOptions](BinaryUnitsOptions.md) |
 
 ## Returns
 

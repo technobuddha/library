@@ -7,7 +7,7 @@ import { type Cartesian } from './@types/geometry.ts';
  * It is often used in grid-based path-finding algorithms.
  *
  * @example
- * ```typescript
+ * ```ts
  * const pointA = { x: 1, y: 2 };
  * const pointB = { x: 4, y: 6 };
  * const distance = manhattanDistance(pointA, pointB); // 7

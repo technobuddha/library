@@ -4,9 +4,9 @@
 
 # Function: quote()
 
-> **quote**(`input`: `string`, `__namedParameters`: [`QuoteOptions`](QuoteOptions.md)): `string`
+> **quote**(`input`: `string`, `options`: [`QuoteOptions`](QuoteOptions.md)): `string`
 
-Defined in: [quote.ts:28](https://github.com/technobuddha/library/blob/main/src/quote.ts#L28)
+Defined in: [quote.ts:29](https://github.com/technobuddha/library/blob/main/src/quote.ts#L29)
 
 Surround text with quotes
 
@@ -15,7 +15,7 @@ Surround text with quotes
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The text to surround |
-| `__namedParameters` | [`QuoteOptions`](QuoteOptions.md) | see [QuoteOptions](QuoteOptions.md) |
+| `options` | [`QuoteOptions`](QuoteOptions.md) | see [QuoteOptions](QuoteOptions.md) |
 
 ## Returns
 

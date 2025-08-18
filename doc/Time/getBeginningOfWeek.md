@@ -4,9 +4,9 @@
 
 # Function: getBeginningOfWeek()
 
-> **getBeginningOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetBeginningOfWeekOptions`](GetBeginningOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+> **getBeginningOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfWeekOptions`](BeginningOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-week.ts#L26)
+Defined in: [get-beginning-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-week.ts#L28)
 
 Determine the start of the week for a date
 
@@ -15,7 +15,7 @@ Determine the start of the week for a date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetBeginningOfWeekOptions`](GetBeginningOfWeekOptions.md) | see [GetBeginningOfWeekOptions](GetBeginningOfWeekOptions.md) |
+| `options` | [`BeginningOfWeekOptions`](BeginningOfWeekOptions.md) | see [BeginningOfWeekOptions](BeginningOfWeekOptions.md) |
 
 ## Returns
 

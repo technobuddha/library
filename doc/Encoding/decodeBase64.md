@@ -8,7 +8,7 @@
 
 > **decodeBase64**(`input`: `string`): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [decode-base64.ts:91](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L91)
+Defined in: [decode-base64.ts:110](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L110)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -36,7 +36,7 @@ Whitespace withing the Base64 encoded string is ignored.
 
 ### Example
 
-```typescript
+```ts
 atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 ```
 
@@ -48,7 +48,7 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 > **decodeBase64**(`input`: `string`, `encoding`: [`TextEncoding`](../Unicode/TextEncoding.md)): `string`
 
-Defined in: [decode-base64.ts:92](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L92)
+Defined in: [decode-base64.ts:111](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L111)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -77,7 +77,7 @@ Whitespace withing the Base64 encoded string is ignored.
 
 ### Example
 
-```typescript
+```ts
 atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 ```
 

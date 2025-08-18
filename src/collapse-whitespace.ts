@@ -2,6 +2,8 @@ import { clean } from './clean.ts';
 import { space } from './constants.ts';
 
 /**
+ * Options for the {@link collapseWhitespace} function
+ *
  * @group String
  * @category Collapse
  */

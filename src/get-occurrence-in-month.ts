@@ -6,6 +6,8 @@ import { getDaysInMonth } from './get-days-in-month.ts';
 import { modulo } from './modulo.ts';
 
 /**
+ * Options for {@link getOccurrenceInMonth}
+ *
  * @group Time
  * @category Day
  */
@@ -20,7 +22,7 @@ export type GetOccurrenceInMonthOptions = {
  * @param input - A date within the month in question
  * @param dayOfWeek - The day of the week to find the occurrence
  * @param occurrence - The occurrence number, or 'last' to find the last occurrence
- * @param __namedParameters - see {@link GetOccurrenceInMonthOptions}
+ * @param options - see {@link GetOccurrenceInMonthOptions}
  * @defaultValue utc false
  * @returns A date object corresponding to the occurrence requested, or null if no such date exists in the month
  * @group Time

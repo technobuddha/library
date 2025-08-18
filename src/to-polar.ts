@@ -4,7 +4,7 @@ import { normalizeAngle } from './normalize-angle.ts';
 /**
  * Convert cartesian coordinates to polar
  *
- * @param __namedParameters - see {@link Cartesian}
+ * @param options - see {@link Cartesian}
  * @returns polar coordinated
  * @group Geometry
  * @category Coordinates

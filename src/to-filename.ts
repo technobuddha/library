@@ -7,10 +7,12 @@ import { empty } from './constants.ts';
 const badChars = /[/\\:*?<>|.]+/gu;
 
 /**
+ * Options for the {@link toFilename} function
+ *
  * @group String
  * @category Conversion
  */
-export type ToFilenameOptions = {
+export type FilenameOptions = {
   /** the file name will be truncated to this length */
   maxLength?: number;
   /** character to use to replace "bad" characters */
@@ -25,14 +27,14 @@ export type ToFilenameOptions = {
  * Convert a string so that it can be used as a filename
  *
  * @param input - The string to escape
- * @param __namedParameters - see {@link ToFilenameOptions}
+ * @param options - see {@link FilenameOptions}
  * @returns the file name
  * @group String
  * @category Conversion
  */
 export function toFilename(
   input: string,
-  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: ToFilenameOptions = {},
+  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: FilenameOptions = {},
 ): string {
   let argInput = input;
   let suffix = empty;

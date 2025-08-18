@@ -1,20 +1,28 @@
 /**
- * @group String
+ * The empty string
+ *
+ * @group Unicode
  * @category Constants
  */
 export const empty = '';
 /**
- * @group String
+ * Space
+ *
+ * @group Unicode
  * @category Constants
  */
 export const space = ' ';
 /**
- * @group String
+ * Non-breaking space
+ *
+ * @group Unicode
  * @category Constants
  */
 export const nbsp = '\u00A0';
 /**
- * @group String
+ * Zero-width space
+ *
+ * @group Unicode
  * @category Constants
  */
 export const zwsp = '\u200B';
@@ -28,87 +36,135 @@ export const zwsp = '\u200B';
 export const negativeZero = -0;
 
 /**
+ * Number of ticks in a second [1000]
+ *
  * @group Time
  * @category Constants
  */
 export const ticksPerSecond = 1000;
+
 /**
+ * Number of seconds in a minute [60]
+ *
  * @group Time
  * @category Constants
  */
 export const secondsPerMinute = 60;
+
 /**
+ * Number of minutes in an hour [60]
+ *
  * @group Time
  * @category Constants
  */
 export const minutesPerHour = 60;
+
 /**
+ * Number of hours in a day [24]
  * @group Time
  * @category Constants
  */
 export const hoursPerDay = 24;
+
 /**
+ * Number of days in a week [7]
+ *
  * @group Time
  * @category Constants
  */
 export const daysPerWeek = 7;
+
 /**
+ * Number of ticks in a minute [60000]
+ *
  * @group Time
  * @category Constants
  */
 export const ticksPerMinute = ticksPerSecond * secondsPerMinute;
+
 /**
+ * Number of ticks in an hour [3600000]
+ *
  * @group Time
  * @category Constants
  */
 export const ticksPerHour = ticksPerMinute * minutesPerHour;
+
 /**
+ * Number of ticks in a day [86400000]
+ *
  * @group Time
  * @category Constants
  */
 export const ticksPerDay = ticksPerHour * hoursPerDay;
+
 /**
+ * Number of ticks in a week [604800000]
+ *
  * @group Time
  * @category Constants
  */
 export const ticksPerWeek = ticksPerDay * daysPerWeek;
 
 /**
+ * Number of seconds in an hour [3600]
+ *
  * @group Time
  * @category Constants
  */
 export const secondsPerHour = secondsPerMinute * minutesPerHour;
+
 /**
+ * Number of seconds in a day [86400]
+ *
  * @group Time
  * @category Constants
  */
 export const secondsPerDay = secondsPerHour * hoursPerDay;
+
 /**
+ * Number of seconds in a week [604800]
+ *
  * @group Time
  * @category Constants
  */
 export const secondsPerWeek = secondsPerDay * daysPerWeek;
+
 /**
+ * Number of minutes in a day [1440]
+ *
  * @group Time
  * @category Constants
  */
 export const minutesPerDay = minutesPerHour * hoursPerDay;
+
 /**
+ * Number of minutes in a week [10080]
+ *
  * @group Time
  * @category Constants
  */
 export const minutesPerWeek = minutesPerDay * daysPerWeek;
+
 /**
+ * Number of hours in a week [168]
+ *
  * @group Time
  * @category Constants
  */
 export const hoursPerWeek = hoursPerDay * daysPerWeek;
+
 /**
+ * Days of the week
+ *
  * @group Time
  * @category Enumerations
  */
 export type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
+
 /**
+ * Translation object for name of day to day number.
+ *
  * @group Time
  * @category Enumerations
  */
@@ -140,12 +196,16 @@ export const day: Readonly<Record<string, DayOfWeek>> = Object.freeze({
 });
 
 /**
+ * Months of the year
+ *
  * @group Time
  * @category Enumerations
  */
 export type MonthOfYear = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
 /**
+ * Translation object for name of month to month number
+ *
  * @group Time
  * @category Enumerations
  */

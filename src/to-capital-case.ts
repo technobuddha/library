@@ -1,8 +1,10 @@
 /**
+ * Options for the {@link toCapitalCase} function
+ *
  * @group String
  * @category Case Conversion
  */
-export type ToCapitalCaseOptions = {
+export type CapitalCaseOptions = {
   /** Convert the rest of the string to lower case */
   lowerCase?: boolean;
 };
@@ -10,14 +12,14 @@ export type ToCapitalCaseOptions = {
 /**
  * Capitalize the first letter of a string
  * @param input - The string to capitalize
- * @param __namedParameters - see {@link ToCapitalCaseOptions}
+ * @param options - see {@link CapitalCaseOptions}
  * @defaultValue lowerCase default
  * @group String
  * @category Case Conversion
  */
 export function toCapitalCase(
   input: string,
-  { lowerCase = false }: ToCapitalCaseOptions = {},
+  { lowerCase = false }: CapitalCaseOptions = {},
 ): string {
   return (
     input.charAt(0).toLocaleUpperCase() +

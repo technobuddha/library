@@ -1,23 +1,13 @@
 import { escapeRegExp, isString } from 'lodash-es';
 
+import { type QuoteOptions } from './quote.ts';
 import { unescapeJS } from './unescape-js.ts';
-
-/**
- * @group String
- * @category Quoting
- */
-export type UnquoteOptions = {
-  /** The quote character(s) to use */
-  quote?: string;
-  /** Character sequence to replace the quote mark within the text */
-  escape?: string | ((input: string) => string);
-};
 
 /**
  * Remove surrounding quotes from text
  *
  * @param input - The text to surrounded by quotes
- * @param __namedParameters - see {@link UnquoteOptions}
+ * @param options - see {@link QuoteOptions}
  * @defaultValue quote double-quote (")
  * @defaultValue escape unescapeJS
  * @returns the unescaped text with quotes removed
@@ -26,7 +16,7 @@ export type UnquoteOptions = {
  */
 export function unquote(
   input: string,
-  { quote = '"', escape = unescapeJS }: UnquoteOptions = {},
+  { quote = '"', escape = unescapeJS }: QuoteOptions = {},
 ): string {
   let text = input;
   if (text.startsWith(quote) && text.endsWith(quote)) {

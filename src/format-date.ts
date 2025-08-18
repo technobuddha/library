@@ -91,7 +91,7 @@ export type FormatDateOptions = {
  *
  * @param input - The date
  * @param mask - The mask
- * @param __namedParameters - see {@link FormatDateOptions}
+ * @param options - see {@link FormatDateOptions}
  * @defaultValue utc false
  * @group Time
  * @category Formatting

@@ -2,6 +2,8 @@ import { empty, space } from './constants.ts';
 import { splitWords } from './split-words.ts';
 
 /**
+ * Options for the {@link wordwrap} function
+ *
  * @group String
  * @category Word Wrapping
  */

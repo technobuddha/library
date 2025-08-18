@@ -13,7 +13,7 @@ similar to how `Map` allows objects, but with value-based equality rather than r
 
 ## Example
 
-```typescript
+```ts
 const map = new JSONMap<{ id: number }, string>();
 map.set({ id: 1 }, "one");
 console.log(map.get({ id: 1 })); // "one"
@@ -59,7 +59,6 @@ Defined in: [json-map.ts:32](https://github.com/technobuddha/library/blob/main/s
 | Property | Modifier | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
 | <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONMap"` | `'JSONMap'` | [json-map.ts:40](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L40) |
-| <a id="map"></a> `map` | `protected` | [`Map`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map)\<`string`, `V`\> | `undefined` | [json-map.ts:30](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L30) |
 
 ## Accessors
 

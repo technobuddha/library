@@ -14,7 +14,7 @@ objects with the same structure and values, regardless of their references.
 
 ## Example
 
-```typescript
+```ts
 const set = new JSONSet<{ a: number }>();
 set.add({ a: 1 });
 set.has({ a: 1 }); // true
@@ -64,7 +64,6 @@ Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/s
 | Property | Modifier | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
 | <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONSet"` | `'JSONSet'` | [json-set.ts:43](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L43) |
-| <a id="set"></a> `set` | `protected` | [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`string`\> | `undefined` | [json-set.ts:33](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L33) |
 
 ## Accessors
 
@@ -384,30 +383,6 @@ Despite its name, returns an iterable of the values in the set.
 #### Implementation of
 
 `Set.keys`
-
-***
-
-### replicate()
-
-> `protected` **replicate**\<`X`\>(`values?`: `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`X`, `any`, `any`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`X`\>
-
-Defined in: [json-set.ts:45](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L45)
-
-#### Type Parameters
-
-| Type Parameter | Default type |
-| ------ | ------ |
-| `X` | `T` |
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `values?` | `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`X`, `any`, `any`\> |
-
-#### Returns
-
-[`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`X`\>
 
 ***
 

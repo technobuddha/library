@@ -2,15 +2,7 @@ import { escapeRegExp } from 'lodash-es';
 
 import { empty, space } from './constants.ts';
 import { getIndent } from './get-indent.ts';
-
-/**
- * @group String
- * @category Indentation
- */
-export type UnindentOptions = {
-  /** the indentation character */
-  indenter?: string;
-};
+import { type IndentOptions } from './indent.ts';
 
 /**
  * Remove indentation from text
@@ -20,7 +12,7 @@ export type UnindentOptions = {
  * @group String
  * @category Indentation
  */
-export function unindent(input: string, { indenter = space }: UnindentOptions = {}): string {
+export function unindent(input: string, { indenter = space }: IndentOptions = {}): string {
   const indent = getIndent(input, { indenter });
 
   if (indent === 0) {

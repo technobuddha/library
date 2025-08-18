@@ -4,9 +4,9 @@
 
 # Function: getIndent()
 
-> **getIndent**(`input`: `string`, `__namedParameters`: [`GetIndentOptions`](GetIndentOptions.md)): `number`
+> **getIndent**(`input`: `string`, `options`: [`IndentOptions`](IndentOptions.md)): `number`
 
-Defined in: [get-indent.ts:24](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L24)
+Defined in: [get-indent.ts:16](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L16)
 
 Determine the indentation level of text
 
@@ -15,7 +15,7 @@ Determine the indentation level of text
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The indented text |
-| `__namedParameters` | [`GetIndentOptions`](GetIndentOptions.md) | see [GetIndentOptions](GetIndentOptions.md) |
+| `options` | [`IndentOptions`](IndentOptions.md) | see [IndentOptions](IndentOptions.md) |
 
 ## Returns
 

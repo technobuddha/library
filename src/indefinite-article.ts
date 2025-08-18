@@ -23,7 +23,7 @@ const TESTS: [string, RegExp][] = [
  * Options for determining the indefinite article to use with a word.
  *
  * @group English
- * @category Indefinite Article
+ * @category Parts of Speech
  */
 export type IndefiniteArticleOptions = {
   /** only return the indefinite article, do not combine with the input */
@@ -38,12 +38,12 @@ export type IndefiniteArticleOptions = {
  * all
  *
  * @param word - The word
- * @param __namedParameters - see {@link IndefiniteArticleOptions}
+ * @param options - see {@link IndefiniteArticleOptions}
  * @defaultValue only false
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
  * @group English
- * @category Indefinite Article
+ * @category Parts of Speech
  */
 export function indefiniteArticle(
   word: string,

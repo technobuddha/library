@@ -2,11 +2,13 @@ import { clean } from './clean.ts';
 import { space } from './constants.ts';
 
 /**
+ * Options for the {@link collapseBreakingSpace} function
+ *
  * @group String
  * @category Collapse
  */
 export type CollapseBreakingSpaceOptions = {
-  /** If true, trim  */
+  /** If true, trim leading and trailing whitespace */
   trim?: boolean;
 };
 

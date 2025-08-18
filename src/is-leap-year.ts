@@ -1,10 +1,11 @@
 import { isNumber } from 'lodash-es';
 
 /**
+ * Options for the {@link isLeapYear} function
  * @group Time
  * @category Year
  */
-export type IsLeapYearOptions = {
+export type LeapYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
 };
@@ -13,12 +14,12 @@ export type IsLeapYearOptions = {
  * Determine if a year is a leap year
  *
  * @param input - A date, or a year number
- * @param __namedParameters - see {@link IsLeapYearOptions}
+ * @param options - see {@link LeapYearOptions}
  * @returns true, if the specified year is a leap year
  * @group Time
  * @category Year
  */
-export function isLeapYear(input: Date | number, { utc = false }: IsLeapYearOptions = {}): boolean {
+export function isLeapYear(input: Date | number, { utc = false }: LeapYearOptions = {}): boolean {
   const year =
     isNumber(input) ? input
     : utc ? input.getUTCFullYear()

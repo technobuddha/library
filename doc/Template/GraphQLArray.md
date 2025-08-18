@@ -6,4 +6,6 @@
 
 > **GraphQLArray** = [`GraphQLValue`](GraphQLValue.md)[]
 
-Defined in: [graphql.ts:15](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L15)
+Defined in: [graphql.ts:20](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L20)
+
+A GraphQL Array, similar to a JSONArray

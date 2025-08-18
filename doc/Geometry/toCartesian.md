@@ -12,10 +12,10 @@ Convert polar coordinates to cartesian
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `__namedParameters` | [`Polar`](Polar.md) | `undefined` | radius, angle in radians (zero points in +X direction). |
-| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` | - |
+| Parameter | Type | Default value |
+| ------ | ------ | ------ |
+| `__namedParameters` | [`Polar`](Polar.md) | `undefined` |
+| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` |
 
 ## Returns
 

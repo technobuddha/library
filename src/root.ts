@@ -1,6 +1,8 @@
 import { isNil } from 'lodash-es';
 
 /**
+ * Options for the {@link root} function
+ *
  * @group String
  * @category Affix
  */
@@ -15,7 +17,7 @@ export type RootOptions = {
  * Extract the root word, removing a prefix and/or suffix
  *
  * @param text - The word, which might have @see prefix before it, and @see suffix after it.
- * @param __namedParameters - see {@link RootOptions}
+ * @param options - see {@link RootOptions}
  * @returns The root word
  * @group String
  * @category Affix

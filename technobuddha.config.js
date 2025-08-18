@@ -5,6 +5,7 @@
 const config = {
   lint: {
     rules: {
+      '@typescript-eslint/method-signature-style': { rule: 'off' },
       'jest/require-hook': { rule: 'off' },
       'technobuddha/optimize-imports': {
         rule: [

@@ -5,10 +5,11 @@ import { day, daysPerWeek, month } from './constants.ts';
 import { modulo } from './modulo.ts';
 
 /**
+ * Options for the {@link getISOWeeksInYear} function
  * @group Time
  * @category Week
  */
-export type GetISOWeeksInYearOptions = {
+export type ISOWeeksInYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
   /** Week 1 is defined as the week with the Gregorian year's first [weekOneIncludes] day in it */
@@ -19,7 +20,7 @@ export type GetISOWeeksInYearOptions = {
  * Determine the number of ISO weeks within a year
  *
  * @param input - A date within the year, or a year number
- * @param __namedParameters - see {@link GetISOWeeksInYearOptions}
+ * @param options - see {@link ISOWeeksInYearOptions}
  * @defaultValue weekOneIncludes Thursday
  * @returns The number of weeks in the year (52 or 53)
  * @group Time
@@ -27,7 +28,7 @@ export type GetISOWeeksInYearOptions = {
  */
 export function getISOWeeksInYear(
   input: Date | number,
-  { utc = false, weekOneIncludes = day.thursday }: GetISOWeeksInYearOptions = {},
+  { utc = false, weekOneIncludes = day.thursday }: ISOWeeksInYearOptions = {},
 ): number {
   const year =
     isNumber(input) ? input

@@ -7,7 +7,7 @@ import { removeDiacritics } from './remove-diacritics.ts';
  * @param input - the word
  * @returns the possessive form of the word
  * @group English
- * @category Possessive
+ * @category Parts of Speech
  */
 export function possessive(input: string): string {
   const last = removeDiacritics(input).at(-1);

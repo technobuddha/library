@@ -4,22 +4,36 @@ import { empty, space } from './constants.ts';
 import { escapeGraphQL } from './escape-graphql.ts';
 
 /**
+ * A GraphQL Object, similar to a JSONObject
+ *
  * @group Template
  * @category GraphQl
  */
 export type GraphQLObject = { [Key in string]: GraphQLValue };
+
 /**
+ * A GraphQL Array, similar to a JSONArray
+ *
  * @group Template
  * @category GraphQl
  */
 export type GraphQLArray = GraphQLValue[];
+
 /**
+ * A GraphQL Value, similar to a JSONValue
+ *
  * @group Template
  * @category GraphQl
  */
 export type GraphQLValue = number | string | null | boolean | GraphQLArray | GraphQLObject;
 
 /**
+ * Tagged template function for constructing GraphQL queries or mutations.
+ *
+ * @param template - The template string array representing the static parts of the GraphQL query.
+ * @param args - The dynamic values to interpolate into the query.
+ * @returns The resulting GraphQL query string with interpolated values.
+ *
  * @group Template
  * @category GraphQl
  */

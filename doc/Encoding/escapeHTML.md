@@ -4,7 +4,7 @@
 
 # Function: escapeHTML()
 
-> **escapeHTML**(`input`: `string`, `__namedParameters`: [`EscapeHtmlSettings`](EscapeHtmlSettings.md)): `string`
+> **escapeHTML**(`input`: `string`, `options`: [`EscapeHtmlOptions`](EscapeHtmlOptions.md)): `string`
 
 Defined in: [escape-html.ts:22](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L22)
 
@@ -15,7 +15,7 @@ Escape a string for use in HTML
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to escape |
-| `__namedParameters` | [`EscapeHtmlSettings`](EscapeHtmlSettings.md) | see [EscapeHtmlSettings](EscapeHtmlSettings.md) |
+| `options` | [`EscapeHtmlOptions`](EscapeHtmlOptions.md) | see [EscapeHtmlOptions](EscapeHtmlOptions.md) |
 
 ## Returns
 

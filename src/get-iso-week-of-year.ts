@@ -5,10 +5,11 @@ import { getBeginningOfWeek } from './get-beginning-of-week.ts';
 import { getISOWeeksInYear } from './get-iso-weeks-in-year.ts';
 
 /**
+ * Options for the {@link getISOWeekOfYear} function
  * @group Time
  * @category Week
  */
-export type GetISOWeekOfYearOptions = {
+export type ISOWeekOfYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
   /** Week 1 is defined as the week with the Gregorian year's first [weekOneIncludes] day in it */
@@ -21,7 +22,7 @@ export type GetISOWeekOfYearOptions = {
  * Determine the ISO week number for a given date
  *
  * @param input - The date
- * @param __namedParameters - see {@link GetISOWeekOfYearOptions}
+ * @param options - see {@link ISOWeekOfYearOptions}
  * @defaultValue weekOneIncludes Thursday
  * @defaultValue firstDayOfWeek Monday
  * @returns the week number (1-53)
@@ -34,7 +35,7 @@ export function getISOWeekOfYear(
     utc = false,
     weekOneIncludes = day.thursday,
     firstDayOfWeek = day.monday,
-  }: GetISOWeekOfYearOptions = {},
+  }: ISOWeekOfYearOptions = {},
 ): { year: number; week: number } {
   const bow = getBeginningOfWeek(input, { utc, firstDayOfWeek });
 

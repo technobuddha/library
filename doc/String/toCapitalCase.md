@@ -4,9 +4,9 @@
 
 # Function: toCapitalCase()
 
-> **toCapitalCase**(`input`: `string`, `__namedParameters`: [`ToCapitalCaseOptions`](ToCapitalCaseOptions.md)): `string`
+> **toCapitalCase**(`input`: `string`, `options`: [`CapitalCaseOptions`](CapitalCaseOptions.md)): `string`
 
-Defined in: [to-capital-case.ts:18](https://github.com/technobuddha/library/blob/main/src/to-capital-case.ts#L18)
+Defined in: [to-capital-case.ts:20](https://github.com/technobuddha/library/blob/main/src/to-capital-case.ts#L20)
 
 Capitalize the first letter of a string
 
@@ -15,7 +15,7 @@ Capitalize the first letter of a string
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to capitalize |
-| `__namedParameters` | [`ToCapitalCaseOptions`](ToCapitalCaseOptions.md) | see [ToCapitalCaseOptions](ToCapitalCaseOptions.md) |
+| `options` | [`CapitalCaseOptions`](CapitalCaseOptions.md) | see [CapitalCaseOptions](CapitalCaseOptions.md) |
 
 ## Returns
 

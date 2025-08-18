@@ -14,7 +14,7 @@ export type IsSurrogateOptions = {
  * Determine is a character is a surrogate
  *
  * @param input - the character to test
- * @param __namedParameters - see {@link IsSurrogateOptions}
+ * @param options - see {@link IsSurrogateOptions}
  * @defaultValue high true
  * @defaultValue low true
  * @returns true if the specified character is a unicode surrogate

@@ -8,12 +8,12 @@
 
 > **decodeBase64Url**(`input`: `string`): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [decode-base64.ts:118](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L118)
+Defined in: [decode-base64.ts:137](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L137)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
-You can use the btoa() method to encode and transmit data which may otherwise cause
-communication problems, then transmit it and use the atob() method to decode the data again.
+You can use the [encodeBase64Url](encodeBase64Url.md) method to encode and transmit data which may otherwise cause
+communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again.
 For example, you can encode, transmit, and decode control characters such as ASCII values
 0 through 31.
 
@@ -35,7 +35,7 @@ Whitespace withing the Base64 encoded string is ignored.
 
 ### Example
 
-```typescript
+```ts
 atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 ```
 
@@ -47,12 +47,12 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 > **decodeBase64Url**(`input`: `string`, `encoding`: [`TextEncoding`](../Unicode/TextEncoding.md)): `string`
 
-Defined in: [decode-base64.ts:119](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L119)
+Defined in: [decode-base64.ts:138](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L138)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
-You can use the btoa() method to encode and transmit data which may otherwise cause
-communication problems, then transmit it and use the atob() method to decode the data again.
+You can use the [encodeBase64Url](encodeBase64Url.md) method to encode and transmit data which may otherwise cause
+communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again.
 For example, you can encode, transmit, and decode control characters such as ASCII values
 0 through 31.
 
@@ -75,7 +75,7 @@ Whitespace withing the Base64 encoded string is ignored.
 
 ### Example
 
-```typescript
+```ts
 atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 ```
 

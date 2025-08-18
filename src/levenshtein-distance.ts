@@ -1,6 +1,8 @@
 import { create2DArray } from './create-2d-array.ts';
 
 /**
+ * Options for the {@link levenshteinDistance} function
+ *
  * @group String
  * @category Fuzzy Match
  */
@@ -14,7 +16,7 @@ export type LevenshteinDistanceOptions = {
  *
  * @param input - The string
  * @param comparedTo - The string to compare to
- * @param __namedParameters - see {@link LevenshteinDistanceOptions}
+ * @param options - see {@link LevenshteinDistanceOptions}
  * @defaultValue caseInsensitive true
  * @returns the levenshteinDistance between the two strings (0 for no similarity through 1 for equal)
  * @group String

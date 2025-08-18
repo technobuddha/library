@@ -12,7 +12,7 @@ import { deserialize, serialize } from './json-serializer.ts';
  * @typeParam V - The type of the value.
  *
  * @example
- * ```typescript
+ * ```ts
  * const map = new JSONMap<{ id: number }, string>();
  * map.set({ id: 1 }, "one");
  * console.log(map.get({ id: 1 })); // "one"

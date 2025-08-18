@@ -30,7 +30,7 @@ TypeError If the input is NaN or not a finite number.
 
 ## Example
 
-```typescript
+```ts
 const result = deconstructNumber(123.456);
 // result = {
 //   value: 123.456,

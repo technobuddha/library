@@ -5,6 +5,8 @@ import { floor } from './floor.ts';
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /**
+ * Options for the {@link numberToLetter} function
+ *
  * @group String
  * @category Sorting
  */
@@ -16,7 +18,7 @@ export type NumberToLetterOptions = {
 /**
  * Convert a number to a letter, using the alphabet (default: A-Z)
  * @param num - The number to convert
- * @param __namedParameters - see {@link NumberToLetterOptions}
+ * @param options - see {@link NumberToLetterOptions}
  * @returns The letter
  * @group String
  * @category Sorting

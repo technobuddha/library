@@ -1,8 +1,10 @@
 /**
+ * Options for the {@link toSmallWordsCase} function
+ *
  * @group String
  * @category Case Conversion
  */
-export type ToSmallWordsCaseOptions = {
+export type SmallWordsCaseOptions = {
   /** Convert other characters in the string to upper case */
   upperCase?: boolean;
 };
@@ -18,7 +20,7 @@ export type ToSmallWordsCaseOptions = {
  */
 export function toSmallWordsCase(
   input: string,
-  { upperCase = false }: ToSmallWordsCaseOptions = {},
+  { upperCase = false }: SmallWordsCaseOptions = {},
 ): string {
   return (upperCase ? input.toLocaleUpperCase() : input).replaceAll(/\b\w/gu, (c) =>
     c.toLocaleLowerCase(),

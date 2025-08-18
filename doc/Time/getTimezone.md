@@ -4,9 +4,9 @@
 
 # Function: getTimezone()
 
-> **getTimezone**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetTimezoneOptions`](GetTimezoneOptions.md)): `string`
+> **getTimezone**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`TimezoneOptions`](TimezoneOptions.md)): `string`
 
-Defined in: [get-timezone.ts:30](https://github.com/technobuddha/library/blob/main/src/get-timezone.ts#L30)
+Defined in: [get-timezone.ts:32](https://github.com/technobuddha/library/blob/main/src/get-timezone.ts#L32)
 
 Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes
 
@@ -15,7 +15,7 @@ Determine the correct timezone string for a specified date using a local timezon
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date, or a timezone offset in minutes |
-| `__namedParameters` | [`GetTimezoneOptions`](GetTimezoneOptions.md) | see [GetTimezoneOptions](GetTimezoneOptions.md) |
+| `options` | [`TimezoneOptions`](TimezoneOptions.md) | see [TimezoneOptions](TimezoneOptions.md) |
 
 ## Returns
 

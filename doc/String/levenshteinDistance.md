@@ -4,9 +4,9 @@
 
 # Function: levenshteinDistance()
 
-> **levenshteinDistance**(`input`: `string`, `comparedTo`: `string`, `__namedParameters`: [`LevenshteinDistanceOptions`](LevenshteinDistanceOptions.md)): `number`
+> **levenshteinDistance**(`input`: `string`, `comparedTo`: `string`, `options`: [`LevenshteinDistanceOptions`](LevenshteinDistanceOptions.md)): `number`
 
-Defined in: [levenshtein-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L23)
+Defined in: [levenshtein-distance.ts:25](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L25)
 
 Compute the levenshtein distance between two strings (similarity)
 
@@ -16,7 +16,7 @@ Compute the levenshtein distance between two strings (similarity)
 | ------ | ------ | ------ |
 | `input` | `string` | The string |
 | `comparedTo` | `string` | The string to compare to |
-| `__namedParameters` | [`LevenshteinDistanceOptions`](LevenshteinDistanceOptions.md) | see [LevenshteinDistanceOptions](LevenshteinDistanceOptions.md) |
+| `options` | [`LevenshteinDistanceOptions`](LevenshteinDistanceOptions.md) | see [LevenshteinDistanceOptions](LevenshteinDistanceOptions.md) |
 
 ## Returns
 

@@ -4,9 +4,9 @@
 
 # Function: build()
 
-> **build**(...`args`: ([`Stringy`](Stringy.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`Stringy`](Stringy.md), `any`, `any`\> \| `IterableIterator`\<`string`, `any`, `any`\> \| () => [`Stringy`](Stringy.md))[]): `string`
+> **build**(...`args`: ([`StringLike`](StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`string`, `any`, `any`\> \| `IterableIterator`\<`string`, `any`, `any`\> \| () => [`StringLike`](StringLike.md))[]): `string`
 
-Defined in: [build.ts:18](https://github.com/technobuddha/library/blob/main/src/build.ts#L18)
+Defined in: [build.ts:20](https://github.com/technobuddha/library/blob/main/src/build.ts#L20)
 
 Concatenates strings and/or arrays of strings
 
@@ -14,7 +14,7 @@ Concatenates strings and/or arrays of strings
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| ...`args` | ([`Stringy`](Stringy.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`Stringy`](Stringy.md), `any`, `any`\> \| `IterableIterator`\<`string`, `any`, `any`\> \| () => [`Stringy`](Stringy.md))[] | Concatenates a list of strings, string arrays, or functions that return a string or string array. |
+| ...`args` | ([`StringLike`](StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`string`, `any`, `any`\> \| `IterableIterator`\<`string`, `any`, `any`\> \| () => [`StringLike`](StringLike.md))[] | Concatenates a list of strings, string arrays, or functions that return a string or string array. |
 
 ## Returns
 

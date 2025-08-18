@@ -6,29 +6,90 @@ import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
 
 /**
- * The  interface for hash classes
- * @group Crypto
+ * Interface representing a generic hash algorithm implementation.
+ *
+ * @remarks
+ * This interface defines the contract for hash classes, supporting
+ * updating the hash with data and producing a digest in various formats.
+ *
+ * @group Encoding
  * @category Hash
  */
 export interface HashClass {
+  /**
+   * Finalizes the hash computation and returns the resulting hash digest.
+   * This method performs any necessary padding and processes the final block
+   * of data according to the hash algorithm's specification. The output is returned
+   * as a raw `Uint8Array`.
+   * @returns The hash digest as a `Uint8Array`
+   */
   digest(): Uint8Array;
+
+  /**
+   * Finalizes the hash computation and returns the resulting hash digest.
+   * This method performs any necessary padding and processes the final block
+   * of data according to the hash algorithm's specification. The output is
+   * or encoded as a string in the specified binary encoding.
+   *
+   * @param encoding - Optional. The encoding to use for the output digest (e.g., 'hex', 'base64').
+   * @returns An encoded string, depending on the `encoding` parameter.
+   */
   digest(encoding: BinaryEncoding): string;
+
+  /**
+   * Updates the hash with the given binary data.
+   * @param data - The data to update the hash with, as a TypedArray or ArrayBuffer.
+   * @returns The hash instance for method chaining.
+   */
   update(data: TypedArray | ArrayBuffer): this;
+
+  /**
+   * Updates the hash with the given string data.
+   * @param data - The string data to update the hash with.
+   * @param encoding - Optional text encoding of the input string (e.g., 'utf8').
+   * @returns The hash instance for method chaining.
+   */
   update(data: string, encoding?: TextEncoding): this;
 }
 
 /**
- * The  class for most cryptographic hash functions
+ * The base class for most cryptographic hash functions
  *
- * @group Crypto
+ * @group Encoding
  * @category Hash
  */
 export abstract class HashBase implements HashClass {
+  /**
+   * Internal buffer used to store a block of data for hashing operations.
+   * This buffer is typically filled with input data and processed in chunks
+   * according to the hash algorithm's block size.
+   * @readonly
+   */
   protected readonly block: Uint8Array;
+  /**
+   * The size of each data block (in bytes) that the hash algorithm processes at a time.
+   * This value determines how input data is divided and handled internally.
+   * @readonly
+   */
   protected readonly blockSize: number;
+  /**
+   * The size in bytes of the final hash output produced by the algorithm.
+   * This value determines the length of the resulting hash digest.
+   * @readonly
+   */
   protected readonly finalSize: number;
+  /**
+   * The current length of the data processed or stored.
+   * Used internally to track the number of bytes or elements handled by the hash algorithm.
+   */
   private len: number;
 
+  /**
+   * Creates a new instance of the hash base class.
+   *
+   * @param blockSize - The size of the internal block buffer in bytes.
+   * @param finalSize - The size of the final hash output in bytes.
+   */
   public constructor(blockSize: number, finalSize: number) {
     this.block = new Uint8Array(blockSize);
     this.finalSize = finalSize;
@@ -36,8 +97,28 @@ export abstract class HashBase implements HashClass {
     this.len = 0;
   }
 
+  /**
+   * Computes and returns the final hash value for the current state.
+   *
+   * @remarks
+   * This method should be implemented by subclasses to perform the actual
+   * hash computation based on the internal state and algorithm-specific logic.
+   * It is called internally by {@link digest} after all data has been processed.
+   *
+   * @returns The computed hash as a `Uint8Array`.
+   */
   protected abstract hash(): Uint8Array;
 
+  /**
+   * Updates the internal bit counters based on the provided data block.
+   *
+   * @remarks
+   * This method is called internally whenever a full block of data is processed.
+   * Subclasses should implement this to maintain any algorithm-specific counters
+   * (such as total bits or bytes processed) required for correct hash computation.
+   *
+   * @param buffer - The data block that was just processed.
+   */
   protected abstract updateCounters(buffer: Uint8Array): void;
 
   public digest(): Uint8Array;

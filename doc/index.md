@@ -4,7 +4,7 @@
 
 ## Array
 
-### 2D
+### Creation
 
 | Function | Description |
 | ------ | ------ |
@@ -14,44 +14,17 @@
 
 | Name | Description |
 | ------ | ------ |
-| [LookAheadOptions](Array/LookAheadOptions.md) | Options for look-ahead operations. |
+| [LookAheadOptions](Array/LookAheadOptions.md) | Options for [lookAhead](Array/lookAhead.md) operations. |
 | [lookAhead](Array/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
 
-### Longest Common Subsequence
+### Matching
 
 | Name | Description |
 | ------ | ------ |
-| [LongestCommonSubsequenceOptions](Array/LongestCommonSubsequenceOptions.md) | Options for configuring the longest common subsequence calculation. |
-| [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subarray of both of given arrays. |
-
-## Crypto
-
-### Hash
-
-| Name | Description |
-| ------ | ------ |
-| [Crc32](Crypto/Crc32.md) | Compute the CRC32 checksum |
-| [HashBase](Crypto/HashBase.md) | The class for most cryptographic hash functions |
-| [Sha1](Crypto/Sha1.md) | Secure Hash Algorithm, SHA-1 |
-| [Sha224](Crypto/Sha224.md) | Secure Hash Algorithm, SHA2 SHA-224 |
-| [Sha256](Crypto/Sha256.md) | Secure Hash Algorithm, SHA2 SHA-256 |
-| [Sha384](Crypto/Sha384.md) | Secure Hash Algorithm, SHA2 SHA-384 |
-| [Sha512](Crypto/Sha512.md) | Secure Hash Algorithm, SHA2 SHA-512 |
-| [HashClass](Crypto/HashClass.md) | The interface for hash classes |
+| [LongestCommonSubsequenceOptions](Array/LongestCommonSubsequenceOptions.md) | Options for configuring the [longestCommonSubsequence](Array/longestCommonSubsequence.md) calculation. |
+| [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
 
 ## Encoding
-
-### Base64
-
-| Name | Description |
-| ------ | ------ |
-| [Base64Configuration](Encoding/Base64Configuration.md) | Configuration for Base64 based encoding schemes |
-| [base64Config](Encoding/base64Config.md) | Configuration for Base64 encoding |
-| [base64UrlConfig](Encoding/base64UrlConfig.md) | Configuration for Base64Url encoding |
-| [decodeBase64](Encoding/decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [decodeBase64Url](Encoding/decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. You can use the btoa() method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the atob() method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31. |
-| [encodeBase64](Encoding/encodeBase64.md) | Creates a Base64-encoded ASCII string from a string. |
-| [encodeBase64Url](Encoding/encodeBase64Url.md) | Creates a Base64-encoded ASCII string from a string. |
 
 ### Binary
 
@@ -60,14 +33,18 @@
 | [BinaryEncoding](Encoding/BinaryEncoding.md) | The binary encoding to use |
 | [BinaryObject](Encoding/BinaryObject.md) | A type that represents various binary object types in JavaScript. |
 | [dataURL](Encoding/dataURL.md) | Convert any binary object into a data URL |
+| [decodeBase64](Encoding/decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
+| [decodeBase64Url](Encoding/decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. You can use the [encodeBase64Url](Encoding/encodeBase64Url.md) method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31. |
 | [decodeBinary](Encoding/decodeBinary.md) | Decode a string into a binary object |
+| [encodeBase64](Encoding/encodeBase64.md) | Creates a Base64-encoded ASCII string from a string. |
+| [encodeBase64Url](Encoding/encodeBase64Url.md) | Creates a Base64-encoded ASCII string from a string. |
 | [encodeBinary](Encoding/encodeBinary.md) | Encode an binary object into a string |
 
 ### Escaping
 
 | Name | Description |
 | ------ | ------ |
-| [EscapeHtmlSettings](Encoding/EscapeHtmlSettings.md) | Options for [escapeHTML](Encoding/escapeHTML.md) |
+| [EscapeHtmlOptions](Encoding/EscapeHtmlOptions.md) | Options for [escapeHTML](Encoding/escapeHTML.md) |
 | [escapeC](Encoding/escapeC.md) | Escape a string for use in C/C++ |
 | [escapeGraphQL](Encoding/escapeGraphQL.md) | Escape a string for use in GraphQL |
 | [escapeHTML](Encoding/escapeHTML.md) | Escape a string for use in HTML |
@@ -80,32 +57,30 @@
 | [unescapeJS](Encoding/unescapeJS.md) | Unescape a string encoded in Javascript style |
 | [unescapePython](Encoding/unescapePython.md) | Unescape a string encoded in Python style |
 
+### Hash
+
+| Name | Description |
+| ------ | ------ |
+| [Crc32](Encoding/Crc32.md) | Compute the CRC32 checksum |
+| [HashBase](Encoding/HashBase.md) | The base class for most cryptographic hash functions |
+| [Sha1](Encoding/Sha1.md) | Secure Hash Algorithm, SHA-1 |
+| [Sha224](Encoding/Sha224.md) | Secure Hash Algorithm, SHA2 SHA-224 |
+| [Sha256](Encoding/Sha256.md) | Secure Hash Algorithm, SHA2 SHA-256 |
+| [Sha384](Encoding/Sha384.md) | Secure Hash Algorithm, SHA2 SHA-384 |
+| [Sha512](Encoding/Sha512.md) | Secure Hash Algorithm, SHA2 SHA-512 |
+| [HashClass](Encoding/HashClass.md) | Interface representing a generic hash algorithm implementation. |
+
 ## English
 
-### Coordinate
+### Parts of Speech
 
 | Name | Description |
 | ------ | ------ |
-| [CoordinateOptions](English/CoordinateOptions.md) | Options for creating a coordinate string |
-| [coordinate](English/coordinate.md) | Create a string from an array, separating values and inserting a conjunction |
-
-### Indefinite Article
-
-| Name | Description |
-| ------ | ------ |
+| [ConjoinCoordinateOptions](English/ConjoinCoordinateOptions.md) | Options for creating a coordinate string |
 | [IndefiniteArticleOptions](English/IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
+| [conjoin](English/conjoin.md) | Create a string from an array, separating values and inserting a conjunction |
 | [indefiniteArticle](English/indefiniteArticle.md) | Determine the appropriate indefinite article to use with a word. |
-
-### Plural
-
-| Function | Description |
-| ------ | ------ |
 | [plural](English/plural.md) | Return the plural version of the input string |
-
-### Possessive
-
-| Function | Description |
-| ------ | ------ |
 | [possessive](English/possessive.md) | Determine the possessive form of a word |
 
 ### Syllables
@@ -197,7 +172,7 @@
 | Name | Description |
 | ------ | ------ |
 | [LargestInscribedRectangleOptions](Geometry/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
-| [Rect](Geometry/Rect.md) | - |
+| [Rect](Geometry/Rect.md) | A rectangle (defined by its top-left corner, width and height) |
 | [RotatedRect](Geometry/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
 | [isRect](Geometry/isRect.md) | Determines if the provided value is a Rectangle. |
 | [largestInscribedRectangle](Geometry/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
@@ -382,7 +357,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [RootOptions](String/RootOptions.md) | - |
+| [RootOptions](String/RootOptions.md) | Options for the [root](String/root.md) function |
 | [ensurePrefix](String/ensurePrefix.md) | Add a prefix to a string, if it does not already have the prefix |
 | [ensureSuffix](String/ensureSuffix.md) | Add a suffix to a string, if it does not already have the suffix |
 | [root](String/root.md) | Extract the root word, removing a prefix and/or suffix |
@@ -391,17 +366,17 @@
 
 | Name | Description |
 | ------ | ------ |
-| [Stringy](String/Stringy.md) | - |
+| [StringLike](String/StringLike.md) | A string-like object, which can be a string or an array of strings; |
 | [build](String/build.md) | Concatenates strings and/or arrays of strings |
 
 ### Case Conversion
 
 | Name | Description |
 | ------ | ------ |
-| [ToCapitalCaseOptions](String/ToCapitalCaseOptions.md) | - |
-| [ToCapitalWordCaseOptions](String/ToCapitalWordCaseOptions.md) | - |
-| [ToSmallCaseOptions](String/ToSmallCaseOptions.md) | - |
-| [ToSmallWordsCaseOptions](String/ToSmallWordsCaseOptions.md) | - |
+| [CapitalCaseOptions](String/CapitalCaseOptions.md) | Options for the [toCapitalCase](String/toCapitalCase.md) function |
+| [CapitalWordCaseOptions](String/CapitalWordCaseOptions.md) | Options for the [toCapitalWordCase](String/toCapitalWordCase.md) function |
+| [SmallCaseOptions](String/SmallCaseOptions.md) | Options for the [toSmallCase](String/toSmallCase.md) function |
+| [SmallWordsCaseOptions](String/SmallWordsCaseOptions.md) | Options for the [toSmallWordsCase](String/toSmallWordsCase.md) function |
 | [matchCase](String/matchCase.md) | Attempt to convert the input string into the same case as the target string |
 | [toCamelCase](String/toCamelCase.md) | Convert an identifier string to a camel case |
 | [toCapitalCase](String/toCapitalCase.md) | Capitalize the first letter of a string |
@@ -431,7 +406,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [ChopOptions](String/ChopOptions.md) | - |
+| [ChopOptions](String/ChopOptions.md) | Options for the [chop](String/chop.md) function |
 | [chop](String/chop.md) | Break a string into equal sized segments of characters |
 
 ### Clean
@@ -446,8 +421,8 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CollapseBreakingSpaceOptions](String/CollapseBreakingSpaceOptions.md) | - |
-| [CollapseWhitespaceOptions](String/CollapseWhitespaceOptions.md) | - |
+| [CollapseBreakingSpaceOptions](String/CollapseBreakingSpaceOptions.md) | Options for the [collapseBreakingSpace](String/collapseBreakingSpace.md) function |
+| [CollapseWhitespaceOptions](String/CollapseWhitespaceOptions.md) | Options for the [collapseWhitespace](String/collapseWhitespace.md) function |
 | [collapseBreakingSpace](String/collapseBreakingSpace.md) | Replace all breaking space (space, tab, carriage return, new line) with a single space |
 | [collapseWhitespace](String/collapseWhitespace.md) | Replace all whitespace within a string with a single space |
 
@@ -455,24 +430,15 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CompareStringsOptions](String/CompareStringsOptions.md) | - |
+| [CompareStringsOptions](String/CompareStringsOptions.md) | Options for the [compareStrings](String/compareStrings.md) function |
 | [compareStrings](String/compareStrings.md) | Compare two strings |
-
-### Constants
-
-| Variable | Description |
-| ------ | ------ |
-| [empty](String/empty.md) | - |
-| [nbsp](String/nbsp.md) | - |
-| [space](String/space.md) | - |
-| [zwsp](String/zwsp.md) | - |
 
 ### Conversion
 
 | Name | Description |
 | ------ | ------ |
-| [ToBooleanOptions](String/ToBooleanOptions.md) | - |
-| [ToFilenameOptions](String/ToFilenameOptions.md) | - |
+| [BooleanOptions](String/BooleanOptions.md) | Options for the [toBoolean](String/toBoolean.md) function |
+| [FilenameOptions](String/FilenameOptions.md) | Options for the [toFilename](String/toFilename.md) function |
 | [toBoolean](String/toBoolean.md) | Convert a string to a boolean value |
 | [toEnumeration](String/toEnumeration.md) | Convert a string to a numeric value |
 | [toFilename](String/toFilename.md) | Convert a string so that it can be used as a filename |
@@ -487,7 +453,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CountOptions](String/CountOptions.md) | - |
+| [CountOptions](String/CountOptions.md) | Options for the [count](String/count.md) function |
 | [count](String/count.md) | Compute the number of times a substring occurs within a string |
 | [delimited](String/delimited.md) | Return a field from a delimited string |
 
@@ -502,12 +468,12 @@
 
 | Name | Description |
 | ------ | ------ |
-| [DiceCoefficientOptions](String/DiceCoefficientOptions.md) | - |
-| [FuzzyMatchOptions](String/FuzzyMatchOptions.md) | - |
-| [LevenshteinDistanceOptions](String/LevenshteinDistanceOptions.md) | - |
+| [DiceCoefficientOptions](String/DiceCoefficientOptions.md) | Options for the [diceCoefficient](String/diceCoefficient.md) function |
+| [FuzzyMatchOptions](String/FuzzyMatchOptions.md) | Options for the [fuzzyMatch](String/fuzzyMatch.md) function |
+| [LevenshteinDistanceOptions](String/LevenshteinDistanceOptions.md) | Options for the [levenshteinDistance](String/levenshteinDistance.md) function |
 | [LongestCommonSubstringOptions](String/LongestCommonSubstringOptions.md) | Options for configuring the longest common substring calculation. |
 | [diceCoefficient](String/diceCoefficient.md) | Compute the dice coefficient measure of similarity between two strings |
-| [fuzzyMatch](String/fuzzyMatch.md) | - |
+| [fuzzyMatch](String/fuzzyMatch.md) | Computes a fuzzy similarity score between two strings using a weighted combination of Levenshtein distance, Dice coefficient, and longest common substring metrics. |
 | [levenshteinDistance](String/levenshteinDistance.md) | Compute the levenshtein distance between two strings (similarity) |
 | [longestCommonSubstring](String/longestCommonSubstring.md) | Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm. |
 
@@ -521,9 +487,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [GetIndentOptions](String/GetIndentOptions.md) | - |
-| [IndentOptions](String/IndentOptions.md) | - |
-| [UnindentOptions](String/UnindentOptions.md) | - |
+| [IndentOptions](String/IndentOptions.md) | Options for the indentation functions: [getIndent](String/getIndent.md), [indent](String/indent.md), and [unindent](String/unindent.md) |
 | [getIndent](String/getIndent.md) | Determine the indentation level of text |
 | [indent](String/indent.md) | Indent each line of a string |
 | [unindent](String/unindent.md) | Remove indentation from text |
@@ -532,15 +496,14 @@
 
 | Name | Description |
 | ------ | ------ |
-| [MaskOptions](String/MaskOptions.md) | - |
+| [MaskOptions](String/MaskOptions.md) | Options for the [mask](String/mask.md) function |
 | [mask](String/mask.md) | Use a simple mask to display a string |
 
 ### Quoting
 
 | Name | Description |
 | ------ | ------ |
-| [QuoteOptions](String/QuoteOptions.md) | - |
-| [UnquoteOptions](String/UnquoteOptions.md) | - |
+| [QuoteOptions](String/QuoteOptions.md) | Options for the [quote](String/quote.md) and [unquote](String/unquote.md) function |
 | [quote](String/quote.md) | Surround text with quotes |
 | [unquote](String/unquote.md) | Remove surrounding quotes from text |
 
@@ -548,8 +511,8 @@
 
 | Name | Description |
 | ------ | ------ |
-| [NumberToLetterOptions](String/NumberToLetterOptions.md) | - |
-| [SortOrderOptions](String/SortOrderOptions.md) | - |
+| [NumberToLetterOptions](String/NumberToLetterOptions.md) | Options for the [numberToLetter](String/numberToLetter.md) function |
+| [SortOrderOptions](String/SortOrderOptions.md) | Options for the [sortOrder](String/sortOrder.md) function |
 | [groupCode](String/groupCode.md) | Determine the group code (A-Z, [] or #) to place an item under |
 | [numberToLetter](String/numberToLetter.md) | Convert a number to a letter, using the alphabet (default: A-Z) |
 | [sortOrder](String/sortOrder.md) | Convert a string into a sortable string |
@@ -558,7 +521,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [SplitWordsOptions](String/SplitWordsOptions.md) | - |
+| [SplitWordsOptions](String/SplitWordsOptions.md) | Options for the [splitWords](String/splitWords.md) function |
 | [splitChars](String/splitChars.md) | Split a string into an array of characters |
 | [splitLines](String/splitLines.md) | Split a string into an array of lines |
 | [splitWords](String/splitWords.md) | Split a string into an array of words |
@@ -567,15 +530,15 @@
 
 | Name | Description |
 | ------ | ------ |
-| [FillTemplateOptions](String/FillTemplateOptions.md) | - |
+| [FillTemplateOptions](String/FillTemplateOptions.md) | Options for the [fillTemplate](String/fillTemplate.md) function |
 | [fillTemplate](String/fillTemplate.md) | Fill a template with supplied values |
 
 ### Units
 
 | Name | Description |
 | ------ | ------ |
-| [BinaryUnitsOptions](String/BinaryUnitsOptions.md) | - |
-| [MetricUnitsOptions](String/MetricUnitsOptions.md) | - |
+| [BinaryUnitsOptions](String/BinaryUnitsOptions.md) | Options for the [binaryUnits](String/binaryUnits.md) function |
+| [MetricUnitsOptions](String/MetricUnitsOptions.md) | Options for the [metricUnits](String/metricUnits.md) function w |
 | [binaryUnits](String/binaryUnits.md) | Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K) |
 | [metricUnits](String/metricUnits.md) | Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m) |
 
@@ -583,7 +546,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [WordwrapOptions](String/WordwrapOptions.md) | - |
+| [WordwrapOptions](String/WordwrapOptions.md) | Options for the [wordwrap](String/wordwrap.md) function |
 | [wordwrap](String/wordwrap.md) | Wrap text so that it fits within a area of fixed width |
 
 ## Template
@@ -592,16 +555,16 @@
 
 | Name | Description |
 | ------ | ------ |
-| [GraphQLArray](Template/GraphQLArray.md) | - |
-| [GraphQLObject](Template/GraphQLObject.md) | - |
-| [GraphQLValue](Template/GraphQLValue.md) | - |
-| [graphQL](Template/graphQL.md) | - |
+| [GraphQLArray](Template/GraphQLArray.md) | A GraphQL Array, similar to a JSONArray |
+| [GraphQLObject](Template/GraphQLObject.md) | A GraphQL Object, similar to a JSONObject |
+| [GraphQLValue](Template/GraphQLValue.md) | A GraphQL Value, similar to a JSONValue |
+| [graphQL](Template/graphQL.md) | Tagged template function for constructing GraphQL queries or mutations. |
 
 ### Single Line
 
 | Function | Description |
 | ------ | ------ |
-| [singleLine](Template/singleLine.md) | - |
+| [singleLine](Template/singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |
 
 ## Time
 
@@ -609,43 +572,43 @@
 
 | Name | Description |
 | ------ | ------ |
-| [TimeIncrement](Time/TimeIncrement.md) | - |
+| [TimeIncrement](Time/TimeIncrement.md) | Represents amount of time to use for [addTime](Time/addTime.md) |
 | [addTime](Time/addTime.md) | Add units of time to a Date |
 
 ### Constants
 
 | Variable | Description |
 | ------ | ------ |
-| [daysPerWeek](Time/daysPerWeek.md) | - |
-| [hoursPerDay](Time/hoursPerDay.md) | - |
-| [hoursPerWeek](Time/hoursPerWeek.md) | - |
-| [minutesPerDay](Time/minutesPerDay.md) | - |
-| [minutesPerHour](Time/minutesPerHour.md) | - |
-| [minutesPerWeek](Time/minutesPerWeek.md) | - |
-| [secondsPerDay](Time/secondsPerDay.md) | - |
-| [secondsPerHour](Time/secondsPerHour.md) | - |
-| [secondsPerMinute](Time/secondsPerMinute.md) | - |
-| [secondsPerWeek](Time/secondsPerWeek.md) | - |
-| [ticksPerDay](Time/ticksPerDay.md) | - |
-| [ticksPerHour](Time/ticksPerHour.md) | - |
-| [ticksPerMinute](Time/ticksPerMinute.md) | - |
-| [ticksPerSecond](Time/ticksPerSecond.md) | - |
-| [ticksPerWeek](Time/ticksPerWeek.md) | - |
+| [daysPerWeek](Time/daysPerWeek.md) | Number of days in a week [7] |
+| [hoursPerDay](Time/hoursPerDay.md) | Number of hours in a day [24] |
+| [hoursPerWeek](Time/hoursPerWeek.md) | Number of hours in a week [168] |
+| [minutesPerDay](Time/minutesPerDay.md) | Number of minutes in a day [1440] |
+| [minutesPerHour](Time/minutesPerHour.md) | Number of minutes in an hour [60] |
+| [minutesPerWeek](Time/minutesPerWeek.md) | Number of minutes in a week [10080] |
+| [secondsPerDay](Time/secondsPerDay.md) | Number of seconds in a day [86400] |
+| [secondsPerHour](Time/secondsPerHour.md) | Number of seconds in an hour [3600] |
+| [secondsPerMinute](Time/secondsPerMinute.md) | Number of seconds in a minute [60] |
+| [secondsPerWeek](Time/secondsPerWeek.md) | Number of seconds in a week [604800] |
+| [ticksPerDay](Time/ticksPerDay.md) | Number of ticks in a day [86400000] |
+| [ticksPerHour](Time/ticksPerHour.md) | Number of ticks in an hour [3600000] |
+| [ticksPerMinute](Time/ticksPerMinute.md) | Number of ticks in a minute [60000] |
+| [ticksPerSecond](Time/ticksPerSecond.md) | Number of ticks in a second [1000] |
+| [ticksPerWeek](Time/ticksPerWeek.md) | Number of ticks in a week [604800000] |
 
 ### Conversion
 
 | Function | Description |
 | ------ | ------ |
-| [toDate](Time/toDate.md) | - |
+| [toDate](Time/toDate.md) | Converts an unknown entity to a `Date` object. |
 
 ### Day
 
 | Name | Description |
 | ------ | ------ |
-| [GetBeginningOfDayOptions](Time/GetBeginningOfDayOptions.md) | - |
-| [GetOccurrenceInMonthOptions](Time/GetOccurrenceInMonthOptions.md) | - |
-| [IsMidnightOptions](Time/IsMidnightOptions.md) | - |
-| [IsSameDayOptions](Time/IsSameDayOptions.md) | - |
+| [GetBeginningOfDayOptions](Time/GetBeginningOfDayOptions.md) | Options for [getBeginningOfDay](Time/getBeginningOfDay.md) |
+| [GetOccurrenceInMonthOptions](Time/GetOccurrenceInMonthOptions.md) | Options for [getOccurrenceInMonth](Time/getOccurrenceInMonth.md) |
+| [MidnightOptions](Time/MidnightOptions.md) | Options for the [isMidnight](Time/isMidnight.md) function |
+| [SameDayOptions](Time/SameDayOptions.md) | Options for the [isSameDay](Time/isSameDay.md) function |
 | [getBeginningOfDay](Time/getBeginningOfDay.md) | Determine the start of the day for a date |
 | [getOccurrenceInMonth](Time/getOccurrenceInMonth.md) | Determine the date of an occurrence of a weekday within a month |
 | [isMidnight](Time/isMidnight.md) | Determine if a date is at midnight |
@@ -655,10 +618,10 @@
 
 | Name | Description |
 | ------ | ------ |
-| [DayOfWeek](Time/DayOfWeek.md) | - |
-| [MonthOfYear](Time/MonthOfYear.md) | - |
-| [day](Time/day.md) | - |
-| [month](Time/month.md) | - |
+| [DayOfWeek](Time/DayOfWeek.md) | Days of the week |
+| [MonthOfYear](Time/MonthOfYear.md) | Months of the year |
+| [day](Time/day.md) | Translation object for name of day to day number. |
+| [month](Time/month.md) | Translation object for name of month to month number |
 
 ### Formatting
 
@@ -677,10 +640,10 @@
 
 | Name | Description |
 | ------ | ------ |
-| [GetBeginningOfMonthOptions](Time/GetBeginningOfMonthOptions.md) | - |
-| [GetDaysInMonthOptions](Time/GetDaysInMonthOptions.md) | - |
-| [GetEndOfMonthOptions](Time/GetEndOfMonthOptions.md) | - |
-| [IsSameMonthOptions](Time/IsSameMonthOptions.md) | - |
+| [BeginningOfMonthOptions](Time/BeginningOfMonthOptions.md) | Options for the [getBeginningOfMonth](Time/getBeginningOfMonth.md) function |
+| [DaysInMonthOptions](Time/DaysInMonthOptions.md) | Options for the [getDaysInMonth](Time/getDaysInMonth.md) function |
+| [EndOfMonthOptions](Time/EndOfMonthOptions.md) | Options for the [getEndOfMonth](Time/getEndOfMonth.md) function |
+| [SameMonthOptions](Time/SameMonthOptions.md) | Options for the [isSameMonth](Time/isSameMonth.md) function |
 | [getBeginningOfMonth](Time/getBeginningOfMonth.md) | Determine the start of the month for a dateDetermine the start of the month for a date |
 | [getDaysInMonth](Time/getDaysInMonth.md) | Determine the number of days in the month for a date |
 | [getEndOfMonth](Time/getEndOfMonth.md) | Determine the last day of the month containing the input date |
@@ -697,7 +660,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [RelativeTimeOptions](Time/RelativeTimeOptions.md) | - |
+| [RelativeTimeOptions](Time/RelativeTimeOptions.md) | Options for the [relativeTime](Time/relativeTime.md) function |
 | [relativeTime](Time/relativeTime.md) | Describe the difference between two dates in a simple format |
 
 ### Time Span
@@ -710,19 +673,19 @@
 
 | Name | Description |
 | ------ | ------ |
-| [GetTimezoneOptions](Time/GetTimezoneOptions.md) | - |
+| [TimezoneOptions](Time/TimezoneOptions.md) | Options for the [getTimezone](Time/getTimezone.md) function |
 | [getTimezone](Time/getTimezone.md) | Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes |
 
 ### Week
 
 | Name | Description |
 | ------ | ------ |
-| [GetBeginningOfWeekOptions](Time/GetBeginningOfWeekOptions.md) | - |
-| [GetDayOfWeekOptions](Time/GetDayOfWeekOptions.md) | - |
-| [GetEndOfWeekOptions](Time/GetEndOfWeekOptions.md) | - |
-| [GetISOWeekOfYearOptions](Time/GetISOWeekOfYearOptions.md) | - |
-| [GetISOWeeksInYearOptions](Time/GetISOWeeksInYearOptions.md) | - |
-| [IsSameWeekOptions](Time/IsSameWeekOptions.md) | - |
+| [BeginningOfWeekOptions](Time/BeginningOfWeekOptions.md) | Options for the [getBeginningOfWeek](Time/getBeginningOfWeek.md) function |
+| [DayOfWeekOptions](Time/DayOfWeekOptions.md) | Options for the [getDayOfWeek](Time/getDayOfWeek.md) function |
+| [EndOfWeekOptions](Time/EndOfWeekOptions.md) | Options for the [getEndOfWeek](Time/getEndOfWeek.md) function |
+| [ISOWeekOfYearOptions](Time/ISOWeekOfYearOptions.md) | Options for the [getISOWeekOfYear](Time/getISOWeekOfYear.md) function |
+| [ISOWeeksInYearOptions](Time/ISOWeeksInYearOptions.md) | Options for the [getISOWeeksInYear](Time/getISOWeeksInYear.md) function |
+| [SameWeekOptions](Time/SameWeekOptions.md) | Options for the [isSameWeek](Time/isSameWeek.md) function |
 | [getBeginningOfWeek](Time/getBeginningOfWeek.md) | Determine the start of the week for a date |
 | [getDayOfWeek](Time/getDayOfWeek.md) | Determine the day of the week for a specific date |
 | [getEndOfWeek](Time/getEndOfWeek.md) | Determine the last day of the week containing a date |
@@ -734,13 +697,13 @@
 
 | Name | Description |
 | ------ | ------ |
-| [GetBeginningOfYearOptions](Time/GetBeginningOfYearOptions.md) | - |
-| [GetDayOfYearOptions](Time/GetDayOfYearOptions.md) | - |
-| [GetEndOfYearOptions](Time/GetEndOfYearOptions.md) | - |
-| [IsLeapYearOptions](Time/IsLeapYearOptions.md) | - |
-| [IsSameYearOptions](Time/IsSameYearOptions.md) | - |
+| [BeginningOfYearOptions](Time/BeginningOfYearOptions.md) | Options for the [getBeginningOfYear](Time/getBeginningOfYear.md) function |
+| [DayOfYearOptions](Time/DayOfYearOptions.md) | Options for the [getDayOfYear](Time/getDayOfYear.md) function |
+| [EndOfYearOptions](Time/EndOfYearOptions.md) | Options for the [getEndOfYear](Time/getEndOfYear.md) function |
+| [LeapYearOptions](Time/LeapYearOptions.md) | Options for the [isLeapYear](Time/isLeapYear.md) function |
+| [SameYearOptions](Time/SameYearOptions.md) | Options for the [isSameYear](Time/isSameYear.md) function |
 | [getBeginningOfYear](Time/getBeginningOfYear.md) | Determine the start of the year for a date |
-| [getDayOfYear](Time/getDayOfYear.md) | - |
+| [getDayOfYear](Time/getDayOfYear.md) | Calculates the day of the year for a given date. |
 | [getEndOfYear](Time/getEndOfYear.md) | Determine the last day of the year containing a date |
 | [isLeapYear](Time/isLeapYear.md) | Determine if a year is a leap year |
 | [isSameYear](Time/isSameYear.md) | Determine if two dates occur in the same year |
@@ -762,6 +725,15 @@
 | [subPositive](Unicode/subPositive.md) | Subscript Positive |
 | [supNegative](Unicode/supNegative.md) | Superscript Negative |
 | [supPositive](Unicode/supPositive.md) | Superscript Positive |
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [empty](Unicode/empty.md) | The empty string |
+| [nbsp](Unicode/nbsp.md) | Non-breaking space |
+| [space](Unicode/space.md) | Space |
+| [zwsp](Unicode/zwsp.md) | Zero-width space |
 
 ### Encoding
 

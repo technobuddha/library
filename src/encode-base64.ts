@@ -28,6 +28,20 @@ function* pull3(input: Uint8Array): Generator<number[]> {
   }
 }
 
+/**
+ * Encodes binary data or a string into a Base64-encoded ASCII string using the specified character set configuration.
+ *
+ * @remarks
+ * This internal function is used by {@link encodeBase64} and {@link encodeBase64Url} to perform the actual encoding logic.
+ * If a string is provided, it is first converted to a `Uint8Array` using {@link encodeText} and the specified encoding.
+ * The function processes the input in 3-byte blocks, encodes them into 4 Base64 characters, and applies padding as needed.
+ *
+ * @param charset - The Base64 alphabet and configuration to use for encoding.
+ * @param arg - The input data to encode, either as a string or a `Uint8Array`.
+ * @param encoding - (Optional) The text encoding to use if the input is a string. Defaults to 'utf8'.
+ * @returns The Base64-encoded ASCII string.
+ * @internal
+ */
 function encode(charset: Base64Configuration, chars: string, encoding: TextEncoding): string;
 function encode(charset: Base64Configuration, binary: Uint8Array): string;
 function encode(
@@ -70,33 +84,18 @@ function encode(
  * Before encoding, the string is converted to binary using {@link encodeText} and the supplied ***encoding***
  *
  * @example
- * ```typescript
+ * ```ts
  * encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
+ * encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
  * ```
  *
  * @param chars - The string to encode
  * @param encoding - The encoding of the input string
  * @returns An ASCII string containing the Base64 representation
  * @group Encoding
- * @category Base64
+ * @category Binary
  */
 export function encodeBase64(chars: string, encoding: TextEncoding): string;
-/**
- * Creates a Base64-encoded ASCII string from a binary source.
- *
- * You can use this method to encode data which may otherwise cause communication problems,
- * transmit it, then use the {@link decodeBase64} method to decode the data again. For example, you can
- * encode control characters such as ASCII values 0 through 31.
- *
- * @example
- * ```typescript
- * encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
- * ```
- * @param binary - The *binary data* to encode
- * @returns An ASCII string containing the Base64 representation
- * @group Encoding
- * @category Base64
- */
 export function encodeBase64(binary: Uint8Array): string;
 export function encodeBase64(arg: string | Uint8Array, encoding?: TextEncoding): string {
   return typeof arg === 'string' ? encode(base64Config, arg, encoding!) : encode(base64Config, arg);
@@ -112,34 +111,18 @@ export function encodeBase64(arg: string | Uint8Array, encoding?: TextEncoding):
  * Before encoding, the string is converted to binary using {@link encodeText} and the supplied ***encoding***
  *
  * @example
- * ```typescript
+ * ```ts
  * encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
+ * encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
  * ```
  *
  * @param chars - The string to encode
  * @param encoding - The encoding of the input string
  * @returns An ASCII string containing the Base64 representation
  * @group Encoding
- * @category Base64
+ * @category Binary
  */
 export function encodeBase64Url(chars: string, encoding: TextEncoding): string;
-
-/**
- * Creates a Base64-encoded ASCII string from a binary source.
- *
- * You can use this method to encode data which may otherwise cause communication problems,
- * transmit it, then use the {@link decodeBase64} method to decode the data again. For example, you can
- * encode control characters such as ASCII values 0 through 31.
- *
- * @example
- * ```typescript
- * encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
- * ```
- * @param binary - The *binary data* to encode
- * @returns An ASCII string containing the Base64 representation
- * @group Encoding
- * @category Base64
- */
 export function encodeBase64Url(binary: Uint8Array): string;
 export function encodeBase64Url(arg: string | Uint8Array, encoding?: TextEncoding): string {
   return typeof arg === 'string' ?

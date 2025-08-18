@@ -4,9 +4,9 @@
 
 # Function: getBeginningOfDay()
 
-> **getBeginningOfDay**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetBeginningOfDayOptions`](GetBeginningOfDayOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+> **getBeginningOfDay**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`GetBeginningOfDayOptions`](GetBeginningOfDayOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-day.ts:20](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L20)
+Defined in: [get-beginning-of-day.ts:22](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-day.ts#L22)
 
 Determine the start of the day for a date
 
@@ -15,7 +15,7 @@ Determine the start of the day for a date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetBeginningOfDayOptions`](GetBeginningOfDayOptions.md) | see [GetBeginningOfDayOptions](GetBeginningOfDayOptions.md) |
+| `options` | [`GetBeginningOfDayOptions`](GetBeginningOfDayOptions.md) | see [GetBeginningOfDayOptions](GetBeginningOfDayOptions.md) |
 
 ## Returns
 

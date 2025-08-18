@@ -4,9 +4,9 @@
 
 # Function: getEndOfWeek()
 
-> **getEndOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetEndOfWeekOptions`](GetEndOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+> **getEndOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfWeekOptions`](EndOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-end-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/get-end-of-week.ts#L26)
+Defined in: [get-end-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/get-end-of-week.ts#L28)
 
 Determine the last day of the week containing a date
 
@@ -15,7 +15,7 @@ Determine the last day of the week containing a date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetEndOfWeekOptions`](GetEndOfWeekOptions.md) | see [GetEndOfWeekOptions](GetEndOfWeekOptions.md) |
+| `options` | [`EndOfWeekOptions`](EndOfWeekOptions.md) | see [EndOfWeekOptions](EndOfWeekOptions.md) |
 
 ## Returns
 

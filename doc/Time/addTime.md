@@ -6,7 +6,7 @@
 
 > **addTime**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `increment`: [`TimeIncrement`](TimeIncrement.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [add-time.ts:26](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L26)
+Defined in: [add-time.ts:28](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L28)
 
 Add units of time to a Date
 

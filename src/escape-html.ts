@@ -6,7 +6,7 @@ import { splitChars } from './split-chars.ts';
  * @group Encoding
  * @category Escaping
  */
-export type EscapeHtmlSettings = {
+export type EscapeHtmlOptions = {
   /** escape all characters outside the 7-bit ASCII range */
   escapeNonAscii?: boolean;
 };
@@ -15,13 +15,13 @@ export type EscapeHtmlSettings = {
  * Escape a string for use in HTML
  *
  * @param input - The string to escape
- * @param __namedParameters - see {@link EscapeHtmlSettings}
+ * @param options - see {@link EscapeHtmlOptions}
  * @group Encoding
  * @category Escaping
  */
 export function escapeHTML(
   input: string,
-  { escapeNonAscii = false }: EscapeHtmlSettings = {},
+  { escapeNonAscii = false }: EscapeHtmlOptions = {},
 ): string {
   return build(
     splitChars(input).map(

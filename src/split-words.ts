@@ -2,6 +2,8 @@ import { clean } from './clean.ts';
 import { isWhitespace } from './is-whitespace.ts';
 
 /**
+ * Options for the {@link splitWords} function
+ *
  * @group String
  * @category Split
  */
@@ -14,7 +16,7 @@ export type SplitWordsOptions = {
  * Split a string into an array of words
  *
  * @param input - The string to split
- * @param __namedParameters - see {@link SplitWordsOptions}
+ * @param options - see {@link SplitWordsOptions}
  * @defaultValue delimiter whitespace
  * @returns array of words
  * @group String

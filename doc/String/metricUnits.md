@@ -4,9 +4,9 @@
 
 # Function: metricUnits()
 
-> **metricUnits**(`input`: `number`, `__namedParameters`: [`MetricUnitsOptions`](MetricUnitsOptions.md)): `string`
+> **metricUnits**(`input`: `number`, `options`: [`MetricUnitsOptions`](MetricUnitsOptions.md)): `string`
 
-Defined in: [metric-units.ts:86](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L86)
+Defined in: [metric-units.ts:88](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L88)
 
 Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
 
@@ -15,7 +15,7 @@ Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` | The number to abbreviate |
-| `__namedParameters` | [`MetricUnitsOptions`](MetricUnitsOptions.md) | [MetricUnitsOptions](MetricUnitsOptions.md) |
+| `options` | [`MetricUnitsOptions`](MetricUnitsOptions.md) | [MetricUnitsOptions](MetricUnitsOptions.md) |
 
 ## Returns
 

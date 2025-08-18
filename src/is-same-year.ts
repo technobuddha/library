@@ -1,8 +1,9 @@
 /**
+ * Options for the {@link isSameYear} function
  * @group Time
  * @category Year
  */
-export type IsSameYearOptions = {
+export type SameYearOptions = {
   /** use the utc timezone */
   utc?: boolean;
 };
@@ -12,7 +13,7 @@ export type IsSameYearOptions = {
  *
  * @param input1 - The first date
  * @param input2 - The second date
- * @param __namedParameters - see {@link IsSameYearOptions}
+ * @param options - see {@link SameYearOptions}
  * @defaultValue utc false
  * @returns true, if the two dates occur in the same year
  * @group Time
@@ -21,7 +22,7 @@ export type IsSameYearOptions = {
 export function isSameYear(
   input1: Date,
   input2: Date,
-  { utc = false }: IsSameYearOptions = {},
+  { utc = false }: SameYearOptions = {},
 ): boolean {
   if (utc) {
     return input1.getUTCFullYear() === input2.getUTCFullYear();

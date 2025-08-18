@@ -1,4 +1,6 @@
 /**
+ * Options for {@link getBeginningOfDay}
+ *
  * @group Time
  * @category Day
  */
@@ -11,7 +13,7 @@ export type GetBeginningOfDayOptions = {
  * Determine the start of the day for a date
  *
  * @param input - The date
- * @param __namedParameters - see {@link GetBeginningOfDayOptions}
+ * @param options - see {@link GetBeginningOfDayOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the specified day
  * @group Time

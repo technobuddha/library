@@ -6,4 +6,6 @@
 
 > `const` **ticksPerMinute**: `number`
 
-Defined in: [constants.ts:59](https://github.com/technobuddha/library/blob/main/src/constants.ts#L59)
+Defined in: [constants.ts:83](https://github.com/technobuddha/library/blob/main/src/constants.ts#L83)
+
+Number of ticks in a minute [60000]

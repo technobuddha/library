@@ -6,4 +6,6 @@
 
 > `const` **ticksPerDay**: `number`
 
-Defined in: [constants.ts:69](https://github.com/technobuddha/library/blob/main/src/constants.ts#L69)
+Defined in: [constants.ts:99](https://github.com/technobuddha/library/blob/main/src/constants.ts#L99)
+
+Number of ticks in a day [86400000]

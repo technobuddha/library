@@ -3,6 +3,8 @@ import { isNil } from 'lodash-es';
 import { compareNumbers } from './compare-numbers.ts';
 
 /**
+ * Options for the {@link compareStrings} function
+ *
  * @group String
  * @category Comparison
  */

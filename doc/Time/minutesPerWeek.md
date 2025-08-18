@@ -6,4 +6,6 @@
 
 > `const` **minutesPerWeek**: `number`
 
-Defined in: [constants.ts:100](https://github.com/technobuddha/library/blob/main/src/constants.ts#L100)
+Defined in: [constants.ts:147](https://github.com/technobuddha/library/blob/main/src/constants.ts#L147)
+
+Number of minutes in a week [10080]

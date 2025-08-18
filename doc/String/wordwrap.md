@@ -6,7 +6,7 @@
 
 > **wordwrap**(`input`: `string`, `options`: [`WordwrapOptions`](WordwrapOptions.md)): `string`
 
-Defined in: [wordwrap.ts:32](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L32)
+Defined in: [wordwrap.ts:34](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L34)
 
 Wrap text so that it fits within a area of fixed width
 

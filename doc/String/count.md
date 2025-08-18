@@ -4,9 +4,9 @@
 
 # Function: count()
 
-> **count**(`input`: `string`, `substring`: `string`, `__namedParameters`: [`CountOptions`](CountOptions.md)): `number`
+> **count**(`input`: `string`, `substring`: `string`, `options`: [`CountOptions`](CountOptions.md)): `number`
 
-Defined in: [count.ts:20](https://github.com/technobuddha/library/blob/main/src/count.ts#L20)
+Defined in: [count.ts:21](https://github.com/technobuddha/library/blob/main/src/count.ts#L21)
 
 Compute the number of times a substring occurs within a string
 
@@ -16,7 +16,7 @@ Compute the number of times a substring occurs within a string
 | ------ | ------ | ------ |
 | `input` | `string` | The string |
 | `substring` | `string` | The substring to look for |
-| `__namedParameters` | [`CountOptions`](CountOptions.md) | see [CountOptions](CountOptions.md) |
+| `options` | [`CountOptions`](CountOptions.md) | see [CountOptions](CountOptions.md) |
 
 ## Returns
 

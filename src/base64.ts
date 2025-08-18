@@ -3,18 +3,25 @@ import { empty } from './constants.ts';
 /**
  * Configuration for Base64 based encoding schemes
  *
- * @group Encoding
- * @category Base64
+ * @internal
+ */
+/**
+ * Configuration options for Base64 encoding and decoding.
  */
 export type Base64Configuration = Readonly<{
+  /**
+   * An array of characters representing the Base64 alphabet to use for encoding and decoding.
+   */
   alphabet: string[];
+  /**
+   * The character used for padding the encoded output (typically '=' in standard Base64).
+   */
   padding: string;
 }>;
 
 /**
  * Configuration for Base64 encoding
- * @group Encoding
- * @category Base64
+ * @internal
  */
 // prettier-ignore
 export const base64Config: Base64Configuration = Object.freeze({
@@ -29,8 +36,7 @@ export const base64Config: Base64Configuration = Object.freeze({
 
 /**
  * Configuration for Base64Url encoding
- * @group Encoding
- * @category Base64
+ * @internal
  */
 // prettier-ignore
 export const base64UrlConfig: Base64Configuration = Object.freeze({

@@ -6,7 +6,7 @@
 
 > **diceCoefficient**(`input`: `string`, `compareTo`: `string`, `__nameParameters`: [`DiceCoefficientOptions`](DiceCoefficientOptions.md)): `number`
 
-Defined in: [dice-coefficient.ts:22](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L22)
+Defined in: [dice-coefficient.ts:24](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L24)
 
 Compute the dice coefficient measure of similarity between two strings
 

@@ -4,9 +4,9 @@
 
 # Function: unquote()
 
-> **unquote**(`input`: `string`, `__namedParameters`: [`UnquoteOptions`](UnquoteOptions.md)): `string`
+> **unquote**(`input`: `string`, `options`: [`QuoteOptions`](QuoteOptions.md)): `string`
 
-Defined in: [unquote.ts:27](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L27)
+Defined in: [unquote.ts:17](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L17)
 
 Remove surrounding quotes from text
 
@@ -15,7 +15,7 @@ Remove surrounding quotes from text
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The text to surrounded by quotes |
-| `__namedParameters` | [`UnquoteOptions`](UnquoteOptions.md) | see [UnquoteOptions](UnquoteOptions.md) |
+| `options` | [`QuoteOptions`](QuoteOptions.md) | see [QuoteOptions](QuoteOptions.md) |
 
 ## Returns
 

@@ -4,9 +4,9 @@
 
 # Function: getEndOfYear()
 
-> **getEndOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetEndOfYearOptions`](GetEndOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+> **getEndOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfYearOptions`](EndOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-end-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L22)
+Defined in: [get-end-of-year.ts:23](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L23)
 
 Determine the last day of the year containing a date
 
@@ -15,7 +15,7 @@ Determine the last day of the year containing a date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetEndOfYearOptions`](GetEndOfYearOptions.md) | see [GetEndOfYearOptions](GetEndOfYearOptions.md) |
+| `options` | [`EndOfYearOptions`](EndOfYearOptions.md) | see [EndOfYearOptions](EndOfYearOptions.md) |
 
 ## Returns
 

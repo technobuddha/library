@@ -4,7 +4,7 @@
 
 # Function: isSurrogate()
 
-> **isSurrogate**(`input`: `string`, `__namedParameters`: [`IsSurrogateOptions`](IsSurrogateOptions.md)): `boolean`
+> **isSurrogate**(`input`: `string`, `options`: [`IsSurrogateOptions`](IsSurrogateOptions.md)): `boolean`
 
 Defined in: [is-surrogate.ts:24](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L24)
 
@@ -15,7 +15,7 @@ Determine is a character is a surrogate
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | the character to test |
-| `__namedParameters` | [`IsSurrogateOptions`](IsSurrogateOptions.md) | see [IsSurrogateOptions](IsSurrogateOptions.md) |
+| `options` | [`IsSurrogateOptions`](IsSurrogateOptions.md) | see [IsSurrogateOptions](IsSurrogateOptions.md) |
 
 ## Returns
 

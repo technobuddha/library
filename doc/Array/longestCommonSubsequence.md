@@ -6,9 +6,9 @@
 
 > **longestCommonSubsequence**\<`T`\>(`array1`: `ArrayLike`\<`T`\>, `array2`: `ArrayLike`\<`T`\>, `options`: [`LongestCommonSubsequenceOptions`](LongestCommonSubsequenceOptions.md)\<`T`\>): `T`[]
 
-Defined in: [longest-common-subsequence.ts:48](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L48)
+Defined in: [longest-common-subsequence.ts:50](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L50)
 
-Determine the longest possible array that is subarray of both of given arrays.
+Determine the longest possible array that is subsequence of both of given arrays.
 
 ## Type Parameters
 
@@ -22,7 +22,7 @@ Determine the longest possible array that is subarray of both of given arrays.
 | ------ | ------ | ------ |
 | `array1` | `ArrayLike`\<`T`\> | First array of objects. |
 | `array2` | `ArrayLike`\<`T`\> | Second array of objects. |
-| `options` | [`LongestCommonSubsequenceOptions`](LongestCommonSubsequenceOptions.md)\<`T`\> | functions to compare and collect elements from the two arrays |
+| `options` | [`LongestCommonSubsequenceOptions`](LongestCommonSubsequenceOptions.md)\<`T`\> | Functions to compare and collect elements from the two arrays |
 
 ## Returns
 

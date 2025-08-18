@@ -4,9 +4,9 @@
 
 # Function: getBeginningOfMonth()
 
-> **getBeginningOfMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetBeginningOfMonthOptions`](GetBeginningOfMonthOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+> **getBeginningOfMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfMonthOptions`](BeginningOfMonthOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-month.ts:20](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L20)
+Defined in: [get-beginning-of-month.ts:22](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L22)
 
 Determine the start of the month for a dateDetermine the start of the month for a date
 
@@ -15,7 +15,7 @@ Determine the start of the month for a dateDetermine the start of the month for 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetBeginningOfMonthOptions`](GetBeginningOfMonthOptions.md) | see [GetBeginningOfMonthOptions](GetBeginningOfMonthOptions.md) |
+| `options` | [`BeginningOfMonthOptions`](BeginningOfMonthOptions.md) | see [BeginningOfMonthOptions](BeginningOfMonthOptions.md) |
 
 ## Returns
 

@@ -15,13 +15,13 @@ function scalePoint(point: Cartesian, amount: number | Cartesian, origin: Cartes
  * Scales a point or a polygon of points around a given origin by a specified amount.
  *
  * @example
- * ```typescript
+ * ```ts
  * const point = { x: 1, y: 0 };
  * const rotated = scale(point, 2); // { x: 2, y: 0 }
  * ```
  *
  * @example
- * ```typescript
+ * ```ts
  * const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
  * const rotated = scale(points, 2);
  * // [{ x: 2, y: 0 }, { x: 0, y: 2 }]

@@ -4,9 +4,9 @@
 
 # Function: isSameYear()
 
-> **isSameYear**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsSameYearOptions`](IsSameYearOptions.md)): `boolean`
+> **isSameYear**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameYearOptions`](SameYearOptions.md)): `boolean`
 
-Defined in: [is-same-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L21)
+Defined in: [is-same-year.ts:22](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L22)
 
 Determine if two dates occur in the same year
 
@@ -16,7 +16,7 @@ Determine if two dates occur in the same year
 | ------ | ------ | ------ |
 | `input1` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The first date |
 | `input2` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The second date |
-| `__namedParameters` | [`IsSameYearOptions`](IsSameYearOptions.md) | see [IsSameYearOptions](IsSameYearOptions.md) |
+| `options` | [`SameYearOptions`](SameYearOptions.md) | see [SameYearOptions](SameYearOptions.md) |
 
 ## Returns
 

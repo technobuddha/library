@@ -4,9 +4,9 @@
 
 # Function: unindent()
 
-> **unindent**(`input`: `string`, `pattern`: [`UnindentOptions`](UnindentOptions.md)): `string`
+> **unindent**(`input`: `string`, `pattern`: [`IndentOptions`](IndentOptions.md)): `string`
 
-Defined in: [unindent.ts:23](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L23)
+Defined in: [unindent.ts:15](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L15)
 
 Remove indentation from text
 
@@ -15,7 +15,7 @@ Remove indentation from text
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The indented text |
-| `pattern` | [`UnindentOptions`](UnindentOptions.md) | (space) |
+| `pattern` | [`IndentOptions`](IndentOptions.md) | (space) |
 
 ## Returns
 

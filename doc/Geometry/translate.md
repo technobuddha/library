@@ -27,12 +27,12 @@ The translated point or array of translated points.
 
 ### Examples
 
-```typescript
+```ts
 const point = { x: 1, y: 0 };
 const translated = translate(point, { x: 1, y: 2 }); // { x: 2, y: 2 }
 ```
 
-```typescript
+```ts
 const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const translated = translate(points, { x: 1, y: 2 });
 // [{ x: 2, y: 2 }, { x: 2, y: 3 }]
@@ -61,12 +61,12 @@ The translated point or array of translated points.
 
 ### Examples
 
-```typescript
+```ts
 const point = { x: 1, y: 0 };
 const translated = translate(point, { x: 1, y: 2 }); // { x: 2, y: 2 }
 ```
 
-```typescript
+```ts
 const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const translated = translate(points, { x: 1, y: 2 });
 // [{ x: 2, y: 2 }, { x: 2, y: 3 }]

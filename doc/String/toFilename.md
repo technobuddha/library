@@ -4,9 +4,9 @@
 
 # Function: toFilename()
 
-> **toFilename**(`input`: `string`, `__namedParameters`: [`ToFilenameOptions`](ToFilenameOptions.md)): `string`
+> **toFilename**(`input`: `string`, `options`: [`FilenameOptions`](FilenameOptions.md)): `string`
 
-Defined in: [to-filename.ts:33](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L33)
+Defined in: [to-filename.ts:35](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L35)
 
 Convert a string so that it can be used as a filename
 
@@ -15,7 +15,7 @@ Convert a string so that it can be used as a filename
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to escape |
-| `__namedParameters` | [`ToFilenameOptions`](ToFilenameOptions.md) | see [ToFilenameOptions](ToFilenameOptions.md) |
+| `options` | [`FilenameOptions`](FilenameOptions.md) | see [FilenameOptions](FilenameOptions.md) |
 
 ## Returns
 

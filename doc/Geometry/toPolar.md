@@ -4,7 +4,7 @@
 
 # Function: toPolar()
 
-> **toPolar**(`__namedParameters`: [`Cartesian`](Cartesian.md)): [`Polar`](Polar.md)
+> **toPolar**(`options`: [`Cartesian`](Cartesian.md)): [`Polar`](Polar.md)
 
 Defined in: [to-polar.ts:12](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L12)
 
@@ -14,7 +14,7 @@ Convert cartesian coordinates to polar
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `__namedParameters` | [`Cartesian`](Cartesian.md) | see [Cartesian](Cartesian.md) |
+| `options` | [`Cartesian`](Cartesian.md) | see [Cartesian](Cartesian.md) |
 
 ## Returns
 

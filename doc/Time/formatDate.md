@@ -4,7 +4,7 @@
 
 # Function: formatDate()
 
-> **formatDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `mask?`: `string`, `__namedParameters?`: [`FormatDateOptions`](FormatDateOptions.md)): `string`
+> **formatDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `mask?`: `string`, `options?`: [`FormatDateOptions`](FormatDateOptions.md)): `string`
 
 Defined in: [format-date.ts:99](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L99)
 
@@ -16,7 +16,7 @@ Format a date
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
 | `mask?` | `string` | The mask |
-| `__namedParameters?` | [`FormatDateOptions`](FormatDateOptions.md) | see [FormatDateOptions](FormatDateOptions.md) |
+| `options?` | [`FormatDateOptions`](FormatDateOptions.md) | see [FormatDateOptions](FormatDateOptions.md) |
 
 ## Returns
 

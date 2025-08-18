@@ -6,6 +6,6 @@
 
 > `const` **supPositive**: `"⁺"` = `'⁺'`
 
-Defined in: [constants.ts:236](https://github.com/technobuddha/library/blob/main/src/constants.ts#L236)
+Defined in: [constants.ts:296](https://github.com/technobuddha/library/blob/main/src/constants.ts#L296)
 
 Superscript Positive

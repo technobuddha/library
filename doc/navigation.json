@@ -3,7 +3,7 @@
     "title": "Array",
     "children": [
       {
-        "title": "2D",
+        "title": "Creation",
         "children": [
           {
             "title": "create2DArray",
@@ -31,7 +31,7 @@
         ]
       },
       {
-        "title": "Longest Common Subsequence",
+        "title": "Matching",
         "children": [
           {
             "title": "LongestCommonSubsequenceOptions",
@@ -50,113 +50,8 @@
     ]
   },
   {
-    "title": "Crypto",
-    "children": [
-      {
-        "title": "Hash",
-        "children": [
-          {
-            "title": "Crc32",
-            "kind": 128,
-            "path": "Crypto/Crc32.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "HashBase",
-            "kind": 128,
-            "path": "Crypto/HashBase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "Sha1",
-            "kind": 128,
-            "path": "Crypto/Sha1.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "Sha224",
-            "kind": 128,
-            "path": "Crypto/Sha224.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "Sha256",
-            "kind": 128,
-            "path": "Crypto/Sha256.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "Sha384",
-            "kind": 128,
-            "path": "Crypto/Sha384.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "Sha512",
-            "kind": 128,
-            "path": "Crypto/Sha512.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "HashClass",
-            "kind": 256,
-            "path": "Crypto/HashClass.md",
-            "isDeprecated": false
-          }
-        ]
-      }
-    ]
-  },
-  {
     "title": "Encoding",
     "children": [
-      {
-        "title": "Base64",
-        "children": [
-          {
-            "title": "Base64Configuration",
-            "kind": 2097152,
-            "path": "Encoding/Base64Configuration.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "base64Config",
-            "kind": 32,
-            "path": "Encoding/base64Config.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "base64UrlConfig",
-            "kind": 32,
-            "path": "Encoding/base64UrlConfig.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "decodeBase64",
-            "kind": 64,
-            "path": "Encoding/decodeBase64.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "decodeBase64Url",
-            "kind": 64,
-            "path": "Encoding/decodeBase64Url.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "encodeBase64",
-            "kind": 64,
-            "path": "Encoding/encodeBase64.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "encodeBase64Url",
-            "kind": 64,
-            "path": "Encoding/encodeBase64Url.md",
-            "isDeprecated": false
-          }
-        ]
-      },
       {
         "title": "Binary",
         "children": [
@@ -179,9 +74,33 @@
             "isDeprecated": false
           },
           {
+            "title": "decodeBase64",
+            "kind": 64,
+            "path": "Encoding/decodeBase64.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "decodeBase64Url",
+            "kind": 64,
+            "path": "Encoding/decodeBase64Url.md",
+            "isDeprecated": false
+          },
+          {
             "title": "decodeBinary",
             "kind": 64,
             "path": "Encoding/decodeBinary.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "encodeBase64",
+            "kind": 64,
+            "path": "Encoding/encodeBase64.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "encodeBase64Url",
+            "kind": 64,
+            "path": "Encoding/encodeBase64Url.md",
             "isDeprecated": false
           },
           {
@@ -196,9 +115,9 @@
         "title": "Escaping",
         "children": [
           {
-            "title": "EscapeHtmlSettings",
+            "title": "EscapeHtmlOptions",
             "kind": 2097152,
-            "path": "Encoding/EscapeHtmlSettings.md",
+            "path": "Encoding/EscapeHtmlOptions.md",
             "isDeprecated": false
           },
           {
@@ -268,6 +187,59 @@
             "isDeprecated": false
           }
         ]
+      },
+      {
+        "title": "Hash",
+        "children": [
+          {
+            "title": "Crc32",
+            "kind": 128,
+            "path": "Encoding/Crc32.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "HashBase",
+            "kind": 128,
+            "path": "Encoding/HashBase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "Sha1",
+            "kind": 128,
+            "path": "Encoding/Sha1.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "Sha224",
+            "kind": 128,
+            "path": "Encoding/Sha224.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "Sha256",
+            "kind": 128,
+            "path": "Encoding/Sha256.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "Sha384",
+            "kind": 128,
+            "path": "Encoding/Sha384.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "Sha512",
+            "kind": 128,
+            "path": "Encoding/Sha512.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "HashClass",
+            "kind": 256,
+            "path": "Encoding/HashClass.md",
+            "isDeprecated": false
+          }
+        ]
       }
     ]
   },
@@ -275,25 +247,14 @@
     "title": "English",
     "children": [
       {
-        "title": "Coordinate",
+        "title": "Parts of Speech",
         "children": [
           {
-            "title": "CoordinateOptions",
+            "title": "ConjoinCoordinateOptions",
             "kind": 2097152,
-            "path": "English/CoordinateOptions.md",
+            "path": "English/ConjoinCoordinateOptions.md",
             "isDeprecated": false
           },
-          {
-            "title": "coordinate",
-            "kind": 64,
-            "path": "English/coordinate.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Indefinite Article",
-        "children": [
           {
             "title": "IndefiniteArticleOptions",
             "kind": 2097152,
@@ -301,27 +262,23 @@
             "isDeprecated": false
           },
           {
+            "title": "conjoin",
+            "kind": 64,
+            "path": "English/conjoin.md",
+            "isDeprecated": false
+          },
+          {
             "title": "indefiniteArticle",
             "kind": 64,
             "path": "English/indefiniteArticle.md",
             "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Plural",
-        "children": [
+          },
           {
             "title": "plural",
             "kind": 64,
             "path": "English/plural.md",
             "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Possessive",
-        "children": [
+          },
           {
             "title": "possessive",
             "kind": 64,
@@ -1277,9 +1234,9 @@
         "title": "Build",
         "children": [
           {
-            "title": "Stringy",
+            "title": "StringLike",
             "kind": 2097152,
-            "path": "String/Stringy.md",
+            "path": "String/StringLike.md",
             "isDeprecated": false
           },
           {
@@ -1294,27 +1251,27 @@
         "title": "Case Conversion",
         "children": [
           {
-            "title": "ToCapitalCaseOptions",
+            "title": "CapitalCaseOptions",
             "kind": 2097152,
-            "path": "String/ToCapitalCaseOptions.md",
+            "path": "String/CapitalCaseOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "ToCapitalWordCaseOptions",
+            "title": "CapitalWordCaseOptions",
             "kind": 2097152,
-            "path": "String/ToCapitalWordCaseOptions.md",
+            "path": "String/CapitalWordCaseOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "ToSmallCaseOptions",
+            "title": "SmallCaseOptions",
             "kind": 2097152,
-            "path": "String/ToSmallCaseOptions.md",
+            "path": "String/SmallCaseOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "ToSmallWordsCaseOptions",
+            "title": "SmallWordsCaseOptions",
             "kind": 2097152,
-            "path": "String/ToSmallWordsCaseOptions.md",
+            "path": "String/SmallWordsCaseOptions.md",
             "isDeprecated": false
           },
           {
@@ -1525,47 +1482,18 @@
         ]
       },
       {
-        "title": "Constants",
-        "children": [
-          {
-            "title": "empty",
-            "kind": 32,
-            "path": "String/empty.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "nbsp",
-            "kind": 32,
-            "path": "String/nbsp.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "space",
-            "kind": 32,
-            "path": "String/space.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "zwsp",
-            "kind": 32,
-            "path": "String/zwsp.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
         "title": "Conversion",
         "children": [
           {
-            "title": "ToBooleanOptions",
+            "title": "BooleanOptions",
             "kind": 2097152,
-            "path": "String/ToBooleanOptions.md",
+            "path": "String/BooleanOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "ToFilenameOptions",
+            "title": "FilenameOptions",
             "kind": 2097152,
-            "path": "String/ToFilenameOptions.md",
+            "path": "String/FilenameOptions.md",
             "isDeprecated": false
           },
           {
@@ -1707,21 +1635,9 @@
         "title": "Indentation",
         "children": [
           {
-            "title": "GetIndentOptions",
-            "kind": 2097152,
-            "path": "String/GetIndentOptions.md",
-            "isDeprecated": false
-          },
-          {
             "title": "IndentOptions",
             "kind": 2097152,
             "path": "String/IndentOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "UnindentOptions",
-            "kind": 2097152,
-            "path": "String/UnindentOptions.md",
             "isDeprecated": false
           },
           {
@@ -1768,12 +1684,6 @@
             "title": "QuoteOptions",
             "kind": 2097152,
             "path": "String/QuoteOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "UnquoteOptions",
-            "kind": 2097152,
-            "path": "String/UnquoteOptions.md",
             "isDeprecated": false
           },
           {
@@ -2106,15 +2016,15 @@
             "isDeprecated": false
           },
           {
-            "title": "IsMidnightOptions",
+            "title": "MidnightOptions",
             "kind": 2097152,
-            "path": "Time/IsMidnightOptions.md",
+            "path": "Time/MidnightOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "IsSameDayOptions",
+            "title": "SameDayOptions",
             "kind": 2097152,
-            "path": "Time/IsSameDayOptions.md",
+            "path": "Time/SameDayOptions.md",
             "isDeprecated": false
           },
           {
@@ -2204,27 +2114,27 @@
         "title": "Month",
         "children": [
           {
-            "title": "GetBeginningOfMonthOptions",
+            "title": "BeginningOfMonthOptions",
             "kind": 2097152,
-            "path": "Time/GetBeginningOfMonthOptions.md",
+            "path": "Time/BeginningOfMonthOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetDaysInMonthOptions",
+            "title": "DaysInMonthOptions",
             "kind": 2097152,
-            "path": "Time/GetDaysInMonthOptions.md",
+            "path": "Time/DaysInMonthOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetEndOfMonthOptions",
+            "title": "EndOfMonthOptions",
             "kind": 2097152,
-            "path": "Time/GetEndOfMonthOptions.md",
+            "path": "Time/EndOfMonthOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "IsSameMonthOptions",
+            "title": "SameMonthOptions",
             "kind": 2097152,
-            "path": "Time/IsSameMonthOptions.md",
+            "path": "Time/SameMonthOptions.md",
             "isDeprecated": false
           },
           {
@@ -2302,9 +2212,9 @@
         "title": "Time Zone",
         "children": [
           {
-            "title": "GetTimezoneOptions",
+            "title": "TimezoneOptions",
             "kind": 2097152,
-            "path": "Time/GetTimezoneOptions.md",
+            "path": "Time/TimezoneOptions.md",
             "isDeprecated": false
           },
           {
@@ -2319,39 +2229,39 @@
         "title": "Week",
         "children": [
           {
-            "title": "GetBeginningOfWeekOptions",
+            "title": "BeginningOfWeekOptions",
             "kind": 2097152,
-            "path": "Time/GetBeginningOfWeekOptions.md",
+            "path": "Time/BeginningOfWeekOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetDayOfWeekOptions",
+            "title": "DayOfWeekOptions",
             "kind": 2097152,
-            "path": "Time/GetDayOfWeekOptions.md",
+            "path": "Time/DayOfWeekOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetEndOfWeekOptions",
+            "title": "EndOfWeekOptions",
             "kind": 2097152,
-            "path": "Time/GetEndOfWeekOptions.md",
+            "path": "Time/EndOfWeekOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetISOWeekOfYearOptions",
+            "title": "ISOWeekOfYearOptions",
             "kind": 2097152,
-            "path": "Time/GetISOWeekOfYearOptions.md",
+            "path": "Time/ISOWeekOfYearOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetISOWeeksInYearOptions",
+            "title": "ISOWeeksInYearOptions",
             "kind": 2097152,
-            "path": "Time/GetISOWeeksInYearOptions.md",
+            "path": "Time/ISOWeeksInYearOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "IsSameWeekOptions",
+            "title": "SameWeekOptions",
             "kind": 2097152,
-            "path": "Time/IsSameWeekOptions.md",
+            "path": "Time/SameWeekOptions.md",
             "isDeprecated": false
           },
           {
@@ -2396,33 +2306,33 @@
         "title": "Year",
         "children": [
           {
-            "title": "GetBeginningOfYearOptions",
+            "title": "BeginningOfYearOptions",
             "kind": 2097152,
-            "path": "Time/GetBeginningOfYearOptions.md",
+            "path": "Time/BeginningOfYearOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetDayOfYearOptions",
+            "title": "DayOfYearOptions",
             "kind": 2097152,
-            "path": "Time/GetDayOfYearOptions.md",
+            "path": "Time/DayOfYearOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "GetEndOfYearOptions",
+            "title": "EndOfYearOptions",
             "kind": 2097152,
-            "path": "Time/GetEndOfYearOptions.md",
+            "path": "Time/EndOfYearOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "IsLeapYearOptions",
+            "title": "LeapYearOptions",
             "kind": 2097152,
-            "path": "Time/IsLeapYearOptions.md",
+            "path": "Time/LeapYearOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "IsSameYearOptions",
+            "title": "SameYearOptions",
             "kind": 2097152,
-            "path": "Time/IsSameYearOptions.md",
+            "path": "Time/SameYearOptions.md",
             "isDeprecated": false
           },
           {
@@ -2529,6 +2439,35 @@
             "title": "supPositive",
             "kind": 32,
             "path": "Unicode/supPositive.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Constants",
+        "children": [
+          {
+            "title": "empty",
+            "kind": 32,
+            "path": "Unicode/empty.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "nbsp",
+            "kind": 32,
+            "path": "Unicode/nbsp.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "space",
+            "kind": 32,
+            "path": "Unicode/space.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "zwsp",
+            "kind": 32,
+            "path": "Unicode/zwsp.md",
             "isDeprecated": false
           }
         ]

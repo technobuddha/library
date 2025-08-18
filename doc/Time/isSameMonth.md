@@ -4,9 +4,9 @@
 
 # Function: isSameMonth()
 
-> **isSameMonth**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsSameMonthOptions`](IsSameMonthOptions.md)): `boolean`
+> **isSameMonth**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameMonthOptions`](SameMonthOptions.md)): `boolean`
 
-Defined in: [is-same-month.ts:23](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L23)
+Defined in: [is-same-month.ts:25](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L25)
 
 Determine if two dates occur in the same month
 
@@ -16,7 +16,7 @@ Determine if two dates occur in the same month
 | ------ | ------ | ------ |
 | `input1` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The first date |
 | `input2` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The second date |
-| `__namedParameters` | [`IsSameMonthOptions`](IsSameMonthOptions.md) | see [IsSameMonthOptions](IsSameMonthOptions.md) |
+| `options` | [`SameMonthOptions`](SameMonthOptions.md) | see [SameMonthOptions](SameMonthOptions.md) |
 
 ## Returns
 

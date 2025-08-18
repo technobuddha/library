@@ -3,6 +3,8 @@ import { isFinite } from 'lodash-es';
 import { empty } from './constants.ts';
 
 /**
+ * Options for the {@link chop} function
+ *
  * @group String
  * @category Chop
  */

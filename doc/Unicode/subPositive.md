@@ -6,6 +6,6 @@
 
 > `const` **subPositive**: `"₊"` = `'₊'`
 
-Defined in: [constants.ts:251](https://github.com/technobuddha/library/blob/main/src/constants.ts#L251)
+Defined in: [constants.ts:311](https://github.com/technobuddha/library/blob/main/src/constants.ts#L311)
 
 Subscript Positive

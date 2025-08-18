@@ -17,6 +17,6 @@ The pattern expects one or more occurrences of `HOST` followed by `TLD`, anchore
 
 ## Example
 
-```typescript
+```ts
 const isDomain = domain.test('example.com');
 ```

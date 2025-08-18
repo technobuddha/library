@@ -1,27 +1,19 @@
 import { escapeRegExp, isNil } from 'lodash-es';
 
 import { space } from './constants.ts';
-
-/**
- * @group String
- * @category Indentation
- */
-export type GetIndentOptions = {
-  /** The indentation character */
-  indenter?: string;
-};
+import { type IndentOptions } from './indent.ts';
 
 /**
  * Determine the indentation level of text
  *
  * @param input - The indented text
- * @param __namedParameters - see {@link GetIndentOptions}
+ * @param options - see {@link IndentOptions}
  * @defaultValue indenter space
  * @returns The minimum amount of indentation on each line
  * @group String
  * @category Indentation
  */
-export function getIndent(input: string, { indenter = space }: GetIndentOptions = {}): number {
+export function getIndent(input: string, { indenter = space }: IndentOptions = {}): number {
   const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'ugm').exec(input);
   if (isNil(matches)) {
     return 0;

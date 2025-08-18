@@ -4,9 +4,9 @@
 
 # Function: getBeginningOfYear()
 
-> **getBeginningOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetBeginningOfYearOptions`](GetBeginningOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+> **getBeginningOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfYearOptions`](BeginningOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: [get-beginning-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L22)
+Defined in: [get-beginning-of-year.ts:24](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L24)
 
 Determine the start of the year for a date
 
@@ -15,7 +15,7 @@ Determine the start of the year for a date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetBeginningOfYearOptions`](GetBeginningOfYearOptions.md) | see [GetBeginningOfYearOptions](GetBeginningOfYearOptions.md) |
+| `options` | [`BeginningOfYearOptions`](BeginningOfYearOptions.md) | see [BeginningOfYearOptions](BeginningOfYearOptions.md) |
 
 ## Returns
 

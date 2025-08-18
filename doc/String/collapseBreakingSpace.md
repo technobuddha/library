@@ -6,7 +6,7 @@
 
 > **collapseBreakingSpace**(`input`: `string`, `trim`: [`CollapseBreakingSpaceOptions`](CollapseBreakingSpaceOptions.md)): `string`
 
-Defined in: [collapse-breaking-space.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L21)
+Defined in: [collapse-breaking-space.ts:23](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L23)
 
 Replace all breaking space (space, tab, carriage return, new line) with a single space
 

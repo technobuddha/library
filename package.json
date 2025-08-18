@@ -30,6 +30,7 @@
     "cspell": "9.1.5",
     "jest-matcher-deep-close-to": "3.0.2",
     "typedoc": "0.28.7",
+    "typedoc-plugin-coverage": "4.0.1",
     "typedoc-plugin-markdown": "4.7.0",
     "typedoc-plugin-mdn-links": "5.0.2",
     "vite": "7.0.5",
@@ -38,7 +39,7 @@
   "technobuddhaProject": {
     "version": "0.0.180",
     "created": "2020-04-01T04:20:42.694Z",
-    "updated": "2025-08-14T20:06:36.955Z"
+    "updated": "2025-08-17T18:19:13.927Z"
   },
   "type": "module",
   "engines": {

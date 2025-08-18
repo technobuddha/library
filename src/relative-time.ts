@@ -12,6 +12,8 @@ import { isSameDay } from './is-same-day.ts';
 import { plural } from './plural.ts';
 
 /**
+ * Options for the {@link relativeTime} function
+ *
  * @group Time
  * @category Relative Time
  */
@@ -31,7 +33,7 @@ export type RelativeTimeOptions = {
  *
  * @param input - The date
  * @param relativeTo - The date to compare to
- * @param __namedParameters - see {@link RelativeTimeOptions}
+ * @param options - see {@link RelativeTimeOptions}
  * @returns string describing the time difference between the two dates
  * @group Time
  * @category Relative Time

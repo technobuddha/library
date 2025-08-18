@@ -11,6 +11,7 @@ const config = {
     'typedoc-plugin-markdown',
     'typedoc-plugin-mdn-links',
     '@giancosta86/typedoc-readonly',
+    'typedoc-plugin-coverage',
     './typedoc-markdown-plugin.js',
   ],
   //  Input
@@ -18,7 +19,7 @@ const config = {
   exclude: [],
   excludeInternal: true,
   excludePrivate: true,
-  excludeProtected: false,
+  excludeProtected: true,
   gitRevision: 'main',
   readme: 'none',
   //  Output

@@ -45,6 +45,8 @@ import { formatNumber } from './format-number.ts';
 */
 
 /**
+ * Options for the {@link metricUnits} function
+ *w
  * @group String
  * @category Units
  */
@@ -79,7 +81,7 @@ export type MetricUnitsOptions = {
  * Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
  *
  * @param input - The number to abbreviate
- * @param __namedParameters - {@link MetricUnitsOptions}
+ * @param options - {@link MetricUnitsOptions}
  * @group String
  * @category Units
  */

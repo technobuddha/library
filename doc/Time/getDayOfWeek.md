@@ -4,9 +4,9 @@
 
 # Function: getDayOfWeek()
 
-> **getDayOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetDayOfWeekOptions`](GetDayOfWeekOptions.md)): [`DayOfWeek`](DayOfWeek.md)
+> **getDayOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DayOfWeekOptions`](DayOfWeekOptions.md)): [`DayOfWeek`](DayOfWeek.md)
 
-Defined in: [get-day-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/get-day-of-week.ts#L26)
+Defined in: [get-day-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/get-day-of-week.ts#L28)
 
 Determine the day of the week for a specific date
 
@@ -15,7 +15,7 @@ Determine the day of the week for a specific date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetDayOfWeekOptions`](GetDayOfWeekOptions.md) | see [GetDayOfWeekOptions](GetDayOfWeekOptions.md) |
+| `options` | [`DayOfWeekOptions`](DayOfWeekOptions.md) | see [DayOfWeekOptions](DayOfWeekOptions.md) |
 
 ## Returns
 

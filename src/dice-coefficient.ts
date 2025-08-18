@@ -1,6 +1,8 @@
 import { compareStrings } from './compare-strings.ts';
 
 /**
+ * Options for the {@link diceCoefficient} function
+ *
  * @group String
  * @category Fuzzy Match
  */

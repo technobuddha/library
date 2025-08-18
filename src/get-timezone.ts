@@ -4,10 +4,12 @@ import { empty } from './constants.ts';
 import { padNumber } from './pad-number.ts';
 
 /**
+ * Options for the {@link getTimezone} function
+ *
  * @group Time
  * @category Time Zone
  */
-export type GetTimezoneOptions = {
+export type TimezoneOptions = {
   /** Display 'gmt' in time zones */
   gmt?: boolean;
   /** Display 'z' for the gmt time zone */
@@ -19,7 +21,7 @@ export type GetTimezoneOptions = {
  *
  * @remarks the gmt flag overrides the z flag if both are set
  * @param input - The date, or a timezone offset in minutes
- * @param __namedParameters - see {@link GetTimezoneOptions}
+ * @param options - see {@link TimezoneOptions}
  * @defaultValue gmt false
  * @defaultValue z true
  * @returns the timezone offset formatted like '±hh:mm' the string is prefixed by 'gmt' if the option is set.  If the z option is set 'z' is returned for the
@@ -29,7 +31,7 @@ export type GetTimezoneOptions = {
  */
 export function getTimezone(
   input: Date | number,
-  { gmt = false, z = true }: GetTimezoneOptions = {},
+  { gmt = false, z = true }: TimezoneOptions = {},
 ): string {
   const offset = isDate(input) ? input.getTimezoneOffset() : input;
 

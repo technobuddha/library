@@ -1,10 +1,12 @@
 import { month } from './constants.ts';
 
 /**
+ * Options for the {@link getBeginningOfYear} function
+ *
  * @group Time
  * @category Year
  */
-export type GetBeginningOfYearOptions = {
+export type BeginningOfYearOptions = {
   /** Use the utc timezone */
   utc?: boolean;
 };
@@ -13,7 +15,7 @@ export type GetBeginningOfYearOptions = {
  * Determine the start of the year for a date
  *
  * @param input - The date
- * @param __namedParameters - see {@link GetBeginningOfYearOptions}
+ * @param options - see {@link BeginningOfYearOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified year
  * @group Time
@@ -21,7 +23,7 @@ export type GetBeginningOfYearOptions = {
  */
 export function getBeginningOfYear(
   input: Date,
-  { utc = false }: GetBeginningOfYearOptions = {},
+  { utc = false }: BeginningOfYearOptions = {},
 ): Date {
   if (utc) {
     return new Date(Date.UTC(input.getUTCFullYear(), month.january, 1));

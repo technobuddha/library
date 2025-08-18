@@ -4,9 +4,9 @@
 
 # Function: mask()
 
-> **mask**(`input`: `string`, `simpleMask`: `string`, `__namedParameters`: [`MaskOptions`](MaskOptions.md)): `string`
+> **mask**(`input`: `string`, `simpleMask`: `string`, `options`: [`MaskOptions`](MaskOptions.md)): `string`
 
-Defined in: [mask.ts:29](https://github.com/technobuddha/library/blob/main/src/mask.ts#L29)
+Defined in: [mask.ts:31](https://github.com/technobuddha/library/blob/main/src/mask.ts#L31)
 
 Use a simple mask to display a string
 
@@ -16,7 +16,7 @@ Use a simple mask to display a string
 | ------ | ------ | ------ |
 | `input` | `string` | The string |
 | `simpleMask` | `string` | The mask |
-| `__namedParameters` | [`MaskOptions`](MaskOptions.md) | see [MaskOptions](MaskOptions.md) |
+| `options` | [`MaskOptions`](MaskOptions.md) | see [MaskOptions](MaskOptions.md) |
 
 ## Returns
 

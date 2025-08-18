@@ -4,9 +4,9 @@
 
 # Function: isLeapYear()
 
-> **isLeapYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`IsLeapYearOptions`](IsLeapYearOptions.md)): `boolean`
+> **isLeapYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`LeapYearOptions`](LeapYearOptions.md)): `boolean`
 
-Defined in: [is-leap-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L21)
+Defined in: [is-leap-year.ts:22](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L22)
 
 Determine if a year is a leap year
 
@@ -15,7 +15,7 @@ Determine if a year is a leap year
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date, or a year number |
-| `__namedParameters` | [`IsLeapYearOptions`](IsLeapYearOptions.md) | see [IsLeapYearOptions](IsLeapYearOptions.md) |
+| `options` | [`LeapYearOptions`](LeapYearOptions.md) | see [LeapYearOptions](LeapYearOptions.md) |
 
 ## Returns
 

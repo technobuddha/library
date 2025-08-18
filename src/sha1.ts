@@ -42,7 +42,7 @@ function int32(x: number): number {
 
 /**
  * Secure Hash Algorithm, SHA-1
- * @group Crypto
+ * @group Encoding
  * @category Hash
  */
 export class Sha1 extends HashBase {
@@ -53,6 +53,14 @@ export class Sha1 extends HashBase {
   private e = 0xc3d2e1f0;
   private readonly w: number[];
 
+  /**
+   * Creates a new SHA-1 hash instance and initializes its internal state.
+   *
+   * @remarks
+   * The internal state variables are set to the initial SHA-1 constants as specified
+   * in FIPS PUB 180-1. Use {@link update} to process data and {@link digest} to retrieve the
+   * final hash value.
+   */
   public constructor() {
     super(64, 56);
     this.w = Array.from({ length: 80 });

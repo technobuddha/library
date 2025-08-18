@@ -3,10 +3,12 @@ import { compact, isArray, isFunction, isString } from 'lodash-es';
 import { empty } from './constants.ts';
 
 /**
+ * A string-like object, which can be a string or an array of strings;
+ *
  * @group String
  * @category Build
  */
-export type Stringy = string | string[];
+export type StringLike = string | string[];
 /**
  * Concatenates strings and/or arrays of strings
  *
@@ -16,7 +18,7 @@ export type Stringy = string | string[];
  * @category Build
  */
 export function build(
-  ...args: (Stringy | Generator<Stringy> | IterableIterator<string> | (() => Stringy))[]
+  ...args: (StringLike | Generator<string> | IterableIterator<string> | (() => StringLike))[]
 ): string {
   return compact(
     args.flatMap((a) =>

@@ -6,6 +6,6 @@
 
 > `const` **ordinalTens**: `string`[]
 
-Defined in: [constants.ts:307](https://github.com/technobuddha/library/blob/main/src/constants.ts#L307)
+Defined in: [constants.ts:367](https://github.com/technobuddha/library/blob/main/src/constants.ts#L367)
 
 Words for ordinal tens 20-90

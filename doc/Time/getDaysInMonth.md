@@ -4,9 +4,9 @@
 
 # Function: getDaysInMonth()
 
-> **getDaysInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `__namedParameters`: [`GetDaysInMonthOptions`](GetDaysInMonthOptions.md)): `number`
+> **getDaysInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DaysInMonthOptions`](DaysInMonthOptions.md)): `number`
 
-Defined in: [get-days-in-month.ts:23](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L23)
+Defined in: [get-days-in-month.ts:25](https://github.com/technobuddha/library/blob/main/src/get-days-in-month.ts#L25)
 
 Determine the number of days in the month for a date
 
@@ -15,7 +15,7 @@ Determine the number of days in the month for a date
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
-| `__namedParameters` | [`GetDaysInMonthOptions`](GetDaysInMonthOptions.md) | see [GetDaysInMonthOptions](GetDaysInMonthOptions.md) |
+| `options` | [`DaysInMonthOptions`](DaysInMonthOptions.md) | see [DaysInMonthOptions](DaysInMonthOptions.md) |
 
 ## Returns
 

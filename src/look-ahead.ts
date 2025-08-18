@@ -1,5 +1,5 @@
 /**
- * Options for look-ahead operations.
+ * Options for {@link lookAhead} operations.
  *
  * @typeParam T - The type of the items in the sequence.
  *
@@ -8,25 +8,32 @@
  */
 export type LookAheadOptions<T> =
   | {
-      /** specifies the last item in the sequence.  */
+      /**
+       * Specifies the last item in the sequence.
+       */
       last: T;
     }
   | {
-      /**determines whether the look-ahead should wrap around to the beginning when reaching the end. */
+      /**
+       * Determines whether the look-ahead should wrap around to the beginning when reaching the end.
+       */
       wrapAround: boolean;
     };
 
 /**
- * Generates pairs of consecutive elements from the input array, with optional handling for the last element.
+ * Generates pairs of consecutive elements from the input array, with optional handling for the last
+ * element.
  *
  * @typeParam T - The type of elements in the input array.
  * @param array - The array to iterate over.
  * @param options - Optional configuration for handling the last element.
- * @returns A generator yielding tuples of consecutive elements, and optionally a tuple for the last element as specified by options.
+ * @returns A generator yielding a tuple containing each element, the next element in the sequence,
+ * and the index of the element within the sequence.  Optionally, a tuple is generated for the last
+ * element as specified by options.
  *
  * @example
  * Basic usage
- * ```typescript
+ * ```ts
  * const arr = [1, 2, 3];
  * for (const [current, next] of lookAhead(arr)) {
  *   console.log(current, next);
@@ -35,7 +42,7 @@ export type LookAheadOptions<T> =
  * Output: [1, 2], [2, 3]
  *
  * With wrapAround
- * ```typescript
+ * ```ts
  * for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
  *   console.log(current, next);
  * }
@@ -43,7 +50,7 @@ export type LookAheadOptions<T> =
  * Output: [1, 2], [2, 3], [3, 1]
  *
  * With last
- * ```typescript
+ * ```ts
  * for (const [current, next] of lookAhead(arr, { last: 0 })) {
  *   console.log(current, next);
  * }

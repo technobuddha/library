@@ -6,6 +6,6 @@
 
 > `const` **cardinalTens**: `string`[]
 
-Defined in: [constants.ts:281](https://github.com/technobuddha/library/blob/main/src/constants.ts#L281)
+Defined in: [constants.ts:341](https://github.com/technobuddha/library/blob/main/src/constants.ts#L341)
 
 Words for tens 20-90

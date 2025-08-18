@@ -4,9 +4,9 @@
 
 # Function: numberToLetter()
 
-> **numberToLetter**(`num`: `number`, `__namedParameters`: [`NumberToLetterOptions`](NumberToLetterOptions.md)): `string`
+> **numberToLetter**(`num`: `number`, `options`: [`NumberToLetterOptions`](NumberToLetterOptions.md)): `string`
 
-Defined in: [number-to-letter.ts:24](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L24)
+Defined in: [number-to-letter.ts:26](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L26)
 
 Convert a number to a letter, using the alphabet (default: A-Z)
 
@@ -15,7 +15,7 @@ Convert a number to a letter, using the alphabet (default: A-Z)
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `num` | `number` | The number to convert |
-| `__namedParameters` | [`NumberToLetterOptions`](NumberToLetterOptions.md) | see [NumberToLetterOptions](NumberToLetterOptions.md) |
+| `options` | [`NumberToLetterOptions`](NumberToLetterOptions.md) | see [NumberToLetterOptions](NumberToLetterOptions.md) |
 
 ## Returns
 
