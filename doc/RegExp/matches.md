@@ -6,7 +6,7 @@
 
 > **matches**(`text`: `string`, `match`: `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp), `any`, `any`\>): `boolean`
 
-Defined in: [matches.ts:18](https://github.com/technobuddha/library/blob/main/src/matches.ts#L18)
+Defined in: [matches.ts:19](https://github.com/technobuddha/library/blob/main/src/matches.ts#L19)
 
 Determines if the given `text` matches the provided `match` criteria.
 

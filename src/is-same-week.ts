@@ -1,5 +1,5 @@
+import { beginningOfWeek } from './beginning-of-week.ts';
 import { day, type DayOfWeek } from './constants.ts';
-import { getBeginningOfWeek } from './get-beginning-of-week.ts';
 
 /**
  * Options for the {@link isSameWeek} function
@@ -31,7 +31,7 @@ export function isSameWeek(
   { utc = false, firstDayOfWeek = day.sunday }: SameWeekOptions = {},
 ): boolean {
   return (
-    getBeginningOfWeek(input1, { utc, firstDayOfWeek }).getTime() ===
-    getBeginningOfWeek(input2, { utc, firstDayOfWeek }).getTime()
+    beginningOfWeek(input1, { utc, firstDayOfWeek }).getTime() ===
+    beginningOfWeek(input2, { utc, firstDayOfWeek }).getTime()
   );
 }

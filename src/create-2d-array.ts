@@ -1,4 +1,4 @@
-import { isFunction } from 'lodash-es';
+import { isFunction } from './is-function.ts';
 
 /**
  * Create a two dimensional array with all elements initialized

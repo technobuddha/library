@@ -1,11 +1,11 @@
 import { empty, secondsPerHour, secondsPerMinute } from './constants.ts';
-import { getDayOfWeek } from './get-day-of-week.ts';
-import { getDayOfYear } from './get-day-of-year.ts';
-import { getISOWeekOfYear } from './get-iso-week-of-year.ts';
-import { getJulian } from './get-julian.ts';
-import { getTimezone } from './get-timezone.ts';
+import { dayOfWeek } from './day-of-week.ts';
+import { dayOfYear } from './day-of-year.ts';
+import { isoWeekOfYear } from './iso-week-of-year.ts';
+import { julian } from './julian.ts';
 import { ordinal } from './numbering/ordinal.ts';
 import { padNumber } from './pad-number.ts';
+import { timezone } from './timezone.ts';
 
 const tokenizer =
   /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/gu;
@@ -193,28 +193,28 @@ export function formatDate(
         return dayName[dy];
       }
       case 'O': {
-        return padNumber(getDayOfYear(input, { utc }), 0);
+        return padNumber(dayOfYear(input, { utc }), 0);
       } //Day of Year (1-366)
       case 'OO': {
-        return padNumber(getDayOfYear(input, { utc }), 3);
+        return padNumber(dayOfYear(input, { utc }), 3);
       } //Day of Year (1-366)
       case 'Wy': {
-        return padNumber(getISOWeekOfYear(input, { utc }).year, 0);
+        return padNumber(isoWeekOfYear(input, { utc }).year, 0);
       }
       case 'Ww': {
-        return padNumber(getISOWeekOfYear(input, { utc }).week, 0);
+        return padNumber(isoWeekOfYear(input, { utc }).week, 0);
       } //Week of Year (1-53)
       case 'Www': {
-        return padNumber(getISOWeekOfYear(input, { utc }).week, 2);
+        return padNumber(isoWeekOfYear(input, { utc }).week, 2);
       } //
       case 'Wd': {
-        return padNumber(getDayOfWeek(input, { utc }), 0);
+        return padNumber(dayOfWeek(input, { utc }), 0);
       }
       case 'TZ': {
-        return getTimezone(o);
+        return timezone(o);
       }
       case 'GMT': {
-        return getTimezone(o, { gmt: true });
+        return timezone(o, { gmt: true });
       }
       case 'AM': {
         return ho < 12 ? 'AM' : empty;
@@ -247,7 +247,7 @@ export function formatDate(
         return yr < 1 ? 'BCE' : 'CE';
       } //BCE / CE
       case 'J': {
-        return padNumber(Math.floor(getJulian(input)), 0);
+        return padNumber(Math.floor(julian(input)), 0);
       }
       case 'Q': {
         return padNumber(Math.floor((mo + 3) / 3), 0);

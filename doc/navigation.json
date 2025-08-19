@@ -1,7 +1,29 @@
 [
   {
+    "title": "Functions",
+    "children": [
+      {
+        "title": "toString",
+        "kind": 64,
+        "path": "Functions/toString.md",
+        "isDeprecated": false
+      }
+    ]
+  },
+  {
     "title": "Array",
     "children": [
+      {
+        "title": "Collapse",
+        "children": [
+          {
+            "title": "collapse",
+            "kind": 64,
+            "path": "Array/collapse.md",
+            "isDeprecated": false
+          }
+        ]
+      },
       {
         "title": "Creation",
         "children": [
@@ -43,6 +65,28 @@
             "title": "longestCommonSubsequence",
             "kind": 64,
             "path": "Array/longestCommonSubsequence.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Merging",
+        "children": [
+          {
+            "title": "zipperMerge",
+            "kind": 64,
+            "path": "Array/zipperMerge.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Type Check",
+        "children": [
+          {
+            "title": "isArrayLike",
+            "kind": 64,
+            "path": "Array/isArrayLike.md",
             "isDeprecated": false
           }
         ]
@@ -250,9 +294,9 @@
         "title": "Parts of Speech",
         "children": [
           {
-            "title": "ConjoinCoordinateOptions",
+            "title": "ConjoinOptions",
             "kind": 2097152,
-            "path": "English/ConjoinCoordinateOptions.md",
+            "path": "English/ConjoinOptions.md",
             "isDeprecated": false
           },
           {
@@ -473,9 +517,9 @@
             "isDeprecated": false
           },
           {
-            "title": "topPointFirst",
+            "title": "normalizeLineSegment",
             "kind": 64,
-            "path": "Geometry/topPointFirst.md",
+            "path": "Geometry/normalizeLineSegment.md",
             "isDeprecated": false
           }
         ]
@@ -970,9 +1014,33 @@
         "title": "Statistics",
         "children": [
           {
+            "title": "mean",
+            "kind": 64,
+            "path": "Math/mean.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "median",
+            "kind": 64,
+            "path": "Math/median.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "mode",
+            "kind": 64,
+            "path": "Math/mode.md",
+            "isDeprecated": false
+          },
+          {
             "title": "standardDeviation",
             "kind": 64,
             "path": "Math/standardDeviation.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "sum",
+            "kind": 64,
+            "path": "Math/sum.md",
             "isDeprecated": false
           },
           {
@@ -2004,9 +2072,9 @@
         "title": "Day",
         "children": [
           {
-            "title": "GetBeginningOfDayOptions",
+            "title": "BeginningOfDayOptions",
             "kind": 2097152,
-            "path": "Time/GetBeginningOfDayOptions.md",
+            "path": "Time/BeginningOfDayOptions.md",
             "isDeprecated": false
           },
           {
@@ -2028,15 +2096,9 @@
             "isDeprecated": false
           },
           {
-            "title": "getBeginningOfDay",
+            "title": "beginningOfDay",
             "kind": 64,
-            "path": "Time/getBeginningOfDay.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "getOccurrenceInMonth",
-            "kind": 64,
-            "path": "Time/getOccurrenceInMonth.md",
+            "path": "Time/beginningOfDay.md",
             "isDeprecated": false
           },
           {
@@ -2049,6 +2111,12 @@
             "title": "isSameDay",
             "kind": 64,
             "path": "Time/isSameDay.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "occurrenceInMonth",
+            "kind": 64,
+            "path": "Time/occurrenceInMonth.md",
             "isDeprecated": false
           }
         ]
@@ -2103,9 +2171,9 @@
         "title": "Julian",
         "children": [
           {
-            "title": "getJulian",
+            "title": "julian",
             "kind": 64,
-            "path": "Time/getJulian.md",
+            "path": "Time/julian.md",
             "isDeprecated": false
           }
         ]
@@ -2138,21 +2206,21 @@
             "isDeprecated": false
           },
           {
-            "title": "getBeginningOfMonth",
+            "title": "beginningOfMonth",
             "kind": 64,
-            "path": "Time/getBeginningOfMonth.md",
+            "path": "Time/beginningOfMonth.md",
             "isDeprecated": false
           },
           {
-            "title": "getDaysInMonth",
+            "title": "daysInMonth",
             "kind": 64,
-            "path": "Time/getDaysInMonth.md",
+            "path": "Time/daysInMonth.md",
             "isDeprecated": false
           },
           {
-            "title": "getEndOfMonth",
+            "title": "endOfMonth",
             "kind": 64,
-            "path": "Time/getEndOfMonth.md",
+            "path": "Time/endOfMonth.md",
             "isDeprecated": false
           },
           {
@@ -2218,9 +2286,20 @@
             "isDeprecated": false
           },
           {
-            "title": "getTimezone",
+            "title": "timezone",
             "kind": 64,
-            "path": "Time/getTimezone.md",
+            "path": "Time/timezone.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Type Check",
+        "children": [
+          {
+            "title": "isDate",
+            "kind": 64,
+            "path": "Time/isDate.md",
             "isDeprecated": false
           }
         ]
@@ -2265,33 +2344,33 @@
             "isDeprecated": false
           },
           {
-            "title": "getBeginningOfWeek",
+            "title": "beginningOfWeek",
             "kind": 64,
-            "path": "Time/getBeginningOfWeek.md",
+            "path": "Time/beginningOfWeek.md",
             "isDeprecated": false
           },
           {
-            "title": "getDayOfWeek",
+            "title": "dayOfWeek",
             "kind": 64,
-            "path": "Time/getDayOfWeek.md",
+            "path": "Time/dayOfWeek-1.md",
             "isDeprecated": false
           },
           {
-            "title": "getEndOfWeek",
+            "title": "endOfWeek",
             "kind": 64,
-            "path": "Time/getEndOfWeek.md",
+            "path": "Time/endOfWeek.md",
             "isDeprecated": false
           },
           {
-            "title": "getISOWeekOfYear",
+            "title": "isoWeekOfYear",
             "kind": 64,
-            "path": "Time/getISOWeekOfYear.md",
+            "path": "Time/isoWeekOfYear.md",
             "isDeprecated": false
           },
           {
-            "title": "getISOWeeksInYear",
+            "title": "isoWeeksInYear",
             "kind": 64,
-            "path": "Time/getISOWeeksInYear.md",
+            "path": "Time/isoWeeksInYear.md",
             "isDeprecated": false
           },
           {
@@ -2336,21 +2415,21 @@
             "isDeprecated": false
           },
           {
-            "title": "getBeginningOfYear",
+            "title": "beginningOfYear",
             "kind": 64,
-            "path": "Time/getBeginningOfYear.md",
+            "path": "Time/beginningOfYear.md",
             "isDeprecated": false
           },
           {
-            "title": "getDayOfYear",
+            "title": "dayOfYear",
             "kind": 64,
-            "path": "Time/getDayOfYear.md",
+            "path": "Time/dayOfYear.md",
             "isDeprecated": false
           },
           {
-            "title": "getEndOfYear",
+            "title": "endOfYear",
             "kind": 64,
-            "path": "Time/getEndOfYear.md",
+            "path": "Time/endOfYear.md",
             "isDeprecated": false
           },
           {
@@ -2366,6 +2445,17 @@
             "isDeprecated": false
           }
         ]
+      }
+    ]
+  },
+  {
+    "title": "Type Checking",
+    "children": [
+      {
+        "title": "isBoolean",
+        "kind": 64,
+        "path": "Utility/isBoolean.md",
+        "isDeprecated": false
       }
     ]
   },
@@ -2540,6 +2630,17 @@
     "title": "Utility",
     "children": [
       {
+        "title": "Uncategorized",
+        "children": [
+          {
+            "title": "isBoolean",
+            "kind": 64,
+            "path": "Utility/isBoolean.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
         "title": "Classes",
         "children": [
           {
@@ -2557,6 +2658,41 @@
             "title": "TypedArray",
             "kind": 2097152,
             "path": "Utility/TypedArray.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Type Checking",
+        "children": [
+          {
+            "title": "isFunction",
+            "kind": 64,
+            "path": "Utility/isFunction.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isNumber",
+            "kind": 64,
+            "path": "Utility/isNumber.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isObject",
+            "kind": 64,
+            "path": "Utility/isObject.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isRegExp",
+            "kind": 64,
+            "path": "Utility/isRegExp.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isString",
+            "kind": 64,
+            "path": "Utility/isString.md",
             "isDeprecated": false
           }
         ]

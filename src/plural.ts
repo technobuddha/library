@@ -1,5 +1,3 @@
-import { isUndefined } from 'lodash-es';
-
 import { empty, space } from './constants.ts';
 import { matchCase } from './match-case.ts';
 
@@ -8,6 +6,7 @@ import { matchCase } from './match-case.ts';
  *
  * @param input - The word to pluralize
  * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
+ * @param include - If true and quantity is supplied, the quantity is prepended to the output.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
  * @group English
  * @category Parts of Speech
@@ -66,7 +65,7 @@ export function plural(input: string, quantity?: number, include = false): strin
 
   result ??= matchCase(`${prefix}${lc}s${suffix}`, input);
 
-  return include && !isUndefined(quantity) ? quantity.toString() + space + result : result;
+  return include && quantity != null ? `${quantity}${space}${result}` : result;
 }
 
 type DBEntry = {

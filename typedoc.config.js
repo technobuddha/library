@@ -1,7 +1,5 @@
 //@ts-check
 
-import { OptionDefaults } from 'typedoc';
-
 /** @type {import('typedoc').TypeDocOptions & import('typedoc-plugin-markdown').PluginOptions} */
 const config = {
   // typedoc
@@ -33,9 +31,6 @@ const config = {
     compactFolders: false,
     excludeReferences: true,
   },
-  blockTags: [...OptionDefaults.blockTags],
-  inlineTags: [...OptionDefaults.inlineTags],
-  modifierTags: [...OptionDefaults.modifierTags],
   //  Organization
   categorizeByGroup: true,
   defaultCategory: 'Uncategorized',

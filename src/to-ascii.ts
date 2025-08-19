@@ -1,6 +1,5 @@
-import { compact } from 'lodash-es';
-
 import { build } from './build.ts';
+import { collapse } from './collapse.ts';
 import { splitChars } from './split-chars.ts';
 
 /**
@@ -10,7 +9,7 @@ import { splitChars } from './split-chars.ts';
  * @category Extraction
  */
 export function toASCII(input: string): string {
-  return build(compact(splitChars(input).map((c) => convertToASCII[c])));
+  return build(collapse(splitChars(input).map((c) => convertToASCII[c])));
 }
 
 /* eslint-disable @typescript-eslint/naming-convention */

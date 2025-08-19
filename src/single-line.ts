@@ -1,6 +1,5 @@
-import { zip } from 'lodash-es';
-
 import { empty, space } from './constants.ts';
+import { zipperMerge } from './zipper-merge.ts';
 
 /**
  * Joins a template literal into a single line string by removing line breaks and leading whitespace,
@@ -13,7 +12,7 @@ import { empty, space } from './constants.ts';
  * @category Single Line
  */
 export function singleLine(template: TemplateStringsArray, ...args: unknown[]): string {
-  return zip(
+  return zipperMerge(
     template.map((t) => t.replaceAll(/[\r\n]+\s*/gu, space)),
     args,
   )

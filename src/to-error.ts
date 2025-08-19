@@ -1,4 +1,4 @@
-import { isError, toString } from 'lodash-es';
+import { toString } from './to-string.ts';
 
 /**
  * Convert the entity to an Error object.
@@ -10,5 +10,5 @@ import { isError, toString } from 'lodash-es';
  * @category Conversion
  */
 export function toError(entity: unknown): Error {
-  return isError(entity) ? entity : new Error(toString(entity));
+  return Error.isError(entity) ? entity : new Error(toString(entity));
 }

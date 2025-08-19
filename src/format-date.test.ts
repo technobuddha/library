@@ -1,5 +1,5 @@
 import { formatDate } from './format-date.ts';
-import { getTimezone } from './get-timezone.ts';
+import { timezone } from './timezone.ts';
 
 describe('formatDate', () => {
   test('support the h format', () => {
@@ -151,13 +151,13 @@ describe('formatDate', () => {
 
   test('support the TZ format', () => {
     const d = new Date('1969-07-20T15:17');
-    const t = getTimezone(d);
+    const t = timezone(d);
     expect(formatDate(d, 'TZ')).toBe(t);
   });
 
   test('support the GMT format', () => {
     const d = new Date('1969-07-20T15:17');
-    const t = getTimezone(d, { gmt: true });
+    const t = timezone(d, { gmt: true });
     expect(formatDate(d, 'GMT')).toBe(t);
   });
 

@@ -6,7 +6,7 @@
 
 > **singleLine**(`template`: `TemplateStringsArray`, ...`args`: `unknown`[]): `string`
 
-Defined in: [single-line.ts:15](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L15)
+Defined in: [single-line.ts:14](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L14)
 
 Joins a template literal into a single line string by removing line breaks and leading whitespace,
 then interleaving the provided arguments. The result is a trimmed, single-line string.

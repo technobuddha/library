@@ -6,7 +6,7 @@
 
 > **compare**(`a`: `unknown`, `b`: `unknown`): `number`
 
-Defined in: [compare.ts:14](https://github.com/technobuddha/library/blob/main/src/compare.ts#L14)
+Defined in: [compare.ts:12](https://github.com/technobuddha/library/blob/main/src/compare.ts#L12)
 
 Compare two objects
 

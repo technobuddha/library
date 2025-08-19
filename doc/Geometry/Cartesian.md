@@ -8,11 +8,11 @@
 
 Defined in: [@types/geometry.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L7)
 
-Cartesian coordinate (x, y)
+Represents a point in 2D Cartesian coordinate space.
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="x"></a> `x` | `number` | [@types/geometry.ts:8](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L8) |
-| <a id="y"></a> `y` | `number` | [@types/geometry.ts:9](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L9) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="x"></a> `x` | `number` | The x-coordinate value. | [@types/geometry.ts:9](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L9) |
+| <a id="y"></a> `y` | `number` | The y-coordinate value. | [@types/geometry.ts:11](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L11) |

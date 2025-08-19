@@ -2,7 +2,19 @@
 
 # @technobuddha/library
 
+## Functions
+
+| Function | Description |
+| ------ | ------ |
+| [toString](Functions/toString.md) | - |
+
 ## Array
+
+### Collapse
+
+| Function | Description |
+| ------ | ------ |
+| [collapse](Array/collapse.md) | Collapses a list of arguments into a flat array of strings. |
 
 ### Creation
 
@@ -23,6 +35,18 @@
 | ------ | ------ |
 | [LongestCommonSubsequenceOptions](Array/LongestCommonSubsequenceOptions.md) | Options for configuring the [longestCommonSubsequence](Array/longestCommonSubsequence.md) calculation. |
 | [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
+
+### Merging
+
+| Function | Description |
+| ------ | ------ |
+| [zipperMerge](Array/zipperMerge.md) | Merges multiple arrays into a single array by interleaving their elements at each index. Each element of the resulting array is an array containing the elements from the input arrays at the corresponding index. If input arrays have different lengths, `undefined` will be used for missing elements. |
+
+### Type Check
+
+| Function | Description |
+| ------ | ------ |
+| [isArrayLike](Array/isArrayLike.md) | Determines whether the provided value is array-like. |
 
 ## Encoding
 
@@ -76,7 +100,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [ConjoinCoordinateOptions](English/ConjoinCoordinateOptions.md) | Options for creating a coordinate string |
+| [ConjoinOptions](English/ConjoinOptions.md) | Options for creating a coordinate string |
 | [IndefiniteArticleOptions](English/IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
 | [conjoin](English/conjoin.md) | Create a string from an array, separating values and inserting a conjunction |
 | [indefiniteArticle](English/indefiniteArticle.md) | Determine the appropriate indefinite article to use with a word. |
@@ -110,7 +134,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [Cartesian](Geometry/Cartesian.md) | Cartesian coordinate (x, y) |
+| [Cartesian](Geometry/Cartesian.md) | Represents a point in 2D Cartesian coordinate space. |
 | [Polar](Geometry/Polar.md) | Polar coordinate (angle, radius) |
 | [Origin](Geometry/Origin.md) | The origin of cartesian coordinates (0, 0) |
 | [isCartesian](Geometry/isCartesian.md) | Determines if the provided value is a Cartesian point. |
@@ -122,7 +146,7 @@
 
 | Name | Description |
 | ------ | ------ |
-| [LineSegment](Geometry/LineSegment.md) | A line segments (defined by two endpoints) |
+| [LineSegment](Geometry/LineSegment.md) | Represents a line segment in 2D space, defined by its start and end points. |
 | [angleOfLine](Geometry/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
 | [isIntersecting](Geometry/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [isLeftOfLine](Geometry/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
@@ -131,7 +155,7 @@
 | [lineIntersection](Geometry/lineIntersection.md) | Calculates the intersection point of two line segments. |
 | [lineLength](Geometry/lineLength.md) | Calculates the length of a given line segment using the distance formula. |
 | [midpoint](Geometry/midpoint.md) | Calculates a point at a given fraction (`part`) along a line segment. By default it returns the true midpoint of the line segment |
-| [topPointFirst](Geometry/topPointFirst.md) | Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0). If the original line's y1 is greater than y0, the line is returned as-is. Otherwise, the start and end points are swapped. |
+| [normalizeLineSegment](Geometry/normalizeLineSegment.md) | Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0). If the original line's y1 is greater than y0, the line is returned as-is. Otherwise, the start and end points are swapped. |
 
 ### Point
 
@@ -262,7 +286,11 @@
 
 | Function | Description |
 | ------ | ------ |
+| [mean](Math/mean.md) | Calculates the arithmetic mean (average) of an array of numbers. |
+| [median](Math/median.md) | Calculates the median value of an array of numbers. |
+| [mode](Math/mode.md) | Returns the mode (the most frequently occurring element) of the given array. If multiple elements have the same highest frequency, the first encountered is returned. Returns `undefined` if the array is empty. |
 | [standardDeviation](Math/standardDeviation.md) | Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments. |
+| [sum](Math/sum.md) | Calculates the sum of an array of numbers. |
 | [variance](Math/variance.md) | Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments. |
 
 ## Object
@@ -605,14 +633,14 @@
 
 | Name | Description |
 | ------ | ------ |
-| [GetBeginningOfDayOptions](Time/GetBeginningOfDayOptions.md) | Options for [getBeginningOfDay](Time/getBeginningOfDay.md) |
-| [GetOccurrenceInMonthOptions](Time/GetOccurrenceInMonthOptions.md) | Options for [getOccurrenceInMonth](Time/getOccurrenceInMonth.md) |
+| [BeginningOfDayOptions](Time/BeginningOfDayOptions.md) | Options for [beginningOfDay](Time/beginningOfDay.md) |
+| [GetOccurrenceInMonthOptions](Time/GetOccurrenceInMonthOptions.md) | Options for [occurrenceInMonth](Time/occurrenceInMonth.md) |
 | [MidnightOptions](Time/MidnightOptions.md) | Options for the [isMidnight](Time/isMidnight.md) function |
 | [SameDayOptions](Time/SameDayOptions.md) | Options for the [isSameDay](Time/isSameDay.md) function |
-| [getBeginningOfDay](Time/getBeginningOfDay.md) | Determine the start of the day for a date |
-| [getOccurrenceInMonth](Time/getOccurrenceInMonth.md) | Determine the date of an occurrence of a weekday within a month |
+| [beginningOfDay](Time/beginningOfDay.md) | Determine the start of the day for a date |
 | [isMidnight](Time/isMidnight.md) | Determine if a date is at midnight |
 | [isSameDay](Time/isSameDay.md) | Determine if two dates occur on the same day |
+| [occurrenceInMonth](Time/occurrenceInMonth.md) | Determine the date of an occurrence of a weekday within a month |
 
 ### Enumerations
 
@@ -634,19 +662,19 @@
 
 | Function | Description |
 | ------ | ------ |
-| [getJulian](Time/getJulian.md) | Get the Julian date (number of days since noon on Monday, January 1 4713 BCE) |
+| [julian](Time/julian.md) | Get the Julian date (number of days since noon on Monday, January 1 4713 BCE) |
 
 ### Month
 
 | Name | Description |
 | ------ | ------ |
-| [BeginningOfMonthOptions](Time/BeginningOfMonthOptions.md) | Options for the [getBeginningOfMonth](Time/getBeginningOfMonth.md) function |
-| [DaysInMonthOptions](Time/DaysInMonthOptions.md) | Options for the [getDaysInMonth](Time/getDaysInMonth.md) function |
-| [EndOfMonthOptions](Time/EndOfMonthOptions.md) | Options for the [getEndOfMonth](Time/getEndOfMonth.md) function |
+| [BeginningOfMonthOptions](Time/BeginningOfMonthOptions.md) | Options for the [beginningOfMonth](Time/beginningOfMonth.md) function |
+| [DaysInMonthOptions](Time/DaysInMonthOptions.md) | Options for the [daysInMonth](Time/daysInMonth.md) function |
+| [EndOfMonthOptions](Time/EndOfMonthOptions.md) | Options for the [endOfMonth](Time/endOfMonth.md) function |
 | [SameMonthOptions](Time/SameMonthOptions.md) | Options for the [isSameMonth](Time/isSameMonth.md) function |
-| [getBeginningOfMonth](Time/getBeginningOfMonth.md) | Determine the start of the month for a dateDetermine the start of the month for a date |
-| [getDaysInMonth](Time/getDaysInMonth.md) | Determine the number of days in the month for a date |
-| [getEndOfMonth](Time/getEndOfMonth.md) | Determine the last day of the month containing the input date |
+| [beginningOfMonth](Time/beginningOfMonth.md) | Determine the start of the month for a dateDetermine the start of the month for a date |
+| [daysInMonth](Time/daysInMonth.md) | Determine the number of days in the month for a date |
+| [endOfMonth](Time/endOfMonth.md) | Determine the last day of the month containing the input date |
 | [isSameMonth](Time/isSameMonth.md) | Determine if two dates occur in the same month |
 
 ### Parsing
@@ -673,40 +701,52 @@
 
 | Name | Description |
 | ------ | ------ |
-| [TimezoneOptions](Time/TimezoneOptions.md) | Options for the [getTimezone](Time/getTimezone.md) function |
-| [getTimezone](Time/getTimezone.md) | Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes |
+| [TimezoneOptions](Time/TimezoneOptions.md) | Options for the [timezone](Time/timezone.md) function |
+| [timezone](Time/timezone.md) | Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes |
+
+### Type Check
+
+| Function | Description |
+| ------ | ------ |
+| [isDate](Time/isDate.md) | Determines whether the provided value is a `Date` object. |
 
 ### Week
 
 | Name | Description |
 | ------ | ------ |
-| [BeginningOfWeekOptions](Time/BeginningOfWeekOptions.md) | Options for the [getBeginningOfWeek](Time/getBeginningOfWeek.md) function |
-| [DayOfWeekOptions](Time/DayOfWeekOptions.md) | Options for the [getDayOfWeek](Time/getDayOfWeek.md) function |
-| [EndOfWeekOptions](Time/EndOfWeekOptions.md) | Options for the [getEndOfWeek](Time/getEndOfWeek.md) function |
-| [ISOWeekOfYearOptions](Time/ISOWeekOfYearOptions.md) | Options for the [getISOWeekOfYear](Time/getISOWeekOfYear.md) function |
-| [ISOWeeksInYearOptions](Time/ISOWeeksInYearOptions.md) | Options for the [getISOWeeksInYear](Time/getISOWeeksInYear.md) function |
+| [BeginningOfWeekOptions](Time/BeginningOfWeekOptions.md) | Options for the [beginningOfWeek](Time/beginningOfWeek.md) function |
+| [DayOfWeekOptions](Time/DayOfWeekOptions.md) | Options for the [dayOfWeek](Time/dayOfWeek-1.md) function |
+| [EndOfWeekOptions](Time/EndOfWeekOptions.md) | Options for the [endOfWeek](Time/endOfWeek.md) function |
+| [ISOWeekOfYearOptions](Time/ISOWeekOfYearOptions.md) | Options for the [isoWeekOfYear](Time/isoWeekOfYear.md) function |
+| [ISOWeeksInYearOptions](Time/ISOWeeksInYearOptions.md) | Options for the [isoWeeksInYear](Time/isoWeeksInYear.md) function |
 | [SameWeekOptions](Time/SameWeekOptions.md) | Options for the [isSameWeek](Time/isSameWeek.md) function |
-| [getBeginningOfWeek](Time/getBeginningOfWeek.md) | Determine the start of the week for a date |
-| [getDayOfWeek](Time/getDayOfWeek.md) | Determine the day of the week for a specific date |
-| [getEndOfWeek](Time/getEndOfWeek.md) | Determine the last day of the week containing a date |
-| [getISOWeekOfYear](Time/getISOWeekOfYear.md) | Determine the ISO week number for a given date |
-| [getISOWeeksInYear](Time/getISOWeeksInYear.md) | Determine the number of ISO weeks within a year |
+| [beginningOfWeek](Time/beginningOfWeek.md) | Determine the start of the week for a date |
+| [dayOfWeek](Time/dayOfWeek-1.md) | Determine the day of the week for a specific date |
+| [endOfWeek](Time/endOfWeek.md) | Determine the last day of the week containing a date |
+| [isoWeekOfYear](Time/isoWeekOfYear.md) | Determine the ISO week number for a given date |
+| [isoWeeksInYear](Time/isoWeeksInYear.md) | Determine the number of ISO weeks within a year |
 | [isSameWeek](Time/isSameWeek.md) | Determine if two dates occur in the same week |
 
 ### Year
 
 | Name | Description |
 | ------ | ------ |
-| [BeginningOfYearOptions](Time/BeginningOfYearOptions.md) | Options for the [getBeginningOfYear](Time/getBeginningOfYear.md) function |
-| [DayOfYearOptions](Time/DayOfYearOptions.md) | Options for the [getDayOfYear](Time/getDayOfYear.md) function |
-| [EndOfYearOptions](Time/EndOfYearOptions.md) | Options for the [getEndOfYear](Time/getEndOfYear.md) function |
+| [BeginningOfYearOptions](Time/BeginningOfYearOptions.md) | Options for the [beginningOfYear](Time/beginningOfYear.md) function |
+| [DayOfYearOptions](Time/DayOfYearOptions.md) | Options for the [dayOfYear](Time/dayOfYear.md) function |
+| [EndOfYearOptions](Time/EndOfYearOptions.md) | Options for the [endOfYear](Time/endOfYear.md) function |
 | [LeapYearOptions](Time/LeapYearOptions.md) | Options for the [isLeapYear](Time/isLeapYear.md) function |
 | [SameYearOptions](Time/SameYearOptions.md) | Options for the [isSameYear](Time/isSameYear.md) function |
-| [getBeginningOfYear](Time/getBeginningOfYear.md) | Determine the start of the year for a date |
-| [getDayOfYear](Time/getDayOfYear.md) | Calculates the day of the year for a given date. |
-| [getEndOfYear](Time/getEndOfYear.md) | Determine the last day of the year containing a date |
+| [beginningOfYear](Time/beginningOfYear.md) | Determine the start of the year for a date |
+| [dayOfYear](Time/dayOfYear.md) | Calculates the day of the year for a given date. |
+| [endOfYear](Time/endOfYear.md) | Determine the last day of the year containing a date |
 | [isLeapYear](Time/isLeapYear.md) | Determine if a year is a leap year |
 | [isSameYear](Time/isSameYear.md) | Determine if two dates occur in the same year |
+
+## Type Checking
+
+| Function | Description |
+| ------ | ------ |
+| [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
 
 ## Unicode
 
@@ -764,6 +804,12 @@
 
 ## Utility
 
+### Uncategorized
+
+| Function | Description |
+| ------ | ------ |
+| [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
+
 ### Classes
 
 | Class | Description |
@@ -775,3 +821,13 @@
 | Type Alias | Description |
 | ------ | ------ |
 | [TypedArray](Utility/TypedArray.md) | Any of the built-in typed array types in JavaScript. |
+
+### Type Checking
+
+| Function | Description |
+| ------ | ------ |
+| [isFunction](Utility/isFunction.md) | Determines whether the provided value is a function. |
+| [isNumber](Utility/isNumber.md) | Determines whether the provided value is a number or a Number object. |
+| [isObject](Utility/isObject.md) | Determines whether the provided value is a non-null object. |
+| [isRegExp](Utility/isRegExp.md) | Determines whether the provided value is a `RegExp` object. |
+| [isString](Utility/isString.md) | Determines whether the provided value is a string. |

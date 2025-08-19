@@ -6,13 +6,13 @@
 
 > **Rect** = [`Cartesian`](Cartesian.md) & \{ `height`: `number`; `width`: `number`; \}
 
-Defined in: [@types/geometry.ts:58](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L58)
+Defined in: [@types/geometry.ts:64](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L64)
 
 A rectangle (defined by its top-left corner, width and height)
 
 ## Type declaration
 
-| Name | Type | Defined in |
-| ------ | ------ | ------ |
-| `height` | `number` | [@types/geometry.ts:60](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L60) |
-| `width` | `number` | [@types/geometry.ts:59](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L59) |
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| `height` | `number` | The height of the rectangle. | [@types/geometry.ts:68](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L68) |
+| `width` | `number` | The width of the rectangle. | [@types/geometry.ts:66](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L66) |

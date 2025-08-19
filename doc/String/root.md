@@ -6,7 +6,7 @@
 
 > **root**(`text`: `string`, `options`: [`RootOptions`](RootOptions.md)): `string`
 
-Defined in: [root.ts:25](https://github.com/technobuddha/library/blob/main/src/root.ts#L25)
+Defined in: [root.ts:23](https://github.com/technobuddha/library/blob/main/src/root.ts#L23)
 
 Extract the root word, removing a prefix and/or suffix
 

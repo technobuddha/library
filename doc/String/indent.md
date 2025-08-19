@@ -6,7 +6,7 @@
 
 > **indent**(`input`: `string`, `options`: [`IndentOptions`](IndentOptions.md)): `string`
 
-Defined in: [indent.ts:22](https://github.com/technobuddha/library/blob/main/src/indent.ts#L22)
+Defined in: [indent.ts:24](https://github.com/technobuddha/library/blob/main/src/indent.ts#L24)
 
 Indent each line of a string
 

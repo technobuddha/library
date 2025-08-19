@@ -1,14 +1,7 @@
-import { compact, isArray, isFunction, isString } from 'lodash-es';
-
+import { type StringLike } from './@types/string-like.ts';
+import { collapse } from './collapse.ts';
 import { empty } from './constants.ts';
 
-/**
- * A string-like object, which can be a string or an array of strings;
- *
- * @group String
- * @category Build
- */
-export type StringLike = string | string[];
 /**
  * Concatenates strings and/or arrays of strings
  *
@@ -18,13 +11,7 @@ export type StringLike = string | string[];
  * @category Build
  */
 export function build(
-  ...args: (StringLike | Generator<string> | IterableIterator<string> | (() => StringLike))[]
+  ...args: (StringLike | Generator<StringLike> | Iterable<StringLike> | (() => StringLike))[]
 ): string {
-  return compact(
-    args.flatMap((a) =>
-      isString(a) || isArray(a) ? a
-      : isFunction(a) ? a()
-      : Array.from(a),
-    ),
-  ).join(empty);
+  return collapse(...args).join(empty);
 }

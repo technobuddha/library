@@ -1,5 +1,4 @@
-import { escapeRegExp, isString } from 'lodash-es';
-
+import { isString } from './is-string.ts';
 import { type QuoteOptions } from './quote.ts';
 import { unescapeJS } from './unescape-js.ts';
 
@@ -22,7 +21,7 @@ export function unquote(
   if (text.startsWith(quote) && text.endsWith(quote)) {
     text = text.slice(quote.length, text.length - quote.length);
     if (isString(escape)) {
-      return text.replaceAll(new RegExp(escapeRegExp(escape), 'gu'), quote);
+      return text.replaceAll(new RegExp(RegExp.escape(escape), 'gu'), quote);
     }
     return escape(text);
   }

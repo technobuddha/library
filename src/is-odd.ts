@@ -1,5 +1,3 @@
-import { isInteger } from 'lodash-es';
-
 import { isMultipleOf } from './is-multiple-of.ts';
 
 /**
@@ -11,5 +9,5 @@ import { isMultipleOf } from './is-multiple-of.ts';
  * @category Parity
  */
 export function isOdd(input: number): boolean {
-  return isInteger(input) && !isMultipleOf(input, 2);
+  return Number.isInteger(input) && !isMultipleOf(input, 2);
 }

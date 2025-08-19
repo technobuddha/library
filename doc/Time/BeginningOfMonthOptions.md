@@ -6,12 +6,12 @@
 
 > **BeginningOfMonthOptions** = \{ `utc?`: `boolean`; \}
 
-Defined in: [get-beginning-of-month.ts:7](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L7)
+Defined in: beginning-of-month.ts:7
 
-Options for the [getBeginningOfMonth](getBeginningOfMonth.md) function
+Options for the [beginningOfMonth](beginningOfMonth.md) function
 
 ## Properties
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [get-beginning-of-month.ts:9](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-month.ts#L9) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | beginning-of-month.ts:9 |

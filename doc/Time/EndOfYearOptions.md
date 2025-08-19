@@ -6,12 +6,12 @@
 
 > **EndOfYearOptions** = \{ `utc?`: `boolean`; \}
 
-Defined in: [get-end-of-year.ts:8](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L8)
+Defined in: end-of-year.ts:8
 
-Options for the [getEndOfYear](getEndOfYear.md) function
+Options for the [endOfYear](endOfYear.md) function
 
 ## Properties
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [get-end-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/get-end-of-year.ts#L10) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | end-of-year.ts:10 |

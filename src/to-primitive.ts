@@ -1,5 +1,4 @@
-import { isNull, isObject, isUndefined } from 'lodash-es';
-
+import { isObject } from './is-object.ts';
 import { isPrimitive } from './is-primitive.ts';
 
 /**
@@ -18,7 +17,7 @@ export function toPrimitive(
   let wrapper = input;
 
   if (isPrimitive(input)) {
-    if (isNull(input) || isUndefined(input)) {
+    if (input == null) {
       return input;
     }
 

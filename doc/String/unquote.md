@@ -6,7 +6,7 @@
 
 > **unquote**(`input`: `string`, `options`: [`QuoteOptions`](QuoteOptions.md)): `string`
 
-Defined in: [unquote.ts:17](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L17)
+Defined in: [unquote.ts:16](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L16)
 
 Remove surrounding quotes from text
 

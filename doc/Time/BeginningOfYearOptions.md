@@ -6,12 +6,12 @@
 
 > **BeginningOfYearOptions** = \{ `utc?`: `boolean`; \}
 
-Defined in: [get-beginning-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L9)
+Defined in: beginning-of-year.ts:9
 
-Options for the [getBeginningOfYear](getBeginningOfYear.md) function
+Options for the [beginningOfYear](beginningOfYear.md) function
 
 ## Properties
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [get-beginning-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/get-beginning-of-year.ts#L11) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | beginning-of-year.ts:11 |

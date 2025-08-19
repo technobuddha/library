@@ -1,10 +1,10 @@
 /* eslint-disable unicorn/better-regex */
 /* eslint-disable require-unicode-regexp */
 /* eslint-disable no-control-regex */
-import { compact, zip } from 'lodash-es';
-
 import { build } from './build.ts';
+import { collapse } from './collapse.ts';
 import { splitChars } from './split-chars.ts';
+import { zipperMerge } from './zipper-merge.ts';
 
 /**
  * Constructs a new `RegExp` by interpolating template strings and provided regular expressions.
@@ -23,9 +23,9 @@ import { splitChars } from './split-chars.ts';
 export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   const flags = new Set<string>(['u']);
   const reText = build(
-    compact(
-      zip(
-        template,
+    collapse(
+      zipperMerge(
+        Array.from(template),
         args.map((a) => {
           for (const flag of splitChars(a.flags)) {
             flags.add(flag);

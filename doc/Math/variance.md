@@ -6,7 +6,7 @@
 
 > **variance**(...`dataPoints`: `number`[]): `number`
 
-Defined in: [variance.ts:13](https://github.com/technobuddha/library/blob/main/src/variance.ts#L13)
+Defined in: [variance.ts:14](https://github.com/technobuddha/library/blob/main/src/variance.ts#L14)
 
 Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments.
 

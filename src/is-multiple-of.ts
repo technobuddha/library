@@ -1,4 +1,4 @@
-import { isNumber } from 'lodash-es';
+import { isNumber } from './is-number.ts';
 
 /**
  * Tests to see if the specified value is an multiple of *multiplier*

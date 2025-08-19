@@ -6,7 +6,7 @@
 
 > **replacer**(`this`: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\>, `key`: `string`, `value`: `unknown`): `unknown`
 
-Defined in: [json.ts:27](https://github.com/technobuddha/library/blob/main/src/json.ts#L27)
+Defined in: [json.ts:25](https://github.com/technobuddha/library/blob/main/src/json.ts#L25)
 
 Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with [reviver](reviver.md)
 

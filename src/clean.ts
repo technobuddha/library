@@ -1,6 +1,6 @@
-import { escapeRegExp, isRegExp, isString } from 'lodash-es';
-
 import { empty } from './constants.ts';
+import { isRegExp } from './is-reg-exp.ts';
+import { isString } from './is-string.ts';
 import { splitChars } from './split-chars.ts';
 
 const trimEquivalent = /[\s\uFEFF\u00A0]/u;
@@ -20,7 +20,7 @@ export function clean(
   const re =
     isString(characters) ?
       splitChars(characters)
-        .map((ch) => escapeRegExp(ch))
+        .map((ch) => RegExp.escape(ch))
         .join('|')
     : isRegExp(characters) ? characters.source
     : characters
@@ -28,7 +28,7 @@ export function clean(
           isRegExp(c) ?
             c.source
           : splitChars(c)
-              .map((ch) => escapeRegExp(ch))
+              .map((ch) => RegExp.escape(ch))
               .join('|'),
         )
         .join('|');
@@ -51,7 +51,7 @@ export function cleanEnd(
   const re =
     isString(characters) ?
       splitChars(characters)
-        .map((ch) => escapeRegExp(ch))
+        .map((ch) => RegExp.escape(ch))
         .join('|')
     : isRegExp(characters) ? characters.source
     : characters
@@ -59,7 +59,7 @@ export function cleanEnd(
           isRegExp(c) ?
             c.source
           : splitChars(c)
-              .map((ch) => escapeRegExp(ch))
+              .map((ch) => RegExp.escape(ch))
               .join('|'),
         )
         .join('|');
@@ -82,7 +82,7 @@ export function cleanStart(
   const re =
     isString(characters) ?
       splitChars(characters)
-        .map((ch) => escapeRegExp(ch))
+        .map((ch) => RegExp.escape(ch))
         .join('|')
     : isRegExp(characters) ? characters.source
     : characters
@@ -90,7 +90,7 @@ export function cleanStart(
           isRegExp(c) ?
             c.source
           : splitChars(c)
-              .map((ch) => escapeRegExp(ch))
+              .map((ch) => RegExp.escape(ch))
               .join('|'),
         )
         .join('|');

@@ -1,5 +1,3 @@
-import { isFinite } from 'lodash-es';
-
 import { empty } from './constants.ts';
 
 /**
@@ -27,7 +25,7 @@ export function chop(
   length: number,
   { truncate = false }: ChopOptions = {},
 ): string[] {
-  return length > 0 && isFinite(length) ?
+  return length > 0 && Number.isFinite(length) ?
       (input.match(new RegExp(`.{${truncate ? empty : '1,'}${length}}`, 'gu')) as string[])
     : [input];
 }

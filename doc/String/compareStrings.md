@@ -6,7 +6,7 @@
 
 > **compareStrings**(`a`: `null` \| `string`, `b`: `null` \| `string`, `caseInsensitive`: [`CompareStringsOptions`](CompareStringsOptions.md)): `-1` \| `0` \| `1`
 
-Defined in: [compare-strings.ts:33](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L33)
+Defined in: [compare-strings.ts:31](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L31)
 
 Compare two strings
 

@@ -2,7 +2,7 @@
 
 [@technobuddha/library](../index.md) / HashBase
 
-# Class: `abstract` HashBase
+# Abstract Class: HashBase
 
 Defined in: [hash-base.ts:61](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L61)
 

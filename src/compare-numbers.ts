@@ -1,5 +1,3 @@
-import { isNil } from 'lodash-es';
-
 /**
  * Compare two numbers
  *
@@ -13,10 +11,10 @@ export function compareNumbers(a: number | null, b: number | null): -1 | 0 | 1 {
   if (a === b) {
     return 0;
   }
-  if (isNil(a)) {
+  if (a == null) {
     return -1;
   }
-  if (isNil(b)) {
+  if (b == null) {
     return 1;
   }
 

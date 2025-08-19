@@ -1,4 +1,4 @@
-import { isNil, round } from 'lodash-es';
+import { round } from 'lodash-es';
 
 import { empty } from './constants.ts';
 import { formatNumber } from './format-number.ts';
@@ -113,7 +113,7 @@ export function metricUnits(
   }
 
   return (
-    (isNil(format) ?
+    (format == null ?
       round(number, precision).toString()
     : formatNumber(round(number, precision), format)
     ).padStart(pad ?? 0) + suffix

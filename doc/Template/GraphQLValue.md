@@ -6,6 +6,6 @@
 
 > **GraphQLValue** = `number` \| `string` \| `null` \| `boolean` \| [`GraphQLArray`](GraphQLArray.md) \| [`GraphQLObject`](GraphQLObject.md)
 
-Defined in: [graphql.ts:28](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L28)
+Defined in: [graphql.ts:31](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L31)
 
 A GraphQL Value, similar to a JSONValue

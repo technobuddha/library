@@ -6,7 +6,7 @@
 
 > **isValidDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)): `boolean`
 
-Defined in: [is-valid-date.ts:12](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L12)
+Defined in: [is-valid-date.ts:10](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L10)
 
 Determine if a date is valid
 

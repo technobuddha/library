@@ -1,0 +1,30 @@
+<!-- markdownlint-disable -->
+
+[@technobuddha/library](../index.md) / beginningOfYear
+
+# Function: beginningOfYear()
+
+> **beginningOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfYearOptions`](BeginningOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+Defined in: beginning-of-year.ts:24
+
+Determine the start of the year for a date
+
+## Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `input` | [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date |
+| `options` | [`BeginningOfYearOptions`](BeginningOfYearOptions.md) | see [BeginningOfYearOptions](BeginningOfYearOptions.md) |
+
+## Returns
+
+[`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+The date value for midnight on the first day of the specified year
+
+## Default Value
+
+```ts
+utc false
+```

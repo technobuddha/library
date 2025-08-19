@@ -6,7 +6,7 @@
 
 > **toFilename**(`input`: `string`, `options`: [`FilenameOptions`](FilenameOptions.md)): `string`
 
-Defined in: [to-filename.ts:35](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L35)
+Defined in: [to-filename.ts:33](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L33)
 
 Convert a string so that it can be used as a filename
 

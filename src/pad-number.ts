@@ -1,5 +1,3 @@
-import { isNaN } from 'lodash-es';
-
 /**
  * Add leading zeros to a number to ensure a string of a minimum length
  *
@@ -10,7 +8,7 @@ import { isNaN } from 'lodash-es';
  * @category Numbers
  */
 export function padNumber(input: number, length = 2): string {
-  if (isNaN(input) || input === Infinity || input === -Infinity) {
+  if (Number.isNaN(input) || !Number.isFinite(input)) {
     return input.toString().padStart(length, ' ');
   } else if (input < 0) {
     return `-${Math.abs(input)

@@ -1,4 +1,5 @@
-import { mean, sum } from 'lodash-es';
+import { mean } from './mean.ts';
+import { sum } from './sum.ts';
 
 /**
  * Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments.

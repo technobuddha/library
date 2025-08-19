@@ -6,7 +6,7 @@
 
 > **quote**(`input`: `string`, `options`: [`QuoteOptions`](QuoteOptions.md)): `string`
 
-Defined in: [quote.ts:29](https://github.com/technobuddha/library/blob/main/src/quote.ts#L29)
+Defined in: [quote.ts:28](https://github.com/technobuddha/library/blob/main/src/quote.ts#L28)
 
 Surround text with quotes
 

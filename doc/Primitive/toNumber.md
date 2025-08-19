@@ -6,7 +6,7 @@
 
 > **toNumber**(`entity`: `unknown`): `number`
 
-Defined in: [to-number.ts:11](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L11)
+Defined in: [to-number.ts:13](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L13)
 
 Convert an entity to a number.
 

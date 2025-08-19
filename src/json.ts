@@ -1,5 +1,3 @@
-import { isFinite, isNaN } from 'lodash-es';
-
 /**
  * The beginning of a special JSON value
  * @group JSON
@@ -30,7 +28,7 @@ export function replacer(this: Record<string, unknown>, key: string, value: unkn
     return `${specialBegin}Date:${raw.toISOString()}${specialFinish}`;
   } else if (raw instanceof RegExp) {
     return `${specialBegin}RegExp:/${raw.source}/${raw.flags}${specialFinish}`;
-  } else if (typeof raw === 'number' && (isNaN(raw) || !isFinite(raw))) {
+  } else if (typeof raw === 'number' && (Number.isNaN(raw) || !Number.isFinite(raw))) {
     return `${specialBegin}Number:${raw.toString()}${specialFinish}`;
   } else if (typeof raw === 'bigint') {
     return `${specialBegin}BigInt:${raw.toString()}${specialFinish}`;

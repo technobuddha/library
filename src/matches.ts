@@ -1,4 +1,5 @@
-import { isRegExp, isString } from 'lodash-es';
+import { isRegExp } from './is-reg-exp.ts';
+import { isString } from './is-string.ts';
 
 /**
  * Determines if the given `text` matches the provided `match` criteria.

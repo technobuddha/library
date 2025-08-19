@@ -6,7 +6,7 @@
 
 > **padNumber**(`input`: `number`, `length`: `number`): `string`
 
-Defined in: [pad-number.ts:12](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L12)
+Defined in: [pad-number.ts:10](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L10)
 
 Add leading zeros to a number to ensure a string of a minimum length
 

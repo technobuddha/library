@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/unified-signatures */
-import { isString } from 'lodash-es';
 
 import {
   hoursPerDay,
@@ -10,6 +9,7 @@ import {
   ticksPerMinute,
   ticksPerSecond,
 } from './constants.ts';
+import { isString } from './is-string.ts';
 
 /**
  * Store and manipulate a duration of time

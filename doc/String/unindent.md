@@ -6,7 +6,7 @@
 
 > **unindent**(`input`: `string`, `pattern`: [`IndentOptions`](IndentOptions.md)): `string`
 
-Defined in: [unindent.ts:15](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L15)
+Defined in: [unindent.ts:13](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L13)
 
 Remove indentation from text
 

@@ -1,5 +1,3 @@
-import { escapeRegExp } from 'lodash-es';
-
 import { empty } from './constants.ts';
 /**
  * Options for the {@link fillTemplate} function
@@ -33,7 +31,7 @@ export function fillTemplate(
   let argInput = input;
 
   for (const match of argInput.match(
-    new RegExp(`${escapeRegExp(open)}(.+?)${escapeRegExp(close)}`, 'ug'),
+    new RegExp(`${RegExp.escape(open)}(.+?)${RegExp.escape(close)}`, 'ug'),
   ) ?? []) {
     const key = match.slice(open.length, -close.length).trim();
     argInput = argInput.replace(match, values[key] ?? empty);

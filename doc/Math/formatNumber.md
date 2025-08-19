@@ -6,7 +6,7 @@
 
 > **formatNumber**(`input`: `number`, `mask`: `string`): `string`
 
-Defined in: [format-number.ts:532](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L532)
+Defined in: [format-number.ts:530](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L530)
 
 Formats a number according to the specified mask.
 

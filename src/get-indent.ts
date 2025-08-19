@@ -1,5 +1,3 @@
-import { escapeRegExp, isNil } from 'lodash-es';
-
 import { space } from './constants.ts';
 import { type IndentOptions } from './indent.ts';
 
@@ -14,8 +12,8 @@ import { type IndentOptions } from './indent.ts';
  * @category Indentation
  */
 export function getIndent(input: string, { indenter = space }: IndentOptions = {}): number {
-  const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'ugm').exec(input);
-  if (isNil(matches)) {
+  const matches = new RegExp(`^(${RegExp.escape(indenter)})+`, 'ugm').exec(input);
+  if (matches == null) {
     return 0;
   }
 

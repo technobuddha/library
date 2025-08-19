@@ -1,7 +1,6 @@
-import { escapeRegExp, isFunction } from 'lodash-es';
-
 import { build } from './build.ts';
 import { escapeJS } from './escape-js.ts';
+import { isFunction } from './is-function.ts';
 
 /**
  * Options for the {@link quote} and {@link unquote} function
@@ -33,7 +32,7 @@ export function quote(
   const text =
     isFunction(escape) ?
       escape(input)
-    : input.replaceAll(new RegExp(escapeRegExp(q), 'ug'), escape);
+    : input.replaceAll(new RegExp(RegExp.escape(q), 'ug'), escape);
 
   return build(q, text, q);
 }

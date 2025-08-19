@@ -25,7 +25,7 @@ export type DeconstructedNumber = {
  * @param precision - The number of significant digits to use (default: 9, min: 1, max: 15).
  * @returns An object containing the normalized value, sign, mantissa, exponent, and separate representations
  *          of the whole and fractional parts.
- * @throws {@link TypeError} If the input is NaN or not a finite number.
+ * @throws `TypeError` If the input is NaN or not a finite number.
  *
  * @example
  * ```ts

@@ -4,7 +4,7 @@
 
 # Function: toCartesian()
 
-> **toCartesian**(`__namedParameters`: [`Polar`](Polar.md), `unit`: [`AngleUnit`](AngleUnit.md)): [`Cartesian`](Cartesian.md)
+> **toCartesian**(`point`: [`Polar`](Polar.md), `unit`: [`AngleUnit`](AngleUnit.md)): [`Cartesian`](Cartesian.md)
 
 Defined in: [to-cartesian.ts:12](https://github.com/technobuddha/library/blob/main/src/to-cartesian.ts#L12)
 
@@ -12,10 +12,10 @@ Convert polar coordinates to cartesian
 
 ## Parameters
 
-| Parameter | Type | Default value |
-| ------ | ------ | ------ |
-| `__namedParameters` | [`Polar`](Polar.md) | `undefined` |
-| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `point` | [`Polar`](Polar.md) | `undefined` | radius, angle in radians (zero points in +X direction). |
+| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` | - |
 
 ## Returns
 

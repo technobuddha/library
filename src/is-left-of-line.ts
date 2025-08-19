@@ -1,6 +1,6 @@
 import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 import { crossProduct } from './cross-product.ts';
-import { topPointFirst } from './top-point-first.ts';
+import { normalizeLineSegment } from './normalize-line-segment.ts';
 
 /**
  * Determines whether a given point lies to the left of a specified line segment.
@@ -14,6 +14,6 @@ import { topPointFirst } from './top-point-first.ts';
  * @category Point
  */
 export function isLeftOfLine(point: Cartesian, line: LineSegment): boolean {
-  const tpf = topPointFirst(line);
+  const tpf = normalizeLineSegment(line);
   return crossProduct(point, { x: tpf.x0, y: tpf.y0 }, { x: tpf.x1, y: tpf.y1 }) < 0;
 }

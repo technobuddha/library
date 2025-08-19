@@ -6,7 +6,7 @@
 
 > **getIndent**(`input`: `string`, `options`: [`IndentOptions`](IndentOptions.md)): `number`
 
-Defined in: [get-indent.ts:16](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L16)
+Defined in: [get-indent.ts:14](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L14)
 
 Determine the indentation level of text
 

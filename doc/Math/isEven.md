@@ -6,7 +6,7 @@
 
 > **isEven**(`input`: `number`): `boolean`
 
-Defined in: [is-even.ts:13](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L13)
+Defined in: [is-even.ts:11](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L11)
 
 Tests to see if the specified value is an even integer
 

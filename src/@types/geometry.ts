@@ -1,11 +1,13 @@
 /**
- * Cartesian coordinate (x, y)
+ * Represents a point in 2D Cartesian coordinate space.
  *
  * @group Geometry
  * @category Coordinates
  */
 export type Cartesian = {
+  /** The x-coordinate value. */
   x: number;
+  /** The y-coordinate value. */
   y: number;
 };
 
@@ -37,15 +39,19 @@ export type Polar = {
 export type Polygon = Cartesian[];
 
 /**
- * A line segments (defined by two endpoints)
+ * Represents a line segment in 2D space, defined by its start and end points.
  *
  * @group Geometry
  * @category Line Segment
  */
 export type LineSegment = {
+  /** The x-coordinate of the start point. */
   x0: number;
+  /** The y-coordinate of the start point. */
   y0: number;
+  /** The x-coordinate of the end point. */
   x1: number;
+  /** The y-coordinate of the end point. */
   y1: number;
 };
 
@@ -56,6 +62,8 @@ export type LineSegment = {
  * @category Rectangle
  */
 export type Rect = Cartesian & {
+  /** The width of the rectangle. */
   width: number;
+  /** The height of the rectangle. */
   height: number;
 };

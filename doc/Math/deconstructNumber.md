@@ -26,7 +26,7 @@ An object containing the normalized value, sign, mantissa, exponent, and separat
 
 ## Throws
 
-TypeError If the input is NaN or not a finite number.
+`TypeError` If the input is NaN or not a finite number.
 
 ## Example
 

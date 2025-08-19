@@ -1,4 +1,7 @@
-import { isDate, isNumber, isString, toString } from 'lodash-es';
+import { isDate } from './is-date.ts';
+import { isNumber } from './is-number.ts';
+import { isString } from './is-string.ts';
+import { toString } from './to-string.ts';
 
 /**
  * Converts an unknown entity to a `Date` object.

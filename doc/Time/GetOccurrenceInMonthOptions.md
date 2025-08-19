@@ -6,12 +6,12 @@
 
 > **GetOccurrenceInMonthOptions** = \{ `utc?`: `boolean`; \}
 
-Defined in: [get-occurrence-in-month.ts:14](https://github.com/technobuddha/library/blob/main/src/get-occurrence-in-month.ts#L14)
+Defined in: occurrence-in-month.ts:14
 
-Options for [getOccurrenceInMonth](getOccurrenceInMonth.md)
+Options for [occurrenceInMonth](occurrenceInMonth.md)
 
 ## Properties
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [get-occurrence-in-month.ts:16](https://github.com/technobuddha/library/blob/main/src/get-occurrence-in-month.ts#L16) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | occurrence-in-month.ts:16 |

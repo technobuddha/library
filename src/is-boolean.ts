@@ -1,0 +1,16 @@
+/**
+ * Determines whether the provided value is a boolean or a Boolean object.
+ *
+ * @param value - The value to test.
+ * @returns True if the value is a primitive boolean or a Boolean object; otherwise, false.
+ * @group Utility
+ * @group Type Checking
+ */
+export function isBoolean(value: unknown): value is boolean {
+  return (
+    typeof value === 'boolean' ||
+    (value != null &&
+      typeof value === 'object' &&
+      Object.prototype.toString.call(value) === '[object Boolean]')
+  );
+}

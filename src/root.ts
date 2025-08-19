@@ -1,5 +1,3 @@
-import { isNil } from 'lodash-es';
-
 /**
  * Options for the {@link root} function
  *
@@ -24,11 +22,11 @@ export type RootOptions = {
  */
 export function root(text: string, { prefix, suffix }: RootOptions = {}): string {
   let input = text;
-  if (!isNil(prefix) && input.startsWith(prefix)) {
+  if (prefix != null && input.startsWith(prefix)) {
     input = input.slice(prefix.length);
   }
 
-  if (!isNil(suffix) && input.endsWith(suffix)) {
+  if (suffix != null && input.endsWith(suffix)) {
     input = input.slice(0, Math.max(0, input.length - suffix.length));
   }
 

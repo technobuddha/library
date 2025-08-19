@@ -6,6 +6,6 @@
 
 > **GraphQLObject** = `{ [Key in string]: GraphQLValue }`
 
-Defined in: [graphql.ts:12](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L12)
+Defined in: [graphql.ts:15](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L15)
 
 A GraphQL Object, similar to a JSONObject

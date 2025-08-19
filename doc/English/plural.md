@@ -6,7 +6,7 @@
 
 > **plural**(`input`: `string`, `quantity?`: `number`, `include?`: `boolean`): `string`
 
-Defined in: [plural.ts:15](https://github.com/technobuddha/library/blob/main/src/plural.ts#L15)
+Defined in: [plural.ts:14](https://github.com/technobuddha/library/blob/main/src/plural.ts#L14)
 
 Return the plural version of the input string
 
@@ -16,7 +16,7 @@ Return the plural version of the input string
 | ------ | ------ | ------ | ------ |
 | `input` | `string` | `undefined` | The word to pluralize |
 | `quantity?` | `number` | `undefined` | The quantity to prepend to the word. If omitted nothing is prepended. If quantity is one the singular form is returned. |
-| `include?` | `boolean` | `false` | - |
+| `include?` | `boolean` | `false` | If true and quantity is supplied, the quantity is prepended to the output. |
 
 ## Returns
 

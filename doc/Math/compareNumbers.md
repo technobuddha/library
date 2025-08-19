@@ -6,7 +6,7 @@
 
 > **compareNumbers**(`a`: `null` \| `number`, `b`: `null` \| `number`): `-1` \| `0` \| `1`
 
-Defined in: [compare-numbers.ts:12](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L12)
+Defined in: [compare-numbers.ts:10](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L10)
 
 Compare two numbers
 

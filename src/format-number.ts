@@ -1,5 +1,3 @@
-import { defaultTo, map } from 'lodash-es';
-
 import { build } from './build.ts';
 import { empty } from './constants.ts';
 import { padNumber } from './pad-number.ts';
@@ -178,7 +176,7 @@ function parse(mask: string): ParseReturn {
         } else {
           //if we see a 0 after the decimal point, the proceeding #s are transformed into 0s
           precision++;
-          after = map(after, (a) => (a === '#' ? '0' : a));
+          after = after.map((a) => (a === '#' ? '0' : a));
           after.push('0');
         }
         break;
@@ -538,7 +536,7 @@ export function formatNumber(input: number, mask: string): string {
     switch (f) {
       case 'C':
       case 'c': {
-        prec = defaultTo(prec, 2);
+        prec = Number.isNaN(prec) ? 2 : prec;
 
         return format(input, { round: prec, lead: 1 })
           .minus('($', '$')
@@ -550,13 +548,13 @@ export function formatNumber(input: number, mask: string): string {
       }
       case 'D':
       case 'd': {
-        prec = defaultTo(prec, 2);
+        prec = Number.isNaN(prec) ? 2 : prec;
 
         return format(input, { round: 0, lead: prec }).minus('-').whole().build();
       }
       case 'E':
       case 'e': {
-        prec = defaultTo(prec, 6);
+        prec = Number.isNaN(prec) ? 6 : prec;
 
         return format(input, { precision: prec + 1 })
           .minus('-')
@@ -565,12 +563,12 @@ export function formatNumber(input: number, mask: string): string {
       }
       case 'F':
       case 'f': {
-        prec = defaultTo(prec, 2);
+        prec = Number.isNaN(prec) ? 2 : prec;
         return format(input, { round: prec }).minus('-').whole().decimal().fraction().build();
       }
       case 'G':
       case 'g': {
-        prec = defaultTo(prec, 15);
+        prec = Number.isNaN(prec) ? 15 : prec;
 
         const sci = format(input, { precision: prec, trim: 'all' })
           .minus('-')
@@ -587,13 +585,13 @@ export function formatNumber(input: number, mask: string): string {
       }
       case 'N':
       case 'n': {
-        prec = defaultTo(prec, 2);
+        prec = Number.isNaN(prec) ? 2 : prec;
 
         return format(input, { round: prec }).minus('-').grouped().decimal().fraction().build();
       }
       case 'P':
       case 'p': {
-        prec = defaultTo(prec, 2);
+        prec = Number.isNaN(prec) ? 2 : prec;
 
         return format(input, { scale: 2, round: prec })
           .minus('-')
@@ -612,7 +610,7 @@ export function formatNumber(input: number, mask: string): string {
 
       // no default
     }
-    prec = defaultTo(prec, 0);
+    prec = Number.isNaN(prec) ? 0 : prec;
 
     // eslint-disable-next-line no-bitwise
     let hex = (input >>> 0).toString(16);

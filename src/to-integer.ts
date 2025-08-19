@@ -1,4 +1,6 @@
-import { isBoolean, isNumber, isString } from 'lodash-es';
+import { isBoolean } from './is-boolean.ts';
+import { isNumber } from './is-number.ts';
+import { isString } from './is-string.ts';
 
 /**
  * Convert an entity to a integer number.

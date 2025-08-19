@@ -1,5 +1,3 @@
-import { escapeRegExp } from 'lodash-es';
-
 import { empty, space } from './constants.ts';
 import { getIndent } from './get-indent.ts';
 import { type IndentOptions } from './indent.ts';
@@ -19,5 +17,5 @@ export function unindent(input: string, { indenter = space }: IndentOptions = {}
     return input;
   }
 
-  return input.replaceAll(new RegExp(`^(${escapeRegExp(indenter)}){${indent}}`, 'gmu'), empty);
+  return input.replaceAll(new RegExp(`^(${RegExp.escape(indenter)}){${indent}}`, 'gmu'), empty);
 }

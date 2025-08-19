@@ -1,5 +1,3 @@
-import { isNaN } from 'lodash-es';
-
 /**
  * Determine if a date is valid
  *
@@ -10,5 +8,5 @@ import { isNaN } from 'lodash-es';
  * @category Parsing
  */
 export function isValidDate(input: Date): boolean {
-  return !isNaN(input.valueOf());
+  return !Number.isNaN(input.valueOf());
 }

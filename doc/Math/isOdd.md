@@ -6,7 +6,7 @@
 
 > **isOdd**(`input`: `number`): `boolean`
 
-Defined in: [is-odd.ts:13](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L13)
+Defined in: [is-odd.ts:11](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L11)
 
 Tests to see if the specified value is an odd integer
 

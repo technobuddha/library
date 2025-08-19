@@ -6,7 +6,7 @@
 
 > **isLeapYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`LeapYearOptions`](LeapYearOptions.md)): `boolean`
 
-Defined in: [is-leap-year.ts:22](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L22)
+Defined in: [is-leap-year.ts:20](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L20)
 
 Determine if a year is a leap year
 

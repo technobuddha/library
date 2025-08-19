@@ -1,6 +1,5 @@
-import { toString } from 'lodash-es';
-
 import { empty, space } from './constants.ts';
+import { toString } from './to-string.ts';
 
 /**
  * Options for creating a coordinate string
@@ -8,7 +7,7 @@ import { empty, space } from './constants.ts';
  * @group English
  * @category Parts of Speech
  */
-export type ConjoinCoordinateOptions = {
+export type ConjoinOptions = {
   /** Conjunction to insert in the last position (default 'and') */
   conjunction?: string;
   /** If true, use the oxford comma */
@@ -21,13 +20,13 @@ export type ConjoinCoordinateOptions = {
  * Create a string from an array, separating values and inserting a conjunction
  *
  * @param input - Array of values
- * @param options - see {@link ConjoinCoordinateOptions}
+ * @param options - see {@link ConjoinOptions}
  * @group English
  * @category Parts of Speech
  */
 export function conjoin<T = unknown>(
   input: ArrayLike<T>,
-  { conjunction = 'and', oxford = true, separator = ',' }: ConjoinCoordinateOptions = {},
+  { conjunction = 'and', oxford = true, separator = ',' }: ConjoinOptions = {},
 ): string {
   if (input.length > 0) {
     let text = toString(input[0]);

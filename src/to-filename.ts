@@ -1,5 +1,3 @@
-import { escapeRegExp } from 'lodash-es';
-
 import { clean } from './clean.ts';
 import { collapseWhitespace } from './collapse-whitespace.ts';
 import { empty } from './constants.ts';
@@ -39,7 +37,7 @@ export function toFilename(
   let argInput = input;
   let suffix = empty;
   const compress = new RegExp(
-    `\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`,
+    `\\s*${RegExp.escape(replacement)}[\\s${RegExp.escape(replacement)}]*`,
     'ug',
   );
 

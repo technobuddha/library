@@ -6,12 +6,12 @@
 
 > **DayOfYearOptions** = \{ `utc?`: `boolean`; \}
 
-Defined in: [get-day-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L11)
+Defined in: day-of-year.ts:11
 
-Options for the [getDayOfYear](getDayOfYear.md) function
+Options for the [dayOfYear](dayOfYear.md) function
 
 ## Properties
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | [get-day-of-year.ts:12](https://github.com/technobuddha/library/blob/main/src/get-day-of-year.ts#L12) |
+| <a id="utc"></a> `utc?` | `boolean` | day-of-year.ts:12 |

@@ -6,7 +6,7 @@
 
 > **toASCII**(`input`: `string`): `string`
 
-Defined in: [to-ascii.ts:12](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L12)
+Defined in: [to-ascii.ts:11](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L11)
 
 Change a string to be all from the basic latin unicode plane
 

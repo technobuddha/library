@@ -1,5 +1,3 @@
-import { isNumber } from 'lodash-es';
-
 /**
  * Options for the {@link isLeapYear} function
  * @group Time
@@ -21,7 +19,7 @@ export type LeapYearOptions = {
  */
 export function isLeapYear(input: Date | number, { utc = false }: LeapYearOptions = {}): boolean {
   const year =
-    isNumber(input) ? input
+    typeof input === 'number' ? input
     : utc ? input.getUTCFullYear()
     : input.getFullYear();
   return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);

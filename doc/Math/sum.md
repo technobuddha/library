@@ -1,0 +1,23 @@
+<!-- markdownlint-disable -->
+
+[@technobuddha/library](../index.md) / sum
+
+# Function: sum()
+
+> **sum**(`numbers`: `number`[]): `number`
+
+Defined in: sum.ts:10
+
+Calculates the sum of an array of numbers.
+
+## Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `numbers` | `number`[] | An array of numbers to sum. |
+
+## Returns
+
+`number`
+
+The total sum of all numbers in the array.

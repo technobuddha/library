@@ -1,5 +1,3 @@
-import { isNil } from 'lodash-es';
-
 import { compareNumbers } from './compare-numbers.ts';
 
 /**
@@ -41,10 +39,10 @@ export function compareStrings(
   if (strA === strB) {
     return 0;
   }
-  if (isNil(strA)) {
+  if (strA == null) {
     return -1;
   }
-  if (isNil(strB)) {
+  if (strB == null) {
     return 1;
   }
 

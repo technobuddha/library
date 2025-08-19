@@ -1,7 +1,10 @@
-import { isArray, isArrayLike, isBoolean, isNull, isNumber, isString, zip } from 'lodash-es';
-
 import { empty, space } from './constants.ts';
 import { escapeGraphQL } from './escape-graphql.ts';
+import { isArrayLike } from './is-array-like.ts';
+import { isBoolean } from './is-boolean.ts';
+import { isNumber } from './is-number.ts';
+import { isString } from './is-string.ts';
+import { zipperMerge } from './zipper-merge.ts';
 
 /**
  * A GraphQL Object, similar to a JSONObject
@@ -44,7 +47,7 @@ export function graphQL(
   ...args: GraphQLValue[]
 ): string {
   if (!isString(template) && isArrayLike(template) && 'raw' in template) {
-    return zip(
+    return zipperMerge(
       template.map((t) => t.replaceAll(/[\r\n]+\s*/gu, space)),
       args.map((arg) => graphQL(arg)),
     )
@@ -59,13 +62,13 @@ export function graphQL(
   if (isString(template)) {
     return `"${escapeGraphQL(template)}"`;
   }
-  if (isNull(template)) {
+  if (template === null) {
     return 'null';
   }
   if (isBoolean(template)) {
     return template ? 'true' : 'false';
   }
-  if (isArray(template)) {
+  if (Array.isArray(template)) {
     return `[ ${template.map((a) => graphQL(a)).join(', ')} ]`;
   }
   return `{ ${Object.entries(template as Record<string, GraphQLValue>)

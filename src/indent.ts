@@ -1,3 +1,5 @@
+import { space } from './constants.ts';
+
 /**
  * Options for the indentation functions: {@link  getIndent}, {@link indent}, and {@link unindent}
  *
@@ -19,6 +21,6 @@ export type IndentOptions = {
  * @group String
  * @category Indentation
  */
-export function indent(input: string, { indenter = ' ' }: IndentOptions = {}): string {
+export function indent(input: string, { indenter = space }: IndentOptions = {}): string {
   return input.replaceAll(/^/gmu, indenter);
 }

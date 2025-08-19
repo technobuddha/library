@@ -4,9 +4,9 @@
 
 # Function: conjoin()
 
-> **conjoin**\<`T`\>(`input`: `ArrayLike`\<`T`\>, `options`: [`ConjoinCoordinateOptions`](ConjoinCoordinateOptions.md)): `string`
+> **conjoin**\<`T`\>(`input`: `ArrayLike`\<`T`\>, `options`: [`ConjoinOptions`](ConjoinOptions.md)): `string`
 
-Defined in: conjoin.ts:28
+Defined in: [conjoin.ts:27](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L27)
 
 Create a string from an array, separating values and inserting a conjunction
 
@@ -21,7 +21,7 @@ Create a string from an array, separating values and inserting a conjunction
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `ArrayLike`\<`T`\> | Array of values |
-| `options` | [`ConjoinCoordinateOptions`](ConjoinCoordinateOptions.md) | see [ConjoinCoordinateOptions](ConjoinCoordinateOptions.md) |
+| `options` | [`ConjoinOptions`](ConjoinOptions.md) | see [ConjoinOptions](ConjoinOptions.md) |
 
 ## Returns
 

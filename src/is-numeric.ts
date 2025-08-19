@@ -1,6 +1,7 @@
-import { isNaN, isNumber, isString, toNumber } from 'lodash-es';
-
+import { isNumber } from './is-number.ts';
+import { isString } from './is-string.ts';
 import { isWhitespace } from './is-whitespace.ts';
+import { toNumber } from './to-number.ts';
 
 /**
  * Test an object to see if it a number, or a string which can be converted into a number
@@ -12,7 +13,7 @@ import { isWhitespace } from './is-whitespace.ts';
  */
 export function isNumeric(input: unknown): input is number | string {
   return (
-    (isNumber(input) && !isNaN(input)) ||
-    (isString(input) && input.length > 0 && !isWhitespace(input) && !isNaN(toNumber(input)))
+    (isNumber(input) && !Number.isNaN(input)) ||
+    (isString(input) && input.length > 0 && !isWhitespace(input) && !Number.isNaN(toNumber(input)))
   );
 }
