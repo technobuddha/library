@@ -38,7 +38,7 @@ describe('ordinal', () => {
     test('should handle negative numbers', () => {
       const o = { output: 'numeric' as const };
 
-      expect(ordinal(-0, o)).toBe('0th');
+      expect(ordinal(-0, o)).toBe(`${negativeSign}0th`);
       expect(ordinal(-1, o)).toBe(`${negativeSign}1st`);
       expect(ordinal(-2, o)).toBe(`${negativeSign}2nd`);
       expect(ordinal(-3, o)).toBe(`${negativeSign}3rd`);
@@ -108,7 +108,7 @@ describe('ordinal', () => {
     test('should handle special numbers', () => {
       const o = { output: 'numeric' as const };
 
-      expect(ordinal(negativeZero, o)).toBe('0th');
+      expect(ordinal(negativeZero, o)).toBe(`${negativeSign}0th`);
       expect(ordinal(Number.NaN, o)).toBe('nth');
       expect(ordinal(Infinity, o)).toBe('nth');
       expect(ordinal(-Infinity, o)).toBe('nth');
@@ -150,7 +150,7 @@ describe('ordinal', () => {
     test('should handle negative numbers', () => {
       const o = { output: 'alphabetic' as const };
 
-      expect(ordinal(-0, o)).toBe('zeroth');
+      expect(ordinal(-0, o)).toBe('negative zeroth');
       expect(ordinal(-1, o)).toBe('negative first');
       expect(ordinal(-2, o)).toBe('negative second');
       expect(ordinal(-3, o)).toBe('negative third');
@@ -197,7 +197,7 @@ describe('ordinal', () => {
     test('should handle special numbers', () => {
       const o = { output: 'alphabetic' as const };
 
-      expect(ordinal(negativeZero, o)).toBe('zeroth');
+      expect(ordinal(negativeZero, o)).toBe('negative zeroth');
       expect(ordinal(Number.NaN)).toBe('nth');
       expect(ordinal(Infinity, o)).toBe('nth');
       expect(ordinal(-Infinity, o)).toBe('nth');

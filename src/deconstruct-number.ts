@@ -1,5 +1,7 @@
+import { clamp } from './clamp.ts';
 import { cleanEnd } from './clean.ts';
 import { empty } from './constants.ts';
+import { isNegativeZero } from './is-negative-zero.ts';
 
 /**
  * Represents a number that has been deconstructed into its mathematical components.
@@ -54,9 +56,12 @@ export function deconstructNumber(
     throw new TypeError('Input must be a finite number.');
   }
 
-  const prec = Math.min(Math.max(precision, 1), 15);
+  const prec = clamp(precision, 1, 15);
 
-  const sign = Math.sign(input) < 0 ? -1 : 1;
+  const sign =
+    isNegativeZero(input) ? -1
+    : Math.sign(input) < 0 ? -1
+    : 1;
   const positive = Math.abs(input);
 
   const numeric = positive.toExponential(prec - 1);
@@ -131,4 +136,23 @@ export function deconstructNumber(
       exponent: 0,
     },
   };
+}
+
+/**
+ * Reconstructs a number from its deconstructed representation.
+ *
+ * @param deconstructed - An object containing the sign, mantissa, and exponent of the number.
+ * @returns The reconstructed number.
+ */
+export function reconstructNumber(deconstructed: Omit<DeconstructedNumber, 'value'>): number {
+  if (deconstructed.mantissa === '') {
+    return deconstructed.sign * 0;
+  }
+
+  return (
+    deconstructed.sign *
+    Number.parseFloat(
+      `${deconstructed.mantissa.slice(0, 1)}.${deconstructed.mantissa.slice(1)}e${deconstructed.exponent}`,
+    )
+  );
 }

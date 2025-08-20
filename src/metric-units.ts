@@ -1,7 +1,6 @@
-import { round } from 'lodash-es';
-
 import { empty } from './constants.ts';
 import { formatNumber } from './format-number.ts';
+import { round } from './round.ts';
 
 /*
  quetta Q   1000000000000000000000000000000
@@ -114,8 +113,8 @@ export function metricUnits(
 
   return (
     (format == null ?
-      round(number, precision).toString()
-    : formatNumber(round(number, precision), format)
+      round(number, { precision }).toString()
+    : formatNumber(round(number, { precision }), format)
     ).padStart(pad ?? 0) + suffix
   );
 }

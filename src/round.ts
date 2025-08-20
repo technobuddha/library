@@ -1,0 +1,36 @@
+import { deconstructNumber, reconstructNumber } from './deconstruct-number.ts';
+
+/**
+ * Options for the {@link round} function
+ *
+ * @group Math
+ * @category Arithmetic
+ */
+export type RoundOptions = {
+  /** The number of decimal places to consider when applying the ceiling. Defaults to 0. */
+  precision?: number;
+};
+
+/**
+ * Returns the nearest integer to the given number, with optional precision adjustments.
+ *
+ * @param input - The number to round.
+ * @param options - Optional configuration object.
+ * @returns The nearest integer to the adjusted input.
+ * @group Math
+ * @category Arithmetic
+ */
+export function round(input: number, { precision = 0 }: RoundOptions = {}): number {
+  if (Number.isNaN(input) || !Number.isFinite(input)) {
+    return input;
+  }
+
+  let { sign, mantissa, exponent } = deconstructNumber(input);
+  exponent += precision;
+  ({ sign, mantissa, exponent } = deconstructNumber(
+    Math.round(reconstructNumber({ sign, mantissa, exponent })),
+  ));
+  exponent -= precision;
+
+  return reconstructNumber({ sign, mantissa, exponent });
+}
