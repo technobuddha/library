@@ -51,7 +51,10 @@ export type FractionOptions = {
    */
   ordinal?: Numbering['ordinal'];
 
-  // TODO [2025-08-15]: desc
+  /**
+   * Whether to shift the fractional part of the number.
+   */
+
   shift?: Numbering['shift'];
 };
 

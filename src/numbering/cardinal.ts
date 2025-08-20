@@ -51,7 +51,9 @@ export type CardinalOptions = {
    */
   ordinal?: Numbering['ordinal'];
 
-  // TODO [2025-08-15]: write desc
+  /**
+   * Whether to shift the fractional part of the number.
+   */
   shift?: Numbering['shift'];
 };
 

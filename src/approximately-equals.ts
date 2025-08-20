@@ -1,10 +1,10 @@
 /**
- * Options for the {@link almostEquals} function
+ * Options for the {@link approximatelyEquals} function
  *
  * @group Math
  * @category Comparison
  */
-export type AlmostEqualsOptions = {
+export type ApproximatelyEqualsOptions = {
   /** Tolerance range. If specified, should be greater than 0. **/
   tolerance?: number;
 };
@@ -15,16 +15,16 @@ export type AlmostEqualsOptions = {
  *
  * @param a - First number to compare.
  * @param b - Second number to compare.
- * @param __namedParameters - see {@link AlmostEqualsOptions}
+ * @param __namedParameters - see {@link ApproximatelyEqualsOptions}
  * @defaultValue tolerance 0
  * @returns true if *a* and *b* are nearly equal.
  * @group Math
  * @category Comparison
  */
-export function almostEquals(
+export function approximatelyEquals(
   a: number,
   b: number,
-  { tolerance = 0 }: AlmostEqualsOptions = {},
+  { tolerance = 0 }: ApproximatelyEqualsOptions = {},
 ): boolean {
   return Math.abs(a - b) <= tolerance + Number.EPSILON;
 }

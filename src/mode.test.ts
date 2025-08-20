@@ -20,7 +20,8 @@ describe('mode', () => {
   });
 
   test('returns undefined for an empty array', () => {
-    expect(mode([])).toBeUndefined();
+    // we have to typecast [], because it defaults to never[] which makes mode's return type 'never'
+    expect(mode([] as number[])).toBeUndefined();
   });
 
   test('works with arrays of booleans', () => {
