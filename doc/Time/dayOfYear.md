@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / dayOfYear
 
 # Function: dayOfYear()
 
 > **dayOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DayOfYearOptions`](DayOfYearOptions.md)): `number`
 
-Defined in: day-of-year.ts:24
+Defined in: [day-of-year.ts:24](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L24)
 
 Calculates the day of the year for a given date.
 

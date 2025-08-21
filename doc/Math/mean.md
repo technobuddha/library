@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / mean
 
 # Function: mean()
 
 > **mean**(`numbers`: `number`[]): `number`
 
-Defined in: mean.ts:12
+Defined in: [mean.ts:12](https://github.com/technobuddha/library/blob/main/src/mean.ts#L12)
 
 Calculates the arithmetic mean (average) of an array of numbers.
 

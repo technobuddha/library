@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / median
 
 # Function: median()
 
 > **median**(`numbers`: `number`[]): `number`
 
-Defined in: median.ts:15
+Defined in: [median.ts:15](https://github.com/technobuddha/library/blob/main/src/median.ts#L15)
 
 Calculates the median value of an array of numbers.
 

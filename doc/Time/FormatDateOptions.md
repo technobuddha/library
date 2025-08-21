@@ -1,5 +1,9 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / FormatDateOptions
 
 # Type Alias: FormatDateOptions

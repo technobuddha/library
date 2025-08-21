@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / mode
 
 # Function: mode()
 
 > **mode**\<`T`\>(`array`: `T`[]): `undefined` \| `T`
 
-Defined in: mode.ts:12
+Defined in: [mode.ts:12](https://github.com/technobuddha/library/blob/main/src/mode.ts#L12)
 
 Returns the mode (the most frequently occurring element) of the given array.
 If multiple elements have the same highest frequency, the first encountered is returned.

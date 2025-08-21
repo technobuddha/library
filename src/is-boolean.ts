@@ -4,7 +4,7 @@
  * @param value - The value to test.
  * @returns True if the value is a primitive boolean or a Boolean object; otherwise, false.
  * @group Utility
- * @group Type Checking
+ * @category Type Checking
  */
 export function isBoolean(value: unknown): value is boolean {
   return (

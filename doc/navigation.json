@@ -3,6 +3,18 @@
     "title": "Functions",
     "children": [
       {
+        "title": "clamp",
+        "kind": 64,
+        "path": "Functions/clamp.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "constructNumber",
+        "kind": 64,
+        "path": "Functions/constructNumber.md",
+        "isDeprecated": false
+      },
+      {
         "title": "toString",
         "kind": 64,
         "path": "Functions/toString.md",
@@ -791,6 +803,12 @@
             "isDeprecated": false
           },
           {
+            "title": "RoundOptions",
+            "kind": 2097152,
+            "path": "Math/RoundOptions.md",
+            "isDeprecated": false
+          },
+          {
             "title": "ceil",
             "kind": 64,
             "path": "Math/ceil.md",
@@ -819,6 +837,12 @@
             "kind": 64,
             "path": "Math/modulo.md",
             "isDeprecated": false
+          },
+          {
+            "title": "round",
+            "kind": 64,
+            "path": "Math/round.md",
+            "isDeprecated": false
           }
         ]
       },
@@ -826,15 +850,15 @@
         "title": "Comparison",
         "children": [
           {
-            "title": "AlmostEqualsOptions",
+            "title": "ApproximatelyEqualsOptions",
             "kind": 2097152,
-            "path": "Math/AlmostEqualsOptions.md",
+            "path": "Math/ApproximatelyEqualsOptions.md",
             "isDeprecated": false
           },
           {
-            "title": "almostEquals",
+            "title": "approximatelyEquals",
             "kind": 64,
-            "path": "Math/almostEquals.md",
+            "path": "Math/approximatelyEquals.md",
             "isDeprecated": false
           },
           {
@@ -2449,17 +2473,6 @@
     ]
   },
   {
-    "title": "Type Checking",
-    "children": [
-      {
-        "title": "isBoolean",
-        "kind": 64,
-        "path": "Utility/isBoolean.md",
-        "isDeprecated": false
-      }
-    ]
-  },
-  {
     "title": "Unicode",
     "children": [
       {
@@ -2630,17 +2643,6 @@
     "title": "Utility",
     "children": [
       {
-        "title": "Uncategorized",
-        "children": [
-          {
-            "title": "isBoolean",
-            "kind": 64,
-            "path": "Utility/isBoolean.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
         "title": "Classes",
         "children": [
           {
@@ -2665,6 +2667,12 @@
       {
         "title": "Type Checking",
         "children": [
+          {
+            "title": "isBoolean",
+            "kind": 64,
+            "path": "Utility/isBoolean.md",
+            "isDeprecated": false
+          },
           {
             "title": "isFunction",
             "kind": 64,

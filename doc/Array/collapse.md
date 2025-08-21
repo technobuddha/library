@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / collapse
 
 # Function: collapse()
 
 > **collapse**(...`args`: ([`StringLike`](../String/StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| () => [`StringLike`](../String/StringLike.md))[]): `string`[]
 
-Defined in: collapse.ts:22
+Defined in: [collapse.ts:22](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L22)
 
 Collapses a list of arguments into a flat array of strings.
 

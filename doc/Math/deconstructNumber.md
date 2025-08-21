@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / deconstructNumber
 
 # Function: deconstructNumber()
 
 > **deconstructNumber**(`input`: `number`, `precision`: `number`): [`DeconstructedNumber`](DeconstructedNumber.md) & \{ `fractional`: [`DeconstructedNumber`](DeconstructedNumber.md); `whole`: [`DeconstructedNumber`](DeconstructedNumber.md); \}
 
-Defined in: [deconstruct-number.ts:46](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L46)
+Defined in: [deconstruct-number.ts:32](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L32)
 
 Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
 

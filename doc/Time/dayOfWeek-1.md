@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / dayOfWeek
 
 # Function: dayOfWeek()
 
 > **dayOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DayOfWeekOptions`](DayOfWeekOptions.md)): [`DayOfWeek`](DayOfWeek.md)
 
-Defined in: day-of-week.ts:28
+Defined in: [day-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L28)
 
 Determine the day of the week for a specific date
 

@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / fraction
 
 # Function: fraction()
 
 > **fraction**(`input`: `number`, `options`: [`FractionOptions`](FractionOptions.md)): `string`
 
-Defined in: [numbering/fraction.ts:73](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L73)
+Defined in: [numbering/fraction.ts:76](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L76)
 
 Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form.
 

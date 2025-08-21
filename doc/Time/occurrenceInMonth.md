@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / occurrenceInMonth
 
 # Function: occurrenceInMonth()
 
 > **occurrenceInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `dayOfWeek`: [`DayOfWeek`](DayOfWeek.md), `occurrence`: `number` \| `"last"`, `options`: [`GetOccurrenceInMonthOptions`](GetOccurrenceInMonthOptions.md)): `null` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: occurrence-in-month.ts:31
+Defined in: [occurrence-in-month.ts:31](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L31)
 
 Determine the date of an occurrence of a weekday within a month
 

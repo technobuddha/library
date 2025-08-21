@@ -1,5 +1,9 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / MersenneTwister
 
 # Class: MersenneTwister

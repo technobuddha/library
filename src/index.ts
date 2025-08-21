@@ -2,6 +2,7 @@
 
 export * from './@types/binary-encoding.ts';
 export * from './@types/binary-object.ts';
+export * from './@types/deconstructed-number.ts';
 export * from './@types/geometry.ts';
 export * from './@types/string-like.ts';
 export * from './@types/text-encoding.ts';
@@ -35,6 +36,7 @@ export * from './compare-numbers.ts';
 export * from './compare-strings.ts';
 export * from './conjoin.ts';
 export * from './constants.ts';
+export * from './construct-number.ts';
 export * from './convex-hull.ts';
 export * from './correct-ms-word.ts';
 export * from './count.ts';

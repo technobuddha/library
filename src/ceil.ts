@@ -1,4 +1,5 @@
-import { deconstructNumber, reconstructNumber } from './deconstruct-number.ts';
+import { constructNumber } from './construct-number.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
 
 /**
  * Options for the {@link ceil} function
@@ -32,9 +33,9 @@ export function ceil(input: number, { tolerance = 0, precision = 0 }: CeilOption
   );
   exponent += precision;
   ({ sign, mantissa, exponent } = deconstructNumber(
-    Math.ceil(reconstructNumber({ sign, mantissa, exponent })),
+    Math.ceil(constructNumber({ sign, mantissa, exponent })),
   ));
   exponent -= precision;
 
-  return reconstructNumber({ sign, mantissa, exponent });
+  return constructNumber({ sign, mantissa, exponent });
 }

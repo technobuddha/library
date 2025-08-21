@@ -1,18 +1,22 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / FloorOptions
 
 # Type Alias: FloorOptions
 
 > **FloorOptions** = \{ `precision?`: `number`; `tolerance?`: `number`; \}
 
-Defined in: [floor.ts:9](https://github.com/technobuddha/library/blob/main/src/floor.ts#L9)
+Defined in: [floor.ts:10](https://github.com/technobuddha/library/blob/main/src/floor.ts#L10)
 
 Options for the [floor](floor.md) function
 
 ## Properties
 
-| Property | Type | Defined in |
-| ------ | ------ | ------ |
-| <a id="precision"></a> `precision?` | `number` | [floor.ts:11](https://github.com/technobuddha/library/blob/main/src/floor.ts#L11) |
-| <a id="tolerance"></a> `tolerance?` | `number` | [floor.ts:10](https://github.com/technobuddha/library/blob/main/src/floor.ts#L10) |
+| Property | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [floor.ts:14](https://github.com/technobuddha/library/blob/main/src/floor.ts#L14) |
+| <a id="tolerance"></a> `tolerance?` | `number` | A small value to add to the input before applying the floor, useful for floating-point tolerance. Defaults to 0. | [floor.ts:12](https://github.com/technobuddha/library/blob/main/src/floor.ts#L12) |

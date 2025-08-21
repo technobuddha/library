@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / sum
 
 # Function: sum()
 
 > **sum**(`numbers`: `number`[]): `number`
 
-Defined in: sum.ts:10
+Defined in: [sum.ts:10](https://github.com/technobuddha/library/blob/main/src/sum.ts#L10)
 
 Calculates the sum of an array of numbers.
 

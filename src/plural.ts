@@ -169,7 +169,7 @@ const database: DBEntry = {
     /llows$/iu,
     /ment$/iu,
     /friut$/iu,
-    /tion$/iu,
+    /(?<!func)tion$/iu,
     /work$/iu,
     /ing$/iu,
     /ism$/iu,

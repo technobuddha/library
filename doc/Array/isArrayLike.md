@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isArrayLike
 
 # Function: isArrayLike()
 
 > **isArrayLike**(`value`: `unknown`): `value is ArrayLike<unknown>`
 
-Defined in: is-array-like.ts:20
+Defined in: [is-array-like.ts:20](https://github.com/technobuddha/library/blob/main/src/is-array-like.ts#L20)
 
 Determines whether the provided value is array-like.
 

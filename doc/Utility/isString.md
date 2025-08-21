@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isString
 
 # Function: isString()
 
 > **isString**(`value`: `unknown`): `value is string`
 
-Defined in: is-string.ts:13
+Defined in: [is-string.ts:13](https://github.com/technobuddha/library/blob/main/src/is-string.ts#L13)
 
 Determines whether the provided value is a string.
 

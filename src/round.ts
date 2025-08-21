@@ -1,4 +1,5 @@
-import { deconstructNumber, reconstructNumber } from './deconstruct-number.ts';
+import { constructNumber } from './construct-number.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
 
 /**
  * Options for the {@link round} function
@@ -28,9 +29,9 @@ export function round(input: number, { precision = 0 }: RoundOptions = {}): numb
   let { sign, mantissa, exponent } = deconstructNumber(input);
   exponent += precision;
   ({ sign, mantissa, exponent } = deconstructNumber(
-    Math.round(reconstructNumber({ sign, mantissa, exponent })),
+    Math.round(constructNumber({ sign, mantissa, exponent })),
   ));
   exponent -= precision;
 
-  return reconstructNumber({ sign, mantissa, exponent });
+  return constructNumber({ sign, mantissa, exponent });
 }

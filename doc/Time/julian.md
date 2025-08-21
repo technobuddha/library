@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / julian
 
 # Function: julian()
 
 > **julian**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)): `number`
 
-Defined in: julian.ts:13
+Defined in: [julian.ts:13](https://github.com/technobuddha/library/blob/main/src/julian.ts#L13)
 
 Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
 

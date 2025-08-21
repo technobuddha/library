@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / endOfWeek
 
 # Function: endOfWeek()
 
 > **endOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfWeekOptions`](EndOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: end-of-week.ts:28
+Defined in: [end-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L28)
 
 Determine the last day of the week containing a date
 

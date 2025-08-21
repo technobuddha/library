@@ -10,7 +10,7 @@ const config = {
     'typedoc-plugin-mdn-links',
     '@giancosta86/typedoc-readonly',
     'typedoc-plugin-coverage',
-    './typedoc-markdown-plugin.js',
+    './typedoc-technobuddha-plugin.js',
   ],
   //  Input
   entryPoints: ['src/index.ts'],
@@ -27,8 +27,8 @@ const config = {
   navigation: {
     includeCategories: true,
     includeGroups: true,
-    includeFolders: false,
-    compactFolders: false,
+    includeFolders: true,
+    compactFolders: true,
     excludeReferences: true,
   },
   //  Organization
@@ -41,7 +41,7 @@ const config = {
   //  File Options
   entryFileName: 'index.md',
   //  Display
-  hidePageHeader: true,
+  hidePageHeader: false,
   expandObjects: true,
   expandParameters: true,
   indexFormat: 'table',

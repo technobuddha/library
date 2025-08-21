@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / timezone
 
 # Function: timezone()
 
 > **timezone**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`TimezoneOptions`](TimezoneOptions.md)): `string`
 
-Defined in: timezone.ts:31
+Defined in: [timezone.ts:31](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L31)
 
 Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes
 

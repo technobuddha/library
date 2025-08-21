@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isDate
 
 # Function: isDate()
 
 > **isDate**(`value`: `unknown`): `value is Date`
 
-Defined in: is-date.ts:11
+Defined in: [is-date.ts:11](https://github.com/technobuddha/library/blob/main/src/is-date.ts#L11)
 
 Determines whether the provided value is a `Date` object.
 

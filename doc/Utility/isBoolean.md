@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isBoolean
 
 # Function: isBoolean()
 
 > **isBoolean**(`value`: `unknown`): `value is boolean`
 
-Defined in: is-boolean.ts:9
+Defined in: [is-boolean.ts:9](https://github.com/technobuddha/library/blob/main/src/is-boolean.ts#L9)
 
 Determines whether the provided value is a boolean or a Boolean object.
 

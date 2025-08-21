@@ -1,4 +1,5 @@
-import { deconstructNumber, reconstructNumber } from './deconstruct-number.ts';
+import { constructNumber } from './construct-number.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
 
 /**
  * Options for the {@link floor} function
@@ -32,9 +33,9 @@ export function floor(input: number, { tolerance = 0, precision = 0 }: FloorOpti
   );
   exponent += precision;
   ({ sign, mantissa, exponent } = deconstructNumber(
-    Math.floor(reconstructNumber({ sign, mantissa, exponent })),
+    Math.floor(constructNumber({ sign, mantissa, exponent })),
   ));
   exponent -= precision;
 
-  return reconstructNumber({ sign, mantissa, exponent });
+  return constructNumber({ sign, mantissa, exponent });
 }

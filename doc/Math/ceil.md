@@ -1,30 +1,28 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / ceil
 
 # Function: ceil()
 
-> **ceil**(`input`: `number`, `precision`: [`CeilOptions`](CeilOptions.md)): `number`
+> **ceil**(`input`: `number`, `options`: [`CeilOptions`](CeilOptions.md)): `number`
 
-Defined in: [ceil.ts:24](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L24)
+Defined in: [ceil.ts:26](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L26)
 
-A tweaked variant of [Math.ceil](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil). See
+Returns the smallest integer greater than or equal to the given number, with optional tolerance and precision adjustments.
 
 ## Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `input` | `number` | A number. |
-| `precision` | [`CeilOptions`](CeilOptions.md) | The precision to round up to. |
+| `input` | `number` | The number to apply the ceiling operation to. |
+| `options` | [`CeilOptions`](CeilOptions.md) | Optional configuration object. |
 
 ## Returns
 
 `number`
 
-The smallest integer greater than or equal to
-
-## See
-
- - goog.math.safeFloor for
-details.
- - input.
+The smallest integer greater than or equal to the adjusted input.

@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / endOfYear
 
 # Function: endOfYear()
 
 > **endOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfYearOptions`](EndOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-Defined in: end-of-year.ts:23
+Defined in: [end-of-year.ts:23](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L23)
 
 Determine the last day of the year containing a date
 

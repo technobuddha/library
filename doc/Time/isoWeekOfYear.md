@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isoWeekOfYear
 
 # Function: isoWeekOfYear()
 
 > **isoWeekOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`ISOWeekOfYearOptions`](ISOWeekOfYearOptions.md)): \{ `week`: `number`; `year`: `number`; \}
 
-Defined in: iso-week-of-year.ts:32
+Defined in: [iso-week-of-year.ts:32](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L32)
 
 Determine the ISO week number for a given date
 
@@ -25,8 +29,8 @@ the week number (1-53)
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| `week` | `number` | iso-week-of-year.ts:39 |
-| `year` | `number` | iso-week-of-year.ts:39 |
+| `week` | `number` | [iso-week-of-year.ts:39](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L39) |
+| `year` | `number` | [iso-week-of-year.ts:39](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L39) |
 
 ## Default Value
 

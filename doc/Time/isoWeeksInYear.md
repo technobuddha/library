@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isoWeeksInYear
 
 # Function: isoWeeksInYear()
 
 > **isoWeeksInYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`ISOWeeksInYearOptions`](ISOWeeksInYearOptions.md)): `number`
 
-Defined in: iso-weeks-in-year.ts:28
+Defined in: [iso-weeks-in-year.ts:28](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L28)
 
 Determine the number of ISO weeks within a year
 

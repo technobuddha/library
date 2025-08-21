@@ -1,4 +1,4 @@
-import { deconstructNumber, reconstructNumber } from './deconstruct-number.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
 
 type DeconstructNumberReturn = ReturnType<typeof deconstructNumber>;
 
@@ -208,43 +208,5 @@ describe('deconstructNumber', () => {
     expect(() => deconstructNumber(Number.NaN)).toThrow(TypeError);
     expect(() => deconstructNumber(Number.POSITIVE_INFINITY)).toThrow(TypeError);
     expect(() => deconstructNumber(Number.NEGATIVE_INFINITY)).toThrow(TypeError);
-  });
-});
-describe('reconstructNumber', () => {
-  test('should reconstruct positive integers', () => {
-    expect(reconstructNumber({ sign: 1, mantissa: '42', exponent: 1 })).toBeCloseTo(42);
-
-    expect(reconstructNumber({ sign: 1, mantissa: '', exponent: 0 })).toBeCloseTo(0);
-  });
-
-  test('should reconstruct negative integers', () => {
-    expect(reconstructNumber({ sign: -1, mantissa: '7', exponent: 0 })).toBeCloseTo(-7);
-  });
-
-  test('should reconstruct floats', () => {
-    expect(reconstructNumber({ sign: 1, mantissa: '314159265', exponent: 0 })).toBeCloseTo(
-      3.14159265,
-    );
-
-    expect(reconstructNumber({ sign: -1, mantissa: '271828183', exponent: 0 })).toBeCloseTo(
-      -2.71828183,
-    );
-  });
-
-  test('should reconstruct small numbers', () => {
-    expect(reconstructNumber({ sign: 1, mantissa: '123456789', exponent: -30 })).toBeCloseTo(
-      1.23456789e-30,
-    );
-  });
-
-  test('should reconstruct large numbers', () => {
-    expect(reconstructNumber({ sign: 1, mantissa: '123456789', exponent: 30 })).toBeCloseTo(
-      1.23456789e30,
-    );
-  });
-
-  test('should reconstruct zero', () => {
-    expect(reconstructNumber({ sign: 1, mantissa: '', exponent: 0 })).toBe(0);
-    expect(reconstructNumber({ sign: -1, mantissa: '', exponent: 0 })).toBe(-0);
   });
 });

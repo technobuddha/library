@@ -38,11 +38,11 @@
   "technobuddhaProject": {
     "version": "0.0.181",
     "created": "2020-04-01T04:20:42.694Z",
-    "updated": "2025-08-19T11:05:45.830Z"
+    "updated": "2025-08-20T16:21:05.838Z"
   },
   "type": "module",
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=22.0.0"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts"

@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isFunction
 
 # Function: isFunction()
 
 > **isFunction**(`value`: `unknown`): `value is Function`
 
-Defined in: is-function.ts:16
+Defined in: [is-function.ts:16](https://github.com/technobuddha/library/blob/main/src/is-function.ts#L16)
 
 Determines whether the provided value is a function.
 

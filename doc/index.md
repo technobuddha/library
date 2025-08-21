@@ -1,11 +1,17 @@
 <!-- markdownlint-disable -->
 
+**@technobuddha/library**
+
+***
+
 # @technobuddha/library
 
 ## Functions
 
 | Function | Description |
 | ------ | ------ |
+| [clamp](Functions/clamp.md) | Clamps a number within the inclusive range specified by `min` and `max`. |
+| [constructNumber](Functions/constructNumber.md) | Reconstructs a number from its deconstructed representation. |
 | [toString](Functions/toString.md) | - |
 
 ## Array
@@ -120,7 +126,7 @@
 | Name | Description |
 | ------ | ------ |
 | [AngleUnit](Geometry/AngleUnit.md) | Types of angle units |
-| [angleUnits](Geometry/angleUnits.md) | Number of units in a circle |
+| [angleUnits](Geometry/angleUnits.md) | Number of units in a circle |unit|value| |---|---| |deg|360| |degrees|360| |rads|2π| |radians|2π| |grads|400| |gradians|400| |turns|1| |
 | [angleBetweenPoints](Geometry/angleBetweenPoints.md) | Computes the angle between two points (x1,y1) and (x2,y2). Angle zero points in the +X direction, π/2 radians points in the +Y direction (down) and from there we grow clockwise towards π*2 radians. |
 | [angleDifference](Geometry/angleDifference.md) | Computes the difference between startAngle and endAngle. |
 | [angleOfLine](Geometry/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
@@ -228,18 +234,20 @@
 | ------ | ------ |
 | [CeilOptions](Math/CeilOptions.md) | Options for the [ceil](Math/ceil.md) function |
 | [FloorOptions](Math/FloorOptions.md) | Options for the [floor](Math/floor.md) function |
-| [ceil](Math/ceil.md) | A tweaked variant of [Math.ceil](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil). See |
+| [RoundOptions](Math/RoundOptions.md) | Options for the [round](Math/round.md) function |
+| [ceil](Math/ceil.md) | Returns the smallest integer greater than or equal to the given number, with optional tolerance and precision adjustments. |
 | [crossProduct](Math/crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
-| [floor](Math/floor.md) | A tweaked variant of [Math.floor](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) which tolerates if the passed number is infinitesimally smaller than the closest integer. It often happens with the results of floating point calculations because of the finite precision of the intermediate results. For example Math.floor(Math.log(1000) / Math.LN10) == 2, not 3 as one would expect. |
+| [floor](Math/floor.md) | Returns the largest integer less than or equal to the given number, with optional tolerance and precision adjustments. |
 | [lerp](Math/lerp.md) | Performs linear interpolation between values a and b. Returns the value between a and b proportional to x (when x is between 0 and 1. When x is outside this range, the return value is a linear extrapolation). |
 | [modulo](Math/modulo.md) | The % operator in JavaScript returns the remainder of a / b, but differs from some other languages in that the result will have the same sign as the dividend. For example, -1 % 8 == -1, whereas in some other languages (such as Python) the result would be 7. This function emulates the more correct modulo behavior, which is useful for certain applications such as calculating an offset index in a circular list. |
+| [round](Math/round.md) | Returns the nearest integer to the given number, with optional precision adjustments. |
 
 ### Comparison
 
 | Name | Description |
 | ------ | ------ |
-| [AlmostEqualsOptions](Math/AlmostEqualsOptions.md) | Options for the [almostEquals](Math/almostEquals.md) function |
-| [almostEquals](Math/almostEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
+| [ApproximatelyEqualsOptions](Math/ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](Math/approximatelyEquals.md) function |
+| [approximatelyEquals](Math/approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
 | [compareNumbers](Math/compareNumbers.md) | Compare two numbers |
 | [isNegativeZero](Math/isNegativeZero.md) | Tests to see if the specified value is negative zero |
 
@@ -742,12 +750,6 @@
 | [isLeapYear](Time/isLeapYear.md) | Determine if a year is a leap year |
 | [isSameYear](Time/isSameYear.md) | Determine if two dates occur in the same year |
 
-## Type Checking
-
-| Function | Description |
-| ------ | ------ |
-| [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
-
 ## Unicode
 
 ### Characters
@@ -804,12 +806,6 @@
 
 ## Utility
 
-### Uncategorized
-
-| Function | Description |
-| ------ | ------ |
-| [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
-
 ### Classes
 
 | Class | Description |
@@ -826,6 +822,7 @@
 
 | Function | Description |
 | ------ | ------ |
+| [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
 | [isFunction](Utility/isFunction.md) | Determines whether the provided value is a function. |
 | [isNumber](Utility/isNumber.md) | Determines whether the provided value is a number or a Number object. |
 | [isObject](Utility/isObject.md) | Determines whether the provided value is a non-null object. |

@@ -1,24 +1,8 @@
+import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
 import { clamp } from './clamp.ts';
 import { cleanEnd } from './clean.ts';
 import { empty } from './constants.ts';
 import { isNegativeZero } from './is-negative-zero.ts';
-
-/**
- * Represents a number that has been deconstructed into its mathematical components.
- *
- * @group Math
- * @category Numbers
- */
-export type DeconstructedNumber = {
-  /** The original numeric value, rounded to the specified precision */
-  value: number;
-  /** The sign of the number, where 1 indicates positive and -1 indicates negative. */
-  sign: 1 | -1;
-  /** The mantissa (or significand) part of the number, represented as a string. */
-  mantissa: string;
-  /** The exponent part of the number, indicating the power of 10 by which the mantissa is multiplied. */
-  exponent: number;
-};
 
 /**
  * Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
@@ -136,23 +120,4 @@ export function deconstructNumber(
       exponent: 0,
     },
   };
-}
-
-/**
- * Reconstructs a number from its deconstructed representation.
- *
- * @param deconstructed - An object containing the sign, mantissa, and exponent of the number.
- * @returns The reconstructed number.
- */
-export function reconstructNumber(deconstructed: Omit<DeconstructedNumber, 'value'>): number {
-  if (deconstructed.mantissa === '') {
-    return deconstructed.sign * 0;
-  }
-
-  return (
-    deconstructed.sign *
-    Number.parseFloat(
-      `${deconstructed.mantissa.slice(0, 1)}.${deconstructed.mantissa.slice(1)}e${deconstructed.exponent}`,
-    )
-  );
 }

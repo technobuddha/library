@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / isObject
 
 # Function: isObject()
 
 > **isObject**(`value`: `unknown`): `value is object`
 
-Defined in: is-object.ts:9
+Defined in: [is-object.ts:9](https://github.com/technobuddha/library/blob/main/src/is-object.ts#L9)
 
 Determines whether the provided value is a non-null object.
 

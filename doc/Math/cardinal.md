@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / cardinal
 
 # Function: cardinal()
 
 > **cardinal**(`input`: `number`, `options`: [`CardinalOptions`](CardinalOptions.md)): `string`
 
-Defined in: [numbering/cardinal.ts:71](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L71)
+Defined in: [numbering/cardinal.ts:73](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L73)
 
 Convert a number into text (the cardinal number)
 

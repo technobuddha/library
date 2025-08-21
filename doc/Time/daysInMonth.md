@@ -1,12 +1,16 @@
 <!-- markdownlint-disable -->
 
+[**@technobuddha/library**](../index.md)
+
+***
+
 [@technobuddha/library](../index.md) / daysInMonth
 
 # Function: daysInMonth()
 
 > **daysInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DaysInMonthOptions`](DaysInMonthOptions.md)): `number`
 
-Defined in: days-in-month.ts:25
+Defined in: [days-in-month.ts:25](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L25)
 
 Determine the number of days in the month for a date
 

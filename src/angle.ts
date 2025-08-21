@@ -8,6 +8,15 @@ export type AngleUnit = 'deg' | 'degrees' | 'rads' | 'radians' | 'grads' | 'grad
 
 /**
  * Number of units in a circle
+ * |unit|value|
+ * |---|---|
+ * |deg|360|
+ * |degrees|360|
+ * |rads|2π|
+ * |radians|2π|
+ * |grads|400|
+ * |gradians|400|
+ * |turns|1|
  *
  * @group Geometry
  * @category Angle

@@ -1,5 +1,5 @@
+import { type DeconstructedNumber } from '../@types/deconstructed-number.ts';
 import { empty, hyphen, space } from '../constants.ts';
-import { type DeconstructedNumber } from '../deconstruct-number.ts';
 import { plural } from '../plural.ts';
 
 import { deriveFraction } from './derive-fraction.ts';
