@@ -8,7 +8,7 @@
 
 # Class: Sha1
 
-Defined in: [sha1.ts:48](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L48)
+Defined in: sha-1.ts:48
 
 Secure Hash Algorithm, SHA-1
 
@@ -22,7 +22,7 @@ Secure Hash Algorithm, SHA-1
 
 > **new Sha1**(): `Sha1`
 
-Defined in: [sha1.ts:64](https://github.com/technobuddha/library/blob/main/src/sha1.ts#L64)
+Defined in: sha-1.ts:64
 
 Creates a new SHA-1 hash instance and initializes its internal state.
 

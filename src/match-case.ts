@@ -1,7 +1,6 @@
-import { isLowerCase } from './is-lower-case.ts';
+import { capitalize } from './capitalize.ts';
+import { empty } from './constants.ts';
 import { isUpperCase } from './is-upper-case.ts';
-import { toCapitalCase } from './to-capital-case.ts';
-import { toSmallCase } from './to-small-case.ts';
 
 // cspell: ignore Capitalcase sMALLCASE
 /**
@@ -11,7 +10,7 @@ import { toSmallCase } from './to-small-case.ts';
  *  * lowercase
  *  * UPPERCASE
  *  * Capitalcase
- *  * sMALLCASE
+ *  * PascalCase
  *
  * @param input - The input string
  * @param target - The target string
@@ -20,14 +19,17 @@ import { toSmallCase } from './to-small-case.ts';
  * @category Case Conversion
  */
 export function matchCase(input: string, target: string): string {
-  if (isLowerCase(target)) {
-    return input.toLocaleLowerCase();
-  } else if (isUpperCase(target)) {
-    return input.toLocaleUpperCase();
-  } else if (target.length > 1 && isUpperCase(target[0]) && isLowerCase(target.slice(1))) {
-    return toCapitalCase(input, { lowerCase: true });
-  } else if (target.length > 1 && isLowerCase(target[0]) && isUpperCase(target.slice(1))) {
-    return toSmallCase(input, { upperCase: true });
+  if (target === empty) {
+    return input;
   }
-  return input;
+  if (input === empty) {
+    return empty;
+  }
+
+  if (isUpperCase(target)) {
+    return input.toLocaleUpperCase();
+  } else if (isUpperCase(target[0])) {
+    return capitalize(input.toLocaleLowerCase());
+  }
+  return input.toLocaleLowerCase();
 }

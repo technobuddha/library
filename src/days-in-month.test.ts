@@ -1,7 +1,7 @@
 import { month } from './constants.ts';
 import { daysInMonth } from './days-in-month.ts';
 
-describe('getDaysInMonth', () => {
+describe('daysInMonth', () => {
   test('should convert to day of year', () => {
     expect(daysInMonth(new Date('1 Jan 2000'))).toBe(31);
     expect(daysInMonth(new Date('1 Feb 2000'))).toBe(29);

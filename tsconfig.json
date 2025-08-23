@@ -7,9 +7,9 @@
     "types": ["node"],
     "composite": true,
     "allowJs": true,
-    "noEmit": true,
-    "lib": ["esnext"]
+    "lib": ["esnext"],
+    "noEmit": true
   },
-  "include": ["*.config.js", "*.js", "*.config.ts", "*.setup.ts"],
+  "include": ["*.config.js", "*.ts", "*.js", "*.config.ts", "*.setup.ts"],
   "exclude": []
 }

@@ -24,22 +24,19 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CapitalCaseOptions](CapitalCaseOptions.md) | Options for the [toCapitalCase](toCapitalCase.md) function |
 | [CapitalWordCaseOptions](CapitalWordCaseOptions.md) | Options for the [toCapitalWordCase](toCapitalWordCase.md) function |
 | [SmallCaseOptions](SmallCaseOptions.md) | Options for the [toSmallCase](toSmallCase.md) function |
-| [SmallWordsCaseOptions](SmallWordsCaseOptions.md) | Options for the [toSmallWordsCase](toSmallWordsCase.md) function |
+| [camelCase](camelCase.md) | Convert an identifier string to a camel case |
+| [capitalize](capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
+| [dotCase](dotCase.md) | Convert an identifier string to a dot form |
+| [humanCase](humanCase.md) | Convert an identifier string to a human case |
+| [kebabCase](kebabCase.md) | Convert an identifier string to a kebab-case form |
 | [matchCase](matchCase.md) | Attempt to convert the input string into the same case as the target string |
-| [toCamelCase](toCamelCase.md) | Convert an identifier string to a camel case |
-| [toCapitalCase](toCapitalCase.md) | Capitalize the first letter of a string |
+| [pascalCase](pascalCase.md) | Convert an identifier string to pascal case |
+| [snakeCase](snakeCase.md) | Convert an identifier string to underscore case |
+| [title](title.md) | Convert a string to a title, capitalizing each word, except for the small words |
 | [toCapitalWordCase](toCapitalWordCase.md) | Capitalize the first letter of each word in a string |
-| [toDotCase](toDotCase.md) | Convert an identifier string to a dot form |
-| [toHumanCase](toHumanCase.md) | Convert an identifier string to human readable form |
-| [toKebabCase](toKebabCase.md) | Convert an identifier string to a kebab-case form |
-| [toPascalCase](toPascalCase.md) | Convert an identifier string to pascal case |
 | [toSmallCase](toSmallCase.md) | Convert the first letter of a string to lower case |
-| [toSmallWordsCase](toSmallWordsCase.md) | Convert the first letter of each word in a string to lower case |
-| [toTitleCase](toTitleCase.md) | Convert a string to a title, capitalizing each word, except for the small words |
-| [toUnderscoreCase](toUnderscoreCase.md) | Convert an identifier string to underscore case |
 
 ### Categorization
 
@@ -65,8 +62,6 @@
 | Function | Description |
 | ------ | ------ |
 | [clean](clean.md) | Remove all occurrences of characters from the beginning and end of the string |
-| [cleanEnd](cleanEnd.md) | Remove all occurrences of characters from the end of the string |
-| [cleanStart](cleanStart.md) | Remove all occurrences of characters from the start of the string |
 
 ### Collapse
 
@@ -83,6 +78,12 @@
 | ------ | ------ |
 | [CompareStringsOptions](CompareStringsOptions.md) | Options for the [compareStrings](compareStrings.md) function |
 | [compareStrings](compareStrings.md) | Compare two strings |
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [trimEquivalent](trimEquivalent.md) | Regular expression that matches any whitespace character, including standard spaces, non-breaking spaces (`\u00A0`), and zero-width no-break spaces (`\uFEFF`). Useful for trimming or identifying whitespace-equivalent characters in strings. |
 
 ### Conversion
 

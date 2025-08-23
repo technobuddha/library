@@ -46,7 +46,7 @@ export function toString(value: unknown): string {
   }
 
   if (typeof value === 'object') {
-    if ('toString' in value) {
+    if (Object.hasOwn(value, 'toString')) {
       // eslint-disable-next-line @typescript-eslint/no-base-to-string
       return value.toString();
     }

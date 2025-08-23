@@ -1,7 +1,7 @@
 import { month } from './constants.ts';
 import { isoWeeksInYear } from './iso-weeks-in-year.ts';
 
-describe('getISOWeeksInYear', () => {
+describe('isoWeeksInYear', () => {
   test('should compute weeks in year', () => {
     expect(isoWeeksInYear(new Date('1 Jan 2000'))).toBe(52);
     expect(isoWeeksInYear(new Date('1 Jan 2001'))).toBe(52);

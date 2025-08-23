@@ -1,6 +1,6 @@
 import { conjoin } from './conjoin.ts';
 
-describe('coordinate', () => {
+describe('conjoin', () => {
   test('should handle basic functionality', () => {
     expect(conjoin([])).toBe('');
     expect(conjoin(['a'])).toBe('a');

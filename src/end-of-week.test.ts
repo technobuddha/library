@@ -1,7 +1,7 @@
 import { month } from './constants.ts';
 import { endOfWeek } from './end-of-week.ts';
 
-describe('getEndOfWeek', () => {
+describe('endOfWeek', () => {
   test('should find the End of the week', () => {
     expect(endOfWeek(new Date('20 Jul 1969 20:18')).toString()).toBe(
       new Date('26 Jul 1969').toString(),

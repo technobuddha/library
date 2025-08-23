@@ -1,7 +1,7 @@
 import { beginningOfMonth } from './beginning-of-month.ts';
 import { month } from './constants.ts';
 
-describe('getBeginningOfMonth', () => {
+describe('beginningOfMonth', () => {
   test('should compute beginning of the month', () => {
     expect(beginningOfMonth(new Date('20 Jul 1969 20:18')).toString()).toBe(
       new Date('1 Jul 1969').toString(),

@@ -368,3 +368,19 @@ export const ordinalTens = [
   'twentieth',    'thirtieth',    'fortieth',     'fiftieth',
   'sixtieth',     'seventieth',   'eightieth',    'ninetieth',
 ];
+
+/**
+ * Regular expression that matches any whitespace character, including standard spaces,
+ * non-breaking spaces (`\u00A0`), and zero-width no-break spaces (`\uFEFF`).
+ * Useful for trimming or identifying whitespace-equivalent characters in strings.
+ * @group String
+ * @category Constants
+ */
+export const trimEquivalent = /[\s\uFEFF\u00A0]/u;
+
+/**
+ * Unicode replacement character (U+FFFD), used to represent an unknown, unrecognized, or unrepresentable character.
+ * @group Unicode
+ * @category Constants
+ */
+export const replacementCharacter = '\uFFFD';

@@ -26,6 +26,7 @@
 | ------ | ------ |
 | [empty](empty.md) | The empty string |
 | [nbsp](nbsp.md) | Non-breaking space |
+| [replacementCharacter](replacementCharacter.md) | Unicode replacement character (U+FFFD), used to represent an unknown, unrecognized, or unrepresentable character. |
 | [space](space.md) | Space |
 | [zwsp](zwsp.md) | Zero-width space |
 

@@ -1,7 +1,7 @@
 import { beginningOfYear } from './beginning-of-year.ts';
 import { month } from './constants.ts';
 
-describe('getBeginningOfYear', () => {
+describe('beginningOfYear', () => {
   test('should compute the beginning of the year', () => {
     expect(beginningOfYear(new Date('20 Jul 1969 20:18')).toString()).toBe(
       new Date('1 Jan 1969').toString(),

@@ -1,7 +1,7 @@
 import { day } from './constants.ts';
 import { occurrenceInMonth } from './occurrence-in-month.ts';
 
-describe('getOccurrenceInMonth', () => {
+describe('occurrenceInMonth', () => {
   test('should find the occurrences of a day in a month', () => {
     expect(occurrenceInMonth(new Date('1 Aug 2018'), day.sunday, 1)!.toString()).toBe(
       new Date('05 Aug 2018').toString(),

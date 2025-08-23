@@ -10,7 +10,7 @@
 
 > **clean**(`input`: `string`, `characters`: `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| (`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp))[]): `string`
 
-Defined in: [clean.ts:16](https://github.com/technobuddha/library/blob/main/src/clean.ts#L16)
+Defined in: [clean.ts:14](https://github.com/technobuddha/library/blob/main/src/clean.ts#L14)
 
 Remove all occurrences of characters from the beginning and end of the string
 

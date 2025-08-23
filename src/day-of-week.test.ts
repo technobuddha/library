@@ -1,7 +1,7 @@
 import { day } from './constants.ts';
 import { dayOfWeek } from './day-of-week.ts';
 
-describe('getDayOfWeek', () => {
+describe('dayOfWeek', () => {
   test('should detect weekday', () => {
     expect(dayOfWeek(new Date('4 Jul 2018'))).toBe(3);
   });

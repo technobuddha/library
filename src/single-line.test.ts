@@ -1,6 +1,6 @@
 import { singleLine } from './single-line.ts';
 
-describe('singleline', () => {
+describe('singleLine', () => {
   test('should strip newlines', () => {
     expect(singleLine`abc
                                   def

@@ -24,4 +24,10 @@ describe('ceil', () => {
     expect(ceil(-6.01 + Number.EPSILON, { precision: 2 })).toBe(-6.01);
     expect(ceil(-6100 + Number.EPSILON, { precision: -2 })).toBe(-6100);
   });
+
+  test('should handle NaN and Infinity', () => {
+    expect(ceil(Number.NaN)).toBe(Number.NaN);
+    expect(ceil(Number.POSITIVE_INFINITY)).toBe(Number.POSITIVE_INFINITY);
+    expect(ceil(Number.NEGATIVE_INFINITY)).toBe(Number.NEGATIVE_INFINITY);
+  });
 });

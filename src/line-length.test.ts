@@ -1,6 +1,6 @@
 import { lineLength } from './line-length.ts';
 
-describe('length', () => {
+describe('lineLength', () => {
   test('returns 0 for a zero-length line', () => {
     expect(lineLength({ x0: 0, y0: 0, x1: 0, y1: 0 })).toBe(0);
   });

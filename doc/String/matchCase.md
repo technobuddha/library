@@ -10,7 +10,7 @@
 
 > **matchCase**(`input`: `string`, `target`: `string`): `string`
 
-Defined in: [match-case.ts:22](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L22)
+Defined in: [match-case.ts:21](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L21)
 
 Attempt to convert the input string into the same case as the target string
 
@@ -33,4 +33,4 @@ The best guess is made to try to figure out what case the target is in:
  * lowercase
  * UPPERCASE
  * Capitalcase
- * sMALLCASE
+ * PascalCase

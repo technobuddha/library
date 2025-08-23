@@ -10,7 +10,7 @@
 
 > **escapeGraphQL**(`input`: `string`): `string`
 
-Defined in: [escape-graphql.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-graphql.ts#L12)
+Defined in: [escape-graph-ql.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-graph-ql.ts#L12)
 
 Escape a string for use in GraphQL
 

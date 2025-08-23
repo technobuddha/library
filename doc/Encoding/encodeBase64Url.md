@@ -12,7 +12,7 @@
 
 > **encodeBase64Url**(`chars`: `string`, `encoding`: [`TextEncoding`](../Unicode/TextEncoding.md)): `string`
 
-Defined in: [encode-base64.ts:125](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L125)
+Defined in: encode-base-64.ts:125
 
 Creates a Base64-encoded ASCII string from a string.
 
@@ -46,7 +46,7 @@ encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
 
 > **encodeBase64Url**(`binary`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)): `string`
 
-Defined in: [encode-base64.ts:126](https://github.com/technobuddha/library/blob/main/src/encode-base64.ts#L126)
+Defined in: encode-base-64.ts:126
 
 Creates a Base64-encoded ASCII string from a string.
 

@@ -12,7 +12,7 @@
 
 > **graphQL**(`template`: `TemplateStringsArray`, ...`args`: [`GraphQLValue`](GraphQLValue.md)[]): `string`
 
-Defined in: [graphql.ts:43](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L43)
+Defined in: [graph-ql.ts:43](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L43)
 
 Tagged template function for constructing GraphQL queries or mutations.
 
@@ -33,7 +33,7 @@ The resulting GraphQL query string with interpolated values.
 
 > **graphQL**(`arg`: [`GraphQLValue`](GraphQLValue.md)): `string`
 
-Defined in: [graphql.ts:44](https://github.com/technobuddha/library/blob/main/src/graphql.ts#L44)
+Defined in: [graph-ql.ts:44](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L44)
 
 Tagged template function for constructing GraphQL queries or mutations.
 

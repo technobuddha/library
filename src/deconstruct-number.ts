@@ -1,6 +1,6 @@
 import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
 import { clamp } from './clamp.ts';
-import { cleanEnd } from './clean.ts';
+import { cleanEnd } from './clean-end.ts';
 import { empty } from './constants.ts';
 import { isNegativeZero } from './is-negative-zero.ts';
 

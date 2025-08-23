@@ -31,6 +31,8 @@ const config = [
   // tsconfig.json
   app.lint({ files: ['*.config.js'], ignores: [], environment: 'node' }),
   // tsconfig.json
+  app.lint({ files: ['*.ts'], ignores: [], environment: 'node', tsConfig: 'tsconfig.json' }),
+  // tsconfig.json
   app.lint({ files: ['*.config.ts'], ignores: [], environment: 'node' }),
   // tsconfig.json
   app.lint({ files: ['*.setup.ts'], ignores: [], environment: 'node' }),

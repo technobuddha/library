@@ -1,10 +1,9 @@
 // cspell:ignore ΑΒΓΔΕΖ, ΑΒΓΔ
 
+import { replacementCharacter } from './constants.ts';
 import { decodeText } from './decode-text.ts';
 
-const RC = '\uFFFD'; // unicode replacement character
-
-describe('decodeUTF8', () => {
+describe('decodeText', () => {
   test('should not change ASCII', () => {
     expect(decodeText([0x61, 0x62, 0x63, 0x64, 0x65, 0x66])).toBe('abcdef');
     expect(decodeText([0x00, 0x01, 0x02, 0x03, 0x7f])).toBe('\u0000\u0001\u0002\u0003\u007F');
@@ -30,20 +29,20 @@ describe('decodeUTF8', () => {
   });
 
   test('should trap bad surrogate pairs', () => {
-    expect(decodeText([0xc0])).toBe(RC);
-    expect(decodeText([0xc0, 0x00])).toBe(RC);
-    expect(decodeText([0xe0])).toBe(RC);
-    expect(decodeText([0xe0, 0x80])).toBe(RC);
-    expect(decodeText([0xe0, 0x00])).toBe(RC);
-    expect(decodeText([0xe0, 0x80, 0x00])).toBe(RC);
-    expect(decodeText([0xf0])).toBe(RC);
-    expect(decodeText([0xf0, 0x80])).toBe(RC);
-    expect(decodeText([0xf0, 0x00])).toBe(RC);
-    expect(decodeText([0xf0, 0x80, 0x80])).toBe(RC);
-    expect(decodeText([0xf0, 0x00, 0x80])).toBe(RC);
-    expect(decodeText([0xf0, 0x80, 0x80, 0x00])).toBe(RC);
-    expect(decodeText([0xf4, 0xbf, 0xbf, 0xbf])).toBe(RC);
-    expect(decodeText([0xf9])).toBe(RC);
+    expect(decodeText([0xc0])).toBe(replacementCharacter);
+    expect(decodeText([0xc0, 0x00])).toBe(replacementCharacter);
+    expect(decodeText([0xe0])).toBe(replacementCharacter);
+    expect(decodeText([0xe0, 0x80])).toBe(replacementCharacter);
+    expect(decodeText([0xe0, 0x00])).toBe(replacementCharacter);
+    expect(decodeText([0xe0, 0x80, 0x00])).toBe(replacementCharacter);
+    expect(decodeText([0xf0])).toBe(replacementCharacter);
+    expect(decodeText([0xf0, 0x80])).toBe(replacementCharacter);
+    expect(decodeText([0xf0, 0x00])).toBe(replacementCharacter);
+    expect(decodeText([0xf0, 0x80, 0x80])).toBe(replacementCharacter);
+    expect(decodeText([0xf0, 0x00, 0x80])).toBe(replacementCharacter);
+    expect(decodeText([0xf0, 0x80, 0x80, 0x00])).toBe(replacementCharacter);
+    expect(decodeText([0xf4, 0xbf, 0xbf, 0xbf])).toBe(replacementCharacter);
+    expect(decodeText([0xf9])).toBe(replacementCharacter);
   });
 
   test('call with Typed Array', () => {

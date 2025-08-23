@@ -15,6 +15,18 @@
         "isDeprecated": false
       },
       {
+        "title": "startCase",
+        "kind": 64,
+        "path": "Functions/startCase.md",
+        "isDeprecated": false
+      },
+      {
+        "title": "tokenize",
+        "kind": 64,
+        "path": "Functions/tokenize.md",
+        "isDeprecated": false
+      },
+      {
         "title": "toString",
         "kind": 64,
         "path": "Functions/toString.md",
@@ -1343,12 +1355,6 @@
         "title": "Case Conversion",
         "children": [
           {
-            "title": "CapitalCaseOptions",
-            "kind": 2097152,
-            "path": "String/CapitalCaseOptions.md",
-            "isDeprecated": false
-          },
-          {
             "title": "CapitalWordCaseOptions",
             "kind": 2097152,
             "path": "String/CapitalWordCaseOptions.md",
@@ -1361,9 +1367,33 @@
             "isDeprecated": false
           },
           {
-            "title": "SmallWordsCaseOptions",
-            "kind": 2097152,
-            "path": "String/SmallWordsCaseOptions.md",
+            "title": "camelCase",
+            "kind": 64,
+            "path": "String/camelCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "capitalize",
+            "kind": 64,
+            "path": "String/capitalize.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "dotCase",
+            "kind": 64,
+            "path": "String/dotCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "humanCase",
+            "kind": 64,
+            "path": "String/humanCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "kebabCase",
+            "kind": 64,
+            "path": "String/kebabCase.md",
             "isDeprecated": false
           },
           {
@@ -1373,15 +1403,21 @@
             "isDeprecated": false
           },
           {
-            "title": "toCamelCase",
+            "title": "pascalCase",
             "kind": 64,
-            "path": "String/toCamelCase.md",
+            "path": "String/pascalCase.md",
             "isDeprecated": false
           },
           {
-            "title": "toCapitalCase",
+            "title": "snakeCase",
             "kind": 64,
-            "path": "String/toCapitalCase.md",
+            "path": "String/snakeCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "title",
+            "kind": 64,
+            "path": "String/title.md",
             "isDeprecated": false
           },
           {
@@ -1391,51 +1427,9 @@
             "isDeprecated": false
           },
           {
-            "title": "toDotCase",
-            "kind": 64,
-            "path": "String/toDotCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toHumanCase",
-            "kind": 64,
-            "path": "String/toHumanCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toKebabCase",
-            "kind": 64,
-            "path": "String/toKebabCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toPascalCase",
-            "kind": 64,
-            "path": "String/toPascalCase.md",
-            "isDeprecated": false
-          },
-          {
             "title": "toSmallCase",
             "kind": 64,
             "path": "String/toSmallCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toSmallWordsCase",
-            "kind": 64,
-            "path": "String/toSmallWordsCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toTitleCase",
-            "kind": 64,
-            "path": "String/toTitleCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toUnderscoreCase",
-            "kind": 64,
-            "path": "String/toUnderscoreCase.md",
             "isDeprecated": false
           }
         ]
@@ -1512,18 +1506,6 @@
             "kind": 64,
             "path": "String/clean.md",
             "isDeprecated": false
-          },
-          {
-            "title": "cleanEnd",
-            "kind": 64,
-            "path": "String/cleanEnd.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "cleanStart",
-            "kind": 64,
-            "path": "String/cleanStart.md",
-            "isDeprecated": false
           }
         ]
       },
@@ -1569,6 +1551,17 @@
             "title": "compareStrings",
             "kind": 64,
             "path": "String/compareStrings.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Constants",
+        "children": [
+          {
+            "title": "trimEquivalent",
+            "kind": 32,
+            "path": "String/trimEquivalent.md",
             "isDeprecated": false
           }
         ]
@@ -2559,6 +2552,12 @@
             "title": "nbsp",
             "kind": 32,
             "path": "Unicode/nbsp.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "replacementCharacter",
+            "kind": 32,
+            "path": "Unicode/replacementCharacter.md",
             "isDeprecated": false
           },
           {

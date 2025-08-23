@@ -1,7 +1,7 @@
 import { month } from './constants.ts';
 import { dayOfYear } from './day-of-year.ts';
 
-describe('getDayOfYear', () => {
+describe('dayOfYear', () => {
   test('should convert to day of year', () => {
     expect(dayOfYear(new Date('1 Mar 2004'))).toBe(61);
     expect(dayOfYear(new Date('1 Mar 2005'))).toBe(60);

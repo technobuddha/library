@@ -1,6 +1,6 @@
 import { constructNumber } from './construct-number.ts';
 
-describe('reconstructNumber', () => {
+describe('constructNumber', () => {
   test('should reconstruct positive integers', () => {
     expect(constructNumber({ sign: 1, mantissa: '42', exponent: 1 })).toBeCloseTo(42);
 

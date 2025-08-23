@@ -1,7 +1,7 @@
 import { compareNumbers } from './compare-numbers.ts';
 import { PriorityQueue } from './priority-queue.ts';
 
-describe('priority-queue', () => {
+describe('PriorityQueue', () => {
   test('should create a queue', () => {
     const q = new PriorityQueue<number>(compareNumbers);
     q.push(1, 3, 2);

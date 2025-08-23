@@ -12,7 +12,7 @@
 
 > **decodeBase64**(`input`: `string`): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [decode-base64.ts:110](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L110)
+Defined in: decode-base-64.ts:110
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -52,7 +52,7 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 > **decodeBase64**(`input`: `string`, `encoding`: [`TextEncoding`](../Unicode/TextEncoding.md)): `string`
 
-Defined in: [decode-base64.ts:111](https://github.com/technobuddha/library/blob/main/src/decode-base64.ts#L111)
+Defined in: decode-base-64.ts:111
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.

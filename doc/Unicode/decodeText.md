@@ -10,7 +10,7 @@
 
 > **decodeText**(`input`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>, `_encoding`: [`TextEncoding`](TextEncoding.md)): `string`
 
-Defined in: [decode-text.ts:15](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L15)
+Defined in: [decode-text.ts:16](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L16)
 
 Decode a UTF8 encoded string into unicode
 

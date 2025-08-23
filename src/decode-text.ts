@@ -1,7 +1,8 @@
 import { type TextEncoding } from './@types/text-encoding.ts';
 import { type TypedArray } from './@types/typed-array.ts';
+import { replacementCharacter } from './constants.ts';
 
-const REPLACEMENT = 0xfffd;
+const replacement = replacementCharacter.codePointAt(0)!;
 
 /* eslint-disable no-bitwise */
 /**
@@ -34,7 +35,7 @@ export function decodeText(
         c1 = buffer[++i];
         c0 =
           i >= buffer.byteLength || (c1 & 0x00c0) !== 0x80 ?
-            REPLACEMENT
+            replacement
           : ((c0 & 0x1f) << 6) | (c1 & 0x3f);
       } else if (c0 >= 0xe0 && c0 < 0xf0) {
         // three byte utf-8 sequence
@@ -42,7 +43,7 @@ export function decodeText(
         c2 = buffer[++i];
         c0 =
           i >= buffer.byteLength || (c1 & 0xc0) !== 0x80 || (c2 & 0xc0) !== 0x80 ?
-            REPLACEMENT
+            replacement
           : ((c0 & 0x0f) << 12) | ((c1 & 0x3f) << 6) | (c2 & 0x3f);
       } else if (c0 >= 0xf0 && c0 < 0xf8) {
         // four byte utf-8 sequence
@@ -56,10 +57,10 @@ export function decodeText(
             (c2 & 0xc0) !== 0x80 ||
             (c3 & 0xc0) !== 0x80
           ) ?
-            REPLACEMENT
+            replacement
           : ((c0 & 0x0f) << 18) | ((c1 & 0x3f) << 12) | ((c2 & 0x3f) << 6) | (c3 & 0x3f);
       } else {
-        c0 = REPLACEMENT;
+        c0 = replacement;
       }
     }
 
@@ -70,7 +71,7 @@ export function decodeText(
       c0 -= 0x00010000;
       result.push((c0 >> 10) | 0xd800, (c0 & 0x03ff) | 0xdc00);
     } else {
-      result.push(REPLACEMENT);
+      result.push(replacement);
     }
   }
 

@@ -1,7 +1,7 @@
 import { type LineSegment } from './@types/geometry.ts';
 import { normalizeLineSegment } from './normalize-line-segment.ts';
 
-describe('topPointFirst', () => {
+describe('normalizeLineSegment', () => {
   test('returns the same line if y1 > y0', () => {
     const line: LineSegment = { x0: 1, y0: 2, x1: 3, y1: 5 };
     const result = normalizeLineSegment(line);

@@ -1,4 +1,4 @@
-import { cleanEnd } from '../clean.ts';
+import { cleanEnd } from '../clean-end.ts';
 import { cardinalOnes, space } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
 import { splitChars } from '../split-chars.ts';

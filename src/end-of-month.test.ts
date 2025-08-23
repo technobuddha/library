@@ -1,7 +1,7 @@
 import { month } from './constants.ts';
 import { endOfMonth } from './end-of-month.ts';
 
-describe('getEndOfMonth', () => {
+describe('endOfMonth', () => {
   test('should compute End of the month', () => {
     expect(endOfMonth(new Date('20 Jul 1969 20:18')).toString()).toBe(
       new Date('31 Jul 1969').toString(),

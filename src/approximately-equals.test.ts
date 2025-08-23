@@ -1,6 +1,6 @@
 import { approximatelyEquals } from './approximately-equals.ts';
 
-describe('almostEquals', () => {
+describe('approximatelyEquals', () => {
   test('should handle numbers within EPSILON distance', () => {
     expect(approximatelyEquals(1, 1 + Number.EPSILON)).toBeTrue();
     expect(approximatelyEquals(1, 1 - Number.EPSILON)).toBeTrue();

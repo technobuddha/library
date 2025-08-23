@@ -8,7 +8,7 @@
 
 # Class: Crc32
 
-Defined in: [crc32.ts:58](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L58)
+Defined in: crc-32.ts:58
 
 Compute the CRC32 checksum
 
@@ -22,7 +22,7 @@ Compute the CRC32 checksum
 
 > **new Crc32**(): `Crc32`
 
-Defined in: [crc32.ts:68](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L68)
+Defined in: crc-32.ts:68
 
 Creates a new CRC32 hash instance and initializes its internal state.
 
@@ -43,7 +43,7 @@ Use [update](#update) to process data and [digest](#digest) to obtain the final 
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [crc32.ts:90](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L90)
+Defined in: crc-32.ts:90
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -64,7 +64,7 @@ The hash digest as a `Uint8Array`
 
 > **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
 
-Defined in: [crc32.ts:91](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L91)
+Defined in: crc-32.ts:91
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -95,7 +95,7 @@ An encoded string, depending on the `encoding` parameter.
 
 > **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
 
-Defined in: [crc32.ts:72](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L72)
+Defined in: crc-32.ts:72
 
 Updates the hash with the given binary data.
 
@@ -119,7 +119,7 @@ The hash instance for method chaining.
 
 > **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
 
-Defined in: [crc32.ts:73](https://github.com/technobuddha/library/blob/main/src/crc32.ts#L73)
+Defined in: crc-32.ts:73
 
 Updates the hash with the given string data.
 

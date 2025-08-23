@@ -1,6 +1,6 @@
 import { beginningOfDay } from './beginning-of-day.ts';
 
-describe('getBeginningOfDay', () => {
+describe('beginningOfDay', () => {
   test('should calculate the beginning of the day', () => {
     expect(beginningOfDay(new Date('20 Jul 1969 20:18')).toString()).toBe(
       new Date('20 Jul 1969').toString(),

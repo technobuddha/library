@@ -12,6 +12,8 @@
 | ------ | ------ |
 | [clamp](Functions/clamp.md) | Clamps a number within the inclusive range specified by `min` and `max`. |
 | [constructNumber](Functions/constructNumber.md) | Reconstructs a number from its deconstructed representation. |
+| [startCase](Functions/startCase.md) | - |
+| [tokenize](Functions/tokenize.md) | - |
 | [toString](Functions/toString.md) | - |
 
 ## Array
@@ -409,22 +411,19 @@
 
 | Name | Description |
 | ------ | ------ |
-| [CapitalCaseOptions](String/CapitalCaseOptions.md) | Options for the [toCapitalCase](String/toCapitalCase.md) function |
 | [CapitalWordCaseOptions](String/CapitalWordCaseOptions.md) | Options for the [toCapitalWordCase](String/toCapitalWordCase.md) function |
 | [SmallCaseOptions](String/SmallCaseOptions.md) | Options for the [toSmallCase](String/toSmallCase.md) function |
-| [SmallWordsCaseOptions](String/SmallWordsCaseOptions.md) | Options for the [toSmallWordsCase](String/toSmallWordsCase.md) function |
+| [camelCase](String/camelCase.md) | Convert an identifier string to a camel case |
+| [capitalize](String/capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
+| [dotCase](String/dotCase.md) | Convert an identifier string to a dot form |
+| [humanCase](String/humanCase.md) | Convert an identifier string to a human case |
+| [kebabCase](String/kebabCase.md) | Convert an identifier string to a kebab-case form |
 | [matchCase](String/matchCase.md) | Attempt to convert the input string into the same case as the target string |
-| [toCamelCase](String/toCamelCase.md) | Convert an identifier string to a camel case |
-| [toCapitalCase](String/toCapitalCase.md) | Capitalize the first letter of a string |
+| [pascalCase](String/pascalCase.md) | Convert an identifier string to pascal case |
+| [snakeCase](String/snakeCase.md) | Convert an identifier string to underscore case |
+| [title](String/title.md) | Convert a string to a title, capitalizing each word, except for the small words |
 | [toCapitalWordCase](String/toCapitalWordCase.md) | Capitalize the first letter of each word in a string |
-| [toDotCase](String/toDotCase.md) | Convert an identifier string to a dot form |
-| [toHumanCase](String/toHumanCase.md) | Convert an identifier string to human readable form |
-| [toKebabCase](String/toKebabCase.md) | Convert an identifier string to a kebab-case form |
-| [toPascalCase](String/toPascalCase.md) | Convert an identifier string to pascal case |
 | [toSmallCase](String/toSmallCase.md) | Convert the first letter of a string to lower case |
-| [toSmallWordsCase](String/toSmallWordsCase.md) | Convert the first letter of each word in a string to lower case |
-| [toTitleCase](String/toTitleCase.md) | Convert a string to a title, capitalizing each word, except for the small words |
-| [toUnderscoreCase](String/toUnderscoreCase.md) | Convert an identifier string to underscore case |
 
 ### Categorization
 
@@ -450,8 +449,6 @@
 | Function | Description |
 | ------ | ------ |
 | [clean](String/clean.md) | Remove all occurrences of characters from the beginning and end of the string |
-| [cleanEnd](String/cleanEnd.md) | Remove all occurrences of characters from the end of the string |
-| [cleanStart](String/cleanStart.md) | Remove all occurrences of characters from the start of the string |
 
 ### Collapse
 
@@ -468,6 +465,12 @@
 | ------ | ------ |
 | [CompareStringsOptions](String/CompareStringsOptions.md) | Options for the [compareStrings](String/compareStrings.md) function |
 | [compareStrings](String/compareStrings.md) | Compare two strings |
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [trimEquivalent](String/trimEquivalent.md) | Regular expression that matches any whitespace character, including standard spaces, non-breaking spaces (`\u00A0`), and zero-width no-break spaces (`\uFEFF`). Useful for trimming or identifying whitespace-equivalent characters in strings. |
 
 ### Conversion
 
@@ -774,6 +777,7 @@
 | ------ | ------ |
 | [empty](Unicode/empty.md) | The empty string |
 | [nbsp](Unicode/nbsp.md) | Non-breaking space |
+| [replacementCharacter](Unicode/replacementCharacter.md) | Unicode replacement character (U+FFFD), used to represent an unknown, unrecognized, or unrepresentable character. |
 | [space](Unicode/space.md) | Space |
 | [zwsp](Unicode/zwsp.md) | Zero-width space |
 

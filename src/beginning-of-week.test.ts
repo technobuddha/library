@@ -1,7 +1,7 @@
 import { beginningOfWeek } from './beginning-of-week.ts';
 import { month } from './constants.ts';
 
-describe('getBeginningOfWeek', () => {
+describe('beginningOfWeek', () => {
   test('should find the beginning of the week', () => {
     expect(beginningOfWeek(new Date('20 Jul 1969 20:18')).toString()).toBe(
       new Date('20 Jul 1969').toString(),

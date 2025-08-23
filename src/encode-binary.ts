@@ -1,6 +1,6 @@
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { empty } from './constants.ts';
-import { encodeBase64, encodeBase64Url } from './encode-base64.ts';
+import { encodeBase64, encodeBase64Url } from './encode-base-64.ts';
 
 /**
  * Encode an binary object into a string

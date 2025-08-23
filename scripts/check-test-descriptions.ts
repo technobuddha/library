@@ -1,6 +1,8 @@
-import { readdir, readFile } from 'fs/promises';
-import { join } from 'path';
-import { camelCase, kebabCase } from 'lodash-es';
+/* eslint-disable no-console */
+import { readdir, readFile } from 'node:fs/promises';
+import { join } from 'node:path';
+
+import { kebabCase } from '../src/kebab-case.ts';
 
 interface TestFileInfo {
   filePath: string;
@@ -11,7 +13,7 @@ interface TestFileInfo {
   issues: string[];
 }
 
-async function checkTestFiles(srcDir: string = './src'): Promise<void> {
+async function checkTestFiles(srcDir = './src'): Promise<void> {
   try {
     const files = await readdir(srcDir);
     const testFiles = files.filter((file) => file.endsWith('.test.ts'));
@@ -20,7 +22,7 @@ async function checkTestFiles(srcDir: string = './src'): Promise<void> {
 
     for (const file of testFiles) {
       const filePath = join(srcDir, file);
-      const content = await readFile(filePath, 'utf-8');
+      const content = await readFile(filePath, 'utf8');
 
       const result = analyzeTestFile(filePath, content);
       results.push(result);
@@ -63,31 +65,36 @@ function analyzeTestFile(filePath: string, content: string): TestFileInfo {
   const issues: string[] = [];
 
   // Extract function name from filename (remove .test.ts)
-  const fileName = filePath.split('/').pop() || '';
-  const functionName = fileName.replace('.test.ts', '');
+  const fileName = filePath.split('/').pop() ?? '';
+  const kebabFilename = fileName.replace('.test.ts', '');
+  const kebabRegExp = new RegExp(
+    `import\\s*\\{[^}]+\\}\\s*from\\s*['"]\\.\\/${kebabFilename}\\.ts['"];`,
+    'u',
+  );
 
   // Extract imported function names
-  const importMatches = content.match(/import\s*{[^}]+}\s*from\s*['"][^'"]+['"];?/g) || [];
+  const importMatches = content.match(kebabRegExp) ?? [];
+
   const importedFunctions: string[] = [];
 
   for (const importMatch of importMatches) {
-    const functionsMatch = importMatch.match(/{\s*([^}]+)\s*}/);
+    const functionsMatch = /\{\s*([^}]+)\s*\}/u.exec(importMatch);
     if (functionsMatch) {
       const functions = functionsMatch[1]
         .split(',')
         .map((f) => f.trim())
         .filter((f) => !f.startsWith('type '))
-        .map((f) => f.replace(/\s+as\s+\w+/, '')) // Remove aliases
+        .map((f) => f.replace(/\s+as\s+\w+0/u, '')) // Remove aliases
         .filter((f) => f.length > 0);
       importedFunctions.push(...functions);
     }
   }
 
   // Extract describe block names
-  const describeMatches = content.match(/describe\s*\(\s*['"]([^'"]+)['"][^)]*\)/g) || [];
+  const describeMatches = content.match(/describe\s*\(\s*['"]([^'"]+)['"][^)]*\)/gu) ?? [];
   const describeNames = describeMatches
     .map((match) => {
-      const nameMatch = match.match(/describe\s*\(\s*['"]([^'"]+)['"]/);
+      const nameMatch = /describe\s*\(\s*['"]([^'"]+)['"]/u.exec(match);
       return nameMatch ? nameMatch[1] : '';
     })
     .filter((name) => name.length > 0);
@@ -95,27 +102,23 @@ function analyzeTestFile(filePath: string, content: string): TestFileInfo {
   // Check consistency
   const primaryImportedFunction =
     importedFunctions.find(
-      (f) => f === functionName || f.toLowerCase() === functionName.toLowerCase(),
-    ) ||
-    importedFunctions[0] ||
+      (f) => f === kebabFilename || f.toLowerCase() === kebabFilename.toLowerCase(),
+    ) ??
+    importedFunctions[0] ??
     'unknown';
 
   const primaryDescribeName = describeNames[0] || 'unknown';
 
   // Check for issues
-  if (primaryImportedFunction !== camelCase(functionName)) {
+  if (kebabCase(primaryImportedFunction) !== kebabFilename) {
     issues.push(
-      `Import name "${primaryImportedFunction}" doesn't match filename "${functionName}"`,
+      `Import name "${primaryImportedFunction}"(${kebabCase(primaryImportedFunction)}) doesn't match filename "${kebabFilename}"`,
     );
   }
 
-  if (primaryDescribeName !== camelCase(functionName)) {
-    issues.push(`Describe name "${primaryDescribeName}" doesn't match filename "${functionName}"`);
-  }
-
-  if (primaryImportedFunction !== primaryDescribeName) {
+  if (primaryDescribeName !== primaryImportedFunction) {
     issues.push(
-      `Import name "${primaryImportedFunction}" doesn't match describe name "${primaryDescribeName}"`,
+      `Describe name "${primaryDescribeName}" doesn't match import "${primaryImportedFunction}"`,
     );
   }
 
@@ -133,7 +136,7 @@ function analyzeTestFile(filePath: string, content: string): TestFileInfo {
 
   return {
     filePath,
-    functionName,
+    functionName: kebabFilename,
     importedName: primaryImportedFunction,
     describeName: primaryDescribeName,
     isConsistent: issues.length === 0,
