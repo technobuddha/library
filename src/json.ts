@@ -1,6 +1,14 @@
-import { isFinite, isNaN } from 'lodash-es';
-
+/**
+ * The beginning of a special JSON value
+ * @group JSON
+ * @category Serialization
+ */
 export const specialBegin = '﴾';
+/**
+ * The end of a special JSON value
+ * @group JSON
+ * @category Serialization
+ */
 export const specialFinish = '﴿';
 
 /**
@@ -11,6 +19,8 @@ export const specialFinish = '﴿';
  * @param key - The key for the field
  * @param value - The value (may have already been encoded into a string)
  * @returns the encoded value
+ * @group JSON
+ * @category Serialization
  */
 export function replacer(this: Record<string, unknown>, key: string, value: unknown): unknown {
   const raw = this[key];
@@ -18,7 +28,7 @@ export function replacer(this: Record<string, unknown>, key: string, value: unkn
     return `${specialBegin}Date:${raw.toISOString()}${specialFinish}`;
   } else if (raw instanceof RegExp) {
     return `${specialBegin}RegExp:/${raw.source}/${raw.flags}${specialFinish}`;
-  } else if (typeof raw === 'number' && (isNaN(raw) || !isFinite(raw))) {
+  } else if (typeof raw === 'number' && (Number.isNaN(raw) || !Number.isFinite(raw))) {
     return `${specialBegin}Number:${raw.toString()}${specialFinish}`;
   } else if (typeof raw === 'bigint') {
     return `${specialBegin}BigInt:${raw.toString()}${specialFinish}`;
@@ -34,6 +44,8 @@ export function replacer(this: Record<string, unknown>, key: string, value: unkn
  * @param _key - The key
  * @param value - The value
  * @returns the decoded value
+ * @group JSON
+ * @category Serialization
  */
 export function reviver(this: unknown, _key: string, value: unknown): unknown {
   if (

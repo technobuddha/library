@@ -1,4 +1,4 @@
-import { replacer, reviver, specialBegin, specialFinish } from './json.js';
+import { replacer, reviver, specialBegin, specialFinish } from './json.ts';
 
 describe('clearObject', () => {
   describe('replacer', () => {

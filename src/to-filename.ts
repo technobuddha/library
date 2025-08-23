@@ -1,17 +1,21 @@
-import { escapeRegExp } from 'lodash-es';
-
-import { clean } from './clean.js';
-import { collapseWhitespace } from './collapse-whitespace.js';
-import { empty } from './constants.js';
+import { clean } from './clean.ts';
+import { collapseWhitespace } from './collapse-whitespace.ts';
+import { empty } from './constants.ts';
 
 const badChars = /[/\\:*?<>|.]+/gu;
 
-export type ToFilenameOptions = {
+/**
+ * Options for the {@link toFilename} function
+ *
+ * @group String
+ * @category Conversion
+ */
+export type FilenameOptions = {
   /** the file name will be truncated to this length */
   maxLength?: number;
   /** character to use to replace "bad" characters */
   replacement?: string;
-  /** number of characters to presere at the end of the filename when truncated (for disambiguation) */
+  /** number of characters to preserve at the end of the filename when truncated (for disambiguation) */
   disambiguate?: number;
   /** string to separate the main section from the disambiguated section */
   separator?: string;
@@ -21,17 +25,19 @@ export type ToFilenameOptions = {
  * Convert a string so that it can be used as a filename
  *
  * @param input - The string to escape
- * @param __namedParameters - see {@link ToFilenameOptions}
+ * @param options - see {@link FilenameOptions}
  * @returns the file name
+ * @group String
+ * @category Conversion
  */
 export function toFilename(
   input: string,
-  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: ToFilenameOptions = {},
+  { maxLength = 64, replacement = '-', disambiguate = 10, separator = '…' }: FilenameOptions = {},
 ): string {
   let argInput = input;
   let suffix = empty;
   const compress = new RegExp(
-    `\\s*${escapeRegExp(replacement)}[\\s${escapeRegExp(replacement)}]*`,
+    `\\s*${RegExp.escape(replacement)}[\\s${RegExp.escape(replacement)}]*`,
     'ug',
   );
 

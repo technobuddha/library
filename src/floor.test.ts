@@ -1,4 +1,4 @@
-import { floor } from './floor.js';
+import { floor } from './floor.ts';
 
 describe('floor', () => {
   test('should handle positive numbers', () => {
@@ -23,5 +23,11 @@ describe('floor', () => {
     expect(floor(6100 - Number.EPSILON, { precision: -2 })).toBe(6100);
     expect(floor(-6.01 - Number.EPSILON, { precision: 2 })).toBe(-6.01);
     expect(floor(-6100 - Number.EPSILON, { precision: -2 })).toBe(-6100);
+  });
+
+  test('should handle NaN and Infinity', () => {
+    expect(floor(Number.NaN)).toBe(Number.NaN);
+    expect(floor(Number.POSITIVE_INFINITY)).toBe(Number.POSITIVE_INFINITY);
+    expect(floor(Number.NEGATIVE_INFINITY)).toBe(Number.NEGATIVE_INFINITY);
   });
 });

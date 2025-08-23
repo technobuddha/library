@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { splitLines } from './split-lines.js';
+import { empty } from './constants.ts';
+import { splitLines } from './split-lines.ts';
 
 describe('splitLines', () => {
   test('should not split strings', () => {

@@ -1,11 +1,13 @@
-import { empty } from './constants.js';
-import { oct, u4 } from './escape.js';
+import { empty } from './constants.ts';
+import { oct, u4 } from './escape.ts';
 
 /**
  * Escape a string for use in Java
  *
  * @param input - The string to escape
  * @returns The string escaped for Java
+ * @group Encoding
+ * @category Escaping
  */
 export function escapeJava(input: string): string {
   const output: string[] = [];

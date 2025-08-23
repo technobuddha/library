@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { escapePython } from './escape-python.js';
+import { space } from './constants.ts';
+import { escapePython } from './escape-python.ts';
 
 describe('escapePython', () => {
   test('should escape standard sequences', () => {
@@ -45,6 +45,7 @@ describe('escapePython', () => {
   });
 
   test('should unicode escape BMP characters', () => {
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(escapePython('ΑΒΓΔΕΖ')).toBe('\\u0391\\u0392\\u0393\\u0394\\u0395\\u0396');
   });
 

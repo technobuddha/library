@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/unified-signatures */
-import { isString } from 'lodash-es';
 
 import {
   hoursPerDay,
@@ -9,10 +8,13 @@ import {
   ticksPerHour,
   ticksPerMinute,
   ticksPerSecond,
-} from './constants.js';
+} from './constants.ts';
+import { isString } from './is-string.ts';
 
 /**
  * Store and manipulate a duration of time
+ * @group Time
+ * @category Time Span
  */
 export class TimeSpan {
   /**
@@ -252,6 +254,7 @@ export class TimeSpan {
         ff: F.toString().padStart(3, '0'),
       } as { [key: string]: string };
 
+      // cspell:ignore dmhsf
       return mask.replaceAll(/[dmhsf]{1,2}|"[^"]*"|'[^']*'/gu, ($0) =>
         $0 in flags ? flags[$0] : $0.slice(1, -1),
       );

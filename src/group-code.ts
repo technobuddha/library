@@ -1,5 +1,5 @@
-import { sortOrder } from './sort-order.js';
-import { toASCII } from './to-ascii.js';
+import { sortOrder } from './sort-order.ts';
+import { toASCII } from './to-ascii.ts';
 
 /**
  * Determine the group code (A-Z, [] or #) to place an item under
@@ -10,6 +10,8 @@ import { toASCII } from './to-ascii.js';
  *
  * @param input - a description
  * @returns The group code
+ * @group String
+ * @category Sorting
  */
 export function groupCode(input: string): string {
   const group = toASCII(sortOrder(input).slice(0, 1)).toLocaleUpperCase();

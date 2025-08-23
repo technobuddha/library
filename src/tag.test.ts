@@ -1,4 +1,4 @@
-import { tag } from './tag.js';
+import { tag } from './tag.ts';
 
 describe('tag', () => {
   test('create a tag', () => {

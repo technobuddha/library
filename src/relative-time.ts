@@ -1,16 +1,22 @@
-import { addTime } from './add-time.js';
+import { addTime } from './add-time.ts';
 import {
   secondsPerDay,
   secondsPerHour,
   secondsPerMinute,
   space,
   ticksPerSecond,
-} from './constants.js';
-import { floor } from './floor.js';
-import { formatDate } from './format-date.js';
-import { isSameDay } from './is-same-day.js';
-import { plural } from './plural.js';
+} from './constants.ts';
+import { floor } from './floor.ts';
+import { formatDate } from './format-date.ts';
+import { isSameDay } from './is-same-day.ts';
+import { plural } from './plural.ts';
 
+/**
+ * Options for the {@link relativeTime} function
+ *
+ * @group Time
+ * @category Relative Time
+ */
 export type RelativeTimeOptions = {
   /** Describe the time difference as a time on a nearby day  */
   todayTomorrowYesterday?: boolean;
@@ -18,7 +24,7 @@ export type RelativeTimeOptions = {
   timeFormat?: string;
   /** Passed to {@link formatDate} to display a year, month and day */
   ymdFormat?: string;
-  /** Passed to {@link formatDate} to dislay a month and day */
+  /** Passed to {@link formatDate} to display a month and day */
   mdFormat?: string;
 };
 
@@ -27,8 +33,10 @@ export type RelativeTimeOptions = {
  *
  * @param input - The date
  * @param relativeTo - The date to compare to
- * @param __namedParameters - see {@link RelativeTimeOptions}
+ * @param options - see {@link RelativeTimeOptions}
  * @returns string describing the time difference between the two dates
+ * @group Time
+ * @category Relative Time
  */
 export function relativeTime(
   input: Date,
@@ -75,22 +83,22 @@ export function relativeTime(
     text.push(formatDate(input, mdFormat));
     sign = 0;
   } else if (d > 0) {
-    text.push(plural('day', d));
+    text.push(plural('day', d, true));
     if (d < 4 && h > 1) {
-      text.push(plural('hour', h));
+      text.push(plural('hour', h, true));
     }
   } else if (h > 0) {
-    text.push(plural('hour', h));
+    text.push(plural('hour', h, true));
     if (h < 4 && m > 0) {
-      text.push(plural('minute', m));
+      text.push(plural('minute', m, true));
     }
   } else if (m > 0) {
-    text.push(plural('minute', m));
+    text.push(plural('minute', m, true));
     if (m < 4 && s > 0) {
-      text.push(plural('second', s));
+      text.push(plural('second', s, true));
     }
   } else if (s > 0) {
-    text.push(plural('second', s));
+    text.push(plural('second', s, true));
   }
 
   if (sign === -1) {

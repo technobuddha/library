@@ -1,8 +1,10 @@
-﻿/**
+/**
  * Unescape a string encoded in HTML
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @group Encoding
+ * @category Escaping
  */
 export function unescapeHTML(input: string): string {
   return input.replaceAll(/&((#[0-9]+)|(#x[0-9a-f]+)|([a-z][a-z0-9]+));/giu, (entity) => {
@@ -16,7 +18,6 @@ export function unescapeHTML(input: string): string {
   });
 }
 
-/* eslint-disable @typescript-eslint/naming-convention */
 const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze({
   Aacute: 'Á',
   aacute: 'á',
@@ -2163,4 +2164,3 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   zwj: '‍',
   zwnj: '‌',
 } as Record<string, string>);
-/* eslint-enable @typescript-eslint/naming-convention */

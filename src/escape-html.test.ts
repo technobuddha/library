@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { escapeHTML } from './escape-html.js';
+import { space } from './constants.ts';
+import { escapeHTML } from './escape-html.ts';
 
 describe('escapeHTML', () => {
   test('should escape basic characters', () => {
@@ -20,6 +20,7 @@ describe('escapeHTML', () => {
 
   test('should not escape Latin-1, BMP or astral', () => {
     expect(escapeHTML('¡¢£ýþÿ')).toBe('¡¢£ýþÿ');
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(escapeHTML('ΑΒΓΔΕΖ')).toBe('ΑΒΓΔΕΖ');
     expect(escapeHTML('😀😁😂😺😸😹')).toBe('😀😁😂😺😸😹');
   });

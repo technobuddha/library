@@ -13,6 +13,8 @@ function sameValue(x: unknown, y: unknown): boolean {
  * @param objB - Second object to compare
  * @param exclude - Array of key names to exclude from the comparison
  * @returns true if the two objects have the same members
+ * @group Object
+ * @category Comparison
  */
 export function shallowEquals(
   objA: Record<string, unknown> | null | undefined,

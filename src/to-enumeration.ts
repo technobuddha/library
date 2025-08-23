@@ -1,4 +1,4 @@
-import { matches } from './matches.js';
+import { matches } from './matches.ts';
 
 /**
  * Convert a string to a numeric value
@@ -6,6 +6,8 @@ import { matches } from './matches.js';
  * @param input - The string to convert
  * @param tests - Array of tests (string value or regular expressions)
  * @returns The index of the first test to match the input string
+ * @group String
+ * @category Conversion
  */
 export function toEnumeration(
   input: string,

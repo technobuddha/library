@@ -1,6 +1,5 @@
-import { isNull, isObject, isUndefined } from 'lodash-es';
-
-import { isPrimitive } from './is-primitive.js';
+import { isObject } from './is-object.ts';
+import { isPrimitive } from './is-primitive.ts';
 
 /**
  * Convert an object into its primitive (string, number, etc.) value
@@ -8,6 +7,8 @@ import { isPrimitive } from './is-primitive.js';
  * @param input - the object
  * @param hint - A "hint" as to what the type should be.  "string", "number" or "default"
  * @returns primitive value
+ * @group Primitive
+ * @category Conversion
  */
 export function toPrimitive(
   input: unknown,
@@ -16,7 +17,7 @@ export function toPrimitive(
   let wrapper = input;
 
   if (isPrimitive(input)) {
-    if (isNull(input) || isUndefined(input)) {
+    if (input == null) {
       return input;
     }
 

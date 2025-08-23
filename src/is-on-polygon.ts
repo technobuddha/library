@@ -1,0 +1,32 @@
+import { type Cartesian, type Polygon } from './@types/geometry.ts';
+import { isOnLine } from './is-on-line.ts';
+import { toClosed } from './to-closed.ts';
+import { toLineSegment } from './to-line-segment.ts';
+
+// Determines whether a point is located on one of the edges of a polygon.
+// Returns a boolean.
+/**
+ * Determines whether a given point lies exactly on the boundary of a polygon.
+ *
+ * @param point - The Cartesian coordinates of the point to test.
+ * @param polygon - The polygon, represented as an array of Cartesian points.
+ * @param epsilon - Optional tolerance for floating-point comparisons (default is 1e-10).
+ * @returns `true` if the point lies on any edge of the polygon within the given epsilon, otherwise `false`.
+ *
+ * @group Geometry
+ * @category Point
+ * @category Polygon
+ */
+export function isOnPolygon(point: Cartesian, polygon: Polygon, epsilon = 1e-10): boolean {
+  let on = false;
+  const closed = toClosed(polygon);
+
+  for (let i = 0, l = closed.length - 1; i < l; i++) {
+    if (isOnLine(point, toLineSegment(closed[i], closed[i + 1]), epsilon)) {
+      on = true;
+      break;
+    }
+  }
+
+  return on;
+}

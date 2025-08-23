@@ -1,4 +1,4 @@
-import { mask } from './mask.js';
+import { mask } from './mask.ts';
 
 describe('mask', () => {
   test('should mask strings', () => {

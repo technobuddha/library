@@ -1,5 +1,5 @@
-import { empty } from './constants.js';
-import { splitChars } from './split-chars.js';
+import { empty } from './constants.ts';
+import { splitChars } from './split-chars.ts';
 
 describe('splitChars', () => {
   test('should split strings', () => {

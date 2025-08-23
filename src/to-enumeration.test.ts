@@ -1,4 +1,4 @@
-import { toEnumeration } from './to-enumeration.js';
+import { toEnumeration } from './to-enumeration.ts';
 
 describe('toEnumeration', () => {
   test('determine the matching index', () => {

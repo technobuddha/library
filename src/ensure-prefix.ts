@@ -4,6 +4,8 @@
  * @param input - The string
  * @param prefix - The prefix
  * @returns The prefix followed by the string
+ * @group String
+ * @category Affix
  */
 export function ensurePrefix(input: string, prefix: string): string {
   return input.startsWith(prefix) ? input : prefix + input;

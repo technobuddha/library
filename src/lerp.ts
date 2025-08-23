@@ -7,6 +7,9 @@
  * @param b - A number.
  * @param proportion - The proportion between a and b.
  * @returns The interpolated value between a and b.
+ *
+ * @group Math
+ * @category Arithmetic
  */
 export function lerp(a: number, b: number, proportion: number): number {
   return a + proportion * (b - a);

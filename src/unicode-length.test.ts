@@ -1,4 +1,4 @@
-import { unicodeLength } from './unicode-length.js';
+import { unicodeLength } from './unicode-length.ts';
 
 describe('unicodeLength', () => {
   test('should detect surrogates', () => {

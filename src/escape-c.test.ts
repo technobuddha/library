@@ -1,5 +1,5 @@
-import { space } from './constants.js';
-import { escapeC } from './escape-c.js';
+import { space } from './constants.ts';
+import { escapeC } from './escape-c.ts';
 
 describe('escapeC', () => {
   test('should escape standard sequences', () => {
@@ -45,6 +45,7 @@ describe('escapeC', () => {
   });
 
   test('should unicode escape BMP characters', () => {
+    // cspell:ignore ΑΒΓΔΕΖ
     expect(escapeC('ΑΒΓΔΕΖ')).toBe('\\u0391\\u0392\\u0393\\u0394\\u0395\\u0396');
   });
 

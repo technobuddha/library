@@ -1,15 +1,15 @@
-import { collapseBreakingspace } from './collapse-breaking-space.js';
+import { collapseBreakingSpace } from './collapse-breaking-space.ts';
 
-describe('collapseBreakingspace', () => {
-  test('should collapse Breakingspace', () => {
+describe('collapseBreakingSpace', () => {
+  test('should collapse Breaking Space', () => {
     expect(
-      collapseBreakingspace('   now   is the\r\t\f\v\ntime      for \tall   good men   '),
+      collapseBreakingSpace('   now   is the\r\t\f\v\ntime      for \tall   good men   '),
     ).toBe('now is the \f\v time for all good men');
   });
 
   test('should support the trim option', () => {
     expect(
-      collapseBreakingspace('   now   is the\r\t\f\v\ntime      for \tall   good men   ', {
+      collapseBreakingSpace('   now   is the\r\t\f\v\ntime      for \tall   good men   ', {
         trim: false,
       }),
     ).toBe(' now is the \f\v time for all good men ');
