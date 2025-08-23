@@ -10,7 +10,7 @@
 
 > **dotCase**(`input`: `string`): `string`
 
-Defined in: dot-case.ts:12
+Defined in: [dot-case.ts:12](https://github.com/technobuddha/library/blob/main/src/dot-case.ts#L12)
 
 Convert an identifier string to a dot form
 

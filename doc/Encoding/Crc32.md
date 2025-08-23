@@ -8,13 +8,13 @@
 
 # Class: Crc32
 
-Defined in: crc-32.ts:58
+Defined in: [crc-32.ts:58](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L58)
 
 Compute the CRC32 checksum
 
-## Implements
+## Extends
 
-- [`HashClass`](HashClass.md)
+- [`HashBase`](HashBase.md)
 
 ## Constructors
 
@@ -22,7 +22,7 @@ Compute the CRC32 checksum
 
 > **new Crc32**(): `Crc32`
 
-Defined in: crc-32.ts:68
+Defined in: [crc-32.ts:68](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L68)
 
 Creates a new CRC32 hash instance and initializes its internal state.
 
@@ -35,6 +35,10 @@ Creates a new CRC32 hash instance and initializes its internal state.
 The CRC value is initialized to -1, as required by the CRC32 algorithm specification.
 Use [update](#update) to process data and [digest](#digest) to obtain the final hash value.
 
+#### Overrides
+
+[`HashBase`](HashBase.md).[`constructor`](HashBase.md#constructor)
+
 ## Methods
 
 ### digest()
@@ -43,12 +47,9 @@ Use [update](#update) to process data and [digest](#digest) to obtain the final 
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: crc-32.ts:90
+Defined in: [crc-32.ts:91](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L91)
 
-Finalizes the hash computation and returns the resulting hash digest.
-This method performs any necessary padding and processes the final block
-of data according to the hash algorithm's specification. The output is returned
-as a raw `Uint8Array`.
+The output is returned as a `Uint8Array`.
 
 ##### Returns
 
@@ -56,20 +57,21 @@ as a raw `Uint8Array`.
 
 The hash digest as a `Uint8Array`
 
-##### Implementation of
+##### Overrides
 
-[`HashClass`](HashClass.md).[`digest`](HashClass.md#digest)
+[`HashBase`](HashBase.md).[`digest`](HashBase.md#digest)
 
 #### Call Signature
 
 > **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
 
-Defined in: crc-32.ts:91
+Defined in: [crc-32.ts:92](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L92)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
-of data according to the hash algorithm's specification. The output is
-or encoded as a string in the specified binary encoding.
+of data according to the hash algorithm's specification.
+
+The output is encoded as a string in the specified binary encoding.
 
 ##### Parameters
 
@@ -83,9 +85,9 @@ or encoded as a string in the specified binary encoding.
 
 An encoded string, depending on the `encoding` parameter.
 
-##### Implementation of
+##### Overrides
 
-[`HashClass`](HashClass.md).[`digest`](HashClass.md#digest)
+[`HashBase`](HashBase.md).[`digest`](HashBase.md#digest)
 
 ***
 
@@ -95,7 +97,7 @@ An encoded string, depending on the `encoding` parameter.
 
 > **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
 
-Defined in: crc-32.ts:72
+Defined in: [crc-32.ts:73](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L73)
 
 Updates the hash with the given binary data.
 
@@ -111,15 +113,15 @@ Updates the hash with the given binary data.
 
 The hash instance for method chaining.
 
-##### Implementation of
+##### Overrides
 
-[`HashClass`](HashClass.md).[`update`](HashClass.md#update)
+[`HashBase`](HashBase.md).[`update`](HashBase.md#update)
 
 #### Call Signature
 
 > **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
 
-Defined in: crc-32.ts:73
+Defined in: [crc-32.ts:74](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L74)
 
 Updates the hash with the given string data.
 
@@ -136,6 +138,6 @@ Updates the hash with the given string data.
 
 The hash instance for method chaining.
 
-##### Implementation of
+##### Overrides
 
-[`HashClass`](HashClass.md).[`update`](HashClass.md#update)
+[`HashBase`](HashBase.md).[`update`](HashBase.md#update)

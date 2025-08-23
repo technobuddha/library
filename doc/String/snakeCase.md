@@ -10,9 +10,9 @@
 
 > **snakeCase**(`input`: `string`): `string`
 
-Defined in: snake-case.ts:12
+Defined in: [snake-case.ts:12](https://github.com/technobuddha/library/blob/main/src/snake-case.ts#L12)
 
-Convert an identifier string to underscore case
+Convert an identifier string to snake case
 
 ## Parameters
 
@@ -24,4 +24,4 @@ Convert an identifier string to underscore case
 
 `string`
 
-the identifier in underscore case
+the identifier in snake case

@@ -8,38 +8,24 @@
 
 # Abstract Class: HashBase
 
-Defined in: [hash-base.ts:61](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L61)
+Defined in: [hash-base.ts:15](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L15)
 
-The base class for most cryptographic hash functions
+Class representing a generic hash algorithm implementation.
+
+## Remarks
+
+This class defines the contract for hash classes, supporting
+updating the hash with data and producing a digest in various formats.
 
 ## Extended by
 
-- [`Sha1`](Sha1.md)
-- [`Sha224`](Sha224.md)
-- [`Sha256`](Sha256.md)
-- [`Sha384`](Sha384.md)
-- [`Sha512`](Sha512.md)
-
-## Implements
-
-- [`HashClass`](HashClass.md)
+- [`Crc32`](Crc32.md)
 
 ## Constructors
 
 ### Constructor
 
-> **new HashBase**(`blockSize`: `number`, `finalSize`: `number`): `HashBase`
-
-Defined in: [hash-base.ts:93](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L93)
-
-Creates a new instance of the hash base class.
-
-#### Parameters
-
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `blockSize` | `number` | The size of the internal block buffer in bytes. |
-| `finalSize` | `number` | The size of the final hash output in bytes. |
+> **new HashBase**(): `HashBase`
 
 #### Returns
 
@@ -51,14 +37,11 @@ Creates a new instance of the hash base class.
 
 #### Call Signature
 
-> **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+> `abstract` **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: [hash-base.ts:124](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L124)
+Defined in: [hash-base.ts:21](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L21)
 
-Finalizes the hash computation and returns the resulting hash digest.
-This method performs any necessary padding and processes the final block
-of data according to the hash algorithm's specification. The output is returned
-as a raw `Uint8Array`.
+The output is returned as a `Uint8Array`.
 
 ##### Returns
 
@@ -66,20 +49,17 @@ as a raw `Uint8Array`.
 
 The hash digest as a `Uint8Array`
 
-##### Implementation of
-
-[`HashClass`](HashClass.md).[`digest`](HashClass.md#digest)
-
 #### Call Signature
 
-> **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
+> `abstract` **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
 
-Defined in: [hash-base.ts:125](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L125)
+Defined in: [hash-base.ts:33](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L33)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
-of data according to the hash algorithm's specification. The output is
-or encoded as a string in the specified binary encoding.
+of data according to the hash algorithm's specification.
+
+The output is encoded as a string in the specified binary encoding.
 
 ##### Parameters
 
@@ -93,19 +73,15 @@ or encoded as a string in the specified binary encoding.
 
 An encoded string, depending on the `encoding` parameter.
 
-##### Implementation of
-
-[`HashClass`](HashClass.md).[`digest`](HashClass.md#digest)
-
 ***
 
 ### update()
 
 #### Call Signature
 
-> **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
+> `abstract` **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)): `this`
 
-Defined in: [hash-base.ts:166](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L166)
+Defined in: [hash-base.ts:40](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L40)
 
 Updates the hash with the given binary data.
 
@@ -113,7 +89,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 
@@ -121,15 +97,11 @@ Updates the hash with the given binary data.
 
 The hash instance for method chaining.
 
-##### Implementation of
-
-[`HashClass`](HashClass.md).[`update`](HashClass.md#update)
-
 #### Call Signature
 
-> **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
+> `abstract` **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
 
-Defined in: [hash-base.ts:167](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L167)
+Defined in: [hash-base.ts:48](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L48)
 
 Updates the hash with the given string data.
 
@@ -145,7 +117,3 @@ Updates the hash with the given string data.
 `this`
 
 The hash instance for method chaining.
-
-##### Implementation of
-
-[`HashClass`](HashClass.md).[`update`](HashClass.md#update)

@@ -10,7 +10,7 @@
 
 > **tokenize**(`input`: `string`): `string`[]
 
-Defined in: tokenize.ts:3
+Defined in: [tokenize.ts:3](https://github.com/technobuddha/library/blob/main/src/tokenize.ts#L3)
 
 ## Parameters
 

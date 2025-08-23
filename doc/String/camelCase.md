@@ -10,7 +10,7 @@
 
 > **camelCase**(`input`: `string`): `string`
 
-Defined in: camel-case.ts:14
+Defined in: [camel-case.ts:14](https://github.com/technobuddha/library/blob/main/src/camel-case.ts#L14)
 
 Convert an identifier string to a camel case
 

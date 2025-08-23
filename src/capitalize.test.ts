@@ -8,6 +8,7 @@ describe('capitalize', () => {
   });
 
   test('capitalized words should remain the same', () => {
+    expect(capitalize('Giraffe')).toBe('Giraffe');
     expect(capitalize('Monkey')).toBe('Monkey');
   });
 
@@ -19,5 +20,13 @@ describe('capitalize', () => {
 
   test('should capitalize only the first word', () => {
     expect(capitalize('deer and antelope')).toBe('Deer and antelope');
+  });
+
+  test('capitalized sentence stays the same', () => {
+    expect(capitalize('Cats and dogs')).toBe('Cats and dogs');
+  });
+
+  test('should capitalize the first hyphenated word', () => {
+    expect(capitalize('ground-hog day, ground-hog day.')).toBe('Ground-Hog day, ground-hog day.');
   });
 });

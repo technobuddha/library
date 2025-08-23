@@ -4,13 +4,13 @@
 
 ***
 
-[@technobuddha/library](../index.md) / capitalize
+[@technobuddha/library](../index.md) / uncapitalize
 
-# Function: capitalize()
+# Function: uncapitalize()
 
-> **capitalize**(`input`: `string`): `string`
+> **uncapitalize**(`input`: `string`): `string`
 
-Defined in: [capitalize.ts:12](https://github.com/technobuddha/library/blob/main/src/capitalize.ts#L12)
+Defined in: uncapitalize.ts:12
 
 Capitalize the first word in a sentence, or capitalize a single word.
 

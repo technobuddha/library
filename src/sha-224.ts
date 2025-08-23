@@ -1,5 +1,5 @@
 /* eslint-disable no-bitwise */
-import { HashBase } from './hash-base.ts';
+import { ShaBase } from './sha-base.ts';
 
 const K = [
   0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
@@ -46,7 +46,7 @@ function gamma1(x: number): number {
  * @group Encoding
  * @category Hash
  */
-export class Sha224 extends HashBase {
+export class Sha224 extends ShaBase {
   private a = 0xc1059ed8;
   private b = 0x367cd507;
   private c = 0x3070dd17;

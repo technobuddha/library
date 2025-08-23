@@ -4,41 +4,46 @@
 
 ***
 
-[@technobuddha/library](../index.md) / Sha1
+[@technobuddha/library](../index.md) / ShaBase
 
-# Class: Sha1
+# Abstract Class: ShaBase
 
-Defined in: [sha-1.ts:48](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L48)
+Defined in: sha-base.ts:15
 
-Secure Hash Algorithm, SHA-1
+The base class for most sha bases cryptographic hash functions
 
-## Extends
+## Extended by
 
-- [`ShaBase`](ShaBase.md)
+- [`Sha1`](Sha1.md)
+- [`Sha224`](Sha224.md)
+- [`Sha256`](Sha256.md)
+- [`Sha384`](Sha384.md)
+- [`Sha512`](Sha512.md)
+
+## Implements
+
+- [`HashBase`](HashBase.md)
 
 ## Constructors
 
 ### Constructor
 
-> **new Sha1**(): `Sha1`
+> **new ShaBase**(`blockSize`: `number`, `finalSize`: `number`): `ShaBase`
 
-Defined in: [sha-1.ts:64](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L64)
+Defined in: sha-base.ts:47
 
-Creates a new SHA-1 hash instance and initializes its internal state.
+Creates a new instance of the hash base class.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `blockSize` | `number` | The size of the internal block buffer in bytes. |
+| `finalSize` | `number` | The size of the final hash output in bytes. |
 
 #### Returns
 
-`Sha1`
-
-#### Remarks
-
-The internal state variables are set to the initial SHA-1 constants as specified
-in FIPS PUB 180-1. Use [update](#update) to process data and [digest](#digest) to retrieve the
-final hash value.
-
-#### Overrides
-
-[`ShaBase`](ShaBase.md).[`constructor`](ShaBase.md#constructor)
+`ShaBase`
 
 ## Methods
 
@@ -58,9 +63,9 @@ The output is returned as a `Uint8Array`.
 
 The hash digest as a `Uint8Array`
 
-##### Inherited from
+##### Implementation of
 
-[`ShaBase`](ShaBase.md).[`digest`](ShaBase.md#digest)
+[`HashBase`](HashBase.md).[`digest`](HashBase.md#digest)
 
 #### Call Signature
 
@@ -86,9 +91,9 @@ The output is encoded as a string in the specified binary encoding.
 
 An encoded string, depending on the `encoding` parameter.
 
-##### Inherited from
+##### Implementation of
 
-[`ShaBase`](ShaBase.md).[`digest`](ShaBase.md#digest)
+[`HashBase`](HashBase.md).[`digest`](HashBase.md#digest)
 
 ***
 
@@ -114,9 +119,9 @@ Updates the hash with the given binary data.
 
 The hash instance for method chaining.
 
-##### Inherited from
+##### Implementation of
 
-[`ShaBase`](ShaBase.md).[`update`](ShaBase.md#update)
+[`HashBase`](HashBase.md).[`update`](HashBase.md#update)
 
 #### Call Signature
 
@@ -139,6 +144,6 @@ Updates the hash with the given string data.
 
 The hash instance for method chaining.
 
-##### Inherited from
+##### Implementation of
 
-[`ShaBase`](ShaBase.md).[`update`](ShaBase.md#update)
+[`HashBase`](HashBase.md).[`update`](HashBase.md#update)

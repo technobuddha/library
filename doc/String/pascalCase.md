@@ -10,7 +10,7 @@
 
 > **pascalCase**(`input`: `string`): `string`
 
-Defined in: pascal-case.ts:14
+Defined in: [pascal-case.ts:14](https://github.com/technobuddha/library/blob/main/src/pascal-case.ts#L14)
 
 Convert an identifier string to pascal case
 

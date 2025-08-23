@@ -10,7 +10,7 @@
 
 > **startCase**(`input`: `string`): `string`
 
-Defined in: start-case.ts:6
+Defined in: [start-case.ts:1](https://github.com/technobuddha/library/blob/main/src/start-case.ts#L1)
 
 ## Parameters
 

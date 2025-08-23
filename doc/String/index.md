@@ -22,21 +22,19 @@
 
 ### Case Conversion
 
-| Name | Description |
+| Function | Description |
 | ------ | ------ |
-| [CapitalWordCaseOptions](CapitalWordCaseOptions.md) | Options for the [toCapitalWordCase](toCapitalWordCase.md) function |
-| [SmallCaseOptions](SmallCaseOptions.md) | Options for the [toSmallCase](toSmallCase.md) function |
 | [camelCase](camelCase.md) | Convert an identifier string to a camel case |
 | [capitalize](capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 | [dotCase](dotCase.md) | Convert an identifier string to a dot form |
 | [humanCase](humanCase.md) | Convert an identifier string to a human case |
 | [kebabCase](kebabCase.md) | Convert an identifier string to a kebab-case form |
+| [macroCase](macroCase.md) | Convert an identifier string to macro case |
 | [matchCase](matchCase.md) | Attempt to convert the input string into the same case as the target string |
 | [pascalCase](pascalCase.md) | Convert an identifier string to pascal case |
-| [snakeCase](snakeCase.md) | Convert an identifier string to underscore case |
+| [snakeCase](snakeCase.md) | Convert an identifier string to snake case |
 | [title](title.md) | Convert a string to a title, capitalizing each word, except for the small words |
-| [toCapitalWordCase](toCapitalWordCase.md) | Capitalize the first letter of each word in a string |
-| [toSmallCase](toSmallCase.md) | Convert the first letter of a string to lower case |
+| [uncapitalize](uncapitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 
 ### Categorization
 

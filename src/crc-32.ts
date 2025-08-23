@@ -4,7 +4,7 @@ import { type TextEncoding } from './@types/text-encoding.ts';
 import { type TypedArray } from './@types/typed-array.ts';
 import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
-import { type HashClass } from './hash-base.ts';
+import { HashBase } from './hash-base.ts';
 
 const crcTable: number[] = [
   0, 1996959894, -301047508, -1727442502, 124634137, 1886057615, -379345611, -1637575261, 249268274,
@@ -55,7 +55,7 @@ const crcTable: number[] = [
  * @group Encoding
  * @category Hash
  */
-export class Crc32 implements HashClass {
+export class Crc32 extends HashBase {
   private crc: number;
 
   /**
@@ -66,6 +66,7 @@ export class Crc32 implements HashClass {
    * Use {@link update} to process data and {@link digest} to obtain the final hash value.
    */
   public constructor() {
+    super();
     this.crc = -1;
   }
 

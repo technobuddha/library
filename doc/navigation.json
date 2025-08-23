@@ -302,9 +302,9 @@
             "isDeprecated": false
           },
           {
-            "title": "HashClass",
-            "kind": 256,
-            "path": "Encoding/HashClass.md",
+            "title": "ShaBase",
+            "kind": 128,
+            "path": "Encoding/ShaBase.md",
             "isDeprecated": false
           }
         ]
@@ -1355,18 +1355,6 @@
         "title": "Case Conversion",
         "children": [
           {
-            "title": "CapitalWordCaseOptions",
-            "kind": 2097152,
-            "path": "String/CapitalWordCaseOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "SmallCaseOptions",
-            "kind": 2097152,
-            "path": "String/SmallCaseOptions.md",
-            "isDeprecated": false
-          },
-          {
             "title": "camelCase",
             "kind": 64,
             "path": "String/camelCase.md",
@@ -1397,6 +1385,12 @@
             "isDeprecated": false
           },
           {
+            "title": "macroCase",
+            "kind": 64,
+            "path": "String/macroCase.md",
+            "isDeprecated": false
+          },
+          {
             "title": "matchCase",
             "kind": 64,
             "path": "String/matchCase.md",
@@ -1421,15 +1415,9 @@
             "isDeprecated": false
           },
           {
-            "title": "toCapitalWordCase",
+            "title": "uncapitalize",
             "kind": 64,
-            "path": "String/toCapitalWordCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toSmallCase",
-            "kind": 64,
-            "path": "String/toSmallCase.md",
+            "path": "String/uncapitalize.md",
             "isDeprecated": false
           }
         ]

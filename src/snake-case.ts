@@ -2,10 +2,10 @@ import { removeDiacritics } from './remove-diacritics.ts';
 import { tokenize } from './tokenize.ts';
 
 /**
- * Convert an identifier string to underscore case
+ * Convert an identifier string to snake case
  *
  * @param input - The identifier string
- * @returns the identifier in underscore case
+ * @returns the identifier in snake case
  * @group String
  * @category Case Conversion
  */

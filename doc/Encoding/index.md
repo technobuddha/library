@@ -37,13 +37,13 @@
 
 ### Hash
 
-| Name | Description |
+| Class | Description |
 | ------ | ------ |
 | [Crc32](Crc32.md) | Compute the CRC32 checksum |
-| [HashBase](HashBase.md) | The base class for most cryptographic hash functions |
+| [HashBase](HashBase.md) | Class representing a generic hash algorithm implementation. |
 | [Sha1](Sha1.md) | Secure Hash Algorithm, SHA-1 |
 | [Sha224](Sha224.md) | Secure Hash Algorithm, SHA2 SHA-224 |
 | [Sha256](Sha256.md) | Secure Hash Algorithm, SHA2 SHA-256 |
 | [Sha384](Sha384.md) | Secure Hash Algorithm, SHA2 SHA-384 |
 | [Sha512](Sha512.md) | Secure Hash Algorithm, SHA2 SHA-512 |
-| [HashClass](HashClass.md) | Interface representing a generic hash algorithm implementation. |
+| [ShaBase](ShaBase.md) | The base class for most sha bases cryptographic hash functions |

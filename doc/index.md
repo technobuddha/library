@@ -91,16 +91,16 @@
 
 ### Hash
 
-| Name | Description |
+| Class | Description |
 | ------ | ------ |
 | [Crc32](Encoding/Crc32.md) | Compute the CRC32 checksum |
-| [HashBase](Encoding/HashBase.md) | The base class for most cryptographic hash functions |
+| [HashBase](Encoding/HashBase.md) | Class representing a generic hash algorithm implementation. |
 | [Sha1](Encoding/Sha1.md) | Secure Hash Algorithm, SHA-1 |
 | [Sha224](Encoding/Sha224.md) | Secure Hash Algorithm, SHA2 SHA-224 |
 | [Sha256](Encoding/Sha256.md) | Secure Hash Algorithm, SHA2 SHA-256 |
 | [Sha384](Encoding/Sha384.md) | Secure Hash Algorithm, SHA2 SHA-384 |
 | [Sha512](Encoding/Sha512.md) | Secure Hash Algorithm, SHA2 SHA-512 |
-| [HashClass](Encoding/HashClass.md) | Interface representing a generic hash algorithm implementation. |
+| [ShaBase](Encoding/ShaBase.md) | The base class for most sha bases cryptographic hash functions |
 
 ## English
 
@@ -409,21 +409,19 @@
 
 ### Case Conversion
 
-| Name | Description |
+| Function | Description |
 | ------ | ------ |
-| [CapitalWordCaseOptions](String/CapitalWordCaseOptions.md) | Options for the [toCapitalWordCase](String/toCapitalWordCase.md) function |
-| [SmallCaseOptions](String/SmallCaseOptions.md) | Options for the [toSmallCase](String/toSmallCase.md) function |
 | [camelCase](String/camelCase.md) | Convert an identifier string to a camel case |
 | [capitalize](String/capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 | [dotCase](String/dotCase.md) | Convert an identifier string to a dot form |
 | [humanCase](String/humanCase.md) | Convert an identifier string to a human case |
 | [kebabCase](String/kebabCase.md) | Convert an identifier string to a kebab-case form |
+| [macroCase](String/macroCase.md) | Convert an identifier string to macro case |
 | [matchCase](String/matchCase.md) | Attempt to convert the input string into the same case as the target string |
 | [pascalCase](String/pascalCase.md) | Convert an identifier string to pascal case |
-| [snakeCase](String/snakeCase.md) | Convert an identifier string to underscore case |
+| [snakeCase](String/snakeCase.md) | Convert an identifier string to snake case |
 | [title](String/title.md) | Convert a string to a title, capitalizing each word, except for the small words |
-| [toCapitalWordCase](String/toCapitalWordCase.md) | Capitalize the first letter of each word in a string |
-| [toSmallCase](String/toSmallCase.md) | Convert the first letter of a string to lower case |
+| [uncapitalize](String/uncapitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 
 ### Categorization
 

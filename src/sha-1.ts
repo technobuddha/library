@@ -9,7 +9,7 @@
  * Distributed under the BSD License
  * See [MD5](https://pajhome.org.uk/crypt/md5) for details.
  */
-import { HashBase } from './hash-base.ts';
+import { ShaBase } from './sha-base.ts';
 
 function rotl1(num: number): number {
   return (num << 1) | (num >>> 31);
@@ -45,7 +45,7 @@ function int32(x: number): number {
  * @group Encoding
  * @category Hash
  */
-export class Sha1 extends HashBase {
+export class Sha1 extends ShaBase {
   private a = 0x67452301;
   private b = 0xefcdab89;
   private c = 0x98badcfe;
