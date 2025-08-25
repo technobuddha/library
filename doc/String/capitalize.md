@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: capitalize()
 
-> **capitalize**(`input`: `string`): `string`
+```ts
+function capitalize(input: string): string;
+```
 
 Defined in: [capitalize.ts:12](https://github.com/technobuddha/library/blob/main/src/capitalize.ts#L12)
 

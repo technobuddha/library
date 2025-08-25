@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Type Alias: RelativeTimeOptions
 
-> **RelativeTimeOptions** = \{ `mdFormat?`: `string`; `timeFormat?`: `string`; `todayTomorrowYesterday?`: `boolean`; `ymdFormat?`: `string`; \}
+```ts
+type RelativeTimeOptions = {
+  mdFormat?: string;
+  timeFormat?: string;
+  todayTomorrowYesterday?: boolean;
+  ymdFormat?: string;
+};
+```
 
 Defined in: [relative-time.ts:20](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L20)
 

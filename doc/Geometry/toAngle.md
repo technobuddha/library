@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: toAngle()
 
-> **toAngle**(`input`: `number`, `from`: [`AngleUnit`](AngleUnit.md), `to`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function toAngle(
+   input: number, 
+   from: AngleUnit, 
+   to: AngleUnit): number;
+```
 
 Defined in: [to-angle.ts:14](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L14)
 

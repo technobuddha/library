@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isEven()
 
-> **isEven**(`input`: `number`): `boolean`
+```ts
+function isEven(input: number): boolean;
+```
 
 Defined in: [is-even.ts:11](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L11)
 

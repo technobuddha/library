@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: IsSurrogateOptions
 
-> **IsSurrogateOptions** = \{ `high?`: `boolean`; `low?`: `boolean`; \}
+```ts
+type IsSurrogateOptions = {
+  high?: boolean;
+  low?: boolean;
+};
+```
 
 Defined in: [is-surrogate.ts:6](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L6)
 

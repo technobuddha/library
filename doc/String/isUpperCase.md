@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isUpperCase()
 
-> **isUpperCase**(`input`: `string`): `boolean`
+```ts
+function isUpperCase(input: string): boolean;
+```
 
 Defined in: [is-upper-case.ts:11](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L11)
 

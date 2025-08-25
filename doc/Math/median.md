@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: median()
 
-> **median**(`numbers`: `number`[]): `number`
+```ts
+function median(numbers: number[]): number;
+```
 
 Defined in: [median.ts:15](https://github.com/technobuddha/library/blob/main/src/median.ts#L15)
 

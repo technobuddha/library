@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: camelCase()
 
-> **camelCase**(`input`: `string`): `string`
+```ts
+function camelCase(input: string): string;
+```
 
 Defined in: [camel-case.ts:14](https://github.com/technobuddha/library/blob/main/src/camel-case.ts#L14)
 

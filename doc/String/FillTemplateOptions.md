@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: FillTemplateOptions
 
-> **FillTemplateOptions** = \{ `close?`: `string`; `open?`: `string`; \}
+```ts
+type FillTemplateOptions = {
+  close?: string;
+  open?: string;
+};
+```
 
 Defined in: [fill-template.ts:8](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L8)
 

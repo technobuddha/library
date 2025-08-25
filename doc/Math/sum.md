@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: sum()
 
-> **sum**(`numbers`: `number`[]): `number`
+```ts
+function sum(numbers: number[]): number;
+```
 
 Defined in: [sum.ts:10](https://github.com/technobuddha/library/blob/main/src/sum.ts#L10)
 

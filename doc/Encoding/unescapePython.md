@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: unescapePython()
 
-> **unescapePython**(`input`: `string`): `string`
+```ts
+function unescapePython(input: string): string;
+```
 
 Defined in: [unescape-python.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L9)
 

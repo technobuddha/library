@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: julian()
 
-> **julian**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)): `number`
+```ts
+function julian(input: Date): number;
+```
 
 Defined in: [julian.ts:13](https://github.com/technobuddha/library/blob/main/src/julian.ts#L13)
 

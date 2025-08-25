@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: QuoteOptions
 
-> **QuoteOptions** = \{ `escape?`: `string` \| (`input`: `string`) => `string`; `quote?`: `string`; \}
+```ts
+type QuoteOptions = {
+  escape?: string | (input: string) => string;
+  quote?: string;
+};
+```
 
 Defined in: [quote.ts:10](https://github.com/technobuddha/library/blob/main/src/quote.ts#L10)
 

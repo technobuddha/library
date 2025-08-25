@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Function: timezone()
 
-> **timezone**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`TimezoneOptions`](TimezoneOptions.md)): `string`
+```ts
+function timezone(input: 
+  | number
+  | Date, options: TimezoneOptions): string;
+```
 
 Defined in: [timezone.ts:31](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L31)
 
@@ -16,7 +20,7 @@ Determine the correct timezone string for a specified date using a local timezon
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `input` | `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date, or a timezone offset in minutes |
+| `input` | \| `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | The date, or a timezone offset in minutes |
 | `options` | [`TimezoneOptions`](TimezoneOptions.md) | see [TimezoneOptions](TimezoneOptions.md) |
 
 ## Returns

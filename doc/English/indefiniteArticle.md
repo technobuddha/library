@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: indefiniteArticle()
 
-> **indefiniteArticle**(`word`: `string`, `options`: [`IndefiniteArticleOptions`](IndefiniteArticleOptions.md)): `string`
+```ts
+function indefiniteArticle(word: string, options: IndefiniteArticleOptions): string;
+```
 
 Defined in: [indefinite-article.ts:48](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L48)
 

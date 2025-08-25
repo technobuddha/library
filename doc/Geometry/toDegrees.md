@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toDegrees()
 
-> **toDegrees**(`angle`: `number`, `unit`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function toDegrees(angle: number, unit: AngleUnit): number;
+```
 
 Defined in: [to-degrees.ts:12](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L12)
 

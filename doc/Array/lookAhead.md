@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: lookAhead()
 
-> **lookAhead**\<`T`\>(`array`: `T`[], `options?`: [`LookAheadOptions`](LookAheadOptions.md)\<`T`\>): [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<\[`T`, `T`, `number`\]\>
+```ts
+function lookAhead<T>(array: T[], options?: LookAheadOptions<T>): Generator<[T, T, number]>;
+```
 
 Defined in: [look-ahead.ts:63](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L63)
 

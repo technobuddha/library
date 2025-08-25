@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isValidDate()
 
-> **isValidDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)): `boolean`
+```ts
+function isValidDate(input: Date): boolean;
+```
 
 Defined in: [is-valid-date.ts:10](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L10)
 

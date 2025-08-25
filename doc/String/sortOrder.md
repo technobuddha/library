@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: sortOrder()
 
-> **sortOrder**(`text`: `string`, `options`: [`SortOrderOptions`](SortOrderOptions.md)): `string`
+```ts
+function sortOrder(text: string, options: SortOrderOptions): string;
+```
 
 Defined in: [sort-order.ts:26](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L26)
 

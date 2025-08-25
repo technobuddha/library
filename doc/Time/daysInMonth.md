@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: daysInMonth()
 
-> **daysInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DaysInMonthOptions`](DaysInMonthOptions.md)): `number`
+```ts
+function daysInMonth(input: Date, options: DaysInMonthOptions): number;
+```
 
 Defined in: [days-in-month.ts:25](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L25)
 

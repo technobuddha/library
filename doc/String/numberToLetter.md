@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: numberToLetter()
 
-> **numberToLetter**(`num`: `number`, `options`: [`NumberToLetterOptions`](NumberToLetterOptions.md)): `string`
+```ts
+function numberToLetter(num: number, options: NumberToLetterOptions): string;
+```
 
 Defined in: [number-to-letter.ts:26](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L26)
 

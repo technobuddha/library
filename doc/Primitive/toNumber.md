@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toNumber()
 
-> **toNumber**(`entity`: `unknown`): `number`
+```ts
+function toNumber(entity: unknown): number;
+```
 
 Defined in: [to-number.ts:13](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L13)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: negativeSign
 
-> `const` **negativeSign**: `"˗"` = `'˗'`
+```ts
+const negativeSign: "˗" = '˗';
+```
 
 Defined in: [constants.ts:274](https://github.com/technobuddha/library/blob/main/src/constants.ts#L274)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: specialFinish
 
-> `const` **specialFinish**: `"﴿"` = `'﴿'`
+```ts
+const specialFinish: "﴿" = '﴿';
+```
 
 Defined in: [json.ts:12](https://github.com/technobuddha/library/blob/main/src/json.ts#L12)
 

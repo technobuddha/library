@@ -20,7 +20,9 @@ A simple priority queue
 
 ### Constructor
 
-> **new PriorityQueue**\<`T`\>(`comparator`: (`a`: `T`, `b`: `T`) => `number`, `contents?`: [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`, `any`, `any`\>): `PriorityQueue`\<`T`\>
+```ts
+new PriorityQueue<T>(comparator: (a: T, b: T) => number, contents?: Iterable<T, any, any>): PriorityQueue<T>;
+```
 
 Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L12)
 
@@ -41,7 +43,9 @@ Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/
 
 #### Get Signature
 
-> **get** **size**(): `number`
+```ts
+get size(): number;
+```
 
 Defined in: [priority-queue.ts:66](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L66)
 
@@ -57,7 +61,9 @@ number of element in the queue
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): [`Iterator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator)\<`T`\>
+```ts
+iterator: Iterator<T>;
+```
 
 Defined in: [priority-queue.ts:54](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L54)
 
@@ -73,7 +79,9 @@ generator function
 
 ### map()
 
-> **map**\<`S`\>(`f`: (`value`: `T`, `index`: `number`, `array`: `T`[]) => `S`): `S`[]
+```ts
+map<S>(f: (value: T, index: number, array: T[]) => S): S[];
+```
 
 Defined in: [priority-queue.ts:76](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L76)
 
@@ -101,7 +109,9 @@ array of transformed queue elements
 
 ### pop()
 
-> **pop**(): `undefined` \| `T`
+```ts
+pop(): undefined | T;
+```
 
 Defined in: [priority-queue.ts:42](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L42)
 
@@ -117,7 +127,9 @@ queue element
 
 ### push()
 
-> **push**(...`o`: `T`[]): `void`
+```ts
+push(...o: T[]): void;
+```
 
 Defined in: [priority-queue.ts:32](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L32)
 
@@ -137,7 +149,9 @@ Add an element to the queue
 
 ### reorder()
 
-> **reorder**(`newComparator`: (`a`: `T`, `b`: `T`) => `number`): `void`
+```ts
+reorder(newComparator: (a: T, b: T) => number): void;
+```
 
 Defined in: [priority-queue.ts:88](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L88)
 

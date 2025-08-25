@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: escapeJS()
 
-> **escapeJS**(`input`: `string`): `string`
+```ts
+function escapeJS(input: string): string;
+```
 
 Defined in: [escape-js.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L12)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isOdd()
 
-> **isOdd**(`input`: `number`): `boolean`
+```ts
+function isOdd(input: number): boolean;
+```
 
 Defined in: [is-odd.ts:11](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L11)
 

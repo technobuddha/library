@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: fillTemplate()
 
-> **fillTemplate**(`input`: `string`, `values`: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string` \| `undefined`\>, `options`: [`FillTemplateOptions`](FillTemplateOptions.md)): `string`
+```ts
+function fillTemplate(
+   input: string, 
+   values: Record<string, string | undefined>, 
+   options: FillTemplateOptions): string;
+```
 
 Defined in: [fill-template.ts:26](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L26)
 

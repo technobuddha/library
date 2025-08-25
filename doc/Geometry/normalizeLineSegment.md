@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: normalizeLineSegment()
 
-> **normalizeLineSegment**(`line`: [`LineSegment`](LineSegment.md)): [`LineSegment`](LineSegment.md)
+```ts
+function normalizeLineSegment(line: LineSegment): LineSegment;
+```
 
 Defined in: [normalize-line-segment.ts:14](https://github.com/technobuddha/library/blob/main/src/normalize-line-segment.ts#L14)
 

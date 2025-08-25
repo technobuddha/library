@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Type Alias: AngleUnit
 
-> **AngleUnit** = `"deg"` \| `"degrees"` \| `"rads"` \| `"radians"` \| `"grads"` \| `"gradians"` \| `"turns"`
+```ts
+type AngleUnit = "deg" | "degrees" | "rads" | "radians" | "grads" | "gradians" | "turns";
+```
 
 Defined in: [angle.ts:7](https://github.com/technobuddha/library/blob/main/src/angle.ts#L7)
 

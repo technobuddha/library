@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: ApproximatelyEqualsOptions
 
-> **ApproximatelyEqualsOptions** = \{ `tolerance?`: `number`; \}
+```ts
+type ApproximatelyEqualsOptions = {
+  tolerance?: number;
+};
+```
 
 Defined in: [approximately-equals.ts:7](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L7)
 

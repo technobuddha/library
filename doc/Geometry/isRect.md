@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isRect()
 
-> **isRect**(`object`: `unknown`): `object is Rect`
+```ts
+function isRect(object: unknown): object is Rect;
+```
 
 Defined in: [is-rect.ts:15](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L15)
 

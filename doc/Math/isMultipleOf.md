@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isMultipleOf()
 
-> **isMultipleOf**(`input`: `number`, `multiplier`: `number`): `boolean`
+```ts
+function isMultipleOf(input: number, multiplier: number): boolean;
+```
 
 Defined in: [is-multiple-of.ts:12](https://github.com/technobuddha/library/blob/main/src/is-multiple-of.ts#L12)
 

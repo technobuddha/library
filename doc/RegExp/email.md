@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: email
 
-> `const` **email**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+```ts
+const email: RegExp;
+```
 
 Defined in: [regexp.ts:130](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L130)
 

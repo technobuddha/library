@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: addTime()
 
-> **addTime**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `increment`: [`TimeIncrement`](TimeIncrement.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function addTime(input: Date, increment: TimeIncrement): Date;
+```
 
 Defined in: [add-time.ts:28](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L28)
 

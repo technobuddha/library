@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: MidnightOptions
 
-> **MidnightOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type MidnightOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [is-midnight.ts:7](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L7)
 

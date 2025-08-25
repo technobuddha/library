@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toDate()
 
-> **toDate**(`entity`: `unknown`): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function toDate(entity: unknown): Date;
+```
 
 Defined in: [to-date.ts:20](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L20)
 

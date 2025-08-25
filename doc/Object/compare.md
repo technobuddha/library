@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: compare()
 
-> **compare**(`a`: `unknown`, `b`: `unknown`): `number`
+```ts
+function compare(a: unknown, b: unknown): number;
+```
 
 Defined in: [compare.ts:12](https://github.com/technobuddha/library/blob/main/src/compare.ts#L12)
 

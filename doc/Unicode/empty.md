@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: empty
 
-> `const` **empty**: `""` = `''`
+```ts
+const empty: "" = '';
+```
 
 Defined in: [constants.ts:7](https://github.com/technobuddha/library/blob/main/src/constants.ts#L7)
 

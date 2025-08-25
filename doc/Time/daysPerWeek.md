@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: daysPerWeek
 
-> `const` **daysPerWeek**: `7` = `7`
+```ts
+const daysPerWeek: 7 = 7;
+```
 
 Defined in: [constants.ts:75](https://github.com/technobuddha/library/blob/main/src/constants.ts#L75)
 

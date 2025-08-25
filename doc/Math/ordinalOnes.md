@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: ordinalOnes
 
-> `const` **ordinalOnes**: `string`[]
+```ts
+const ordinalOnes: string[];
+```
 
 Defined in: [constants.ts:353](https://github.com/technobuddha/library/blob/main/src/constants.ts#L353)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: perimeter()
 
-> **perimeter**(`vertices`: [`Polygon`](Polygon.md)): `number`
+```ts
+function perimeter(vertices: Polygon): number;
+```
 
 Defined in: [perimeter.ts:14](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L14)
 

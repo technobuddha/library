@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: sortKeys()
 
-> **sortKeys**\<`T`\>(`object`: `T`): `T`
+```ts
+function sortKeys<T>(object: T): T;
+```
 
 Defined in: [sort-keys.ts:18](https://github.com/technobuddha/library/blob/main/src/sort-keys.ts#L18)
 

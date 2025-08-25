@@ -8,7 +8,9 @@ Technobuddha Library
 
 ## Call Signature
 
-> **translate**(`point`: [`Cartesian`](Cartesian.md), `amount`: [`Cartesian`](Cartesian.md)): [`Cartesian`](Cartesian.md)
+```ts
+function translate(point: Cartesian, amount: Cartesian): Cartesian;
+```
 
 Defined in: [translate.ts:31](https://github.com/technobuddha/library/blob/main/src/translate.ts#L31)
 
@@ -42,7 +44,9 @@ const translated = translate(points, { x: 1, y: 2 });
 
 ## Call Signature
 
-> **translate**(`point`: [`Polygon`](Polygon.md), `amount`: [`Cartesian`](Cartesian.md)): [`Polygon`](Polygon.md)
+```ts
+function translate(point: Polygon, amount: Cartesian): Polygon;
+```
 
 Defined in: [translate.ts:32](https://github.com/technobuddha/library/blob/main/src/translate.ts#L32)
 

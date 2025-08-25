@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: matchCase()
 
-> **matchCase**(`input`: `string`, `target`: `string`): `string`
+```ts
+function matchCase(input: string, target: string): string;
+```
 
 Defined in: [match-case.ts:21](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L21)
 

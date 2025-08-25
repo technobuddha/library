@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: mode()
 
-> **mode**\<`T`\>(`array`: `T`[]): `undefined` \| `T`
+```ts
+function mode<T>(array: T[]): undefined | T;
+```
 
 Defined in: [mode.ts:12](https://github.com/technobuddha/library/blob/main/src/mode.ts#L12)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: removeDiacritics()
 
-> **removeDiacritics**(`input`: `string`): `string`
+```ts
+function removeDiacritics(input: string): string;
+```
 
 Defined in: [remove-diacritics.ts:13](https://github.com/technobuddha/library/blob/main/src/remove-diacritics.ts#L13)
 

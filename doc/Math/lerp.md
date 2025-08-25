@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: lerp()
 
-> **lerp**(`a`: `number`, `b`: `number`, `proportion`: `number`): `number`
+```ts
+function lerp(
+   a: number, 
+   b: number, 
+   proportion: number): number;
+```
 
 Defined in: [lerp.ts:14](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L14)
 

@@ -23,7 +23,9 @@ updating the hash with data and producing a digest in various formats.
 
 ### Constructor
 
-> **new HashBase**(): `HashBase`
+```ts
+new HashBase(): HashBase;
+```
 
 #### Returns
 
@@ -35,7 +37,9 @@ updating the hash with data and producing a digest in various formats.
 
 #### Call Signature
 
-> `abstract` **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+```ts
+abstract digest(): Uint8Array;
+```
 
 Defined in: [hash-base.ts:21](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L21)
 
@@ -49,7 +53,9 @@ The hash digest as a `Uint8Array`
 
 #### Call Signature
 
-> `abstract` **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
+```ts
+abstract digest(encoding: BinaryEncoding): string;
+```
 
 Defined in: [hash-base.ts:33](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L33)
 
@@ -77,7 +83,11 @@ An encoded string, depending on the `encoding` parameter.
 
 #### Call Signature
 
-> `abstract` **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)): `this`
+```ts
+abstract update(data: 
+  | TypedArray
+  | ArrayBuffer): this;
+```
 
 Defined in: [hash-base.ts:40](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L40)
 
@@ -87,7 +97,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 
@@ -97,7 +107,9 @@ The hash instance for method chaining.
 
 #### Call Signature
 
-> `abstract` **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
+```ts
+abstract update(data: string, encoding?: TextEncoding): this;
+```
 
 Defined in: [hash-base.ts:48](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L48)
 

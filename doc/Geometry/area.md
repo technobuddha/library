@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: area()
 
-> **area**(`vertices`: [`Polygon`](Polygon.md), `signed`: `boolean`): `number`
+```ts
+function area(vertices: Polygon, signed: boolean): number;
+```
 
 Defined in: [area.ts:17](https://github.com/technobuddha/library/blob/main/src/area.ts#L17)
 

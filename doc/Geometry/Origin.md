@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: Origin
 
-> `const` **Origin**: [`Cartesian`](Cartesian.md)
+```ts
+const Origin: Cartesian;
+```
 
 Defined in: [@types/geometry.ts:20](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L20)
 

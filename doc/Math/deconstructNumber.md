@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: deconstructNumber()
 
-> **deconstructNumber**(`input`: `number`, `precision`: `number`): [`DeconstructedNumber`](DeconstructedNumber.md) & \{ `fractional`: [`DeconstructedNumber`](DeconstructedNumber.md); `whole`: [`DeconstructedNumber`](DeconstructedNumber.md); \}
+```ts
+function deconstructNumber(input: number, precision: number): DeconstructedNumber & {
+  fractional: DeconstructedNumber;
+  whole: DeconstructedNumber;
+};
+```
 
 Defined in: [deconstruct-number.ts:32](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L32)
 
@@ -21,7 +26,10 @@ Deconstructs a number into its sign, value, mantissa, and exponent, and separate
 
 ## Returns
 
-[`DeconstructedNumber`](DeconstructedNumber.md) & \{ `fractional`: [`DeconstructedNumber`](DeconstructedNumber.md); `whole`: [`DeconstructedNumber`](DeconstructedNumber.md); \}
+[`DeconstructedNumber`](DeconstructedNumber.md) & \{
+  `fractional`: [`DeconstructedNumber`](DeconstructedNumber.md);
+  `whole`: [`DeconstructedNumber`](DeconstructedNumber.md);
+\}
 
 An object containing the normalized value, sign, mantissa, exponent, and separate representations
          of the whole and fractional parts.

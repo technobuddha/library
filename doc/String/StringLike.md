@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Type Alias: StringLike
 
-> **StringLike** = `string` \| `null` \| `undefined` \| (`string` \| `null` \| `undefined`)[]
+```ts
+type StringLike = string | null | undefined | (string | null | undefined)[];
+```
 
 Defined in: [@types/string-like.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/string-like.ts#L7)
 

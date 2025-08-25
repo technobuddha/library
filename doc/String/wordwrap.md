@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: wordwrap()
 
-> **wordwrap**(`input`: `string`, `options`: [`WordwrapOptions`](WordwrapOptions.md)): `string`
+```ts
+function wordwrap(input: string, options: WordwrapOptions): string;
+```
 
 Defined in: [wordwrap.ts:34](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L34)
 

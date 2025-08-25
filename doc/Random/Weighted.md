@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: Weighted
 
-> **Weighted** = \{ `weight`: `number`; \}
+```ts
+type Weighted = {
+  weight: number;
+};
+```
 
 Defined in: [random-weighted-pick.ts:10](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L10)
 

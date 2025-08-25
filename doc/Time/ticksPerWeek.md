@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: ticksPerWeek
 
-> `const` **ticksPerWeek**: `number`
+```ts
+const ticksPerWeek: number;
+```
 
 Defined in: [constants.ts:107](https://github.com/technobuddha/library/blob/main/src/constants.ts#L107)
 

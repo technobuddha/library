@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: modulo()
 
-> **modulo**(`dividend`: `number`, `divisor`: `number`): `number`
+```ts
+function modulo(dividend: number, divisor: number): number;
+```
 
 Defined in: [modulo.ts:17](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L17)
 

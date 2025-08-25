@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: cardinalOnes
 
-> `const` **cardinalOnes**: `string`[]
+```ts
+const cardinalOnes: string[];
+```
 
 Defined in: [constants.ts:328](https://github.com/technobuddha/library/blob/main/src/constants.ts#L328)
 

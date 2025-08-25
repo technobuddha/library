@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: syllables()
 
-> **syllables**(`input`: `string`): `number`
+```ts
+function syllables(input: string): number;
+```
 
 Defined in: [syllables.ts:13](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L13)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: ticksPerSecond
 
-> `const` **ticksPerSecond**: `1000` = `1000`
+```ts
+const ticksPerSecond: 1000 = 1000;
+```
 
 Defined in: [constants.ts:44](https://github.com/technobuddha/library/blob/main/src/constants.ts#L44)
 

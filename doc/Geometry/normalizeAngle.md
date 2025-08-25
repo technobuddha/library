@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: normalizeAngle()
 
-> **normalizeAngle**(`angle`: `number`, `unit`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function normalizeAngle(angle: number, unit: AngleUnit): number;
+```
 
 Defined in: [normalize-angle.ts:13](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L13)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: metricUnits()
 
-> **metricUnits**(`input`: `number`, `options`: [`MetricUnitsOptions`](MetricUnitsOptions.md)): `string`
+```ts
+function metricUnits(input: number, options: MetricUnitsOptions): string;
+```
 
 Defined in: [metric-units.ts:87](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L87)
 

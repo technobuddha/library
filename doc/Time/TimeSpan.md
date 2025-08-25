@@ -14,7 +14,9 @@ Store and manipulate a duration of time
 
 ### Constructor
 
-> **new TimeSpan**(): `TimeSpan`
+```ts
+new TimeSpan(): TimeSpan;
+```
 
 Defined in: [time-span.ts:23](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L23)
 
@@ -24,7 +26,9 @@ Defined in: [time-span.ts:23](https://github.com/technobuddha/library/blob/main/
 
 ### Constructor
 
-> **new TimeSpan**(`ticks`: `number`): `TimeSpan`
+```ts
+new TimeSpan(ticks: number): TimeSpan;
+```
 
 Defined in: [time-span.ts:28](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L28)
 
@@ -40,7 +44,12 @@ Defined in: [time-span.ts:28](https://github.com/technobuddha/library/blob/main/
 
 ### Constructor
 
-> **new TimeSpan**(`h`: `number`, `m`: `number`, `s`: `number`): `TimeSpan`
+```ts
+new TimeSpan(
+   h: number, 
+   m: number, 
+   s: number): TimeSpan;
+```
 
 Defined in: [time-span.ts:35](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L35)
 
@@ -58,7 +67,13 @@ Defined in: [time-span.ts:35](https://github.com/technobuddha/library/blob/main/
 
 ### Constructor
 
-> **new TimeSpan**(`d`: `number`, `h`: `number`, `m`: `number`, `s`: `number`): `TimeSpan`
+```ts
+new TimeSpan(
+   d: number, 
+   h: number, 
+   m: number, 
+   s: number): TimeSpan;
+```
 
 Defined in: [time-span.ts:43](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L43)
 
@@ -77,7 +92,14 @@ Defined in: [time-span.ts:43](https://github.com/technobuddha/library/blob/main/
 
 ### Constructor
 
-> **new TimeSpan**(`d`: `number`, `h`: `number`, `m`: `number`, `s`: `number`, `ms`: `number`): `TimeSpan`
+```ts
+new TimeSpan(
+   d: number, 
+   h: number, 
+   m: number, 
+   s: number, 
+   ms: number): TimeSpan;
+```
 
 Defined in: [time-span.ts:52](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L52)
 
@@ -97,7 +119,9 @@ Defined in: [time-span.ts:52](https://github.com/technobuddha/library/blob/main/
 
 ### Constructor
 
-> **new TimeSpan**(`text`: `string`): `TimeSpan`
+```ts
+new TimeSpan(text: string): TimeSpan;
+```
 
 Defined in: [time-span.ts:57](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L57)
 
@@ -117,7 +141,9 @@ Defined in: [time-span.ts:57](https://github.com/technobuddha/library/blob/main/
 
 #### Get Signature
 
-> **get** **days**(): `number`
+```ts
+get days(): number;
+```
 
 Defined in: [time-span.ts:150](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L150)
 
@@ -133,7 +159,9 @@ Get the days portion
 
 #### Get Signature
 
-> **get** **hours**(): `number`
+```ts
+get hours(): number;
+```
 
 Defined in: [time-span.ts:157](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L157)
 
@@ -149,7 +177,9 @@ Get the hours portion
 
 #### Get Signature
 
-> **get** **milliseconds**(): `number`
+```ts
+get milliseconds(): number;
+```
 
 Defined in: [time-span.ts:185](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L185)
 
@@ -165,7 +195,9 @@ Get the milliseconds portion
 
 #### Get Signature
 
-> **get** **minutes**(): `number`
+```ts
+get minutes(): number;
+```
 
 Defined in: [time-span.ts:166](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L166)
 
@@ -181,7 +213,9 @@ Get the minutes portion
 
 #### Get Signature
 
-> **get** **seconds**(): `number`
+```ts
+get seconds(): number;
+```
 
 Defined in: [time-span.ts:175](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L175)
 
@@ -197,7 +231,9 @@ Get the seconds portion
 
 #### Get Signature
 
-> **get** **ticks**(): `number`
+```ts
+get ticks(): number;
+```
 
 Defined in: [time-span.ts:192](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L192)
 
@@ -213,7 +249,9 @@ Get the total number of ticks (milliseconds)
 
 #### Get Signature
 
-> **get** **totalDays**(): `number`
+```ts
+get totalDays(): number;
+```
 
 Defined in: [time-span.ts:199](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L199)
 
@@ -229,7 +267,9 @@ Get the total number of days
 
 #### Get Signature
 
-> **get** **totalHours**(): `number`
+```ts
+get totalHours(): number;
+```
 
 Defined in: [time-span.ts:206](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L206)
 
@@ -245,7 +285,9 @@ Get the total number of hours
 
 #### Get Signature
 
-> **get** **totalMilliseconds**(): `number`
+```ts
+get totalMilliseconds(): number;
+```
 
 Defined in: [time-span.ts:227](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L227)
 
@@ -261,7 +303,9 @@ Get the total number of milliseconds
 
 #### Get Signature
 
-> **get** **totalMinutes**(): `number`
+```ts
+get totalMinutes(): number;
+```
 
 Defined in: [time-span.ts:213](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L213)
 
@@ -277,7 +321,9 @@ Get the total number of minutes
 
 #### Get Signature
 
-> **get** **totalSeconds**(): `number`
+```ts
+get totalSeconds(): number;
+```
 
 Defined in: [time-span.ts:220](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L220)
 
@@ -291,7 +337,9 @@ Get the total number of seconds
 
 ### add()
 
-> **add**(`other`: `TimeSpan`): `TimeSpan`
+```ts
+add(other: TimeSpan): TimeSpan;
+```
 
 Defined in: [time-span.ts:297](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L297)
 
@@ -313,7 +361,9 @@ a TimeSpan that is the sum of two timespans
 
 ### format()
 
-> **format**(`mask?`: `string`): `string`
+```ts
+format(mask?: string): string;
+```
 
 Defined in: [time-span.ts:237](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L237)
 
@@ -335,7 +385,9 @@ the formatted TimeSpan
 
 ### toString()
 
-> **toString**(): `string`
+```ts
+toString(): string;
+```
 
 Defined in: [time-span.ts:287](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L287)
 
@@ -351,7 +403,9 @@ formatted string
 
 ### compare()
 
-> `static` **compare**(`t1`: `TimeSpan`, `t2`: `TimeSpan`): `number`
+```ts
+static compare(t1: TimeSpan, t2: TimeSpan): number;
+```
 
 Defined in: [time-span.ts:308](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L308)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toPrimitive()
 
-> **toPrimitive**(`input`: `unknown`, `hint`: `"string"` \| `"number"` \| `"default"`): `unknown`
+```ts
+function toPrimitive(input: unknown, hint: "string" | "number" | "default"): unknown;
+```
 
 Defined in: [to-primitive.ts:13](https://github.com/technobuddha/library/blob/main/src/to-primitive.ts#L13)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: indent()
 
-> **indent**(`input`: `string`, `options`: [`IndentOptions`](IndentOptions.md)): `string`
+```ts
+function indent(input: string, options: IndentOptions): string;
+```
 
 Defined in: [indent.ts:24](https://github.com/technobuddha/library/blob/main/src/indent.ts#L24)
 

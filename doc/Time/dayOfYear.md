@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: dayOfYear()
 
-> **dayOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DayOfYearOptions`](DayOfYearOptions.md)): `number`
+```ts
+function dayOfYear(input: Date, options: DayOfYearOptions): number;
+```
 
 Defined in: [day-of-year.ts:24](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L24)
 

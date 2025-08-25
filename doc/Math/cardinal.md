@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: cardinal()
 
-> **cardinal**(`input`: `number`, `options`: [`CardinalOptions`](CardinalOptions.md)): `string`
+```ts
+function cardinal(input: number, options: CardinalOptions): string;
+```
 
 Defined in: [numbering/cardinal.ts:73](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L73)
 

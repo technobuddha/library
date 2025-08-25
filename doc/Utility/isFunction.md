@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isFunction()
 
-> **isFunction**(`value`: `unknown`): `value is Function`
+```ts
+function isFunction(value: unknown): value is Function;
+```
 
 Defined in: [is-function.ts:16](https://github.com/technobuddha/library/blob/main/src/is-function.ts#L16)
 

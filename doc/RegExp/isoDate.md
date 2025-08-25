@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: isoDate
 
-> `const` **isoDate**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+```ts
+const isoDate: RegExp;
+```
 
 Defined in: [regexp.ts:92](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L92)
 

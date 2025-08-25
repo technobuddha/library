@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: relativeTime()
 
-> **relativeTime**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `relativeTo`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`RelativeTimeOptions`](RelativeTimeOptions.md)): `string`
+```ts
+function relativeTime(
+   input: Date, 
+   relativeTo: Date, 
+   options: RelativeTimeOptions): string;
+```
 
 Defined in: [relative-time.ts:41](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L41)
 

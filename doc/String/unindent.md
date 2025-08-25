@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: unindent()
 
-> **unindent**(`input`: `string`, `pattern`: [`IndentOptions`](IndentOptions.md)): `string`
+```ts
+function unindent(input: string, pattern: IndentOptions): string;
+```
 
 Defined in: [unindent.ts:13](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L13)
 

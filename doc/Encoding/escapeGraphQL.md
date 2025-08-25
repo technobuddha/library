@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: escapeGraphQL()
 
-> **escapeGraphQL**(`input`: `string`): `string`
+```ts
+function escapeGraphQL(input: string): string;
+```
 
 Defined in: [escape-graph-ql.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-graph-ql.ts#L12)
 

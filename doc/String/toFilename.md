@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toFilename()
 
-> **toFilename**(`input`: `string`, `options`: [`FilenameOptions`](FilenameOptions.md)): `string`
+```ts
+function toFilename(input: string, options: FilenameOptions): string;
+```
 
 Defined in: [to-filename.ts:33](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L33)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: SameYearOptions
 
-> **SameYearOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type SameYearOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [is-same-year.ts:6](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L6)
 

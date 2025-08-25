@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: tokenize()
 
-> **tokenize**(`input`: `string`): `string`[]
+```ts
+function tokenize(input: string): string[];
+```
 
 Defined in: [tokenize.ts:11](https://github.com/technobuddha/library/blob/main/src/tokenize.ts#L11)
 

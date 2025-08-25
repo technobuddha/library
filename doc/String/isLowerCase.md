@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isLowerCase()
 
-> **isLowerCase**(`input`: `string`): `boolean`
+```ts
+function isLowerCase(input: string): boolean;
+```
 
 Defined in: [is-lower-case.ts:11](https://github.com/technobuddha/library/blob/main/src/is-lower-case.ts#L11)
 

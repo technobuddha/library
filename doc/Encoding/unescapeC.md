@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: unescapeC()
 
-> **unescapeC**(`input`: `string`): `string`
+```ts
+function unescapeC(input: string): string;
+```
 
 Defined in: [unescape-c.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L9)
 

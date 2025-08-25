@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isBoolean()
 
-> **isBoolean**(`value`: `unknown`): `value is boolean`
+```ts
+function isBoolean(value: unknown): value is boolean;
+```
 
 Defined in: [is-boolean.ts:9](https://github.com/technobuddha/library/blob/main/src/is-boolean.ts#L9)
 

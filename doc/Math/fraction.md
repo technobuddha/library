@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: fraction()
 
-> **fraction**(`input`: `number`, `options`: [`FractionOptions`](FractionOptions.md)): `string`
+```ts
+function fraction(input: number, options: FractionOptions): string;
+```
 
 Defined in: [numbering/fraction.ts:76](https://github.com/technobuddha/library/blob/main/src/numbering/fraction.ts#L76)
 

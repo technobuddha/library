@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: variance()
 
-> **variance**(...`dataPoints`: `number`[]): `number`
+```ts
+function variance(...dataPoints: number[]): number;
+```
 
 Defined in: [variance.ts:14](https://github.com/technobuddha/library/blob/main/src/variance.ts#L14)
 

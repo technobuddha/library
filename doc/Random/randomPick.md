@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: randomPick()
 
-> **randomPick**\<`T`\>(`list`: readonly `T`[], `random`: () => `number`): `undefined` \| `T`
+```ts
+function randomPick<T>(list: readonly T[], random: () => number): undefined | T;
+```
 
 Defined in: [random-pick.ts:12](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L12)
 

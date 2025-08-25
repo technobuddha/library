@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isNegativeZero()
 
-> **isNegativeZero**(`input`: `number`): `boolean`
+```ts
+function isNegativeZero(input: number): boolean;
+```
 
 Defined in: [is-negative-zero.ts:9](https://github.com/technobuddha/library/blob/main/src/is-negative-zero.ts#L9)
 

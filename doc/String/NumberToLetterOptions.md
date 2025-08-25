@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: NumberToLetterOptions
 
-> **NumberToLetterOptions** = \{ `alphabet?`: `string`; \}
+```ts
+type NumberToLetterOptions = {
+  alphabet?: string;
+};
+```
 
 Defined in: [number-to-letter.ts:13](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L13)
 

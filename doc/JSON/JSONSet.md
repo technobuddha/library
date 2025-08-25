@@ -47,7 +47,11 @@ Set
 
 ### Constructor
 
-> **new JSONSet**\<`T`\>(`values?`: `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`, `any`, `any`\>): `JSONSet`\<`T`\>
+```ts
+new JSONSet<T>(values?: 
+  | null
+| Iterable<T, any, any>): JSONSet<T>;
+```
 
 Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L35)
 
@@ -55,7 +59,7 @@ Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/s
 
 | Parameter | Type |
 | ------ | ------ |
-| `values?` | `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`, `any`, `any`\> |
+| `values?` | \| `null` \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`T`, `any`, `any`\> |
 
 #### Returns
 
@@ -73,7 +77,9 @@ Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/s
 
 #### Get Signature
 
-> **get** **size**(): `number`
+```ts
+get size(): number;
+```
 
 Defined in: [json-set.ts:50](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L50)
 
@@ -85,13 +91,17 @@ the number of (unique) elements in Set.
 
 #### Implementation of
 
-`Set.size`
+```ts
+Set.size
+```
 
 ## Methods
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): `SetIterator`\<`T`\>
+```ts
+iterator: SetIterator<T>;
+```
 
 Defined in: [json-set.ts:155](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L155)
 
@@ -101,13 +111,17 @@ Defined in: [json-set.ts:155](https://github.com/technobuddha/library/blob/main/
 
 #### Implementation of
 
-`Set.[iterator]`
+```ts
+Set.[iterator]
+```
 
 ***
 
 ### add()
 
-> **add**(`value`: `T`): `this`
+```ts
+add(value: T): this;
+```
 
 Defined in: [json-set.ts:54](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L54)
 
@@ -125,13 +139,17 @@ Appends a new element with a specified value to the end of the Set.
 
 #### Implementation of
 
-`Set.add`
+```ts
+Set.add
+```
 
 ***
 
 ### clear()
 
-> **clear**(): `void`
+```ts
+clear(): void;
+```
 
 Defined in: [json-set.ts:59](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L59)
 
@@ -141,13 +159,17 @@ Defined in: [json-set.ts:59](https://github.com/technobuddha/library/blob/main/s
 
 #### Implementation of
 
-`Set.clear`
+```ts
+Set.clear
+```
 
 ***
 
 ### delete()
 
-> **delete**(`value`: `T`): `boolean`
+```ts
+delete(value: T): boolean;
+```
 
 Defined in: [json-set.ts:63](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L63)
 
@@ -167,13 +189,17 @@ Returns true if an element in the Set existed and has been removed, or false if 
 
 #### Implementation of
 
-`Set.delete`
+```ts
+Set.delete
+```
 
 ***
 
 ### difference()
 
-> **difference**\<`U`\>(`other`: `ReadonlySetLike`\<`U`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T`\>
+```ts
+difference<U>(other: ReadonlySetLike<U>): Set<T>;
+```
 
 Defined in: [json-set.ts:67](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L67)
 
@@ -197,13 +223,17 @@ a new Set containing all the elements in this Set which are not also in the argu
 
 #### Implementation of
 
-`Set.difference`
+```ts
+Set.difference
+```
 
 ***
 
 ### entries()
 
-> **entries**(): `SetIterator`\<\[`T`, `T`\]\>
+```ts
+entries(): SetIterator<[T, T]>;
+```
 
 Defined in: [json-set.ts:73](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L73)
 
@@ -215,13 +245,17 @@ Returns an iterable of [v,v] pairs for every value `v` in the set.
 
 #### Implementation of
 
-`Set.entries`
+```ts
+Set.entries
+```
 
 ***
 
 ### forEach()
 
-> **forEach**(`callback`: (`value`: `T`, `key`: `T`, `set`: [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T`\>) => `void`, `thisArg?`: `unknown`): `void`
+```ts
+forEach(callback: (value: T, key: T, set: Set<T>) => void, thisArg?: unknown): void;
+```
 
 Defined in: [json-set.ts:79](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L79)
 
@@ -240,13 +274,17 @@ Executes a provided function once per each value in the Set object, in insertion
 
 #### Implementation of
 
-`Set.forEach`
+```ts
+Set.forEach
+```
 
 ***
 
 ### has()
 
-> **has**(`value`: `T`): `boolean`
+```ts
+has(value: T): boolean;
+```
 
 Defined in: [json-set.ts:85](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L85)
 
@@ -264,13 +302,17 @@ a boolean indicating whether an element with the specified value exists in the S
 
 #### Implementation of
 
-`Set.has`
+```ts
+Set.has
+```
 
 ***
 
 ### intersection()
 
-> **intersection**\<`U`\>(`other`: `ReadonlySetLike`\<`U`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T` & `U`\>
+```ts
+intersection<U>(other: ReadonlySetLike<U>): Set<T & U>;
+```
 
 Defined in: [json-set.ts:89](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L89)
 
@@ -294,13 +336,17 @@ a new Set containing all the elements which are both in this Set and in the argu
 
 #### Implementation of
 
-`Set.intersection`
+```ts
+Set.intersection
+```
 
 ***
 
 ### isDisjointFrom()
 
-> **isDisjointFrom**(`other`: `ReadonlySetLike`\<`unknown`\>): `boolean`
+```ts
+isDisjointFrom(other: ReadonlySetLike<unknown>): boolean;
+```
 
 Defined in: [json-set.ts:97](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L97)
 
@@ -318,13 +364,17 @@ a boolean indicating whether this Set has no elements in common with the argumen
 
 #### Implementation of
 
-`Set.isDisjointFrom`
+```ts
+Set.isDisjointFrom
+```
 
 ***
 
 ### isSubsetOf()
 
-> **isSubsetOf**(`other`: `ReadonlySetLike`\<`unknown`\>): `boolean`
+```ts
+isSubsetOf(other: ReadonlySetLike<unknown>): boolean;
+```
 
 Defined in: [json-set.ts:106](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L106)
 
@@ -342,13 +392,17 @@ a boolean indicating whether all the elements in this Set are also in the argume
 
 #### Implementation of
 
-`Set.isSubsetOf`
+```ts
+Set.isSubsetOf
+```
 
 ***
 
 ### isSupersetOf()
 
-> **isSupersetOf**(`other`: `ReadonlySetLike`\<`unknown`\>): `boolean`
+```ts
+isSupersetOf(other: ReadonlySetLike<unknown>): boolean;
+```
 
 Defined in: [json-set.ts:115](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L115)
 
@@ -366,13 +420,17 @@ a boolean indicating whether all the elements in the argument are also in this S
 
 #### Implementation of
 
-`Set.isSupersetOf`
+```ts
+Set.isSupersetOf
+```
 
 ***
 
 ### keys()
 
-> **keys**(): `SetIterator`\<`T`\>
+```ts
+keys(): SetIterator<T>;
+```
 
 Defined in: [json-set.ts:124](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L124)
 
@@ -384,13 +442,17 @@ Despite its name, returns an iterable of the values in the set.
 
 #### Implementation of
 
-`Set.keys`
+```ts
+Set.keys
+```
 
 ***
 
 ### symmetricDifference()
 
-> **symmetricDifference**\<`U`\>(`other`: `ReadonlySetLike`\<`U`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T` \| `U`\>
+```ts
+symmetricDifference<U>(other: ReadonlySetLike<U>): Set<T | U>;
+```
 
 Defined in: [json-set.ts:128](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L128)
 
@@ -414,13 +476,17 @@ a new Set containing all the elements which are in either this Set or in the arg
 
 #### Implementation of
 
-`Set.symmetricDifference`
+```ts
+Set.symmetricDifference
+```
 
 ***
 
 ### union()
 
-> **union**\<`U`\>(`other`: `ReadonlySetLike`\<`U`\>): [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T` \| `U`\>
+```ts
+union<U>(other: ReadonlySetLike<U>): Set<T | U>;
+```
 
 Defined in: [json-set.ts:145](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L145)
 
@@ -444,13 +510,17 @@ a new Set containing all the elements in this Set and also all the elements in t
 
 #### Implementation of
 
-`Set.union`
+```ts
+Set.union
+```
 
 ***
 
 ### values()
 
-> **values**(): `SetIterator`\<`T`\>
+```ts
+values(): SetIterator<T>;
+```
 
 Defined in: [json-set.ts:149](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L149)
 
@@ -462,5 +532,7 @@ Returns an iterable of values in the set.
 
 #### Implementation of
 
-`Set.values`
+```ts
+Set.values
+```
 

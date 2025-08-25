@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: BeginningOfDayOptions
 
-> **BeginningOfDayOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type BeginningOfDayOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [beginning-of-day.ts:7](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L7)
 

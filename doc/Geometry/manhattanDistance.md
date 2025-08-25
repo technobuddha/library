@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: manhattanDistance()
 
-> **manhattanDistance**(`a`: [`Cartesian`](Cartesian.md), `b`: [`Cartesian`](Cartesian.md)): `number`
+```ts
+function manhattanDistance(a: Cartesian, b: Cartesian): number;
+```
 
 Defined in: [manhattan-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/manhattan-distance.ts#L23)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: CountOptions
 
-> **CountOptions** = \{ `overlap?`: `boolean`; \}
+```ts
+type CountOptions = {
+  overlap?: boolean;
+};
+```
 
 Defined in: [count.ts:6](https://github.com/technobuddha/library/blob/main/src/count.ts#L6)
 

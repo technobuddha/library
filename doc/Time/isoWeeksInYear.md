@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Function: isoWeeksInYear()
 
-> **isoWeeksInYear**(`input`: `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`ISOWeeksInYearOptions`](ISOWeeksInYearOptions.md)): `number`
+```ts
+function isoWeeksInYear(input: 
+  | number
+  | Date, options: ISOWeeksInYearOptions): number;
+```
 
 Defined in: [iso-weeks-in-year.ts:28](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L28)
 
@@ -16,7 +20,7 @@ Determine the number of ISO weeks within a year
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `input` | `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date within the year, or a year number |
+| `input` | \| `number` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date) | A date within the year, or a year number |
 | `options` | [`ISOWeeksInYearOptions`](ISOWeeksInYearOptions.md) | see [ISOWeeksInYearOptions](ISOWeeksInYearOptions.md) |
 
 ## Returns

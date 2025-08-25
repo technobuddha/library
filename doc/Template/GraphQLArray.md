@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Type Alias: GraphQLArray
 
-> **GraphQLArray** = [`GraphQLValue`](GraphQLValue.md)[]
+```ts
+type GraphQLArray = GraphQLValue[];
+```
 
 Defined in: [graph-ql.ts:23](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L23)
 

@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Type Alias: WordwrapOptions
 
-> **WordwrapOptions** = \{ `cut?`: `boolean`; `separator?`: `string`; `trailingSpaces?`: `boolean`; `width?`: `number`; \}
+```ts
+type WordwrapOptions = {
+  cut?: boolean;
+  separator?: string;
+  trailingSpaces?: boolean;
+  width?: number;
+};
+```
 
 Defined in: [wordwrap.ts:10](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L10)
 

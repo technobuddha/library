@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toError()
 
-> **toError**(`entity`: `unknown`): [`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
+```ts
+function toError(entity: unknown): Error;
+```
 
 Defined in: [to-error.ts:12](https://github.com/technobuddha/library/blob/main/src/to-error.ts#L12)
 

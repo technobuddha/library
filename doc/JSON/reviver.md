@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: reviver()
 
-> **reviver**(`this`: `unknown`, `_key`: `string`, `value`: `unknown`): `unknown`
+```ts
+function reviver(
+   this: unknown, 
+   _key: string, 
+   value: unknown): unknown;
+```
 
 Defined in: [json.ts:50](https://github.com/technobuddha/library/blob/main/src/json.ts#L50)
 

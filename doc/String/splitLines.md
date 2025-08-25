@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: splitLines()
 
-> **splitLines**(`input`: `string`): `string`[]
+```ts
+function splitLines(input: string): string[];
+```
 
 Defined in: [split-lines.ts:11](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L11)
 

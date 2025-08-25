@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: midpoint()
 
-> **midpoint**(`line`: [`LineSegment`](LineSegment.md), `part`: `number`): [`Cartesian`](Cartesian.md)
+```ts
+function midpoint(line: LineSegment, part: number): Cartesian;
+```
 
 Defined in: [midpoint.ts:14](https://github.com/technobuddha/library/blob/main/src/midpoint.ts#L14)
 

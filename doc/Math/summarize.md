@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: summarize()
 
-> **summarize**(`input`: `number`): `string`
+```ts
+function summarize(input: number): string;
+```
 
 Defined in: [numbering/summarize.ts:19](https://github.com/technobuddha/library/blob/main/src/numbering/summarize.ts#L19)
 

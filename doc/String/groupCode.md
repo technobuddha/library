@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: groupCode()
 
-> **groupCode**(`input`: `string`): `string`
+```ts
+function groupCode(input: string): string;
+```
 
 Defined in: [group-code.ts:16](https://github.com/technobuddha/library/blob/main/src/group-code.ts#L16)
 

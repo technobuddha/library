@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: correctMSWord()
 
-> **correctMSWord**(`input`: `string`): `string`
+```ts
+function correctMSWord(input: string): string;
+```
 
 Defined in: [correct-ms-word.ts:39](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L39)
 

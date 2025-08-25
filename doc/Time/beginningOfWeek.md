@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: beginningOfWeek()
 
-> **beginningOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfWeekOptions`](BeginningOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function beginningOfWeek(input: Date, options: BeginningOfWeekOptions): Date;
+```
 
 Defined in: [beginning-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L28)
 

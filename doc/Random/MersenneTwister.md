@@ -38,7 +38,9 @@ const randomFloat = mt.genrandReal2();
 
 ### Constructor
 
-> **new MersenneTwister**(`seed`: `number` \| `number`[]): `MersenneTwister`
+```ts
+new MersenneTwister(seed: number | number[]): MersenneTwister;
+```
 
 Defined in: [mersenne-twister.ts:109](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L109)
 
@@ -62,7 +64,9 @@ Defined in: [mersenne-twister.ts:109](https://github.com/technobuddha/library/bl
 
 ### genrandInt31()
 
-> **genrandInt31**(): `number`
+```ts
+genrandInt31(): number;
+```
 
 Defined in: [mersenne-twister.ts:207](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L207)
 
@@ -74,7 +78,9 @@ Defined in: [mersenne-twister.ts:207](https://github.com/technobuddha/library/bl
 
 ### genrandInt32()
 
-> **genrandInt32**(): `number`
+```ts
+genrandInt32(): number;
+```
 
 Defined in: [mersenne-twister.ts:175](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L175)
 
@@ -86,7 +92,9 @@ Defined in: [mersenne-twister.ts:175](https://github.com/technobuddha/library/bl
 
 ### genrandReal1()
 
-> **genrandReal1**(): `number`
+```ts
+genrandReal1(): number;
+```
 
 Defined in: [mersenne-twister.ts:212](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L212)
 
@@ -98,7 +106,9 @@ Defined in: [mersenne-twister.ts:212](https://github.com/technobuddha/library/bl
 
 ### genrandReal2()
 
-> **genrandReal2**(): `number`
+```ts
+genrandReal2(): number;
+```
 
 Defined in: [mersenne-twister.ts:218](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L218)
 
@@ -110,7 +120,9 @@ Defined in: [mersenne-twister.ts:218](https://github.com/technobuddha/library/bl
 
 ### genrandReal3()
 
-> **genrandReal3**(): `number`
+```ts
+genrandReal3(): number;
+```
 
 Defined in: [mersenne-twister.ts:224](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L224)
 
@@ -122,7 +134,9 @@ Defined in: [mersenne-twister.ts:224](https://github.com/technobuddha/library/bl
 
 ### genrandRes53()
 
-> **genrandRes53**(): `number`
+```ts
+genrandRes53(): number;
+```
 
 Defined in: [mersenne-twister.ts:230](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L230)
 
@@ -134,7 +148,9 @@ Defined in: [mersenne-twister.ts:230](https://github.com/technobuddha/library/bl
 
 ### initByArray()
 
-> **initByArray**(`key`: `number`[]): `void`
+```ts
+initByArray(key: number[]): void;
+```
 
 Defined in: [mersenne-twister.ts:139](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L139)
 
@@ -152,7 +168,9 @@ Defined in: [mersenne-twister.ts:139](https://github.com/technobuddha/library/bl
 
 ### initGenrand()
 
-> **initGenrand**(`seed`: `number`): `void`
+```ts
+initGenrand(seed: number): void;
+```
 
 Defined in: [mersenne-twister.ts:122](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L122)
 
@@ -170,7 +188,9 @@ Defined in: [mersenne-twister.ts:122](https://github.com/technobuddha/library/bl
 
 ### setSeed()
 
-> **setSeed**(`seed`: `number` \| `number`[]): `void`
+```ts
+setSeed(seed: number | number[]): void;
+```
 
 Defined in: [mersenne-twister.ts:113](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L113)
 

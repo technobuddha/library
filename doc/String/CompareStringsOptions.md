@@ -6,7 +6,13 @@ Technobuddha Library
 
 # Type Alias: CompareStringsOptions
 
-> **CompareStringsOptions** = \{ `caseInsensitive?`: `boolean`; `natural?`: `boolean`; `version?`: `boolean`; \}
+```ts
+type CompareStringsOptions = {
+  caseInsensitive?: boolean;
+  natural?: boolean;
+  version?: boolean;
+};
+```
 
 Defined in: [compare-strings.ts:9](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L9)
 

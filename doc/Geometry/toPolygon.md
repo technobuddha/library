@@ -8,7 +8,9 @@ Technobuddha Library
 
 ## Call Signature
 
-> **toPolygon**(`pointA`: [`Cartesian`](Cartesian.md), `pointB`: [`Cartesian`](Cartesian.md)): [`Polygon`](Polygon.md)
+```ts
+function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
+```
 
 Defined in: [to-polygon.ts:17](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L17)
 
@@ -33,7 +35,9 @@ A `Polygon` object representing the rectangle.
 
 ## Call Signature
 
-> **toPolygon**(`rect`: [`Rect`](Rect.md)): [`Polygon`](Polygon.md)
+```ts
+function toPolygon(rect: Rect): Polygon;
+```
 
 Defined in: [to-polygon.ts:18](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L18)
 

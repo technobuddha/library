@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: constructNumber()
 
-> **constructNumber**(`deconstructed`: [`Omit`](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)\<[`DeconstructedNumber`](DeconstructedNumber.md), `"value"`\>): `number`
+```ts
+function constructNumber(deconstructed: Omit<DeconstructedNumber, "value">): number;
+```
 
 Defined in: [construct-number.ts:11](https://github.com/technobuddha/library/blob/main/src/construct-number.ts#L11)
 

@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: ISOWeeksInYearOptions
 
-> **ISOWeeksInYearOptions** = \{ `utc?`: `boolean`; `weekOneIncludes?`: [`DayOfWeek`](DayOfWeek.md); \}
+```ts
+type ISOWeeksInYearOptions = {
+  utc?: boolean;
+  weekOneIncludes?: DayOfWeek;
+};
+```
 
 Defined in: [iso-weeks-in-year.ts:11](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L11)
 

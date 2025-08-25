@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: binaryUnits()
 
-> **binaryUnits**(`input`: `number`, `options`: [`BinaryUnitsOptions`](BinaryUnitsOptions.md)): `string`
+```ts
+function binaryUnits(input: number, options: BinaryUnitsOptions): string;
+```
 
 Defined in: [binary-units.ts:19](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L19)
 

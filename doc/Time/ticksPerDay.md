@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: ticksPerDay
 
-> `const` **ticksPerDay**: `number`
+```ts
+const ticksPerDay: number;
+```
 
 Defined in: [constants.ts:99](https://github.com/technobuddha/library/blob/main/src/constants.ts#L99)
 

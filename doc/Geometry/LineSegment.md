@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Type Alias: LineSegment
 
-> **LineSegment** = \{ `x0`: `number`; `x1`: `number`; `y0`: `number`; `y1`: `number`; \}
+```ts
+type LineSegment = {
+  x0: number;
+  x1: number;
+  y0: number;
+  y1: number;
+};
+```
 
 Defined in: [@types/geometry.ts:47](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L47)
 

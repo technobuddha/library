@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: mean()
 
-> **mean**(`numbers`: `number`[]): `number`
+```ts
+function mean(numbers: number[]): number;
+```
 
 Defined in: [mean.ts:12](https://github.com/technobuddha/library/blob/main/src/mean.ts#L12)
 

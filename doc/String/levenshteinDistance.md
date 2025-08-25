@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: levenshteinDistance()
 
-> **levenshteinDistance**(`input`: `string`, `comparedTo`: `string`, `options`: [`LevenshteinDistanceOptions`](LevenshteinDistanceOptions.md)): `number`
+```ts
+function levenshteinDistance(
+   input: string, 
+   comparedTo: string, 
+   options: LevenshteinDistanceOptions): number;
+```
 
 Defined in: [levenshtein-distance.ts:25](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L25)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: hyphen
 
-> `const` **hyphen**: `"‐"` = `'‐'`
+```ts
+const hyphen: "‐" = '‐';
+```
 
 Defined in: [constants.ts:252](https://github.com/technobuddha/library/blob/main/src/constants.ts#L252)
 

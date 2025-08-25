@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: IndefiniteArticleOptions
 
-> **IndefiniteArticleOptions** = \{ `only?`: `boolean`; \}
+```ts
+type IndefiniteArticleOptions = {
+  only?: boolean;
+};
+```
 
 Defined in: [indefinite-article.ts:28](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L28)
 

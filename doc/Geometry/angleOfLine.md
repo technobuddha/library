@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: angleOfLine()
 
-> **angleOfLine**(`line`: [`LineSegment`](LineSegment.md), `units`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function angleOfLine(line: LineSegment, units: AngleUnit): number;
+```
 
 Defined in: [angle-of-line.ts:16](https://github.com/technobuddha/library/blob/main/src/angle-of-line.ts#L16)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: CollapseBreakingSpaceOptions
 
-> **CollapseBreakingSpaceOptions** = \{ `trim?`: `boolean`; \}
+```ts
+type CollapseBreakingSpaceOptions = {
+  trim?: boolean;
+};
+```
 
 Defined in: [collapse-breaking-space.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L10)
 

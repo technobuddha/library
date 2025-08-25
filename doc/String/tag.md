@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: tag()
 
-> **tag**(`input`: `string`, `tagName`: `string`, `attributes`: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `string`\>): `string`
+```ts
+function tag(
+   input: string, 
+   tagName: string, 
+   attributes: Record<string, string>): string;
+```
 
 Defined in: [tag.ts:15](https://github.com/technobuddha/library/blob/main/src/tag.ts#L15)
 

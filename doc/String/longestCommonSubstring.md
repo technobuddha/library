@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: longestCommonSubstring()
 
-> **longestCommonSubstring**(`string1`: `string`, `string2`: `string`, `__namedParameters`: [`LongestCommonSubstringOptions`](LongestCommonSubstringOptions.md)): `string`
+```ts
+function longestCommonSubstring(
+   string1: string, 
+   string2: string, 
+   __namedParameters: LongestCommonSubstringOptions): string;
+```
 
 Defined in: [longest-common-substring.ts:27](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L27)
 

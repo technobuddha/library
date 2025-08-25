@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: TimezoneOptions
 
-> **TimezoneOptions** = \{ `gmt?`: `boolean`; `z?`: `boolean`; \}
+```ts
+type TimezoneOptions = {
+  gmt?: boolean;
+  z?: boolean;
+};
+```
 
 Defined in: [timezone.ts:11](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L11)
 

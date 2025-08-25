@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: Polar
 
-> **Polar** = \{ `angle`: `number`; `radius`: `number`; \}
+```ts
+type Polar = {
+  angle: number;
+  radius: number;
+};
+```
 
 Defined in: [@types/geometry.ts:28](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L28)
 

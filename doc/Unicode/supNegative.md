@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: supNegative
 
-> `const` **supNegative**: `"⁻"` = `'⁻'`
+```ts
+const supNegative: "⁻" = '⁻';
+```
 
 Defined in: [constants.ts:289](https://github.com/technobuddha/library/blob/main/src/constants.ts#L289)
 

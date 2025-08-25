@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: macroCase()
 
-> **macroCase**(`input`: `string`): `string`
+```ts
+function macroCase(input: string): string;
+```
 
 Defined in: [macro-case.ts:12](https://github.com/technobuddha/library/blob/main/src/macro-case.ts#L12)
 

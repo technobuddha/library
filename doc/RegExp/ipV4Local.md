@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: ipV4Local
 
-> `const` **ipV4Local**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+```ts
+const ipV4Local: RegExp;
+```
 
 Defined in: [regexp.ts:71](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L71)
 

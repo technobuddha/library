@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: chop()
 
-> **chop**(`input`: `string`, `length`: `number`, `__namedParameters`: [`ChopOptions`](ChopOptions.md)): `string`[]
+```ts
+function chop(
+   input: string, 
+   length: number, 
+   __namedParameters: ChopOptions): string[];
+```
 
 Defined in: [chop.ts:23](https://github.com/technobuddha/library/blob/main/src/chop.ts#L23)
 

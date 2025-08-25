@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isPolar()
 
-> **isPolar**(`point`: `unknown`): `point is Polar`
+```ts
+function isPolar(point: unknown): point is Polar;
+```
 
 Defined in: [is-polar.ts:15](https://github.com/technobuddha/library/blob/main/src/is-polar.ts#L15)
 

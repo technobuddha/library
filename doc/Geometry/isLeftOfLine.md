@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isLeftOfLine()
 
-> **isLeftOfLine**(`point`: [`Cartesian`](Cartesian.md), `line`: [`LineSegment`](LineSegment.md)): `boolean`
+```ts
+function isLeftOfLine(point: Cartesian, line: LineSegment): boolean;
+```
 
 Defined in: [is-left-of-line.ts:16](https://github.com/technobuddha/library/blob/main/src/is-left-of-line.ts#L16)
 

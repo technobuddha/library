@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: ceil()
 
-> **ceil**(`input`: `number`, `options`: [`CeilOptions`](CeilOptions.md)): `number`
+```ts
+function ceil(input: number, options: CeilOptions): number;
+```
 
 Defined in: [ceil.ts:26](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L26)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: startCase()
 
-> **startCase**(`input`: `string`): `string`
+```ts
+function startCase(input: string): string;
+```
 
 Defined in: [start-case.ts:15](https://github.com/technobuddha/library/blob/main/src/start-case.ts#L15)
 

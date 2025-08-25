@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: FloorOptions
 
-> **FloorOptions** = \{ `precision?`: `number`; `tolerance?`: `number`; \}
+```ts
+type FloorOptions = {
+  precision?: number;
+  tolerance?: number;
+};
+```
 
 Defined in: [floor.ts:10](https://github.com/technobuddha/library/blob/main/src/floor.ts#L10)
 

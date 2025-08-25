@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: MaskOptions
 
-> **MaskOptions** = \{ `missing?`: `string`; \}
+```ts
+type MaskOptions = {
+  missing?: string;
+};
+```
 
 Defined in: [mask.ts:10](https://github.com/technobuddha/library/blob/main/src/mask.ts#L10)
 

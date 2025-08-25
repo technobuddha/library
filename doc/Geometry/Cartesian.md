@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: Cartesian
 
-> **Cartesian** = \{ `x`: `number`; `y`: `number`; \}
+```ts
+type Cartesian = {
+  x: number;
+  y: number;
+};
+```
 
 Defined in: [@types/geometry.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L7)
 

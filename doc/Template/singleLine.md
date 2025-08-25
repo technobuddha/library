@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: singleLine()
 
-> **singleLine**(`template`: `TemplateStringsArray`, ...`args`: `unknown`[]): `string`
+```ts
+function singleLine(template: TemplateStringsArray, ...args: unknown[]): string;
+```
 
 Defined in: [single-line.ts:14](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L14)
 

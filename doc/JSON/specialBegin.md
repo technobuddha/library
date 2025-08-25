@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: specialBegin
 
-> `const` **specialBegin**: `"﴾"` = `'﴾'`
+```ts
+const specialBegin: "﴾" = '﴾';
+```
 
 Defined in: [json.ts:6](https://github.com/technobuddha/library/blob/main/src/json.ts#L6)
 

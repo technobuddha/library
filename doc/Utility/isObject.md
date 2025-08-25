@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isObject()
 
-> **isObject**(`value`: `unknown`): `value is object`
+```ts
+function isObject(value: unknown): value is object;
+```
 
 Defined in: [is-object.ts:9](https://github.com/technobuddha/library/blob/main/src/is-object.ts#L9)
 

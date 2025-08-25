@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: diceCoefficient()
 
-> **diceCoefficient**(`input`: `string`, `compareTo`: `string`, `__nameParameters`: [`DiceCoefficientOptions`](DiceCoefficientOptions.md)): `number`
+```ts
+function diceCoefficient(
+   input: string, 
+   compareTo: string, 
+   __nameParameters: DiceCoefficientOptions): number;
+```
 
 Defined in: [dice-coefficient.ts:24](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L24)
 

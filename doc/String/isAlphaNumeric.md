@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isAlphaNumeric()
 
-> **isAlphaNumeric**(`input`: `string`): `boolean`
+```ts
+function isAlphaNumeric(input: string): boolean;
+```
 
 Defined in: [is-alpha-numeric.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L11)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: kebabCase()
 
-> **kebabCase**(`input`: `string`): `string`
+```ts
+function kebabCase(input: string): string;
+```
 
 Defined in: [kebab-case.ts:12](https://github.com/technobuddha/library/blob/main/src/kebab-case.ts#L12)
 

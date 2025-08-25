@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: endOfWeek()
 
-> **endOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfWeekOptions`](EndOfWeekOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function endOfWeek(input: Date, options: EndOfWeekOptions): Date;
+```
 
 Defined in: [end-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L28)
 

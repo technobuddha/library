@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isIntersecting()
 
-> **isIntersecting**(`shape`: [`LineSegment`](LineSegment.md) \| [`Polygon`](Polygon.md), `polygon`: [`Polygon`](Polygon.md)): `boolean`
+```ts
+function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean;
+```
 
 Defined in: [is-intersecting.ts:25](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L25)
 

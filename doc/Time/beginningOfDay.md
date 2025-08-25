@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: beginningOfDay()
 
-> **beginningOfDay**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfDayOptions`](BeginningOfDayOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function beginningOfDay(input: Date, options: BeginningOfDayOptions): Date;
+```
 
 Defined in: [beginning-of-day.ts:22](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L22)
 

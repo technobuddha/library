@@ -8,7 +8,12 @@ Technobuddha Library
 
 ## Call Signature
 
-> **rotate**(`point`: [`Cartesian`](Cartesian.md), `angle`: `number`, `origin?`: [`Cartesian`](Cartesian.md)): [`Cartesian`](Cartesian.md)
+```ts
+function rotate(
+   point: Cartesian, 
+   angle: number, 
+   origin?: Cartesian): Cartesian;
+```
 
 Defined in: [rotate.ts:35](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L35)
 
@@ -43,7 +48,12 @@ const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
 
 ## Call Signature
 
-> **rotate**(`point`: [`Polygon`](Polygon.md), `angle`: `number`, `origin?`: [`Cartesian`](Cartesian.md)): [`Polygon`](Polygon.md)
+```ts
+function rotate(
+   point: Polygon, 
+   angle: number, 
+   origin?: Cartesian): Polygon;
+```
 
 Defined in: [rotate.ts:36](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L36)
 

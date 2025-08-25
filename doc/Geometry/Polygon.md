@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Type Alias: Polygon
 
-> **Polygon** = [`Cartesian`](Cartesian.md)[]
+```ts
+type Polygon = Cartesian[];
+```
 
 Defined in: [@types/geometry.ts:39](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L39)
 

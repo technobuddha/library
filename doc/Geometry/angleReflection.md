@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: angleReflection()
 
-> **angleReflection**(`angle`: `number`, `axis`: `number`, `units`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function angleReflection(
+   angle: number, 
+   axis: number, 
+   units: AngleUnit): number;
+```
 
 Defined in: [angle-reflection.ts:16](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L16)
 

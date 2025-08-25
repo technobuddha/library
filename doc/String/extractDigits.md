@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: extractDigits()
 
-> **extractDigits**(`input`: `string`): `string`
+```ts
+function extractDigits(input: string): string;
+```
 
 Defined in: [extract-digits.ts:11](https://github.com/technobuddha/library/blob/main/src/extract-digits.ts#L11)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: domain
 
-> `const` **domain**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+```ts
+const domain: RegExp;
+```
 
 Defined in: [regexp.ts:118](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L118)
 

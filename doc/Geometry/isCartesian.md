@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isCartesian()
 
-> **isCartesian**(`point`: `unknown`): `point is Cartesian`
+```ts
+function isCartesian(point: unknown): point is Cartesian;
+```
 
 Defined in: [is-cartesian.ts:15](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L15)
 

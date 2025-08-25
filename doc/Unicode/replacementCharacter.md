@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: replacementCharacter
 
-> `const` **replacementCharacter**: `"�"` = `'\uFFFD'`
+```ts
+const replacementCharacter: "�" = '\uFFFD';
+```
 
 Defined in: [constants.ts:386](https://github.com/technobuddha/library/blob/main/src/constants.ts#L386)
 

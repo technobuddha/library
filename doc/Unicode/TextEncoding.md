@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Type Alias: TextEncoding
 
-> **TextEncoding** = `"utf-8"` \| `"utf8"`
+```ts
+type TextEncoding = "utf-8" | "utf8";
+```
 
 Defined in: [@types/text-encoding.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/text-encoding.ts#L7)
 

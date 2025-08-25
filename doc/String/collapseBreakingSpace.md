@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: collapseBreakingSpace()
 
-> **collapseBreakingSpace**(`input`: `string`, `trim`: [`CollapseBreakingSpaceOptions`](CollapseBreakingSpaceOptions.md)): `string`
+```ts
+function collapseBreakingSpace(input: string, trim: CollapseBreakingSpaceOptions): string;
+```
 
 Defined in: [collapse-breaking-space.ts:23](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L23)
 

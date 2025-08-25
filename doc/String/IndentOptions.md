@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: IndentOptions
 
-> **IndentOptions** = \{ `indenter?`: `string`; \}
+```ts
+type IndentOptions = {
+  indenter?: string;
+};
+```
 
 Defined in: [indent.ts:9](https://github.com/technobuddha/library/blob/main/src/indent.ts#L9)
 

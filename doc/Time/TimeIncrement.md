@@ -6,7 +6,17 @@ Technobuddha Library
 
 # Type Alias: TimeIncrement
 
-> **TimeIncrement** = \{ `days?`: `number`; `hours?`: `number`; `milliseconds?`: `number`; `minutes?`: `number`; `months?`: `number`; `seconds?`: `number`; `years?`: `number`; \}
+```ts
+type TimeIncrement = {
+  days?: number;
+  hours?: number;
+  milliseconds?: number;
+  minutes?: number;
+  months?: number;
+  seconds?: number;
+  years?: number;
+};
+```
 
 Defined in: [add-time.ts:7](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L7)
 

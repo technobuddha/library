@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: LongestCommonSubsequenceOptions\<T\>
 
-> **LongestCommonSubsequenceOptions**\<`T`\> = \{ `collect?`: (`this`: `void`, `i1`: `number`, `i2`: `number`) => `T`; `compare?`: (`this`: `void`, `a`: `T`, `b`: `T`) => `boolean`; \}
+```ts
+type LongestCommonSubsequenceOptions<T> = {
+  collect?: (this: void, i1: number, i2: number) => T;
+  compare?: (this: void, a: T, b: T) => boolean;
+};
+```
 
 Defined in: [longest-common-subsequence.ts:10](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L10)
 

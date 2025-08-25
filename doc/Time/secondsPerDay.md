@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: secondsPerDay
 
-> `const` **secondsPerDay**: `number`
+```ts
+const secondsPerDay: number;
+```
 
 Defined in: [constants.ts:123](https://github.com/technobuddha/library/blob/main/src/constants.ts#L123)
 

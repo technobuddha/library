@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Type Alias: BinaryEncoding
 
-> **BinaryEncoding** = `"base64"` \| `"base64url"` \| `"hex"` \| `"binary"`
+```ts
+type BinaryEncoding = "base64" | "base64url" | "hex" | "binary";
+```
 
 Defined in: [@types/binary-encoding.ts:6](https://github.com/technobuddha/library/blob/main/src/@types/binary-encoding.ts#L6)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: title()
 
-> **title**(`input`: `string`): `string`
+```ts
+function title(input: string): string;
+```
 
 Defined in: [title.ts:11](https://github.com/technobuddha/library/blob/main/src/title.ts#L11)
 

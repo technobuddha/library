@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: trimEquivalent
 
-> `const` **trimEquivalent**: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+```ts
+const trimEquivalent: RegExp;
+```
 
 Defined in: [constants.ts:379](https://github.com/technobuddha/library/blob/main/src/constants.ts#L379)
 

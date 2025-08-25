@@ -6,7 +6,15 @@ Technobuddha Library
 
 # Function: occurrenceInMonth()
 
-> **occurrenceInMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `dayOfWeek`: [`DayOfWeek`](DayOfWeek.md), `occurrence`: `number` \| `"last"`, `options`: [`GetOccurrenceInMonthOptions`](GetOccurrenceInMonthOptions.md)): `null` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function occurrenceInMonth(
+   input: Date, 
+   dayOfWeek: DayOfWeek, 
+   occurrence: number | "last", 
+   options: GetOccurrenceInMonthOptions): 
+  | null
+  | Date;
+```
 
 Defined in: [occurrence-in-month.ts:31](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L31)
 
@@ -23,7 +31,8 @@ Determine the date of an occurrence of a weekday within a month
 
 ## Returns
 
-`null` \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+  \| `null`
+  \| [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 A date object corresponding to the occurrence requested, or null if no such date exists in the month
 

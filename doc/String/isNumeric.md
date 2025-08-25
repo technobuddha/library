@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isNumeric()
 
-> **isNumeric**(`input`: `unknown`): input is string \| number
+```ts
+function isNumeric(input: unknown): input is string | number;
+```
 
 Defined in: [is-numeric.ts:14](https://github.com/technobuddha/library/blob/main/src/is-numeric.ts#L14)
 

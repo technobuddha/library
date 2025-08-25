@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: dataURL()
 
-> **dataURL**(`input`: [`BinaryObject`](BinaryObject.md), `mimeType`: `string`): `string`
+```ts
+function dataURL(input: BinaryObject, mimeType: string): string;
+```
 
 Defined in: [data-url.ts:13](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L13)
 

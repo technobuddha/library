@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: minutesPerDay
 
-> `const` **minutesPerDay**: `number`
+```ts
+const minutesPerDay: number;
+```
 
 Defined in: [constants.ts:139](https://github.com/technobuddha/library/blob/main/src/constants.ts#L139)
 

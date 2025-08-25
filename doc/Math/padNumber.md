@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: padNumber()
 
-> **padNumber**(`input`: `number`, `length`: `number`): `string`
+```ts
+function padNumber(input: number, length: number): string;
+```
 
 Defined in: [pad-number.ts:10](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L10)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: GetOccurrenceInMonthOptions
 
-> **GetOccurrenceInMonthOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type GetOccurrenceInMonthOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [occurrence-in-month.ts:14](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L14)
 

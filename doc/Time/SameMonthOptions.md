@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: SameMonthOptions
 
-> **SameMonthOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type SameMonthOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [is-same-month.ts:9](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L9)
 

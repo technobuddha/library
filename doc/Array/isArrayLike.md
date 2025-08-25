@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isArrayLike()
 
-> **isArrayLike**(`value`: `unknown`): `value is ArrayLike<unknown>`
+```ts
+function isArrayLike(value: unknown): value is ArrayLike<unknown>;
+```
 
 Defined in: [is-array-like.ts:20](https://github.com/technobuddha/library/blob/main/src/is-array-like.ts#L20)
 

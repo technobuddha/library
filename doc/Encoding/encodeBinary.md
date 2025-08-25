@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: encodeBinary()
 
-> **encodeBinary**(`input`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), `encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
+```ts
+function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): string;
+```
 
 Defined in: [encode-binary.ts:21](https://github.com/technobuddha/library/blob/main/src/encode-binary.ts#L21)
 

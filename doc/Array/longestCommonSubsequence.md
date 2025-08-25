@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: longestCommonSubsequence()
 
-> **longestCommonSubsequence**\<`T`\>(`array1`: `ArrayLike`\<`T`\>, `array2`: `ArrayLike`\<`T`\>, `options`: [`LongestCommonSubsequenceOptions`](LongestCommonSubsequenceOptions.md)\<`T`\>): `T`[]
+```ts
+function longestCommonSubsequence<T>(
+   array1: ArrayLike<T>, 
+   array2: ArrayLike<T>, 
+   options: LongestCommonSubsequenceOptions<T>): T[];
+```
 
 Defined in: [longest-common-subsequence.ts:50](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L50)
 
@@ -36,7 +41,7 @@ length of the list.
 
 ## Remarks
 
-Implementation of [Longest Common Subsequence]( https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
+Implementation of [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
 
 ## Example
 

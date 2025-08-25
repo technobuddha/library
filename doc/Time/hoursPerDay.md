@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: hoursPerDay
 
-> `const` **hoursPerDay**: `24` = `24`
+```ts
+const hoursPerDay: 24 = 24;
+```
 
 Defined in: [constants.ts:67](https://github.com/technobuddha/library/blob/main/src/constants.ts#L67)
 

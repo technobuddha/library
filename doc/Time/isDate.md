@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isDate()
 
-> **isDate**(`value`: `unknown`): `value is Date`
+```ts
+function isDate(value: unknown): value is Date;
+```
 
 Defined in: [is-date.ts:11](https://github.com/technobuddha/library/blob/main/src/is-date.ts#L11)
 

@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: replacer()
 
-> **replacer**(`this`: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string`, `unknown`\>, `key`: `string`, `value`: `unknown`): `unknown`
+```ts
+function replacer(
+   this: Record<string, unknown>, 
+   key: string, 
+   value: unknown): unknown;
+```
 
 Defined in: [json.ts:25](https://github.com/technobuddha/library/blob/main/src/json.ts#L25)
 

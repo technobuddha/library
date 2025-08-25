@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: DayOfYearOptions
 
-> **DayOfYearOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type DayOfYearOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [day-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L11)
 

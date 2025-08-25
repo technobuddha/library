@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: unescapeJS()
 
-> **unescapeJS**(`input`: `string`): `string`
+```ts
+function unescapeJS(input: string): string;
+```
 
 Defined in: [unescape-js.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L9)
 

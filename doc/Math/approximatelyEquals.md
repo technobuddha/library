@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: approximatelyEquals()
 
-> **approximatelyEquals**(`a`: `number`, `b`: `number`, `__namedParameters`: [`ApproximatelyEqualsOptions`](ApproximatelyEqualsOptions.md)): `boolean`
+```ts
+function approximatelyEquals(
+   a: number, 
+   b: number, 
+   __namedParameters: ApproximatelyEqualsOptions): boolean;
+```
 
 Defined in: [approximately-equals.ts:24](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L24)
 

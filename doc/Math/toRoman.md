@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toRoman()
 
-> **toRoman**(`input`: `number`, `__namedParameters`: [`RomanOptions`](RomanOptions.md)): `string`
+```ts
+function toRoman(input: number, __namedParameters: RomanOptions): string;
+```
 
 Defined in: [roman-numeral.ts:128](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L128)
 

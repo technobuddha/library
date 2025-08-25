@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: BeginningOfYearOptions
 
-> **BeginningOfYearOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type BeginningOfYearOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [beginning-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L9)
 

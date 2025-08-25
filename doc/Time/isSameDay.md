@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isSameDay()
 
-> **isSameDay**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameDayOptions`](SameDayOptions.md)): `boolean`
+```ts
+function isSameDay(
+   input1: Date, 
+   input2: Date, 
+   options: SameDayOptions): boolean;
+```
 
 Defined in: [is-same-day.ts:25](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L25)
 

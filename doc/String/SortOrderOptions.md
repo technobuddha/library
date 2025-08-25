@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: SortOrderOptions
 
-> **SortOrderOptions** = \{ `ignoreQuotes?`: `boolean`; `moveArticles?`: `boolean`; \}
+```ts
+type SortOrderOptions = {
+  ignoreQuotes?: boolean;
+  moveArticles?: boolean;
+};
+```
 
 Defined in: [sort-order.ts:9](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L9)
 

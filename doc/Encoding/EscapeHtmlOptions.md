@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: EscapeHtmlOptions
 
-> **EscapeHtmlOptions** = \{ `escapeNonAscii?`: `boolean`; \}
+```ts
+type EscapeHtmlOptions = {
+  escapeNonAscii?: boolean;
+};
+```
 
 Defined in: [escape-html.ts:9](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L9)
 

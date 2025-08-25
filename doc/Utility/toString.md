@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toString()
 
-> **toString**(`value`: `unknown`): `string`
+```ts
+function toString(value: unknown): string;
+```
 
 Defined in: [to-string.ts:19](https://github.com/technobuddha/library/blob/main/src/to-string.ts#L19)
 

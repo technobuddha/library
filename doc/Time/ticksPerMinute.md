@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: ticksPerMinute
 
-> `const` **ticksPerMinute**: `number`
+```ts
+const ticksPerMinute: number;
+```
 
 Defined in: [constants.ts:83](https://github.com/technobuddha/library/blob/main/src/constants.ts#L83)
 

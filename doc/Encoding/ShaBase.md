@@ -26,7 +26,9 @@ The base class for most sha bases cryptographic hash functions
 
 ### Constructor
 
-> **new ShaBase**(`blockSize`: `number`, `finalSize`: `number`): `ShaBase`
+```ts
+new ShaBase(blockSize: number, finalSize: number): ShaBase;
+```
 
 Defined in: [sha-base.ts:47](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L47)
 
@@ -49,7 +51,9 @@ Creates a new instance of the hash base class.
 
 #### Call Signature
 
-> **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+```ts
+digest(): Uint8Array;
+```
 
 Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
@@ -67,7 +71,9 @@ The hash digest as a `Uint8Array`
 
 #### Call Signature
 
-> **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
+```ts
+digest(encoding: BinaryEncoding): string;
+```
 
 Defined in: [sha-base.ts:79](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L79)
 
@@ -99,7 +105,12 @@ An encoded string, depending on the `encoding` parameter.
 
 #### Call Signature
 
-> **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
+```ts
+update(data: 
+  | TypedArray
+  | ArrayBuffer
+  | ArrayLike<number>): this;
+```
 
 Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
 
@@ -109,7 +120,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 
@@ -123,7 +134,9 @@ The hash instance for method chaining.
 
 #### Call Signature
 
-> **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
+```ts
+update(data: string, encoding?: TextEncoding): this;
+```
 
 Defined in: [sha-base.ts:121](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L121)
 

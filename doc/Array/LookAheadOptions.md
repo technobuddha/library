@@ -6,7 +6,15 @@ Technobuddha Library
 
 # Type Alias: LookAheadOptions\<T\>
 
-> **LookAheadOptions**\<`T`\> = \{ `last`: `T`; \} \| \{ `wrapAround`: `boolean`; \}
+```ts
+type LookAheadOptions<T> = 
+  | {
+  last: T;
+}
+  | {
+  wrapAround: boolean;
+};
+```
 
 Defined in: [look-ahead.ts:9](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L9)
 
@@ -20,13 +28,21 @@ Options for [lookAhead](lookAhead.md) operations.
 
 ## Type declaration
 
-\{ `last`: `T`; \}
+```ts
+{
+  last: T;
+}
+```
 
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | `last` | `T` | Specifies the last item in the sequence. | [look-ahead.ts:14](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L14) |
 
-\{ `wrapAround`: `boolean`; \}
+```ts
+{
+  wrapAround: boolean;
+}
+```
 
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |

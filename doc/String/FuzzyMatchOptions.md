@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Type Alias: FuzzyMatchOptions
 
-> **FuzzyMatchOptions** = \{ `caseInsensitive?`: `boolean`; `weightDiceCoefficient?`: `number`; `weightLevenshteinDistance?`: `number`; `weightLongestCommonSubstring?`: `number`; \}
+```ts
+type FuzzyMatchOptions = {
+  caseInsensitive?: boolean;
+  weightDiceCoefficient?: number;
+  weightLevenshteinDistance?: number;
+  weightLongestCommonSubstring?: number;
+};
+```
 
 Defined in: [fuzzy-match.ts:11](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L11)
 

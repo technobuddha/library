@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: escapeC()
 
-> **escapeC**(`input`: `string`): `string`
+```ts
+function escapeC(input: string): string;
+```
 
 Defined in: [escape-c.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L12)
 

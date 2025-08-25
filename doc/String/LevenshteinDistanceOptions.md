@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: LevenshteinDistanceOptions
 
-> **LevenshteinDistanceOptions** = \{ `caseInsensitive?`: `boolean`; \}
+```ts
+type LevenshteinDistanceOptions = {
+  caseInsensitive?: boolean;
+};
+```
 
 Defined in: [levenshtein-distance.ts:9](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L9)
 

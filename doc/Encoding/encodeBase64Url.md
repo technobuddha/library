@@ -8,7 +8,9 @@ Technobuddha Library
 
 ## Call Signature
 
-> **encodeBase64Url**(`chars`: `string`, `encoding`: [`TextEncoding`](../Unicode/TextEncoding.md)): `string`
+```ts
+function encodeBase64Url(chars: string, encoding: TextEncoding): string;
+```
 
 Defined in: [encode-base-64.ts:125](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L125)
 
@@ -42,7 +44,9 @@ encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
 
 ## Call Signature
 
-> **encodeBase64Url**(`binary`: [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)): `string`
+```ts
+function encodeBase64Url(binary: Uint8Array): string;
+```
 
 Defined in: [encode-base-64.ts:126](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L126)
 

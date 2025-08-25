@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isSameMonth()
 
-> **isSameMonth**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameMonthOptions`](SameMonthOptions.md)): `boolean`
+```ts
+function isSameMonth(
+   input1: Date, 
+   input2: Date, 
+   options: SameMonthOptions): boolean;
+```
 
 Defined in: [is-same-month.ts:25](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L25)
 

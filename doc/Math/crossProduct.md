@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: crossProduct()
 
-> **crossProduct**(`a`: [`Cartesian`](../Geometry/Cartesian.md), `b`: [`Cartesian`](../Geometry/Cartesian.md), `o`: [`Cartesian`](../Geometry/Cartesian.md)): `number`
+```ts
+function crossProduct(
+   a: Cartesian, 
+   b: Cartesian, 
+   o: Cartesian): number;
+```
 
 Defined in: [cross-product.ts:18](https://github.com/technobuddha/library/blob/main/src/cross-product.ts#L18)
 

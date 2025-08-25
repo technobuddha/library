@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: secondsPerHour
 
-> `const` **secondsPerHour**: `number`
+```ts
+const secondsPerHour: number;
+```
 
 Defined in: [constants.ts:115](https://github.com/technobuddha/library/blob/main/src/constants.ts#L115)
 

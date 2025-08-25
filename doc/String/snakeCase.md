@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: snakeCase()
 
-> **snakeCase**(`input`: `string`): `string`
+```ts
+function snakeCase(input: string): string;
+```
 
 Defined in: [snake-case.ts:12](https://github.com/technobuddha/library/blob/main/src/snake-case.ts#L12)
 

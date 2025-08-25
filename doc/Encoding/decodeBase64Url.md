@@ -8,7 +8,9 @@ Technobuddha Library
 
 ## Call Signature
 
-> **decodeBase64Url**(`input`: `string`): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+```ts
+function decodeBase64Url(input: string): Uint8Array;
+```
 
 Defined in: [decode-base-64.ts:137](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L137)
 
@@ -47,7 +49,9 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 
 ## Call Signature
 
-> **decodeBase64Url**(`input`: `string`, `encoding`: [`TextEncoding`](../Unicode/TextEncoding.md)): `string`
+```ts
+function decodeBase64Url(input: string, encoding: TextEncoding): string;
+```
 
 Defined in: [decode-base-64.ts:138](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L138)
 

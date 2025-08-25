@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: CeilOptions
 
-> **CeilOptions** = \{ `precision?`: `number`; `tolerance?`: `number`; \}
+```ts
+type CeilOptions = {
+  precision?: number;
+  tolerance?: number;
+};
+```
 
 Defined in: [ceil.ts:10](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L10)
 

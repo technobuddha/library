@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: randomShuffle()
 
-> **randomShuffle**\<`T`\>(`deck`: readonly `T`[], `random`: () => `number`): `T`[]
+```ts
+function randomShuffle<T>(deck: readonly T[], random: () => number): T[];
+```
 
 Defined in: [random-shuffle.ts:14](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L14)
 

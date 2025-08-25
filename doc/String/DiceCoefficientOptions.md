@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: DiceCoefficientOptions
 
-> **DiceCoefficientOptions** = \{ `caseInsensitive?`: `boolean`; \}
+```ts
+type DiceCoefficientOptions = {
+  caseInsensitive?: boolean;
+};
+```
 
 Defined in: [dice-coefficient.ts:9](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L9)
 

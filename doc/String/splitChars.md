@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: splitChars()
 
-> **splitChars**(`input`: `string`): `string`[]
+```ts
+function splitChars(input: string): string[];
+```
 
 Defined in: [split-chars.ts:9](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L9)
 

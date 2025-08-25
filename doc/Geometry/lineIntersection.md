@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: lineIntersection()
 
-> **lineIntersection**(`a`: [`LineSegment`](LineSegment.md), `b`: [`LineSegment`](LineSegment.md), `extend`: `boolean`): `undefined` \| `null` \| [`Cartesian`](Cartesian.md)
+```ts
+function lineIntersection(
+   a: LineSegment, 
+   b: LineSegment, 
+   extend: boolean): undefined | null | Cartesian;
+```
 
 Defined in: [line-intersection.ts:16](https://github.com/technobuddha/library/blob/main/src/line-intersection.ts#L16)
 

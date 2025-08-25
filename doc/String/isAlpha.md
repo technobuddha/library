@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isAlpha()
 
-> **isAlpha**(`input`: `string`): `boolean`
+```ts
+function isAlpha(input: string): boolean;
+```
 
 Defined in: [is-alpha.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L11)
 

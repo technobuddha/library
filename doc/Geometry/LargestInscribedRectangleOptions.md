@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: LargestInscribedRectangleOptions
 
-> **LargestInscribedRectangleOptions** = \{ `aligned?`: `boolean`; `squareOnly?`: `boolean`; \}
+```ts
+type LargestInscribedRectangleOptions = {
+  aligned?: boolean;
+  squareOnly?: boolean;
+};
+```
 
 Defined in: [largest-inscribed-rectangle.ts:30](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L30)
 

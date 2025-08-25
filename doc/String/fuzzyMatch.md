@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: fuzzyMatch()
 
-> **fuzzyMatch**(`input`: `string`, `comparedTo`: `string`, `options`: [`FuzzyMatchOptions`](FuzzyMatchOptions.md)): `number`
+```ts
+function fuzzyMatch(
+   input: string, 
+   comparedTo: string, 
+   options: FuzzyMatchOptions): number;
+```
 
 Defined in: [fuzzy-match.ts:33](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L33)
 

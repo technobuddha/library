@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: re()
 
-> **re**(`template`: `TemplateStringsArray`, ...`args`: [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)[]): [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+```ts
+function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
+```
 
 Defined in: [regexp.ts:23](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L23)
 

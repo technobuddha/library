@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isWithLine()
 
-> **isWithLine**(`point`: [`Cartesian`](Cartesian.md), `line`: [`LineSegment`](LineSegment.md), `epsilon`: `number`): `boolean`
+```ts
+function isWithLine(
+   point: Cartesian, 
+   line: LineSegment, 
+   epsilon: number): boolean;
+```
 
 Defined in: [is-with-line.ts:16](https://github.com/technobuddha/library/blob/main/src/is-with-line.ts#L16)
 

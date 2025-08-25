@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: lineLength()
 
-> **lineLength**(`line`: [`LineSegment`](LineSegment.md)): `number`
+```ts
+function lineLength(line: LineSegment): number;
+```
 
 Defined in: [line-length.ts:12](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L12)
 

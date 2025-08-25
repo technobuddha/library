@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Function: randomDraw()
 
-> **randomDraw**\<`T`\>(`list`: readonly `T`[], `random`: () => `number`): `undefined` \| \{ `draw`: `T`; `list`: `T`[]; \}
+```ts
+function randomDraw<T>(list: readonly T[], random: () => number): 
+  | undefined
+  | {
+  draw: T;
+  list: T[];
+};
+```
 
 Defined in: [random-draw.ts:11](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L11)
 
@@ -27,7 +34,11 @@ Draw a random item from a list.  Returning both the item and the list without th
 
 ## Returns
 
-`undefined` \| \{ `draw`: `T`; `list`: `T`[]; \}
+  \| `undefined`
+  \| \{
+  `draw`: `T`;
+  `list`: `T`[];
+\}
 
 Randomly selected item & the list without the drawn item
 

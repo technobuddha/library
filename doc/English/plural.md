@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: plural()
 
-> **plural**(`input`: `string`, `quantity?`: `number`, `include?`: `boolean`): `string`
+```ts
+function plural(
+   input: string, 
+   quantity?: number, 
+   include?: boolean): string;
+```
 
 Defined in: [plural.ts:14](https://github.com/technobuddha/library/blob/main/src/plural.ts#L14)
 

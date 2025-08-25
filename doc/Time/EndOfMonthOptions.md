@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: EndOfMonthOptions
 
-> **EndOfMonthOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type EndOfMonthOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [end-of-month.ts:9](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L9)
 

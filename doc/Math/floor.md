@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: floor()
 
-> **floor**(`input`: `number`, `options`: [`FloorOptions`](FloorOptions.md)): `number`
+```ts
+function floor(input: number, options: FloorOptions): number;
+```
 
 Defined in: [floor.ts:26](https://github.com/technobuddha/library/blob/main/src/floor.ts#L26)
 

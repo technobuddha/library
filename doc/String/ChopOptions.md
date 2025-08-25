@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: ChopOptions
 
-> **ChopOptions** = \{ `truncate?`: `boolean`; \}
+```ts
+type ChopOptions = {
+  truncate?: boolean;
+};
+```
 
 Defined in: [chop.ts:9](https://github.com/technobuddha/library/blob/main/src/chop.ts#L9)
 

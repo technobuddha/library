@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isSameYear()
 
-> **isSameYear**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameYearOptions`](SameYearOptions.md)): `boolean`
+```ts
+function isSameYear(
+   input1: Date, 
+   input2: Date, 
+   options: SameYearOptions): boolean;
+```
 
 Defined in: [is-same-year.ts:22](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L22)
 

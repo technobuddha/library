@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: space
 
-> `const` **space**: `" "` = `' '`
+```ts
+const space: " " = ' ';
+```
 
 Defined in: [constants.ts:14](https://github.com/technobuddha/library/blob/main/src/constants.ts#L14)
 

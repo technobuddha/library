@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: parseDate()
 
-> **parseDate**(`input`: `string`): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function parseDate(input: string): Date;
+```
 
 Defined in: [parse-date.ts:58](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L58)
 

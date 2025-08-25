@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: possessive()
 
-> **possessive**(`input`: `string`): `string`
+```ts
+function possessive(input: string): string;
+```
 
 Defined in: [possessive.ts:12](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L12)
 

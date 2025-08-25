@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: centroid()
 
-> **centroid**(`vertices`: [`Polygon`](Polygon.md)): [`Cartesian`](Cartesian.md)
+```ts
+function centroid(vertices: Polygon): Cartesian;
+```
 
 Defined in: [centroid.ts:19](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L19)
 

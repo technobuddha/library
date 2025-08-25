@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: randomWeightedPick()
 
-> **randomWeightedPick**\<`T`\>(`list`: readonly `T`[], `random`: () => `number`): `undefined` \| `T`
+```ts
+function randomWeightedPick<T>(list: readonly T[], random: () => number): undefined | T;
+```
 
 Defined in: [random-weighted-pick.ts:30](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L30)
 

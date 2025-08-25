@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: formatNumber()
 
-> **formatNumber**(`input`: `number`, `mask`: `string`): `string`
+```ts
+function formatNumber(input: number, mask: string): string;
+```
 
 Defined in: [format-number.ts:530](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L530)
 

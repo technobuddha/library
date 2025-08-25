@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: escapeJava()
 
-> **escapeJava**(`input`: `string`): `string`
+```ts
+function escapeJava(input: string): string;
+```
 
 Defined in: [escape-java.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L12)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: collapseWhitespace()
 
-> **collapseWhitespace**(`input`: `string`, `trim`: [`CollapseWhitespaceOptions`](CollapseWhitespaceOptions.md)): `string`
+```ts
+function collapseWhitespace(input: string, trim: CollapseWhitespaceOptions): string;
+```
 
 Defined in: [collapse-whitespace.ts:23](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L23)
 

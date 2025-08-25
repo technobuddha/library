@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: beginningOfYear()
 
-> **beginningOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfYearOptions`](BeginningOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function beginningOfYear(input: Date, options: BeginningOfYearOptions): Date;
+```
 
 Defined in: [beginning-of-year.ts:24](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L24)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: BeginningOfMonthOptions
 
-> **BeginningOfMonthOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type BeginningOfMonthOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [beginning-of-month.ts:7](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L7)
 

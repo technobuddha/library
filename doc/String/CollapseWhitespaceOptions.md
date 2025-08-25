@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: CollapseWhitespaceOptions
 
-> **CollapseWhitespaceOptions** = \{ `trim?`: `boolean`; \}
+```ts
+type CollapseWhitespaceOptions = {
+  trim?: boolean;
+};
+```
 
 Defined in: [collapse-whitespace.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L10)
 

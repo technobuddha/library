@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: encodeText()
 
-> **encodeText**(`input`: `string`, `_encoding?`: [`TextEncoding`](TextEncoding.md)): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+```ts
+function encodeText(input: string, _encoding?: TextEncoding): Uint8Array;
+```
 
 Defined in: [encode-text.ts:14](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L14)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: LongestCommonSubstringOptions
 
-> **LongestCommonSubstringOptions** = \{ `caseInsensitive?`: `boolean`; \}
+```ts
+type LongestCommonSubstringOptions = {
+  caseInsensitive?: boolean;
+};
+```
 
 Defined in: [longest-common-substring.ts:9](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L9)
 

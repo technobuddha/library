@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: root()
 
-> **root**(`text`: `string`, `options`: [`RootOptions`](RootOptions.md)): `string`
+```ts
+function root(text: string, options: RootOptions): string;
+```
 
 Defined in: [root.ts:23](https://github.com/technobuddha/library/blob/main/src/root.ts#L23)
 

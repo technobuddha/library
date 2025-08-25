@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isPrimitive()
 
-> **isPrimitive**(`input`: `unknown`): input is undefined \| null \| string \| number \| bigint \| boolean \| symbol
+```ts
+function isPrimitive(input: unknown): input is undefined | null | string | number | bigint | boolean | symbol;
+```
 
 Defined in: [is-primitive.ts:9](https://github.com/technobuddha/library/blob/main/src/is-primitive.ts#L9)
 

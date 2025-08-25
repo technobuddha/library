@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: EndOfYearOptions
 
-> **EndOfYearOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type EndOfYearOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [end-of-year.ts:8](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L8)
 

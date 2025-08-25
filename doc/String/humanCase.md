@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: humanCase()
 
-> **humanCase**(`input`: `string`): `string`
+```ts
+function humanCase(input: string): string;
+```
 
 Defined in: [human-case.ts:13](https://github.com/technobuddha/library/blob/main/src/human-case.ts#L13)
 

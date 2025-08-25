@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Type Alias: DeconstructedNumber
 
-> **DeconstructedNumber** = \{ `exponent`: `number`; `mantissa`: `string`; `sign`: `1` \| `-1`; `value`: `number`; \}
+```ts
+type DeconstructedNumber = {
+  exponent: number;
+  mantissa: string;
+  sign: 1 | -1;
+  value: number;
+};
+```
 
 Defined in: [@types/deconstructed-number.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/deconstructed-number.ts#L7)
 

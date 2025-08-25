@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toSquare()
 
-> **toSquare**(`rect`: [`Rect`](Rect.md)): [`Rect`](Rect.md)
+```ts
+function toSquare(rect: Rect): Rect;
+```
 
 Defined in: [to-square.ts:14](https://github.com/technobuddha/library/blob/main/src/to-square.ts#L14)
 

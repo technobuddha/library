@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: RootOptions
 
-> **RootOptions** = \{ `prefix?`: `string`; `suffix?`: `string`; \}
+```ts
+type RootOptions = {
+  prefix?: string;
+  suffix?: string;
+};
+```
 
 Defined in: [root.ts:7](https://github.com/technobuddha/library/blob/main/src/root.ts#L7)
 

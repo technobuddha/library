@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: escapeHTML()
 
-> **escapeHTML**(`input`: `string`, `options`: [`EscapeHtmlOptions`](EscapeHtmlOptions.md)): `string`
+```ts
+function escapeHTML(input: string, options: EscapeHtmlOptions): string;
+```
 
 Defined in: [escape-html.ts:22](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L22)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: clearObject()
 
-> **clearObject**\<`T`\>(`input`: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string` \| `number` \| `symbol`, `T`\>): [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<`string` \| `number` \| `symbol`, `T`\>
+```ts
+function clearObject<T>(input: Record<string | number | symbol, T>): Record<string | number | symbol, T>;
+```
 
 Defined in: [clear-object.ts:12](https://github.com/technobuddha/library/blob/main/src/clear-object.ts#L12)
 

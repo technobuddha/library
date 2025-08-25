@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: endOfYear()
 
-> **endOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfYearOptions`](EndOfYearOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function endOfYear(input: Date, options: EndOfYearOptions): Date;
+```
 
 Defined in: [end-of-year.ts:23](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L23)
 

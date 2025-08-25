@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: round()
 
-> **round**(`input`: `number`, `options`: [`RoundOptions`](RoundOptions.md)): `number`
+```ts
+function round(input: number, options: RoundOptions): number;
+```
 
 Defined in: [round.ts:24](https://github.com/technobuddha/library/blob/main/src/round.ts#L24)
 

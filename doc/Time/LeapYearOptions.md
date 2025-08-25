@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: LeapYearOptions
 
-> **LeapYearOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type LeapYearOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [is-leap-year.ts:6](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L6)
 

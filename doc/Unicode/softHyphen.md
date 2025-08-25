@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: softHyphen
 
-> `const` **softHyphen**: `"­"` = `'­'`
+```ts
+const softHyphen: "­" = '­';
+```
 
 Defined in: [constants.ts:266](https://github.com/technobuddha/library/blob/main/src/constants.ts#L266)
 

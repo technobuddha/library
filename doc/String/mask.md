@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: mask()
 
-> **mask**(`input`: `string`, `simpleMask`: `string`, `options`: [`MaskOptions`](MaskOptions.md)): `string`
+```ts
+function mask(
+   input: string, 
+   simpleMask: string, 
+   options: MaskOptions): string;
+```
 
 Defined in: [mask.ts:31](https://github.com/technobuddha/library/blob/main/src/mask.ts#L31)
 

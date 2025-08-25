@@ -18,7 +18,9 @@ Compute the CRC32 checksum
 
 ### Constructor
 
-> **new Crc32**(): `Crc32`
+```ts
+new Crc32(): Crc32;
+```
 
 Defined in: [crc-32.ts:68](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L68)
 
@@ -43,7 +45,9 @@ Use [update](#update) to process data and [digest](#digest) to obtain the final 
 
 #### Call Signature
 
-> **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
+```ts
+digest(): Uint8Array;
+```
 
 Defined in: [crc-32.ts:91](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L91)
 
@@ -61,7 +65,9 @@ The hash digest as a `Uint8Array`
 
 #### Call Signature
 
-> **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
+```ts
+digest(encoding: BinaryEncoding): string;
+```
 
 Defined in: [crc-32.ts:92](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L92)
 
@@ -93,7 +99,12 @@ An encoded string, depending on the `encoding` parameter.
 
 #### Call Signature
 
-> **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
+```ts
+update(data: 
+  | TypedArray
+  | ArrayBuffer
+  | ArrayLike<number>): this;
+```
 
 Defined in: [crc-32.ts:73](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L73)
 
@@ -103,7 +114,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 
@@ -117,7 +128,9 @@ The hash instance for method chaining.
 
 #### Call Signature
 
-> **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
+```ts
+update(data: string, encoding?: TextEncoding): this;
+```
 
 Defined in: [crc-32.ts:74](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L74)
 

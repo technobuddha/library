@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: compareNumbers()
 
-> **compareNumbers**(`a`: `null` \| `number`, `b`: `null` \| `number`): `-1` \| `0` \| `1`
+```ts
+function compareNumbers(a: null | number, b: null | number): -1 | 0 | 1;
+```
 
 Defined in: [compare-numbers.ts:10](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L10)
 

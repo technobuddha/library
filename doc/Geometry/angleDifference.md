@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: angleDifference()
 
-> **angleDifference**(`startAngle`: `number`, `endAngle`: `number`, `unit`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function angleDifference(
+   startAngle: number, 
+   endAngle: number, 
+   unit: AngleUnit): number;
+```
 
 Defined in: [angle-difference.ts:30](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L30)
 

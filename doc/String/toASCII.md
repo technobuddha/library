@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toASCII()
 
-> **toASCII**(`input`: `string`): `string`
+```ts
+function toASCII(input: string): string;
+```
 
 Defined in: [to-ascii.ts:11](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L11)
 

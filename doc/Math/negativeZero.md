@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: negativeZero
 
-> `const` **negativeZero**: `0` = `-0`
+```ts
+const negativeZero: 0 = -0;
+```
 
 Defined in: [constants.ts:36](https://github.com/technobuddha/library/blob/main/src/constants.ts#L36)
 

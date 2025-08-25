@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toPolar()
 
-> **toPolar**(`options`: [`Cartesian`](Cartesian.md)): [`Polar`](Polar.md)
+```ts
+function toPolar(options: Cartesian): Polar;
+```
 
 Defined in: [to-polar.ts:12](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L12)
 

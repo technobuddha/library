@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: quote()
 
-> **quote**(`input`: `string`, `options`: [`QuoteOptions`](QuoteOptions.md)): `string`
+```ts
+function quote(input: string, options: QuoteOptions): string;
+```
 
 Defined in: [quote.ts:28](https://github.com/technobuddha/library/blob/main/src/quote.ts#L28)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toInteger()
 
-> **toInteger**(`entity`: `unknown`): `number`
+```ts
+function toInteger(entity: unknown): number;
+```
 
 Defined in: [to-integer.ts:13](https://github.com/technobuddha/library/blob/main/src/to-integer.ts#L13)
 

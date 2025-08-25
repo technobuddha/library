@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isSameWeek()
 
-> **isSameWeek**(`input1`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `input2`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`SameWeekOptions`](SameWeekOptions.md)): `boolean`
+```ts
+function isSameWeek(
+   input1: Date, 
+   input2: Date, 
+   options: SameWeekOptions): boolean;
+```
 
 Defined in: [is-same-week.ts:28](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L28)
 

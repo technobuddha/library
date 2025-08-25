@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: parseRoman()
 
-> **parseRoman**(`val`: `string`): `number`
+```ts
+function parseRoman(val: string): number;
+```
 
 Defined in: [roman-numeral.ts:94](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L94)
 

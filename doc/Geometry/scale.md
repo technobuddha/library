@@ -8,7 +8,12 @@ Technobuddha Library
 
 ## Call Signature
 
-> **scale**(`point`: [`Cartesian`](Cartesian.md), `amount`: `number` \| [`Cartesian`](Cartesian.md), `origin?`: [`Cartesian`](Cartesian.md)): [`Cartesian`](Cartesian.md)
+```ts
+function scale(
+   point: Cartesian, 
+   amount: number | Cartesian, 
+   origin?: Cartesian): Cartesian;
+```
 
 Defined in: [scale.ts:39](https://github.com/technobuddha/library/blob/main/src/scale.ts#L39)
 
@@ -43,7 +48,12 @@ const rotated = scale(points, 2);
 
 ## Call Signature
 
-> **scale**(`point`: [`Polygon`](Polygon.md), `angle`: `number` \| [`Cartesian`](Cartesian.md), `origin?`: [`Cartesian`](Cartesian.md)): [`Cartesian`](Cartesian.md)[]
+```ts
+function scale(
+   point: Polygon, 
+   angle: number | Cartesian, 
+   origin?: Cartesian): Cartesian[];
+```
 
 Defined in: [scale.ts:40](https://github.com/technobuddha/library/blob/main/src/scale.ts#L40)
 

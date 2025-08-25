@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isoWeekOfYear()
 
-> **isoWeekOfYear**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`ISOWeekOfYearOptions`](ISOWeekOfYearOptions.md)): \{ `week`: `number`; `year`: `number`; \}
+```ts
+function isoWeekOfYear(input: Date, options: ISOWeekOfYearOptions): {
+  week: number;
+  year: number;
+};
+```
 
 Defined in: [iso-week-of-year.ts:32](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L32)
 
@@ -21,7 +26,12 @@ Determine the ISO week number for a given date
 
 ## Returns
 
-\{ `week`: `number`; `year`: `number`; \}
+```ts
+{
+  week: number;
+  year: number;
+}
+```
 
 the week number (1-53)
 

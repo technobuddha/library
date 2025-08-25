@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: zwsp
 
-> `const` **zwsp**: `"​"` = `'\u200B'`
+```ts
+const zwsp: "​" = '\u200B';
+```
 
 Defined in: [constants.ts:28](https://github.com/technobuddha/library/blob/main/src/constants.ts#L28)
 

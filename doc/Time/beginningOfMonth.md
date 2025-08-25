@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: beginningOfMonth()
 
-> **beginningOfMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`BeginningOfMonthOptions`](BeginningOfMonthOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function beginningOfMonth(input: Date, options: BeginningOfMonthOptions): Date;
+```
 
 Defined in: [beginning-of-month.ts:22](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L22)
 

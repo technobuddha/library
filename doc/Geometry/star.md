@@ -6,7 +6,13 @@ Technobuddha Library
 
 # Function: star()
 
-> **star**(`sides`: `number`, `outer`: `number`, `inner`: `number`, `origin`: [`Cartesian`](Cartesian.md)): [`Polygon`](Polygon.md)
+```ts
+function star(
+   sides: number, 
+   outer: number, 
+   inner: number, 
+   origin: Cartesian): Polygon;
+```
 
 Defined in: [star.ts:16](https://github.com/technobuddha/library/blob/main/src/star.ts#L16)
 

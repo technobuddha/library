@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: dayOfWeek()
 
-> **dayOfWeek**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`DayOfWeekOptions`](DayOfWeekOptions.md)): [`DayOfWeek`](DayOfWeek.md)
+```ts
+function dayOfWeek(input: Date, options: DayOfWeekOptions): DayOfWeek;
+```
 
 Defined in: [day-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L28)
 

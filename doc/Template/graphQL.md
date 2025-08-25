@@ -8,7 +8,9 @@ Technobuddha Library
 
 ## Call Signature
 
-> **graphQL**(`template`: `TemplateStringsArray`, ...`args`: [`GraphQLValue`](GraphQLValue.md)[]): `string`
+```ts
+function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
+```
 
 Defined in: [graph-ql.ts:43](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L43)
 
@@ -29,7 +31,9 @@ The resulting GraphQL query string with interpolated values.
 
 ## Call Signature
 
-> **graphQL**(`arg`: [`GraphQLValue`](GraphQLValue.md)): `string`
+```ts
+function graphQL(arg: GraphQLValue): string;
+```
 
 Defined in: [graph-ql.ts:44](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L44)
 

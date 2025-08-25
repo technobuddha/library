@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: fractionSlash
 
-> `const` **fractionSlash**: `"⁄"` = `'⁄'`
+```ts
+const fractionSlash: "⁄" = '⁄';
+```
 
 Defined in: [constants.ts:245](https://github.com/technobuddha/library/blob/main/src/constants.ts#L245)
 

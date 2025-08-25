@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: create2DArray()
 
-> **create2DArray**\<`T`\>(`width`: `number`, `height`: `number`, `fill`: `T` \| (`this`: `void`, `x`: `number`, `y`: `number`) => `T`): `T`[][]
+```ts
+function create2DArray<T>(
+   width: number, 
+   height: number, 
+   fill: T | (this: void, x: number, y: number) => T): T[][];
+```
 
 Defined in: [create-2d-array.ts:25](https://github.com/technobuddha/library/blob/main/src/create-2d-array.ts#L25)
 

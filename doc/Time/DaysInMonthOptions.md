@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: DaysInMonthOptions
 
-> **DaysInMonthOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type DaysInMonthOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [days-in-month.ts:10](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L10)
 

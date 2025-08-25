@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isString()
 
-> **isString**(`value`: `unknown`): `value is string`
+```ts
+function isString(value: unknown): value is string;
+```
 
 Defined in: [is-string.ts:13](https://github.com/technobuddha/library/blob/main/src/is-string.ts#L13)
 

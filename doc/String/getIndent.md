@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: getIndent()
 
-> **getIndent**(`input`: `string`, `options`: [`IndentOptions`](IndentOptions.md)): `number`
+```ts
+function getIndent(input: string, options: IndentOptions): number;
+```
 
 Defined in: [get-indent.ts:14](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L14)
 

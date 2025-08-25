@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: Rect
 
-> **Rect** = [`Cartesian`](Cartesian.md) & \{ `height`: `number`; `width`: `number`; \}
+```ts
+type Rect = Cartesian & {
+  height: number;
+  width: number;
+};
+```
 
 Defined in: [@types/geometry.ts:64](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L64)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toCartesian()
 
-> **toCartesian**(`point`: [`Polar`](Polar.md), `unit`: [`AngleUnit`](AngleUnit.md)): [`Cartesian`](Cartesian.md)
+```ts
+function toCartesian(point: Polar, unit: AngleUnit): Cartesian;
+```
 
 Defined in: [to-cartesian.ts:12](https://github.com/technobuddha/library/blob/main/src/to-cartesian.ts#L12)
 

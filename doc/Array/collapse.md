@@ -6,7 +6,13 @@ Technobuddha Library
 
 # Function: collapse()
 
-> **collapse**(...`args`: ([`StringLike`](../String/StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| () => [`StringLike`](../String/StringLike.md))[]): `string`[]
+```ts
+function collapse(...args: (
+  | StringLike
+  | Generator<StringLike, any, any>
+  | Iterable<StringLike, any, any>
+  | () => StringLike)[]): string[];
+```
 
 Defined in: [collapse.ts:22](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L22)
 
@@ -24,7 +30,7 @@ and returns the resulting array of strings.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| ...`args` | ([`StringLike`](../String/StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| () => [`StringLike`](../String/StringLike.md))[] | The values to collapse, which may be strings, generators, iterables, or functions. |
+| ...`args` | ( \| [`StringLike`](../String/StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| () => [`StringLike`](../String/StringLike.md))[] | The values to collapse, which may be strings, generators, iterables, or functions. |
 
 ## Returns
 

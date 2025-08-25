@@ -6,7 +6,16 @@ Technobuddha Library
 
 # Type Alias: MetricUnitsOptions
 
-> **MetricUnitsOptions** = \{ `format?`: `string`; `macro?`: `ArrayLike`\<`string`\>; `micro?`: `ArrayLike`\<`string`\>; `pad?`: `number`; `precision?`: `number`; `unit?`: `number`; \}
+```ts
+type MetricUnitsOptions = {
+  format?: string;
+  macro?: ArrayLike<string>;
+  micro?: ArrayLike<string>;
+  pad?: number;
+  precision?: number;
+  unit?: number;
+};
+```
 
 Defined in: [metric-units.ts:52](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L52)
 

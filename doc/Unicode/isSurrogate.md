@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isSurrogate()
 
-> **isSurrogate**(`input`: `string`, `options`: [`IsSurrogateOptions`](IsSurrogateOptions.md)): `boolean`
+```ts
+function isSurrogate(input: string, options: IsSurrogateOptions): boolean;
+```
 
 Defined in: [is-surrogate.ts:24](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L24)
 

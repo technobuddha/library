@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: regularPolygon()
 
-> **regularPolygon**(`sides`: `number`, `radius`: `number`, `origin`: [`Cartesian`](Cartesian.md)): [`Polygon`](Polygon.md)
+```ts
+function regularPolygon(
+   sides: number, 
+   radius: number, 
+   origin: Cartesian): Polygon;
+```
 
 Defined in: [regular-polygon.ts:15](https://github.com/technobuddha/library/blob/main/src/regular-polygon.ts#L15)
 

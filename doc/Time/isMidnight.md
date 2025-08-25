@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isMidnight()
 
-> **isMidnight**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`MidnightOptions`](MidnightOptions.md)): `boolean`
+```ts
+function isMidnight(input: Date, options: MidnightOptions): boolean;
+```
 
 Defined in: [is-midnight.ts:21](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L21)
 

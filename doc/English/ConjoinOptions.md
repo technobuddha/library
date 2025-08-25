@@ -6,7 +6,13 @@ Technobuddha Library
 
 # Type Alias: ConjoinOptions
 
-> **ConjoinOptions** = \{ `conjunction?`: `string`; `oxford?`: `boolean`; `separator?`: `string`; \}
+```ts
+type ConjoinOptions = {
+  conjunction?: string;
+  oxford?: boolean;
+  separator?: string;
+};
+```
 
 Defined in: [conjoin.ts:10](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L10)
 

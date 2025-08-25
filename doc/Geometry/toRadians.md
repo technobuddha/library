@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toRadians()
 
-> **toRadians**(`angle`: `number`, `unit`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function toRadians(angle: number, unit: AngleUnit): number;
+```
 
 Defined in: [to-radians.ts:11](https://github.com/technobuddha/library/blob/main/src/to-radians.ts#L11)
 

@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: SameDayOptions
 
-> **SameDayOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type SameDayOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [is-same-day.ts:9](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L9)
 

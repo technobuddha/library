@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: EndOfWeekOptions
 
-> **EndOfWeekOptions** = \{ `firstDayOfWeek?`: [`DayOfWeek`](DayOfWeek.md); `utc?`: `boolean`; \}
+```ts
+type EndOfWeekOptions = {
+  firstDayOfWeek?: DayOfWeek;
+  utc?: boolean;
+};
+```
 
 Defined in: [end-of-week.ts:11](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L11)
 

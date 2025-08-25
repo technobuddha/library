@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: unquote()
 
-> **unquote**(`input`: `string`, `options`: [`QuoteOptions`](QuoteOptions.md)): `string`
+```ts
+function unquote(input: string, options: QuoteOptions): string;
+```
 
 Defined in: [unquote.ts:16](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L16)
 

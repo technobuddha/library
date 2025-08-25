@@ -6,7 +6,21 @@ Technobuddha Library
 
 # Type Alias: Numbering
 
-> **Numbering** = \{ `and`: `string`; `denominators`: `"common"` \| `"wrench"` \| `number`[]; `hyphen`: `string`; `ordinal`: `boolean`; `output`: \{ `fraction`: `"numeric"` \| `"alphabetic"`; `integer`: `"numeric"` \| `"alphabetic"` \| `"hybrid"`; \}; `precision`: `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9`; `shift`: `false` \| `"decimal"` \| `"fraction"`; `tolerance`: `number`; \}
+```ts
+type Numbering = {
+  and: string;
+  denominators: "common" | "wrench" | number[];
+  hyphen: string;
+  ordinal: boolean;
+  output: {
+     fraction: "numeric" | "alphabetic";
+     integer: "numeric" | "alphabetic" | "hybrid";
+  };
+  precision: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+  shift: false | "decimal" | "fraction";
+  tolerance: number;
+};
+```
 
 Defined in: [numbering/numbering.ts:16](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L16)
 

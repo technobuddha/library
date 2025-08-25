@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: RomanOptions
 
-> **RomanOptions** = \{ `format?`: `"standard"` \| `"apostrophus"` \| `"vinculum"`; \}
+```ts
+type RomanOptions = {
+  format?: "standard" | "apostrophus" | "vinculum";
+};
+```
 
 Defined in: [roman-numeral.ts:115](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L115)
 

@@ -26,7 +26,9 @@ zipperMerge([1, 2], ['a', 'b', 'c']);
 
 ## Call Signature
 
-> **zipperMerge**\<`T1`, `T2`\>(`a1`: `T1`[], `a2`: `T2`[]): \[`undefined` \| `T1`, `undefined` \| `T2`\][]
+```ts
+function zipperMerge<T1, T2>(a1: T1[], a2: T2[]): [undefined | T1, undefined | T2][];
+```
 
 Defined in: [zipper-merge.ts:1](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L1)
 
@@ -50,7 +52,12 @@ Defined in: [zipper-merge.ts:1](https://github.com/technobuddha/library/blob/mai
 
 ## Call Signature
 
-> **zipperMerge**\<`T1`, `T2`, `T3`\>(`a1`: `T1`[], `a2`: `T2`[], `a3`: `T3`[]): \[`undefined` \| `T1`, `undefined` \| `T2`, `undefined` \| `T3`\][]
+```ts
+function zipperMerge<T1, T2, T3>(
+   a1: T1[], 
+   a2: T2[], 
+   a3: T3[]): [undefined | T1, undefined | T2, undefined | T3][];
+```
 
 Defined in: [zipper-merge.ts:2](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L2)
 
@@ -76,7 +83,13 @@ Defined in: [zipper-merge.ts:2](https://github.com/technobuddha/library/blob/mai
 
 ## Call Signature
 
-> **zipperMerge**\<`T1`, `T2`, `T3`, `T4`\>(`a1`: `T1`[], `a2`: `T2`[], `a3`: `T3`[], `a4`: `T4`[]): \[`undefined` \| `T1`, `undefined` \| `T2`, `undefined` \| `T3`, `undefined` \| `T4`\][]
+```ts
+function zipperMerge<T1, T2, T3, T4>(
+   a1: T1[], 
+   a2: T2[], 
+   a3: T3[], 
+   a4: T4[]): [undefined | T1, undefined | T2, undefined | T3, undefined | T4][];
+```
 
 Defined in: [zipper-merge.ts:7](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L7)
 
@@ -104,7 +117,14 @@ Defined in: [zipper-merge.ts:7](https://github.com/technobuddha/library/blob/mai
 
 ## Call Signature
 
-> **zipperMerge**\<`T1`, `T2`, `T3`, `T4`, `T5`\>(`a1`: `T1`[], `a2`: `T2`[], `a3`: `T3`[], `a4`: `T4`[], `a5`: `T5`[]): \[`undefined` \| `T1`, `undefined` \| `T2`, `undefined` \| `T3`, `undefined` \| `T4`, `undefined` \| `T5`\][]
+```ts
+function zipperMerge<T1, T2, T3, T4, T5>(
+   a1: T1[], 
+   a2: T2[], 
+   a3: T3[], 
+   a4: T4[], 
+   a5: T5[]): [undefined | T1, undefined | T2, undefined | T3, undefined | T4, undefined | T5][];
+```
 
 Defined in: [zipper-merge.ts:13](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L13)
 
@@ -134,7 +154,9 @@ Defined in: [zipper-merge.ts:13](https://github.com/technobuddha/library/blob/ma
 
 ## Call Signature
 
-> **zipperMerge**\<`T`\>(...`a`: `T`[][]): (`undefined` \| `T`)[][]
+```ts
+function zipperMerge<T>(...a: T[][]): (undefined | T)[][];
+```
 
 Defined in: [zipper-merge.ts:20](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L20)
 

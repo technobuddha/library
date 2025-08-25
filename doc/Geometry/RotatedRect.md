@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: RotatedRect
 
-> **RotatedRect** = [`Rect`](Rect.md) & \{ `angle`: `number`; `area`: `number`; \}
+```ts
+type RotatedRect = Rect & {
+  angle: number;
+  area: number;
+};
+```
 
 Defined in: [largest-inscribed-rectangle.ts:17](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L17)
 

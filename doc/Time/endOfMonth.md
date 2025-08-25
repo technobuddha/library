@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: endOfMonth()
 
-> **endOfMonth**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `options`: [`EndOfMonthOptions`](EndOfMonthOptions.md)): [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
+```ts
+function endOfMonth(input: Date, options: EndOfMonthOptions): Date;
+```
 
 Defined in: [end-of-month.ts:24](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L24)
 

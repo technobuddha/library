@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: compareStrings()
 
-> **compareStrings**(`a`: `null` \| `string`, `b`: `null` \| `string`, `caseInsensitive`: [`CompareStringsOptions`](CompareStringsOptions.md)): `-1` \| `0` \| `1`
+```ts
+function compareStrings(
+   a: null | string, 
+   b: null | string, 
+   caseInsensitive: CompareStringsOptions): -1 | 0 | 1;
+```
 
 Defined in: [compare-strings.ts:31](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L31)
 

@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: DayOfWeekOptions
 
-> **DayOfWeekOptions** = \{ `startOfWeek?`: [`DayOfWeek`](DayOfWeek.md); `utc?`: `boolean`; \}
+```ts
+type DayOfWeekOptions = {
+  startOfWeek?: DayOfWeek;
+  utc?: boolean;
+};
+```
 
 Defined in: [day-of-week.ts:11](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L11)
 

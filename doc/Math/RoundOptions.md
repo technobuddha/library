@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: RoundOptions
 
-> **RoundOptions** = \{ `precision?`: `number`; \}
+```ts
+type RoundOptions = {
+  precision?: number;
+};
+```
 
 Defined in: [round.ts:10](https://github.com/technobuddha/library/blob/main/src/round.ts#L10)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: standardDeviation()
 
-> **standardDeviation**(...`dataPoints`: `number`[]): `number`
+```ts
+function standardDeviation(...dataPoints: number[]): number;
+```
 
 Defined in: [standard-deviation.ts:13](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L13)
 

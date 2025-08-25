@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isRegExp()
 
-> **isRegExp**(`value`: `unknown`): `value is RegExp`
+```ts
+function isRegExp(value: unknown): value is RegExp;
+```
 
 Defined in: [is-reg-exp.ts:11](https://github.com/technobuddha/library/blob/main/src/is-reg-exp.ts#L11)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: uncapitalize()
 
-> **uncapitalize**(`input`: `string`): `string`
+```ts
+function uncapitalize(input: string): string;
+```
 
 Defined in: [uncapitalize.ts:12](https://github.com/technobuddha/library/blob/main/src/uncapitalize.ts#L12)
 

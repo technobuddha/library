@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: bounds()
 
-> **bounds**(`vertices`: [`Polygon`](Polygon.md)): [`Rect`](Rect.md)
+```ts
+function bounds(vertices: Polygon): Rect;
+```
 
 Defined in: [bounds.ts:13](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L13)
 

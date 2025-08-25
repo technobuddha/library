@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: conjoin()
 
-> **conjoin**\<`T`\>(`input`: `ArrayLike`\<`T`\>, `options`: [`ConjoinOptions`](ConjoinOptions.md)): `string`
+```ts
+function conjoin<T>(input: ArrayLike<T>, options: ConjoinOptions): string;
+```
 
 Defined in: [conjoin.ts:27](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L27)
 

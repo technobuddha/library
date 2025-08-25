@@ -6,7 +6,11 @@ Technobuddha Library
 
 # Type Alias: FormatDateOptions
 
-> **FormatDateOptions** = \{ `utc?`: `boolean`; \}
+```ts
+type FormatDateOptions = {
+  utc?: boolean;
+};
+```
 
 Defined in: [format-date.ts:84](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L84)
 

@@ -6,7 +6,13 @@ Technobuddha Library
 
 # Function: delimited()
 
-> **delimited**(`input`: `string`, `delimiter`: `string`, `index`: `number`, `count`: `number`): `string`
+```ts
+function delimited(
+   input: string, 
+   delimiter: string, 
+   index: number, 
+   count: number): string;
+```
 
 Defined in: [delimited.ts:13](https://github.com/technobuddha/library/blob/main/src/delimited.ts#L13)
 

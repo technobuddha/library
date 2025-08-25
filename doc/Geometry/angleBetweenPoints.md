@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: angleBetweenPoints()
 
-> **angleBetweenPoints**(`a`: [`Cartesian`](Cartesian.md), `b`: [`Cartesian`](Cartesian.md), `unit`: [`AngleUnit`](AngleUnit.md)): `number`
+```ts
+function angleBetweenPoints(
+   a: Cartesian, 
+   b: Cartesian, 
+   unit: AngleUnit): number;
+```
 
 Defined in: [angle-between-points.ts:18](https://github.com/technobuddha/library/blob/main/src/angle-between-points.ts#L18)
 

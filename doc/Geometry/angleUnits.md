@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: angleUnits
 
-> `const` **angleUnits**: [`Record`](https://www.typescriptlang.org/docs/handbook/utility-types.html#recordkeys-type)\<[`AngleUnit`](AngleUnit.md), `number`\>
+```ts
+const angleUnits: Record<AngleUnit, number>;
+```
 
 Defined in: [angle.ts:24](https://github.com/technobuddha/library/blob/main/src/angle.ts#L24)
 

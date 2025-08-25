@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: splitWords()
 
-> **splitWords**(`input`: `string`, `options`: [`SplitWordsOptions`](SplitWordsOptions.md)): `string`[]
+```ts
+function splitWords(input: string, options: SplitWordsOptions): string[];
+```
 
 Defined in: [split-words.ts:25](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L25)
 

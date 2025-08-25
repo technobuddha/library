@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isWhitespace()
 
-> **isWhitespace**(`input`: `string`): `boolean`
+```ts
+function isWhitespace(input: string): boolean;
+```
 
 Defined in: [is-whitespace.ts:9](https://github.com/technobuddha/library/blob/main/src/is-whitespace.ts#L9)
 

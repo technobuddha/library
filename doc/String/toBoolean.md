@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: toBoolean()
 
-> **toBoolean**(`input`: `string`, `options`: [`BooleanOptions`](BooleanOptions.md)): `undefined` \| `boolean`
+```ts
+function toBoolean(input: string, options: BooleanOptions): undefined | boolean;
+```
 
 Defined in: [to-boolean.ts:29](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L29)
 

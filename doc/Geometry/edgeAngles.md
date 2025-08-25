@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: edgeAngles()
 
-> **edgeAngles**(`polygon`: [`Polygon`](Polygon.md), `normalizeTo`: `number`): [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`number`\>
+```ts
+function edgeAngles(polygon: Polygon, normalizeTo: number): Generator<number>;
+```
 
 Defined in: [edge-angles.ts:13](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L13)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isNumber()
 
-> **isNumber**(`value`: `unknown`): `value is number`
+```ts
+function isNumber(value: unknown): value is number;
+```
 
 Defined in: [is-number.ts:9](https://github.com/technobuddha/library/blob/main/src/is-number.ts#L9)
 

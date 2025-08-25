@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: isInPolygon()
 
-> **isInPolygon**(`object`: [`Cartesian`](Cartesian.md) \| [`Rect`](Rect.md) \| [`Polygon`](Polygon.md), `polygon`: [`Polygon`](Polygon.md)): `boolean`
+```ts
+function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon): boolean;
+```
 
 Defined in: [is-in-polygon.ts:26](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L26)
 

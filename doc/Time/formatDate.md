@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: formatDate()
 
-> **formatDate**(`input`: [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date), `mask?`: `string`, `options?`: [`FormatDateOptions`](FormatDateOptions.md)): `string`
+```ts
+function formatDate(
+   input: Date, 
+   mask?: string, 
+   options?: FormatDateOptions): string;
+```
 
 Defined in: [format-date.ts:99](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L99)
 

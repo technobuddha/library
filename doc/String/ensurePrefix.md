@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: ensurePrefix()
 
-> **ensurePrefix**(`input`: `string`, `prefix`: `string`): `string`
+```ts
+function ensurePrefix(input: string, prefix: string): string;
+```
 
 Defined in: [ensure-prefix.ts:10](https://github.com/technobuddha/library/blob/main/src/ensure-prefix.ts#L10)
 

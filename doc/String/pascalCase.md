@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: pascalCase()
 
-> **pascalCase**(`input`: `string`): `string`
+```ts
+function pascalCase(input: string): string;
+```
 
 Defined in: [pascal-case.ts:14](https://github.com/technobuddha/library/blob/main/src/pascal-case.ts#L14)
 

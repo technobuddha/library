@@ -8,7 +8,12 @@ Technobuddha Library
 
 ## Call Signature
 
-> **largestInscribedRectangle**(`polygon`: [`Polygon`](Polygon.md), `options?`: \{ `aligned?`: `true`; `squareOnly?`: `boolean`; \}): [`Rect`](Rect.md)
+```ts
+function largestInscribedRectangle(polygon: Polygon, options?: {
+  aligned?: true;
+  squareOnly?: boolean;
+}): Rect;
+```
 
 Defined in: [largest-inscribed-rectangle.ts:64](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L64)
 
@@ -35,7 +40,12 @@ The largest inscribed rectangle.
 
 ## Call Signature
 
-> **largestInscribedRectangle**(`polygon`: [`Polygon`](Polygon.md), `options`: \{ `aligned`: `false`; `squareOnly?`: `boolean`; \}): [`RotatedRect`](RotatedRect.md)
+```ts
+function largestInscribedRectangle(polygon: Polygon, options: {
+  aligned: false;
+  squareOnly?: boolean;
+}): RotatedRect;
+```
 
 Defined in: [largest-inscribed-rectangle.ts:68](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L68)
 

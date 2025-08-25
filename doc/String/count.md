@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: count()
 
-> **count**(`input`: `string`, `substring`: `string`, `options`: [`CountOptions`](CountOptions.md)): `number`
+```ts
+function count(
+   input: string, 
+   substring: string, 
+   options: CountOptions): number;
+```
 
 Defined in: [count.ts:21](https://github.com/technobuddha/library/blob/main/src/count.ts#L21)
 

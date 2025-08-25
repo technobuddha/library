@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: clamp()
 
-> **clamp**(`value`: `number`, `min`: `number`, `max`: `number`): `number`
+```ts
+function clamp(
+   value: number, 
+   min: number, 
+   max: number): number;
+```
 
 Defined in: [clamp.ts:11](https://github.com/technobuddha/library/blob/main/src/clamp.ts#L11)
 

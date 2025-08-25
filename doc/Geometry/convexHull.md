@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: convexHull()
 
-> **convexHull**(`vertices`: [`Polygon`](Polygon.md)): `undefined` \| [`Polygon`](Polygon.md)
+```ts
+function convexHull(vertices: Polygon): undefined | Polygon;
+```
 
 Defined in: [convex-hull.ts:18](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L18)
 

@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: unicodeLength()
 
-> **unicodeLength**(`input`: `string`): `number`
+```ts
+function unicodeLength(input: string): number;
+```
 
 Defined in: [unicode-length.ts:11](https://github.com/technobuddha/library/blob/main/src/unicode-length.ts#L11)
 

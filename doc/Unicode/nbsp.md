@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Variable: nbsp
 
-> `const` **nbsp**: `" "` = `'\u00A0'`
+```ts
+const nbsp: " " = '\u00A0';
+```
 
 Defined in: [constants.ts:21](https://github.com/technobuddha/library/blob/main/src/constants.ts#L21)
 

@@ -6,7 +6,14 @@ Technobuddha Library
 
 # Function: matches()
 
-> **matches**(`text`: `string`, `match`: `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp), `any`, `any`\>): `boolean`
+```ts
+function matches(text: string, match: 
+  | string
+  | RegExp
+  | Iterable<
+  | string
+  | RegExp, any, any>): boolean;
+```
 
 Defined in: [matches.ts:19](https://github.com/technobuddha/library/blob/main/src/matches.ts#L19)
 
@@ -22,7 +29,7 @@ The `match` parameter can be:
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `text` | `string` | The input string to test against the match criteria. |
-| `match` | `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<`string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp), `any`, `any`\> | A string, RegExp, or iterable of strings/RegExps to match against the input text. |
+| `match` | \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\< \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp), `any`, `any`\> | A string, RegExp, or iterable of strings/RegExps to match against the input text. |
 
 ## Returns
 

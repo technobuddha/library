@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Type Alias: SameWeekOptions
 
-> **SameWeekOptions** = \{ `firstDayOfWeek?`: [`DayOfWeek`](DayOfWeek.md); `utc?`: `boolean`; \}
+```ts
+type SameWeekOptions = {
+  firstDayOfWeek?: DayOfWeek;
+  utc?: boolean;
+};
+```
 
 Defined in: [is-same-week.ts:10](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L10)
 

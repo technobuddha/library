@@ -6,7 +6,12 @@ Technobuddha Library
 
 # Function: isOnLine()
 
-> **isOnLine**(`point`: [`Cartesian`](Cartesian.md), `line`: [`LineSegment`](LineSegment.md), `epsilon`: `number`): `boolean`
+```ts
+function isOnLine(
+   point: Cartesian, 
+   line: LineSegment, 
+   epsilon: number): boolean;
+```
 
 Defined in: [is-on-line.ts:17](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L17)
 

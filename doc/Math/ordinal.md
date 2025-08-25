@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: ordinal()
 
-> **ordinal**(`input`: `number`, `options`: [`OrdinalOptions`](OrdinalOptions.md)): `string`
+```ts
+function ordinal(input: number, options: OrdinalOptions): string;
+```
 
 Defined in: [numbering/ordinal.ts:68](https://github.com/technobuddha/library/blob/main/src/numbering/ordinal.ts#L68)
 

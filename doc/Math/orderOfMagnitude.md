@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: orderOfMagnitude()
 
-> **orderOfMagnitude**(`exponent`: `number`): `null` \| `string`
+```ts
+function orderOfMagnitude(exponent: number): null | string;
+```
 
 Defined in: [numbering/order-of-magnitude.ts:17](https://github.com/technobuddha/library/blob/main/src/numbering/order-of-magnitude.ts#L17)
 

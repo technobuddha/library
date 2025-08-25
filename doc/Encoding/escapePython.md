@@ -6,7 +6,9 @@ Technobuddha Library
 
 # Function: escapePython()
 
-> **escapePython**(`input`: `string`): `string`
+```ts
+function escapePython(input: string): string;
+```
 
 Defined in: [escape-python.ts:12](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L12)
 
