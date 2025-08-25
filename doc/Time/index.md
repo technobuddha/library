@@ -8,14 +8,14 @@ Technobuddha Library
 
 ### Alteration
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [TimeIncrement](TimeIncrement.md) | Represents amount of time to use for [addTime](addTime.md) |
 | [addTime](addTime.md) | Add units of time to a Date |
 
 ### Constants
 
-| <div style="width: 200px;">Name</div> | Description |
+| Variable | Description |
 | ------ | ------ |
 | [daysPerWeek](daysPerWeek.md) | Number of days in a week [7] |
 | [hoursPerDay](hoursPerDay.md) | Number of hours in a day [24] |
@@ -35,13 +35,13 @@ Technobuddha Library
 
 ### Conversion
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [toDate](toDate.md) | Converts an unknown entity to a `Date` object. |
 
 ### Day
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [BeginningOfDayOptions](BeginningOfDayOptions.md) | Options for [beginningOfDay](beginningOfDay.md) |
 | [GetOccurrenceInMonthOptions](GetOccurrenceInMonthOptions.md) | Options for [occurrenceInMonth](occurrenceInMonth.md) |
@@ -54,7 +54,7 @@ Technobuddha Library
 
 ### Enumerations
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [DayOfWeek](DayOfWeek.md) | Days of the week |
 | [MonthOfYear](MonthOfYear.md) | Months of the year |
@@ -63,20 +63,20 @@ Technobuddha Library
 
 ### Formatting
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [FormatDateOptions](FormatDateOptions.md) | Options for formatting a date |
 | [formatDate](formatDate.md) | Format a date |
 
 ### Julian
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [julian](julian.md) | Get the Julian date (number of days since noon on Monday, January 1 4713 BCE) |
 
 ### Month
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [BeginningOfMonthOptions](BeginningOfMonthOptions.md) | Options for the [beginningOfMonth](beginningOfMonth.md) function |
 | [DaysInMonthOptions](DaysInMonthOptions.md) | Options for the [daysInMonth](daysInMonth.md) function |
@@ -89,40 +89,40 @@ Technobuddha Library
 
 ### Parsing
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [isValidDate](isValidDate.md) | Determine if a date is valid |
 | [parseDate](parseDate.md) | Parse a string into a Date object |
 
 ### Relative Time
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [RelativeTimeOptions](RelativeTimeOptions.md) | Options for the [relativeTime](relativeTime.md) function |
 | [relativeTime](relativeTime.md) | Describe the difference between two dates in a simple format |
 
 ### Time Span
 
-| <div style="width: 200px;">Name</div> | Description |
+| Class | Description |
 | ------ | ------ |
 | [TimeSpan](TimeSpan.md) | Store and manipulate a duration of time |
 
 ### Time Zone
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [TimezoneOptions](TimezoneOptions.md) | Options for the [timezone](timezone.md) function |
 | [timezone](timezone.md) | Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes |
 
 ### Type Check
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [isDate](isDate.md) | Determines whether the provided value is a `Date` object. |
 
 ### Week
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [BeginningOfWeekOptions](BeginningOfWeekOptions.md) | Options for the [beginningOfWeek](beginningOfWeek.md) function |
 | [DayOfWeekOptions](DayOfWeekOptions.md) | Options for the [dayOfWeek](dayOfWeek-1.md) function |
@@ -139,7 +139,7 @@ Technobuddha Library
 
 ### Year
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [BeginningOfYearOptions](BeginningOfYearOptions.md) | Options for the [beginningOfYear](beginningOfYear.md) function |
 | [DayOfYearOptions](DayOfYearOptions.md) | Options for the [dayOfYear](dayOfYear.md) function |

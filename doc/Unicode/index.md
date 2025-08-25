@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### Characters
 
-| <div style="width: 200px;">Name</div> | Description |
+| Variable | Description |
 | ------ | ------ |
 | [fractionSlash](fractionSlash.md) | Fraction Slash |
 | [hyphen](hyphen.md) | Hyphen |
@@ -24,7 +24,7 @@ Technobuddha Library
 
 ### Constants
 
-| <div style="width: 200px;">Name</div> | Description |
+| Variable | Description |
 | ------ | ------ |
 | [empty](empty.md) | The empty string |
 | [nbsp](nbsp.md) | Non-breaking space |
@@ -34,7 +34,7 @@ Technobuddha Library
 
 ### Encoding
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [TextEncoding](TextEncoding.md) | Valid Text Encoding Types |
 | [decodeText](decodeText.md) | Decode a UTF8 encoded string into unicode |
@@ -42,19 +42,19 @@ Technobuddha Library
 
 ### Is Surrogate
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [IsSurrogateOptions](IsSurrogateOptions.md) | Options for [isSurrogate](isSurrogate.md) |
 | [isSurrogate](isSurrogate.md) | Determine is a character is a surrogate |
 
 ### Normalization
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [removeDiacritics](removeDiacritics.md) | Remove all diacritics from a string |
 
 ### String Length
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [unicodeLength](unicodeLength.md) | Return the number of unicode code points in a string |

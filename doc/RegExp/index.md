@@ -8,19 +8,19 @@ Technobuddha Library
 
 ### Matching
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [matches](matches.md) | Determines if the given `text` matches the provided `match` criteria. |
 
 ### Template
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [re](re.md) | Constructs a new `RegExp` by interpolating template strings and provided regular expressions. |
 
 ### Validation
 
-| <div style="width: 200px;">Name</div> | Description |
+| Variable | Description |
 | ------ | ------ |
 | [domain](domain.md) | Regular expression for matching a domain name composed of a host and a top-level domain (TLD). |
 | [email](email.md) | validate an valid email address |

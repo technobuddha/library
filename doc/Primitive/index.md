@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### Conversion
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [toError](toError.md) | Convert the entity to an Error object. |
 | [toInteger](toInteger.md) | Convert an entity to a integer number. |
@@ -17,6 +17,6 @@ Technobuddha Library
 
 ### Testing
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [isPrimitive](isPrimitive.md) | Check to see if an object is a primitive |

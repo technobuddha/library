@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### Arithmetic
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [CeilOptions](CeilOptions.md) | Options for the [ceil](ceil.md) function |
 | [FloorOptions](FloorOptions.md) | Options for the [floor](floor.md) function |
@@ -23,7 +23,7 @@ Technobuddha Library
 
 ### Comparison
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [ApproximatelyEqualsOptions](ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](approximatelyEquals.md) function |
 | [approximatelyEquals](approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
@@ -32,7 +32,7 @@ Technobuddha Library
 
 ### Constants
 
-| <div style="width: 200px;">Name</div> | Description |
+| Variable | Description |
 | ------ | ------ |
 | [cardinalOnes](cardinalOnes.md) | Words for unit numbers 0-19 |
 | [cardinalTens](cardinalTens.md) | Words for tens 20-90 |
@@ -42,13 +42,13 @@ Technobuddha Library
 
 ### Number
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [constructNumber](constructNumber.md) | Reconstructs a number from its deconstructed representation. |
 
 ### Numbers
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [CardinalOptions](CardinalOptions.md) | Configuration options for cardinal number conversion. |
 | [DeconstructedNumber](DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
@@ -69,7 +69,7 @@ Technobuddha Library
 
 ### Parity
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [isEven](isEven.md) | Tests to see if the specified value is an even integer |
 | [isMultipleOf](isMultipleOf.md) | Tests to see if the specified value is an multiple of *multiplier* |
@@ -77,7 +77,7 @@ Technobuddha Library
 
 ### Statistics
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [mean](mean.md) | Calculates the arithmetic mean (average) of an array of numbers. |
 | [median](median.md) | Calculates the median value of an array of numbers. |

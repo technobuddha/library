@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### GraphQl
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [GraphQLArray](GraphQLArray.md) | A GraphQL Array, similar to a JSONArray |
 | [GraphQLObject](GraphQLObject.md) | A GraphQL Object, similar to a JSONObject |
@@ -17,6 +17,6 @@ Technobuddha Library
 
 ### Single Line
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [singleLine](singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |

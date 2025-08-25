@@ -8,13 +8,13 @@ Technobuddha Library
 
 ### Number Generation
 
-| <div style="width: 200px;">Name</div> | Description |
+| Class | Description |
 | ------ | ------ |
 | [MersenneTwister](MersenneTwister.md) | Implements the Mersenne Twister pseudorandom number generator (MT19937). |
 
 ### Pick
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [Weighted](Weighted.md) | Represents an object with an associated weight value. |
 | [randomDraw](randomDraw.md) | Draw a random item from a list. Returning both the item and the list without the drawn item. |
@@ -23,6 +23,6 @@ Technobuddha Library
 
 ### Shuffle
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [randomShuffle](randomShuffle.md) | Returns a new array with the elements of the input array shuffled in random order. |

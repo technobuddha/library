@@ -65,8 +65,35 @@ function gather(item, count, total, pages) {
  * @returns {string[]}
  */
 function alignTables(index) {
-  return index.map((line) => (/^\| [A-Za-z\s]+ \| Description \|$/u.test(line)) ? '| <div style="width: 200px;">Name</div> | Description |' : line);
+  return index;
+  // /** @type {string[]} */
+  // const result = [];
+  // let table = false;
+
+  // for (const line of index) {
+  //   if (/^\| [A-Za-z\s]+ \| Description \|$/u.test(line)) {
+  //     result.push('<table>', '<thead>', '<tr>', '<th style="width: 200px;">Name</th>', '<th>Description</th>', '</tr>', '</thead>', '<tbody>');
+  //     table = true;
+  //   } else if (/^\| ------  \| ------ \|$/u.test(line)) {
+  //     // Skip the line
+  //   } else {
+  //     const matches = line.match(/^\| (.*) \| (.*) \|$/u);
+  //     if (matches) {
+  //       const [, name, description] = matches;
+  //       result.push('<tr>', `<td style="width: 200px;">${name}</td>`, `<td>${description}</td>`, '</tr>');
+  //     } else {
+  //       if (table) {
+  //         result.push('</tbody>', '</table>', empty);
+  //         table = false;
+  //       }
+  //       result.push(line);
+  //     }
+  //   }
+  // }
+  //
+  // return result;
 }
+
 /**
  * @param {import('typedoc-plugin-markdown').MarkdownApplication} app
  */

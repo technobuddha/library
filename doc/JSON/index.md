@@ -8,14 +8,14 @@ Technobuddha Library
 
 ### Data Structures
 
-| <div style="width: 200px;">Name</div> | Description |
+| Class | Description |
 | ------ | ------ |
 | [JSONMap](JSONMap.md) | A Map-like data structure that allows objects conforming to `JsonObject` as keys. |
 | [JSONSet](JSONSet.md) | A Set-like collection for objects that can be serialized to JSON. |
 
 ### Serialization
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [specialBegin](specialBegin.md) | The beginning of a special JSON value |
 | [specialFinish](specialFinish.md) | The end of a special JSON value |

@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### Parts of Speech
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [ConjoinOptions](ConjoinOptions.md) | Options for creating a coordinate string |
 | [IndefiniteArticleOptions](IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
@@ -19,6 +19,6 @@ Technobuddha Library
 
 ### Syllables
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [syllables](syllables.md) | Approximate the number of syllables in a string |

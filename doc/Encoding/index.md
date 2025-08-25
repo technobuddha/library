@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### Binary
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [BinaryEncoding](BinaryEncoding.md) | The binary encoding to use |
 | [BinaryObject](BinaryObject.md) | A type that represents various binary object types in JavaScript. |
@@ -22,7 +22,7 @@ Technobuddha Library
 
 ### Escaping
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [EscapeHtmlOptions](EscapeHtmlOptions.md) | Options for [escapeHTML](escapeHTML.md) |
 | [escapeC](escapeC.md) | Escape a string for use in C/C++ |
@@ -39,7 +39,7 @@ Technobuddha Library
 
 ### Hash
 
-| <div style="width: 200px;">Name</div> | Description |
+| Class | Description |
 | ------ | ------ |
 | [Crc32](Crc32.md) | Compute the CRC32 checksum |
 | [HashBase](HashBase.md) | Class representing a generic hash algorithm implementation. |

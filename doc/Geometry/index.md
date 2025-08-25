@@ -8,7 +8,7 @@ Technobuddha Library
 
 ### Angle
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [AngleUnit](AngleUnit.md) | Types of angle units |
 | [angleUnits](angleUnits.md) | Number of units in a circle |unit|value| |---|---| |deg|360| |degrees|360| |rads|2π| |radians|2π| |grads|400| |gradians|400| |turns|1| |
@@ -23,7 +23,7 @@ Technobuddha Library
 
 ### Coordinates
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [Cartesian](Cartesian.md) | Represents a point in 2D Cartesian coordinate space. |
 | [Polar](Polar.md) | Polar coordinate (angle, radius) |
@@ -35,7 +35,7 @@ Technobuddha Library
 
 ### Line Segment
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [LineSegment](LineSegment.md) | Represents a line segment in 2D space, defined by its start and end points. |
 | [angleOfLine](angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
@@ -50,7 +50,7 @@ Technobuddha Library
 
 ### Point
 
-| <div style="width: 200px;">Name</div> | Description |
+| Function | Description |
 | ------ | ------ |
 | [isInPolygon](isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isLeftOfLine](isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
@@ -63,7 +63,7 @@ Technobuddha Library
 
 ### Polygon
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [Polygon](Polygon.md) | A polygon (a set of cartesian coordinates) |
 | [area](area.md) | Calculates the area of a polygon given its vertices. |
@@ -84,7 +84,7 @@ Technobuddha Library
 
 ### Rectangle
 
-| <div style="width: 200px;">Name</div> | Description |
+| Name | Description |
 | ------ | ------ |
 | [LargestInscribedRectangleOptions](LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [Rect](Rect.md) | A rectangle (defined by its top-left corner, width and height) |
