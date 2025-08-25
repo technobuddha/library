@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / formatNumber
+[Library](../index.md) / [Math](./index.md) / formatNumber
 
 # Function: formatNumber()
 
@@ -44,3 +42,4 @@ optional sections for positive, negative, and zero values.
 `string`
 
 The formatted number as a string.
+

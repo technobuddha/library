@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toRadians
+[Library](../index.md) / [Geometry](./index.md) / toRadians
 
 # Function: toRadians()
 
@@ -26,3 +24,4 @@ Converts degrees to radians.
 `number`
 
 Angle in radians.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / correctMSWord
+[Library](../index.md) / [String](./index.md) / correctMSWord
 
 # Function: correctMSWord()
 
@@ -25,3 +23,4 @@ Correct character sequences that Microsoft Word changes to make it look prettier
 `string`
 
 string with special characters corrected
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / TimeSpan
+[Library](../index.md) / [Time](./index.md) / TimeSpan
 
 # Class: TimeSpan
 
@@ -371,3 +369,4 @@ Compare two TimeSpans
 `number`
 
 -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
+

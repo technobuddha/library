@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / approximatelyEquals
+[Library](../index.md) / [Math](./index.md) / approximatelyEquals
 
 # Function: approximatelyEquals()
 
@@ -34,3 +32,4 @@ true if *a* and *b* are nearly equal.
 ```ts
 tolerance 0
 ```
+

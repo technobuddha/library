@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / escapeJava
+[Library](../index.md) / [Encoding](./index.md) / escapeJava
 
 # Function: escapeJava()
 
@@ -25,3 +23,4 @@ Escape a string for use in Java
 `string`
 
 The string escaped for Java
+

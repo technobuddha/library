@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toASCII
+[Library](../index.md) / [String](./index.md) / toASCII
 
 # Function: toASCII()
 
@@ -23,3 +21,4 @@ Change a string to be all from the basic latin unicode plane
 ## Returns
 
 `string`
+

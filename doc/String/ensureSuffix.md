@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ensureSuffix
+[Library](../index.md) / [String](./index.md) / ensureSuffix
 
 # Function: ensureSuffix()
 
@@ -26,3 +24,4 @@ Add a suffix to a string, if it does not already have the suffix
 `string`
 
 The string followed by the suffix
+

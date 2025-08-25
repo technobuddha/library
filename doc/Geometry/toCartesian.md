@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toCartesian
+[Library](../index.md) / [Geometry](./index.md) / toCartesian
 
 # Function: toCartesian()
 
@@ -26,3 +24,4 @@ Convert polar coordinates to cartesian
 [`Cartesian`](Cartesian.md)
 
 Object containing the X and Y-distance for the angle and radius.
+

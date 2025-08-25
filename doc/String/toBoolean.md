@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toBoolean
+[Library](../index.md) / [String](./index.md) / toBoolean
 
 # Function: toBoolean()
 
@@ -36,3 +34,4 @@ trueValues 'true', 'yes', 'y', 'on', or '1'
 ```ts
 falseValues 'false', 'no', 'n', 'off', '0'
 ```
+

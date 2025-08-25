@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / area
+[Library](../index.md) / [Geometry](./index.md) / area
 
 # Function: area()
 
@@ -30,3 +28,4 @@ area (which indicates the orientation of the vertices) or the absolute area.
 `number`
 
 The area of the polygon.
+

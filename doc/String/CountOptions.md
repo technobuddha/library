@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / CountOptions
+[Library](../index.md) / [String](./index.md) / CountOptions
 
 # Type Alias: CountOptions
 
@@ -19,3 +17,4 @@ Options for the [count](count.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="overlap"></a> `overlap?` | `boolean` | if true, counts overlapping strings | [count.ts:8](https://github.com/technobuddha/library/blob/main/src/count.ts#L8) |
+

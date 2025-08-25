@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isOdd
+[Library](../index.md) / [Math](./index.md) / isOdd
 
 # Function: isOdd()
 
@@ -25,3 +23,4 @@ Tests to see if the specified value is an odd integer
 `boolean`
 
 true if the number is an odd integer
+

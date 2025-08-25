@@ -5,6 +5,8 @@ import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
  *
  * @param deconstructed - An object containing the sign, mantissa, and exponent of the number.
  * @returns The reconstructed number.
+ * @group Math
+ * @category Number
  */
 export function constructNumber(deconstructed: Omit<DeconstructedNumber, 'value'>): number {
   if (deconstructed.mantissa === '') {

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isSameYear
+[Library](../index.md) / [Time](./index.md) / isSameYear
 
 # Function: isSameYear()
 
@@ -33,3 +31,4 @@ true, if the two dates occur in the same year
 ```ts
 utc false
 ```
+

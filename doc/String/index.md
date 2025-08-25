@@ -1,12 +1,14 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / String
 
-## String
+# String
 
 ### Affix
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [RootOptions](RootOptions.md) | Options for the [root](root.md) function |
 | [ensurePrefix](ensurePrefix.md) | Add a prefix to a string, if it does not already have the prefix |
@@ -15,14 +17,14 @@
 
 ### Build
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [StringLike](StringLike.md) | A string-like object, which can be a string or an array of strings; |
 | [build](build.md) | Concatenates strings and/or arrays of strings |
 
 ### Case Conversion
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [camelCase](camelCase.md) | Convert an identifier string to a camel case |
 | [capitalize](capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
@@ -38,7 +40,7 @@
 
 ### Categorization
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isAlpha](isAlpha.md) | Test a string for all alphabetic characters |
 | [isAlphaNumeric](isAlphaNumeric.md) | Test a string for all alphanumeric characters |
@@ -50,20 +52,20 @@
 
 ### Chop
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [ChopOptions](ChopOptions.md) | Options for the [chop](chop.md) function |
 | [chop](chop.md) | Break a string into equal sized segments of characters |
 
 ### Clean
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [clean](clean.md) | Remove all occurrences of characters from the beginning and end of the string |
 
 ### Collapse
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CollapseBreakingSpaceOptions](CollapseBreakingSpaceOptions.md) | Options for the [collapseBreakingSpace](collapseBreakingSpace.md) function |
 | [CollapseWhitespaceOptions](CollapseWhitespaceOptions.md) | Options for the [collapseWhitespace](collapseWhitespace.md) function |
@@ -72,20 +74,20 @@
 
 ### Comparison
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CompareStringsOptions](CompareStringsOptions.md) | Options for the [compareStrings](compareStrings.md) function |
 | [compareStrings](compareStrings.md) | Compare two strings |
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [trimEquivalent](trimEquivalent.md) | Regular expression that matches any whitespace character, including standard spaces, non-breaking spaces (`\u00A0`), and zero-width no-break spaces (`\uFEFF`). Useful for trimming or identifying whitespace-equivalent characters in strings. |
 
 ### Conversion
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BooleanOptions](BooleanOptions.md) | Options for the [toBoolean](toBoolean.md) function |
 | [FilenameOptions](FilenameOptions.md) | Options for the [toFilename](toFilename.md) function |
@@ -95,13 +97,13 @@
 
 ### Correction
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [correctMSWord](correctMSWord.md) | Correct character sequences that Microsoft Word changes to make it look prettier |
 
 ### Delimited
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CountOptions](CountOptions.md) | Options for the [count](count.md) function |
 | [count](count.md) | Compute the number of times a substring occurs within a string |
@@ -109,14 +111,14 @@
 
 ### Extraction
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [extractDigits](extractDigits.md) | Remove all non-digit characters from a string |
 | [toASCII](toASCII.md) | Change a string to be all from the basic latin unicode plane |
 
 ### Fuzzy Match
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [DiceCoefficientOptions](DiceCoefficientOptions.md) | Options for the [diceCoefficient](diceCoefficient.md) function |
 | [FuzzyMatchOptions](FuzzyMatchOptions.md) | Options for the [fuzzyMatch](fuzzyMatch.md) function |
@@ -129,13 +131,13 @@
 
 ### HTML
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [tag](tag.md) | Surround text with an HTML tag |
 
 ### Indentation
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [IndentOptions](IndentOptions.md) | Options for the indentation functions: [getIndent](getIndent.md), [indent](indent.md), and [unindent](unindent.md) |
 | [getIndent](getIndent.md) | Determine the indentation level of text |
@@ -144,14 +146,14 @@
 
 ### Mask
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [MaskOptions](MaskOptions.md) | Options for the [mask](mask.md) function |
 | [mask](mask.md) | Use a simple mask to display a string |
 
 ### Quoting
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [QuoteOptions](QuoteOptions.md) | Options for the [quote](quote.md) and [unquote](unquote.md) function |
 | [quote](quote.md) | Surround text with quotes |
@@ -159,7 +161,7 @@
 
 ### Sorting
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [NumberToLetterOptions](NumberToLetterOptions.md) | Options for the [numberToLetter](numberToLetter.md) function |
 | [SortOrderOptions](SortOrderOptions.md) | Options for the [sortOrder](sortOrder.md) function |
@@ -169,7 +171,7 @@
 
 ### Split
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [SplitWordsOptions](SplitWordsOptions.md) | Options for the [splitWords](splitWords.md) function |
 | [splitChars](splitChars.md) | Split a string into an array of characters |
@@ -178,14 +180,14 @@
 
 ### Templates
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [FillTemplateOptions](FillTemplateOptions.md) | Options for the [fillTemplate](fillTemplate.md) function |
 | [fillTemplate](fillTemplate.md) | Fill a template with supplied values |
 
 ### Units
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BinaryUnitsOptions](BinaryUnitsOptions.md) | Options for the [binaryUnits](binaryUnits.md) function |
 | [MetricUnitsOptions](MetricUnitsOptions.md) | Options for the [metricUnits](metricUnits.md) function w |
@@ -194,7 +196,7 @@
 
 ### Word Wrapping
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [WordwrapOptions](WordwrapOptions.md) | Options for the [wordwrap](wordwrap.md) function |
 | [wordwrap](wordwrap.md) | Wrap text so that it fits within a area of fixed width |

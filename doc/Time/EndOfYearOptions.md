@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / EndOfYearOptions
+[Library](../index.md) / [Time](./index.md) / EndOfYearOptions
 
 # Type Alias: EndOfYearOptions
 
@@ -19,3 +17,4 @@ Options for the [endOfYear](endOfYear.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [end-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L10) |
+

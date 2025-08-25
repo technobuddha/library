@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / lineLength
+[Library](../index.md) / [Geometry](./index.md) / lineLength
 
 # Function: lineLength()
 
@@ -25,3 +23,4 @@ Calculates the length of a given line segment using the distance formula.
 `number`
 
 The length of the line segment.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / secondsPerMinute
+[Library](../index.md) / [Time](./index.md) / secondsPerMinute
 
 # Variable: secondsPerMinute
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:52](https://github.com/technobuddha/library/blob/main/src/constants.ts#L52)
 
 Number of seconds in a minute [60]
+

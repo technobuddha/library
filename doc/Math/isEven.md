@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isEven
+[Library](../index.md) / [Math](./index.md) / isEven
 
 # Function: isEven()
 
@@ -25,3 +23,4 @@ Tests to see if the specified value is an even integer
 `boolean`
 
 true if the number is an even integer
+

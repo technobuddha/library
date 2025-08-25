@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isoWeekOfYear
+[Library](../index.md) / [Time](./index.md) / isoWeekOfYear
 
 # Function: isoWeekOfYear()
 
@@ -43,3 +41,4 @@ weekOneIncludes Thursday
 ```ts
 firstDayOfWeek Monday
 ```
+

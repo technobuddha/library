@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / longestCommonSubstring
+[Library](../index.md) / [String](./index.md) / longestCommonSubstring
 
 # Function: longestCommonSubstring()
 
@@ -30,3 +28,4 @@ Returns the longest possible substring that is substring of both of given string
 
 A string that is common to both strings such that there is no
 common substring with size greater than the length of the string.
+

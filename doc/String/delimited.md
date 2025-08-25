@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / delimited
+[Library](../index.md) / [String](./index.md) / delimited
 
 # Function: delimited()
 
@@ -26,3 +24,4 @@ Return a field from a delimited string
 ## Returns
 
 `string`
+

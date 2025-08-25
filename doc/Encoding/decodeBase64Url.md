@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / decodeBase64Url
+[Library](../index.md) / [Encoding](./index.md) / decodeBase64Url
 
 # Function: decodeBase64Url()
 
@@ -86,3 +84,4 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 ### Throws
 
 `TypeError` If the input string is not correctly encoded.
+

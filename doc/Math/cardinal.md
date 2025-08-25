@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / cardinal
+[Library](../index.md) / [Math](./index.md) / cardinal
 
 # Function: cardinal()
 
@@ -31,3 +29,4 @@ The number spelled out
 
 There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
 up to uncentillions (1e308).
+

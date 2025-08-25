@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / escapeGraphQL
+[Library](../index.md) / [Encoding](./index.md) / escapeGraphQL
 
 # Function: escapeGraphQL()
 
@@ -25,3 +23,4 @@ Escape a string for use in GraphQL
 `string`
 
 the escaped string
+

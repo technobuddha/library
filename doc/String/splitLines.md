@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / splitLines
+[Library](../index.md) / [String](./index.md) / splitLines
 
 # Function: splitLines()
 
@@ -25,3 +23,4 @@ Split a string into an array of lines
 `string`[]
 
 array of lines
+

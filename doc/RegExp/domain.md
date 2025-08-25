@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / domain
+[Library](../index.md) / [RegExp](./index.md) / domain
 
 # Variable: domain
 
@@ -24,3 +22,4 @@ The pattern expects one or more occurrences of `HOST` followed by `TLD`, anchore
 ```ts
 const isDomain = domain.test('example.com');
 ```
+

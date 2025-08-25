@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ceil
+[Library](../index.md) / [Math](./index.md) / ceil
 
 # Function: ceil()
 
@@ -26,3 +24,4 @@ Returns the smallest integer greater than or equal to the given number, with opt
 `number`
 
 The smallest integer greater than or equal to the adjusted input.
+

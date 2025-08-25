@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / diceCoefficient
+[Library](../index.md) / [String](./index.md) / diceCoefficient
 
 # Function: diceCoefficient()
 
@@ -27,3 +25,4 @@ Compute the dice coefficient measure of similarity between two strings
 `number`
 
 a number from 0 (not similar) to 1 (equal) measuring the similarity
+

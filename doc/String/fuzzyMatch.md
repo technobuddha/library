@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / fuzzyMatch
+[Library](../index.md) / [String](./index.md) / fuzzyMatch
 
 # Function: fuzzyMatch()
 
@@ -28,3 +26,4 @@ of Levenshtein distance, Dice coefficient, and longest common substring metrics.
 `number`
 
 A similarity score between 0 and 1, where 1 indicates a perfect match.
+

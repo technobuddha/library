@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isString
+[Library](../index.md) / [Utility](./index.md) / isString
 
 # Function: isString()
 
@@ -27,3 +25,4 @@ This function checks if the value is a primitive string or a String object.
 `value is string`
 
 True if the value is a string or a String object, otherwise false.
+

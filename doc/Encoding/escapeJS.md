@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / escapeJS
+[Library](../index.md) / [Encoding](./index.md) / escapeJS
 
 # Function: escapeJS()
 
@@ -25,3 +23,4 @@ Escape a string for use in Javascript
 `string`
 
 Sting escaped for Javascript
+

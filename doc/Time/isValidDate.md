@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isValidDate
+[Library](../index.md) / [Time](./index.md) / isValidDate
 
 # Function: isValidDate()
 
@@ -25,3 +23,4 @@ Determine if a date is valid
 `boolean`
 
 true, if the date is valid
+

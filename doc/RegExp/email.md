@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / email
+[Library](../index.md) / [RegExp](./index.md) / email
 
 # Variable: email
 
@@ -13,3 +11,4 @@
 Defined in: [regexp.ts:130](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L130)
 
 validate an valid email address
+

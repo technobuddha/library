@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / singleLine
+[Library](../index.md) / [Template](./index.md) / singleLine
 
 # Function: singleLine()
 
@@ -27,3 +25,4 @@ then interleaving the provided arguments. The result is a trimmed, single-line s
 `string`
 
 A single-line string with all line breaks and leading whitespace removed.
+

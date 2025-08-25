@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / standardDeviation
+[Library](../index.md) / [Math](./index.md) / standardDeviation
 
 # Function: standardDeviation()
 
@@ -27,3 +25,4 @@ Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_d
 The sample standard deviation of the arguments (0 if fewer
 than two samples were provided, or NaN if any of the samples is
 not a valid number).
+

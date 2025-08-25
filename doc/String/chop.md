@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / chop
+[Library](../index.md) / [String](./index.md) / chop
 
 # Function: chop()
 
@@ -27,3 +25,4 @@ Break a string into equal sized segments of characters
 `string`[]
 
 Array of segments
+

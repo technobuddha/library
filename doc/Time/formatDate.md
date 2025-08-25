@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / formatDate
+[Library](../index.md) / [Time](./index.md) / formatDate
 
 # Function: formatDate()
 
@@ -31,3 +29,4 @@ Format a date
 ```ts
 utc false
 ```
+

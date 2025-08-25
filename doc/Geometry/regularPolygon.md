@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / regularPolygon
+[Library](../index.md) / [Geometry](./index.md) / regularPolygon
 
 # Function: regularPolygon()
 
@@ -31,3 +29,4 @@ An array of Cartesian points representing the vertices of the regular polygon.
 ## Throws
 
 `TypeError` If the number of sides is less than 3.
+

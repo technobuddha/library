@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toSquare
+[Library](../index.md) / [Geometry](./index.md) / toSquare
 
 # Function: toSquare()
 
@@ -27,3 +25,4 @@ it returns the original rectangle.
 [`Rect`](Rect.md)
 
 A new `Rect` object representing the largest centered square within the original rectangle.
+

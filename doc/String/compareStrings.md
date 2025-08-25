@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / compareStrings
+[Library](../index.md) / [String](./index.md) / compareStrings
 
 # Function: compareStrings()
 
@@ -45,3 +43,4 @@ natural false
 ```ts
 version false
 ```
+

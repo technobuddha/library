@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / conjoin
+[Library](../index.md) / [English](./index.md) / conjoin
 
 # Function: conjoin()
 
@@ -30,3 +28,4 @@ Create a string from an array, separating values and inserting a conjunction
 ## Returns
 
 `string`
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / padNumber
+[Library](../index.md) / [Math](./index.md) / padNumber
 
 # Function: padNumber()
 
@@ -26,3 +24,4 @@ Add leading zeros to a number to ensure a string of a minimum length
 `string`
 
 number as a string with leading zeros as needed
+

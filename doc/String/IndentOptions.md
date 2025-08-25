@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / IndentOptions
+[Library](../index.md) / [String](./index.md) / IndentOptions
 
 # Type Alias: IndentOptions
 
@@ -19,3 +17,4 @@ Options for the indentation functions: [getIndent](getIndent.md), [indent](inden
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="indenter"></a> `indenter?` | `string` | The indentation character | [indent.ts:11](https://github.com/technobuddha/library/blob/main/src/indent.ts#L11) |
+

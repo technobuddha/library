@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / parseDate
+[Library](../index.md) / [Time](./index.md) / parseDate
 
 # Function: parseDate()
 
@@ -30,3 +28,4 @@ new Date object
 
 this is a little more generous about what formats it will take for a date, and if it can't match the input to one of it's supported formats it falls
 back to new Date(text)
+

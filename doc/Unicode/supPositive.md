@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / supPositive
+[Library](../index.md) / [Unicode](./index.md) / supPositive
 
 # Variable: supPositive
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:296](https://github.com/technobuddha/library/blob/main/src/constants.ts#L296)
 
 Superscript Positive
+

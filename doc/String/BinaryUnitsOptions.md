@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / BinaryUnitsOptions
+[Library](../index.md) / [String](./index.md) / BinaryUnitsOptions
 
 # Type Alias: BinaryUnitsOptions
 
@@ -13,3 +11,4 @@
 Defined in: [binary-units.ts:10](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L10)
 
 Options for the [binaryUnits](binaryUnits.md) function
+

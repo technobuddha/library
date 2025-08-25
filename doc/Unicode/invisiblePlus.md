@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / invisiblePlus
+[Library](../index.md) / [Unicode](./index.md) / invisiblePlus
 
 # Variable: invisiblePlus
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:319](https://github.com/technobuddha/library/blob/main/src/constants.ts#L319)
 
 Invisible Plus sign
+

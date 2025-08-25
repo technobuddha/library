@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toPolar
+[Library](../index.md) / [Geometry](./index.md) / toPolar
 
 # Function: toPolar()
 
@@ -25,3 +23,4 @@ Convert cartesian coordinates to polar
 [`Polar`](Polar.md)
 
 polar coordinated
+

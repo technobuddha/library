@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / create2DArray
+[Library](../index.md) / [Array](./index.md) / create2DArray
 
 # Function: create2DArray()
 
@@ -46,3 +44,4 @@ create2DArray(2, 3, 0);  // [[0, 0, 0], [0, 0, 0]]
 
 create2DArray(2, 3, (x, y) => x + y); // [[0, 1, 2], [1, 2, 3]]
 ```
+

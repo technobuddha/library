@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / FilenameOptions
+[Library](../index.md) / [String](./index.md) / FilenameOptions
 
 # Type Alias: FilenameOptions
 
@@ -22,3 +20,4 @@ Options for the [toFilename](toFilename.md) function
 | <a id="maxlength"></a> `maxLength?` | `number` | the file name will be truncated to this length | [to-filename.ts:15](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L15) |
 | <a id="replacement"></a> `replacement?` | `string` | character to use to replace "bad" characters | [to-filename.ts:17](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L17) |
 | <a id="separator"></a> `separator?` | `string` | string to separate the main section from the disambiguated section | [to-filename.ts:21](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L21) |
+

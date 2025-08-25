@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / Cartesian
+[Library](../index.md) / [Geometry](./index.md) / Cartesian
 
 # Type Alias: Cartesian
 
@@ -20,3 +18,4 @@ Represents a point in 2D Cartesian coordinate space.
 | ------ | ------ | ------ | ------ |
 | <a id="x"></a> `x` | `number` | The x-coordinate value. | [@types/geometry.ts:9](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L9) |
 | <a id="y"></a> `y` | `number` | The y-coordinate value. | [@types/geometry.ts:11](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L11) |
+

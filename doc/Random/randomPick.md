@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / randomPick
+[Library](../index.md) / [Random](./index.md) / randomPick
 
 # Function: randomPick()
 
@@ -38,3 +36,4 @@ Randomly selected item
 ```ts
 random  Math.random
 ```
+

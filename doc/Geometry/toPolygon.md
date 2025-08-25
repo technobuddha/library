@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toPolygon
+[Library](../index.md) / [Geometry](./index.md) / toPolygon
 
 # Function: toPolygon()
 
@@ -56,3 +54,4 @@ object, it constructs a polygon representing the rectangle's corners.
 [`Polygon`](Polygon.md)
 
 A `Polygon` object representing the rectangle.
+

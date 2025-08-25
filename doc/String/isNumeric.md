@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isNumeric
+[Library](../index.md) / [String](./index.md) / isNumeric
 
 # Function: isNumeric()
 
@@ -25,3 +23,4 @@ Test an object to see if it a number, or a string which can be converted into a 
 input is string \| number
 
 true, if the object is a number, or can be converted to a number
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / lerp
+[Library](../index.md) / [Math](./index.md) / lerp
 
 # Function: lerp()
 
@@ -29,3 +27,4 @@ outside this range, the return value is a linear extrapolation).
 `number`
 
 The interpolated value between a and b.
+

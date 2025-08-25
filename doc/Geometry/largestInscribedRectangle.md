@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / largestInscribedRectangle
+[Library](../index.md) / [Geometry](./index.md) / largestInscribedRectangle
 
 # Function: largestInscribedRectangle()
 
@@ -61,3 +59,4 @@ The largest inscribed rectangle.
 ### Throws
 
 `Error` When polygon has fewer than 3 vertices
+

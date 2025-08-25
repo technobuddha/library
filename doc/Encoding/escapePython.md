@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / escapePython
+[Library](../index.md) / [Encoding](./index.md) / escapePython
 
 # Function: escapePython()
 
@@ -25,3 +23,4 @@ Escape a string for use in Python
 `string`
 
 the string escapes for use in python
+

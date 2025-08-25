@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / compare
+[Library](../index.md) / [Object](./index.md) / compare
 
 # Function: compare()
 
@@ -26,3 +24,4 @@ Compare two objects
 `number`
 
 0 if a == b; -1 if a \< b; 1 if a \> b
+

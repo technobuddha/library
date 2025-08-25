@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / rotate
+[Library](../index.md) / [Geometry](./index.md) / rotate
 
 # Function: rotate()
 
@@ -77,3 +75,4 @@ const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
 // [{ x: 0, y: 1 }, { x: -1, y: 0 }]
 ```
+

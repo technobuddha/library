@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / crossProduct
+[Library](../index.md) / [Math](./index.md) / crossProduct
 
 # Function: crossProduct()
 
@@ -33,3 +31,4 @@ The scalar cross product of vectors OA and OB.
 ## See
 
 [Calculate on which side of a straight line is a given point located](https://math.stackexchange.com/questions/274712/calculate-on-which-side-of-a-straight-line-is-a-given-point-located|)
+

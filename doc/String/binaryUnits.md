@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / binaryUnits
+[Library](../index.md) / [String](./index.md) / binaryUnits
 
 # Function: binaryUnits()
 
@@ -24,3 +22,4 @@ Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K
 ## Returns
 
 `string`
+

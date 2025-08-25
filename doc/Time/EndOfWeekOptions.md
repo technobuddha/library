@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / EndOfWeekOptions
+[Library](../index.md) / [Time](./index.md) / EndOfWeekOptions
 
 # Type Alias: EndOfWeekOptions
 
@@ -20,3 +18,4 @@ Options for the [endOfWeek](endOfWeek.md) function
 | ------ | ------ | ------ | ------ |
 | <a id="firstdayofweek"></a> `firstDayOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | The day that is considered the 'first' day of the week | [end-of-week.ts:15](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L15) |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [end-of-week.ts:13](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L13) |
+

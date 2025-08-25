@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isPunctuation
+[Library](../index.md) / [String](./index.md) / isPunctuation
 
 # Function: isPunctuation()
 
@@ -25,3 +23,4 @@ Test a string for all punctuation characters
 `boolean`
 
 true, if all characters in the string are punctuation
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / LongestCommonSubstringOptions
+[Library](../index.md) / [String](./index.md) / LongestCommonSubstringOptions
 
 # Type Alias: LongestCommonSubstringOptions
 
@@ -19,3 +17,4 @@ Options for configuring the longest common substring calculation.
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | compare the two strings in case insensitive mode | [longest-common-substring.ts:11](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L11) |
+

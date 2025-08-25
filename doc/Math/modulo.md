@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / modulo
+[Library](../index.md) / [Math](./index.md) / modulo
 
 # Function: modulo()
 
@@ -32,3 +30,4 @@ calculating an offset index in a circular list.
 
 a % b where the result is between 0 and b (either 0 \<= x \< b
 or b \< x \<= 0, depending on the sign of b).
+

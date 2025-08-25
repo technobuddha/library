@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / kebabCase
+[Library](../index.md) / [String](./index.md) / kebabCase
 
 # Function: kebabCase()
 
@@ -25,3 +23,4 @@ Convert an identifier string to a kebab-case form
 `string`
 
 the identifier in kebab-case form
+

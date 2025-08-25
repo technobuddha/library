@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isSameDay
+[Library](../index.md) / [Time](./index.md) / isSameDay
 
 # Function: isSameDay()
 
@@ -33,3 +31,4 @@ true, if the two dates fall on the same day
 ```ts
 utc false
 ```
+

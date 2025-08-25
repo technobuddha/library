@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / dayOfYear
+[Library](../index.md) / [Time](./index.md) / dayOfYear
 
 # Function: dayOfYear()
 
@@ -26,3 +24,4 @@ Calculates the day of the year for a given date.
 `number`
 
 The day of the year as a number (1-based).
+

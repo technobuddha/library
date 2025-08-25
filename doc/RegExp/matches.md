@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / matches
+[Library](../index.md) / [RegExp](./index.md) / matches
 
 # Function: matches()
 
@@ -31,3 +29,4 @@ The `match` parameter can be:
 `boolean`
 
 `true` if the text matches the criteria; otherwise, `false`.
+

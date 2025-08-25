@@ -1,40 +1,5 @@
 [
   {
-    "title": "Functions",
-    "children": [
-      {
-        "title": "clamp",
-        "kind": 64,
-        "path": "Functions/clamp.md",
-        "isDeprecated": false
-      },
-      {
-        "title": "constructNumber",
-        "kind": 64,
-        "path": "Functions/constructNumber.md",
-        "isDeprecated": false
-      },
-      {
-        "title": "startCase",
-        "kind": 64,
-        "path": "Functions/startCase.md",
-        "isDeprecated": false
-      },
-      {
-        "title": "tokenize",
-        "kind": 64,
-        "path": "Functions/tokenize.md",
-        "isDeprecated": false
-      },
-      {
-        "title": "toString",
-        "kind": 64,
-        "path": "Functions/toString.md",
-        "isDeprecated": false
-      }
-    ]
-  },
-  {
     "title": "Array",
     "children": [
       {
@@ -827,6 +792,12 @@
             "isDeprecated": false
           },
           {
+            "title": "clamp",
+            "kind": 64,
+            "path": "Math/clamp.md",
+            "isDeprecated": false
+          },
+          {
             "title": "crossProduct",
             "kind": 64,
             "path": "Math/crossProduct.md",
@@ -918,6 +889,17 @@
             "title": "ordinalTens",
             "kind": 32,
             "path": "Math/ordinalTens.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Number",
+        "children": [
+          {
+            "title": "constructNumber",
+            "kind": 64,
+            "path": "Math/constructNumber.md",
             "isDeprecated": false
           }
         ]
@@ -1172,6 +1154,28 @@
             "title": "isPrimitive",
             "kind": 64,
             "path": "Primitive/isPrimitive.md",
+            "isDeprecated": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Programming",
+    "children": [
+      {
+        "title": "Case Conversion",
+        "children": [
+          {
+            "title": "startCase",
+            "kind": 64,
+            "path": "Programming/startCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "tokenize",
+            "kind": 64,
+            "path": "Programming/tokenize.md",
             "isDeprecated": false
           }
         ]
@@ -2636,6 +2640,17 @@
             "title": "PriorityQueue",
             "kind": 128,
             "path": "Utility/PriorityQueue.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Conversion",
+        "children": [
+          {
+            "title": "toString",
+            "kind": 64,
+            "path": "Utility/toString.md",
             "isDeprecated": false
           }
         ]

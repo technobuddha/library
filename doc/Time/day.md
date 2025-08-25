@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / day
+[Library](../index.md) / [Time](./index.md) / day
 
 # Variable: day
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:171](https://github.com/technobuddha/library/blob/main/src/constants.ts#L171)
 
 Translation object for name of day to day number.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / TypedArray
+[Library](../index.md) / [Utility](./index.md) / TypedArray
 
 # Type Alias: TypedArray
 
@@ -13,3 +11,4 @@
 Defined in: [@types/typed-array.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/typed-array.ts#L7)
 
 Any of the built-in typed array types in JavaScript.
+

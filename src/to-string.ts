@@ -1,3 +1,5 @@
+import { empty } from './constants.ts';
+
 /**
  * Converts an unknown value to its string representation.
  *
@@ -14,8 +16,6 @@
  * @group Utility
  * @category Conversion
  */
-import { empty } from './constants.ts';
-
 export function toString(value: unknown): string {
   if (value == null) {
     return empty;

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / collapseBreakingSpace
+[Library](../index.md) / [String](./index.md) / collapseBreakingSpace
 
 # Function: collapseBreakingSpace()
 
@@ -24,3 +22,4 @@ Replace all breaking space (space, tab, carriage return, new line) with a single
 ## Returns
 
 `string`
+

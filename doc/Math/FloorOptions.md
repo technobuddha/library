@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / FloorOptions
+[Library](../index.md) / [Math](./index.md) / FloorOptions
 
 # Type Alias: FloorOptions
 
@@ -20,3 +18,4 @@ Options for the [floor](floor.md) function
 | ------ | ------ | ------ | ------ |
 | <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [floor.ts:14](https://github.com/technobuddha/library/blob/main/src/floor.ts#L14) |
 | <a id="tolerance"></a> `tolerance?` | `number` | A small value to add to the input before applying the floor, useful for floating-point tolerance. Defaults to 0. | [floor.ts:12](https://github.com/technobuddha/library/blob/main/src/floor.ts#L12) |
+

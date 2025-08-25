@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / floor
+[Library](../index.md) / [Math](./index.md) / floor
 
 # Function: floor()
 
@@ -26,3 +24,4 @@ Returns the largest integer less than or equal to the given number, with optiona
 `number`
 
 The floored number, adjusted for tolerance and precision.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isNumber
+[Library](../index.md) / [Utility](./index.md) / isNumber
 
 # Function: isNumber()
 
@@ -25,3 +23,4 @@ Determines whether the provided value is a number or a Number object.
 `value is number`
 
 True if the value is a number or a Number object; otherwise, false.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isRect
+[Library](../index.md) / [Geometry](./index.md) / isRect
 
 # Function: isRect()
 
@@ -28,3 +26,4 @@ that contains numeric `x`, `y`, 'width', and 'height' properties.
 `object is Rect`
 
 `true` if the value is a Rectangle, otherwise `false`.
+

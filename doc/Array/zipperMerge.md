@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / zipperMerge
+[Library](../index.md) / [Array](./index.md) / zipperMerge
 
 # Function: zipperMerge()
 
@@ -155,3 +153,4 @@ Defined in: [zipper-merge.ts:20](https://github.com/technobuddha/library/blob/ma
 ### Returns
 
 (`undefined` \| `T`)[][]
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / MersenneTwister
+[Library](../index.md) / [Random](./index.md) / MersenneTwister
 
 # Class: MersenneTwister
 
@@ -185,3 +183,4 @@ Defined in: [mersenne-twister.ts:113](https://github.com/technobuddha/library/bl
 #### Returns
 
 `void`
+

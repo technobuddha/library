@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ordinal
+[Library](../index.md) / [Math](./index.md) / ordinal
 
 # Function: ordinal()
 
@@ -24,3 +22,4 @@ Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 ## Returns
 
 `string`
+

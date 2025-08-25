@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / empty
+[Library](../index.md) / [Unicode](./index.md) / empty
 
 # Variable: empty
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:7](https://github.com/technobuddha/library/blob/main/src/constants.ts#L7)
 
 The empty string
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / softHyphen
+[Library](../index.md) / [Unicode](./index.md) / softHyphen
 
 # Variable: softHyphen
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:266](https://github.com/technobuddha/library/blob/main/src/constants.ts#L266)
 
 Soft Hyphen
+

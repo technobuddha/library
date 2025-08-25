@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isoDate
+[Library](../index.md) / [RegExp](./index.md) / isoDate
 
 # Variable: isoDate
 
@@ -13,3 +11,4 @@
 Defined in: [regexp.ts:92](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L92)
 
 Validate a ISO formatted date
+

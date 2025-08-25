@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / capitalize
+[Library](../index.md) / [String](./index.md) / capitalize
 
 # Function: capitalize()
 
@@ -23,3 +21,4 @@ Capitalize the first word in a sentence, or capitalize a single word.
 ## Returns
 
 `string`
+

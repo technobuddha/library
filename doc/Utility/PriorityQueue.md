@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / PriorityQueue
+[Library](../index.md) / [Utility](./index.md) / PriorityQueue
 
 # Class: PriorityQueue\<T\>
 
@@ -154,3 +152,4 @@ Change the function used to order the queue
 #### Returns
 
 `void`
+

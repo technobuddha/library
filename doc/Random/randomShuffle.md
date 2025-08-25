@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / randomShuffle
+[Library](../index.md) / [Random](./index.md) / randomShuffle
 
 # Function: randomShuffle()
 
@@ -34,3 +32,4 @@ Uses the Fisher-Yates (Knuth) shuffle algorithm to ensure an unbiased shuffle.
 `T`[]
 
 A new array containing the shuffled elements.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isLeapYear
+[Library](../index.md) / [Time](./index.md) / isLeapYear
 
 # Function: isLeapYear()
 
@@ -26,3 +24,4 @@ Determine if a year is a leap year
 `boolean`
 
 true, if the specified year is a leap year
+

@@ -1,18 +1,20 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / Random
 
-## Random
+# Random
 
 ### Number Generation
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [MersenneTwister](MersenneTwister.md) | Implements the Mersenne Twister pseudorandom number generator (MT19937). |
 
 ### Pick
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [Weighted](Weighted.md) | Represents an object with an associated weight value. |
 | [randomDraw](randomDraw.md) | Draw a random item from a list. Returning both the item and the list without the drawn item. |
@@ -21,6 +23,6 @@
 
 ### Shuffle
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [randomShuffle](randomShuffle.md) | Returns a new array with the elements of the input array shuffled in random order. |

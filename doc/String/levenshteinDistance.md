@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / levenshteinDistance
+[Library](../index.md) / [String](./index.md) / levenshteinDistance
 
 # Function: levenshteinDistance()
 
@@ -33,3 +31,4 @@ the levenshteinDistance between the two strings (0 for no similarity through 1 f
 ```ts
 caseInsensitive true
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / RotatedRect
+[Library](../index.md) / [Geometry](./index.md) / RotatedRect
 
 # Type Alias: RotatedRect
 
@@ -21,3 +19,4 @@ Extends the `Rect` type with additional properties for the area and rotation ang
 | ------ | ------ | ------ |
 | `angle` | `number` | [largest-inscribed-rectangle.ts:21](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L21) |
 | `area` | `number` | [largest-inscribed-rectangle.ts:19](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L19) |
+

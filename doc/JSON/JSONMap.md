@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / JSONMap
+[Library](../index.md) / [JSON](./index.md) / JSONMap
 
 # Class: JSONMap\<K, V\>
 
@@ -293,3 +291,4 @@ Returns an iterable of values in the map
 #### Implementation of
 
 `Map.values`
+

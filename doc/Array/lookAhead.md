@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / lookAhead
+[Library](../index.md) / [Array](./index.md) / lookAhead
 
 # Function: lookAhead()
 
@@ -62,3 +60,4 @@ for (const [current, next] of lookAhead(arr, { last: 0 })) {
 }
 ```
 Output: [1, 2], [2, 3], [3, 0]
+

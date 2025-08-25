@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / BinaryEncoding
+[Library](../index.md) / [Encoding](./index.md) / BinaryEncoding
 
 # Type Alias: BinaryEncoding
 
@@ -13,3 +11,4 @@
 Defined in: [@types/binary-encoding.ts:6](https://github.com/technobuddha/library/blob/main/src/@types/binary-encoding.ts#L6)
 
 The binary encoding to use
+

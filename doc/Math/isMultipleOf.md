@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isMultipleOf
+[Library](../index.md) / [Math](./index.md) / isMultipleOf
 
 # Function: isMultipleOf()
 
@@ -26,3 +24,4 @@ Tests to see if the specified value is an multiple of *multiplier*
 `boolean`
 
 true, if the number is a multiple
+

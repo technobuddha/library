@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / collapse
+[Library](../index.md) / [Array](./index.md) / collapse
 
 # Function: collapse()
 
@@ -33,3 +31,4 @@ and returns the resulting array of strings.
 `string`[]
 
 An array of strings, with all `null` and `empty` values removed.
+

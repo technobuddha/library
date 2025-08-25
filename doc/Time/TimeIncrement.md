@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / TimeIncrement
+[Library](../index.md) / [Time](./index.md) / TimeIncrement
 
 # Type Alias: TimeIncrement
 
@@ -25,3 +23,4 @@ Represents amount of time to use for [addTime](addTime.md)
 | <a id="months"></a> `months?` | `number` | [add-time.ts:9](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L9) |
 | <a id="seconds"></a> `seconds?` | `number` | [add-time.ts:13](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L13) |
 | <a id="years"></a> `years?` | `number` | [add-time.ts:8](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L8) |
+

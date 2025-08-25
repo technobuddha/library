@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / decodeBinary
+[Library](../index.md) / [Encoding](./index.md) / decodeBinary
 
 # Function: decodeBinary()
 
@@ -32,3 +30,4 @@ binary: each byte in the binary object is converted to a characters
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 encoded string
+

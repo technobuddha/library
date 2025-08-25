@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isPrimitive
+[Library](../index.md) / [Primitive](./index.md) / isPrimitive
 
 # Function: isPrimitive()
 
@@ -25,3 +23,4 @@ Check to see if an object is a primitive
 input is undefined \| null \| string \| number \| bigint \| boolean \| symbol
 
 true, if the object is a primitive
+

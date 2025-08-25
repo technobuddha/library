@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / parseRoman
+[Library](../index.md) / [Math](./index.md) / parseRoman
 
 # Function: parseRoman()
 
@@ -25,3 +23,4 @@ Parse a roman numeral string into it's integer value.
 `number`
 
 Parsed roman number
+

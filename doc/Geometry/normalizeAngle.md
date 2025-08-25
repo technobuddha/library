@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / normalizeAngle
+[Library](../index.md) / [Geometry](./index.md) / normalizeAngle
 
 # Function: normalizeAngle()
 
@@ -27,3 +25,4 @@ be normalized to be the equivalent angle with that range.
 `number`
 
 Standardized angle.
+

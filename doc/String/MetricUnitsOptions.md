@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / MetricUnitsOptions
+[Library](../index.md) / [String](./index.md) / MetricUnitsOptions
 
 # Type Alias: MetricUnitsOptions
 
@@ -25,3 +23,4 @@ w
 | <a id="pad"></a> `pad?` | `number` | left padding to apply to numeric value | [metric-units.ts:60](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L60) |
 | <a id="precision"></a> `precision?` | `number` | Number of digits after the decimal point to display | [metric-units.ts:76](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L76) |
 | <a id="unit"></a> `unit?` | `number` | Multiplier for each level of suffixes (default: 1000) | [metric-units.ts:72](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L72) |
+

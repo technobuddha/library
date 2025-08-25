@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / CardinalOptions
+[Library](../index.md) / [Math](./index.md) / CardinalOptions
 
 # Type Alias: CardinalOptions
 
@@ -26,3 +24,4 @@ Configuration options for cardinal number conversion.
 | <a id="precision"></a> `precision?` | [`Numbering`](Numbering.md)\[`"precision"`\] | `9` | Precision for decimal/fraction conversion. | [numbering/cardinal.ts:46](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L46) |
 | <a id="shift"></a> `shift?` | [`Numbering`](Numbering.md)\[`"shift"`\] | `undefined` | Whether to shift the fractional part of the number. | [numbering/cardinal.ts:57](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L57) |
 | <a id="tolerance"></a> `tolerance?` | [`Numbering`](Numbering.md)\[`"tolerance"`\] | `0.01` | Tolerance for floating-point comparison when converting decimals to fractions. | [numbering/cardinal.ts:34](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L34) |
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / compareNumbers
+[Library](../index.md) / [Math](./index.md) / compareNumbers
 
 # Function: compareNumbers()
 
@@ -26,3 +24,4 @@ Compare two numbers
 `-1` \| `0` \| `1`
 
 0 if a == b; -1 if a \< b; 1 if a \> b
+

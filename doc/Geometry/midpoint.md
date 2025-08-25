@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / midpoint
+[Library](../index.md) / [Geometry](./index.md) / midpoint
 
 # Function: midpoint()
 
@@ -27,3 +25,4 @@ true midpoint of the line segment
 [`Cartesian`](Cartesian.md)
 
 The Cartesian coordinates of the calculated point.
+

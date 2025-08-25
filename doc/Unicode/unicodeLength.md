@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unicodeLength
+[Library](../index.md) / [Unicode](./index.md) / unicodeLength
 
 # Function: unicodeLength()
 
@@ -25,3 +23,4 @@ Return the number of unicode code points in a string
 `number`
 
 the number of code points
+

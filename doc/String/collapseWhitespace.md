@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / collapseWhitespace
+[Library](../index.md) / [String](./index.md) / collapseWhitespace
 
 # Function: collapseWhitespace()
 
@@ -24,3 +22,4 @@ Replace all whitespace within a string with a single space
 ## Returns
 
 `string`
+

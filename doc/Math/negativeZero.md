@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / negativeZero
+[Library](../index.md) / [Math](./index.md) / negativeZero
 
 # Variable: negativeZero
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:36](https://github.com/technobuddha/library/blob/main/src/constants.ts#L36)
 
 Negative Zero
+

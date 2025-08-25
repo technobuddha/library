@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / mask
+[Library](../index.md) / [String](./index.md) / mask
 
 # Function: mask()
 
@@ -38,3 +36,4 @@ are output as-is, to output a '#' use '\#'
 ```ts
 missing space
 ```
+

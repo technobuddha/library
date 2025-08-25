@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ticksPerDay
+[Library](../index.md) / [Time](./index.md) / ticksPerDay
 
 # Variable: ticksPerDay
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:99](https://github.com/technobuddha/library/blob/main/src/constants.ts#L99)
 
 Number of ticks in a day [86400000]
+

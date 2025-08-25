@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toPrimitive
+[Library](../index.md) / [Primitive](./index.md) / toPrimitive
 
 # Function: toPrimitive()
 
@@ -26,3 +24,4 @@ Convert an object into its primitive (string, number, etc.) value
 `unknown`
 
 primitive value
+

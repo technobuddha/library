@@ -1,14 +1,12 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ShaBase
+[Library](../index.md) / [Encoding](./index.md) / ShaBase
 
 # Abstract Class: ShaBase
 
-Defined in: sha-base.ts:15
+Defined in: [sha-base.ts:15](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L15)
 
 The base class for most sha bases cryptographic hash functions
 
@@ -30,7 +28,7 @@ The base class for most sha bases cryptographic hash functions
 
 > **new ShaBase**(`blockSize`: `number`, `finalSize`: `number`): `ShaBase`
 
-Defined in: sha-base.ts:47
+Defined in: [sha-base.ts:47](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L47)
 
 Creates a new instance of the hash base class.
 
@@ -53,7 +51,7 @@ Creates a new instance of the hash base class.
 
 > **digest**(): [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-Defined in: sha-base.ts:78
+Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
 The output is returned as a `Uint8Array`.
 
@@ -71,7 +69,7 @@ The hash digest as a `Uint8Array`
 
 > **digest**(`encoding`: [`BinaryEncoding`](BinaryEncoding.md)): `string`
 
-Defined in: sha-base.ts:79
+Defined in: [sha-base.ts:79](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L79)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -103,7 +101,7 @@ An encoded string, depending on the `encoding` parameter.
 
 > **update**(`data`: [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\>): `this`
 
-Defined in: sha-base.ts:120
+Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
 
 Updates the hash with the given binary data.
 
@@ -127,7 +125,7 @@ The hash instance for method chaining.
 
 > **update**(`data`: `string`, `encoding?`: [`TextEncoding`](../Unicode/TextEncoding.md)): `this`
 
-Defined in: sha-base.ts:121
+Defined in: [sha-base.ts:121](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L121)
 
 Updates the hash with the given string data.
 
@@ -147,3 +145,4 @@ The hash instance for method chaining.
 ##### Implementation of
 
 [`HashBase`](HashBase.md).[`update`](HashBase.md#update)
+

@@ -1,12 +1,14 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / Template
 
-## Template
+# Template
 
 ### GraphQl
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [GraphQLArray](GraphQLArray.md) | A GraphQL Array, similar to a JSONArray |
 | [GraphQLObject](GraphQLObject.md) | A GraphQL Object, similar to a JSONObject |
@@ -15,6 +17,6 @@
 
 ### Single Line
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [singleLine](singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |

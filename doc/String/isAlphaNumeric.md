@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isAlphaNumeric
+[Library](../index.md) / [String](./index.md) / isAlphaNumeric
 
 # Function: isAlphaNumeric()
 
@@ -25,3 +23,4 @@ Test a string for all alphanumeric characters
 `boolean`
 
 true, if all characters in the string are alphanumeric
+

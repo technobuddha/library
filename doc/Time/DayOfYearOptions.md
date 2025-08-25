@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / DayOfYearOptions
+[Library](../index.md) / [Time](./index.md) / DayOfYearOptions
 
 # Type Alias: DayOfYearOptions
 
@@ -19,3 +17,4 @@ Options for the [dayOfYear](dayOfYear.md) function
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | [day-of-year.ts:12](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L12) |
+

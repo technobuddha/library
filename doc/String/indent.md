@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / indent
+[Library](../index.md) / [String](./index.md) / indent
 
 # Function: indent()
 
@@ -32,3 +30,4 @@ string with each line indented
 ```ts
 indenter space
 ```
+

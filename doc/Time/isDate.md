@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isDate
+[Library](../index.md) / [Time](./index.md) / isDate
 
 # Function: isDate()
 
@@ -25,3 +23,4 @@ Determines whether the provided value is a `Date` object.
 `value is Date`
 
 `true` if the value is a `Date` object, otherwise `false`.
+

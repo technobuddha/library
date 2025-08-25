@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / endOfMonth
+[Library](../index.md) / [Time](./index.md) / endOfMonth
 
 # Function: endOfMonth()
 
@@ -32,3 +30,4 @@ Midnight on the last day of the month corresponding to the input date
 ```ts
 utc false
 ```
+

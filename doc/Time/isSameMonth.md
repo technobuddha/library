@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isSameMonth
+[Library](../index.md) / [Time](./index.md) / isSameMonth
 
 # Function: isSameMonth()
 
@@ -33,3 +31,4 @@ true, if the two dates occur in the same month
 ```ts
 utc false
 ```
+

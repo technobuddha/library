@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / timezone
+[Library](../index.md) / [Time](./index.md) / timezone
 
 # Function: timezone()
 
@@ -43,3 +41,4 @@ gmt false
 ```ts
 z true
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / splitWords
+[Library](../index.md) / [String](./index.md) / splitWords
 
 # Function: splitWords()
 
@@ -32,3 +30,4 @@ array of words
 ```ts
 delimiter whitespace
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ensurePrefix
+[Library](../index.md) / [String](./index.md) / ensurePrefix
 
 # Function: ensurePrefix()
 
@@ -26,3 +24,4 @@ Add a prefix to a string, if it does not already have the prefix
 `string`
 
 The prefix followed by the string
+

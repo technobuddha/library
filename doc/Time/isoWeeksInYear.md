@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isoWeeksInYear
+[Library](../index.md) / [Time](./index.md) / isoWeeksInYear
 
 # Function: isoWeeksInYear()
 
@@ -32,3 +30,4 @@ The number of weeks in the year (52 or 53)
 ```ts
 weekOneIncludes Thursday
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / angleDifference
+[Library](../index.md) / [Geometry](./index.md) / angleDifference
 
 # Function: angleDifference()
 
@@ -46,3 +44,4 @@ angleDifference(π * 11/6, π * 1/6) is π * 2/6
 
 angleDifference(π * 1/6, π * 11/6) is -π * 1/6.
 ```
+

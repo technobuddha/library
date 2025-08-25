@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / EndOfMonthOptions
+[Library](../index.md) / [Time](./index.md) / EndOfMonthOptions
 
 # Type Alias: EndOfMonthOptions
 
@@ -19,3 +17,4 @@ Options for the [endOfMonth](endOfMonth.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [end-of-month.ts:11](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L11) |
+

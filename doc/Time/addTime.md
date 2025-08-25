@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / addTime
+[Library](../index.md) / [Time](./index.md) / addTime
 
 # Function: addTime()
 
@@ -30,3 +28,4 @@ Adjusted date.
 ## Remarks
 
 Negative values will subtract from the starting date
+

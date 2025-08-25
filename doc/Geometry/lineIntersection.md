@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / lineIntersection
+[Library](../index.md) / [Geometry](./index.md) / lineIntersection
 
 # Function: lineIntersection()
 
@@ -29,3 +27,4 @@ Calculates the intersection point of two line segments.
 The intersection point as a `Point` object if the segments (or lines, if `extend` is `true`) intersect.
          Returns `undefined` if the lines are parallel or coincident.
          Returns `null` if the intersection is outside the segments and `extend` is `false`.
+

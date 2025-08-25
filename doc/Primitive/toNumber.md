@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toNumber
+[Library](../index.md) / [Primitive](./index.md) / toNumber
 
 # Function: toNumber()
 
@@ -25,3 +23,4 @@ Convert an entity to a number.
 `number`
 
 The entity as a number, or NaN if it cannot be converted
+

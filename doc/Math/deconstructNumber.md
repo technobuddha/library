@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / deconstructNumber
+[Library](../index.md) / [Math](./index.md) / deconstructNumber
 
 # Function: deconstructNumber()
 
@@ -45,3 +43,4 @@ const result = deconstructNumber(123.456);
 //   fraction: { ... }
 // }
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ipV4Local
+[Library](../index.md) / [RegExp](./index.md) / ipV4Local
 
 # Variable: ipV4Local
 
@@ -13,3 +11,4 @@
 Defined in: [regexp.ts:71](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L71)
 
 determine if Ipv4 address is local
+

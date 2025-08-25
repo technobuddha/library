@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / SameMonthOptions
+[Library](../index.md) / [Time](./index.md) / SameMonthOptions
 
 # Type Alias: SameMonthOptions
 
@@ -19,3 +17,4 @@ Options for the [isSameMonth](isSameMonth.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [is-same-month.ts:11](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L11) |
+

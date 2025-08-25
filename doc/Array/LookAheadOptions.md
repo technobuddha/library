@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / LookAheadOptions
+[Library](../index.md) / [Array](./index.md) / LookAheadOptions
 
 # Type Alias: LookAheadOptions\<T\>
 
@@ -33,3 +31,4 @@ Options for [lookAhead](lookAhead.md) operations.
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | `wrapAround` | `boolean` | Determines whether the look-ahead should wrap around to the beginning when reaching the end. | [look-ahead.ts:20](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L20) |
+

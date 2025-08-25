@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / endOfYear
+[Library](../index.md) / [Time](./index.md) / endOfYear
 
 # Function: endOfYear()
 
@@ -32,3 +30,4 @@ Midnight of the last day of the year containing the input date
 ```ts
 utc false
 ```
+

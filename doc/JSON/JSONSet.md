@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / JSONSet
+[Library](../index.md) / [JSON](./index.md) / JSONSet
 
 # Class: JSONSet\<T\>
 
@@ -465,3 +463,4 @@ Returns an iterable of values in the set.
 #### Implementation of
 
 `Set.values`
+

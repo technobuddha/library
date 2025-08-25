@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unescapeHTML
+[Library](../index.md) / [Encoding](./index.md) / unescapeHTML
 
 # Function: unescapeHTML()
 
@@ -25,3 +23,4 @@ Unescape a string encoded in HTML
 `string`
 
 the string with escapes resolved
+

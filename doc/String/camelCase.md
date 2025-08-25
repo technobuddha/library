@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / camelCase
+[Library](../index.md) / [String](./index.md) / camelCase
 
 # Function: camelCase()
 
@@ -25,3 +23,4 @@ Convert an identifier string to a camel case
 `string`
 
 string in camel case
+

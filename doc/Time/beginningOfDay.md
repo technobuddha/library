@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / beginningOfDay
+[Library](../index.md) / [Time](./index.md) / beginningOfDay
 
 # Function: beginningOfDay()
 
@@ -32,3 +30,4 @@ The date value for midnight on the specified day
 ```ts
 utc false
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / syllables
+[Library](../index.md) / [English](./index.md) / syllables
 
 # Function: syllables()
 
@@ -25,3 +23,4 @@ Approximate the number of syllables in a string
 `number`
 
 the number of syllables
+

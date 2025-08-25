@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / normalizeLineSegment
+[Library](../index.md) / [Geometry](./index.md) / normalizeLineSegment
 
 # Function: normalizeLineSegment()
 
@@ -27,3 +25,4 @@ Otherwise, the start and end points are swapped.
 [`LineSegment`](LineSegment.md)
 
 A `LineSegment` with the topmost point as the starting point.
+

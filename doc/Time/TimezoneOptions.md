@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / TimezoneOptions
+[Library](../index.md) / [Time](./index.md) / TimezoneOptions
 
 # Type Alias: TimezoneOptions
 
@@ -20,3 +18,4 @@ Options for the [timezone](timezone.md) function
 | ------ | ------ | ------ | ------ |
 | <a id="gmt"></a> `gmt?` | `boolean` | Display 'gmt' in time zones | [timezone.ts:13](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L13) |
 | <a id="z"></a> `z?` | `boolean` | Display 'z' for the gmt time zone | [timezone.ts:15](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L15) |
+

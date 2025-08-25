@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / daysInMonth
+[Library](../index.md) / [Time](./index.md) / daysInMonth
 
 # Function: daysInMonth()
 
@@ -32,3 +30,4 @@ The number of days in the specified month
 ```ts
 utc false
 ```
+

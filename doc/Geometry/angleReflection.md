@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / angleReflection
+[Library](../index.md) / [Geometry](./index.md) / angleReflection
 
 # Function: angleReflection()
 
@@ -27,3 +25,4 @@ Calculates the reflection of an angle across a specified axis.
 `number`
 
 The reflected angle, in the specified units.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / minutesPerHour
+[Library](../index.md) / [Time](./index.md) / minutesPerHour
 
 # Variable: minutesPerHour
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:60](https://github.com/technobuddha/library/blob/main/src/constants.ts#L60)
 
 Number of minutes in an hour [60]
+

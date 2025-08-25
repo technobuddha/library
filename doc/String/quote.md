@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / quote
+[Library](../index.md) / [String](./index.md) / quote
 
 # Function: quote()
 
@@ -36,3 +34,4 @@ quote double-quote (")
 ## Default Value
 
 escape [escapeJS](../Encoding/escapeJS.md)
+

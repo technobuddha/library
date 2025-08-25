@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / CollapseBreakingSpaceOptions
+[Library](../index.md) / [String](./index.md) / CollapseBreakingSpaceOptions
 
 # Type Alias: CollapseBreakingSpaceOptions
 
@@ -19,3 +17,4 @@ Options for the [collapseBreakingSpace](collapseBreakingSpace.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="trim"></a> `trim?` | `boolean` | If true, trim leading and trailing whitespace | [collapse-breaking-space.ts:12](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L12) |
+

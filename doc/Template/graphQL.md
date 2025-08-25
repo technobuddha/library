@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / graphQL
+[Library](../index.md) / [Template](./index.md) / graphQL
 
 # Function: graphQL()
 
@@ -48,3 +46,4 @@ Tagged template function for constructing GraphQL queries or mutations.
 `string`
 
 The resulting GraphQL query string with interpolated values.
+

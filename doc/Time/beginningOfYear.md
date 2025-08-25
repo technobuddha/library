@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / beginningOfYear
+[Library](../index.md) / [Time](./index.md) / beginningOfYear
 
 # Function: beginningOfYear()
 
@@ -32,3 +30,4 @@ The date value for midnight on the first day of the specified year
 ```ts
 utc false
 ```
+

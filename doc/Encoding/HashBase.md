@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / HashBase
+[Library](../index.md) / [Encoding](./index.md) / HashBase
 
 # Abstract Class: HashBase
 
@@ -117,3 +115,4 @@ Updates the hash with the given string data.
 `this`
 
 The hash instance for method chaining.
+

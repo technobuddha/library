@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / randomWeightedPick
+[Library](../index.md) / [Random](./index.md) / randomWeightedPick
 
 # Function: randomWeightedPick()
 
@@ -34,3 +32,4 @@ If the list is empty, it returns `undefined`.
 `undefined` \| `T`
 
 The randomly selected item based on weights, or `undefined` if the list is empty.
+

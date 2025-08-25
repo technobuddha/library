@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / perimeter
+[Library](../index.md) / [Geometry](./index.md) / perimeter
 
 # Function: perimeter()
 
@@ -25,3 +23,4 @@ Calculates the perimeter of a polygon given its vertices.
 `number`
 
 The total perimeter length of the polygon.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isObject
+[Library](../index.md) / [Utility](./index.md) / isObject
 
 # Function: isObject()
 
@@ -25,3 +23,4 @@ Determines whether the provided value is a non-null object.
 `value is object`
 
 `true` if the value is an object and not `null`; otherwise, `false`.
+

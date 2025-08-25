@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / encodeBase64
+[Library](../index.md) / [Encoding](./index.md) / encodeBase64
 
 # Function: encodeBase64()
 
@@ -74,3 +72,4 @@ An ASCII string containing the Base64 representation
 encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
 encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
 ```
+

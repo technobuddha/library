@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / root
+[Library](../index.md) / [String](./index.md) / root
 
 # Function: root()
 
@@ -31,3 +29,4 @@ The root word
 
  - prefix before it, and
  - suffix after it.
+

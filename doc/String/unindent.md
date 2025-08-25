@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unindent
+[Library](../index.md) / [String](./index.md) / unindent
 
 # Function: unindent()
 
@@ -24,3 +22,4 @@ Remove indentation from text
 ## Returns
 
 `string`
+

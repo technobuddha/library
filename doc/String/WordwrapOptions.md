@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / WordwrapOptions
+[Library](../index.md) / [String](./index.md) / WordwrapOptions
 
 # Type Alias: WordwrapOptions
 
@@ -22,3 +20,4 @@ Options for the [wordwrap](wordwrap.md) function
 | <a id="separator"></a> `separator?` | `string` | Line separator | [wordwrap.ts:14](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L14) |
 | <a id="trailingspaces"></a> `trailingSpaces?` | `boolean` | If true, spaces are added to the end of each line to make all lines equal width, ignored if cut or preserveSpaces is true | [wordwrap.ts:18](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L18) |
 | <a id="width"></a> `width?` | `number` | The width to wrap to | [wordwrap.ts:12](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L12) |
+

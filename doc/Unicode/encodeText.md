@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / encodeText
+[Library](../index.md) / [Unicode](./index.md) / encodeText
 
 # Function: encodeText()
 
@@ -26,3 +24,4 @@ Encode a unicode (UTF-16 encoded javascript) string into UTF8
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 The UTF-8 encoded string
+

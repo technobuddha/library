@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / sum
+[Library](../index.md) / [Math](./index.md) / sum
 
 # Function: sum()
 
@@ -25,3 +23,4 @@ Calculates the sum of an array of numbers.
 `number`
 
 The total sum of all numbers in the array.
+

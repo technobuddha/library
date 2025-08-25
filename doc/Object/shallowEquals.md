@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / shallowEquals
+[Library](../index.md) / [Object](./index.md) / shallowEquals
 
 # Function: shallowEquals()
 
@@ -27,3 +25,4 @@ Compare two object for equality.  Testing goes one level deep.
 `boolean`
 
 true if the two objects have the same members
+

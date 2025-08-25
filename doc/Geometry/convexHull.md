@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / convexHull
+[Library](../index.md) / [Geometry](./index.md) / convexHull
 
 # Function: convexHull()
 
@@ -34,3 +32,4 @@ The convex hull as an array of points in counterclockwise order, or `undefined` 
 
 - The returned array does not repeat the starting point at the end.
 - Points on the edge of the hull may be included or excluded depending on their order.
+

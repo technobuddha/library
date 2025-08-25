@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isSurrogate
+[Library](../index.md) / [Unicode](./index.md) / isSurrogate
 
 # Function: isSurrogate()
 
@@ -38,3 +36,4 @@ high true
 ```ts
 low true
 ```
+

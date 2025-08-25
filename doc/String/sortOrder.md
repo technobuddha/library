@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / sortOrder
+[Library](../index.md) / [String](./index.md) / sortOrder
 
 # Function: sortOrder()
 
@@ -30,3 +28,4 @@ sortable string
 ## Remarks
 
 for example "The Beatles" becomes "Beatles, The"
+

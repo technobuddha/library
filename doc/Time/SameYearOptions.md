@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / SameYearOptions
+[Library](../index.md) / [Time](./index.md) / SameYearOptions
 
 # Type Alias: SameYearOptions
 
@@ -19,3 +17,4 @@ Options for the [isSameYear](isSameYear.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [is-same-year.ts:8](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L8) |
+

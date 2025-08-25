@@ -1,19 +1,21 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / JSON
 
-## JSON
+# JSON
 
 ### Data Structures
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [JSONMap](JSONMap.md) | A Map-like data structure that allows objects conforming to `JsonObject` as keys. |
 | [JSONSet](JSONSet.md) | A Set-like collection for objects that can be serialized to JSON. |
 
 ### Serialization
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [specialBegin](specialBegin.md) | The beginning of a special JSON value |
 | [specialFinish](specialFinish.md) | The end of a special JSON value |

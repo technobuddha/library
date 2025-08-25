@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / snakeCase
+[Library](../index.md) / [String](./index.md) / snakeCase
 
 # Function: snakeCase()
 
@@ -25,3 +23,4 @@ Convert an identifier string to snake case
 `string`
 
 the identifier in snake case
+

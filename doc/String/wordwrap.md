@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / wordwrap
+[Library](../index.md) / [String](./index.md) / wordwrap
 
 # Function: wordwrap()
 
@@ -50,3 +48,4 @@ cut default false
 ```ts
 trailingSpaces false
 ```
+

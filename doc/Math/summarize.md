@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / summarize
+[Library](../index.md) / [Math](./index.md) / summarize
 
 # Function: summarize()
 
@@ -39,3 +37,4 @@ this is a shortcut to calling cardinal with options {groups: 1, digits: true}
 ```ts
 101323847382459 "101 trillion"
 ```
+

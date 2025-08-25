@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / FuzzyMatchOptions
+[Library](../index.md) / [String](./index.md) / FuzzyMatchOptions
 
 # Type Alias: FuzzyMatchOptions
 
@@ -22,3 +20,4 @@ Options for the [fuzzyMatch](fuzzyMatch.md) function
 | <a id="weightdicecoefficient"></a> `weightDiceCoefficient?` | `number` | Weight of diceCoefficient | [fuzzy-match.ts:17](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L17) |
 | <a id="weightlevenshteindistance"></a> `weightLevenshteinDistance?` | `number` | Weight of levenshtein distance | [fuzzy-match.ts:15](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L15) |
 | <a id="weightlongestcommonsubstring"></a> `weightLongestCommonSubstring?` | `number` | Weight of longestCommonSubstring | [fuzzy-match.ts:19](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L19) |
+

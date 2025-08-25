@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toError
+[Library](../index.md) / [Primitive](./index.md) / toError
 
 # Function: toError()
 
@@ -25,3 +23,4 @@ Convert the entity to an Error object.
 [`Error`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Error)
 
 The entity as an Error object.
+

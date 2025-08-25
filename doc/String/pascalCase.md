@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / pascalCase
+[Library](../index.md) / [String](./index.md) / pascalCase
 
 # Function: pascalCase()
 
@@ -25,3 +23,4 @@ Convert an identifier string to pascal case
 `string`
 
 the identifier in pascal case
+

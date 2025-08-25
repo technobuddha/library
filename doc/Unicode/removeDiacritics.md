@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / removeDiacritics
+[Library](../index.md) / [Unicode](./index.md) / removeDiacritics
 
 # Function: removeDiacritics()
 
@@ -25,3 +23,4 @@ Remove all diacritics from a string
 `string`
 
 string with diacritics removed
+

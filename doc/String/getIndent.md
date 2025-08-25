@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / getIndent
+[Library](../index.md) / [String](./index.md) / getIndent
 
 # Function: getIndent()
 
@@ -32,3 +30,4 @@ The minimum amount of indentation on each line
 ```ts
 indenter space
 ```
+

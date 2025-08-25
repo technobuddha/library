@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / matchCase
+[Library](../index.md) / [String](./index.md) / matchCase
 
 # Function: matchCase()
 
@@ -34,3 +32,4 @@ The best guess is made to try to figure out what case the target is in:
  * UPPERCASE
  * Capitalcase
  * PascalCase
+

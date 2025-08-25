@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isBoolean
+[Library](../index.md) / [Utility](./index.md) / isBoolean
 
 # Function: isBoolean()
 
@@ -25,3 +23,4 @@ Determines whether the provided value is a boolean or a Boolean object.
 `value is boolean`
 
 True if the value is a primitive boolean or a Boolean object; otherwise, false.
+

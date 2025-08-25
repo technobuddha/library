@@ -16,7 +16,7 @@ const tx = {
 };
 
 /** @type { string[] } */
-const header = ['<!-- markdownlint-disable -->', empty, '# @technobuddha/library', empty];
+const header = ['<!-- markdownlint-disable -->', 'Technobuddha Library', '---', empty];
 
 /** @type {Record<number, string>} */
 const reflectionKind = Object.fromEntries(
@@ -30,9 +30,14 @@ const reflectionKind = Object.fromEntries(
  * @param item {NavigationItem}
  * @param count {Record<string, NavigationItem[]>}
  * @param total {Record<string, NavigationItem[]>}
+ * @param pages {Map<string, string>}
  */
-function countKinds(item, count, total) {
+function gather(item, count, total, pages) {
   if (item.kind) {
+    if (item.path) {
+      pages.set(item.path, item.title);
+    }
+
     let kind = reflectionKind[item.kind] ?? 'Unknown';
     kind = tx[kind] ?? kind;
 
@@ -50,11 +55,18 @@ function countKinds(item, count, total) {
 
   if (item.children) {
     for (const child of item.children) {
-      countKinds(child, count, total);
+      gather(child, count, total, pages);
     }
   }
 }
 
+/**
+ * @param index {string[]} The lines of a markdown file to process.
+ * @returns {string[]}
+ */
+function alignTables(index) {
+  return index.map((line) => (/^\| [A-Za-z\s]+ \| Description \|$/u.test(line)) ? '| <div style="width: 200px;">Name</div> | Description |' : line);
+}
 /**
  * @param {import('typedoc-plugin-markdown').MarkdownApplication} app
  */
@@ -64,19 +76,19 @@ export function load(app) {
 
   // Update the top-level README
   app.renderer.postRenderAsyncJobs.push(async (renderer) => {
-    console.log(renderer.project.readme);
-
     /** @type {string[]} */
     const table = ['|Group|Contents|', '|---|---|'];
     /** @type {Record<string, NavigationItem[]>} */
     const total = {};
+    /** @type {Map<string, string>} */
+    const pages = new Map();
 
     const navigation = renderer.navigation;
     if (navigation) {
       for (const group of navigation) {
         /** @type {Record<string, NavigationItem[]>} */
         const count = {};
-        countKinds(group, count, total);
+        gather(group, count, total, pages);
 
         const list = Object.entries(count)
           .sort(([a], [b]) => a.localeCompare(b))
@@ -104,12 +116,20 @@ export function load(app) {
 
       fs.writeFileSync('./README.md', fillTemplate(readme, values), 'utf-8');
       fs.writeFileSync('doc/navigation.json', JSON.stringify(navigation, null, 2));
+
+      for (const [path, entity] of pages.entries()) {
+        const [group] = path.split('/');
+
+        const doc = splitLines(fs.readFileSync(`./doc/${path}`, 'utf8'));
+        doc.splice(0, 7, ...header, `[Library](../index.md) / [${group}](./index.md) / ${entity}`);
+        fs.writeFileSync(`./doc/${path}`, `${doc.join('\n')}\n`, 'utf8');
+      }
     }
   });
 
   // Create more indices within the doc
   app.renderer.postRenderAsyncJobs.push(async () => {
-    const index = splitLines(fs.readFileSync('./doc/index.md', 'utf-8'));
+    const index = alignTables(splitLines(fs.readFileSync('./doc/index.md', 'utf-8')));
     /** @type {string[]} */
     let buffer = [...header];
     /** @type {string | null} */
@@ -122,7 +142,7 @@ export function load(app) {
         }
 
         group = line.slice(3).trim();
-        buffer = [...header, line];
+        buffer = [...header, `[Library](../index.md) / ${group}`, empty, `# ${group}`];
       } else {
         buffer.push(line.replaceAll(`](${group}/`, ']('));
       }
@@ -130,5 +150,8 @@ export function load(app) {
     if (group) {
       fs.writeFileSync(`./doc/${group}/index.md`, buffer.join('\n'), 'utf-8');
     }
+
+    index.splice(0, 7, ...header, empty, '# Index');
+    fs.writeFileSync('./doc/index.md', `${index.join('\n')}\n`, 'utf-8');
   });
 }

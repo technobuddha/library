@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / replacer
+[Library](../index.md) / [JSON](./index.md) / replacer
 
 # Function: replacer()
 
@@ -31,3 +29,4 @@ the encoded value
 ## Remarks
 
 Will encode Date, RegExp and BigInt objects.  The numeric values 'Infinity' and 'NaN' are also encoded.
+

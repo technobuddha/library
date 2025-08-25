@@ -1,12 +1,14 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / English
 
-## English
+# English
 
 ### Parts of Speech
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [ConjoinOptions](ConjoinOptions.md) | Options for creating a coordinate string |
 | [IndefiniteArticleOptions](IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
@@ -17,6 +19,6 @@
 
 ### Syllables
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [syllables](syllables.md) | Approximate the number of syllables in a string |

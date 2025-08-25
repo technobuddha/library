@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / count
+[Library](../index.md) / [String](./index.md) / count
 
 # Function: count()
 
@@ -27,3 +25,4 @@ Compute the number of times a substring occurs within a string
 `number`
 
 number of times *substring* occurs within *input*
+

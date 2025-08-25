@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / build
+[Library](../index.md) / [String](./index.md) / build
 
 # Function: build()
 
@@ -25,3 +23,4 @@ Concatenates strings and/or arrays of strings
 `string`
 
 The concatenation of *args*.
+

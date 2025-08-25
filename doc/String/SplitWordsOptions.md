@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / SplitWordsOptions
+[Library](../index.md) / [String](./index.md) / SplitWordsOptions
 
 # Type Alias: SplitWordsOptions
 
@@ -19,3 +17,4 @@ Options for the [splitWords](splitWords.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="delimiter"></a> `delimiter?` | `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) | The delimiter between words | [split-words.ts:12](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L12) |
+

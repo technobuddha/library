@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toDate
+[Library](../index.md) / [Time](./index.md) / toDate
 
 # Function: toDate()
 
@@ -30,3 +28,4 @@ Converts an unknown entity to a `Date` object.
 [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 A `Date` object representing the input, or an invalid `Date` if conversion is not possible.
+

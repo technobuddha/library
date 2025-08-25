@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / encodeBinary
+[Library](../index.md) / [Encoding](./index.md) / encodeBinary
 
 # Function: encodeBinary()
 
@@ -33,3 +31,4 @@ binary: each byte in the binary object is converted to a characters
 `string`
 
 encoded string
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / angleBetweenPoints
+[Library](../index.md) / [Geometry](./index.md) / angleBetweenPoints
 
 # Function: angleBetweenPoints()
 
@@ -29,3 +27,4 @@ direction (down) and from there we grow clockwise towards π*2 radians.
 `number`
 
 Standardized angle of the vector from *a* to *b*.
+

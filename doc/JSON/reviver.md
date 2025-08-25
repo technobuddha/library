@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / reviver
+[Library](../index.md) / [JSON](./index.md) / reviver
 
 # Function: reviver()
 
@@ -27,3 +25,4 @@ Used with JSON.parse to decode objected encoded by [replacer](replacer.md)
 `unknown`
 
 the decoded value
+

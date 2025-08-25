@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / julian
+[Library](../index.md) / [Time](./index.md) / julian
 
 # Function: julian()
 
@@ -29,3 +27,4 @@ The julian date.
 ## Remarks
 
 Julian dates are always in the UTC timezone
+

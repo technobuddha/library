@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / GraphQLValue
+[Library](../index.md) / [Template](./index.md) / GraphQLValue
 
 # Type Alias: GraphQLValue
 
@@ -13,3 +11,4 @@
 Defined in: [graph-ql.ts:31](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L31)
 
 A GraphQL Value, similar to a JSONValue
+

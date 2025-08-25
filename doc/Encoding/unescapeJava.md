@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unescapeJava
+[Library](../index.md) / [Encoding](./index.md) / unescapeJava
 
 # Function: unescapeJava()
 
@@ -25,3 +23,4 @@ Unescape a string encoded in Java style
 `string`
 
 the string with escapes resolved
+

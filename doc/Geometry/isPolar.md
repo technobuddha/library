@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isPolar
+[Library](../index.md) / [Geometry](./index.md) / isPolar
 
 # Function: isPolar()
 
@@ -28,3 +26,4 @@ that contains numeric `angle` and `radius` properties.
 `point is Polar`
 
 `true` if the value is a Polar point, otherwise `false`.
+

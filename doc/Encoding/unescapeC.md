@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unescapeC
+[Library](../index.md) / [Encoding](./index.md) / unescapeC
 
 # Function: unescapeC()
 
@@ -25,3 +23,4 @@ Unescape a string encoded in C style
 `string`
 
 the string with escapes resolved
+

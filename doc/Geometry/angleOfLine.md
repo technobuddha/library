@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / angleOfLine
+[Library](../index.md) / [Geometry](./index.md) / angleOfLine
 
 # Function: angleOfLine()
 
@@ -26,3 +24,4 @@ Calculates the angle of a given line segment, relative to the horizontal axis
 `number`
 
 The angle of the line segment in the specified units.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / extractDigits
+[Library](../index.md) / [String](./index.md) / extractDigits
 
 # Function: extractDigits()
 
@@ -25,3 +23,4 @@ Remove all non-digit characters from a string
 `string`
 
 digits from the string
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isSameWeek
+[Library](../index.md) / [Time](./index.md) / isSameWeek
 
 # Function: isSameWeek()
 
@@ -33,3 +31,4 @@ true, if the two dates occur in the same week
 ```ts
 utc false
 ```
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / centroid
+[Library](../index.md) / [Geometry](./index.md) / centroid
 
 # Function: centroid()
 
@@ -32,3 +30,4 @@ The centroid as a Cartesian coordinate.
 ## Remarks
 
 - The function assumes the polygon is non-self-intersecting.
+

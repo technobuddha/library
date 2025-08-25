@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / possessive
+[Library](../index.md) / [English](./index.md) / possessive
 
 # Function: possessive()
 
@@ -25,3 +23,4 @@ Determine the possessive form of a word
 `string`
 
 the possessive form of the word
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / variance
+[Library](../index.md) / [Math](./index.md) / variance
 
 # Function: variance()
 
@@ -31,3 +29,4 @@ than two samples were provided, or
 
 NaN if any of the samples is
 not a valid number).
+

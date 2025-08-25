@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / title
+[Library](../index.md) / [String](./index.md) / title
 
 # Function: title()
 
@@ -25,3 +23,4 @@ Convert a string to a title, capitalizing each word, except for the small words
 `string`
 
 the string in title case
+

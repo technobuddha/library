@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / subPositive
+[Library](../index.md) / [Unicode](./index.md) / subPositive
 
 # Variable: subPositive
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:311](https://github.com/technobuddha/library/blob/main/src/constants.ts#L311)
 
 Subscript Positive
+

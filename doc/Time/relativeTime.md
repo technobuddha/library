@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / relativeTime
+[Library](../index.md) / [Time](./index.md) / relativeTime
 
 # Function: relativeTime()
 
@@ -27,3 +25,4 @@ Describe the difference between two dates in a simple format
 `string`
 
 string describing the time difference between the two dates
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toFilename
+[Library](../index.md) / [String](./index.md) / toFilename
 
 # Function: toFilename()
 
@@ -26,3 +24,4 @@ Convert a string so that it can be used as a filename
 `string`
 
 the file name
+

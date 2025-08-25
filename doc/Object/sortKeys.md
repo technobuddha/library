@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / sortKeys
+[Library](../index.md) / [Object](./index.md) / sortKeys
 
 # Function: sortKeys()
 
@@ -34,3 +32,4 @@ For objects, all keys are sorted, and the function is applied recursively to all
 `T`
 
 A new object with keys sorted, or the original value if it is a primitive or array.
+

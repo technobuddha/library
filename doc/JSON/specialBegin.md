@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / specialBegin
+[Library](../index.md) / [JSON](./index.md) / specialBegin
 
 # Variable: specialBegin
 
@@ -13,3 +11,4 @@
 Defined in: [json.ts:6](https://github.com/technobuddha/library/blob/main/src/json.ts#L6)
 
 The beginning of a special JSON value
+

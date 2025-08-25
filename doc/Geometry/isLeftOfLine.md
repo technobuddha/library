@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isLeftOfLine
+[Library](../index.md) / [Geometry](./index.md) / isLeftOfLine
 
 # Function: isLeftOfLine()
 
@@ -26,3 +24,4 @@ Determines whether a given point lies to the left of a specified line segment.
 `boolean`
 
 `true` if the point is to the left of the line segment; otherwise, `false`.
+

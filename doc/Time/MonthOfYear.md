@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / MonthOfYear
+[Library](../index.md) / [Time](./index.md) / MonthOfYear
 
 # Type Alias: MonthOfYear
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:204](https://github.com/technobuddha/library/blob/main/src/constants.ts#L204)
 
 Months of the year
+

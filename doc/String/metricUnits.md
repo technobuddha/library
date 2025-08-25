@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / metricUnits
+[Library](../index.md) / [String](./index.md) / metricUnits
 
 # Function: metricUnits()
 
@@ -24,3 +22,4 @@ Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001
 ## Returns
 
 `string`
+

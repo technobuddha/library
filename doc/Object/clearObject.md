@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / clearObject
+[Library](../index.md) / [Object](./index.md) / clearObject
 
 # Function: clearObject()
 
@@ -39,3 +37,4 @@ The input argument is mutated in place
 ## See
 
 input with all properties deleted.
+

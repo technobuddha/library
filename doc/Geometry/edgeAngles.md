@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / edgeAngles
+[Library](../index.md) / [Geometry](./index.md) / edgeAngles
 
 # Function: edgeAngles()
 
@@ -26,3 +24,4 @@ Generate normalized edge angles from polygon edges.
 [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`number`\>
 
 Generator that yields edge angles, normalized to the specified range
+

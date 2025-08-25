@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / tag
+[Library](../index.md) / [String](./index.md) / tag
 
 # Function: tag()
 
@@ -27,3 +25,4 @@ Surround text with an HTML tag
 `string`
 
 HTML tag with text
+

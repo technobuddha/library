@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / randomDraw
+[Library](../index.md) / [Random](./index.md) / randomDraw
 
 # Function: randomDraw()
 
@@ -38,3 +36,4 @@ Randomly selected item & the list without the drawn item
 ```ts
 random  Math.random
 ```
+

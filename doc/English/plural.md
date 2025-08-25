@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / plural
+[Library](../index.md) / [English](./index.md) / plural
 
 # Function: plural()
 
@@ -27,3 +25,4 @@ Return the plural version of the input string
 `string`
 
 The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
+

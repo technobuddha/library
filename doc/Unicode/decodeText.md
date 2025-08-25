@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / decodeText
+[Library](../index.md) / [Unicode](./index.md) / decodeText
 
 # Function: decodeText()
 
@@ -26,3 +24,4 @@ Decode a UTF8 encoded string into unicode
 `string`
 
 the decoded strings (which is encoded as UTF-16 by javascript)
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / numeric
+[Library](../index.md) / [RegExp](./index.md) / numeric
 
 # Variable: numeric
 
@@ -13,3 +11,4 @@
 Defined in: [regexp.ts:99](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L99)
 
 Validate a valid number
+

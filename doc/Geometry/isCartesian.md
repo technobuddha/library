@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isCartesian
+[Library](../index.md) / [Geometry](./index.md) / isCartesian
 
 # Function: isCartesian()
 
@@ -28,3 +26,4 @@ that contains numeric `x` and `y` properties.
 `point is Cartesian`
 
 `true` if the value is a Cartesian point, otherwise `false`.
+

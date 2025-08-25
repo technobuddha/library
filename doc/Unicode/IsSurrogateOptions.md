@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / IsSurrogateOptions
+[Library](../index.md) / [Unicode](./index.md) / IsSurrogateOptions
 
 # Type Alias: IsSurrogateOptions
 
@@ -20,3 +18,4 @@ Options for [isSurrogate](isSurrogate.md)
 | ------ | ------ | ------ | ------ |
 | <a id="high"></a> `high?` | `boolean` | test for high surrogates (D800-DBFF) | [is-surrogate.ts:8](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L8) |
 | <a id="low"></a> `low?` | `boolean` | test for low surrogates (DC00-DFFF) | [is-surrogate.ts:10](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L10) |
+

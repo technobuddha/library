@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isFunction
+[Library](../index.md) / [Utility](./index.md) / isFunction
 
 # Function: isFunction()
 
@@ -29,3 +27,4 @@ checks to ensure accurate detection.
 `value is Function`
 
 True if the value is a function, otherwise false.
+

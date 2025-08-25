@@ -1,12 +1,14 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / Unicode
 
-## Unicode
+# Unicode
 
 ### Characters
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [fractionSlash](fractionSlash.md) | Fraction Slash |
 | [hyphen](hyphen.md) | Hyphen |
@@ -22,7 +24,7 @@
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [empty](empty.md) | The empty string |
 | [nbsp](nbsp.md) | Non-breaking space |
@@ -32,7 +34,7 @@
 
 ### Encoding
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [TextEncoding](TextEncoding.md) | Valid Text Encoding Types |
 | [decodeText](decodeText.md) | Decode a UTF8 encoded string into unicode |
@@ -40,19 +42,19 @@
 
 ### Is Surrogate
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [IsSurrogateOptions](IsSurrogateOptions.md) | Options for [isSurrogate](isSurrogate.md) |
 | [isSurrogate](isSurrogate.md) | Determine is a character is a surrogate |
 
 ### Normalization
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [removeDiacritics](removeDiacritics.md) | Remove all diacritics from a string |
 
 ### String Length
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [unicodeLength](unicodeLength.md) | Return the number of unicode code points in a string |

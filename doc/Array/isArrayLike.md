@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isArrayLike
+[Library](../index.md) / [Array](./index.md) / isArrayLike
 
 # Function: isArrayLike()
 
@@ -28,3 +26,4 @@ is not a function, has a 'length' property, and the length is a valid array leng
 `value is ArrayLike<unknown>`
 
 True if the value is array-like, otherwise false.
+

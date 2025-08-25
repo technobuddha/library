@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / hyphen
+[Library](../index.md) / [Unicode](./index.md) / hyphen
 
 # Variable: hyphen
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:252](https://github.com/technobuddha/library/blob/main/src/constants.ts#L252)
 
 Hyphen
+

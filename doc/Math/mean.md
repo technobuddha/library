@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / mean
+[Library](../index.md) / [Math](./index.md) / mean
 
 # Function: mean()
 
@@ -25,3 +23,4 @@ Calculates the arithmetic mean (average) of an array of numbers.
 `number`
 
 The mean of the numbers, or `NaN` if the array is empty.
+

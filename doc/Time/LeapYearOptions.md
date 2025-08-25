@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / LeapYearOptions
+[Library](../index.md) / [Time](./index.md) / LeapYearOptions
 
 # Type Alias: LeapYearOptions
 
@@ -19,3 +17,4 @@ Options for the [isLeapYear](isLeapYear.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [is-leap-year.ts:8](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L8) |
+

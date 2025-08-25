@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / TextEncoding
+[Library](../index.md) / [Unicode](./index.md) / TextEncoding
 
 # Type Alias: TextEncoding
 
@@ -13,3 +11,4 @@
 Defined in: [@types/text-encoding.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/text-encoding.ts#L7)
 
 Valid Text Encoding Types
+

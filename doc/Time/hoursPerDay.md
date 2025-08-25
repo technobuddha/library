@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / hoursPerDay
+[Library](../index.md) / [Time](./index.md) / hoursPerDay
 
 # Variable: hoursPerDay
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:67](https://github.com/technobuddha/library/blob/main/src/constants.ts#L67)
 
 Number of hours in a day [24]
+

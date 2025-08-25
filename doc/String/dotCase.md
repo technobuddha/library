@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / dotCase
+[Library](../index.md) / [String](./index.md) / dotCase
 
 # Function: dotCase()
 
@@ -25,3 +23,4 @@ Convert an identifier string to a dot form
 `string`
 
 the identifier in dot form
+

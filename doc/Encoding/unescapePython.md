@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unescapePython
+[Library](../index.md) / [Encoding](./index.md) / unescapePython
 
 # Function: unescapePython()
 
@@ -25,3 +23,4 @@ Unescape a string encoded in Python style
 `string`
 
 the string with escapes resolved
+

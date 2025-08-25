@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / translate
+[Library](../index.md) / [Geometry](./index.md) / translate
 
 # Function: translate()
 
@@ -75,3 +73,4 @@ const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const translated = translate(points, { x: 1, y: 2 });
 // [{ x: 2, y: 2 }, { x: 2, y: 3 }]
 ```
+

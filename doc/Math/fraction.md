@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / fraction
+[Library](../index.md) / [Math](./index.md) / fraction
 
 # Function: fraction()
 
@@ -31,3 +29,4 @@ The output can be either a numeric representation (e.g., "1 1/2") or an alphabet
 `string`
 
 The formatted fraction string.
+

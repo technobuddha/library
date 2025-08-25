@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / DaysInMonthOptions
+[Library](../index.md) / [Time](./index.md) / DaysInMonthOptions
 
 # Type Alias: DaysInMonthOptions
 
@@ -19,3 +17,4 @@ Options for the [daysInMonth](daysInMonth.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [days-in-month.ts:12](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L12) |
+

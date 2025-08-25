@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / RomanOptions
+[Library](../index.md) / [Math](./index.md) / RomanOptions
 
 # Type Alias: RomanOptions
 
@@ -19,3 +17,4 @@ Options for converting numbers to Roman numerals.
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="format"></a> `format?` | `"standard"` \| `"apostrophus"` \| `"vinculum"` | Specifies the output format for the Roman numeral. | [roman-numeral.ts:117](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L117) |
+

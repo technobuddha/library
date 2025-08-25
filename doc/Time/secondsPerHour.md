@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / secondsPerHour
+[Library](../index.md) / [Time](./index.md) / secondsPerHour
 
 # Variable: secondsPerHour
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:115](https://github.com/technobuddha/library/blob/main/src/constants.ts#L115)
 
 Number of seconds in an hour [3600]
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / escapeHTML
+[Library](../index.md) / [Encoding](./index.md) / escapeHTML
 
 # Function: escapeHTML()
 
@@ -24,3 +22,4 @@ Escape a string for use in HTML
 ## Returns
 
 `string`
+

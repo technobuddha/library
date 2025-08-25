@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / splitChars
+[Library](../index.md) / [String](./index.md) / splitChars
 
 # Function: splitChars()
 
@@ -25,3 +23,4 @@ Split a string into an array of characters
 `string`[]
 
 array of characters
+

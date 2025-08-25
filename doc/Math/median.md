@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / median
+[Library](../index.md) / [Math](./index.md) / median
 
 # Function: median()
 
@@ -28,3 +26,4 @@ If the list has an even number of elements, the median is the average of the two
 `number`
 
 The median value, or `NaN` if the input array is empty.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isMidnight
+[Library](../index.md) / [Time](./index.md) / isMidnight
 
 # Function: isMidnight()
 
@@ -26,3 +24,4 @@ Determine if a date is at midnight
 `boolean`
 
 true, if the date is at midnight
+

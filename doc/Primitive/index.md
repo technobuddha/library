@@ -1,12 +1,14 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / Primitive
 
-## Primitive
+# Primitive
 
 ### Conversion
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [toError](toError.md) | Convert the entity to an Error object. |
 | [toInteger](toInteger.md) | Convert an entity to a integer number. |
@@ -15,6 +17,6 @@
 
 ### Testing
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isPrimitive](isPrimitive.md) | Check to see if an object is a primitive |

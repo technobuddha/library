@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / BinaryObject
+[Library](../index.md) / [Encoding](./index.md) / BinaryObject
 
 # Type Alias: BinaryObject
 
@@ -13,3 +11,4 @@
 Defined in: [@types/binary-object.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/binary-object.ts#L7)
 
 A type that represents various binary object types in JavaScript.
+

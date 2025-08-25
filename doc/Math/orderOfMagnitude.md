@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / orderOfMagnitude
+[Library](../index.md) / [Math](./index.md) / orderOfMagnitude
 
 # Function: orderOfMagnitude()
 
@@ -40,3 +38,4 @@ numbers up to 1e308, which limits the numbers that this method can represent to 
 ```ts
 303 is "centillion"
 ```
+

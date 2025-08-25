@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isUpperCase
+[Library](../index.md) / [String](./index.md) / isUpperCase
 
 # Function: isUpperCase()
 
@@ -25,3 +23,4 @@ Test a string for all upper case characters
 `boolean`
 
 true, if all characters in the string are upper case
+

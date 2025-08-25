@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / month
+[Library](../index.md) / [Time](./index.md) / month
 
 # Variable: month
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:212](https://github.com/technobuddha/library/blob/main/src/constants.ts#L212)
 
 Translation object for name of month to month number
+

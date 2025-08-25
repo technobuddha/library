@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isNegativeZero
+[Library](../index.md) / [Math](./index.md) / isNegativeZero
 
 # Function: isNegativeZero()
 
@@ -25,3 +23,4 @@ Tests to see if the specified value is negative zero
 `boolean`
 
 true is the number is negative zero
+

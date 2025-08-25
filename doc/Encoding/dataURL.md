@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / dataURL
+[Library](../index.md) / [Encoding](./index.md) / dataURL
 
 # Function: dataURL()
 
@@ -26,3 +24,4 @@ Convert any binary object into a data URL
 `string`
 
 The data URL
+

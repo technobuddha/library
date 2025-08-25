@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / Polar
+[Library](../index.md) / [Geometry](./index.md) / Polar
 
 # Type Alias: Polar
 
@@ -20,3 +18,4 @@ Polar coordinate (angle, radius)
 | ------ | ------ | ------ |
 | <a id="angle"></a> `angle` | `number` | [@types/geometry.ts:30](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L30) |
 | <a id="radius"></a> `radius` | `number` | [@types/geometry.ts:29](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L29) |
+

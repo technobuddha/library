@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / indefiniteArticle
+[Library](../index.md) / [English](./index.md) / indefiniteArticle
 
 # Function: indefiniteArticle()
 
@@ -39,3 +37,4 @@ all
 ```ts
 only false
 ```
+

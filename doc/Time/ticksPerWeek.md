@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ticksPerWeek
+[Library](../index.md) / [Time](./index.md) / ticksPerWeek
 
 # Variable: ticksPerWeek
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:107](https://github.com/technobuddha/library/blob/main/src/constants.ts#L107)
 
 Number of ticks in a week [604800000]
+

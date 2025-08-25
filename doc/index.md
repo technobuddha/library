@@ -1,58 +1,47 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-**@technobuddha/library**
 
-***
-
-# @technobuddha/library
-
-## Functions
-
-| Function | Description |
-| ------ | ------ |
-| [clamp](Functions/clamp.md) | Clamps a number within the inclusive range specified by `min` and `max`. |
-| [constructNumber](Functions/constructNumber.md) | Reconstructs a number from its deconstructed representation. |
-| [startCase](Functions/startCase.md) | - |
-| [tokenize](Functions/tokenize.md) | - |
-| [toString](Functions/toString.md) | - |
+# Index
 
 ## Array
 
 ### Collapse
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [collapse](Array/collapse.md) | Collapses a list of arguments into a flat array of strings. |
 
 ### Creation
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [create2DArray](Array/create2DArray.md) | Create a two dimensional array with all elements initialized |
 
 ### Iteration
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [LookAheadOptions](Array/LookAheadOptions.md) | Options for [lookAhead](Array/lookAhead.md) operations. |
 | [lookAhead](Array/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
 
 ### Matching
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [LongestCommonSubsequenceOptions](Array/LongestCommonSubsequenceOptions.md) | Options for configuring the [longestCommonSubsequence](Array/longestCommonSubsequence.md) calculation. |
 | [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
 
 ### Merging
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [zipperMerge](Array/zipperMerge.md) | Merges multiple arrays into a single array by interleaving their elements at each index. Each element of the resulting array is an array containing the elements from the input arrays at the corresponding index. If input arrays have different lengths, `undefined` will be used for missing elements. |
 
 ### Type Check
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isArrayLike](Array/isArrayLike.md) | Determines whether the provided value is array-like. |
 
@@ -60,7 +49,7 @@
 
 ### Binary
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BinaryEncoding](Encoding/BinaryEncoding.md) | The binary encoding to use |
 | [BinaryObject](Encoding/BinaryObject.md) | A type that represents various binary object types in JavaScript. |
@@ -74,7 +63,7 @@
 
 ### Escaping
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [EscapeHtmlOptions](Encoding/EscapeHtmlOptions.md) | Options for [escapeHTML](Encoding/escapeHTML.md) |
 | [escapeC](Encoding/escapeC.md) | Escape a string for use in C/C++ |
@@ -91,7 +80,7 @@
 
 ### Hash
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [Crc32](Encoding/Crc32.md) | Compute the CRC32 checksum |
 | [HashBase](Encoding/HashBase.md) | Class representing a generic hash algorithm implementation. |
@@ -106,7 +95,7 @@
 
 ### Parts of Speech
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [ConjoinOptions](English/ConjoinOptions.md) | Options for creating a coordinate string |
 | [IndefiniteArticleOptions](English/IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
@@ -117,7 +106,7 @@
 
 ### Syllables
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [syllables](English/syllables.md) | Approximate the number of syllables in a string |
 
@@ -125,7 +114,7 @@
 
 ### Angle
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [AngleUnit](Geometry/AngleUnit.md) | Types of angle units |
 | [angleUnits](Geometry/angleUnits.md) | Number of units in a circle |unit|value| |---|---| |deg|360| |degrees|360| |rads|2π| |radians|2π| |grads|400| |gradians|400| |turns|1| |
@@ -140,7 +129,7 @@
 
 ### Coordinates
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [Cartesian](Geometry/Cartesian.md) | Represents a point in 2D Cartesian coordinate space. |
 | [Polar](Geometry/Polar.md) | Polar coordinate (angle, radius) |
@@ -152,7 +141,7 @@
 
 ### Line Segment
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [LineSegment](Geometry/LineSegment.md) | Represents a line segment in 2D space, defined by its start and end points. |
 | [angleOfLine](Geometry/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
@@ -167,7 +156,7 @@
 
 ### Point
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isInPolygon](Geometry/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isLeftOfLine](Geometry/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
@@ -180,7 +169,7 @@
 
 ### Polygon
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [Polygon](Geometry/Polygon.md) | A polygon (a set of cartesian coordinates) |
 | [area](Geometry/area.md) | Calculates the area of a polygon given its vertices. |
@@ -201,7 +190,7 @@
 
 ### Rectangle
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [LargestInscribedRectangleOptions](Geometry/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [Rect](Geometry/Rect.md) | A rectangle (defined by its top-left corner, width and height) |
@@ -214,14 +203,14 @@
 
 ### Data Structures
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [JSONMap](JSON/JSONMap.md) | A Map-like data structure that allows objects conforming to `JsonObject` as keys. |
 | [JSONSet](JSON/JSONSet.md) | A Set-like collection for objects that can be serialized to JSON. |
 
 ### Serialization
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [specialBegin](JSON/specialBegin.md) | The beginning of a special JSON value |
 | [specialFinish](JSON/specialFinish.md) | The end of a special JSON value |
@@ -232,12 +221,13 @@
 
 ### Arithmetic
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CeilOptions](Math/CeilOptions.md) | Options for the [ceil](Math/ceil.md) function |
 | [FloorOptions](Math/FloorOptions.md) | Options for the [floor](Math/floor.md) function |
 | [RoundOptions](Math/RoundOptions.md) | Options for the [round](Math/round.md) function |
 | [ceil](Math/ceil.md) | Returns the smallest integer greater than or equal to the given number, with optional tolerance and precision adjustments. |
+| [clamp](Math/clamp.md) | Clamps a number within the inclusive range specified by `min` and `max`. |
 | [crossProduct](Math/crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
 | [floor](Math/floor.md) | Returns the largest integer less than or equal to the given number, with optional tolerance and precision adjustments. |
 | [lerp](Math/lerp.md) | Performs linear interpolation between values a and b. Returns the value between a and b proportional to x (when x is between 0 and 1. When x is outside this range, the return value is a linear extrapolation). |
@@ -246,7 +236,7 @@
 
 ### Comparison
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [ApproximatelyEqualsOptions](Math/ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](Math/approximatelyEquals.md) function |
 | [approximatelyEquals](Math/approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
@@ -255,7 +245,7 @@
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [cardinalOnes](Math/cardinalOnes.md) | Words for unit numbers 0-19 |
 | [cardinalTens](Math/cardinalTens.md) | Words for tens 20-90 |
@@ -263,9 +253,15 @@
 | [ordinalOnes](Math/ordinalOnes.md) | Words for ordinal numbers 0-19 |
 | [ordinalTens](Math/ordinalTens.md) | Words for ordinal tens 20-90 |
 
+### Number
+
+| <div style="width: 200px;">Name</div> | Description |
+| ------ | ------ |
+| [constructNumber](Math/constructNumber.md) | Reconstructs a number from its deconstructed representation. |
+
 ### Numbers
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CardinalOptions](Math/CardinalOptions.md) | Configuration options for cardinal number conversion. |
 | [DeconstructedNumber](Math/DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
@@ -286,7 +282,7 @@
 
 ### Parity
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isEven](Math/isEven.md) | Tests to see if the specified value is an even integer |
 | [isMultipleOf](Math/isMultipleOf.md) | Tests to see if the specified value is an multiple of *multiplier* |
@@ -294,7 +290,7 @@
 
 ### Statistics
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [mean](Math/mean.md) | Calculates the arithmetic mean (average) of an array of numbers. |
 | [median](Math/median.md) | Calculates the median value of an array of numbers. |
@@ -307,20 +303,20 @@
 
 ### Clear Object
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [clearObject](Object/clearObject.md) | Delete all own enumerable string properties from an object |
 
 ### Comparison
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [compare](Object/compare.md) | Compare two objects |
 | [shallowEquals](Object/shallowEquals.md) | Compare two object for equality. Testing goes one level deep. |
 
 ### Utility
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [sortKeys](Object/sortKeys.md) | Recursively sorts the keys of an object in lexicographical order. |
 
@@ -328,7 +324,7 @@
 
 ### Conversion
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [toError](Primitive/toError.md) | Convert the entity to an Error object. |
 | [toInteger](Primitive/toInteger.md) | Convert an entity to a integer number. |
@@ -337,21 +333,30 @@
 
 ### Testing
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isPrimitive](Primitive/isPrimitive.md) | Check to see if an object is a primitive |
+
+## Programming
+
+### Case Conversion
+
+| <div style="width: 200px;">Name</div> | Description |
+| ------ | ------ |
+| [startCase](Programming/startCase.md) | Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase. |
+| [tokenize](Programming/tokenize.md) | Splits the input string into an array of words. |
 
 ## Random
 
 ### Number Generation
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [MersenneTwister](Random/MersenneTwister.md) | Implements the Mersenne Twister pseudorandom number generator (MT19937). |
 
 ### Pick
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [Weighted](Random/Weighted.md) | Represents an object with an associated weight value. |
 | [randomDraw](Random/randomDraw.md) | Draw a random item from a list. Returning both the item and the list without the drawn item. |
@@ -360,7 +365,7 @@
 
 ### Shuffle
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [randomShuffle](Random/randomShuffle.md) | Returns a new array with the elements of the input array shuffled in random order. |
 
@@ -368,19 +373,19 @@
 
 ### Matching
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [matches](RegExp/matches.md) | Determines if the given `text` matches the provided `match` criteria. |
 
 ### Template
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [re](RegExp/re.md) | Constructs a new `RegExp` by interpolating template strings and provided regular expressions. |
 
 ### Validation
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [domain](RegExp/domain.md) | Regular expression for matching a domain name composed of a host and a top-level domain (TLD). |
 | [email](RegExp/email.md) | validate an valid email address |
@@ -393,7 +398,7 @@
 
 ### Affix
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [RootOptions](String/RootOptions.md) | Options for the [root](String/root.md) function |
 | [ensurePrefix](String/ensurePrefix.md) | Add a prefix to a string, if it does not already have the prefix |
@@ -402,14 +407,14 @@
 
 ### Build
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [StringLike](String/StringLike.md) | A string-like object, which can be a string or an array of strings; |
 | [build](String/build.md) | Concatenates strings and/or arrays of strings |
 
 ### Case Conversion
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [camelCase](String/camelCase.md) | Convert an identifier string to a camel case |
 | [capitalize](String/capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
@@ -425,7 +430,7 @@
 
 ### Categorization
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isAlpha](String/isAlpha.md) | Test a string for all alphabetic characters |
 | [isAlphaNumeric](String/isAlphaNumeric.md) | Test a string for all alphanumeric characters |
@@ -437,20 +442,20 @@
 
 ### Chop
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [ChopOptions](String/ChopOptions.md) | Options for the [chop](String/chop.md) function |
 | [chop](String/chop.md) | Break a string into equal sized segments of characters |
 
 ### Clean
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [clean](String/clean.md) | Remove all occurrences of characters from the beginning and end of the string |
 
 ### Collapse
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CollapseBreakingSpaceOptions](String/CollapseBreakingSpaceOptions.md) | Options for the [collapseBreakingSpace](String/collapseBreakingSpace.md) function |
 | [CollapseWhitespaceOptions](String/CollapseWhitespaceOptions.md) | Options for the [collapseWhitespace](String/collapseWhitespace.md) function |
@@ -459,20 +464,20 @@
 
 ### Comparison
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CompareStringsOptions](String/CompareStringsOptions.md) | Options for the [compareStrings](String/compareStrings.md) function |
 | [compareStrings](String/compareStrings.md) | Compare two strings |
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [trimEquivalent](String/trimEquivalent.md) | Regular expression that matches any whitespace character, including standard spaces, non-breaking spaces (`\u00A0`), and zero-width no-break spaces (`\uFEFF`). Useful for trimming or identifying whitespace-equivalent characters in strings. |
 
 ### Conversion
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BooleanOptions](String/BooleanOptions.md) | Options for the [toBoolean](String/toBoolean.md) function |
 | [FilenameOptions](String/FilenameOptions.md) | Options for the [toFilename](String/toFilename.md) function |
@@ -482,13 +487,13 @@
 
 ### Correction
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [correctMSWord](String/correctMSWord.md) | Correct character sequences that Microsoft Word changes to make it look prettier |
 
 ### Delimited
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CountOptions](String/CountOptions.md) | Options for the [count](String/count.md) function |
 | [count](String/count.md) | Compute the number of times a substring occurs within a string |
@@ -496,14 +501,14 @@
 
 ### Extraction
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [extractDigits](String/extractDigits.md) | Remove all non-digit characters from a string |
 | [toASCII](String/toASCII.md) | Change a string to be all from the basic latin unicode plane |
 
 ### Fuzzy Match
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [DiceCoefficientOptions](String/DiceCoefficientOptions.md) | Options for the [diceCoefficient](String/diceCoefficient.md) function |
 | [FuzzyMatchOptions](String/FuzzyMatchOptions.md) | Options for the [fuzzyMatch](String/fuzzyMatch.md) function |
@@ -516,13 +521,13 @@
 
 ### HTML
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [tag](String/tag.md) | Surround text with an HTML tag |
 
 ### Indentation
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [IndentOptions](String/IndentOptions.md) | Options for the indentation functions: [getIndent](String/getIndent.md), [indent](String/indent.md), and [unindent](String/unindent.md) |
 | [getIndent](String/getIndent.md) | Determine the indentation level of text |
@@ -531,14 +536,14 @@
 
 ### Mask
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [MaskOptions](String/MaskOptions.md) | Options for the [mask](String/mask.md) function |
 | [mask](String/mask.md) | Use a simple mask to display a string |
 
 ### Quoting
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [QuoteOptions](String/QuoteOptions.md) | Options for the [quote](String/quote.md) and [unquote](String/unquote.md) function |
 | [quote](String/quote.md) | Surround text with quotes |
@@ -546,7 +551,7 @@
 
 ### Sorting
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [NumberToLetterOptions](String/NumberToLetterOptions.md) | Options for the [numberToLetter](String/numberToLetter.md) function |
 | [SortOrderOptions](String/SortOrderOptions.md) | Options for the [sortOrder](String/sortOrder.md) function |
@@ -556,7 +561,7 @@
 
 ### Split
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [SplitWordsOptions](String/SplitWordsOptions.md) | Options for the [splitWords](String/splitWords.md) function |
 | [splitChars](String/splitChars.md) | Split a string into an array of characters |
@@ -565,14 +570,14 @@
 
 ### Templates
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [FillTemplateOptions](String/FillTemplateOptions.md) | Options for the [fillTemplate](String/fillTemplate.md) function |
 | [fillTemplate](String/fillTemplate.md) | Fill a template with supplied values |
 
 ### Units
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BinaryUnitsOptions](String/BinaryUnitsOptions.md) | Options for the [binaryUnits](String/binaryUnits.md) function |
 | [MetricUnitsOptions](String/MetricUnitsOptions.md) | Options for the [metricUnits](String/metricUnits.md) function w |
@@ -581,7 +586,7 @@
 
 ### Word Wrapping
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [WordwrapOptions](String/WordwrapOptions.md) | Options for the [wordwrap](String/wordwrap.md) function |
 | [wordwrap](String/wordwrap.md) | Wrap text so that it fits within a area of fixed width |
@@ -590,7 +595,7 @@
 
 ### GraphQl
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [GraphQLArray](Template/GraphQLArray.md) | A GraphQL Array, similar to a JSONArray |
 | [GraphQLObject](Template/GraphQLObject.md) | A GraphQL Object, similar to a JSONObject |
@@ -599,7 +604,7 @@
 
 ### Single Line
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [singleLine](Template/singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |
 
@@ -607,14 +612,14 @@
 
 ### Alteration
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [TimeIncrement](Time/TimeIncrement.md) | Represents amount of time to use for [addTime](Time/addTime.md) |
 | [addTime](Time/addTime.md) | Add units of time to a Date |
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [daysPerWeek](Time/daysPerWeek.md) | Number of days in a week [7] |
 | [hoursPerDay](Time/hoursPerDay.md) | Number of hours in a day [24] |
@@ -634,13 +639,13 @@
 
 ### Conversion
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [toDate](Time/toDate.md) | Converts an unknown entity to a `Date` object. |
 
 ### Day
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BeginningOfDayOptions](Time/BeginningOfDayOptions.md) | Options for [beginningOfDay](Time/beginningOfDay.md) |
 | [GetOccurrenceInMonthOptions](Time/GetOccurrenceInMonthOptions.md) | Options for [occurrenceInMonth](Time/occurrenceInMonth.md) |
@@ -653,7 +658,7 @@
 
 ### Enumerations
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [DayOfWeek](Time/DayOfWeek.md) | Days of the week |
 | [MonthOfYear](Time/MonthOfYear.md) | Months of the year |
@@ -662,20 +667,20 @@
 
 ### Formatting
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [FormatDateOptions](Time/FormatDateOptions.md) | Options for formatting a date |
 | [formatDate](Time/formatDate.md) | Format a date |
 
 ### Julian
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [julian](Time/julian.md) | Get the Julian date (number of days since noon on Monday, January 1 4713 BCE) |
 
 ### Month
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BeginningOfMonthOptions](Time/BeginningOfMonthOptions.md) | Options for the [beginningOfMonth](Time/beginningOfMonth.md) function |
 | [DaysInMonthOptions](Time/DaysInMonthOptions.md) | Options for the [daysInMonth](Time/daysInMonth.md) function |
@@ -688,40 +693,40 @@
 
 ### Parsing
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isValidDate](Time/isValidDate.md) | Determine if a date is valid |
 | [parseDate](Time/parseDate.md) | Parse a string into a Date object |
 
 ### Relative Time
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [RelativeTimeOptions](Time/RelativeTimeOptions.md) | Options for the [relativeTime](Time/relativeTime.md) function |
 | [relativeTime](Time/relativeTime.md) | Describe the difference between two dates in a simple format |
 
 ### Time Span
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [TimeSpan](Time/TimeSpan.md) | Store and manipulate a duration of time |
 
 ### Time Zone
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [TimezoneOptions](Time/TimezoneOptions.md) | Options for the [timezone](Time/timezone.md) function |
 | [timezone](Time/timezone.md) | Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes |
 
 ### Type Check
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isDate](Time/isDate.md) | Determines whether the provided value is a `Date` object. |
 
 ### Week
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BeginningOfWeekOptions](Time/BeginningOfWeekOptions.md) | Options for the [beginningOfWeek](Time/beginningOfWeek.md) function |
 | [DayOfWeekOptions](Time/DayOfWeekOptions.md) | Options for the [dayOfWeek](Time/dayOfWeek-1.md) function |
@@ -738,7 +743,7 @@
 
 ### Year
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [BeginningOfYearOptions](Time/BeginningOfYearOptions.md) | Options for the [beginningOfYear](Time/beginningOfYear.md) function |
 | [DayOfYearOptions](Time/DayOfYearOptions.md) | Options for the [dayOfYear](Time/dayOfYear.md) function |
@@ -755,7 +760,7 @@
 
 ### Characters
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [fractionSlash](Unicode/fractionSlash.md) | Fraction Slash |
 | [hyphen](Unicode/hyphen.md) | Hyphen |
@@ -771,7 +776,7 @@
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [empty](Unicode/empty.md) | The empty string |
 | [nbsp](Unicode/nbsp.md) | Non-breaking space |
@@ -781,7 +786,7 @@
 
 ### Encoding
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [TextEncoding](Unicode/TextEncoding.md) | Valid Text Encoding Types |
 | [decodeText](Unicode/decodeText.md) | Decode a UTF8 encoded string into unicode |
@@ -789,20 +794,20 @@
 
 ### Is Surrogate
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [IsSurrogateOptions](Unicode/IsSurrogateOptions.md) | Options for [isSurrogate](Unicode/isSurrogate.md) |
 | [isSurrogate](Unicode/isSurrogate.md) | Determine is a character is a surrogate |
 
 ### Normalization
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [removeDiacritics](Unicode/removeDiacritics.md) | Remove all diacritics from a string |
 
 ### String Length
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [unicodeLength](Unicode/unicodeLength.md) | Return the number of unicode code points in a string |
 
@@ -810,19 +815,25 @@
 
 ### Classes
 
-| Class | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [PriorityQueue](Utility/PriorityQueue.md) | A simple priority queue |
 
+### Conversion
+
+| <div style="width: 200px;">Name</div> | Description |
+| ------ | ------ |
+| [toString](Utility/toString.md) | Converts an unknown value to its string representation. |
+
 ### Global Types
 
-| Type Alias | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [TypedArray](Utility/TypedArray.md) | Any of the built-in typed array types in JavaScript. |
 
 ### Type Checking
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
 | [isFunction](Utility/isFunction.md) | Determines whether the provided value is a function. |
@@ -830,3 +841,4 @@
 | [isObject](Utility/isObject.md) | Determines whether the provided value is a non-null object. |
 | [isRegExp](Utility/isRegExp.md) | Determines whether the provided value is a `RegExp` object. |
 | [isString](Utility/isString.md) | Determines whether the provided value is a string. |
+

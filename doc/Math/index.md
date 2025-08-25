@@ -1,17 +1,20 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / Math
 
-## Math
+# Math
 
 ### Arithmetic
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CeilOptions](CeilOptions.md) | Options for the [ceil](ceil.md) function |
 | [FloorOptions](FloorOptions.md) | Options for the [floor](floor.md) function |
 | [RoundOptions](RoundOptions.md) | Options for the [round](round.md) function |
 | [ceil](ceil.md) | Returns the smallest integer greater than or equal to the given number, with optional tolerance and precision adjustments. |
+| [clamp](clamp.md) | Clamps a number within the inclusive range specified by `min` and `max`. |
 | [crossProduct](crossProduct.md) | Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space. The result is positive if the sequence OAB makes a counter-clockwise turn, negative for a clockwise turn, and zero if the points are collinear. |
 | [floor](floor.md) | Returns the largest integer less than or equal to the given number, with optional tolerance and precision adjustments. |
 | [lerp](lerp.md) | Performs linear interpolation between values a and b. Returns the value between a and b proportional to x (when x is between 0 and 1. When x is outside this range, the return value is a linear extrapolation). |
@@ -20,7 +23,7 @@
 
 ### Comparison
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [ApproximatelyEqualsOptions](ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](approximatelyEquals.md) function |
 | [approximatelyEquals](approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
@@ -29,7 +32,7 @@
 
 ### Constants
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [cardinalOnes](cardinalOnes.md) | Words for unit numbers 0-19 |
 | [cardinalTens](cardinalTens.md) | Words for tens 20-90 |
@@ -37,9 +40,15 @@
 | [ordinalOnes](ordinalOnes.md) | Words for ordinal numbers 0-19 |
 | [ordinalTens](ordinalTens.md) | Words for ordinal tens 20-90 |
 
+### Number
+
+| <div style="width: 200px;">Name</div> | Description |
+| ------ | ------ |
+| [constructNumber](constructNumber.md) | Reconstructs a number from its deconstructed representation. |
+
 ### Numbers
 
-| Name | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [CardinalOptions](CardinalOptions.md) | Configuration options for cardinal number conversion. |
 | [DeconstructedNumber](DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
@@ -60,7 +69,7 @@
 
 ### Parity
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [isEven](isEven.md) | Tests to see if the specified value is an even integer |
 | [isMultipleOf](isMultipleOf.md) | Tests to see if the specified value is an multiple of *multiplier* |
@@ -68,7 +77,7 @@
 
 ### Statistics
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [mean](mean.md) | Calculates the arithmetic mean (average) of an array of numbers. |
 | [median](median.md) | Calculates the median value of an array of numbers. |

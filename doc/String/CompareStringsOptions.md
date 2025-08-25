@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / CompareStringsOptions
+[Library](../index.md) / [String](./index.md) / CompareStringsOptions
 
 # Type Alias: CompareStringsOptions
 
@@ -21,3 +19,4 @@ Options for the [compareStrings](compareStrings.md) function
 | <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | if true, strings are to be compared case insensitive | [compare-strings.ts:11](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L11) |
 | <a id="natural"></a> `natural?` | `boolean` | if true, compare numeric portions of the string as numbers | [compare-strings.ts:13](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L13) |
 | <a id="version"></a> `version?` | `boolean` | if true, compare strings as version numbers | [compare-strings.ts:15](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L15) |
+

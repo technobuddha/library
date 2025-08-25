@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / re
+[Library](../index.md) / [RegExp](./index.md) / re
 
 # Function: re()
 
@@ -30,3 +28,4 @@ when appropriate.
 [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 A new `RegExp` object with the combined pattern and merged flags.
+

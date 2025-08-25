@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toEnumeration
+[Library](../index.md) / [String](./index.md) / toEnumeration
 
 # Function: toEnumeration()
 
@@ -26,3 +24,4 @@ Convert a string to a numeric value
 `undefined` \| `number`
 
 The index of the first test to match the input string
+

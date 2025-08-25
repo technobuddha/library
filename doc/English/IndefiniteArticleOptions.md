@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / IndefiniteArticleOptions
+[Library](../index.md) / [English](./index.md) / IndefiniteArticleOptions
 
 # Type Alias: IndefiniteArticleOptions
 
@@ -19,3 +17,4 @@ Options for determining the indefinite article to use with a word.
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="only"></a> `only?` | `boolean` | only return the indefinite article, do not combine with the input | [indefinite-article.ts:30](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L30) |
+

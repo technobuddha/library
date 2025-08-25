@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / humanCase
+[Library](../index.md) / [String](./index.md) / humanCase
 
 # Function: humanCase()
 
@@ -25,3 +23,4 @@ Convert an identifier string to a human case
 `string`
 
 string in human case
+

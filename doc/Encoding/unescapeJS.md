@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / unescapeJS
+[Library](../index.md) / [Encoding](./index.md) / unescapeJS
 
 # Function: unescapeJS()
 
@@ -25,3 +23,4 @@ Unescape a string encoded in Javascript style
 `string`
 
 the string with escapes resolved
+

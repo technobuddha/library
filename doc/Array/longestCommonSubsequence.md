@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / longestCommonSubsequence
+[Library](../index.md) / [Array](./index.md) / longestCommonSubsequence
 
 # Function: longestCommonSubsequence()
 
@@ -48,3 +46,4 @@ longestCommonSubsequence(
  ['a', 'c', ' ', 'd', 'e', 'c'],
 ); // ['a', 'c', ' ', 'd', 'e']
 ```
+

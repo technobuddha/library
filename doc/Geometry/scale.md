@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / scale
+[Library](../index.md) / [Geometry](./index.md) / scale
 
 # Function: scale()
 
@@ -77,3 +75,4 @@ const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const rotated = scale(points, 2);
 // [{ x: 2, y: 0 }, { x: 0, y: 2 }]
 ```
+

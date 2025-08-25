@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / star
+[Library](../index.md) / [Geometry](./index.md) / star
 
 # Function: star()
 
@@ -32,3 +30,4 @@ An array of `Cartesian` points representing the vertices of the star in drawing 
 ## Throws
 
 `TypeError` If `sides` is less than 3.
+

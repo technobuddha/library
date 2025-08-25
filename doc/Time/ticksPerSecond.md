@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / ticksPerSecond
+[Library](../index.md) / [Time](./index.md) / ticksPerSecond
 
 # Variable: ticksPerSecond
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:44](https://github.com/technobuddha/library/blob/main/src/constants.ts#L44)
 
 Number of ticks in a second [1000]
+

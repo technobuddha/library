@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / hoursPerWeek
+[Library](../index.md) / [Time](./index.md) / hoursPerWeek
 
 # Variable: hoursPerWeek
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:155](https://github.com/technobuddha/library/blob/main/src/constants.ts#L155)
 
 Number of hours in a week [168]
+

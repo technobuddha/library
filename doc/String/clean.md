@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / clean
+[Library](../index.md) / [String](./index.md) / clean
 
 # Function: clean()
 
@@ -24,3 +22,4 @@ Remove all occurrences of characters from the beginning and end of the string
 ## Returns
 
 `string`
+

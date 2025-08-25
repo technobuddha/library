@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isWithLine
+[Library](../index.md) / [Geometry](./index.md) / isWithLine
 
 # Function: isWithLine()
 
@@ -27,3 +25,4 @@ Determines whether a given point lies on a specified line segment within a certa
 `boolean`
 
 `true` if the point lies on the line segment within the given tolerance, otherwise `false`.
+

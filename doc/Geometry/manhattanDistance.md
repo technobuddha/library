@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / manhattanDistance
+[Library](../index.md) / [Geometry](./index.md) / manhattanDistance
 
 # Function: manhattanDistance()
 
@@ -37,3 +35,4 @@ const pointA = { x: 1, y: 2 };
 const pointB = { x: 4, y: 6 };
 const distance = manhattanDistance(pointA, pointB); // 7
 ```
+

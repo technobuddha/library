@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / toAngle
+[Library](../index.md) / [Geometry](./index.md) / toAngle
 
 # Function: toAngle()
 
@@ -27,3 +25,4 @@ Converts an angle from one unit to another.
 `number`
 
 Converted angle.
+

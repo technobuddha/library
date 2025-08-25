@@ -1,16 +1,14 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / macroCase
+[Library](../index.md) / [String](./index.md) / macroCase
 
 # Function: macroCase()
 
 > **macroCase**(`input`: `string`): `string`
 
-Defined in: macro-case.ts:12
+Defined in: [macro-case.ts:12](https://github.com/technobuddha/library/blob/main/src/macro-case.ts#L12)
 
 Convert an identifier string to macro case
 
@@ -25,3 +23,4 @@ Convert an identifier string to macro case
 `string`
 
 the identifier in macro case
+

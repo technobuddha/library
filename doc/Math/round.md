@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / round
+[Library](../index.md) / [Math](./index.md) / round
 
 # Function: round()
 
@@ -26,3 +24,4 @@ Returns the nearest integer to the given number, with optional precision adjustm
 `number`
 
 The nearest integer to the adjusted input.
+

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / fillTemplate
+[Library](../index.md) / [String](./index.md) / fillTemplate
 
 # Function: fillTemplate()
 
@@ -39,3 +37,4 @@ open '{{'
 ```ts
 close '}}'
 ```
+

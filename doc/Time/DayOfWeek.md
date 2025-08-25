@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / DayOfWeek
+[Library](../index.md) / [Time](./index.md) / DayOfWeek
 
 # Type Alias: DayOfWeek
 
@@ -13,3 +11,4 @@
 Defined in: [constants.ts:163](https://github.com/technobuddha/library/blob/main/src/constants.ts#L163)
 
 Days of the week
+

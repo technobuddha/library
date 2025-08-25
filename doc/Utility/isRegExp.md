@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isRegExp
+[Library](../index.md) / [Utility](./index.md) / isRegExp
 
 # Function: isRegExp()
 
@@ -25,3 +23,4 @@ Determines whether the provided value is a `RegExp` object.
 `value is RegExp`
 
 `true` if the value is a `RegExp` object; otherwise, `false`.
+

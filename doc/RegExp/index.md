@@ -1,24 +1,26 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-# @technobuddha/library
+[Library](../index.md) / RegExp
 
-## RegExp
+# RegExp
 
 ### Matching
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [matches](matches.md) | Determines if the given `text` matches the provided `match` criteria. |
 
 ### Template
 
-| Function | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [re](re.md) | Constructs a new `RegExp` by interpolating template strings and provided regular expressions. |
 
 ### Validation
 
-| Variable | Description |
+| <div style="width: 200px;">Name</div> | Description |
 | ------ | ------ |
 | [domain](domain.md) | Regular expression for matching a domain name composed of a host and a top-level domain (TLD). |
 | [email](email.md) | validate an valid email address |

@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / angleUnits
+[Library](../index.md) / [Geometry](./index.md) / angleUnits
 
 # Variable: angleUnits
 
@@ -22,3 +20,4 @@ Number of units in a circle
 |grads|400|
 |gradians|400|
 |turns|1|
+

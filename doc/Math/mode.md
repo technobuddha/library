@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / mode
+[Library](../index.md) / [Math](./index.md) / mode
 
 # Function: mode()
 
@@ -33,3 +31,4 @@ Returns `undefined` if the array is empty.
 `undefined` \| `T`
 
 The mode of the array, or `undefined` if the array is empty.
+

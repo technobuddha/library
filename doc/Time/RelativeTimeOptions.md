@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / RelativeTimeOptions
+[Library](../index.md) / [Time](./index.md) / RelativeTimeOptions
 
 # Type Alias: RelativeTimeOptions
 
@@ -22,3 +20,4 @@ Options for the [relativeTime](relativeTime.md) function
 | <a id="timeformat"></a> `timeFormat?` | `string` | Passed to [formatDate](formatDate.md) to display a time | [relative-time.ts:24](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L24) |
 | <a id="todaytomorrowyesterday"></a> `todayTomorrowYesterday?` | `boolean` | Describe the time difference as a time on a nearby day | [relative-time.ts:22](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L22) |
 | <a id="ymdformat"></a> `ymdFormat?` | `string` | Passed to [formatDate](formatDate.md) to display a year, month and day | [relative-time.ts:26](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L26) |
+

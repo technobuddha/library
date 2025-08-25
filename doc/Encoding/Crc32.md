@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / Crc32
+[Library](../index.md) / [Encoding](./index.md) / Crc32
 
 # Class: Crc32
 
@@ -141,3 +139,4 @@ The hash instance for method chaining.
 ##### Overrides
 
 [`HashBase`](HashBase.md).[`update`](HashBase.md#update)
+

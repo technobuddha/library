@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / escapeC
+[Library](../index.md) / [Encoding](./index.md) / escapeC
 
 # Function: escapeC()
 
@@ -25,3 +23,4 @@ Escape a string for use in C/C++
 `string`
 
 the escaped string
+

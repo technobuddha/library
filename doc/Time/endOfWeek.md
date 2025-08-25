@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / endOfWeek
+[Library](../index.md) / [Time](./index.md) / endOfWeek
 
 # Function: endOfWeek()
 
@@ -32,3 +30,4 @@ Midnight of the last day of the week containing the input date
 ```ts
 utc false
 ```
+

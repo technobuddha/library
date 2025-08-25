@@ -1,10 +1,8 @@
 <!-- markdownlint-disable -->
+Technobuddha Library
+---
 
-[**@technobuddha/library**](../index.md)
-
-***
-
-[@technobuddha/library](../index.md) / isWhitespace
+[Library](../index.md) / [String](./index.md) / isWhitespace
 
 # Function: isWhitespace()
 
@@ -25,3 +23,4 @@ Test a string for all white space characters
 `boolean`
 
 true, if all characters in the string are white space
+
