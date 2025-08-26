@@ -1,5 +1,5 @@
-import { empty, space } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
+import { empty, space } from '../unicode.ts';
 
 import { type Numbering, numbering } from './numbering.ts';
 

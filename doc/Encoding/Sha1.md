@@ -6,9 +6,24 @@ Technobuddha Library
 
 # Class: Sha1
 
-Defined in: [sha-1.ts:48](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L48)
+Defined in: [sha-1.ts:63](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L63)
 
 Secure Hash Algorithm, SHA-1
+
+## Example
+
+```typescript
+const sha1 = new Sha1();
+sha1.update('hello world', 'utf8');
+sha1.digest('hex');
+// '2aae6c35c94fcfb415dbe95f408b9ce91ee846ed'
+```
+```typescript
+const sha1 = new Sha1();
+sha1.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]);
+sha1.digest('hex');
+// '1e371678fc62d4da116857a09490eb90b97db121'
+```
 
 ## Extends
 
@@ -22,7 +37,7 @@ Secure Hash Algorithm, SHA-1
 new Sha1(): Sha1;
 ```
 
-Defined in: [sha-1.ts:64](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L64)
+Defined in: [sha-1.ts:79](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L79)
 
 Creates a new SHA-1 hash instance and initializes its internal state.
 
@@ -52,13 +67,15 @@ digest(): Uint8Array;
 
 Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
-The output is returned as a `Uint8Array`.
+Finalizes the hash computation and returns the resulting hash digest.
+This method performs any necessary padding and processes the final block
+of data according to the hash algorithm's specification.
 
 ##### Returns
 
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-The hash digest as a `Uint8Array`
+The hash digest
 
 ##### Inherited from
 
@@ -75,8 +92,6 @@ Defined in: [sha-base.ts:79](https://github.com/technobuddha/library/blob/main/s
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
 of data according to the hash algorithm's specification.
-
-The output is encoded as a string in the specified binary encoding.
 
 ##### Parameters
 
@@ -103,8 +118,8 @@ An encoded string, depending on the `encoding` parameter.
 ```ts
 update(data: 
   | TypedArray
-  | ArrayBuffer
-  | ArrayLike<number>): this;
+  | ArrayLike<number>
+  | ArrayBuffer): this;
 ```
 
 Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
@@ -115,7 +130,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| `ArrayLike`\<`number`\> \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 

@@ -10,7 +10,7 @@ Technobuddha Library
 const ticksPerWeek: number;
 ```
 
-Defined in: [constants.ts:107](https://github.com/technobuddha/library/blob/main/src/constants.ts#L107)
+Defined in: [constants.ts:80](https://github.com/technobuddha/library/blob/main/src/constants.ts#L80)
 
 Number of ticks in a week [604800000]
 

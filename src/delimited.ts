@@ -1,4 +1,4 @@
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Return a field from a delimited string

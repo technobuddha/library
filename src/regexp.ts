@@ -108,7 +108,7 @@ const TLD = /^[a-z]{2,}$/;
  * The pattern expects one or more occurrences of `HOST` followed by `TLD`, anchored to the start and end of the string.
  *
  * @example
- * ```ts
+ * ```typescript
  * const isDomain = domain.test('example.com');
  * ```
  *

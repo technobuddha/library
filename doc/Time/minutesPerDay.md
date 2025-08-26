@@ -10,7 +10,7 @@ Technobuddha Library
 const minutesPerDay: number;
 ```
 
-Defined in: [constants.ts:139](https://github.com/technobuddha/library/blob/main/src/constants.ts#L139)
+Defined in: [constants.ts:112](https://github.com/technobuddha/library/blob/main/src/constants.ts#L112)
 
 Number of minutes in a day [1440]
 

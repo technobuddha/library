@@ -4,20 +4,19 @@ import { type TextEncoding } from './@types/text-encoding.ts';
 import { type TypedArray } from './@types/typed-array.ts';
 import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
-import { type HashBase } from './hash-base.ts';
+import { HashBase } from './hash-base.ts';
 
 /**
- * The base class for most sha bases cryptographic hash functions
+ * The base class for sha based cryptographic hash functions
  *
  * @group Encoding
  * @category Hash
  */
-export abstract class ShaBase implements HashBase {
+export abstract class ShaBase extends HashBase {
   /**
    * Internal buffer used to store a block of data for hashing operations.
    * This buffer is typically filled with input data and processed in chunks
    * according to the hash algorithm's block size.
-   * @readonly
    */
   protected readonly block: Uint8Array;
   /**
@@ -45,6 +44,7 @@ export abstract class ShaBase implements HashBase {
    * @param finalSize - The size of the final hash output in bytes.
    */
   public constructor(blockSize: number, finalSize: number) {
+    super();
     this.block = new Uint8Array(blockSize);
     this.finalSize = finalSize;
     this.blockSize = blockSize;

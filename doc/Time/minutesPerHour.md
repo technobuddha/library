@@ -10,7 +10,7 @@ Technobuddha Library
 const minutesPerHour: 60 = 60;
 ```
 
-Defined in: [constants.ts:60](https://github.com/technobuddha/library/blob/main/src/constants.ts#L60)
+Defined in: [constants.ts:33](https://github.com/technobuddha/library/blob/main/src/constants.ts#L33)
 
 Number of minutes in an hour [60]
 

@@ -1,4 +1,4 @@
-import { empty, secondsPerHour, secondsPerMinute } from './constants.ts';
+import { secondsPerHour, secondsPerMinute } from './constants.ts';
 import { dayOfWeek } from './day-of-week.ts';
 import { dayOfYear } from './day-of-year.ts';
 import { isoWeekOfYear } from './iso-week-of-year.ts';
@@ -6,6 +6,7 @@ import { julian } from './julian.ts';
 import { ordinal } from './numbering/ordinal.ts';
 import { padNumber } from './pad-number.ts';
 import { timezone } from './timezone.ts';
+import { empty } from './unicode.ts';
 
 const tokenizer =
   /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/gu;

@@ -10,7 +10,7 @@ Technobuddha Library
 const supNegative: "⁻" = '⁻';
 ```
 
-Defined in: [constants.ts:289](https://github.com/technobuddha/library/blob/main/src/constants.ts#L289)
+Defined in: [unicode.ts:87](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L87)
 
 Superscript Negative
 

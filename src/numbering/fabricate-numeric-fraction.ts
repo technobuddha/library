@@ -1,6 +1,6 @@
 import { type DeconstructedNumber } from '../@types/deconstructed-number.ts';
-import { fractionSlash } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
+import { fractionSlash } from '../unicode.ts';
 
 import { deriveFraction } from './derive-fraction.ts';
 import { type Numbering } from './numbering.ts';

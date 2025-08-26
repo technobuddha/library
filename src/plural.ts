@@ -1,5 +1,5 @@
-import { empty, space } from './constants.ts';
 import { matchCase } from './match-case.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Return the plural version of the input string

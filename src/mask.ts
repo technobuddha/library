@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { splitChars } from './split-chars.ts';
+import { space } from './unicode.ts';
 
 /**
  * Options for the {@link mask} function

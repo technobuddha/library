@@ -8,7 +8,7 @@ import { splitChars } from './split-chars.ts';
  */
 export type EscapeHtmlOptions = {
   /** escape all characters outside the 7-bit ASCII range */
-  escapeNonAscii?: boolean;
+  escapeNonASCII?: boolean;
 };
 
 /**
@@ -16,12 +16,20 @@ export type EscapeHtmlOptions = {
  *
  * @param input - The string to escape
  * @param options - see {@link EscapeHtmlOptions}
+ * @example
+ * ```typescript
+ * console.log(escapeHTML('<div>hello</div>'));
+ * // &lt;div&gt;hello&lt;/div&gt;
+ *
+ * console.log(escapeHTML('aáΔ😀', { escapeNonASCII: true }));
+ * // a&#225;&#916;&#128512;
+ * ```
  * @group Encoding
  * @category Escaping
  */
 export function escapeHTML(
   input: string,
-  { escapeNonAscii = false }: EscapeHtmlOptions = {},
+  { escapeNonASCII: escapeNonAscii = false }: EscapeHtmlOptions = {},
 ): string {
   return build(
     splitChars(input).map(

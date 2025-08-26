@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { tokenize } from './tokenize.ts';
+import { hyphen, nbHyphen } from './unicode.ts';
 
 describe('tokenize', () => {
   test('splits a simple sentence into words', () => {

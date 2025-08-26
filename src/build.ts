@@ -1,6 +1,5 @@
-import { type StringLike } from './@types/string-like.ts';
 import { collapse } from './collapse.ts';
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Concatenates strings and/or arrays of strings
@@ -10,8 +9,6 @@ import { empty } from './constants.ts';
  * @group String
  * @category Build
  */
-export function build(
-  ...args: (StringLike | Generator<StringLike> | Iterable<StringLike> | (() => StringLike))[]
-): string {
+export function build(...args: Parameters<typeof collapse<string>>): string {
   return collapse(...args).join(empty);
 }

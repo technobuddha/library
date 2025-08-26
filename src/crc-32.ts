@@ -51,7 +51,21 @@ const crcTable: number[] = [
 // }
 
 /**
- * Compute the CRC32 checksum
+ * Compute the CRC32 checksum of a binary object
+ * @example
+ * ```typescript
+ * const crc = new Crc32();
+ * crc.update('hello world', 'utf8');
+ * crc.digest('hex');
+ * // '0d4a1185'
+ * ```
+ * ```typescript
+ * const crc = new Crc32();
+ * crc.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * crc.digest('hex');
+ * // 'c031d497'
+ * ```
+ *
  * @group Encoding
  * @category Hash
  */
@@ -60,7 +74,6 @@ export class Crc32 extends HashBase {
 
   /**
    * Creates a new CRC32 hash instance and initializes its internal state.
-   *
    * @remarks
    * The CRC value is initialized to -1, as required by the CRC32 algorithm specification.
    * Use {@link update} to process data and {@link digest} to obtain the final hash value.

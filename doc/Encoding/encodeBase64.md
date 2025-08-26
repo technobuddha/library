@@ -6,21 +6,28 @@ Technobuddha Library
 
 # Function: encodeBase64()
 
+Creates a encoded ASCII string from a string using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
+
+You can use this method to encode data which may otherwise cause communication problems,
+transmit it, then use the [decodeBase64](decodeBase64.md) method to decode the data again. For example, you can
+encode control characters such as ASCII values 0 through 31.
+
+## Example
+
+```typescript
+encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
+encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
+```
+
 ## Call Signature
 
 ```ts
 function encodeBase64(chars: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [encode-base-64.ts:98](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L98)
+Defined in: [encode-base-64.ts:12](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L12)
 
-Creates a Base64-encoded ASCII string from a string.
-
-You can use this method to encode data which may otherwise cause communication problems,
-transmit it, then use the [decodeBase64](decodeBase64.md) method to decode the data again. For example, you can
-encode control characters such as ASCII values 0 through 31.
-
-Before encoding, the string is converted to binary using [encodeText](../Unicode/encodeText.md) and the supplied ***encoding***
+Before encoding, the string is converted to binary using [encodeText](../Unicode/encodeText.md) and the supplied `encoding`
 
 ### Parameters
 
@@ -33,47 +40,21 @@ Before encoding, the string is converted to binary using [encodeText](../Unicode
 
 `string`
 
-An ASCII string containing the Base64 representation
-
-### Example
-
-```ts
-encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
-encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
-```
-
 ## Call Signature
 
 ```ts
-function encodeBase64(binary: Uint8Array): string;
+function encodeBase64(binary: BinaryObject): string;
 ```
 
-Defined in: [encode-base-64.ts:99](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L99)
-
-Creates a Base64-encoded ASCII string from a string.
-
-You can use this method to encode data which may otherwise cause communication problems,
-transmit it, then use the [decodeBase64](decodeBase64.md) method to decode the data again. For example, you can
-encode control characters such as ASCII values 0 through 31.
-
-Before encoding, the string is converted to binary using [encodeText](../Unicode/encodeText.md) and the supplied ***encoding***
+Defined in: [encode-base-64.ts:16](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L16)
 
 ### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `binary` | [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `binary` | [`BinaryObject`](BinaryObject.md) | The Binary object to encode |
 
 ### Returns
 
 `string`
-
-An ASCII string containing the Base64 representation
-
-### Example
-
-```ts
-encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
-encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
-```
 

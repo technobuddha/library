@@ -3,9 +3,8 @@ import { create2DArray } from './create-2d-array.ts';
 /**
  * Options for configuring the {@link longestCommonSubsequence} calculation.
  * @typeParam T - Type of objects in the arrays.
- *
  * @group Array
- * @category Matching
+ * @category Methods
  */
 export type LongestCommonSubsequenceOptions<T> = {
   /**
@@ -29,14 +28,6 @@ export type LongestCommonSubsequenceOptions<T> = {
  * @remarks
  * Implementation of [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
  *
- * @example
- * ```ts
- * longestCommonSubsequence(
- *  ['a', 'b', 'c', ' ', 'd', 'e', 'f'],
- *  ['a', 'c', ' ', 'd', 'e', 'c'],
- * ); // ['a', 'c', ' ', 'd', 'e']
- * ```
- *
  * @typeParam T - Type of objects in the arrays.
  * @param array1 - First array of objects.
  * @param array2 - Second array of objects.
@@ -44,8 +35,15 @@ export type LongestCommonSubsequenceOptions<T> = {
  * @returns A list of objects that are common to both arrays
  * such that there is no common subsequence with size greater than the
  * length of the list.
+ * @example
+ * ```typescript
+ * longestCommonSubsequence(
+ *  ['a', 'b', 'c', ' ', 'd', 'e', 'f'],
+ *  ['a', 'c', ' ', 'd', 'e', 'c'],
+ * ); // ['a', 'c', ' ', 'd', 'e']
+ * ```
  * @group Array
- * @category Matching
+ * @category Methods
  */
 export function longestCommonSubsequence<T>(
   array1: ArrayLike<T>,

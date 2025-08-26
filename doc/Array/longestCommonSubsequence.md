@@ -13,7 +13,7 @@ function longestCommonSubsequence<T>(
    options: LongestCommonSubsequenceOptions<T>): T[];
 ```
 
-Defined in: [longest-common-subsequence.ts:50](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L50)
+Defined in: [longest-common-subsequence.ts:48](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L48)
 
 Determine the longest possible array that is subsequence of both of given arrays.
 
@@ -45,7 +45,7 @@ Implementation of [Longest Common Subsequence](https://en.wikipedia.org/wiki/Lon
 
 ## Example
 
-```ts
+```typescript
 longestCommonSubsequence(
  ['a', 'b', 'c', ' ', 'd', 'e', 'f'],
  ['a', 'c', ' ', 'd', 'e', 'c'],

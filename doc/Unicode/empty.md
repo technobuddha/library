@@ -10,7 +10,7 @@ Technobuddha Library
 const empty: "" = '';
 ```
 
-Defined in: [constants.ts:7](https://github.com/technobuddha/library/blob/main/src/constants.ts#L7)
+Defined in: [unicode.ts:7](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L7)
 
 The empty string
 

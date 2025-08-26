@@ -10,7 +10,7 @@ Technobuddha Library
 const negativeZero: 0 = -0;
 ```
 
-Defined in: [constants.ts:36](https://github.com/technobuddha/library/blob/main/src/constants.ts#L36)
+Defined in: [constants.ts:9](https://github.com/technobuddha/library/blob/main/src/constants.ts#L9)
 
 Negative Zero
 

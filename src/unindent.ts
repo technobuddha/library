@@ -1,6 +1,6 @@
-import { empty, space } from './constants.ts';
 import { getIndent } from './get-indent.ts';
 import { type IndentOptions } from './indent.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Remove indentation from text

@@ -1,6 +1,6 @@
 import { build } from './build.ts';
-import { space } from './constants.ts';
 import { escapeHTML } from './escape-html.ts';
+import { space } from './unicode.ts';
 
 /**
  * Surround text with an HTML tag

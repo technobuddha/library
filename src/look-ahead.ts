@@ -2,7 +2,6 @@
  * Options for {@link lookAhead} operations.
  *
  * @typeParam T - The type of the items in the sequence.
- *
  * @group Array
  * @category Iteration
  */
@@ -33,30 +32,29 @@ export type LookAheadOptions<T> =
  *
  * @example
  * Basic usage
- * ```ts
+ * ```typescript
  * const arr = [1, 2, 3];
  * for (const [current, next] of lookAhead(arr)) {
  *   console.log(current, next);
  * }
+ * // [1, 2], [2, 3]
  * ```
- * Output: [1, 2], [2, 3]
  *
  * With wrapAround
- * ```ts
+ * ```typescript
  * for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
  *   console.log(current, next);
  * }
+ * // [1, 2], [2, 3], [3, 1]
  * ```
- * Output: [1, 2], [2, 3], [3, 1]
  *
  * With last
- * ```ts
+ * ```typescript
  * for (const [current, next] of lookAhead(arr, { last: 0 })) {
  *   console.log(current, next);
  * }
+ * // [1, 2], [2, 3], [3, 0]
  * ```
- * Output: [1, 2], [2, 3], [3, 0]
- *
  * @group Array
  * @category Iteration
  */

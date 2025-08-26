@@ -1,4 +1,5 @@
-import { cardinalOnes, cardinalTens, space } from '../constants.ts';
+import { cardinalOnes, cardinalTens } from '../constants.ts';
+import { space } from '../unicode.ts';
 
 import { type Numbering } from './numbering.ts';
 

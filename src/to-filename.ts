@@ -1,6 +1,6 @@
 import { clean } from './clean.ts';
 import { collapseWhitespace } from './collapse-whitespace.ts';
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 const badChars = /[/\\:*?<>|.]+/gu;
 

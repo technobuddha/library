@@ -10,7 +10,7 @@ Technobuddha Library
 const fractionSlash: "⁄" = '⁄';
 ```
 
-Defined in: [constants.ts:245](https://github.com/technobuddha/library/blob/main/src/constants.ts#L245)
+Defined in: [unicode.ts:39](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L39)
 
 Fraction Slash
 

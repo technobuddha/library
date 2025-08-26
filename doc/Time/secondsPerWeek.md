@@ -10,7 +10,7 @@ Technobuddha Library
 const secondsPerWeek: number;
 ```
 
-Defined in: [constants.ts:131](https://github.com/technobuddha/library/blob/main/src/constants.ts#L131)
+Defined in: [constants.ts:104](https://github.com/technobuddha/library/blob/main/src/constants.ts#L104)
 
 Number of seconds in a week [604800]
 

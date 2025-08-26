@@ -1,4 +1,5 @@
-import { fractionSlash, hyphen, negativeSign, negativeZero } from '../constants.ts';
+import { negativeZero } from '../constants.ts';
+import { fractionSlash, hyphen, negativeSign } from '../unicode.ts';
 
 import { ordinal } from './ordinal.ts';
 

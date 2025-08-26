@@ -1,6 +1,6 @@
 import { capitalize } from './capitalize.ts';
-import { empty } from './constants.ts';
 import { isUpperCase } from './is-upper-case.ts';
+import { empty } from './unicode.ts';
 
 // cspell: ignore Capitalcase sMALLCASE
 /**

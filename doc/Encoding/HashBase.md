@@ -6,18 +6,25 @@ Technobuddha Library
 
 # Abstract Class: HashBase
 
-Defined in: [hash-base.ts:15](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L15)
+Defined in: [hash-base.ts:21](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L21)
 
-Class representing a generic hash algorithm implementation.
+Abstract base class for hash algorithm implementations.
+
+Provides a standard interface for updating hash state with data and
+retrieving the final digest in various formats. Concrete subclasses
+must implement the `update` and `digest` methods according to the
+specifics of the hash algorithm.
 
 ## Remarks
 
-This class defines the contract for hash classes, supporting
-updating the hash with data and producing a digest in various formats.
+- The `update` methods allow chaining for incremental hashing.
+- The `digest` methods finalize the hash computation and return the result
+  either as a `Uint8Array` or as an encoded string.
 
 ## Extended by
 
 - [`Crc32`](Crc32.md)
+- [`ShaBase`](ShaBase.md)
 
 ## Constructors
 
@@ -41,15 +48,17 @@ new HashBase(): HashBase;
 abstract digest(): Uint8Array;
 ```
 
-Defined in: [hash-base.ts:21](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L21)
+Defined in: [hash-base.ts:29](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L29)
 
-The output is returned as a `Uint8Array`.
+Finalizes the hash computation and returns the resulting hash digest.
+This method performs any necessary padding and processes the final block
+of data according to the hash algorithm's specification.
 
 ##### Returns
 
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-The hash digest as a `Uint8Array`
+The hash digest
 
 #### Call Signature
 
@@ -57,13 +66,11 @@ The hash digest as a `Uint8Array`
 abstract digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [hash-base.ts:33](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L33)
+Defined in: [hash-base.ts:38](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L38)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
 of data according to the hash algorithm's specification.
-
-The output is encoded as a string in the specified binary encoding.
 
 ##### Parameters
 
@@ -89,7 +96,7 @@ abstract update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [hash-base.ts:40](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L40)
+Defined in: [hash-base.ts:45](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L45)
 
 Updates the hash with the given binary data.
 
@@ -111,7 +118,7 @@ The hash instance for method chaining.
 abstract update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [hash-base.ts:48](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L48)
+Defined in: [hash-base.ts:53](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L53)
 
 Updates the hash with the given string data.
 

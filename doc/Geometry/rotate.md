@@ -35,12 +35,12 @@ The rotated point or array of rotated points.
 
 ### Examples
 
-```ts
+```typescript
 const point = { x: 1, y: 0 };
 const rotated = rotate(point, Math.PI / 2); // { x: 0, y: 1 }
 ```
 
-```ts
+```typescript
 const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
 // [{ x: 0, y: 1 }, { x: -1, y: 0 }]
@@ -75,12 +75,12 @@ The rotated point or array of rotated points.
 
 ### Examples
 
-```ts
+```typescript
 const point = { x: 1, y: 0 };
 const rotated = rotate(point, Math.PI / 2); // { x: 0, y: 1 }
 ```
 
-```ts
+```typescript
 const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
 const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
 // [{ x: 0, y: 1 }, { x: -1, y: 0 }]

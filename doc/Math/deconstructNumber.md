@@ -40,7 +40,7 @@ An object containing the normalized value, sign, mantissa, exponent, and separat
 
 ## Example
 
-```ts
+```typescript
 const result = deconstructNumber(123.456);
 // result = {
 //   value: 123.456,

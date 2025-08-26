@@ -10,9 +10,21 @@ Technobuddha Library
 function unescapeJava(input: string): string;
 ```
 
-Defined in: [unescape-java.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L9)
+Defined in: [unescape-java.ts:24](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L24)
 
 Unescape a string encoded in Java style
+
+| Escape Sequence    | Hex                  | Character                |
+| ------------------ | -------------------- | ------------------------ |
+| \\b                | 0x08                 | Backspace                |
+| \\f                | 0x0c                 | Form Feed                |
+| \\n                | 0x0a                 | New Line                 |
+| \\r                | 0x0d                 | Carriage Return          |
+| \\t                | 0x09                 | Tab                      |
+| \\\\               | 0x5c                 | Backslash                |
+| \\'                | 0x27                 | Single Quote             |
+| \\"                | 0x22                 | Double Quote             |
+| \\unnnn            | 0x0000-0xFFFF    | Unicode Escape           |
 
 ## Parameters
 

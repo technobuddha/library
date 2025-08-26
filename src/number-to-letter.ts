@@ -1,5 +1,5 @@
-import { empty } from './constants.ts';
 import { floor } from './floor.ts';
+import { empty } from './unicode.ts';
 
 // eslint-disable-next-line no-secrets/no-secrets
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';

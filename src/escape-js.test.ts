@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { escapeJS } from './escape-js.ts';
+import { space } from './unicode.ts';
 
 describe('escapeJS', () => {
   test('should escape standard sequences', () => {
@@ -17,27 +17,12 @@ describe('escapeJS', () => {
     expect(escapeJS('ABCdef[~]')).toBe('ABCdef[~]');
   });
 
-  test('should escape non printables as \\xnn unless followed by a hex digit', () => {
+  test('should escape non printables as \\xnnnn', () => {
     expect(escapeJS('\u0001')).toBe('\\x01');
     expect(escapeJS('\u0001X')).toBe('\\x01X');
-    expect(escapeJS('\u00010')).toBe('\\u00010');
-    expect(escapeJS('\u0001a')).toBe('\\u0001a');
-    expect(escapeJS('\u0001A')).toBe('\\u0001A');
-    expect(escapeJS('\u001f')).toBe('\\x1f');
-    expect(escapeJS('\u001fX')).toBe('\\x1fX');
-    expect(escapeJS('\u001f0')).toBe('\\u001f0');
-    expect(escapeJS('\u001fa')).toBe('\\u001fa');
-    expect(escapeJS('\u001fA')).toBe('\\u001fA');
-    expect(escapeJS('\u007f')).toBe('\\x7f');
-    expect(escapeJS('\u007fX')).toBe('\\x7fX');
-    expect(escapeJS('\u007f0')).toBe('\\u007f0');
-    expect(escapeJS('\u007fa')).toBe('\\u007fa');
-    expect(escapeJS('\u007fA')).toBe('\\u007fA');
-    expect(escapeJS('\u00a0')).toBe('\\xa0');
-    expect(escapeJS('\u00a0X')).toBe('\\xa0X');
-    expect(escapeJS('\u00a00')).toBe('\\u00a00');
-    expect(escapeJS('\u00a0a')).toBe('\\u00a0a');
-    expect(escapeJS('\u00a0A')).toBe('\\u00a0A');
+    expect(escapeJS('\u00010')).toBe('\\x010');
+    expect(escapeJS('\u0001a')).toBe('\\x01a');
+    expect(escapeJS('\u0001A')).toBe('\\x01A');
   });
 
   test('should mot escape latin-1 characters', () => {

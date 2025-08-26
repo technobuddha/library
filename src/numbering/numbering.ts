@@ -1,5 +1,5 @@
-import { empty, negativeSign, space } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
+import { empty, negativeSign, space } from '../unicode.ts';
 
 import { fabricateAlphabeticFraction } from './fabricate-alphabetic-fraction.ts';
 import { fabricateAlphabeticInteger } from './fabricate-alphabetic-integer.ts';

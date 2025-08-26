@@ -3,17 +3,6 @@
     "title": "Array",
     "children": [
       {
-        "title": "Collapse",
-        "children": [
-          {
-            "title": "collapse",
-            "kind": 64,
-            "path": "Array/collapse.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
         "title": "Creation",
         "children": [
           {
@@ -42,8 +31,26 @@
         ]
       },
       {
-        "title": "Matching",
+        "title": "Methods",
         "children": [
+          {
+            "title": "Collapsible",
+            "kind": 2097152,
+            "path": "Array/Collapsible.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "CollapsiblePrimitive",
+            "kind": 2097152,
+            "path": "Array/CollapsiblePrimitive.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "CollapsibleValue",
+            "kind": 2097152,
+            "path": "Array/CollapsibleValue.md",
+            "isDeprecated": false
+          },
           {
             "title": "LongestCommonSubsequenceOptions",
             "kind": 2097152,
@@ -51,16 +58,17 @@
             "isDeprecated": false
           },
           {
+            "title": "collapse",
+            "kind": 64,
+            "path": "Array/collapse.md",
+            "isDeprecated": false
+          },
+          {
             "title": "longestCommonSubsequence",
             "kind": 64,
             "path": "Array/longestCommonSubsequence.md",
             "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Merging",
-        "children": [
+          },
           {
             "title": "zipperMerge",
             "kind": 64,
@@ -140,6 +148,12 @@
             "title": "encodeBinary",
             "kind": 64,
             "path": "Encoding/encodeBinary.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "normalizeBinary",
+            "kind": 64,
+            "path": "Encoding/normalizeBinary.md",
             "isDeprecated": false
           }
         ]
@@ -1341,12 +1355,6 @@
       {
         "title": "Build",
         "children": [
-          {
-            "title": "StringLike",
-            "kind": 2097152,
-            "path": "String/StringLike.md",
-            "isDeprecated": false
-          },
           {
             "title": "build",
             "kind": 64,

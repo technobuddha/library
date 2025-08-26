@@ -1,5 +1,5 @@
 import { capitalize } from './capitalize.ts';
-import { hyphen, nbHyphen } from './constants.ts';
+import { hyphen, nbHyphen } from './unicode.ts';
 
 describe('capitalize', () => {
   test('simple words should be capitalized', () => {

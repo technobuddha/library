@@ -8,7 +8,11 @@ Technobuddha Library
 
 Defined in: [sha-base.ts:15](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L15)
 
-The base class for most sha bases cryptographic hash functions
+The base class for sha based cryptographic hash functions
+
+## Extends
+
+- [`HashBase`](HashBase.md)
 
 ## Extended by
 
@@ -18,10 +22,6 @@ The base class for most sha bases cryptographic hash functions
 - [`Sha384`](Sha384.md)
 - [`Sha512`](Sha512.md)
 
-## Implements
-
-- [`HashBase`](HashBase.md)
-
 ## Constructors
 
 ### Constructor
@@ -30,7 +30,7 @@ The base class for most sha bases cryptographic hash functions
 new ShaBase(blockSize: number, finalSize: number): ShaBase;
 ```
 
-Defined in: [sha-base.ts:47](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L47)
+Defined in: [sha-base.ts:46](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L46)
 
 Creates a new instance of the hash base class.
 
@@ -45,6 +45,10 @@ Creates a new instance of the hash base class.
 
 `ShaBase`
 
+#### Overrides
+
+[`HashBase`](HashBase.md).[`constructor`](HashBase.md#constructor)
+
 ## Methods
 
 ### digest()
@@ -57,15 +61,17 @@ digest(): Uint8Array;
 
 Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
-The output is returned as a `Uint8Array`.
+Finalizes the hash computation and returns the resulting hash digest.
+This method performs any necessary padding and processes the final block
+of data according to the hash algorithm's specification.
 
 ##### Returns
 
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-The hash digest as a `Uint8Array`
+The hash digest
 
-##### Implementation of
+##### Overrides
 
 [`HashBase`](HashBase.md).[`digest`](HashBase.md#digest)
 
@@ -81,8 +87,6 @@ Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
 of data according to the hash algorithm's specification.
 
-The output is encoded as a string in the specified binary encoding.
-
 ##### Parameters
 
 | Parameter | Type | Description |
@@ -95,7 +99,7 @@ The output is encoded as a string in the specified binary encoding.
 
 An encoded string, depending on the `encoding` parameter.
 
-##### Implementation of
+##### Overrides
 
 [`HashBase`](HashBase.md).[`digest`](HashBase.md#digest)
 
@@ -108,8 +112,8 @@ An encoded string, depending on the `encoding` parameter.
 ```ts
 update(data: 
   | TypedArray
-  | ArrayBuffer
-  | ArrayLike<number>): this;
+  | ArrayLike<number>
+  | ArrayBuffer): this;
 ```
 
 Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
@@ -120,7 +124,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| `ArrayLike`\<`number`\> \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 
@@ -128,7 +132,7 @@ Updates the hash with the given binary data.
 
 The hash instance for method chaining.
 
-##### Implementation of
+##### Overrides
 
 [`HashBase`](HashBase.md).[`update`](HashBase.md#update)
 
@@ -155,7 +159,7 @@ Updates the hash with the given string data.
 
 The hash instance for method chaining.
 
-##### Implementation of
+##### Overrides
 
 [`HashBase`](HashBase.md).[`update`](HashBase.md#update)
 

@@ -1,6 +1,6 @@
-import { space } from './constants.ts';
 import { removeDiacritics } from './remove-diacritics.ts';
 import { tokenize } from './tokenize.ts';
+import { space } from './unicode.ts';
 
 /**
  * Convert an identifier string to a human case

@@ -1,5 +1,5 @@
-import { empty, space } from './constants.ts';
 import { toPrimitive } from './to-primitive.ts';
+import { empty, space } from './unicode.ts';
 
 describe('toPrimitive', () => {
   test('should convert strings', () => {

@@ -10,7 +10,7 @@ Technobuddha Library
 const supPositive: "⁺" = '⁺';
 ```
 
-Defined in: [constants.ts:296](https://github.com/technobuddha/library/blob/main/src/constants.ts#L296)
+Defined in: [unicode.ts:94](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L94)
 
 Superscript Positive
 

@@ -10,7 +10,7 @@ Technobuddha Library
 const cardinalTens: string[];
 ```
 
-Defined in: [constants.ts:341](https://github.com/technobuddha/library/blob/main/src/constants.ts#L341)
+Defined in: [constants.ts:232](https://github.com/technobuddha/library/blob/main/src/constants.ts#L232)
 
 Words for tens 20-90
 

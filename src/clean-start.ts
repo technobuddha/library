@@ -1,7 +1,8 @@
-import { empty, trimEquivalent } from './constants.ts';
+import { trimEquivalent } from './constants.ts';
 import { isRegExp } from './is-reg-exp.ts';
 import { isString } from './is-string.ts';
 import { splitChars } from './split-chars.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Remove all occurrences of characters from the start of the string

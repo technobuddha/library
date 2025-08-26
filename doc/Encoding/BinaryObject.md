@@ -17,11 +17,12 @@ type BinaryObject =
   | Uint16Array
   | Int32Array
   | Uint32Array
+  | Float16Array
   | Float32Array
   | Float64Array;
 ```
 
-Defined in: [@types/binary-object.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/binary-object.ts#L7)
+Defined in: [binary-object.ts:7](https://github.com/technobuddha/library/blob/main/src/binary-object.ts#L7)
 
 A type that represents various binary object types in JavaScript.
 

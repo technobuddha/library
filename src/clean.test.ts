@@ -1,7 +1,7 @@
 // cspell:ignore xyza dxyzxyz
 
 import { clean } from './clean.ts';
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 describe('clean', () => {
   test('should trim whitespace', () => {

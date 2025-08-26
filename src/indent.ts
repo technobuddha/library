@@ -1,4 +1,4 @@
-import { space } from './constants.ts';
+import { space } from './unicode.ts';
 
 /**
  * Options for the indentation functions: {@link  getIndent}, {@link indent}, and {@link unindent}

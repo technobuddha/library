@@ -1,4 +1,4 @@
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Split a string into an array of lines

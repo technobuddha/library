@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { uncapitalize } from './uncapitalize.ts';
+import { hyphen, nbHyphen } from './unicode.ts';
 
 describe('uncapitalize', () => {
   test('simple words should remain the same', () => {

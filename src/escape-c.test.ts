@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { escapeC } from './escape-c.ts';
+import { space } from './unicode.ts';
 
 describe('escapeC', () => {
   test('should escape standard sequences', () => {

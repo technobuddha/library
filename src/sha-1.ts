@@ -9,6 +9,7 @@
  * Distributed under the BSD License
  * See [MD5](https://pajhome.org.uk/crypt/md5) for details.
  */
+
 import { ShaBase } from './sha-base.ts';
 
 function rotl1(num: number): number {
@@ -42,6 +43,20 @@ function int32(x: number): number {
 
 /**
  * Secure Hash Algorithm, SHA-1
+ *
+ * @example
+ * ```typescript
+ * const sha1 = new Sha1();
+ * sha1.update('hello world', 'utf8');
+ * sha1.digest('hex');
+ * // '2aae6c35c94fcfb415dbe95f408b9ce91ee846ed'
+ * ```
+ * ```typescript
+ * const sha1 = new Sha1();
+ * sha1.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]);
+ * sha1.digest('hex');
+ * // '1e371678fc62d4da116857a09490eb90b97db121'
+ * ```
  * @group Encoding
  * @category Hash
  */

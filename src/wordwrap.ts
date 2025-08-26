@@ -1,5 +1,5 @@
-import { empty, space } from './constants.ts';
 import { splitWords } from './split-words.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Options for the {@link wordwrap} function

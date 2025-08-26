@@ -10,7 +10,7 @@ Technobuddha Library
 const space: " " = ' ';
 ```
 
-Defined in: [constants.ts:14](https://github.com/technobuddha/library/blob/main/src/constants.ts#L14)
+Defined in: [unicode.ts:15](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L15)
 
 Space
 

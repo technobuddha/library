@@ -10,7 +10,7 @@ Technobuddha Library
 const nbHyphen: "‑" = '‑';
 ```
 
-Defined in: [constants.ts:259](https://github.com/technobuddha/library/blob/main/src/constants.ts#L259)
+Defined in: [unicode.ts:55](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L55)
 
 Non-Breaking Hyphen
 

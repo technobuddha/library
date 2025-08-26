@@ -12,7 +12,7 @@ import { deserialize, serialize } from './json-serializer.ts';
  * @typeParam T - The type of objects stored in the set. Must extend `JsonObject`.
  *
  * @example
- * ```ts
+ * ```typescript
  * const set = new JSONSet<{ a: number }>();
  * set.add({ a: 1 });
  * set.has({ a: 1 }); // true

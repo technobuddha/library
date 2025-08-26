@@ -10,7 +10,7 @@ Technobuddha Library
 const secondsPerHour: number;
 ```
 
-Defined in: [constants.ts:115](https://github.com/technobuddha/library/blob/main/src/constants.ts#L115)
+Defined in: [constants.ts:88](https://github.com/technobuddha/library/blob/main/src/constants.ts#L88)
 
 Number of seconds in an hour [3600]
 

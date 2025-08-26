@@ -12,7 +12,7 @@ type FormatDateOptions = {
 };
 ```
 
-Defined in: [format-date.ts:84](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L84)
+Defined in: [format-date.ts:85](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L85)
 
 Options for formatting a date
 
@@ -20,5 +20,5 @@ Options for formatting a date
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Format the date in the UTC timezone | [format-date.ts:86](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L86) |
+| <a id="utc"></a> `utc?` | `boolean` | Format the date in the UTC timezone | [format-date.ts:87](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L87) |
 

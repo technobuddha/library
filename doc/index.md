@@ -7,12 +7,6 @@ Technobuddha Library
 
 ## Array
 
-### Collapse
-
-| Function | Description |
-| ------ | ------ |
-| [collapse](Array/collapse.md) | Collapses a list of arguments into a flat array of strings. |
-
 ### Creation
 
 | Function | Description |
@@ -26,18 +20,17 @@ Technobuddha Library
 | [LookAheadOptions](Array/LookAheadOptions.md) | Options for [lookAhead](Array/lookAhead.md) operations. |
 | [lookAhead](Array/lookAhead.md) | Generates pairs of consecutive elements from the input array, with optional handling for the last element. |
 
-### Matching
+### Methods
 
 | Name | Description |
 | ------ | ------ |
+| [Collapsible](Array/Collapsible.md) | Represents a value that can be "collapsed" into a flat sequence of values of type `T`. |
+| [CollapsiblePrimitive](Array/CollapsiblePrimitive.md) | Represents a primitive type that excludes `null` and `undefined`. |
+| [CollapsibleValue](Array/CollapsibleValue.md) | Represents a primitive value including `null` and `undefined`. |
 | [LongestCommonSubsequenceOptions](Array/LongestCommonSubsequenceOptions.md) | Options for configuring the [longestCommonSubsequence](Array/longestCommonSubsequence.md) calculation. |
+| [collapse](Array/collapse.md) | Collapses an array of values into a flat array with `null` and `undefined` elements removed. |
 | [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
-
-### Merging
-
-| Function | Description |
-| ------ | ------ |
-| [zipperMerge](Array/zipperMerge.md) | Merges multiple arrays into a single array by interleaving their elements at each index. Each element of the resulting array is an array containing the elements from the input arrays at the corresponding index. If input arrays have different lengths, `undefined` will be used for missing elements. |
+| [zipperMerge](Array/zipperMerge.md) | Merges multiple arrays into a single array by interleaving their elements at each index. |
 
 ### Type Check
 
@@ -51,15 +44,16 @@ Technobuddha Library
 
 | Name | Description |
 | ------ | ------ |
-| [BinaryEncoding](Encoding/BinaryEncoding.md) | The binary encoding to use |
+| [BinaryEncoding](Encoding/BinaryEncoding.md) | Formats for binary encoding |
 | [BinaryObject](Encoding/BinaryObject.md) | A type that represents various binary object types in JavaScript. |
 | [dataURL](Encoding/dataURL.md) | Convert any binary object into a data URL |
 | [decodeBase64](Encoding/decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [decodeBase64Url](Encoding/decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. You can use the [encodeBase64Url](Encoding/encodeBase64Url.md) method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31. |
+| [decodeBase64Url](Encoding/decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBinary](Encoding/decodeBinary.md) | Decode a string into a binary object |
-| [encodeBase64](Encoding/encodeBase64.md) | Creates a Base64-encoded ASCII string from a string. |
-| [encodeBase64Url](Encoding/encodeBase64Url.md) | Creates a Base64-encoded ASCII string from a string. |
+| [encodeBase64](Encoding/encodeBase64.md) | Creates a encoded ASCII string from a string using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
+| [encodeBase64Url](Encoding/encodeBase64Url.md) | Creates a encoded ASCII string from a string using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [encodeBinary](Encoding/encodeBinary.md) | Encode an binary object into a string |
+| [normalizeBinary](Encoding/normalizeBinary.md) | Normalizes various binary object types to a `Uint8Array`. |
 
 ### Escaping
 
@@ -82,14 +76,14 @@ Technobuddha Library
 
 | Class | Description |
 | ------ | ------ |
-| [Crc32](Encoding/Crc32.md) | Compute the CRC32 checksum |
-| [HashBase](Encoding/HashBase.md) | Class representing a generic hash algorithm implementation. |
+| [Crc32](Encoding/Crc32.md) | Compute the CRC32 checksum of a binary object |
+| [HashBase](Encoding/HashBase.md) | Abstract base class for hash algorithm implementations. |
 | [Sha1](Encoding/Sha1.md) | Secure Hash Algorithm, SHA-1 |
 | [Sha224](Encoding/Sha224.md) | Secure Hash Algorithm, SHA2 SHA-224 |
 | [Sha256](Encoding/Sha256.md) | Secure Hash Algorithm, SHA2 SHA-256 |
 | [Sha384](Encoding/Sha384.md) | Secure Hash Algorithm, SHA2 SHA-384 |
 | [Sha512](Encoding/Sha512.md) | Secure Hash Algorithm, SHA2 SHA-512 |
-| [ShaBase](Encoding/ShaBase.md) | The base class for most sha bases cryptographic hash functions |
+| [ShaBase](Encoding/ShaBase.md) | The base class for sha based cryptographic hash functions |
 
 ## English
 
@@ -407,9 +401,8 @@ Technobuddha Library
 
 ### Build
 
-| Name | Description |
+| Function | Description |
 | ------ | ------ |
-| [StringLike](String/StringLike.md) | A string-like object, which can be a string or an array of strings; |
 | [build](String/build.md) | Concatenates strings and/or arrays of strings |
 
 ### Case Conversion

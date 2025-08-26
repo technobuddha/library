@@ -1,6 +1,6 @@
-import { empty } from './constants.ts';
 import { formatNumber } from './format-number.ts';
 import { round } from './round.ts';
+import { empty } from './unicode.ts';
 
 /*
  quetta Q   1000000000000000000000000000000

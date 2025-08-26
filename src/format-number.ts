@@ -1,7 +1,7 @@
 import { build } from './build.ts';
-import { empty } from './constants.ts';
 import { padNumber } from './pad-number.ts';
 import { splitChars } from './split-chars.ts';
+import { empty } from './unicode.ts';
 
 //#region parse
 /**
@@ -12,7 +12,7 @@ import { splitChars } from './split-chars.ts';
  * into its constituent parts for number formatting operations.
  *
  * @example
- * ```ts
+ * ```typescript
  * // For mask "#,##0.00"
  * const parsed: ParseReturn = {
  *   aMask: ['0', '0'],           // After decimal point
@@ -109,7 +109,7 @@ type ParseReturn = {
  * - `precision`: Number of digits after the decimal point.
  *
  * @example
- * ```ts
+ * ```typescript
  * const result = parse("#,##0.00%");
  * // result = {
  * //   aMask: ['0', '0'],
@@ -426,7 +426,7 @@ function format(
  * and scientific notation. The output is built incrementally and can be retrieved as a string.
  *
  * @example
- * ```ts
+ * ```typescript
  * const formatter = new NumberFormatter(1, ['1', '2', '3', '4'], 2);
  * const result = formatter.grouped().decimal().fraction().build(); // "1,2.34"
  * ```

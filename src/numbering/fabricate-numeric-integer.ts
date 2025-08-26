@@ -1,5 +1,5 @@
-import { empty } from '../constants.ts';
 import { deconstructNumber } from '../deconstruct-number.ts';
+import { empty } from '../unicode.ts';
 
 import { illion } from './illion.ts';
 import { makeOrdinal } from './make-ordinal.ts';

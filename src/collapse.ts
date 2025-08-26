@@ -1,32 +1,89 @@
-import { type StringLike } from './@types/string-like.ts';
-import { empty } from './constants.ts';
+import { type Primitive } from 'type-fest';
+
 import { isFunction } from './is-function.ts';
-import { isString } from './is-string.ts';
+import { isPrimitive } from './is-primitive.ts';
 
 /**
- * Collapses a list of arguments into a flat array of strings.
+ * Represents a primitive type that excludes `null` and `undefined`.
+ * @see Primitive
+ * @group Array
+ * @category Methods
+ */
+export type CollapsiblePrimitive = Exclude<Primitive, null | undefined>;
+
+/**
+ * Represents a primitive value including `null` and `undefined`.
+ * @typeParam T - The primitive type that can be collapsed.
+ * @group Array
+ * @category Methods
+ */
+export type CollapsibleValue<T extends CollapsiblePrimitive> =
+  | T
+  | null
+  | undefined
+  | (T | null | undefined)[];
+
+/**
+ * Represents a value that can be "collapsed" into a flat sequence of values of type `T`.
+ *
+ * A `Collapsible<T>` can be:
+ * - A single value of type `T`
+ * - `null` or `undefined`
+ * - An array of values (and/or `null`/`undefined`)
+ * - A function returning any of the above
+ * - An iterable or generator yielding values (and/or `null`/`undefined`)
+ *
+ * This type is useful for APIs that accept flexible input forms, such as single values,
+ * arrays, lazy generators, or functions producing values, and need to process them uniformly.
+ *
+ * @typeParam T - The primitive type that can be collapsed.
+ * @group Array
+ * @category Methods
+ */
+export type Collapsible<T extends CollapsiblePrimitive> =
+  | CollapsibleValue<T>
+  | (() => CollapsibleValue<T>[])
+  | Iterable<CollapsibleValue<T>>
+  | Generator<CollapsibleValue<T>>;
+
+/**
+ * Collapses an array of values into a flat array with `null` and `undefined` elements removed.
  *
  * Each argument can be:
- * - A string-like value (`StringLike`)
- * - A generator or iterable of string-like values
- * - A function returning a string-like value
+ * - `T`
+ * - `null`
+ * - `undefined`
+ * - a function returning `T` or `null` or `undefined` or an array
+ * - A iterator returning `T` or `null` or `undefined`
+ * - A generator returning `T` or `null` or `undefined`
  *
- * The function flattens all arguments, filters out `null` and `empty` values,
- * and returns the resulting array of strings.
+ * The function flattens all arguments, filters out `null`, and `undefined` values,
+ * and returns the resulting array.
  *
- * @param args - The values to collapse, which may be strings, generators, iterables, or functions.
- * @returns An array of strings, with all `null` and `empty` values removed.
+ * @typeParam T - The primitive type that can be collapsed.
+ * @param args - The values to collapse, which may be `T`, generators, iterables, or functions.
+ * @returns An array of `T`, with all `null`, and `undefined` values removed.
+ * @example
+ * ```typescript
+ * collapse(
+ *   "hello",
+ *   ["world", null, "foo"],
+ *   function* () { yield "bar"; yield undefined; yield ["baz"]; },
+ *   () => "qux",
+ *   null,
+ *   undefined
+ * );
+ * // Returns: ["hello", "world", "foo", "bar", "baz", "qux"]
+ * ```
  * @group Array
- * @category Collapse
+ * @category Methods
  */
-export function collapse(
-  ...args: (StringLike | Generator<StringLike> | Iterable<StringLike> | (() => StringLike))[]
-): string[] {
+export function collapse<T extends CollapsiblePrimitive = string>(...args: Collapsible<T>[]): T[] {
   return args
     .flatMap((a) =>
-      isString(a) || a == null ? a
+      isPrimitive(a) || Array.isArray(a) ? a
       : isFunction(a) ? a()
-      : Array.from(a),
+      : (Array.from(a) as T[]),
     )
-    .filter((a) => a != null && a !== empty) as string[];
+    .filter((a) => a != null) as T[];
 }

@@ -1,4 +1,4 @@
-import { fractionSlash, hyphen, negativeSign } from '../constants.ts';
+import { fractionSlash, hyphen, negativeSign } from '../unicode.ts';
 
 import { cardinal } from './cardinal.ts';
 

@@ -1,6 +1,6 @@
 import { type TextEncoding } from './@types/text-encoding.ts';
 import { type TypedArray } from './@types/typed-array.ts';
-import { replacementCharacter } from './constants.ts';
+import { replacementCharacter } from './unicode.ts';
 
 const replacement = replacementCharacter.codePointAt(0)!;
 

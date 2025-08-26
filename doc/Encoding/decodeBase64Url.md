@@ -12,10 +12,11 @@ Technobuddha Library
 function decodeBase64Url(input: string): Uint8Array;
 ```
 
-Defined in: [decode-base-64.ts:137](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L137)
+Defined in: [decode-base-64-url.ts:25](https://github.com/technobuddha/library/blob/main/src/decode-base-64-url.ts#L25)
 
 Decodes a string of data which has been encoded using
-[Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
+[Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
+
 You can use the [encodeBase64Url](encodeBase64Url.md) method to encode and transmit data which may otherwise cause
 communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again.
 For example, you can encode, transmit, and decode control characters such as ASCII values
@@ -35,17 +36,17 @@ An ASCII string containing decoded dat
 
 ### Remarks
 
-Whitespace withing the Base64 encoded string is ignored.
-
-### Example
-
-```ts
-atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
-```
+Whitespace within the Base64 encoded string is ignored.
 
 ### Throws
 
 `TypeError` If the input string is not correctly encoded.
+
+### Example
+
+```typescript
+decodeBase64Url('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
+```
 
 ## Call Signature
 
@@ -53,10 +54,11 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 function decodeBase64Url(input: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [decode-base-64.ts:138](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L138)
+Defined in: [decode-base-64-url.ts:26](https://github.com/technobuddha/library/blob/main/src/decode-base-64-url.ts#L26)
 
 Decodes a string of data which has been encoded using
-[Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
+[Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
+
 You can use the [encodeBase64Url](encodeBase64Url.md) method to encode and transmit data which may otherwise cause
 communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again.
 For example, you can encode, transmit, and decode control characters such as ASCII values
@@ -77,15 +79,15 @@ An ASCII string containing decoded dat
 
 ### Remarks
 
-Whitespace withing the Base64 encoded string is ignored.
-
-### Example
-
-```ts
-atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
-```
+Whitespace within the Base64 encoded string is ignored.
 
 ### Throws
 
 `TypeError` If the input string is not correctly encoded.
+
+### Example
+
+```typescript
+decodeBase64Url('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
+```
 

@@ -8,7 +8,7 @@ import { isFunction } from './is-function.ts';
  * array[w][h]
  * ```
  * @example
- * ```ts
+ * ```typescript
  * create2DArray(2, 3, 0);  // [[0, 0, 0], [0, 0, 0]]
  *
  * create2DArray(2, 3, (x, y) => x + y); // [[0, 1, 2], [1, 2, 3]]

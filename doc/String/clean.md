@@ -15,7 +15,7 @@ function clean(input: string, characters:
   | RegExp)[]): string;
 ```
 
-Defined in: [clean.ts:14](https://github.com/technobuddha/library/blob/main/src/clean.ts#L14)
+Defined in: [clean.ts:15](https://github.com/technobuddha/library/blob/main/src/clean.ts#L15)
 
 Remove all occurrences of characters from the beginning and end of the string
 

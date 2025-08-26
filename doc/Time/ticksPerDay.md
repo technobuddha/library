@@ -10,7 +10,7 @@ Technobuddha Library
 const ticksPerDay: number;
 ```
 
-Defined in: [constants.ts:99](https://github.com/technobuddha/library/blob/main/src/constants.ts#L99)
+Defined in: [constants.ts:72](https://github.com/technobuddha/library/blob/main/src/constants.ts#L72)
 
 Number of ticks in a day [86400000]
 

@@ -43,6 +43,20 @@ function gamma1(x: number): number {
 
 /**
  * Secure Hash Algorithm, SHA2 SHA-224
+ *
+ * @example
+ * ```typescript
+ * const sha224 = new Sha224();
+ * sha224.update('hello world', 'utf8');
+ * sha224.digest('hex');
+ * // '23097d223405d8228642a477bda255b32aadbce4bda0b3f7e36c9da7'
+ * ```
+ * ```typescript
+ * const sha224 = new Sha224();
+ * sha224.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * sha224.digest('hex');
+ * // '82507bc68601eec5c8298780a809c1492519499595bd5e41198d5d6b'
+ * ```
  * @group Encoding
  * @category Hash
  */

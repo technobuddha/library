@@ -1,5 +1,5 @@
 import { clean } from './clean.ts';
-import { space } from './constants.ts';
+import { space } from './unicode.ts';
 
 /**
  * Options for the {@link collapseWhitespace} function

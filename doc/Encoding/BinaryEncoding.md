@@ -10,7 +10,12 @@ Technobuddha Library
 type BinaryEncoding = "base64" | "base64url" | "hex" | "binary";
 ```
 
-Defined in: [@types/binary-encoding.ts:6](https://github.com/technobuddha/library/blob/main/src/@types/binary-encoding.ts#L6)
+Defined in: [@types/binary-encoding.ts:9](https://github.com/technobuddha/library/blob/main/src/@types/binary-encoding.ts#L9)
 
-The binary encoding to use
+Formats for binary encoding
+
+## See
+
+ - [encodeBinary](encodeBinary.md)
+ - [decodeBinary](decodeBinary.md)
 

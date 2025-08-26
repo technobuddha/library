@@ -1,6 +1,6 @@
-import { empty } from './constants.ts';
 import { isDate } from './is-date.ts';
 import { padNumber } from './pad-number.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Options for the {@link timezone} function

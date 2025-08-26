@@ -1,8 +1,8 @@
 import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
 import { clamp } from './clamp.ts';
 import { cleanEnd } from './clean-end.ts';
-import { empty } from './constants.ts';
 import { isNegativeZero } from './is-negative-zero.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
@@ -14,7 +14,7 @@ import { isNegativeZero } from './is-negative-zero.ts';
  * @throws `TypeError` If the input is NaN or not a finite number.
  *
  * @example
- * ```ts
+ * ```typescript
  * const result = deconstructNumber(123.456);
  * // result = {
  * //   value: 123.456,

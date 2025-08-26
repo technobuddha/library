@@ -1,7 +1,7 @@
 import { capitalize } from './capitalize.ts';
-import { empty } from './constants.ts';
 import { removeDiacritics } from './remove-diacritics.ts';
 import { tokenize } from './tokenize.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Convert an identifier string to a camel case

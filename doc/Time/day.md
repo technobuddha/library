@@ -10,7 +10,7 @@ Technobuddha Library
 const day: Readonly<Record<string, DayOfWeek>>;
 ```
 
-Defined in: [constants.ts:171](https://github.com/technobuddha/library/blob/main/src/constants.ts#L171)
+Defined in: [constants.ts:144](https://github.com/technobuddha/library/blob/main/src/constants.ts#L144)
 
 Translation object for name of day to day number.
 

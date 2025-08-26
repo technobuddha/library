@@ -10,7 +10,6 @@ const config = {
     'typedoc-plugin-mdn-links',
     '@giancosta86/typedoc-readonly',
     'typedoc-plugin-coverage',
-    'typedoc-vitepress-theme',
     './typedoc-technobuddha-plugin.js',
   ],
   //  Input

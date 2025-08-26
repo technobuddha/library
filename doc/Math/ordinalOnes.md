@@ -10,7 +10,7 @@ Technobuddha Library
 const ordinalOnes: string[];
 ```
 
-Defined in: [constants.ts:353](https://github.com/technobuddha/library/blob/main/src/constants.ts#L353)
+Defined in: [constants.ts:244](https://github.com/technobuddha/library/blob/main/src/constants.ts#L244)
 
 Words for ordinal numbers 0-19
 

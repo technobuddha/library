@@ -15,7 +15,7 @@ similar to how `Map` allows objects, but with value-based equality rather than r
 
 ## Example
 
-```ts
+```typescript
 const map = new JSONMap<{ id: number }, string>();
 map.set({ id: 1 }, "one");
 console.log(map.get({ id: 1 })); // "one"

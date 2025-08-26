@@ -6,9 +6,24 @@ Technobuddha Library
 
 # Class: Crc32
 
-Defined in: [crc-32.ts:58](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L58)
+Defined in: [crc-32.ts:72](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L72)
 
-Compute the CRC32 checksum
+Compute the CRC32 checksum of a binary object
+
+## Example
+
+```typescript
+const crc = new Crc32();
+crc.update('hello world', 'utf8');
+crc.digest('hex');
+// '0d4a1185'
+```
+```typescript
+const crc = new Crc32();
+crc.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+crc.digest('hex');
+// 'c031d497'
+```
 
 ## Extends
 
@@ -22,7 +37,7 @@ Compute the CRC32 checksum
 new Crc32(): Crc32;
 ```
 
-Defined in: [crc-32.ts:68](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L68)
+Defined in: [crc-32.ts:81](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L81)
 
 Creates a new CRC32 hash instance and initializes its internal state.
 
@@ -49,15 +64,17 @@ Use [update](#update) to process data and [digest](#digest) to obtain the final 
 digest(): Uint8Array;
 ```
 
-Defined in: [crc-32.ts:91](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L91)
+Defined in: [crc-32.ts:104](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L104)
 
-The output is returned as a `Uint8Array`.
+Finalizes the hash computation and returns the resulting hash digest.
+This method performs any necessary padding and processes the final block
+of data according to the hash algorithm's specification.
 
 ##### Returns
 
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
-The hash digest as a `Uint8Array`
+The hash digest
 
 ##### Overrides
 
@@ -69,13 +86,11 @@ The hash digest as a `Uint8Array`
 digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [crc-32.ts:92](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L92)
+Defined in: [crc-32.ts:105](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L105)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
 of data according to the hash algorithm's specification.
-
-The output is encoded as a string in the specified binary encoding.
 
 ##### Parameters
 
@@ -102,11 +117,11 @@ An encoded string, depending on the `encoding` parameter.
 ```ts
 update(data: 
   | TypedArray
-  | ArrayBuffer
-  | ArrayLike<number>): this;
+  | ArrayLike<number>
+  | ArrayBuffer): this;
 ```
 
-Defined in: [crc-32.ts:73](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L73)
+Defined in: [crc-32.ts:86](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L86)
 
 Updates the hash with the given binary data.
 
@@ -114,7 +129,7 @@ Updates the hash with the given binary data.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) \| `ArrayLike`\<`number`\> | The data to update the hash with, as a TypedArray or ArrayBuffer. |
+| `data` | \| [`TypedArray`](../Utility/TypedArray.md) \| `ArrayLike`\<`number`\> \| [`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) | The data to update the hash with, as a TypedArray or ArrayBuffer. |
 
 ##### Returns
 
@@ -132,7 +147,7 @@ The hash instance for method chaining.
 update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [crc-32.ts:74](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L74)
+Defined in: [crc-32.ts:87](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L87)
 
 Updates the hash with the given string data.
 

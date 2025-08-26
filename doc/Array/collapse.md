@@ -7,34 +7,53 @@ Technobuddha Library
 # Function: collapse()
 
 ```ts
-function collapse(...args: (
-  | StringLike
-  | Generator<StringLike, any, any>
-  | Iterable<StringLike, any, any>
-  | () => StringLike)[]): string[];
+function collapse<T>(...args: Collapsible<T>[]): T[];
 ```
 
-Defined in: [collapse.ts:22](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L22)
+Defined in: [collapse.ts:81](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L81)
 
-Collapses a list of arguments into a flat array of strings.
+Collapses an array of values into a flat array with `null` and `undefined` elements removed.
 
 Each argument can be:
-- A string-like value (`StringLike`)
-- A generator or iterable of string-like values
-- A function returning a string-like value
+- `T`
+- `null`
+- `undefined`
+- a function returning `T` or `null` or `undefined` or an array
+- A iterator returning `T` or `null` or `undefined`
+- A generator returning `T` or `null` or `undefined`
 
-The function flattens all arguments, filters out `null` and `empty` values,
-and returns the resulting array of strings.
+The function flattens all arguments, filters out `null`, and `undefined` values,
+and returns the resulting array.
+
+## Type Parameters
+
+| Type Parameter | Default type | Description |
+| ------ | ------ | ------ |
+| `T` *extends* [`CollapsiblePrimitive`](CollapsiblePrimitive.md) | `string` | The primitive type that can be collapsed. |
 
 ## Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| ...`args` | ( \| [`StringLike`](../String/StringLike.md) \| [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\<[`StringLike`](../String/StringLike.md), `any`, `any`\> \| () => [`StringLike`](../String/StringLike.md))[] | The values to collapse, which may be strings, generators, iterables, or functions. |
+| ...`args` | [`Collapsible`](Collapsible.md)\<`T`\>[] | The values to collapse, which may be `T`, generators, iterables, or functions. |
 
 ## Returns
 
-`string`[]
+`T`[]
 
-An array of strings, with all `null` and `empty` values removed.
+An array of `T`, with all `null`, and `undefined` values removed.
+
+## Example
+
+```typescript
+collapse(
+  "hello",
+  ["world", null, "foo"],
+  function* () { yield "bar"; yield undefined; yield ["baz"]; },
+  () => "qux",
+  null,
+  undefined
+);
+// Returns: ["hello", "world", "foo", "bar", "baz", "qux"]
+```
 

@@ -1,5 +1,5 @@
-import { empty } from './constants.ts';
 import { isAlphaNumeric } from './is-alpha-numeric.ts';
+import { empty } from './unicode.ts';
 
 describe('isAlphaNumeric', () => {
   test('should detect alphanumeric strings', () => {

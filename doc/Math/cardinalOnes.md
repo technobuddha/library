@@ -10,7 +10,7 @@ Technobuddha Library
 const cardinalOnes: string[];
 ```
 
-Defined in: [constants.ts:328](https://github.com/technobuddha/library/blob/main/src/constants.ts#L328)
+Defined in: [constants.ts:219](https://github.com/technobuddha/library/blob/main/src/constants.ts#L219)
 
 Words for unit numbers 0-19
 

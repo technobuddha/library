@@ -16,7 +16,7 @@ the generator and produce random numbers in various formats and intervals.
 
 ## Example
 
-```ts
+```typescript
 const mt = new MersenneTwister(1234);
 const randomInt = mt.genrandInt32();
 const randomFloat = mt.genrandReal2();

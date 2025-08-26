@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { macroCase } from './macro-case.ts';
+import { hyphen, nbHyphen } from './unicode.ts';
 
 describe('macroCase', () => {
   test('should take human case', () => {

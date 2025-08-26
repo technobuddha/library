@@ -10,7 +10,7 @@ Technobuddha Library
 function lookAhead<T>(array: T[], options?: LookAheadOptions<T>): Generator<[T, T, number]>;
 ```
 
-Defined in: [look-ahead.ts:63](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L63)
+Defined in: [look-ahead.ts:61](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L61)
 
 Generates pairs of consecutive elements from the input array, with optional handling for the last
 element.
@@ -39,27 +39,27 @@ element as specified by options.
 ## Example
 
 Basic usage
-```ts
+```typescript
 const arr = [1, 2, 3];
 for (const [current, next] of lookAhead(arr)) {
   console.log(current, next);
 }
+// [1, 2], [2, 3]
 ```
-Output: [1, 2], [2, 3]
 
 With wrapAround
-```ts
+```typescript
 for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
   console.log(current, next);
 }
+// [1, 2], [2, 3], [3, 1]
 ```
-Output: [1, 2], [2, 3], [3, 1]
 
 With last
-```ts
+```typescript
 for (const [current, next] of lookAhead(arr, { last: 0 })) {
   console.log(current, next);
 }
+// [1, 2], [2, 3], [3, 0]
 ```
-Output: [1, 2], [2, 3], [3, 0]
 

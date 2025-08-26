@@ -12,7 +12,7 @@ Technobuddha Library
 function decodeBase64(input: string): Uint8Array;
 ```
 
-Defined in: [decode-base-64.ts:110](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L110)
+Defined in: [decode-base-64.ts:26](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L26)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -38,15 +38,15 @@ An ASCII string containing decoded dat
 
 Whitespace withing the Base64 encoded string is ignored.
 
-### Example
-
-```ts
-atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
-```
-
 ### Throws
 
 `TypeError` If the input string is not correctly encoded.
+
+### Example
+
+```typescript
+decodeBase64('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
+```
 
 ## Call Signature
 
@@ -54,7 +54,7 @@ atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
 function decodeBase64(input: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [decode-base-64.ts:111](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L111)
+Defined in: [decode-base-64.ts:27](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L27)
 
 Decodes a string of data which has been encoded using
 [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
@@ -81,13 +81,13 @@ An ASCII string containing decoded dat
 
 Whitespace withing the Base64 encoded string is ignored.
 
-### Example
-
-```ts
-atob('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
-```
-
 ### Throws
 
 `TypeError` If the input string is not correctly encoded.
+
+### Example
+
+```typescript
+decodeBase64('SGVsbG8sIHdvcmxkIQ=='); // "Hello, world!"
+```
 

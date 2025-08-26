@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { metricUnits } from './metric-units.ts';
+import { space } from './unicode.ts';
 
 describe('metricUnits', () => {
   test('should handle numbers greater than 1', () => {

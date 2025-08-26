@@ -1,6 +1,6 @@
-import { empty } from './constants.ts';
 import { lookAhead } from './look-ahead.ts';
 import { splitChars } from './split-chars.ts';
+import { empty } from './unicode.ts';
 
 // prettier-ignore
 type Glyph =

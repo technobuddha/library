@@ -16,7 +16,7 @@ objects with the same structure and values, regardless of their references.
 
 ## Example
 
-```ts
+```typescript
 const set = new JSONSet<{ a: number }>();
 set.add({ a: 1 });
 set.has({ a: 1 }); // true

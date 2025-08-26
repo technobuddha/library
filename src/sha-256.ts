@@ -44,6 +44,19 @@ function gamma1(x: number): number {
 
 /**
  * Secure Hash Algorithm, SHA2 SHA-256
+ * @example
+ * ```typescript
+ * const sha256 = new Sha256();
+ * sha256.update('hello world', 'utf8');
+ * sha256.digest('hex');
+ * // 'b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9'
+ * ```
+ * ```typescript
+ * const sha256 = new Sha256();
+ * sha256.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * sha256.digest('hex');
+ * // 'f2860687245326a3a55ebfeabd5dc0639ea27f3de54cbbf5bcca0a5a98cb277e'
+ * ```
  * @group Encoding
  * @category Hash
  */

@@ -11,13 +11,13 @@ function rotatePoint(point: Cartesian, angle: number, origin: Cartesian): Cartes
  * Rotates a point or an array of points around a given origin by a specified angle.
  *
  * @example
- * ```ts
+ * ```typescript
  * const point = { x: 1, y: 0 };
  * const rotated = rotate(point, Math.PI / 2); // { x: 0, y: 1 }
  * ```
  *
  * @example
- * ```ts
+ * ```typescript
  * const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
  * const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
  * // [{ x: 0, y: 1 }, { x: -1, y: 0 }]

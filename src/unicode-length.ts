@@ -1,4 +1,4 @@
-import { space } from './constants.ts';
+import { space } from './unicode.ts';
 
 /**
  * Return the number of unicode code points in a string

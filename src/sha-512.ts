@@ -67,6 +67,19 @@ function getCarry(a: number, b: number): number {
 
 /**
  * Secure Hash Algorithm, SHA2 SHA-512
+ * @example
+ * ```typescript
+ * const sha512 = new Sha512();
+ * sha512.update('hello world', 'utf8');
+ * sha512.digest('hex');
+ * // '309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f'
+ * ```
+ * ```typescript
+ * const sha512 = new Sha512();
+ * sha512.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * sha512.digest('hex');
+ * 'ea2f73c643b634dcff4de058c16391e91f9ac7d5d540346f5668cc0d0e21a21292c82c748108be10321c55e4c79b660794a4e578ef777223d3d6e1996177aeb7'
+ * ```
  * @group Encoding
  * @category Hash
  */

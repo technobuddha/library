@@ -1,17 +1,18 @@
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { chop } from './chop.ts';
-import { decodeBase64, decodeBase64Url } from './decode-base-64.ts';
+import { decodeBase64 } from './decode-base-64.ts';
+import { decodeBase64Url } from './decode-base-64-url.ts';
 
 /**
  * Decode a string into a binary object
  *
- * The string can be in *base64*, *base64url*, *hex*, or *binary* format.
+ * The string can be in `base64`, `base64url`, `hex`, or `binary` {@link BinaryEncoding} format.
  *
  * base64 or base64url: The binary object was encoded using {@link encodeBase64}
  * hex: each byte in the binary object is converted to a series of 2-digit hexadecimal numbers
  * binary: each byte in the binary object is converted to a characters
  *
- * @param input - binary object
+ * @param input - encoded binary object
  * @param encoding - The encoding to use
  * @returns encoded string
  * @group Encoding

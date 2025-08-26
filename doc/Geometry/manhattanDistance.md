@@ -32,7 +32,7 @@ The Manhattan distance between the two points.
 
 ## Example
 
-```ts
+```typescript
 const pointA = { x: 1, y: 2 };
 const pointB = { x: 4, y: 6 };
 const distance = manhattanDistance(pointA, pointB); // 7

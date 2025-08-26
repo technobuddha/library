@@ -8,7 +8,7 @@ Technobuddha Library
 
 ```ts
 type EscapeHtmlOptions = {
-  escapeNonAscii?: boolean;
+  escapeNonASCII?: boolean;
 };
 ```
 
@@ -20,5 +20,5 @@ Options for [escapeHTML](escapeHTML.md)
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="escapenonascii"></a> `escapeNonAscii?` | `boolean` | escape all characters outside the 7-bit ASCII range | [escape-html.ts:11](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L11) |
+| <a id="escapenonascii"></a> `escapeNonASCII?` | `boolean` | escape all characters outside the 7-bit ASCII range | [escape-html.ts:11](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L11) |
 

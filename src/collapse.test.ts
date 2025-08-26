@@ -7,8 +7,8 @@ describe('collapse', () => {
     expect(collapse('a', 'b', 'c')).toEqual(['a', 'b', 'c']);
   });
 
-  test('filters out null and empty values', () => {
-    expect(collapse('a', null, '', 'b')).toEqual(['a', 'b']);
+  test('filters out null and undefined values', () => {
+    expect(collapse('a', null, undefined, 'b')).toEqual(['a', 'b']);
   });
 
   test('handles functions returning string-like values', () => {
@@ -16,21 +16,21 @@ describe('collapse', () => {
       collapse(
         () => 'x',
         () => null,
-        () => '',
+        () => undefined,
         'y',
       ),
     ).toEqual(['x', 'y']);
   });
 
   test('handles iterables of string-like values', () => {
-    expect(collapse(['a', null, '', 'b'], 'c')).toEqual(['a', 'b', 'c']);
+    expect(collapse(['a', null, undefined, 'b'], 'c')).toEqual(['a', 'b', 'c']);
   });
 
   test('handles generators of string-like values', () => {
     function* gen() {
       yield 'foo';
       yield null;
-      yield '';
+      yield undefined;
       yield 'bar';
     }
     expect(collapse(gen(), 'baz')).toEqual(['foo', 'bar', 'baz']);
@@ -39,14 +39,20 @@ describe('collapse', () => {
   test('handles mixed argument types', () => {
     function* gen() {
       yield 'g1';
-      yield '';
+      yield null;
       yield 'g2';
     }
     const fn = () => 'fn1';
-    expect(collapse('a', fn, ['b', null], gen(), '', null)).toEqual(['a', 'fn1', 'b', 'g1', 'g2']);
+    expect(collapse('a', fn, ['b', null], gen(), undefined, null)).toEqual([
+      'a',
+      'fn1',
+      'b',
+      'g1',
+      'g2',
+    ]);
   });
 
   test('returns an empty array if all values are null or empty', () => {
-    expect(collapse(null, '', () => '', [], (() => null)())).toEqual([]);
+    expect(collapse(null, undefined, () => undefined, [], (() => null)())).toEqual([]);
   });
 });

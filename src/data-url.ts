@@ -1,4 +1,4 @@
-import { type BinaryObject } from './@types/binary-object.ts';
+import { type BinaryObject } from './binary-object.ts';
 import { encodeBase64 } from './encode-base-64.ts';
 
 /**
@@ -7,6 +7,12 @@ import { encodeBase64 } from './encode-base-64.ts';
  * @param input - The binary object
  * @param mimeType - The MIME type for the URL
  * @returns The data URL
+ * @example
+ * ```typescript
+ * const bytes = new Uint8Array([72, 101, 108, 108, 111]); // "Hello"
+ * const url = dataURL(bytes, 'text/plain');
+ * // url === "data:text/plain;base64,SGVsbG8="
+ * ```
  * @group Encoding
  * @category Binary
  */

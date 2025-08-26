@@ -10,15 +10,16 @@ Technobuddha Library
 
 | Name | Description |
 | ------ | ------ |
-| [BinaryEncoding](BinaryEncoding.md) | The binary encoding to use |
+| [BinaryEncoding](BinaryEncoding.md) | Formats for binary encoding |
 | [BinaryObject](BinaryObject.md) | A type that represents various binary object types in JavaScript. |
 | [dataURL](dataURL.md) | Convert any binary object into a data URL |
 | [decodeBase64](decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [decodeBase64Url](decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. You can use the [encodeBase64Url](encodeBase64Url.md) method to encode and transmit data which may otherwise cause communication problems, then transmit it and use the `decodeBase64Url` method to decode the data again. For example, you can encode, transmit, and decode control characters such as ASCII values 0 through 31. |
+| [decodeBase64Url](decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBinary](decodeBinary.md) | Decode a string into a binary object |
-| [encodeBase64](encodeBase64.md) | Creates a Base64-encoded ASCII string from a string. |
-| [encodeBase64Url](encodeBase64Url.md) | Creates a Base64-encoded ASCII string from a string. |
+| [encodeBase64](encodeBase64.md) | Creates a encoded ASCII string from a string using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
+| [encodeBase64Url](encodeBase64Url.md) | Creates a encoded ASCII string from a string using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [encodeBinary](encodeBinary.md) | Encode an binary object into a string |
+| [normalizeBinary](normalizeBinary.md) | Normalizes various binary object types to a `Uint8Array`. |
 
 ### Escaping
 
@@ -41,11 +42,11 @@ Technobuddha Library
 
 | Class | Description |
 | ------ | ------ |
-| [Crc32](Crc32.md) | Compute the CRC32 checksum |
-| [HashBase](HashBase.md) | Class representing a generic hash algorithm implementation. |
+| [Crc32](Crc32.md) | Compute the CRC32 checksum of a binary object |
+| [HashBase](HashBase.md) | Abstract base class for hash algorithm implementations. |
 | [Sha1](Sha1.md) | Secure Hash Algorithm, SHA-1 |
 | [Sha224](Sha224.md) | Secure Hash Algorithm, SHA2 SHA-224 |
 | [Sha256](Sha256.md) | Secure Hash Algorithm, SHA2 SHA-256 |
 | [Sha384](Sha384.md) | Secure Hash Algorithm, SHA2 SHA-384 |
 | [Sha512](Sha512.md) | Secure Hash Algorithm, SHA2 SHA-512 |
-| [ShaBase](ShaBase.md) | The base class for most sha bases cryptographic hash functions |
+| [ShaBase](ShaBase.md) | The base class for sha based cryptographic hash functions |

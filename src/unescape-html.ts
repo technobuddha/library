@@ -1,5 +1,13 @@
+import { nbsp, zwsp } from './unicode.ts';
+
 /**
  * Unescape a string encoded in HTML
+ *
+ * | Escape Sequence    | Character                |
+ * | ------------------ | ------------------------ |
+ * | &#n…;              | Numeric character        |
+ * | &#xn…;             | Hexadecimal character    |
+ * | &xc…;              | Named entity
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
@@ -508,16 +516,12 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   EmptySmallSquare: '◻',
   emptyv: '∅',
   EmptyVerySmallSquare: '▫',
-  // eslint-disable-next-line no-irregular-whitespace
-  emsp13: ' ',
-  // eslint-disable-next-line no-irregular-whitespace
-  emsp14: ' ',
-  // eslint-disable-next-line no-irregular-whitespace
-  emsp: ' ',
+  emsp13: '\u2004',
+  emsp14: '\u2005',
+  emsp: '\u2003',
   ENG: 'Ŋ',
   eng: 'ŋ',
-  // eslint-disable-next-line no-irregular-whitespace
-  ensp: ' ',
+  ensp: '\u2002',
   Eogon: 'Ę',
   eogon: 'ę',
   Eopf: '𝔼',
@@ -687,8 +691,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   gvertneqq: '≩︀',
   gvnE: '≩︀',
   Hacek: 'ˇ',
-  // eslint-disable-next-line no-irregular-whitespace
-  hairsp: ' ',
+  hairsp: '\u200A',
   half: '½',
   hamilt: 'ℋ',
   HARDcy: 'Ъ',
@@ -1063,8 +1066,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   mdash: '—',
   mDDot: '∺',
   measuredangle: '∡',
-  // eslint-disable-next-line no-irregular-whitespace
-  MediumSpace: ' ',
+  MediumSpace: '\u205F',
   Mellintrf: 'ℳ',
   Mfr: '𝔐',
   mfr: '𝔪',
@@ -1105,8 +1107,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   natural: '♮',
   naturals: 'ℕ',
   natur: '♮',
-  // eslint-disable-next-line no-irregular-whitespace
-  nbsp: ' ',
+  nbsp: nbsp,
   nbump: '≎̸',
   nbumpe: '≏̸',
   ncap: '⩃',
@@ -1126,14 +1127,10 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   nearrow: '↗',
   ne: '≠',
   nedot: '≐̸',
-  // eslint-disable-next-line no-irregular-whitespace
-  NegativeMediumSpace: '​',
-  // eslint-disable-next-line no-irregular-whitespace
-  NegativeThickSpace: '​',
-  // eslint-disable-next-line no-irregular-whitespace
-  NegativeThinSpace: '​',
-  // eslint-disable-next-line no-irregular-whitespace
-  NegativeVeryThinSpace: '​',
+  NegativeMediumSpace: '\u200b',
+  NegativeThickSpace: '\u200b',
+  NegativeThinSpace: '\u200b',
+  NegativeVeryThinSpace: '\u200b',
   nequiv: '≢',
   nesear: '⤨',
   nesim: '≂̸',
@@ -1188,8 +1185,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   nLtv: '≪̸',
   nmid: '∤',
   NoBreak: '⁠',
-  // eslint-disable-next-line no-irregular-whitespace
-  NonBreakingSpace: ' ',
+  NonBreakingSpace: '\u00A0',
   nopf: '𝕟',
   Nopf: 'ℕ',
   Not: '⫬',
@@ -1313,8 +1309,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   nu: 'ν',
   num: '#',
   numero: '№',
-  // eslint-disable-next-line no-irregular-whitespace
-  numsp: ' ',
+  numsp: '\u2007',
   nvap: '≍⃒',
   nvdash: '⊬',
   nvDash: '⊭',
@@ -1496,8 +1491,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   pscr: '𝓅',
   Psi: 'Ψ',
   psi: 'ψ',
-  // eslint-disable-next-line no-irregular-whitespace
-  puncsp: ' ',
+  puncsp: '\u2008',
   Qfr: '𝔔',
   qfr: '𝔮',
   qint: '⨌',
@@ -1874,12 +1868,9 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   thetav: 'ϑ',
   thickapprox: '≈',
   thicksim: '∼',
-  // eslint-disable-next-line no-irregular-whitespace
-  ThickSpace: '  ',
-  // eslint-disable-next-line no-irregular-whitespace
-  ThinSpace: ' ',
-  // eslint-disable-next-line no-irregular-whitespace
-  thinsp: ' ',
+  ThickSpace: '\u205F\u200A',
+  ThinSpace: '\u2009',
+  thinsp: '\u2009',
   thkap: '≈',
   thksim: '∼',
   THORN: 'Þ',
@@ -2055,8 +2046,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   VerticalLine: '|',
   VerticalSeparator: '❘',
   VerticalTilde: '≀',
-  // eslint-disable-next-line no-irregular-whitespace
-  VeryThinSpace: ' ',
+  VeryThinSpace: '\u200A',
   Vfr: '𝔙',
   vfr: '𝔳',
   vltri: '⊲',
@@ -2148,8 +2138,7 @@ const entityDecode: Readonly<Record<string, string | undefined>> = Object.freeze
   Zdot: 'Ż',
   zdot: 'ż',
   zeetrf: 'ℨ',
-  // eslint-disable-next-line no-irregular-whitespace
-  ZeroWidthSpace: '​',
+  ZeroWidthSpace: zwsp,
   Zeta: 'Ζ',
   zeta: 'ζ',
   zfr: '𝔷',

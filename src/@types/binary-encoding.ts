@@ -1,5 +1,8 @@
 /**
- * The binary encoding to use
+ * Formats for binary encoding
+ *
+ * @see {@link encodeBinary}
+ * @see {@link decodeBinary}
  * @group Encoding
  * @category Binary
  */

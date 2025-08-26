@@ -10,7 +10,7 @@ Technobuddha Library
 const daysPerWeek: 7 = 7;
 ```
 
-Defined in: [constants.ts:75](https://github.com/technobuddha/library/blob/main/src/constants.ts#L75)
+Defined in: [constants.ts:48](https://github.com/technobuddha/library/blob/main/src/constants.ts#L48)
 
 Number of days in a week [7]
 

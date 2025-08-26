@@ -10,7 +10,7 @@ Technobuddha Library
 const month: Readonly<Record<string, MonthOfYear>>;
 ```
 
-Defined in: [constants.ts:212](https://github.com/technobuddha/library/blob/main/src/constants.ts#L212)
+Defined in: [constants.ts:185](https://github.com/technobuddha/library/blob/main/src/constants.ts#L185)
 
 Translation object for name of month to month number
 

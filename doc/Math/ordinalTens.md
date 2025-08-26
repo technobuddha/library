@@ -10,7 +10,7 @@ Technobuddha Library
 const ordinalTens: string[];
 ```
 
-Defined in: [constants.ts:367](https://github.com/technobuddha/library/blob/main/src/constants.ts#L367)
+Defined in: [constants.ts:258](https://github.com/technobuddha/library/blob/main/src/constants.ts#L258)
 
 Words for ordinal tens 20-90
 

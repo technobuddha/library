@@ -10,9 +10,15 @@ Technobuddha Library
 function unescapeHTML(input: string): string;
 ```
 
-Defined in: [unescape-html.ts:9](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L9)
+Defined in: [unescape-html.ts:17](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L17)
 
 Unescape a string encoded in HTML
+
+| Escape Sequence    | Character                |
+| ------------------ | ------------------------ |
+| &#n…;              | Numeric character        |
+| &#xn…;             | Hexadecimal character    |
+| &xc…;              | Named entity
 
 ## Parameters
 

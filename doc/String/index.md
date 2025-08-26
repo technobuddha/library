@@ -17,9 +17,8 @@ Technobuddha Library
 
 ### Build
 
-| Name | Description |
+| Function | Description |
 | ------ | ------ |
-| [StringLike](StringLike.md) | A string-like object, which can be a string or an array of strings; |
 | [build](build.md) | Concatenates strings and/or arrays of strings |
 
 ### Case Conversion

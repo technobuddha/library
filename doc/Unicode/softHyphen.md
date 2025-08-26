@@ -10,7 +10,7 @@ Technobuddha Library
 const softHyphen: "­" = '­';
 ```
 
-Defined in: [constants.ts:266](https://github.com/technobuddha/library/blob/main/src/constants.ts#L266)
+Defined in: [unicode.ts:63](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L63)
 
 Soft Hyphen
 

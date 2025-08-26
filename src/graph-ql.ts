@@ -1,9 +1,9 @@
-import { empty, space } from './constants.ts';
 import { escapeGraphQL } from './escape-graph-ql.ts';
 import { isArrayLike } from './is-array-like.ts';
 import { isBoolean } from './is-boolean.ts';
 import { isNumber } from './is-number.ts';
 import { isString } from './is-string.ts';
+import { empty, space } from './unicode.ts';
 import { zipperMerge } from './zipper-merge.ts';
 
 /**

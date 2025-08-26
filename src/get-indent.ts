@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { type IndentOptions } from './indent.ts';
+import { space } from './unicode.ts';
 
 /**
  * Determine the indentation level of text

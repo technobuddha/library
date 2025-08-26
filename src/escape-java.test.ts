@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { escapeJava } from './escape-java.ts';
+import { space } from './unicode.ts';
 
 describe('escapeJava', () => {
   test('should escape standard sequences', () => {

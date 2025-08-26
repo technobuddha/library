@@ -1,5 +1,5 @@
-import { empty, space } from './constants.ts';
 import { toString } from './to-string.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Options for creating a coordinate string

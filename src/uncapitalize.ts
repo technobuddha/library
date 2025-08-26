@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen, space } from './constants.ts';
 import { splitWords } from './split-words.ts';
+import { hyphen, nbHyphen, space } from './unicode.ts';
 
 const reWord = new RegExp(`^\\w|[${hyphen}${nbHyphen}-]\\w`, 'gui');
 
