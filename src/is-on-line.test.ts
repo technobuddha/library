@@ -1,38 +1,56 @@
-import { type Cartesian, type LineSegment } from './@types/geometry.ts';
-import { isOnLine } from './is-on-line.ts';
+import { describe, expect, test } from 'vitest';
 
-function makeLine(a: [number, number], b: [number, number]): LineSegment {
-  return { x0: a[0], y0: a[1], x1: b[0], y1: b[1] };
-}
+import { type LineSegment } from './@types/geometry.ts';
+import { isOnLine, type OnLineOptions } from './is-on-line.ts';
+
+const line: LineSegment = { x0: 0, y0: 0, x1: 4, y1: 4 };
 
 describe('isOnLine', () => {
-  test('point at line start', () => {
-    const line = makeLine([0, 0], [2, 2]);
-    const point: Cartesian = { x: 0, y: 0 };
-    expect(isOnLine(point, line)).toBeTrue();
+  test('returns true for a point exactly on the segment', () => {
+    expect(isOnLine({ x: 2, y: 2 }, line)).toBe(true);
+    expect(isOnLine({ x: 0, y: 0 }, line)).toBe(true);
+    expect(isOnLine({ x: 4, y: 4 }, line)).toBe(true);
   });
 
-  test('point at line end', () => {
-    const line = makeLine([0, 0], [2, 2]);
-    const point: Cartesian = { x: 2, y: 2 };
-    expect(isOnLine(point, line)).toBeTrue();
+  test('returns false for a point not on the line', () => {
+    expect(isOnLine({ x: 2, y: 3 }, line)).toBe(false);
+    expect(isOnLine({ x: 5, y: 5 }, line)).toBe(false);
+    expect(isOnLine({ x: -1, y: -1 }, line)).toBe(false);
   });
 
-  test('point in middle of line', () => {
-    const line = makeLine([0, 0], [4, 0]);
-    const point: Cartesian = { x: 2, y: 0 };
-    expect(isOnLine(point, line)).toBeTrue();
+  test('returns false for a colinear point outside the segment by default', () => {
+    expect(isOnLine({ x: 5, y: 5 }, line)).toBe(false);
+    expect(isOnLine({ x: -1, y: -1 }, line)).toBe(false);
   });
 
-  test('point beyond line end', () => {
-    const line = makeLine([0, 0], [2, 2]);
-    const point: Cartesian = { x: 4, y: 4 };
-    expect(isOnLine(point, line)).toBeFalse();
+  test('returns true for a colinear point outside the segment when extend=true', () => {
+    const options: OnLineOptions = { extend: true };
+    expect(isOnLine({ x: 5, y: 5 }, line, options)).toBe(true);
+    expect(isOnLine({ x: -1, y: -1 }, line, options)).toBe(true);
   });
 
-  test('point off the line', () => {
-    const line = makeLine([0, 0], [2, 0]);
-    const point: Cartesian = { x: 1, y: 1 };
-    expect(isOnLine(point, line)).toBeFalse();
+  test('returns true for a point very close to the line within tolerance', () => {
+    const options: OnLineOptions = { tolerance: 1e-1 };
+    expect(isOnLine({ x: 2, y: 2.009 }, line, options)).toBe(true);
+  });
+
+  test('returns false for a point just outside tolerance', () => {
+    const options: OnLineOptions = { tolerance: 1e-4 };
+    expect(isOnLine({ x: 2, y: 2.01 }, line, options)).toBe(false);
+  });
+
+  test('works for vertical and horizontal lines', () => {
+    const vertical: LineSegment = { x0: 1, y0: 1, x1: 1, y1: 5 };
+    expect(isOnLine({ x: 1, y: 3 }, vertical)).toBe(true);
+    expect(isOnLine({ x: 1, y: 6 }, vertical)).toBe(false);
+
+    const horizontal: LineSegment = { x0: 2, y0: 3, x1: 6, y1: 3 };
+    expect(isOnLine({ x: 4, y: 3 }, horizontal)).toBe(true);
+    expect(isOnLine({ x: 7, y: 3 }, horizontal)).toBe(false);
+  });
+
+  test('returns false for a point with NaN or Infinity', () => {
+    expect(isOnLine({ x: NaN, y: 2 }, line)).toBe(false);
+    expect(isOnLine({ x: 2, y: Infinity }, line)).toBe(false);
   });
 });

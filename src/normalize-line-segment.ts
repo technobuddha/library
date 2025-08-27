@@ -1,12 +1,12 @@
 import { type LineSegment } from './@types/geometry.ts';
 
 /**
- * Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0).
+ * Returns a {@link LineSegment} where the point with the higher y-coordinate is always the starting point (x0, y0).
  * If the original line's y1 is greater than y0, the line is returned as-is.
  * Otherwise, the start and end points are swapped.
  *
  * @param line - The line segment to process.
- * @returns A `LineSegment` with the topmost point as the starting point.
+ * @returns A {@link LineSegment} with the topmost point as the starting point.
  *
  * @group Geometry
  * @category Line Segment

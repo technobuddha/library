@@ -6,83 +6,76 @@ Technobuddha Library
 
 # Function: rotate()
 
+Rotates a point or a polygon around a given origin by a specified angle.
+
 ## Call Signature
 
 ```ts
 function rotate(
    point: Cartesian, 
    angle: number, 
-   origin?: Cartesian): Cartesian;
+   options?: UnitOptions & OriginOptions): Cartesian;
 ```
 
-Defined in: [rotate.ts:35](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L35)
+Defined in: [rotate.ts:32](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L32)
 
-Rotates a point or an array of points around a given origin by a specified angle.
+Rotates a point around a given origin by a specified angle.
 
 ### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `point` | [`Cartesian`](Cartesian.md) | The point or array of points to rotate. Each point should be an object with `x` and `y` properties. |
-| `angle` | `number` | The angle in radians to rotate the point(s) by. Positive values rotate counterclockwise. |
-| `origin?` | [`Cartesian`](Cartesian.md) | (Optional) The origin to rotate around. Defaults to `{ x: 0, y: 0 }` if not provided. |
+| `point` | [`Cartesian`](Cartesian.md) | The point or array of points to rotate. |
+| `angle` | `number` | The angle to rotate the point(s) by. Positive values rotate counterclockwise. |
+| `options?` | [`UnitOptions`](UnitOptions.md) & [`OriginOptions`](OriginOptions.md) | see [UnitOptions](UnitOptions.md) & [OriginOptions](OriginOptions.md) |
 
 ### Returns
 
 [`Cartesian`](Cartesian.md)
 
-The rotated point or array of rotated points.
+The rotated point.
 
-### Examples
-
-```typescript
-const point = { x: 1, y: 0 };
-const rotated = rotate(point, Math.PI / 2); // { x: 0, y: 1 }
-```
+### Example
 
 ```typescript
-const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
-const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
-// [{ x: 0, y: 1 }, { x: -1, y: 0 }]
+rotate({ x: 1, y: 0 }, Math.PI / 2); // { x: 0, y: 1 }
 ```
 
 ## Call Signature
 
 ```ts
 function rotate(
-   point: Polygon, 
+   polygon: Polygon, 
    angle: number, 
-   origin?: Cartesian): Polygon;
+   options?: UnitOptions & OriginOptions): Polygon;
 ```
 
-Defined in: [rotate.ts:36](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L36)
+Defined in: [rotate.ts:53](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L53)
 
-Rotates a point or an array of points around a given origin by a specified angle.
+Rotates a polygon around a given origin by a specified angle.
 
 ### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `point` | [`Polygon`](Polygon.md) | The point or array of points to rotate. Each point should be an object with `x` and `y` properties. |
-| `angle` | `number` | The angle in radians to rotate the point(s) by. Positive values rotate counterclockwise. |
-| `origin?` | [`Cartesian`](Cartesian.md) | (Optional) The origin to rotate around. Defaults to `{ x: 0, y: 0 }` if not provided. |
+| `polygon` | [`Polygon`](Polygon.md) | The polygon to rotate. |
+| `angle` | `number` | The angle to rotate the point(s) by. Positive values rotate counterclockwise. |
+| `options?` | [`UnitOptions`](UnitOptions.md) & [`OriginOptions`](OriginOptions.md) | see [UnitOptions](UnitOptions.md) & [OriginOptions](OriginOptions.md) |
 
 ### Returns
 
 [`Polygon`](Polygon.md)
 
-The rotated point or array of rotated points.
+The rotated polygon.
 
-### Examples
-
-```typescript
-const point = { x: 1, y: 0 };
-const rotated = rotate(point, Math.PI / 2); // { x: 0, y: 1 }
-```
+### Example
 
 ```typescript
-const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
-const rotated = rotate(points, Math.PI / 2, { x: 0, y: 0 });
+rotate(
+  [{ x: 1, y: 0 }, { x: 0, y: 1 }],
+  Math.PI / 2,
+  { x: 0, y: 0 }
+);
 // [{ x: 0, y: 1 }, { x: -1, y: 0 }]
 ```
 

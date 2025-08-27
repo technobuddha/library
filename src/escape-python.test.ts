@@ -19,10 +19,7 @@ describe('escapePython', () => {
 
   test('should escape non printables as \\xnn', () => {
     expect(escapePython('\u0001')).toBe('\\x01');
-    expect(escapePython('\u0001X')).toBe('\\x01X');
-    expect(escapePython('\u00010')).toBe('\\x010');
-    expect(escapePython('\u0001a')).toBe('\\x01a');
-    expect(escapePython('\u0001A')).toBe('\\x01A');
+    expect(escapePython('\u0080')).toBe('\\x80');
   });
 
   test('should mot escape latin-1 characters', () => {

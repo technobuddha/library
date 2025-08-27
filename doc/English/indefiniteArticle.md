@@ -10,7 +10,7 @@ Technobuddha Library
 function indefiniteArticle(word: string, options: IndefiniteArticleOptions): string;
 ```
 
-Defined in: [indefinite-article.ts:48](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L48)
+Defined in: [indefinite-article.ts:50](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L50)
 
 Determine the appropriate indefinite article to use with a word.
 
@@ -33,10 +33,4 @@ option is used, only the indefinite article is returned.
 The answer is derived from a simple rules engine, it attempts to cover most exceptions
 to the rules, but the English language has lots of quirks, and this rules engine can not cover them
 all
-
-## Default Value
-
-```ts
-only false
-```
 

@@ -12,7 +12,7 @@ function normalizeLineSegment(line: LineSegment): LineSegment;
 
 Defined in: [normalize-line-segment.ts:14](https://github.com/technobuddha/library/blob/main/src/normalize-line-segment.ts#L14)
 
-Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0).
+Returns a [LineSegment](LineSegment.md) where the point with the higher y-coordinate is always the starting point (x0, y0).
 If the original line's y1 is greater than y0, the line is returned as-is.
 Otherwise, the start and end points are swapped.
 
@@ -26,5 +26,5 @@ Otherwise, the start and end points are swapped.
 
 [`LineSegment`](LineSegment.md)
 
-A `LineSegment` with the topmost point as the starting point.
+A [LineSegment](LineSegment.md) with the topmost point as the starting point.
 

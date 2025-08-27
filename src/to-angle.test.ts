@@ -64,59 +64,59 @@ describe('toAngle', () => {
 
   test('converts units', () => {
     expect(toAngle(Math.PI * 2, 'radians', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(Math.PI * 2, 'radians', 'rads')).toBe(Math.PI * 2);
+    expect(toAngle(Math.PI * 2, 'radians', 'rad')).toBe(Math.PI * 2);
     expect(toAngle(Math.PI * 2, 'radians', 'degrees')).toBe(360);
     expect(toAngle(Math.PI * 2, 'radians', 'deg')).toBe(360);
     expect(toAngle(Math.PI * 2, 'radians', 'gradians')).toBe(400);
-    expect(toAngle(Math.PI * 2, 'radians', 'grads')).toBe(400);
+    expect(toAngle(Math.PI * 2, 'radians', 'grad')).toBe(400);
     expect(toAngle(Math.PI * 2, 'radians', 'turns')).toBe(1);
 
-    expect(toAngle(Math.PI * 2, 'rads', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(Math.PI * 2, 'rads', 'rads')).toBe(Math.PI * 2);
-    expect(toAngle(Math.PI * 2, 'rads', 'degrees')).toBe(360);
-    expect(toAngle(Math.PI * 2, 'rads', 'deg')).toBe(360);
-    expect(toAngle(Math.PI * 2, 'rads', 'gradians')).toBe(400);
-    expect(toAngle(Math.PI * 2, 'rads', 'grads')).toBe(400);
-    expect(toAngle(Math.PI * 2, 'rads', 'turns')).toBe(1);
+    expect(toAngle(Math.PI * 2, 'rad', 'radians')).toBe(Math.PI * 2);
+    expect(toAngle(Math.PI * 2, 'rad', 'rad')).toBe(Math.PI * 2);
+    expect(toAngle(Math.PI * 2, 'rad', 'degrees')).toBe(360);
+    expect(toAngle(Math.PI * 2, 'rad', 'deg')).toBe(360);
+    expect(toAngle(Math.PI * 2, 'rad', 'gradians')).toBe(400);
+    expect(toAngle(Math.PI * 2, 'rad', 'grad')).toBe(400);
+    expect(toAngle(Math.PI * 2, 'rad', 'turns')).toBe(1);
 
     expect(toAngle(360, 'degrees', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(360, 'degrees', 'rads')).toBe(Math.PI * 2);
+    expect(toAngle(360, 'degrees', 'rad')).toBe(Math.PI * 2);
     expect(toAngle(360, 'degrees', 'degrees')).toBe(360);
     expect(toAngle(360, 'degrees', 'deg')).toBe(360);
     expect(toAngle(360, 'degrees', 'gradians')).toBe(400);
-    expect(toAngle(360, 'degrees', 'grads')).toBe(400);
+    expect(toAngle(360, 'degrees', 'grad')).toBe(400);
     expect(toAngle(360, 'degrees', 'turns')).toBe(1);
 
     expect(toAngle(360, 'deg', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(360, 'deg', 'rads')).toBe(Math.PI * 2);
+    expect(toAngle(360, 'deg', 'rad')).toBe(Math.PI * 2);
     expect(toAngle(360, 'deg', 'degrees')).toBe(360);
     expect(toAngle(360, 'deg', 'deg')).toBe(360);
     expect(toAngle(360, 'deg', 'gradians')).toBe(400);
-    expect(toAngle(360, 'deg', 'grads')).toBe(400);
+    expect(toAngle(360, 'deg', 'grad')).toBe(400);
     expect(toAngle(360, 'deg', 'turns')).toBe(1);
 
     expect(toAngle(400, 'gradians', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(400, 'gradians', 'rads')).toBe(Math.PI * 2);
+    expect(toAngle(400, 'gradians', 'rad')).toBe(Math.PI * 2);
     expect(toAngle(400, 'gradians', 'degrees')).toBe(360);
     expect(toAngle(400, 'gradians', 'deg')).toBe(360);
     expect(toAngle(400, 'gradians', 'gradians')).toBe(400);
-    expect(toAngle(400, 'gradians', 'grads')).toBe(400);
+    expect(toAngle(400, 'gradians', 'grad')).toBe(400);
     expect(toAngle(400, 'gradians', 'turns')).toBe(1);
 
-    expect(toAngle(400, 'grads', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(400, 'grads', 'rads')).toBe(Math.PI * 2);
-    expect(toAngle(400, 'grads', 'degrees')).toBe(360);
-    expect(toAngle(400, 'grads', 'deg')).toBe(360);
-    expect(toAngle(400, 'grads', 'gradians')).toBe(400);
-    expect(toAngle(400, 'grads', 'grads')).toBe(400);
-    expect(toAngle(400, 'grads', 'turns')).toBe(1);
+    expect(toAngle(400, 'grad', 'radians')).toBe(Math.PI * 2);
+    expect(toAngle(400, 'grad', 'rad')).toBe(Math.PI * 2);
+    expect(toAngle(400, 'grad', 'degrees')).toBe(360);
+    expect(toAngle(400, 'grad', 'deg')).toBe(360);
+    expect(toAngle(400, 'grad', 'gradians')).toBe(400);
+    expect(toAngle(400, 'grad', 'grad')).toBe(400);
+    expect(toAngle(400, 'grad', 'turns')).toBe(1);
 
     expect(toAngle(1, 'turns', 'radians')).toBe(Math.PI * 2);
-    expect(toAngle(1, 'turns', 'rads')).toBe(Math.PI * 2);
+    expect(toAngle(1, 'turns', 'rad')).toBe(Math.PI * 2);
     expect(toAngle(1, 'turns', 'degrees')).toBe(360);
     expect(toAngle(1, 'turns', 'deg')).toBe(360);
     expect(toAngle(1, 'turns', 'gradians')).toBe(400);
-    expect(toAngle(1, 'turns', 'grads')).toBe(400);
+    expect(toAngle(1, 'turns', 'grad')).toBe(400);
     expect(toAngle(1, 'turns', 'turns')).toBe(1);
   });
 });

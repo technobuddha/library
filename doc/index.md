@@ -87,22 +87,25 @@ Technobuddha Library
 
 ## English
 
+### Analysis
+
+| Function | Description |
+| ------ | ------ |
+| [readability](English/readability.md) | Calculates the Flesch-Kincaid readability score for a given text. |
+| [splitSentences](English/splitSentences.md) | Splits the input string into an array of sentences. |
+| [splitWords](English/splitWords.md) | Split a string into an array of words |
+| [syllables](English/syllables.md) | Approximate the number of syllables in a string |
+
 ### Parts of Speech
 
 | Name | Description |
 | ------ | ------ |
-| [ConjoinOptions](English/ConjoinOptions.md) | Options for creating a coordinate string |
-| [IndefiniteArticleOptions](English/IndefiniteArticleOptions.md) | Options for determining the indefinite article to use with a word. |
-| [conjoin](English/conjoin.md) | Create a string from an array, separating values and inserting a conjunction |
+| [ConjoinOptions](English/ConjoinOptions.md) | Options for creating a coordinated list with [conjoin](English/conjoin.md) |
+| [IndefiniteArticleOptions](English/IndefiniteArticleOptions.md) | Options for [indefiniteArticle](English/indefiniteArticle.md) to determine the indefinite article to use with a word. |
+| [conjoin](English/conjoin.md) | Create a list from an array, separating values and inserting a conjunction |
 | [indefiniteArticle](English/indefiniteArticle.md) | Determine the appropriate indefinite article to use with a word. |
 | [plural](English/plural.md) | Return the plural version of the input string |
 | [possessive](English/possessive.md) | Determine the possessive form of a word |
-
-### Syllables
-
-| Function | Description |
-| ------ | ------ |
-| [syllables](English/syllables.md) | Approximate the number of syllables in a string |
 
 ## Geometry
 
@@ -111,12 +114,14 @@ Technobuddha Library
 | Name | Description |
 | ------ | ------ |
 | [AngleUnit](Geometry/AngleUnit.md) | Types of angle units |
-| [angleUnits](Geometry/angleUnits.md) | Number of units in a circle |unit|value| |---|---| |deg|360| |degrees|360| |rads|2π| |radians|2π| |grads|400| |gradians|400| |turns|1| |
+| [OriginOptions](Geometry/OriginOptions.md) | Options for origin-related functions |
+| [UnitOptions](Geometry/UnitOptions.md) | Options for angle-related functions |
+| [angleUnits](Geometry/angleUnits.md) | Number of units in a circle |
 | [angleBetweenPoints](Geometry/angleBetweenPoints.md) | Computes the angle between two points (x1,y1) and (x2,y2). Angle zero points in the +X direction, π/2 radians points in the +Y direction (down) and from there we grow clockwise towards π*2 radians. |
 | [angleDifference](Geometry/angleDifference.md) | Computes the difference between startAngle and endAngle. |
 | [angleOfLine](Geometry/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
 | [angleReflection](Geometry/angleReflection.md) | Calculates the reflection of an angle across a specified axis. |
-| [normalizeAngle](Geometry/normalizeAngle.md) | Normalizes an angle to be in range [0-π*2]. Angles outside this range will be normalized to be the equivalent angle with that range. |
+| [normalizeAngle](Geometry/normalizeAngle.md) | Normalizes an angle to be in range 0-1 turns. |
 | [toAngle](Geometry/toAngle.md) | Converts an angle from one unit to another. |
 | [toDegrees](Geometry/toDegrees.md) | Convert an angle from radians to degrees |
 | [toRadians](Geometry/toRadians.md) | Converts degrees to radians. |
@@ -127,6 +132,7 @@ Technobuddha Library
 | ------ | ------ |
 | [Cartesian](Geometry/Cartesian.md) | Represents a point in 2D Cartesian coordinate space. |
 | [Polar](Geometry/Polar.md) | Polar coordinate (angle, radius) |
+| [XY](Geometry/XY.md) | Represents a two-dimensional amount `x` and `y` aspects. |
 | [Origin](Geometry/Origin.md) | The origin of cartesian coordinates (0, 0) |
 | [isCartesian](Geometry/isCartesian.md) | Determines if the provided value is a Cartesian point. |
 | [isPolar](Geometry/isPolar.md) | Determines if the provided value is a Polar point. |
@@ -138,15 +144,16 @@ Technobuddha Library
 | Name | Description |
 | ------ | ------ |
 | [LineSegment](Geometry/LineSegment.md) | Represents a line segment in 2D space, defined by its start and end points. |
+| [OnLineOptions](Geometry/OnLineOptions.md) | Options for the [isOnLine](Geometry/isOnLine.md) function |
 | [angleOfLine](Geometry/angleOfLine.md) | Calculates the angle of a given line segment, relative to the horizontal axis |
 | [isIntersecting](Geometry/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [isLeftOfLine](Geometry/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
-| [isOnLine](Geometry/isOnLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
-| [isWithLine](Geometry/isWithLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
+| [isOnLine](Geometry/isOnLine.md) | Determines whether a given point lies on a specified line segment or its extension. |
+| [isRightOfLine](Geometry/isRightOfLine.md) | Determines whether a given point lies to the right of a specified line segment. |
 | [lineIntersection](Geometry/lineIntersection.md) | Calculates the intersection point of two line segments. |
-| [lineLength](Geometry/lineLength.md) | Calculates the length of a given line segment using the distance formula. |
+| [lineLength](Geometry/lineLength.md) | Calculates the length of a line segment. |
 | [midpoint](Geometry/midpoint.md) | Calculates a point at a given fraction (`part`) along a line segment. By default it returns the true midpoint of the line segment |
-| [normalizeLineSegment](Geometry/normalizeLineSegment.md) | Returns a `LineSegment` where the point with the higher y-coordinate is always the starting point (x0, y0). If the original line's y1 is greater than y0, the line is returned as-is. Otherwise, the start and end points are swapped. |
+| [normalizeLineSegment](Geometry/normalizeLineSegment.md) | Returns a [LineSegment](Geometry/LineSegment.md) where the point with the higher y-coordinate is always the starting point (x0, y0). If the original line's y1 is greater than y0, the line is returned as-is. Otherwise, the start and end points are swapped. |
 
 ### Point
 
@@ -154,12 +161,12 @@ Technobuddha Library
 | ------ | ------ |
 | [isInPolygon](Geometry/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isLeftOfLine](Geometry/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
-| [isOnLine](Geometry/isOnLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
-| [isWithLine](Geometry/isWithLine.md) | Determines whether a given point lies on a specified line segment within a certain tolerance. |
-| [manhattanDistance](Geometry/manhattanDistance.md) | Calculates the Manhattan distance between two points in Cartesian coordinates. |
-| [rotate](Geometry/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
+| [isOnLine](Geometry/isOnLine.md) | Determines whether a given point lies on a specified line segment or its extension. |
+| [isRightOfLine](Geometry/isRightOfLine.md) | Determines whether a given point lies to the right of a specified line segment. |
+| [manhattanDistance](Geometry/manhattanDistance.md) | Calculates the Manhattan Distance between two points in Cartesian coordinates. |
+| [rotate](Geometry/rotate.md) | Rotates a point or a polygon around a given origin by a specified angle. |
 | [scale](Geometry/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
-| [translate](Geometry/translate.md) | Translate a point or an array of points by a specified amount. |
+| [translate](Geometry/translate.md) | Translate a point or polygon by a specified amount. |
 
 ### Polygon
 
@@ -176,19 +183,20 @@ Technobuddha Library
 | [largestInscribedRectangle](Geometry/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
 | [perimeter](Geometry/perimeter.md) | Calculates the perimeter of a polygon given its vertices. |
 | [regularPolygon](Geometry/regularPolygon.md) | Generates the vertices of a regular polygon as an array of Cartesian points. |
-| [rotate](Geometry/rotate.md) | Rotates a point or an array of points around a given origin by a specified angle. |
+| [rotate](Geometry/rotate.md) | Rotates a point or a polygon around a given origin by a specified angle. |
 | [scale](Geometry/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
 | [star](Geometry/star.md) | Generates the vertices of a star-shaped polygon. |
 | [toPolygon](Geometry/toPolygon.md) | Converts two Cartesian points or a rectangle into a `Polygon` object. |
-| [translate](Geometry/translate.md) | Translate a point or an array of points by a specified amount. |
+| [translate](Geometry/translate.md) | Translate a point or polygon by a specified amount. |
 
 ### Rectangle
 
 | Name | Description |
 | ------ | ------ |
-| [LargestInscribedRectangleOptions](Geometry/LargestInscribedRectangleOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
+| [LargestInscribedRectUnitOptions](Geometry/LargestInscribedRectUnitOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [Rect](Geometry/Rect.md) | A rectangle (defined by its top-left corner, width and height) |
 | [RotatedRect](Geometry/RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
+| [isInPolygon](Geometry/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isRect](Geometry/isRect.md) | Determines if the provided value is a Rectangle. |
 | [largestInscribedRectangle](Geometry/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
 | [toSquare](Geometry/toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
@@ -556,10 +564,9 @@ Technobuddha Library
 
 | Name | Description |
 | ------ | ------ |
-| [SplitWordsOptions](String/SplitWordsOptions.md) | Options for the [splitWords](String/splitWords.md) function |
+| [SplitWordsOptions](String/SplitWordsOptions.md) | Options for the [splitWords](English/splitWords.md) function |
 | [splitChars](String/splitChars.md) | Split a string into an array of characters |
 | [splitLines](String/splitLines.md) | Split a string into an array of lines |
-| [splitWords](String/splitWords.md) | Split a string into an array of words |
 
 ### Templates
 

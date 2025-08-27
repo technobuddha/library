@@ -10,7 +10,7 @@ Technobuddha Library
 function midpoint(line: LineSegment, part: number): Cartesian;
 ```
 
-Defined in: [midpoint.ts:14](https://github.com/technobuddha/library/blob/main/src/midpoint.ts#L14)
+Defined in: [midpoint.ts:17](https://github.com/technobuddha/library/blob/main/src/midpoint.ts#L17)
 
 Calculates a point at a given fraction (`part`) along a line segment.  By default it returns the
 true midpoint of the line segment
@@ -27,4 +27,10 @@ true midpoint of the line segment
 [`Cartesian`](Cartesian.md)
 
 The Cartesian coordinates of the calculated point.
+
+## Example
+
+```typescript
+midpoint({ x0: 0, y0: 0, x1: 4, y1: 4 }); // { x: 2, y: 2 }
+```
 

@@ -10,24 +10,32 @@ Technobuddha Library
 function angleReflection(
    angle: number, 
    axis: number, 
-   units: AngleUnit): number;
+   options: UnitOptions): number;
 ```
 
-Defined in: [angle-reflection.ts:16](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L16)
+Defined in: [angle-reflection.ts:21](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L21)
 
 Calculates the reflection of an angle across a specified axis.
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `angle` | `number` | `undefined` | The angle to reflect. |
-| `axis` | `number` | `undefined` | The axis across which to reflect the angle. |
-| `units` | [`AngleUnit`](AngleUnit.md) | `'radians'` | The unit of the angles ('radians' by default). |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `angle` | `number` | The angle to reflect. |
+| `axis` | `number` | The axis across which to reflect the angle. |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
 `number`
 
 The reflected angle, in the specified units.
+
+## Example
+
+```typescript
+angleReflection(0, Math.PI / 2); // π
+angleReflection((3 * Math.PI) / 2, Math.PI); // π/2
+angleReflection(60, 30, 'degrees'); // 0
+```
 

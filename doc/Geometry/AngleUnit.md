@@ -7,10 +7,37 @@ Technobuddha Library
 # Type Alias: AngleUnit
 
 ```ts
-type AngleUnit = "deg" | "degrees" | "rads" | "radians" | "grads" | "gradians" | "turns";
+type AngleUnit = 
+  | "deg"
+  | "degrees"
+  | "rad"
+  | "radians"
+  | "turn"
+  | "turns"
+  | "arcmin"
+  | "arcminutes"
+  | "arcsec"
+  | "arcseconds"
+  | "grad"
+  | "gradians";
 ```
 
-Defined in: [angle.ts:7](https://github.com/technobuddha/library/blob/main/src/angle.ts#L7)
+Defined in: [angle.ts:24](https://github.com/technobuddha/library/blob/main/src/angle.ts#L24)
 
 Types of angle units
+
+| unit          | number in full circle |
+| ------------- | --------------------- |
+| deg           | 360                   |
+| degrees       | 360                   |
+| rad           | 2π                    |
+| radians       | 2π                    |
+| turn          | 1                     |
+| turns         | 1                     |
+| arcmin        | 21600                 |
+| arcminute     | 21600                 |
+| arcsec        | 1296000               |
+| arcsecond     | 1296000               |
+| grad          | 400                   |
+| gradians      | 400                   |
 

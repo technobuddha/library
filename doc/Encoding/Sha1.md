@@ -6,7 +6,7 @@ Technobuddha Library
 
 # Class: Sha1
 
-Defined in: [sha-1.ts:63](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L63)
+Defined in: [sha-1.ts:125](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L125)
 
 Secure Hash Algorithm, SHA-1
 
@@ -37,7 +37,7 @@ sha1.digest('hex');
 new Sha1(): Sha1;
 ```
 
-Defined in: [sha-1.ts:79](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L79)
+Defined in: [sha-1.ts:141](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L141)
 
 Creates a new SHA-1 hash instance and initializes its internal state.
 

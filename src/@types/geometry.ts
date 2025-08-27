@@ -26,8 +26,8 @@ export const Origin: Cartesian = { x: 0, y: 0 };
  * @category Coordinates
  */
 export type Polar = {
-  radius: number;
-  angle: number;
+  r: number;
+  φ: number;
 };
 
 /**
@@ -66,4 +66,20 @@ export type Rect = Cartesian & {
   width: number;
   /** The height of the rectangle. */
   height: number;
+};
+
+/**
+ * Represents a two-dimensional amount `x` and `y` aspects.
+ * @group Geometry
+ * @category Coordinates
+ */
+export type XY = {
+  /**
+   * The horizontal amount.
+   */
+  x: number;
+  /**
+   * The vertical amount.
+   */
+  y: number;
 };

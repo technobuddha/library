@@ -10,7 +10,7 @@ Technobuddha Library
 function isCartesian(point: unknown): point is Cartesian;
 ```
 
-Defined in: [is-cartesian.ts:15](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L15)
+Defined in: [is-cartesian.ts:19](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L19)
 
 Determines if the provided value is a Cartesian point.
 
@@ -28,4 +28,11 @@ that contains numeric `x` and `y` properties.
 `point is Cartesian`
 
 `true` if the value is a Cartesian point, otherwise `false`.
+
+## Example
+
+```typescript
+isCartesian({ x: 10, y: 20 }); // true
+isCartesian({ r: 10, φ: 20 }); // false
+```
 

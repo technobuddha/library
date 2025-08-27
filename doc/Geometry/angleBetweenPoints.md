@@ -10,10 +10,10 @@ Technobuddha Library
 function angleBetweenPoints(
    a: Cartesian, 
    b: Cartesian, 
-   unit: AngleUnit): number;
+   options: UnitOptions): number;
 ```
 
-Defined in: [angle-between-points.ts:18](https://github.com/technobuddha/library/blob/main/src/angle-between-points.ts#L18)
+Defined in: [angle-between-points.ts:23](https://github.com/technobuddha/library/blob/main/src/angle-between-points.ts#L23)
 
 Computes the angle between two points (x1,y1) and (x2,y2).
 Angle zero points in the +X direction, π/2 radians points in the +Y
@@ -21,15 +21,23 @@ direction (down) and from there we grow clockwise towards π*2 radians.
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `a` | [`Cartesian`](Cartesian.md) | `undefined` | first point. |
-| `b` | [`Cartesian`](Cartesian.md) | `undefined` | second. |
-| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` | The angle unit to use for the output. |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `a` | [`Cartesian`](Cartesian.md) | first point. |
+| `b` | [`Cartesian`](Cartesian.md) | second. |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
 `number`
 
 Standardized angle of the vector from *a* to *b*.
+
+## Example
+
+```typescript
+angleBetweenPoints({ x: 0, y: 0 }, { x: 10, y: 0 }); // 0
+angleBetweenPoints({ x: 0, y: 0 }, { x: 10, y: 10 }); // π/4
+angleBetweenPoints({ x: 0, y: 0 }, { x: 0, y: 10 }, 'deg'); // 45
+```
 

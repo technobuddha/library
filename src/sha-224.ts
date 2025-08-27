@@ -1,6 +1,15 @@
 /* eslint-disable no-bitwise */
 import { ShaBase } from './sha-base.ts';
 
+/**
+ * Constants used in the SHA-224 and SHA-256 cryptographic hash functions.
+ *
+ * These 32-bit integer values are the first 32 bits of the fractional parts of the cube roots of the first 64 prime numbers.
+ * They are used as round constants in the main compression function of the SHA-2 family of algorithms.
+ *
+ * @see [FIPS PUB 180-4, Section 4.2.2](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)
+ * @internal
+ */
 const K = [
   0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5,
   0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174,
@@ -12,31 +21,113 @@ const K = [
   0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2,
 ];
 
+/**
+ * Converts a given number to a 32-bit signed integer.
+ *
+ * This function uses bitwise OR with zero to truncate the input number
+ * to a 32-bit signed integer, effectively emulating the behavior of
+ * `Math.trunc(x) | 0` for integer conversion.
+ *
+ * @param x - The number to convert.
+ * @returns The 32-bit signed integer representation of the input.
+ * @internal
+ */
 function int32(x: number): number {
   // eslint-disable-next-line unicorn/prefer-math-trunc
   return x | 0;
 }
 
+/**
+ * Computes the SHA-2 'choose' (ch) function.
+ *
+ * The function selects bits from `y` or `z` based on the value of `x`.
+ * For each bit position, if the corresponding bit in `x` is 1, the bit from `y` is selected;
+ * otherwise, the bit from `z` is selected.
+ *
+ * Mathematically: ch(x, y, z) = (x & y) ^ (~x & z)
+ *
+ * @param x - The selector value.
+ * @param y - The first input value.
+ * @param z - The second input value.
+ * @returns The result of the 'choose' function.
+ * @internal
+ */
 function ch(x: number, y: number, z: number): number {
   return z ^ (x & (y ^ z));
 }
 
+/**
+ * Computes the majority function of three 32-bit numbers.
+ *
+ * For each bit position, the result is the value that occurs in at least two of the inputs.
+ * This function is commonly used in cryptographic hash algorithms such as SHA-2.
+ *
+ * @param x - The first 32-bit integer input.
+ * @param y - The second 32-bit integer input.
+ * @param z - The third 32-bit integer input.
+ * @returns The majority value as a 32-bit integer.
+ * @internal
+ */
 function maj(x: number, y: number, z: number): number {
   return (x & y) | (z & (x | y));
 }
 
+/**
+ * Computes the SHA-224/SHA-256 σ₀ (sigma0) function for a 32-bit integer.
+ *
+ * This function performs a bitwise rotation and XOR combination as defined in the SHA-2 specification:
+ *   σ₀(x) = ROTR²(x) ⊕ ROTR¹³(x) ⊕ ROTR²²(x)
+ *
+ * @param x - The 32-bit integer input.
+ * @returns The result of applying the σ₀ function to the input.
+ * @internal
+ */
 function sigma0(x: number): number {
   return ((x >>> 2) | (x << 30)) ^ ((x >>> 13) | (x << 19)) ^ ((x >>> 22) | (x << 10));
 }
 
+/**
+ * Computes the SHA-224/SHA-256 σ₁ (sigma1) function for a 32-bit integer.
+ *
+ * This function performs bitwise right rotations and XORs as defined in the SHA-2 specification:
+ *   σ₁(x) = ROTR⁶(x) ⊕ ROTR¹¹(x) ⊕ ROTR²⁵(x)
+ *
+ * @param x - The 32-bit integer input.
+ * @returns The result of applying the σ₁ function to the input.
+ * @internal
+ */
 function sigma1(x: number): number {
   return ((x >>> 6) | (x << 26)) ^ ((x >>> 11) | (x << 21)) ^ ((x >>> 25) | (x << 7));
 }
 
+/**
+ * Computes the SHA-224/SHA-256 σ₀ (gamma0) function for a 32-bit integer.
+ *
+ * This function performs a bitwise rotation and shift, then combines the results using XOR,
+ * as defined in the SHA-2 specification:
+ *   σ₀(x) = ROTR⁷(x) ⊕ ROTR¹⁸(x) ⊕ SHR³(x)
+ *
+ * @param x - The 32-bit integer input.
+ * @returns The result of the σ₀ transformation.
+ * @internal
+ */
 function gamma0(x: number): number {
   return ((x >>> 7) | (x << 25)) ^ ((x >>> 18) | (x << 14)) ^ (x >>> 3);
 }
 
+/**
+ * Computes the SHA-224/SHA-256 σ₁ (gamma1) function for a 32-bit integer.
+ *
+ * This function performs bitwise operations as defined in the SHA-2 specification:
+ *   σ₁(x) = ROTR^17(x) XOR ROTR^19(x) XOR SHR^10(x)
+ * where:
+ *   - ROTR^n(x) is the right rotation of x by n bits,
+ *   - SHR^n(x) is the right shift of x by n bits.
+ *
+ * @param x - The 32-bit integer input.
+ * @returns The result of applying the σ₁ function to the input.
+ * @internal
+ */
 function gamma1(x: number): number {
   return ((x >>> 17) | (x << 15)) ^ ((x >>> 19) | (x << 13)) ^ (x >>> 10);
 }

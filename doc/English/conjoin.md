@@ -10,9 +10,9 @@ Technobuddha Library
 function conjoin<T>(input: ArrayLike<T>, options: ConjoinOptions): string;
 ```
 
-Defined in: [conjoin.ts:27](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L27)
+Defined in: [conjoin.ts:48](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L48)
 
-Create a string from an array, separating values and inserting a conjunction
+Create a list from an array, separating values and inserting a conjunction
 
 ## Type Parameters
 
@@ -30,4 +30,17 @@ Create a string from an array, separating values and inserting a conjunction
 ## Returns
 
 `string`
+
+## Example
+
+```typescript
+const stooges = ['Larry', 'Moe', 'Curly'];
+conjoin(stooges);
+// 'Larry, Moe, and Curly'
+```
+```typescript
+const amigos = ['Lucky Day', 'Dusty Bottoms', 'Ned Nederlander'];
+conjoin(amigos, { conjunction: 'or', oxford: false, separator: ';' });
+// 'Lucky Day; Dusty Bottoms or Ned Nederlander'
+```
 

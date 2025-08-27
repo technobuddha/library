@@ -12,18 +12,61 @@
 
 import { ShaBase } from './sha-base.ts';
 
+/**
+ * Rotates a 32-bit number left by 1 bit.
+ *
+ * @param num - The 32-bit integer to rotate.
+ * @returns The result of rotating `num` left by 1 bit.
+ * @internal
+ */
 function rotl1(num: number): number {
   return (num << 1) | (num >>> 31);
 }
 
+/**
+ * Rotates a 32-bit number to the left by 5 bits.
+ *
+ * This function performs a circular left shift (rotation) on the input number,
+ * moving the highest 5 bits to the lowest 5 bit positions.
+ *
+ * @param num - The 32-bit number to rotate.
+ * @returns The result of rotating `num` to the left by 5 bits.
+ * @internal
+ */
 function rotl5(num: number): number {
   return (num << 5) | (num >>> 27);
 }
 
+/**
+ * Rotates a 32-bit number to the left by 30 bits.
+ *
+ * This function performs a circular left shift (rotate left) on the input number by 30 bits.
+ * Bits shifted out on the left are reintroduced on the right.
+ *
+ * @param num - The 32-bit number to rotate.
+ * @returns The result of rotating `num` to the left by 30 bits.
+ * @internal
+ */
 function rotl30(num: number): number {
   return (num << 30) | (num >>> 2);
 }
 
+/**
+ * SHA-1 auxiliary function `ft` used in the main loop of the SHA-1 hash algorithm.
+ *
+ * Depending on the value of `s`, this function computes one of three logical functions
+ * used in different rounds of SHA-1:
+ * - If `s === 0`: Returns the result of the "choose" function: (b & c) | (~b & d)
+ * - If `s === 2`: Returns the result of the "majority" function: (b & c) | (b & d) | (c & d)
+ * - Otherwise: Returns the result of the "parity" function: b ^ c ^ d
+ *
+ * @param s - The round selector (typically 0, 1, 2, or 3) determining which logical function to use.
+ * @param b - The first 32-bit integer input.
+ * @param c - The second 32-bit integer input.
+ * @param d - The third 32-bit integer input.
+ * @returns The result of the selected logical function as a 32-bit integer.
+ * @internal
+ */
 function ft(s: number, b: number, c: number, d: number): number {
   if (s === 0) {
     return (b & c) | (~b & d);
@@ -34,8 +77,27 @@ function ft(s: number, b: number, c: number, d: number): number {
   return b ^ c ^ d;
 }
 
+/**
+ * SHA-1 round constants.
+ *
+ * These are the four constant values used in the SHA-1 hash algorithm,
+ * one for each of the four main rounds of the compression function.
+ *
+ * @see {@link https://en.wikipedia.org/wiki/SHA-1#SHA-1_pseudocode}
+ * @internal
+ */
 const K = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6];
 
+/**
+ * Converts a number to a 32-bit signed integer using bitwise OR.
+ *
+ * This function effectively truncates the decimal part of the number
+ * and ensures the result fits within the 32-bit signed integer range.
+ *
+ * @param x - The number to convert.
+ * @returns The 32-bit signed integer representation of the input.
+ * @internal
+ */
 function int32(x: number): number {
   // eslint-disable-next-line unicorn/prefer-math-trunc
   return x | 0;

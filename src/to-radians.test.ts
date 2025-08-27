@@ -26,11 +26,11 @@ describe('toRadians', () => {
   });
 
   test('accepts units', () => {
-    expect(toRadians(90, 'degrees')).toBeCloseTo(Math.PI / 2);
-    expect(toRadians(Math.PI / 2, 'radians')).toBeCloseTo(Math.PI / 2);
-    expect(toRadians(Math.PI / 2, 'rads')).toBeCloseTo(Math.PI / 2);
-    expect(toRadians(100, 'gradians')).toBeCloseTo(Math.PI / 2);
-    expect(toRadians(100, 'grads')).toBeCloseTo(Math.PI / 2);
-    expect(toRadians(1 / 4, 'turns')).toBeCloseTo(Math.PI / 2);
+    expect(toRadians(90, { unit: 'degrees' })).toBeCloseTo(Math.PI / 2);
+    expect(toRadians(Math.PI / 2, { unit: 'radians' })).toBeCloseTo(Math.PI / 2);
+    expect(toRadians(Math.PI / 2, { unit: 'rad' })).toBeCloseTo(Math.PI / 2);
+    expect(toRadians(100, { unit: 'gradians' })).toBeCloseTo(Math.PI / 2);
+    expect(toRadians(100, { unit: 'grad' })).toBeCloseTo(Math.PI / 2);
+    expect(toRadians(1 / 4, { unit: 'turns' })).toBeCloseTo(Math.PI / 2);
   });
 });

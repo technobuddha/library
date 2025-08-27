@@ -20,13 +20,16 @@ const TESTS: [string, RegExp][] = [
 ];
 
 /**
- * Options for determining the indefinite article to use with a word.
+ * Options for {@link indefiniteArticle} to determine the indefinite article to use with a word.
  *
  * @group English
  * @category Parts of Speech
  */
 export type IndefiniteArticleOptions = {
-  /** only return the indefinite article, do not combine with the input */
+  /**
+   * Only return the indefinite article, do not combine with the input
+   * @defaultValue false
+   */
   only?: boolean;
 };
 
@@ -39,7 +42,6 @@ export type IndefiniteArticleOptions = {
  *
  * @param word - The word
  * @param options - see {@link IndefiniteArticleOptions}
- * @defaultValue only false
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
  * @group English

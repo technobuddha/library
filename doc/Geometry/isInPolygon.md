@@ -10,7 +10,7 @@ Technobuddha Library
 function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon): boolean;
 ```
 
-Defined in: [is-in-polygon.ts:26](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L26)
+Defined in: [is-in-polygon.ts:33](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L33)
 
 Determines whether a given point or rectangle is inside or on the edge of a polygon.
 
@@ -26,6 +26,15 @@ Determines whether a given point or rectangle is inside or on the edge of a poly
 `boolean`
 
 `true` if the object is inside the polygon or on its edge, otherwise `false`.
+
+## Example
+
+```typescript
+isInPolygon(
+  { x: 5, y: 5 },
+  [{ x: 0, y: 0 }, { x: 10, y: 0}, { x: 10, y: 10 }, { x: 0, y: 10 }]
+); // true
+```
 
 ## Remarks
 

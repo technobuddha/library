@@ -10,26 +10,26 @@ Technobuddha Library
 function angleDifference(
    startAngle: number, 
    endAngle: number, 
-   unit: AngleUnit): number;
+   options: UnitOptions): number;
 ```
 
-Defined in: [angle-difference.ts:30](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L30)
+Defined in: [angle-difference.ts:28](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L28)
 
 Computes the difference between startAngle and endAngle.
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `startAngle` | `number` | `undefined` | Start angle in radians. |
-| `endAngle` | `number` | `undefined` | End angle in radians. |
-| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` | The angle unit to use for the output. |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `startAngle` | `number` | Start angle. |
+| `endAngle` | `number` | End angle. |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
 `number`
 
-The number of radians that when added to *startAngle* will result in *endAngle*.
+The amount that when added to *startAngle* will result in *endAngle*.
 
 ## Remarks
 
@@ -40,13 +40,9 @@ When the difference is π radians, the function returns π (not -π)
 
 ## Example
 
-```ts
-angleDifference(π * 1/6,  π * 2/6) is π * 1/6
-
-angleDifference(π * 2/6, π * 1/6)  is -π * 1/6.
-
-angleDifference(π * 11/6, π * 1/6) is π * 2/6
-
-angleDifference(π * 1/6, π * 11/6) is -π * 1/6.
+```typescript
+angleDifference(Math.PI * 1/6, Math.PI * 2/6); // π * 1/6
+angleDifference(Math.PI * 2/6, Math.PI * 1/6); // -π * 1/6.
+angleDifference(30, 60, 'deg'); // 30
 ```
 

@@ -22,7 +22,7 @@ describe('angleReflection', () => {
   });
 
   test('reflects angle with units parameter', () => {
-    const result = angleReflection(60, 30, 'degrees');
+    const result = angleReflection(60, 30, { unit: 'degrees' });
     expect(result).toBeCloseTo(0);
   });
 

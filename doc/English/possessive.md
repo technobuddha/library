@@ -10,7 +10,7 @@ Technobuddha Library
 function possessive(input: string): string;
 ```
 
-Defined in: [possessive.ts:12](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L12)
+Defined in: [possessive.ts:19](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L19)
 
 Determine the possessive form of a word
 
@@ -18,11 +18,20 @@ Determine the possessive form of a word
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `input` | `string` | the word |
+| `input` | `string` | The word |
 
 ## Returns
 
 `string`
 
-the possessive form of the word
+The possessive form of the word
+
+## Example
+
+```typescript
+possessive('Calvin');  // "Calvin's"
+possessive('Hobbes');  // "Hobbes'"
+possessive('BUGS');    // "BUGS'"
+possessive('ELMER');   // "ELMER'S"
+```
 

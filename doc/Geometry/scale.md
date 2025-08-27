@@ -6,83 +6,72 @@ Technobuddha Library
 
 # Function: scale()
 
+Scales a point or a polygon of points around a given origin by a specified amount.
+
 ## Call Signature
 
 ```ts
 function scale(
    point: Cartesian, 
-   amount: number | Cartesian, 
-   origin?: Cartesian): Cartesian;
+   amount: number | XY, 
+   options?: OriginOptions): Cartesian;
 ```
 
-Defined in: [scale.ts:39](https://github.com/technobuddha/library/blob/main/src/scale.ts#L39)
+Defined in: [scale.ts:36](https://github.com/technobuddha/library/blob/main/src/scale.ts#L36)
 
-Scales a point or a polygon of points around a given origin by a specified amount.
+Scales a point around a given origin by a specified amount.
 
 ### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `point` | [`Cartesian`](Cartesian.md) | The point or array of points to rotate. Each point should be an object with `x` and `y` properties. |
-| `amount` | `number` \| [`Cartesian`](Cartesian.md) | The amount to scale the point(s) by. This can be a number (uniform scaling) or a Cartesian object (non-uniform scaling). |
-| `origin?` | [`Cartesian`](Cartesian.md) | (Optional) The origin to rotate around. Defaults to `{ x: 0, y: 0 }` if not provided. |
+| `point` | [`Cartesian`](Cartesian.md) | The point to rotate. |
+| `amount` | `number` \| [`XY`](XY.md) | The amount to scale the point(s) by. This can be a number (uniform scaling) or a Cartesian object (non-uniform scaling). |
+| `options?` | [`OriginOptions`](OriginOptions.md) | see [OriginOptions](OriginOptions.md) |
 
 ### Returns
 
 [`Cartesian`](Cartesian.md)
 
-The rotated point or array of rotated points.
+The rotated point.
 
-### Examples
-
-```typescript
-const point = { x: 1, y: 0 };
-const rotated = scale(point, 2); // { x: 2, y: 0 }
-```
+### Example
 
 ```typescript
-const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
-const rotated = scale(points, 2);
-// [{ x: 2, y: 0 }, { x: 0, y: 2 }]
+scale({ x: 1, y: 0 }, 2); // { x: 2, y: 0 }
 ```
 
 ## Call Signature
 
 ```ts
 function scale(
-   point: Polygon, 
-   angle: number | Cartesian, 
-   origin?: Cartesian): Cartesian[];
+   polygon: Polygon, 
+   amount: number | XY, 
+   options?: OriginOptions): Cartesian[];
 ```
 
-Defined in: [scale.ts:40](https://github.com/technobuddha/library/blob/main/src/scale.ts#L40)
+Defined in: [scale.ts:49](https://github.com/technobuddha/library/blob/main/src/scale.ts#L49)
 
-Scales a point or a polygon of points around a given origin by a specified amount.
+Scales a polygon around a given origin by a specified amount.
 
 ### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `point` | [`Polygon`](Polygon.md) | The point or array of points to rotate. Each point should be an object with `x` and `y` properties. |
-| `angle` | `number` \| [`Cartesian`](Cartesian.md) | - |
-| `origin?` | [`Cartesian`](Cartesian.md) | (Optional) The origin to rotate around. Defaults to `{ x: 0, y: 0 }` if not provided. |
+| `polygon` | [`Polygon`](Polygon.md) | The polygon to rotate |
+| `amount` | `number` \| [`XY`](XY.md) | The amount to scale the point(s) by. This can be a number (uniform scaling) or a Cartesian object (non-uniform scaling). |
+| `options?` | [`OriginOptions`](OriginOptions.md) | see [OriginOptions](OriginOptions.md) |
 
 ### Returns
 
 [`Cartesian`](Cartesian.md)[]
 
-The rotated point or array of rotated points.
+The rotated polygon
 
-### Examples
-
-```typescript
-const point = { x: 1, y: 0 };
-const rotated = scale(point, 2); // { x: 2, y: 0 }
-```
+### Example
 
 ```typescript
-const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
-const rotated = scale(points, 2);
-// [{ x: 2, y: 0 }, { x: 0, y: 2 }]
+scale([{ x: 0, y: 0 }, { x: 2, y: 0 }, { x: 1, y: 2}], 2);
+// [{ x: 0, y: 0 }, { x: 4, y: 0 }, { x: 2, y: 4 }]
 ```
 

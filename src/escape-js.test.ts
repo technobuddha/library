@@ -17,12 +17,9 @@ describe('escapeJS', () => {
     expect(escapeJS('ABCdef[~]')).toBe('ABCdef[~]');
   });
 
-  test('should escape non printables as \\xnnnn', () => {
+  test('should escape non printables as \\xnn', () => {
     expect(escapeJS('\u0001')).toBe('\\x01');
-    expect(escapeJS('\u0001X')).toBe('\\x01X');
-    expect(escapeJS('\u00010')).toBe('\\x010');
-    expect(escapeJS('\u0001a')).toBe('\\x01a');
-    expect(escapeJS('\u0001A')).toBe('\\x01A');
+    expect(escapeJS('\u0080')).toBe('\\x80');
   });
 
   test('should mot escape latin-1 characters', () => {

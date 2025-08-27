@@ -10,19 +10,22 @@ Technobuddha Library
 function manhattanDistance(a: Cartesian, b: Cartesian): number;
 ```
 
-Defined in: [manhattan-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/manhattan-distance.ts#L23)
+Defined in: [manhattan-distance.ts:21](https://github.com/technobuddha/library/blob/main/src/manhattan-distance.ts#L21)
 
-Calculates the Manhattan distance between two points in Cartesian coordinates.
+Calculates the Manhattan Distance between two points in Cartesian coordinates.
 
-The Manhattan distance is the sum of the absolute differences of their Cartesian coordinates.
-It is often used in grid-based path-finding algorithms.
+The Manhattan Distance is based on the number of blocks that one would have
+to walk in Manhattan to get from one point to another.   It is assumed that
+"Manhattan" is an orthogonal grid where no diagonal movement is allowed.
+
+Manhattan distance is often used in grid-based path-finding algorithms.
 
 ## Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `a` | [`Cartesian`](Cartesian.md) | The first point with `x` and `y` properties. |
-| `b` | [`Cartesian`](Cartesian.md) | The second point with `x` and `y` properties. |
+| `a` | [`Cartesian`](Cartesian.md) | The first point. |
+| `b` | [`Cartesian`](Cartesian.md) | The second point. |
 
 ## Returns
 
@@ -33,8 +36,6 @@ The Manhattan distance between the two points.
 ## Example
 
 ```typescript
-const pointA = { x: 1, y: 2 };
-const pointB = { x: 4, y: 6 };
-const distance = manhattanDistance(pointA, pointB); // 7
+manhattanDistance({ x: 1, y: 2 }, { x: 4, y: 6 }); // 7
 ```
 

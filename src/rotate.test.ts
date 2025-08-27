@@ -25,7 +25,7 @@ describe('rotate', () => {
     const point = { x: 2, y: 3 };
     const angle = Math.PI / 4; // 45 degrees
     const origin = { x: 1, y: 1 };
-    const rotated = rotate(point, angle, origin);
+    const rotated = rotate(point, angle, { origin });
     expect(rotated).toBeDeepCloseTo({ x: 1 - Math.SQRT1_2, y: (2 + 3 * Math.SQRT2) / 2 });
   });
 });

@@ -8,8 +8,8 @@ Technobuddha Library
 
 ```ts
 type Polar = {
-  angle: number;
-  radius: number;
+  r: number;
+  φ: number;
 };
 ```
 
@@ -21,6 +21,6 @@ Polar coordinate (angle, radius)
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="angle"></a> `angle` | `number` | [@types/geometry.ts:30](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L30) |
-| <a id="radius"></a> `radius` | `number` | [@types/geometry.ts:29](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L29) |
+| <a id="r"></a> `r` | `number` | [@types/geometry.ts:29](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L29) |
+| <a id="φ"></a> `φ` | `number` | [@types/geometry.ts:30](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L30) |
 

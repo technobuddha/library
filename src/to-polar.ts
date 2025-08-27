@@ -1,17 +1,20 @@
 import { type Cartesian, type Polar } from './@types/geometry.ts';
+import { type UnitOptions } from './angle.ts';
 import { normalizeAngle } from './normalize-angle.ts';
+import { toAngle } from './to-angle.ts';
 
 /**
  * Convert cartesian coordinates to polar
  *
- * @param options - see {@link Cartesian}
+ * @param coordinate - The Cartesian coordinate to convert.
+ * @param options - see {@link UnitOptions}
  * @returns polar coordinated
  * @group Geometry
  * @category Coordinates
  */
-export function toPolar({ x, y }: Cartesian): Polar {
+export function toPolar(coordinate: Cartesian, { unit = 'radians' }: UnitOptions = {}): Polar {
   return {
-    radius: Math.hypot(x, y),
-    angle: normalizeAngle(Math.atan2(y, x)),
+    r: Math.hypot(coordinate.x, coordinate.y),
+    φ: toAngle(normalizeAngle(Math.atan2(coordinate.y, coordinate.x)), 'radians', unit),
   };
 }

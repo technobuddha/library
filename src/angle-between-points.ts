@@ -1,5 +1,5 @@
 import { type Cartesian } from './@types/geometry.ts';
-import { type AngleUnit } from './angle.ts';
+import { type UnitOptions } from './angle.ts';
 import { normalizeAngle } from './normalize-angle.ts';
 import { toAngle } from './to-angle.ts';
 /**
@@ -9,16 +9,21 @@ import { toAngle } from './to-angle.ts';
  *
  * @param a - first point.
  * @param b - second.
- * @param unit - The angle unit to use for the output.
+ * @param options - see {@link UnitOptions}
  * @returns Standardized angle of the vector from *a* to *b*.
- *
+ * @example
+ * ```typescript
+ * angleBetweenPoints({ x: 0, y: 0 }, { x: 10, y: 0 }); // 0
+ * angleBetweenPoints({ x: 0, y: 0 }, { x: 10, y: 10 }); // π/4
+ * angleBetweenPoints({ x: 0, y: 0 }, { x: 0, y: 10 }, 'deg'); // 45
+ * ```
  * @group Geometry
  * @category Angle
  */
 export function angleBetweenPoints(
   a: Cartesian,
   b: Cartesian,
-  unit: AngleUnit = 'radians',
+  { unit = 'radians' }: UnitOptions = {},
 ): number {
   return toAngle(normalizeAngle(Math.atan2(b.y - a.y, b.x - a.x)), 'radians', unit);
 }

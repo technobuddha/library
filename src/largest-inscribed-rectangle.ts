@@ -27,7 +27,7 @@ export type RotatedRect = Rect & {
  * @group Geometry
  * @category Rectangle
  */
-export type LargestInscribedRectangleOptions = {
+export type LargestInscribedRectUnitOptions = {
   /**
    * If true, only consider axis-aligned rectangles.
    * If false, considers rectangles at all orientations.
@@ -71,7 +71,7 @@ export function largestInscribedRectangle(
 ): RotatedRect;
 export function largestInscribedRectangle(
   polygon: Polygon,
-  { aligned = true, squareOnly = false }: LargestInscribedRectangleOptions = {},
+  { aligned = true, squareOnly = false }: LargestInscribedRectUnitOptions = {},
 ): Rect | RotatedRect {
   if (polygon.length < 3) {
     throw new Error(`Polygon must have at least 3 vertices, received ${polygon.length}`);

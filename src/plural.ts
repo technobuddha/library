@@ -8,6 +8,14 @@ import { empty, space } from './unicode.ts';
  * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
  * @param include - If true and quantity is supplied, the quantity is prepended to the output.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
+ * @example
+ * ```typescript
+ * plural('cat'); // cats
+ * plural('mouse', 1); // mouse
+ * plural('mouse', 2); // mice
+ * plural('dog', 1, true); // 1 dog
+ * plural('dog', 2, true); // 2 dogs
+ * ```
  * @group English
  * @category Parts of Speech
  */

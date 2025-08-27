@@ -2,8 +2,8 @@ import { type Cartesian, type Polar } from './@types/geometry.ts';
 
 describe('coordinates', () => {
   test('Polar', () => {
-    const polar: Polar = { angle: Math.PI / 4, radius: 100 };
-    expect(polar).toEqual({ angle: Math.PI / 4, radius: 100 });
+    const polar: Polar = { φ: Math.PI / 4, r: 100 };
+    expect(polar).toEqual({ φ: Math.PI / 4, r: 100 });
   });
 
   test('Cartesian', () => {

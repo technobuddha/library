@@ -1,35 +1,51 @@
-import { type Cartesian, type Polygon } from './@types/geometry.ts';
+import { type Cartesian, type Polygon, type XY } from './@types/geometry.ts';
 
+/**
+ * Translates a point in Cartesian coordinates by a given amount.
+ *
+ * @param point - The original point to translate.
+ * @param amount - The amount to translate the point by, represented as a Cartesian vector.
+ * @returns A new Cartesian point resulting from translating the original point by the specified amount.
+ * @internal
+ */
 function translatePoint(point: Cartesian, amount: Cartesian): Cartesian {
   return { x: point.x + amount.x, y: point.y + amount.y };
 }
 
 /**
- * Translate a point or an array of points by a specified amount.
- *
+ * Translate a point by a specified amount.
+ * @param point - The point or array of points to translate.
+ * @param amount - The amount to move the point by.
+ * @returns The translated point.
  * @example
  * ```typescript
- * const point = { x: 1, y: 0 };
- * const translated = translate(point, { x: 1, y: 2 }); // { x: 2, y: 2 }
+ * translate({ x: 1, y: 0 }t, { x: 1, y: 2 }); // { x: 2, y: 2 }
  * ```
- *
+ */
+export function translate(point: Cartesian, amount: XY): Cartesian;
+/**
+ * Translate a polygon by a specified amount.
  * @example
  * ```typescript
- * const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
- * const translated = translate(points, { x: 1, y: 2 });
- * // [{ x: 2, y: 2 }, { x: 2, y: 3 }]
+ * translate([{ x: 0, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1}], { x: 1, y: 2 });
+ * // [{ x: 1, y: 2 }, { x: 2, y: 3 }, { x: 1, y: 3 }]
  * ```
  *
- * @param point - The point or array of points to translate. Each point should be an object with `x` and `y` properties.
- * @param amount - The amount to move the point(s) by.
- * @returns The translated point or array of translated points.
+ * @param polygon - The polygon to translate.
+ * @param amount - The amount to move the polygon by.
+ * @returns The translated polygon.
  *
  * @group Geometry
  * @category Point
  * @category Polygon
  */
-export function translate(point: Cartesian, amount: Cartesian): Cartesian;
-export function translate(point: Polygon, amount: Cartesian): Polygon;
+export function translate(polygon: Polygon, amount: Cartesian): Polygon;
+/**
+ * Translate a point or polygon by a specified amount.
+ * @group Geometry
+ * @category Point
+ * @category Polygon
+ */
 export function translate(point: Cartesian | Polygon, amount: Cartesian): Cartesian | Polygon {
   if (Array.isArray(point)) {
     return point.map((p) => translatePoint(p, amount));

@@ -13,7 +13,7 @@ function toAngle(
    to: AngleUnit): number;
 ```
 
-Defined in: [to-angle.ts:14](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L14)
+Defined in: [to-angle.ts:19](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L19)
 
 Converts an angle from one unit to another.
 
@@ -23,11 +23,19 @@ Converts an angle from one unit to another.
 | ------ | ------ | ------ | ------ |
 | `input` | `number` | `undefined` | Angle to convert |
 | `from` | [`AngleUnit`](AngleUnit.md) | `undefined` | The input unit of the angle |
-| `to` | [`AngleUnit`](AngleUnit.md) | `'radians'` | The output unit of the angle (default is 'radians') |
+| `to` | [`AngleUnit`](AngleUnit.md) | `'radians'` | The output unit of the angle |
 
 ## Returns
 
 `number`
 
 Converted angle.
+
+## Example
+
+```typescript
+toAngle(180, 'degrees'); // π
+toAngle(Math.PI, 'radians', 'degrees'); // 180
+toAngle(1, 'turns', 'radians'); // 2π
+```
 

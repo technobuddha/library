@@ -7,8 +7,13 @@ import { empty } from './unicode.ts';
  *
  * @param input - The string
  * @returns the number of syllables
+ * @example
+ * ```typescript
+ * syllables('hello'); // 2
+ * syllables('syllable'); // 3
+ * ```
  * @group English
- * @category Syllables
+ * @category Analysis
  */
 export function syllables(input: string): number {
   return splitWords(toASCII(input.toLocaleLowerCase())).reduce((c, w) => {

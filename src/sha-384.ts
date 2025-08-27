@@ -3,6 +3,14 @@
 
 import { ShaBase } from './sha-base.ts';
 
+/**
+ * The SHA-384 round constants array, `K`, used in the SHA-384 cryptographic hash function.
+ * Each pair of 32-bit integers represents a 64-bit constant, as specified by the FIPS 180-4 standard.
+ * These constants are used during the message schedule and compression function rounds.
+ *
+ * @see [FIPS 180-4: Secure Hash Standard (SHS)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)
+ * @internal
+ */
 const K = [
   0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd, 0xb5c0fbcf, 0xec4d3b2f, 0xe9b5dba5, 0x8189dbbc,
   0x3956c25b, 0xf348b538, 0x59f111f1, 0xb605d019, 0x923f82a4, 0xaf194f9b, 0xab1c5ed5, 0xda6d8118,
@@ -26,43 +34,153 @@ const K = [
   0x4cc5d4be, 0xcb3e42b6, 0x597f299c, 0xfc657e2a, 0x5fcb6fab, 0x3ad6faec, 0x6c44198c, 0x4a475817,
 ];
 
+/**
+ * Converts a given number to a 32-bit signed integer using bitwise OR.
+ *
+ * @param x - The number to convert.
+ * @returns The 32-bit signed integer representation of the input.
+ * @internal
+ */
 function int32(x: number): number {
   // eslint-disable-next-line unicorn/prefer-math-trunc
   return x | 0;
 }
 
+/**
+ * Computes the SHA-384 'choose' (Ch) function.
+ *
+ * The function selects bits from `y` or `z` based on the value of `x`.
+ * For each bit position, if the corresponding bit in `x` is 1, the result is the bit from `y`; otherwise, it is the bit from `z`.
+ *
+ * Mathematically: Ch(x, y, z) = (x & y) ^ (~x & z)
+ *
+ * @param x - The selector value.
+ * @param y - The first input value.
+ * @param z - The second input value.
+ * @returns The result of the choose function.
+ * @internal
+ */
 function çh(x: number, y: number, z: number): number {
   return z ^ (x & (y ^ z));
 }
 
+/**
+ * Computes the majority function of three 32-bit numbers.
+ *
+ * For each bit position, the result is the value that appears in at least two of the inputs.
+ * This function is commonly used in cryptographic hash algorithms such as SHA-2.
+ *
+ * @param x - The first 32-bit number.
+ * @param y - The second 32-bit number.
+ * @param z - The third 32-bit number.
+ * @returns The majority value for each bit position among `x`, `y`, and `z`.
+ * @internal
+ */
 function maj(x: number, y: number, z: number): number {
   return (x & y) | (z & (x | y));
 }
 
+/**
+ * Computes the SHA-384 σ₀ (sigma0) function on a 64-bit value represented by two 32-bit numbers.
+ *
+ * This function performs bitwise operations (rotations and shifts) as specified in the SHA-384 algorithm.
+ * The input is split into two 32-bit parts: `x` (high) and `xl` (low).
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the σ₀ function as a 32-bit integer.
+ * @internal
+ */
 function sigma0(x: number, xl: number): number {
   return ((x >>> 28) | (xl << 4)) ^ ((xl >>> 2) | (x << 30)) ^ ((xl >>> 7) | (x << 25));
 }
 
+/**
+ * Computes the SHA-384 σ₁ (sigma1) function on a 64-bit value represented by two 32-bit numbers.
+ *
+ * This function performs bitwise rotations and shifts according to the SHA-384 specification:
+ *   σ₁(x) = ROTR^14(x) ⊕ ROTR^18(x) ⊕ ROTR^41(x)
+ * where `x` is a 64-bit value split into high (`x`) and low (`xl`) 32-bit parts.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the σ₁ function as a 32-bit number.
+ * @internal
+ */
 function sigma1(x: number, xl: number): number {
   return ((x >>> 14) | (xl << 18)) ^ ((x >>> 18) | (xl << 14)) ^ ((xl >>> 9) | (x << 23));
 }
 
-function ɣ0(x: number, xl: number): number {
+/**
+ * Computes the SHA-384 specific γ₀ (gamma0) function on a 64-bit value represented by two 32-bit numbers.
+ *
+ * This function performs bitwise operations as defined in the SHA-384 specification:
+ *   γ₀(x) = (x \>\>\> 1 | x \<\< 63) ^ (x \>\>\> 8 | x \<\< 56) ^ (x \>\>\> 7)
+ * Here, `x` is split into two 32-bit parts: `x` (high) and `xl` (low).
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the γ₀ function as a 32-bit integer.
+ * @internal
+ */
+function gamma0(x: number, xl: number): number {
   return ((x >>> 1) | (xl << 31)) ^ ((x >>> 8) | (xl << 24)) ^ (x >>> 7);
 }
 
-function ɣ0l(x: number, xl: number): number {
+/**
+ * Computes the SHA-384/SHA-512-specific Gamma0 function for 64-bit words, split into high (`x`) and low (`xl`) 32-bit parts.
+ *
+ * This function performs bitwise right rotations and shifts on the input values and combines them using XOR,
+ * as specified in the SHA-384/SHA-512 hash algorithm.
+ *
+ * @param x - The high 32 bits of the 64-bit word.
+ * @param xl - The low 32 bits of the 64-bit word.
+ * @returns The result of the Gamma0 function as a 32-bit integer.
+ * @internal
+ */
+function gamma0l(x: number, xl: number): number {
   return ((x >>> 1) | (xl << 31)) ^ ((x >>> 8) | (xl << 24)) ^ ((x >>> 7) | (xl << 25));
 }
 
-function ɣ1(x: number, xl: number): number {
+/**
+ * Computes the SHA-384 specific Gamma1 function on a 64-bit value represented by two 32-bit numbers.
+ *
+ * This function applies bitwise rotation and shift operations as defined in the SHA-384 specification.
+ * The input is split into high (`x`) and low (`xl`) 32-bit words of a 64-bit integer.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the Gamma1 function as a 32-bit integer.
+ * @internal
+ */
+function gamma1(x: number, xl: number): number {
   return ((x >>> 19) | (xl << 13)) ^ ((xl >>> 29) | (x << 3)) ^ (x >>> 6);
 }
 
-function ɣ1l(x: number, xl: number): number {
+/**
+ * Computes the SHA-384/SHA-512 specific "gamma1l" bitwise transformation on a 64-bit value
+ * represented by its high (`x`) and low (`xl`) 32-bit parts.
+ *
+ * This function performs a combination of right rotations and shifts, as specified in the
+ * SHA-384/SHA-512 algorithm, to produce the "gamma1" value for the lower 32 bits.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the gamma1l transformation on the input value.
+ * @internal
+ */
+function gamma1l(x: number, xl: number): number {
   return ((x >>> 19) | (xl << 13)) ^ ((xl >>> 29) | (x << 3)) ^ ((x >>> 6) | (xl << 26));
 }
 
+/**
+ * Calculates the carry bit resulting from the addition of two unsigned 32-bit integers.
+ *
+ * @param a - The first unsigned 32-bit integer operand.
+ * @param b - The second unsigned 32-bit integer operand.
+ * @returns 1 if adding `a` and `b` would result in an unsigned overflow (carry), otherwise 0.
+ * @internal
+ */
 function getCarry(a: number, b: number): number {
   return a >>> 0 < b >>> 0 ? 1 : 0;
 }
@@ -155,13 +273,13 @@ export class Sha384 extends ShaBase {
     for (; i < 160; i += 2) {
       let xh = w[i - 15 * 2];
       let xl = w[i - 15 * 2 + 1];
-      const gamma0 = ɣ0(xh, xl);
-      const gamma0l = ɣ0l(xl, xh);
+      const gama0 = gamma0(xh, xl);
+      const gama0l = gamma0l(xl, xh);
 
       xh = w[i - 2 * 2];
       xl = w[i - 2 * 2 + 1];
-      const gamma1 = ɣ1(xh, xl);
-      const gamma1l = ɣ1l(xl, xh);
+      const gama1 = gamma1(xh, xl);
+      const gama1l = gamma1l(xl, xh);
 
       const wi7h = w[i - 7 * 2];
       const wi7l = w[i - 7 * 2 + 1];
@@ -169,10 +287,10 @@ export class Sha384 extends ShaBase {
       const wi16h = w[i - 16 * 2];
       const wi16l = w[i - 16 * 2 + 1];
 
-      wil = int32(gamma0l + wi7l);
-      wih = int32(gamma0 + wi7h + getCarry(wil, gamma0l));
-      wil = int32(wil + gamma1l);
-      wih = int32(wih + gamma1 + getCarry(wil, gamma1l));
+      wil = int32(gama0l + wi7l);
+      wih = int32(gama0 + wi7h + getCarry(wil, gama0l));
+      wil = int32(wil + gama1l);
+      wih = int32(wih + gama1 + getCarry(wil, gama1l));
       wil = int32(wil + wi16l);
       wih = int32(wih + wi16h + getCarry(wil, wi16l));
 

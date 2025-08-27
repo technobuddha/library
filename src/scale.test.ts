@@ -14,13 +14,13 @@ describe('scale', () => {
   test('scales a point uniformly from a custom origin', () => {
     const point = { x: 2, y: 3 };
     const origin = { x: 1, y: 1 };
-    expect(scale(point, 2, origin)).toEqual({ x: 3, y: 5 });
+    expect(scale(point, 2, { origin })).toEqual({ x: 3, y: 5 });
   });
 
   test('scales a point non-uniformly from a custom origin', () => {
     const point = { x: 2, y: 3 };
     const origin = { x: 1, y: 1 };
-    expect(scale(point, { x: 2, y: 3 }, origin)).toEqual({ x: 3, y: 7 });
+    expect(scale(point, { x: 2, y: 3 }, { origin })).toEqual({ x: 3, y: 7 });
   });
 
   test('scales a polygon uniformly from origin', () => {
@@ -51,7 +51,7 @@ describe('scale', () => {
       { x: 3, y: 3 },
     ];
     const origin = { x: 1, y: 1 };
-    expect(scale(polygon, 2, origin)).toEqual([
+    expect(scale(polygon, 2, { origin })).toEqual([
       { x: 3, y: 3 },
       { x: 5, y: 5 },
     ]);

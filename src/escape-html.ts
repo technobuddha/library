@@ -18,11 +18,8 @@ export type EscapeHtmlOptions = {
  * @param options - see {@link EscapeHtmlOptions}
  * @example
  * ```typescript
- * console.log(escapeHTML('<div>hello</div>'));
- * // &lt;div&gt;hello&lt;/div&gt;
- *
- * console.log(escapeHTML('aáΔ😀', { escapeNonASCII: true }));
- * // a&#225;&#916;&#128512;
+ * escapeHTML('<div>hello</div>'); // '&lt;div&gt;hello&lt;/div&gt';
+ * escapeHTML('aáΔ😀', { escapeNonASCII: true }); // 'a&#225;&#916;&#128512';
  * ```
  * @group Encoding
  * @category Escaping

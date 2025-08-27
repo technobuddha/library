@@ -6,6 +6,20 @@ import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
 import { HashBase } from './hash-base.ts';
 
+/**
+ * Precomputed CRC-32 lookup table for fast CRC calculations.
+ *
+ * This table contains 256 entries corresponding to all possible byte values (0-255).
+ * Each entry is the result of applying the CRC-32 polynomial to the byte value,
+ * which allows for efficient computation of the CRC-32 checksum by processing data
+ * one byte at a time.
+ *
+ * The table is based on the standard CRC-32 polynomial (0xEDB88320).
+ *
+ * @see https://en.wikipedia.org/wiki/Cyclic_redundancy_check
+ * @see https://tools.ietf.org/html/rfc1952#section-8
+ * @internal
+ */
 const crcTable: number[] = [
   0, 1996959894, -301047508, -1727442502, 124634137, 1886057615, -379345611, -1637575261, 249268274,
   2044508324, -522852066, -1747789432, 162941995, 2125561021, -407360249, -1866523247, 498536548,
@@ -65,7 +79,6 @@ const crcTable: number[] = [
  * crc.digest('hex');
  * // 'c031d497'
  * ```
- *
  * @group Encoding
  * @category Hash
  */

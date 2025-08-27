@@ -294,6 +294,35 @@
     "title": "English",
     "children": [
       {
+        "title": "Analysis",
+        "children": [
+          {
+            "title": "readability",
+            "kind": 64,
+            "path": "English/readability.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "splitSentences",
+            "kind": 64,
+            "path": "English/splitSentences.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "splitWords",
+            "kind": 64,
+            "path": "English/splitWords.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "syllables",
+            "kind": 64,
+            "path": "English/syllables.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
         "title": "Parts of Speech",
         "children": [
           {
@@ -333,17 +362,6 @@
             "isDeprecated": false
           }
         ]
-      },
-      {
-        "title": "Syllables",
-        "children": [
-          {
-            "title": "syllables",
-            "kind": 64,
-            "path": "English/syllables.md",
-            "isDeprecated": false
-          }
-        ]
       }
     ]
   },
@@ -357,6 +375,18 @@
             "title": "AngleUnit",
             "kind": 2097152,
             "path": "Geometry/AngleUnit.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "OriginOptions",
+            "kind": 2097152,
+            "path": "Geometry/OriginOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "UnitOptions",
+            "kind": 2097152,
+            "path": "Geometry/UnitOptions.md",
             "isDeprecated": false
           },
           {
@@ -431,6 +461,12 @@
             "isDeprecated": false
           },
           {
+            "title": "XY",
+            "kind": 2097152,
+            "path": "Geometry/XY.md",
+            "isDeprecated": false
+          },
+          {
             "title": "Origin",
             "kind": 32,
             "path": "Geometry/Origin.md",
@@ -472,6 +508,12 @@
             "isDeprecated": false
           },
           {
+            "title": "OnLineOptions",
+            "kind": 2097152,
+            "path": "Geometry/OnLineOptions.md",
+            "isDeprecated": false
+          },
+          {
             "title": "angleOfLine",
             "kind": 64,
             "path": "Geometry/angleOfLine.md",
@@ -496,9 +538,9 @@
             "isDeprecated": false
           },
           {
-            "title": "isWithLine",
+            "title": "isRightOfLine",
             "kind": 64,
-            "path": "Geometry/isWithLine.md",
+            "path": "Geometry/isRightOfLine.md",
             "isDeprecated": false
           },
           {
@@ -549,9 +591,9 @@
             "isDeprecated": false
           },
           {
-            "title": "isWithLine",
+            "title": "isRightOfLine",
             "kind": 64,
-            "path": "Geometry/isWithLine.md",
+            "path": "Geometry/isRightOfLine.md",
             "isDeprecated": false
           },
           {
@@ -685,9 +727,9 @@
         "title": "Rectangle",
         "children": [
           {
-            "title": "LargestInscribedRectangleOptions",
+            "title": "LargestInscribedRectUnitOptions",
             "kind": 2097152,
-            "path": "Geometry/LargestInscribedRectangleOptions.md",
+            "path": "Geometry/LargestInscribedRectUnitOptions.md",
             "isDeprecated": false
           },
           {
@@ -700,6 +742,12 @@
             "title": "RotatedRect",
             "kind": 2097152,
             "path": "Geometry/RotatedRect.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isInPolygon",
+            "kind": 64,
+            "path": "Geometry/isInPolygon.md",
             "isDeprecated": false
           },
           {
@@ -1839,12 +1887,6 @@
             "title": "splitLines",
             "kind": 64,
             "path": "String/splitLines.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "splitWords",
-            "kind": 64,
-            "path": "String/splitWords.md",
             "isDeprecated": false
           }
         ]

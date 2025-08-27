@@ -2,7 +2,7 @@ import { isPolar } from './is-polar.ts';
 
 describe('isPolar', () => {
   test('returns true for a valid Polar object', () => {
-    expect(isPolar({ angle: 1.23, radius: 4.56 })).toBeTrue();
+    expect(isPolar({ φ: 1.23, r: 4.56 })).toBeTrue();
   });
 
   test('returns false for null', () => {
@@ -22,23 +22,23 @@ describe('isPolar', () => {
   });
 
   test('returns false for an object missing angle', () => {
-    expect(isPolar({ radius: 5 })).toBeFalse();
+    expect(isPolar({ r: 5 })).toBeFalse();
   });
 
   test('returns false for an object missing radius', () => {
-    expect(isPolar({ angle: 2 })).toBeFalse();
+    expect(isPolar({ φ: 2 })).toBeFalse();
   });
 
   test('returns false for an object with non-numeric angle', () => {
-    expect(isPolar({ angle: 'foo', radius: 3 })).toBeFalse();
+    expect(isPolar({ φ: 'foo', r: 3 })).toBeFalse();
   });
 
   test('returns false for an object with non-numeric radius', () => {
-    expect(isPolar({ angle: 1, radius: 'bar' })).toBeFalse();
+    expect(isPolar({ φ: 1, r: 'bar' })).toBeFalse();
   });
 
   test('returns true for an object with extra properties', () => {
-    expect(isPolar({ angle: 0, radius: 1, extra: true })).toBeTrue();
+    expect(isPolar({ φ: 0, r: 1, extra: true })).toBeTrue();
   });
 
   test('returns false for an array', () => {
@@ -46,10 +46,10 @@ describe('isPolar', () => {
   });
 
   test('returns false for an object with angle and radius as NaN', () => {
-    expect(isPolar({ angle: NaN, radius: NaN })).toBeTrue();
+    expect(isPolar({ φ: NaN, r: NaN })).toBeTrue();
   });
 
   test('returns true for negative radius and angle', () => {
-    expect(isPolar({ angle: -1, radius: -2 })).toBeTrue();
+    expect(isPolar({ φ: -1, r: -2 })).toBeTrue();
   });
 });

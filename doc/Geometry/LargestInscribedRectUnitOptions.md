@@ -2,12 +2,12 @@
 Technobuddha Library
 ---
 
-[Library](../index.md) / [Geometry](./index.md) / LargestInscribedRectangleOptions
+[Library](../index.md) / [Geometry](./index.md) / LargestInscribedRectUnitOptions
 
-# Type Alias: LargestInscribedRectangleOptions
+# Type Alias: LargestInscribedRectUnitOptions
 
 ```ts
-type LargestInscribedRectangleOptions = {
+type LargestInscribedRectUnitOptions = {
   aligned?: boolean;
   squareOnly?: boolean;
 };

@@ -19,8 +19,8 @@ export type SplitWordsOptions = {
  * @param options - see {@link SplitWordsOptions}
  * @defaultValue delimiter whitespace
  * @returns array of words
- * @group String
- * @category Split
+ * @group English
+ * @category Analysis
  */
 export function splitWords(
   input: string,

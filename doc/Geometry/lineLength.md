@@ -10,9 +10,9 @@ Technobuddha Library
 function lineLength(line: LineSegment): number;
 ```
 
-Defined in: [line-length.ts:12](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L12)
+Defined in: [line-length.ts:15](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L15)
 
-Calculates the length of a given line segment using the distance formula.
+Calculates the length of a line segment.
 
 ## Parameters
 
@@ -25,4 +25,10 @@ Calculates the length of a given line segment using the distance formula.
 `number`
 
 The length of the line segment.
+
+## Example
+
+```typescript
+lineLength({ x0: 0, y0: 0, x1: 3, y1: 4 }); // 5
+```
 

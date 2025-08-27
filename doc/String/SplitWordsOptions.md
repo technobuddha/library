@@ -15,7 +15,7 @@ type SplitWordsOptions = {
 
 Defined in: [split-words.ts:10](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L10)
 
-Options for the [splitWords](splitWords.md) function
+Options for the [splitWords](../English/splitWords.md) function
 
 ## Properties
 

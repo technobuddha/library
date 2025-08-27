@@ -14,11 +14,11 @@ type IndefiniteArticleOptions = {
 
 Defined in: [indefinite-article.ts:28](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L28)
 
-Options for determining the indefinite article to use with a word.
+Options for [indefiniteArticle](indefiniteArticle.md) to determine the indefinite article to use with a word.
 
 ## Properties
 
-| Property | Type | Description | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="only"></a> `only?` | `boolean` | only return the indefinite article, do not combine with the input | [indefinite-article.ts:30](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L30) |
+| Property | Type | Default value | Description | Defined in |
+| ------ | ------ | ------ | ------ | ------ |
+| <a id="only"></a> `only?` | `boolean` | `false` | Only return the indefinite article, do not combine with the input | [indefinite-article.ts:33](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L33) |
 

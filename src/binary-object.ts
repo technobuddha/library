@@ -35,8 +35,6 @@ export function normalizeBinary(input: BinaryObject): Uint8Array {
     return input;
   } else if (input instanceof ArrayBuffer) {
     return new Uint8Array(input);
-  } else if (ArrayBuffer.isView(input)) {
-    return new Uint8Array(input.buffer, input.byteOffset, input.byteLength);
   }
-  throw new TypeError('Unsupported binary object type');
+  return new Uint8Array(input.buffer, input.byteOffset, input.byteLength);
 }

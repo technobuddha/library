@@ -2,7 +2,7 @@
 Technobuddha Library
 ---
 
-[Library](../index.md) / [String](./index.md) / splitWords
+[Library](../index.md) / [English](./index.md) / splitWords
 
 # Function: splitWords()
 
@@ -19,7 +19,7 @@ Split a string into an array of words
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to split |
-| `options` | [`SplitWordsOptions`](SplitWordsOptions.md) | see [SplitWordsOptions](SplitWordsOptions.md) |
+| `options` | [`SplitWordsOptions`](../String/SplitWordsOptions.md) | see [SplitWordsOptions](../String/SplitWordsOptions.md) |
 
 ## Returns
 

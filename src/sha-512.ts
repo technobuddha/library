@@ -1,6 +1,17 @@
 /* eslint-disable no-bitwise */
 import { ShaBase } from './sha-base.ts';
 
+/**
+ * The SHA-512 round constants array.
+ *
+ * This array contains 80 constant 32-bit integer values used in each round of the SHA-512 hashing algorithm.
+ * Each pair of values represents the high and low 32 bits of a 64-bit constant, as specified by the SHA-512 standard (FIPS PUB 180-4).
+ *
+ * @see {@link https://csrc.nist.gov/publications/detail/fips/180/4/final | FIPS PUB 180-4: Secure Hash Standard}
+ * @remarks
+ * These constants are derived from the fractional parts of the cube roots of the first 80 prime numbers.
+ * @internal
+ */
 const K = [
   0x428a2f98, 0xd728ae22, 0x71374491, 0x23ef65cd, 0xb5c0fbcf, 0xec4d3b2f, 0xe9b5dba5, 0x8189dbbc,
   0x3956c25b, 0xf348b538, 0x59f111f1, 0xb605d019, 0x923f82a4, 0xaf194f9b, 0xab1c5ed5, 0xda6d8118,

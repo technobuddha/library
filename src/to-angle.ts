@@ -5,9 +5,14 @@ import { type AngleUnit, angleUnits } from './angle.ts';
  *
  * @param input - Angle to convert
  * @param from - The input unit of the angle
- * @param to - The output unit of the angle (default is 'radians')
+ * @param to - The output unit of the angle
  * @returns Converted angle.
- *
+ * @example
+ * ```typescript
+ * toAngle(180, 'degrees'); // π
+ * toAngle(Math.PI, 'radians', 'degrees'); // 180
+ * toAngle(1, 'turns', 'radians'); // 2π
+ * ```
  * @group Geometry
  * @category Angle
  */

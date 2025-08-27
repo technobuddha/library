@@ -8,7 +8,10 @@ import { normalizeLineSegment } from './normalize-line-segment.ts';
  * @param point - The Cartesian point to test.
  * @param line - The line segment to compare against.
  * @returns `true` if the point is to the left of the line segment; otherwise, `false`.
- *
+ * @example
+ * ```typescript
+ * isLeftOfLine({ x: 5, y: 5 }, { x0: 0, y0: 0, x1: 10, y1: 0 }); // true
+ * ```
  * @group Geometry
  * @category Line Segment
  * @category Point

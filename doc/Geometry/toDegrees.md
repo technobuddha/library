@@ -7,23 +7,30 @@ Technobuddha Library
 # Function: toDegrees()
 
 ```ts
-function toDegrees(angle: number, unit: AngleUnit): number;
+function toDegrees(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [to-degrees.ts:12](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L12)
+Defined in: [to-degrees.ts:17](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L17)
 
 Convert an angle from radians to degrees
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `angle` | `number` | `undefined` | Angle |
-| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` | Unit of the angle (default: radians) |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `angle` | `number` | Angle |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
 `number`
 
 angle in degrees
+
+## Example
+
+```typescript
+toDegrees(Math.PI); // 180
+toDegrees(1, 'turns'); // 360
+```
 

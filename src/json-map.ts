@@ -15,7 +15,7 @@ import { deserialize, serialize } from './json-serializer.ts';
  * ```typescript
  * const map = new JSONMap<{ id: number }, string>();
  * map.set({ id: 1 }, "one");
- * console.log(map.get({ id: 1 })); // "one"
+ * map.get({ id: 1 }); // "one"
  * ```
  *
  * @remarks

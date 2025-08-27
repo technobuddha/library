@@ -10,24 +10,30 @@ Technobuddha Library
 function isOnLine(
    point: Cartesian, 
    line: LineSegment, 
-   epsilon: number): boolean;
+   options: OnLineOptions): boolean;
 ```
 
-Defined in: [is-on-line.ts:17](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L17)
+Defined in: [is-on-line.ts:38](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L38)
 
-Determines whether a given point lies on a specified line segment within a certain tolerance.
+Determines whether a given point lies on a specified line segment or its extension.
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `point` | [`Cartesian`](Cartesian.md) | `undefined` | The Cartesian coordinates of the point to check. |
-| `line` | [`LineSegment`](LineSegment.md) | `undefined` | The line segment defined by its endpoints. |
-| `epsilon` | `number` | `1e-10` | Optional tolerance for floating-point comparisons (default is 1e-10). |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `point` | [`Cartesian`](Cartesian.md) | The Cartesian coordinates of the point to test. |
+| `line` | [`LineSegment`](LineSegment.md) | The line segment defined by its endpoints. |
+| `options` | [`OnLineOptions`](OnLineOptions.md) | see [OnLineOptions](OnLineOptions.md) |
 
 ## Returns
 
 `boolean`
 
-`true` if the point lies on the line segment within the given tolerance, otherwise `false`.
+`true` if the point lies on the line segment (or its extension if `extend` is true), otherwise `false`.
+
+## Example
+
+```typescript
+isOnLine({ x: 2, y: 2 }, { x0: 0, y0: 0, x1: 4, y1: 4 }); // true
+```
 

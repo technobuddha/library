@@ -10,7 +10,7 @@ Technobuddha Library
 function syllables(input: string): number;
 ```
 
-Defined in: [syllables.ts:13](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L13)
+Defined in: [syllables.ts:18](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L18)
 
 Approximate the number of syllables in a string
 
@@ -25,4 +25,11 @@ Approximate the number of syllables in a string
 `number`
 
 the number of syllables
+
+## Example
+
+```typescript
+syllables('hello'); // 2
+syllables('syllable'); // 3
+```
 

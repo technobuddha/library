@@ -7,24 +7,35 @@ Technobuddha Library
 # Function: normalizeAngle()
 
 ```ts
-function normalizeAngle(angle: number, unit: AngleUnit): number;
+function normalizeAngle(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [normalize-angle.ts:13](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L13)
+Defined in: [normalize-angle.ts:24](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L24)
 
-Normalizes an angle to be in range [0-π*2]. Angles outside this range will
-be normalized to be the equivalent angle with that range.
+Normalizes an angle to be in range 0-1 turns.
+
+Angles outside this range will be normalized to be the equivalent angle with that range.
+Angles are always returned as radians.
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `angle` | `number` | `undefined` | Angle in radians. |
-| `unit` | [`AngleUnit`](AngleUnit.md) | `'radians'` | - |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `angle` | `number` | Angle |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
 `number`
 
-Standardized angle.
+Standardized angle in radians.
+
+## Example
+
+```typescript
+normalizeAngle(Math.PI); // π
+normalizeAngle(2 * Math.PI); // 0
+normalizeAngle(180, 'degrees'); // π
+normalizeAngle(540, 'degrees'); // π
+```
 

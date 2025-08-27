@@ -10,16 +10,16 @@ Technobuddha Library
 const angleUnits: Record<AngleUnit, number>;
 ```
 
-Defined in: [angle.ts:24](https://github.com/technobuddha/library/blob/main/src/angle.ts#L24)
+Defined in: [angle.ts:53](https://github.com/technobuddha/library/blob/main/src/angle.ts#L53)
 
 Number of units in a circle
-|unit|value|
-|---|---|
-|deg|360|
-|degrees|360|
-|rads|2π|
-|radians|2π|
-|grads|400|
-|gradians|400|
-|turns|1|
+
+| division | name                  |
+| -------- | --------------------- |
+| 1        | turn, turns           |
+| 2π       | rad, radians          |
+| 360      | deg, degrees          |
+| 400      | grad, gradians        |
+| 21600    | arcmin, arcminutes    |
+| 1296000  | arcsec, arcseconds    |
 

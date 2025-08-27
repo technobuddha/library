@@ -7,23 +7,30 @@ Technobuddha Library
 # Function: angleOfLine()
 
 ```ts
-function angleOfLine(line: LineSegment, units: AngleUnit): number;
+function angleOfLine(line: LineSegment, options: UnitOptions): number;
 ```
 
-Defined in: [angle-of-line.ts:16](https://github.com/technobuddha/library/blob/main/src/angle-of-line.ts#L16)
+Defined in: [angle-of-line.ts:20](https://github.com/technobuddha/library/blob/main/src/angle-of-line.ts#L20)
 
 Calculates the angle of a given line segment, relative to the horizontal axis
 
 ## Parameters
 
-| Parameter | Type | Default value | Description |
-| ------ | ------ | ------ | ------ |
-| `line` | [`LineSegment`](LineSegment.md) | `undefined` | The line segment for which to calculate the angle. |
-| `units` | [`AngleUnit`](AngleUnit.md) | `'radians'` | The unit of the returned angle ('radians' by default). |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `line` | [`LineSegment`](LineSegment.md) | The line segment for which to calculate the angle. |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
 `number`
 
 The angle of the line segment in the specified units.
+
+## Example
+
+```ts
+angleOfLine({ x0: 0, y0: 0, x1: 10, y1: 10 }); // π/4
+angleOfLine({ x0: 0, y0: 0, x1: 10, y1: 10 }, 'degrees'); // 45
+```
 

@@ -1,22 +1,20 @@
 import { type Cartesian } from './@types/geometry.ts';
 
 /**
- * Calculates the Manhattan distance between two points in Cartesian coordinates.
+ * Calculates the Manhattan Distance between two points in Cartesian coordinates.
  *
- * The Manhattan distance is the sum of the absolute differences of their Cartesian coordinates.
- * It is often used in grid-based path-finding algorithms.
+ * The Manhattan Distance is based on the number of blocks that one would have
+ * to walk in Manhattan to get from one point to another.   It is assumed that
+ * "Manhattan" is an orthogonal grid where no diagonal movement is allowed.
  *
+ * Manhattan distance is often used in grid-based path-finding algorithms.
+ * @param a - The first point.
+ * @param b - The second point.
+ * @returns The Manhattan distance between the two points.
  * @example
  * ```typescript
- * const pointA = { x: 1, y: 2 };
- * const pointB = { x: 4, y: 6 };
- * const distance = manhattanDistance(pointA, pointB); // 7
+ * manhattanDistance({ x: 1, y: 2 }, { x: 4, y: 6 }); // 7
  * ```
- *
- * @param a - The first point with `x` and `y` properties.
- * @param b - The second point with `x` and `y` properties.
- * @returns The Manhattan distance between the two points.
- *
  * @group Geometry
  * @category Point
  */

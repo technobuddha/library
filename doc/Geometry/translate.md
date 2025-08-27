@@ -6,75 +6,64 @@ Technobuddha Library
 
 # Function: translate()
 
+Translate a point or polygon by a specified amount.
+
 ## Call Signature
 
 ```ts
-function translate(point: Cartesian, amount: Cartesian): Cartesian;
+function translate(point: Cartesian, amount: XY): Cartesian;
 ```
 
-Defined in: [translate.ts:31](https://github.com/technobuddha/library/blob/main/src/translate.ts#L31)
+Defined in: [translate.ts:25](https://github.com/technobuddha/library/blob/main/src/translate.ts#L25)
 
-Translate a point or an array of points by a specified amount.
+Translate a point by a specified amount.
 
 ### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `point` | [`Cartesian`](Cartesian.md) | The point or array of points to translate. Each point should be an object with `x` and `y` properties. |
-| `amount` | [`Cartesian`](Cartesian.md) | The amount to move the point(s) by. |
+| `point` | [`Cartesian`](Cartesian.md) | The point or array of points to translate. |
+| `amount` | [`XY`](XY.md) | The amount to move the point by. |
 
 ### Returns
 
 [`Cartesian`](Cartesian.md)
 
-The translated point or array of translated points.
+The translated point.
 
-### Examples
-
-```typescript
-const point = { x: 1, y: 0 };
-const translated = translate(point, { x: 1, y: 2 }); // { x: 2, y: 2 }
-```
+### Example
 
 ```typescript
-const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
-const translated = translate(points, { x: 1, y: 2 });
-// [{ x: 2, y: 2 }, { x: 2, y: 3 }]
+translate({ x: 1, y: 0 }t, { x: 1, y: 2 }); // { x: 2, y: 2 }
 ```
 
 ## Call Signature
 
 ```ts
-function translate(point: Polygon, amount: Cartesian): Polygon;
+function translate(polygon: Polygon, amount: Cartesian): Polygon;
 ```
 
-Defined in: [translate.ts:32](https://github.com/technobuddha/library/blob/main/src/translate.ts#L32)
+Defined in: [translate.ts:42](https://github.com/technobuddha/library/blob/main/src/translate.ts#L42)
 
-Translate a point or an array of points by a specified amount.
+Translate a polygon by a specified amount.
 
 ### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `point` | [`Polygon`](Polygon.md) | The point or array of points to translate. Each point should be an object with `x` and `y` properties. |
-| `amount` | [`Cartesian`](Cartesian.md) | The amount to move the point(s) by. |
+| `polygon` | [`Polygon`](Polygon.md) | The polygon to translate. |
+| `amount` | [`Cartesian`](Cartesian.md) | The amount to move the polygon by. |
 
 ### Returns
 
 [`Polygon`](Polygon.md)
 
-The translated point or array of translated points.
+The translated polygon.
 
-### Examples
-
-```typescript
-const point = { x: 1, y: 0 };
-const translated = translate(point, { x: 1, y: 2 }); // { x: 2, y: 2 }
-```
+### Example
 
 ```typescript
-const points = [{ x: 1, y: 0 }, { x: 0, y: 1 }];
-const translated = translate(points, { x: 1, y: 2 });
-// [{ x: 2, y: 2 }, { x: 2, y: 3 }]
+translate([{ x: 0, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1}], { x: 1, y: 2 });
+// [{ x: 1, y: 2 }, { x: 2, y: 3 }, { x: 1, y: 3 }]
 ```
 

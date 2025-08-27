@@ -12,7 +12,13 @@ import { toLineSegment } from './to-line-segment.ts';
  * @param object - The point or rectangle to test.
  * @param polygon - The polygon to test against, represented as an array of Cartesian coordinates.
  * @returns `true` if the object is inside the polygon or on its edge, otherwise `false`.
- *
+ * @example
+ * ```typescript
+ * isInPolygon(
+ *   { x: 5, y: 5 },
+ *   [{ x: 0, y: 0 }, { x: 10, y: 0}, { x: 10, y: 10 }, { x: 0, y: 10 }]
+ * ); // true
+ * ```
  * @remarks
  * - The polygon is assumed to be a simple, non-self-intersecting polygon.
  * - Points on the edge of the polygon return `true`.
@@ -22,6 +28,7 @@ import { toLineSegment } from './to-line-segment.ts';
  * @group Geometry
  * @category Polygon
  * @category Point
+ * @category Rectangle
  */
 export function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon): boolean {
   if (polygon.length < 3) {

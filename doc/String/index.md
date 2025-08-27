@@ -172,10 +172,9 @@ Technobuddha Library
 
 | Name | Description |
 | ------ | ------ |
-| [SplitWordsOptions](SplitWordsOptions.md) | Options for the [splitWords](splitWords.md) function |
+| [SplitWordsOptions](SplitWordsOptions.md) | Options for the [splitWords](English/splitWords.md) function |
 | [splitChars](splitChars.md) | Split a string into an array of characters |
 | [splitLines](splitLines.md) | Split a string into an array of lines |
-| [splitWords](splitWords.md) | Split a string into an array of words |
 
 ### Templates
 

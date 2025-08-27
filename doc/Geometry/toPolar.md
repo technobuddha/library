@@ -7,10 +7,10 @@ Technobuddha Library
 # Function: toPolar()
 
 ```ts
-function toPolar(options: Cartesian): Polar;
+function toPolar(coordinate: Cartesian, options: UnitOptions): Polar;
 ```
 
-Defined in: [to-polar.ts:12](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L12)
+Defined in: [to-polar.ts:15](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L15)
 
 Convert cartesian coordinates to polar
 
@@ -18,7 +18,8 @@ Convert cartesian coordinates to polar
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `options` | [`Cartesian`](Cartesian.md) | see [Cartesian](Cartesian.md) |
+| `coordinate` | [`Cartesian`](Cartesian.md) | The Cartesian coordinate to convert. |
+| `options` | [`UnitOptions`](UnitOptions.md) | see [UnitOptions](UnitOptions.md) |
 
 ## Returns
 
