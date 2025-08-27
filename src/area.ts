@@ -10,7 +10,14 @@ import { type Polygon } from './@types/geometry.ts';
  * @param vertices - An array of points representing the polygon's vertices, where each point has `x` and `y` properties.
  * @param signed - If `true`, returns the signed area (positive for counter-clockwise, negative for clockwise). Defaults to `false`.
  * @returns The area of the polygon.
- *
+ * @example
+ * ```typescript
+ * area([
+ *   { x: 0, y: 0 },
+ *   { x: 4, y: 0 },
+ *   { x: 0, y: 3 },
+ * ]); // 6
+ * ```
  * @group Geometry
  * @category Polygon
  */

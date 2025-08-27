@@ -1,21 +1,55 @@
 import { type Cartesian, type Polygon, type Rect } from './@types/geometry.ts';
 
 /**
- * Converts two Cartesian points or a rectangle into a `Polygon` object.
+ * Converts two {@link Cartesian} points into a {@link Polygon}.
  *
- * When provided with two Cartesian points, the function constructs a rectangle
- * defined by these points as opposite corners. When provided with a `Rect`
- * object, it constructs a polygon representing the rectangle's corners.
+ * Construct a rectangle defined by two points as opposite corners.
+ * @param pointA - The first corner point of the rectangle.
+ * @param pointB - The opposite corner point of the rectangle.
+ * @returns A rectangle shaped {@link Polygon}.
  *
- * @param pointA - The first corner point of the rectangle (if using points).
- * @param pointB - The opposite corner point of the rectangle (if using points).
- * @returns A `Polygon` object representing the rectangle.
+ * @example
+ * ```typescript
+ * toPolygon({ x: 1, y: 2 }, { x: 4, y: 6 });
+ * // [
+ * //   { x: 1, y: 2 },
+ * //   { x: 4, y: 2 },
+ * //   { x: 4, y: 6 },
+ * //   { x: 1, y: 6 }
+ * // ]
+ * ```
  *
  * @group Geometry
  * @category Polygon
  */
 export function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
+/**
+ * Convert a {@link Rect} into a {@link Polygon}.
+ *
+ * Construct a rectangle defined by location and dimensions.
+ * @param rect - The {@link Rectangle} to convert.
+ * @returns A rectangle shaped {@link Polygon}.
+ *
+ * @example
+ * ```typescript
+ * toPolygon({ x: 1, y: 2, width: 3, height: 4 });
+ * // [
+ * //   { x: 1, y: 2 },
+ * //   { x: 4, y: 2 },
+ * //   { x: 4, y: 6 },
+ * //   { x: 1, y: 6 }
+ * // ]
+ * ```
+ *
+ * @group Geometry
+ * @category Polygon
+ */
 export function toPolygon(rect: Rect): Polygon;
+/**
+ * Converts two {@link Cartesian} points or a {@link Rect} into a {@link Polygon}.
+ * @group Geometry
+ * @category Polygon
+ */
 export function toPolygon(arg1: Cartesian | Rect, arg2?: Cartesian): Polygon {
   if ('width' in arg1) {
     return [

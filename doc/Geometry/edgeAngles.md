@@ -10,7 +10,7 @@ Technobuddha Library
 function edgeAngles(polygon: Polygon, normalizeTo: number): Generator<number>;
 ```
 
-Defined in: [edge-angles.ts:13](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L13)
+Defined in: [edge-angles.ts:31](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L31)
 
 Generate normalized edge angles from polygon edges.
 
@@ -26,4 +26,24 @@ Generate normalized edge angles from polygon edges.
 [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<`number`\>
 
 Generator that yields edge angles, normalized to the specified range
+
+## Example
+
+```typescript
+const polygon: Polygon = [
+  { x: 0, y: 0 },
+  { x: 1, y: 1 },
+  { x: 0, y: 2 },
+  { x: -1, y: 1 }
+];
+const angles = edgeAngles(polygon);
+for (const angle of angles) {
+  console.log(angle);
+}
+// Output:
+// 0.7853981633974483
+// 2.356194490192345
+// 3.9269908169872414
+// 5.497787143782138
+```
 

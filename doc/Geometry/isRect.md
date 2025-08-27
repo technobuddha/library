@@ -10,11 +10,11 @@ Technobuddha Library
 function isRect(object: unknown): object is Rect;
 ```
 
-Defined in: [is-rect.ts:15](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L15)
+Defined in: [is-rect.ts:22](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L22)
 
-Determines if the provided value is a Rectangle.
+Determines if the provided value is a [Rect](Rect.md)e.
 
-A value is considered a rectangle if it is a non-null object
+A value is considered a [Rect](Rect.md) if it is a non-null object
 that contains numeric `x`, `y`, 'width', and 'height' properties.
 
 ## Parameters
@@ -28,4 +28,13 @@ that contains numeric `x`, `y`, 'width', and 'height' properties.
 `object is Rect`
 
 `true` if the value is a Rectangle, otherwise `false`.
+
+## Example
+
+```typescript
+isRect({ x: 1, y: 2, width: 3, height: 4 }); // true
+isRect({ x: 1, y: 2, width: 3 }); // false
+isRect(null); // false
+isRect([1, 2, 3, 4]); // false
+```
 

@@ -3,10 +3,19 @@ import { type Polygon, type Rect } from './@types/geometry.ts';
 /**
  * Calculates the axis-aligned bounding rectangle for a given polygon.
  *
- * @param vertices - An array of points representing the vertices of the polygon. Each vertex should have `x` and `y` properties.
- * @returns A `Rect` object representing the smallest rectangle that contains all the vertices of the polygon.
+ * @param vertices - The polygon.
+ * @returns A {@link Rect} representing the smallest rectangle that contains the polygon.
  * @throws `TypeError` If the polygon has fewer than three vertices.
- *
+ * @example
+ * ```typescript
+ * bounds([
+ *   { x: 0, y: 0 },
+ *   { x: 0, y: 5 },
+ *   { x: 10, y: 5 },
+ *   { x: 10, y: 0 },
+ * ]);
+ * // { x: 0, y: 0, width: 10, height: 5 }
+ * ```
  * @group Geometry
  * @category Polygon
  */

@@ -17,6 +17,7 @@ Defined in: [largest-inscribed-rectangle.ts:17](https://github.com/technobuddha/
 
 Represents a rectangle that has been rotated by a certain angle.
 Extends the `Rect` type with additional properties for the area and rotation angle.
+const hull = convexHull(points);
 
 ## Type declaration
 

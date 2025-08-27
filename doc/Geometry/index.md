@@ -72,18 +72,18 @@ Technobuddha Library
 | [Polygon](Polygon.md) | A polygon (a set of cartesian coordinates) |
 | [area](area.md) | Calculates the area of a polygon given its vertices. |
 | [bounds](bounds.md) | Calculates the axis-aligned bounding rectangle for a given polygon. |
-| [centroid](centroid.md) | Calculates the centroid (geometric center) of a polygon given its vertices. |
+| [centroid](centroid.md) | Calculates the centroid (geometric center) of a polygon. |
 | [convexHull](convexHull.md) | Computes the convex hull of a set of 2D points using the Monotone Chain algorithm. |
 | [edgeAngles](edgeAngles.md) | Generate normalized edge angles from polygon edges. |
 | [isInPolygon](isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isIntersecting](isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
 | [largestInscribedRectangle](largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
-| [perimeter](perimeter.md) | Calculates the perimeter of a polygon given its vertices. |
-| [regularPolygon](regularPolygon.md) | Generates the vertices of a regular polygon as an array of Cartesian points. |
+| [perimeter](perimeter.md) | Calculates the perimeter of a polygon. |
+| [regularPolygon](regularPolygon.md) | Generates a regular polygon. |
 | [rotate](rotate.md) | Rotates a point or a polygon around a given origin by a specified angle. |
 | [scale](scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
-| [star](star.md) | Generates the vertices of a star-shaped polygon. |
-| [toPolygon](toPolygon.md) | Converts two Cartesian points or a rectangle into a `Polygon` object. |
+| [star](star.md) | Generates a star-shaped polygon. |
+| [toPolygon](toPolygon.md) | Converts two [Cartesian](Cartesian.md) points or a [Rect](Rect.md) into a [Polygon](Polygon.md). |
 | [translate](translate.md) | Translate a point or polygon by a specified amount. |
 
 ### Rectangle
@@ -92,8 +92,8 @@ Technobuddha Library
 | ------ | ------ |
 | [LargestInscribedRectUnitOptions](LargestInscribedRectUnitOptions.md) | Configuration options for the largest inscribed rectangle algorithm. |
 | [Rect](Rect.md) | A rectangle (defined by its top-left corner, width and height) |
-| [RotatedRect](RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. |
+| [RotatedRect](RotatedRect.md) | Represents a rectangle that has been rotated by a certain angle. Extends the `Rect` type with additional properties for the area and rotation angle. const hull = convexHull(points); |
 | [isInPolygon](isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
-| [isRect](isRect.md) | Determines if the provided value is a Rectangle. |
+| [isRect](isRect.md) | Determines if the provided value is a [Rect](Rect.md)e. |
 | [largestInscribedRectangle](largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
-| [toSquare](toSquare.md) | Converts a given rectangle to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |
+| [toSquare](toSquare.md) | Converts a [Rect](Rect.md) to the largest possible square that fits within it, centered along the longer dimension. If the rectangle is already a square, it returns the original rectangle. |

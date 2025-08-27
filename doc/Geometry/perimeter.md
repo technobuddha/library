@@ -7,22 +7,35 @@ Technobuddha Library
 # Function: perimeter()
 
 ```ts
-function perimeter(vertices: Polygon): number;
+function perimeter(polygon: Polygon): number;
 ```
 
-Defined in: [perimeter.ts:14](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L14)
+Defined in: [perimeter.ts:24](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L24)
 
-Calculates the perimeter of a polygon given its vertices.
+Calculates the perimeter of a polygon.
 
 ## Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `vertices` | [`Polygon`](Polygon.md) | An array of points representing the vertices of the polygon in order. |
+| `polygon` | [`Polygon`](Polygon.md) | The polygon. |
 
 ## Returns
 
 `number`
 
 The total perimeter length of the polygon.
+
+## Example
+
+```typescript
+const polygon: Polygon = [
+  { x: 0, y: 0 },
+  { x: 10, y: 0 },
+  { x: 10, y: 10 },
+  { x: 0, y: 10 }
+];
+const result = perimeter(polygon);
+// result: 40
+```
 

@@ -7,10 +7,10 @@ Technobuddha Library
 # Function: convexHull()
 
 ```ts
-function convexHull(vertices: Polygon): undefined | Polygon;
+function convexHull(vertices: Cartesian[]): undefined | Polygon;
 ```
 
-Defined in: [convex-hull.ts:18](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L18)
+Defined in: [convex-hull.ts:27](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L27)
 
 Computes the convex hull of a set of 2D points using the Monotone Chain algorithm.
 
@@ -18,7 +18,7 @@ Computes the convex hull of a set of 2D points using the Monotone Chain algorith
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `vertices` | [`Polygon`](Polygon.md) | An array of points representing the polygon vertices. Each point should have `x` and `y` properties. |
+| `vertices` | [`Cartesian`](Cartesian.md)[] | An array of points. |
 
 ## Returns
 
@@ -29,6 +29,18 @@ The convex hull as an array of points in counterclockwise order, or `undefined` 
 ## See
 
 [Monotone Chain](https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript|)
+
+## Example
+
+```typescript
+convexHull([
+  { x: 0, y: 0 },
+  { x: 1, y: 1 },
+  { x: 2, y: 0 },
+  { x: 1, y: -1 }
+]);
+// hull is now the convex hull of the points
+```
 
 ## Remarks
 

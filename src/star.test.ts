@@ -38,7 +38,7 @@ describe('star', () => {
 
   test('accepts custom origin', () => {
     const origin: Cartesian = { x: 100, y: -50 };
-    const points = star(5, 10, 5, origin);
+    const points = star(5, 10, 5, { origin });
     for (const point of points) {
       // All points should be offset by origin
       expect(point.x).toBeGreaterThan(80);

@@ -11,12 +11,12 @@ function star(
    sides: number, 
    outer: number, 
    inner: number, 
-   origin: Cartesian): Polygon;
+   options: OriginOptions): Polygon;
 ```
 
-Defined in: [star.ts:16](https://github.com/technobuddha/library/blob/main/src/star.ts#L16)
+Defined in: [star.ts:32](https://github.com/technobuddha/library/blob/main/src/star.ts#L32)
 
-Generates the vertices of a star-shaped polygon.
+Generates a star-shaped polygon.
 
 ## Parameters
 
@@ -25,15 +25,31 @@ Generates the vertices of a star-shaped polygon.
 | `sides` | `number` | `3` | The number of points (arms) of the star. Must be at least 3. |
 | `outer` | `number` | `1` | The radius from the origin to the outer vertices (tips) of the star. |
 | `inner` | `number` | `...` | The radius from the origin to the inner vertices (indentations) of the star. Defaults to half of `outer`. |
-| `origin` | [`Cartesian`](Cartesian.md) | `...` | The center point of the star, as a Cartesian coordinate. Defaults to `{ x: 0, y: 0 }`. |
+| `options` | [`OriginOptions`](OriginOptions.md) | `{}` | see [OriginOptions](OriginOptions.md) |
 
 ## Returns
 
 [`Polygon`](Polygon.md)
 
-An array of `Cartesian` points representing the vertices of the star in drawing order.
+A star shaped polygon.
 
 ## Throws
 
 `TypeError` If `sides` is less than 3.
+
+## Example
+
+```typescript
+star(4, 2, 1);
+// [
+//   { x: 2, y: 0 },
+//   { x: √2/2, y: √2/2 },
+//   { x: 0, y: 2 },
+//   { x: -√2/2, y: √2/2 },
+//   { x: -2, y: 0 },
+//   { x: -√2/2, y: -√2/2 },
+//   { x: 0, y: -2 },
+//   { x: √2/2, y: -√2/2 }
+// ]
+```
 

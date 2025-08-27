@@ -2,17 +2,25 @@ import { type Cartesian, type Polygon } from './@types/geometry.ts';
 import { modulo } from './modulo.ts';
 
 /**
- * Calculates the centroid (geometric center) of a polygon given its vertices.
+ * Calculates the centroid (geometric center) of a polygon.
  *
  * The centroid is computed using the formula for the centroid of a non-self-intersecting closed polygon.
  * The vertices should be provided in order (either clockwise or counterclockwise).
  *
  * @param vertices - An array of points representing the vertices of the polygon.
  * @returns The centroid as a Cartesian coordinate.
- *
+ * @example
+ * ```typescript
+ * centroid([
+ *   { x: 0, y: 0 },
+ *   { x: 0, y: 5 },
+ *   { x: 10, y: 5 },
+ *   { x: 10, y: 0 },
+ * ]);
+ * // { x: 5, y: 2.5 }
+ * ```
  * @remarks
- * - The function assumes the polygon is non-self-intersecting.
- *
+ * The function assumes the polygon is non-self-intersecting.
  * @group Geometry
  * @category Polygon
  */

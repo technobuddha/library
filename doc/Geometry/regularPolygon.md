@@ -10,28 +10,40 @@ Technobuddha Library
 function regularPolygon(
    sides: number, 
    radius: number, 
-   origin: Cartesian): Polygon;
+   options: OriginOptions): Polygon;
 ```
 
-Defined in: [regular-polygon.ts:15](https://github.com/technobuddha/library/blob/main/src/regular-polygon.ts#L15)
+Defined in: [regular-polygon.ts:24](https://github.com/technobuddha/library/blob/main/src/regular-polygon.ts#L24)
 
-Generates the vertices of a regular polygon as an array of Cartesian points.
+Generates a regular polygon.
 
 ## Parameters
 
 | Parameter | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| `sides` | `number` | `3` | The number of sides of the polygon (must be at least 3). Defaults to 3. |
-| `radius` | `number` | `1` | The radius of the polygon (distance from the origin to each vertex). Defaults to 1. |
-| `origin` | [`Cartesian`](Cartesian.md) | `Origin` | The center point of the polygon as a Cartesian coordinate. Defaults to {x: 0, y: 0}. |
+| `sides` | `number` | `3` | The number of sides of the polygon (must be at least 3). |
+| `radius` | `number` | `1` | The radius of the polygon (distance from the origin to each vertex). |
+| `options` | [`OriginOptions`](OriginOptions.md) | `{}` | see [OriginOptions](OriginOptions.md) |
 
 ## Returns
 
 [`Polygon`](Polygon.md)
 
-An array of Cartesian points representing the vertices of the regular polygon.
+A regular polygon.
 
 ## Throws
 
 `TypeError` If the number of sides is less than 3.
+
+## Example
+
+```typescript
+regularPolygon(4, 2);
+// [
+//   { x: 2, y: 0 },
+//   { x: 0, y: 2 },
+//   { x: -2, y: 0 },
+//   { x: 0, y: -2 }
+// ]
+```
 

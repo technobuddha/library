@@ -10,7 +10,7 @@ Technobuddha Library
 function bounds(vertices: Polygon): Rect;
 ```
 
-Defined in: [bounds.ts:13](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L13)
+Defined in: [bounds.ts:22](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L22)
 
 Calculates the axis-aligned bounding rectangle for a given polygon.
 
@@ -18,15 +18,27 @@ Calculates the axis-aligned bounding rectangle for a given polygon.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `vertices` | [`Polygon`](Polygon.md) | An array of points representing the vertices of the polygon. Each vertex should have `x` and `y` properties. |
+| `vertices` | [`Polygon`](Polygon.md) | The polygon. |
 
 ## Returns
 
 [`Rect`](Rect.md)
 
-A `Rect` object representing the smallest rectangle that contains all the vertices of the polygon.
+A [Rect](Rect.md) representing the smallest rectangle that contains the polygon.
 
 ## Throws
 
 `TypeError` If the polygon has fewer than three vertices.
+
+## Example
+
+```typescript
+bounds([
+  { x: 0, y: 0 },
+  { x: 0, y: 5 },
+  { x: 10, y: 5 },
+  { x: 10, y: 0 },
+]);
+// { x: 0, y: 0, width: 10, height: 5 }
+```
 

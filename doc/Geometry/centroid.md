@@ -10,9 +10,9 @@ Technobuddha Library
 function centroid(vertices: Polygon): Cartesian;
 ```
 
-Defined in: [centroid.ts:19](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L19)
+Defined in: [centroid.ts:27](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L27)
 
-Calculates the centroid (geometric center) of a polygon given its vertices.
+Calculates the centroid (geometric center) of a polygon.
 
 The centroid is computed using the formula for the centroid of a non-self-intersecting closed polygon.
 The vertices should be provided in order (either clockwise or counterclockwise).
@@ -29,7 +29,19 @@ The vertices should be provided in order (either clockwise or counterclockwise).
 
 The centroid as a Cartesian coordinate.
 
+## Example
+
+```typescript
+centroid([
+  { x: 0, y: 0 },
+  { x: 0, y: 5 },
+  { x: 10, y: 5 },
+  { x: 10, y: 0 },
+]);
+// { x: 5, y: 2.5 }
+```
+
 ## Remarks
 
-- The function assumes the polygon is non-self-intersecting.
+The function assumes the polygon is non-self-intersecting.
 
