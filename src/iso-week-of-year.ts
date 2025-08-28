@@ -20,7 +20,6 @@ export type ISOWeekOfYearOptions = {
 
 /**
  * Determine the ISO week number for a given date
- *
  * @param input - The date
  * @param options - see {@link ISOWeekOfYearOptions}
  * @defaultValue weekOneIncludes Thursday

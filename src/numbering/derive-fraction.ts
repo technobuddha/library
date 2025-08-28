@@ -20,7 +20,6 @@ type FractionResult = {
 
 /**
  * Finds the closest fractional representation of a given number within a specified tolerance and precision.
- *
  * @param input - The decimal number to approximate as a fraction.
  * @param options - Configuration options for the fraction search.
  * @returns An object containing the numerator and denominator of the closest fraction.

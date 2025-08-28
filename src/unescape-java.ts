@@ -15,7 +15,6 @@ import { empty } from './unicode.ts';
  * | \\'                | 0x27                 | Single Quote             |
  * | \\"                | 0x22                 | Double Quote             |
  * | \\unnnn            | 0x0000-0xFFFF    | Unicode Escape           |
- *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
  * @example

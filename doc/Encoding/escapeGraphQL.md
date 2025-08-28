@@ -11,7 +11,7 @@ Technobuddha Library
 function escapeGraphQL(input: string): string;
 ```
 
-Defined in: [escape-graph-ql.ts:32](https://github.com/technobuddha/library/blob/main/src/escape-graph-ql.ts#L32)
+Defined in: [escape-graph-ql.ts:31](https://github.com/technobuddha/library/blob/main/src/escape-graph-ql.ts#L31)
 
 Escape a string for use in GraphQL
 

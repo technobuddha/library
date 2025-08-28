@@ -11,7 +11,7 @@ Technobuddha Library
 function unescapeJava(input: string): string;
 ```
 
-Defined in: [unescape-java.ts:31](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L31)
+Defined in: [unescape-java.ts:30](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L30)
 
 Unescape a string encoded in Java style
 

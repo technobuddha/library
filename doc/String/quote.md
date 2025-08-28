@@ -11,7 +11,7 @@ Technobuddha Library
 function quote(input: string, options: QuoteOptions): string;
 ```
 
-Defined in: [quote.ts:28](https://github.com/technobuddha/library/blob/main/src/quote.ts#L28)
+Defined in: [quote.ts:27](https://github.com/technobuddha/library/blob/main/src/quote.ts#L27)
 
 Surround text with quotes
 

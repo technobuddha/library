@@ -3,7 +3,6 @@ import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 /**
  * Calculates a point at a given fraction (`part`) along a line segment.  By default it returns the
  * true midpoint of the line segment
- *
  * @param line - The line segment defined by its start (`x0`, `y0`) and end (`x1`, `y1`) coordinates.
  * @param part - The fraction along the line segment at which to calculate the point (default is `0.5` for the midpoint).
  * @returns The Cartesian coordinates of the calculated point.

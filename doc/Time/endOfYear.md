@@ -11,7 +11,7 @@ Technobuddha Library
 function endOfYear(input: Date, options: EndOfYearOptions): Date;
 ```
 
-Defined in: [end-of-year.ts:23](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L23)
+Defined in: [end-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L22)
 
 Determine the last day of the year containing a date
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function cardinal(input: number, options: CardinalOptions): string;
 ```
 
-Defined in: [numbering/cardinal.ts:73](https://github.com/technobuddha/library/blob/main/src/numbering/cardinal.ts#L73)
+Defined in: cardinal.ts:76
 
 Convert a number into text (the cardinal number)
 
@@ -32,4 +32,14 @@ The number spelled out
 
 There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
 up to uncentillions (1e308).
+
+## Example
+
+```typescript
+cardinal(123); // "one hundred twenty three"
+cardinal(123, { hyphen: '-' }); // "one hundred twenty-three"
+cardinal(42.5, { output: 'alphabetic' }); // "forty two and one half"
+cardinal(101, { and: ' and ' }); // "one hundred and one"
+cardinal(3.14159, { precision: 2 }); // "three and fourteen hundredths"
+```
 

@@ -11,7 +11,7 @@ Technobuddha Library
 const invisiblePlus: "⁤" = '⁤';
 ```
 
-Defined in: [unicode.ts:117](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L117)
+Defined in: [unicode.ts:102](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L102)
 
 Invisible Plus sign
 

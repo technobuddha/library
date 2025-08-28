@@ -11,7 +11,7 @@ Technobuddha Library
 function conjoin<T>(input: ArrayLike<T>, options: ConjoinOptions): string;
 ```
 
-Defined in: [conjoin.ts:48](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L48)
+Defined in: [conjoin.ts:46](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L46)
 
 Create a list from an array, separating values and inserting a conjunction
 

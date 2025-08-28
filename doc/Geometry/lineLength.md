@@ -11,7 +11,7 @@ Technobuddha Library
 function lineLength(line: LineSegment): number;
 ```
 
-Defined in: [line-length.ts:15](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L15)
+Defined in: [line-length.ts:14](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L14)
 
 Calculates the length of a line segment.
 

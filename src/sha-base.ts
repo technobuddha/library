@@ -8,7 +8,6 @@ import { HashBase } from './hash-base.ts';
 
 /**
  * The base class for sha based cryptographic hash functions
- *
  * @group Encoding
  * @category Hash
  */

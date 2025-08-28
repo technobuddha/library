@@ -3,7 +3,6 @@ import { isPrimitive } from './is-primitive.ts';
 
 /**
  * Convert an object into its primitive (string, number, etc.) value
- *
  * @param input - the object
  * @param hint - A "hint" as to what the type should be.  "string", "number" or "default"
  * @returns primitive value

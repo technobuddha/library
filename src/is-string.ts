@@ -4,7 +4,6 @@ import { isObject } from './is-object.ts';
  * Determines whether the provided value is a string.
  *
  * This function checks if the value is a primitive string or a String object.
- *
  * @param value - The value to check.
  * @returns True if the value is a string or a String object, otherwise false.
  * @group Utility

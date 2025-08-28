@@ -3,7 +3,6 @@ import { deconstructNumber } from './deconstruct-number.ts';
 
 /**
  * Options for the {@link round} function
- *
  * @group Math
  * @category Arithmetic
  */
@@ -14,10 +13,17 @@ export type RoundOptions = {
 
 /**
  * Returns the nearest integer to the given number, with optional precision adjustments.
- *
  * @param input - The number to round.
  * @param options - Optional configuration object.
  * @returns The nearest integer to the adjusted input.
+ * @example
+ * ```typescript
+ * round(2.3); // 2
+ * round(2.7); // 3
+ * round(-2.5); // -2
+ * round(2.345, { precision: 2 }); // 2.35
+ * round(-2.345, { precision: 2 }); // -2.35
+ * ```
  * @group Math
  * @category Arithmetic
  */

@@ -11,10 +11,10 @@ Technobuddha Library
 function approximatelyEquals(
    a: number, 
    b: number, 
-   __namedParameters: ApproximatelyEqualsOptions): boolean;
+   options: ApproximatelyEqualsOptions): boolean;
 ```
 
-Defined in: [approximately-equals.ts:24](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L24)
+Defined in: [approximately-equals.ts:30](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L30)
 
 Tests whether the two values are equal to each other, within a certain
 tolerance, taking into account floating point errors (numbers within EPSILON).
@@ -25,7 +25,7 @@ tolerance, taking into account floating point errors (numbers within EPSILON).
 | ------ | ------ | ------ |
 | `a` | `number` | First number to compare. |
 | `b` | `number` | Second number to compare. |
-| `__namedParameters` | [`ApproximatelyEqualsOptions`](ApproximatelyEqualsOptions.md) | see [ApproximatelyEqualsOptions](ApproximatelyEqualsOptions.md) |
+| `options` | [`ApproximatelyEqualsOptions`](ApproximatelyEqualsOptions.md) | see [ApproximatelyEqualsOptions](ApproximatelyEqualsOptions.md) |
 
 ## Returns
 
@@ -37,5 +37,15 @@ true if *a* and *b* are nearly equal.
 
 ```ts
 tolerance 0
+```
+
+## Example
+
+```typescript
+approximatelyEquals(0.1 + 0.2, 0.3); // true (floating point rounding)
+approximatelyEquals(100, 100.0000001); // true
+approximatelyEquals(100, 100.1); // false
+approximatelyEquals(5, 7, { tolerance: 2 }); // true
+approximatelyEquals(5, 8, { tolerance: 2 }); // false
 ```
 

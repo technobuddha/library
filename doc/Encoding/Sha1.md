@@ -7,7 +7,7 @@ Technobuddha Library
 
 # Class: Sha1
 
-Defined in: [sha-1.ts:125](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L125)
+Defined in: [sha-1.ts:118](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L118)
 
 Secure Hash Algorithm, SHA-1
 
@@ -38,7 +38,7 @@ sha1.digest('hex');
 new Sha1(): Sha1;
 ```
 
-Defined in: [sha-1.ts:141](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L141)
+Defined in: [sha-1.ts:134](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L134)
 
 Creates a new SHA-1 hash instance and initializes its internal state.
 
@@ -66,7 +66,7 @@ final hash value.
 digest(): Uint8Array;
 ```
 
-Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
+Defined in: [sha-base.ts:77](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L77)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -88,7 +88,7 @@ The hash digest
 digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [sha-base.ts:79](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L79)
+Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -123,7 +123,7 @@ update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
+Defined in: [sha-base.ts:119](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L119)
 
 Updates the hash with the given binary data.
 
@@ -149,7 +149,7 @@ The hash instance for method chaining.
 update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [sha-base.ts:121](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L121)
+Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
 
 Updates the hash with the given string data.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function metricUnits(input: number, options: MetricUnitsOptions): string;
 ```
 
-Defined in: [metric-units.ts:87](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L87)
+Defined in: [metric-units.ts:86](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L86)
 
 Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
 

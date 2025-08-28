@@ -11,7 +11,7 @@ Technobuddha Library
 const space: " " = ' ';
 ```
 
-Defined in: [unicode.ts:15](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L15)
+Defined in: [unicode.ts:13](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L13)
 
 Space
 

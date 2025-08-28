@@ -41,7 +41,6 @@ export type CollapsibleValue<T extends CollapsiblePrimitive> =
  *
  * This type is useful for APIs that accept flexible input forms, such as single values,
  * arrays, lazy generators, or functions producing values, and need to process them uniformly.
- *
  * @typeParam T - The primitive type that can be collapsed.
  * @group Array
  * @category Methods
@@ -62,7 +61,6 @@ export type Collapsible<T extends CollapsiblePrimitive> =
  *
  * The function flattens all arguments, filters out `null`, and `undefined` values,
  * and returns the resulting array.
- *
  * @typeParam T - The primitive type that can be collapsed.
  * @param args - The values to collapse, which may be `T`, generators, iterables, or functions.
  * @returns An array of `T`, with all `null`, and `undefined` values removed.

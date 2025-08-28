@@ -8,11 +8,9 @@ import { type TBJsonValue } from './json.ts';
  *
  * If the input is a primitive value or an array, it is returned as-is.
  * For objects, all keys are sorted, and the function is applied recursively to all values.
- *
  * @typeParam T - The type of the input value, extending JsonValue.
  * @param object - The object or value whose keys should be sorted.
  * @returns A new object with keys sorted, or the original value if it is a primitive or array.
- *
  * @group Object
  * @category Utility
  */

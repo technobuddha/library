@@ -2,7 +2,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Split a string into an array of lines
- *
  * @param input - The string to split
  * @returns array of lines
  * @group String

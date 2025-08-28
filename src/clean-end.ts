@@ -6,7 +6,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Remove all occurrences of characters from the end of the string
- *
  * @param input - The string
  * @param characters - the characters(s) to remove
  * @group String

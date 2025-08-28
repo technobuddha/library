@@ -7,7 +7,7 @@ Technobuddha Library
 
 # Class: Crc32
 
-Defined in: [crc-32.ts:85](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L85)
+Defined in: [crc-32.ts:84](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L84)
 
 Compute the CRC32 checksum of a binary object
 
@@ -38,7 +38,7 @@ crc.digest('hex');
 new Crc32(): Crc32;
 ```
 
-Defined in: [crc-32.ts:94](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L94)
+Defined in: [crc-32.ts:93](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L93)
 
 Creates a new CRC32 hash instance and initializes its internal state.
 
@@ -65,7 +65,7 @@ Use [update](#update) to process data and [digest](#digest) to obtain the final 
 digest(): Uint8Array;
 ```
 
-Defined in: [crc-32.ts:117](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L117)
+Defined in: [crc-32.ts:116](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L116)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -87,7 +87,7 @@ The hash digest
 digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [crc-32.ts:118](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L118)
+Defined in: [crc-32.ts:117](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L117)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -122,7 +122,7 @@ update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [crc-32.ts:99](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L99)
+Defined in: [crc-32.ts:98](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L98)
 
 Updates the hash with the given binary data.
 
@@ -148,7 +148,7 @@ The hash instance for method chaining.
 update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [crc-32.ts:100](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L100)
+Defined in: [crc-32.ts:99](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L99)
 
 Updates the hash with the given string data.
 

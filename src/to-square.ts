@@ -4,10 +4,8 @@ import { type Rect } from './@types/geometry.ts';
  * Converts a {@link Rect} to the largest possible square that fits within it,
  * centered along the longer dimension. If the rectangle is already a square,
  * it returns the original rectangle.
- *
  * @param rect - The {@link Rect}.
  * @returns A square shaped {@link Rect}.
- *
  * @example
  * ```typescript
  * toSquare({ x: 1, y: 2, width: 6, height: 4 });
@@ -19,7 +17,6 @@ import { type Rect } from './@types/geometry.ts';
  * toSquare({ x: 0, y: 0, width: 5, height: 5 });
  * // { x: 0, y: 0, width: 5, height: 5 }
  * ```
- *
  * @group Geometry
  * @category Rectangle
  */

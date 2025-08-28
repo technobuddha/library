@@ -14,7 +14,7 @@ function angleBetweenPoints(
    options: UnitOptions): number;
 ```
 
-Defined in: [angle-between-points.ts:23](https://github.com/technobuddha/library/blob/main/src/angle-between-points.ts#L23)
+Defined in: [angle-between-points.ts:22](https://github.com/technobuddha/library/blob/main/src/angle-between-points.ts#L22)
 
 Computes the angle between two points (x1,y1) and (x2,y2).
 Angle zero points in the +X direction, π/2 radians points in the +Y

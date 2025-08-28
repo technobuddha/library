@@ -3,7 +3,6 @@ import { isLeapYear } from './is-leap-year.ts';
 
 /**
  * Options for the {@link daysInMonth} function
- *
  * @group Time
  * @category Month
  */
@@ -14,7 +13,6 @@ export type DaysInMonthOptions = {
 
 /**
  * Determine the number of days in the month for a date
- *
  * @param input - The date
  * @param options - see {@link DaysInMonthOptions}
  * @defaultValue utc false

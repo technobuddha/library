@@ -11,7 +11,7 @@ Technobuddha Library
 function removeDiacritics(input: string): string;
 ```
 
-Defined in: [remove-diacritics.ts:17](https://github.com/technobuddha/library/blob/main/src/remove-diacritics.ts#L17)
+Defined in: [remove-diacritics.ts:16](https://github.com/technobuddha/library/blob/main/src/remove-diacritics.ts#L16)
 
 Remove all diacritics from a string
 

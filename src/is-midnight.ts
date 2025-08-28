@@ -1,6 +1,5 @@
 /**
  * Options for the {@link isMidnight} function
- *
  * @group Time
  * @category Day
  */
@@ -11,7 +10,6 @@ export type MidnightOptions = {
 
 /**
  * Determine if a date is at midnight
- *
  * @param input - A date
  * @param options - see {@link MidnightOptions}
  * @returns true, if the date is at midnight

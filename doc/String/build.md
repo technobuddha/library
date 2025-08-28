@@ -11,7 +11,7 @@ Technobuddha Library
 function build(...args: Collapsible<string>[]): string;
 ```
 
-Defined in: [build.ts:12](https://github.com/technobuddha/library/blob/main/src/build.ts#L12)
+Defined in: [build.ts:11](https://github.com/technobuddha/library/blob/main/src/build.ts#L11)
 
 Concatenates strings and/or arrays of strings
 

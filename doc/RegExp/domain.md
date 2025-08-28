@@ -11,7 +11,7 @@ Technobuddha Library
 const domain: RegExp;
 ```
 
-Defined in: [regexp.ts:197](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L197)
+Defined in: [regexp.ts:195](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L195)
 
 Regular expression for matching a domain name composed of a host and a top-level domain (TLD).
 

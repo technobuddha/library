@@ -22,7 +22,6 @@ export type OnLineOptions = {
 
 /**
  * Determines whether a given point lies on a specified line segment or its extension.
- *
  * @param point - The Cartesian coordinates of the point to test.
  * @param line - The line segment defined by its endpoints.
  * @param options - see {@link OnLineOptions}

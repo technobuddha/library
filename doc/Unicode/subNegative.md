@@ -11,7 +11,7 @@ Technobuddha Library
 const subNegative: "₋" = '₋';
 ```
 
-Defined in: [unicode.ts:102](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L102)
+Defined in: [unicode.ts:89](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L89)
 
 Subscript Negative
 

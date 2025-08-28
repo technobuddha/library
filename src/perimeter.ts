@@ -4,7 +4,6 @@ import { modulo } from './modulo.ts';
 
 /**
  * Calculates the perimeter of a polygon.
- *
  * @param polygon - The polygon.
  * @returns The total perimeter length of the polygon.
  * @example

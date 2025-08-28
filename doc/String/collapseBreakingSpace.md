@@ -11,7 +11,7 @@ Technobuddha Library
 function collapseBreakingSpace(input: string, trim: CollapseBreakingSpaceOptions): string;
 ```
 
-Defined in: [collapse-breaking-space.ts:23](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L23)
+Defined in: [collapse-breaking-space.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L21)
 
 Replace all breaking space (space, tab, carriage return, new line) with a single space
 

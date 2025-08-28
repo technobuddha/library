@@ -14,7 +14,7 @@ function levenshteinDistance(
    options: LevenshteinDistanceOptions): number;
 ```
 
-Defined in: [levenshtein-distance.ts:25](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L25)
+Defined in: [levenshtein-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L23)
 
 Compute the levenshtein distance between two strings (similarity)
 

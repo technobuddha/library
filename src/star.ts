@@ -3,14 +3,12 @@ import { type OriginOptions } from './angle.ts';
 
 /**
  * Generates a star-shaped polygon.
- *
  * @param sides - The number of points (arms) of the star. Must be at least 3.
  * @param outer - The radius from the origin to the outer vertices (tips) of the star.
  * @param inner - The radius from the origin to the inner vertices (indentations) of the star. Defaults to half of `outer`.
  * @param options - see {@link OriginOptions}
  * @returns A star shaped polygon.
  * @throws `TypeError` If `sides` is less than 3.
- *
  * @example
  * ```typescript
  * star(4, 2, 1);
@@ -25,7 +23,6 @@ import { type OriginOptions } from './angle.ts';
  * //   { x: √2/2, y: -√2/2 }
  * // ]
  * ```
- *
  * @group Geometry
  * @category Polygon
  */

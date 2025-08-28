@@ -11,7 +11,7 @@ Technobuddha Library
 type GraphQLArray = GraphQLValue[];
 ```
 
-Defined in: [graph-ql.ts:23](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L23)
+Defined in: [graph-ql.ts:21](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L21)
 
 A GraphQL Array, similar to a JSONArray
 

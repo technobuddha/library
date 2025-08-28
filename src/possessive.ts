@@ -3,7 +3,6 @@ import { removeDiacritics } from './remove-diacritics.ts';
 
 /**
  * Determine the possessive form of a word
- *
  * @param input - The word
  * @returns The possessive form of the word
  * @example

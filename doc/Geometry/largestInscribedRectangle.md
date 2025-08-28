@@ -11,7 +11,7 @@ Technobuddha Library
 function largestInscribedRectangle(polygon: Polygon, options: LargestInscribedRectUnitOptions): Rect | RotatedRect;
 ```
 
-Defined in: [largest-inscribed-rectangle.ts:100](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L100)
+Defined in: [largest-inscribed-rectangle.ts:98](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L98)
 
 Computes the largest rectangle that can be inscribed within the given polygon.
 

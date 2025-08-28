@@ -13,7 +13,7 @@ type RoundOptions = {
 };
 ```
 
-Defined in: [round.ts:10](https://github.com/technobuddha/library/blob/main/src/round.ts#L10)
+Defined in: [round.ts:9](https://github.com/technobuddha/library/blob/main/src/round.ts#L9)
 
 Options for the [round](round.md) function
 
@@ -21,5 +21,5 @@ Options for the [round](round.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [round.ts:12](https://github.com/technobuddha/library/blob/main/src/round.ts#L12) |
+| <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [round.ts:11](https://github.com/technobuddha/library/blob/main/src/round.ts#L11) |
 

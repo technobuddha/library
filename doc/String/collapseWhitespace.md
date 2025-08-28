@@ -11,7 +11,7 @@ Technobuddha Library
 function collapseWhitespace(input: string, trim: CollapseWhitespaceOptions): string;
 ```
 
-Defined in: [collapse-whitespace.ts:23](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L23)
+Defined in: [collapse-whitespace.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L21)
 
 Replace all whitespace within a string with a single space
 

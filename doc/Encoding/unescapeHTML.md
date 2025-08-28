@@ -11,7 +11,7 @@ Technobuddha Library
 function unescapeHTML(input: string): string;
 ```
 
-Defined in: [unescape-html.ts:24](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L24)
+Defined in: [unescape-html.ts:23](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L23)
 
 Unescape a string encoded in HTML
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function constructNumber(deconstructed: Omit<DeconstructedNumber, "value">): number;
 ```
 
-Defined in: [construct-number.ts:11](https://github.com/technobuddha/library/blob/main/src/construct-number.ts#L11)
+Defined in: [construct-number.ts:16](https://github.com/technobuddha/library/blob/main/src/construct-number.ts#L16)
 
 Reconstructs a number from its deconstructed representation.
 
@@ -26,4 +26,12 @@ Reconstructs a number from its deconstructed representation.
 `number`
 
 The reconstructed number.
+
+## Example
+
+```typescript
+constructNumber({ sign: 1, mantissa: '123', exponent: 0 }); // 1.23
+constructNumber({ sign: -1, mantissa: '500', exponent: 2 }); // -5
+constructNumber({ sign: 1, mantissa: '', exponent: 0 }); // 0
+```
 

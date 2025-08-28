@@ -12,7 +12,6 @@ import { empty } from './unicode.ts';
  * - `base64url`: The binary object is encoded using {@link encodeBase64Url}
  * - `hex`: each byte in the binary object is converted to a 2-digit hexadecimal number.
  * - `binary`: each byte in the binary object is converted to a 8-bit character.
- *
  * @param input - binary object
  * @param encoding - The encoding to use
  * @returns Encoded string

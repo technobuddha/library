@@ -13,7 +13,7 @@ type ChopOptions = {
 };
 ```
 
-Defined in: [chop.ts:9](https://github.com/technobuddha/library/blob/main/src/chop.ts#L9)
+Defined in: [chop.ts:8](https://github.com/technobuddha/library/blob/main/src/chop.ts#L8)
 
 Options for the [chop](chop.md) function
 
@@ -21,5 +21,5 @@ Options for the [chop](chop.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="truncate"></a> `truncate?` | `boolean` | If true, the last block will be omitted if has insufficient characters * | [chop.ts:11](https://github.com/technobuddha/library/blob/main/src/chop.ts#L11) |
+| <a id="truncate"></a> `truncate?` | `boolean` | If true, the last block will be omitted if has insufficient characters * | [chop.ts:10](https://github.com/technobuddha/library/blob/main/src/chop.ts#L10) |
 

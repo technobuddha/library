@@ -11,7 +11,7 @@ Technobuddha Library
 function endOfMonth(input: Date, options: EndOfMonthOptions): Date;
 ```
 
-Defined in: [end-of-month.ts:24](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L24)
+Defined in: [end-of-month.ts:22](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L22)
 
 Determine the last day of the month containing the input date
 

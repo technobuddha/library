@@ -16,7 +16,7 @@ type FilenameOptions = {
 };
 ```
 
-Defined in: [to-filename.ts:17](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L17)
+Defined in: [to-filename.ts:16](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L16)
 
 Options for the [toFilename](toFilename.md) function
 
@@ -24,8 +24,8 @@ Options for the [toFilename](toFilename.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="disambiguate"></a> `disambiguate?` | `number` | number of characters to preserve at the end of the filename when truncated (for disambiguation) | [to-filename.ts:23](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L23) |
-| <a id="maxlength"></a> `maxLength?` | `number` | the file name will be truncated to this length | [to-filename.ts:19](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L19) |
-| <a id="replacement"></a> `replacement?` | `string` | character to use to replace "bad" characters | [to-filename.ts:21](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L21) |
-| <a id="separator"></a> `separator?` | `string` | string to separate the main section from the disambiguated section | [to-filename.ts:25](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L25) |
+| <a id="disambiguate"></a> `disambiguate?` | `number` | number of characters to preserve at the end of the filename when truncated (for disambiguation) | [to-filename.ts:22](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L22) |
+| <a id="maxlength"></a> `maxLength?` | `number` | the file name will be truncated to this length | [to-filename.ts:18](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L18) |
+| <a id="replacement"></a> `replacement?` | `string` | character to use to replace "bad" characters | [to-filename.ts:20](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L20) |
+| <a id="separator"></a> `separator?` | `string` | string to separate the main section from the disambiguated section | [to-filename.ts:24](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L24) |
 

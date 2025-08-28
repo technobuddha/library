@@ -1,7 +1,6 @@
 import { empty } from './unicode.ts';
 /**
  * Options for the {@link fillTemplate} function
- *
  * @group String
  * @category Templates
  */

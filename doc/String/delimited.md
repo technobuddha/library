@@ -15,7 +15,7 @@ function delimited(
    count: number): string;
 ```
 
-Defined in: [delimited.ts:13](https://github.com/technobuddha/library/blob/main/src/delimited.ts#L13)
+Defined in: [delimited.ts:12](https://github.com/technobuddha/library/blob/main/src/delimited.ts#L12)
 
 Return a field from a delimited string
 

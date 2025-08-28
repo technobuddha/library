@@ -2,7 +2,6 @@ import { specialBegin, specialFinish } from './json.ts';
 
 /**
  * Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with {@link reviver}
- *
  * @remarks Will encode Date, RegExp and BigInt objects.  The numeric values 'Infinity' and 'NaN' are also encoded.
  * @param this - The raw object being stringified
  * @param key - The key for the field

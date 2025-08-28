@@ -11,7 +11,7 @@ Technobuddha Library
 function padNumber(input: number, length: number): string;
 ```
 
-Defined in: [pad-number.ts:10](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L10)
+Defined in: [pad-number.ts:17](https://github.com/technobuddha/library/blob/main/src/pad-number.ts#L17)
 
 Add leading zeros to a number to ensure a string of a minimum length
 
@@ -27,4 +27,14 @@ Add leading zeros to a number to ensure a string of a minimum length
 `string`
 
 number as a string with leading zeros as needed
+
+## Example
+
+```typescript
+padNumber(5); // "05"
+padNumber(42, 4); // "0042"
+padNumber(-7, 3); // "-07"
+padNumber(NaN, 4); // " NaN"
+padNumber(Infinity, 6); // "Infinity"
+```
 

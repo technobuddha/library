@@ -4,7 +4,6 @@ const REPLACEMENT = [0xef, 0x8f, 0xbd];
 
 /**
  * Encode a unicode (UTF-16 encoded javascript) string into UTF8
- *
  * @param input - The string to encode
  * @returns The UTF-8 encoded string
  * @group Unicode

@@ -11,7 +11,7 @@ Technobuddha Library
 function area(vertices: Polygon, signed: boolean): number;
 ```
 
-Defined in: [area.ts:24](https://github.com/technobuddha/library/blob/main/src/area.ts#L24)
+Defined in: [area.ts:23](https://github.com/technobuddha/library/blob/main/src/area.ts#L23)
 
 Calculates the area of a polygon given its vertices.
 

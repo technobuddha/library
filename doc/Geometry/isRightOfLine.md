@@ -11,7 +11,7 @@ Technobuddha Library
 function isRightOfLine(point: Cartesian, line: LineSegment): boolean;
 ```
 
-Defined in: [is-right-of-line.ts:20](https://github.com/technobuddha/library/blob/main/src/is-right-of-line.ts#L20)
+Defined in: [is-right-of-line.ts:19](https://github.com/technobuddha/library/blob/main/src/is-right-of-line.ts#L19)
 
 Determines whether a given point lies to the right of a specified line segment.
 

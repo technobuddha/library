@@ -16,7 +16,7 @@ function cleanStart(input: string, characters:
   | RegExp)[]): string;
 ```
 
-Defined in: [clean-start.ts:15](https://github.com/technobuddha/library/blob/main/src/clean-start.ts#L15)
+Defined in: [clean-start.ts:14](https://github.com/technobuddha/library/blob/main/src/clean-start.ts#L14)
 
 Remove all occurrences of characters from the start of the string
 

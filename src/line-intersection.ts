@@ -2,7 +2,6 @@ import { type Cartesian, type LineSegment } from './@types/geometry.ts';
 
 /**
  * Calculates the intersection point of two line segments.
- *
  * @param a - The first line segment.
  * @param b - The second line segment.
  * @param extend - If `true`, treats the segments as infinite lines; if `false`, only considers the actual segments.

@@ -15,7 +15,7 @@ Converts two [Cartesian](Cartesian.md) points or a [Rect](Rect.md) into a [Polyg
 function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
 ```
 
-Defined in: [to-polygon.ts:25](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L25)
+Defined in: [to-polygon.ts:23](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L23)
 
 Converts two [Cartesian](Cartesian.md) points into a [Polygon](Polygon.md).
 
@@ -52,7 +52,7 @@ toPolygon({ x: 1, y: 2 }, { x: 4, y: 6 });
 function toPolygon(rect: Rect): Polygon;
 ```
 
-Defined in: [to-polygon.ts:47](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L47)
+Defined in: [to-polygon.ts:43](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L43)
 
 Convert a [Rect](Rect.md) into a [Polygon](Polygon.md).
 

@@ -10,7 +10,6 @@ import { empty } from './unicode.ts';
  * - Returns a string representation for functions in the format `function <name>();`.
  * - Converts numbers using their `toString` method.
  * - For all other types, returns the result of `Object.prototype.toString`.
- *
  * @param value - The value to convert to a string.
  * @returns The string representation of the input value.
  * @group Utility

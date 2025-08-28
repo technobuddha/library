@@ -11,7 +11,7 @@ Technobuddha Library
 function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): string;
 ```
 
-Defined in: [encode-binary.ts:31](https://github.com/technobuddha/library/blob/main/src/encode-binary.ts#L31)
+Defined in: [encode-binary.ts:30](https://github.com/technobuddha/library/blob/main/src/encode-binary.ts#L30)
 
 Encode an [BinaryObject](BinaryObject.md) into a string
 

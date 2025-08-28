@@ -3,7 +3,6 @@ import { deconstructNumber } from './deconstruct-number.ts';
 
 /**
  * Options for the {@link ceil} function
- *
  * @group Math
  * @category Arithmetic
  */
@@ -16,10 +15,16 @@ export type CeilOptions = {
 
 /**
  * Returns the smallest integer greater than or equal to the given number, with optional tolerance and precision adjustments.
- *
  * @param input - The number to apply the ceiling operation to.
  * @param options - Optional configuration object.
  * @returns The smallest integer greater than or equal to the adjusted input.
+ * @example
+ * ```typescript
+ * ceil(2.3); // 3
+ * ceil(-2.3); // -2
+ * ceil(2.0001, { tolerance: 0.001 }); // 2
+ * ceil(2.345, { precision: 2 }); // 2.35
+ * ```
  * @group Math
  * @category Arithmetic
  */

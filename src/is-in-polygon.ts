@@ -8,7 +8,6 @@ import { toLineSegment } from './to-line-segment.ts';
 
 /**
  * Determines whether a given point or rectangle is inside or on the edge of a polygon.
- *
  * @param object - The point or rectangle to test.
  * @param polygon - The polygon to test against, represented as an array of Cartesian coordinates.
  * @returns `true` if the object is inside the polygon or on its edge, otherwise `false`.
@@ -24,7 +23,6 @@ import { toLineSegment } from './to-line-segment.ts';
  * - Points on the edge of the polygon return `true`.
  * - For rectangles, all corners must be inside the polygon.
  * - Uses ray-casting algorithm with explicit edge detection.
- *
  * @group Geometry
  * @category Polygon
  * @category Point

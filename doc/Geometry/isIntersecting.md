@@ -11,7 +11,7 @@ Technobuddha Library
 function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean;
 ```
 
-Defined in: [is-intersecting.ts:35](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L35)
+Defined in: [is-intersecting.ts:34](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L34)
 
 Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon.
 

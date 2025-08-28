@@ -14,7 +14,7 @@ function longestCommonSubstring(
    __namedParameters: LongestCommonSubstringOptions): string;
 ```
 
-Defined in: [longest-common-substring.ts:27](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L27)
+Defined in: [longest-common-substring.ts:24](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L24)
 
 Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm.
 

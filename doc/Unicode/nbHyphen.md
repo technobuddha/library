@@ -11,7 +11,7 @@ Technobuddha Library
 const nbHyphen: "‑" = '‑';
 ```
 
-Defined in: [unicode.ts:55](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L55)
+Defined in: [unicode.ts:48](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L48)
 
 Non-Breaking Hyphen
 

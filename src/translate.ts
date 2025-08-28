@@ -2,7 +2,6 @@ import { type Cartesian, type Polygon, type XY } from './@types/geometry.ts';
 
 /**
  * Translates a point in Cartesian coordinates by a given amount.
- *
  * @param point - The original point to translate.
  * @param amount - The amount to translate the point by, represented as a Cartesian vector.
  * @returns A new Cartesian point resulting from translating the original point by the specified amount.
@@ -30,11 +29,9 @@ export function translate(point: Cartesian, amount: XY): Cartesian;
  * translate([{ x: 0, y: 0 }, { x: 1, y: 1 }, { x: 0, y: 1}], { x: 1, y: 2 });
  * // [{ x: 1, y: 2 }, { x: 2, y: 3 }, { x: 1, y: 3 }]
  * ```
- *
  * @param polygon - The polygon to translate.
  * @param amount - The amount to move the polygon by.
  * @returns The translated polygon.
- *
  * @group Geometry
  * @category Point
  * @category Polygon

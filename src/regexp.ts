@@ -12,11 +12,9 @@ import { zipperMerge } from './zipper-merge.ts';
  * This function allows you to compose regular expressions using template literals,
  * automatically merging flags and wrapping interpolated regex sources as non-capturing groups
  * when appropriate.
- *
  * @param template - The template string array containing the literal parts of the pattern.
  * @param args - The regular expressions to interpolate into the template.
  * @returns A new `RegExp` object with the combined pattern and merged flags.
- *
  * @group RegExp
  * @category Template
  */

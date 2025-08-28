@@ -11,7 +11,7 @@ Technobuddha Library
 function mode<T>(array: T[]): undefined | T;
 ```
 
-Defined in: [mode.ts:12](https://github.com/technobuddha/library/blob/main/src/mode.ts#L12)
+Defined in: [mode.ts:18](https://github.com/technobuddha/library/blob/main/src/mode.ts#L18)
 
 Returns the mode (the most frequently occurring element) of the given array.
 If multiple elements have the same highest frequency, the first encountered is returned.
@@ -34,4 +34,13 @@ Returns `undefined` if the array is empty.
 `undefined` \| `T`
 
 The mode of the array, or `undefined` if the array is empty.
+
+## Example
+
+```typescript
+mode([1, 2, 2, 3, 3, 3, 4]); // 3
+mode(['a', 'b', 'b', 'a', 'c']); // 'a'
+mode([true, false, false, true, true]); // true
+mode([]); // undefined
+```
 

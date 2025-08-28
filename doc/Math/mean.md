@@ -11,7 +11,7 @@ Technobuddha Library
 function mean(numbers: number[]): number;
 ```
 
-Defined in: [mean.ts:12](https://github.com/technobuddha/library/blob/main/src/mean.ts#L12)
+Defined in: [mean.ts:10](https://github.com/technobuddha/library/blob/main/src/mean.ts#L10)
 
 Calculates the arithmetic mean (average) of an array of numbers.
 

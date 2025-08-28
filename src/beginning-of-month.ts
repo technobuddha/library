@@ -1,6 +1,5 @@
 /**
  * Options for the {@link beginningOfMonth} function
- *
  * @group Time
  * @category Month
  */
@@ -11,7 +10,6 @@ export type BeginningOfMonthOptions = {
 
 /**
  * Determine the start of the month for a dateDetermine the start of the month for a date
- *
  * @param input - The date
  * @param options - see {@link BeginningOfMonthOptions}
  * @defaultValue utc false

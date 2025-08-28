@@ -11,7 +11,7 @@ Technobuddha Library
 function camelCase(input: string): string;
 ```
 
-Defined in: [camel-case.ts:14](https://github.com/technobuddha/library/blob/main/src/camel-case.ts#L14)
+Defined in: [camel-case.ts:13](https://github.com/technobuddha/library/blob/main/src/camel-case.ts#L13)
 
 Convert an identifier string to a camel case
 

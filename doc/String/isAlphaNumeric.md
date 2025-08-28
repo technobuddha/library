@@ -11,7 +11,7 @@ Technobuddha Library
 function isAlphaNumeric(input: string): boolean;
 ```
 
-Defined in: [is-alpha-numeric.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L11)
+Defined in: [is-alpha-numeric.ts:10](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L10)
 
 Test a string for all alphanumeric characters
 

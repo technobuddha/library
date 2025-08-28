@@ -11,7 +11,7 @@ Technobuddha Library
 function toDate(entity: unknown): Date;
 ```
 
-Defined in: [to-date.ts:20](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L20)
+Defined in: [to-date.ts:18](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L18)
 
 Converts an unknown entity to a `Date` object.
 

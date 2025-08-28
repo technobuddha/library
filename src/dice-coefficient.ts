@@ -2,7 +2,6 @@ import { compareStrings } from './compare-strings.ts';
 
 /**
  * Options for the {@link diceCoefficient} function
- *
  * @group String
  * @category Fuzzy Match
  */
@@ -13,7 +12,6 @@ export type DiceCoefficientOptions = {
 
 /**
  * Compute the dice coefficient measure of similarity between two strings
- *
  * @param input - The first string
  * @param compareTo - The second string
  * @param __nameParameters - see {@link DiceCoefficientOptions}

@@ -11,7 +11,10 @@ Technobuddha Library
 const ordinalOnes: string[];
 ```
 
-Defined in: [constants.ts:244](https://github.com/technobuddha/library/blob/main/src/constants.ts#L244)
+Defined in: [constants.ts:231](https://github.com/technobuddha/library/blob/main/src/constants.ts#L231)
 
 Words for ordinal numbers 0-19
+
+first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth,
+eleventh, twelfth, thirteenth, fourteenth, fifteenth, sixteenth, seventeenth, eighteenth, nineteenth
 

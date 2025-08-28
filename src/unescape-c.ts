@@ -27,7 +27,6 @@
  * is not an octal digit.
  * [^2]: A hex escape sequence must have at least one hex digit following \\x, with no upper bound;
  * it continues for as many hex digits as there are.
- *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
  * @example

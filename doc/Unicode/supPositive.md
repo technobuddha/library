@@ -11,7 +11,7 @@ Technobuddha Library
 const supPositive: "⁺" = '⁺';
 ```
 
-Defined in: [unicode.ts:94](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L94)
+Defined in: [unicode.ts:82](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L82)
 
 Superscript Positive
 

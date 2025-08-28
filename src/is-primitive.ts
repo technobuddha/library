@@ -1,6 +1,5 @@
 /**
  * Check to see if an object is a primitive
- *
  * @param input - object to test
  * @returns true, if the object is a primitive
  * @group Primitive

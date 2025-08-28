@@ -11,7 +11,7 @@ Technobuddha Library
 const email: RegExp;
 ```
 
-Defined in: [regexp.ts:228](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L228)
+Defined in: [regexp.ts:226](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L226)
 
 validate an valid email address
 

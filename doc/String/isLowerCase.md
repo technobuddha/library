@@ -11,7 +11,7 @@ Technobuddha Library
 function isLowerCase(input: string): boolean;
 ```
 
-Defined in: [is-lower-case.ts:11](https://github.com/technobuddha/library/blob/main/src/is-lower-case.ts#L11)
+Defined in: [is-lower-case.ts:10](https://github.com/technobuddha/library/blob/main/src/is-lower-case.ts#L10)
 
 Test a string for all lower case characters
 

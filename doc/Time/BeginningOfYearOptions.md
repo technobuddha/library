@@ -13,7 +13,7 @@ type BeginningOfYearOptions = {
 };
 ```
 
-Defined in: [beginning-of-year.ts:9](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L9)
+Defined in: [beginning-of-year.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L8)
 
 Options for the [beginningOfYear](beginningOfYear.md) function
 
@@ -21,5 +21,5 @@ Options for the [beginningOfYear](beginningOfYear.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L11) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L10) |
 

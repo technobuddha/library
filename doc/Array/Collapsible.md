@@ -13,7 +13,7 @@ type Collapsible<T> =
 | () => CollapsibleValue<T>;
 ```
 
-Defined in: [collapse.ts:49](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L49)
+Defined in: [collapse.ts:48](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L48)
 
 Represents a value that can be "collapsed" into a flat sequence of values of type `T`.
 

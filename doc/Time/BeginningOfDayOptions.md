@@ -13,7 +13,7 @@ type BeginningOfDayOptions = {
 };
 ```
 
-Defined in: [beginning-of-day.ts:7](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L7)
+Defined in: [beginning-of-day.ts:6](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L6)
 
 Options for [beginningOfDay](beginningOfDay.md)
 
@@ -21,5 +21,5 @@ Options for [beginningOfDay](beginningOfDay.md)
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the UTC timezone | [beginning-of-day.ts:9](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L9) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the UTC timezone | [beginning-of-day.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L8) |
 

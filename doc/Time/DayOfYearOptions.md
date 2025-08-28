@@ -13,7 +13,7 @@ type DayOfYearOptions = {
 };
 ```
 
-Defined in: [day-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L11)
+Defined in: [day-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L10)
 
 Options for the [dayOfYear](dayOfYear.md) function
 
@@ -21,5 +21,5 @@ Options for the [dayOfYear](dayOfYear.md) function
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | [day-of-year.ts:12](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L12) |
+| <a id="utc"></a> `utc?` | `boolean` | [day-of-year.ts:11](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L11) |
 

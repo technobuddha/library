@@ -4,11 +4,9 @@
  * Each element of the resulting array is an array containing the elements from the input arrays at
  * the corresponding index. If input arrays have different lengths, `undefined` will be used for
  * missing elements.
- *
  * @param arrays - The arrays to merge
  * @returns An array of arrays, where each inner array contains the elements from the input arrays
  * at the same index.
- *
  * @example
  * ```typescript
  * zipperMerge([1, 2, 3], ['a', 'b', 'c']);

@@ -14,7 +14,7 @@ function isOnLine(
    options: OnLineOptions): boolean;
 ```
 
-Defined in: [is-on-line.ts:38](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L38)
+Defined in: [is-on-line.ts:37](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L37)
 
 Determines whether a given point lies on a specified line segment or its extension.
 

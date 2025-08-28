@@ -11,7 +11,7 @@ Technobuddha Library
 function perimeter(polygon: Polygon): number;
 ```
 
-Defined in: [perimeter.ts:24](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L24)
+Defined in: [perimeter.ts:23](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L23)
 
 Calculates the perimeter of a polygon.
 

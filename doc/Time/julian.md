@@ -11,7 +11,7 @@ Technobuddha Library
 function julian(input: Date): number;
 ```
 
-Defined in: [julian.ts:13](https://github.com/technobuddha/library/blob/main/src/julian.ts#L13)
+Defined in: [julian.ts:11](https://github.com/technobuddha/library/blob/main/src/julian.ts#L11)
 
 Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
 

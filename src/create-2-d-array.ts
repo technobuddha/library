@@ -2,7 +2,6 @@ import { isFunction } from './is-function.ts';
 
 /**
  * Create a two dimensional array with all elements initialized
- *
  * @remarks Array is accessed by
  * ```js
  * array[w][h]
@@ -13,12 +12,10 @@ import { isFunction } from './is-function.ts';
  *
  * create2DArray(2, 3, (x, y) => x + y); // [[0, 1, 2], [1, 2, 3]]
  * ```
- *
  * @typeParam T - Type of the elements in the array
  * @param width - Width of the array
  * @param height - Height of the array
  * @param fill - Value to fill the array, or a function returning the fill value for each element
- *
  * @group Array
  * @category Creation
  */

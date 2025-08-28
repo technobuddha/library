@@ -5,7 +5,6 @@ import { type Cartesian } from './@types/geometry.ts';
  *
  * A value is considered a Cartesian point if it is a non-null object
  * that contains numeric `x` and `y` properties.
- *
  * @param point - The value to test for Cartesian structure.
  * @returns `true` if the value is a Cartesian point, otherwise `false`.
  * @example

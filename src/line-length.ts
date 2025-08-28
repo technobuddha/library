@@ -2,7 +2,6 @@ import { type LineSegment } from './@types/geometry.ts';
 
 /**
  * Calculates the length of a line segment.
- *
  * @param line - The line segment for which to calculate the length.
  * @returns The length of the line segment.
  * @example

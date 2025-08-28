@@ -19,10 +19,8 @@ import { syllables } from './syllables.ts';
  * | 50.0–30.0    | College            | Difficult to read.                                                       |
  * | 30.0–10.0    | College graduate   | Very difficult to read. Best understood by university graduates.         |
  * | 10.0–0.0     | Professional       | Extremely difficult to read. Best understood by university graduates.    |
- *
  * @param text - The input text to analyze.
  * @returns The Flesch-Kincaid readability score as a number.
- *
  * @see https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
  * @group English
  * @category Analysis

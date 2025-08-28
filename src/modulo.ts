@@ -5,12 +5,19 @@
  * (such as Python) the result would be 7. This function emulates the more
  * correct modulo behavior, which is useful for certain applications such as
  * calculating an offset index in a circular list.
- *
  * @param dividend - The dividend.
  * @param divisor - The divisor.
- * @returns a % b where the result is between 0 and b (either 0 \<= x \< b
- * or b \< x \<= 0, depending on the sign of b).
- *
+ * @returns `dividend` modulo `divisor`
+ * @returns The result of the modulo operation, always non-negative and less than the divisor (or non-positive and greater than the divisor if the divisor is negative).
+ * @example
+ * ```typescript
+ * modulo(7, 5); // 2
+ * modulo(-1, 8); // 7
+ * modulo(10, 3); // 1
+ * modulo(-10, 3); // 2
+ * modulo(10, -3); // -2
+ * modulo(-10, -3); // -1
+ * ```
  * @group Math
  * @category Arithmetic
  */

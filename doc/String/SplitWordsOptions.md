@@ -14,7 +14,7 @@ type SplitWordsOptions = {
 };
 ```
 
-Defined in: [split-words.ts:10](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L10)
+Defined in: [split-words.ts:9](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L9)
 
 Options for the [splitWords](../English/splitWords.md) function
 
@@ -22,5 +22,5 @@ Options for the [splitWords](../English/splitWords.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="delimiter"></a> `delimiter?` | \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) | The delimiter between words | [split-words.ts:12](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L12) |
+| <a id="delimiter"></a> `delimiter?` | \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp) | The delimiter between words | [split-words.ts:11](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L11) |
 

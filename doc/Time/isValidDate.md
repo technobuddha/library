@@ -11,7 +11,7 @@ Technobuddha Library
 function isValidDate(input: Date): boolean;
 ```
 
-Defined in: [is-valid-date.ts:10](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L10)
+Defined in: [is-valid-date.ts:9](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L9)
 
 Determine if a date is valid
 

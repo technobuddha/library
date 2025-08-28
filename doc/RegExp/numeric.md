@@ -11,7 +11,7 @@ Technobuddha Library
 const numeric: RegExp;
 ```
 
-Defined in: [regexp.ts:178](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L178)
+Defined in: [regexp.ts:176](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L176)
 
 Validate a valid number
 

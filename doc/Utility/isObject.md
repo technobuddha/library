@@ -11,7 +11,7 @@ Technobuddha Library
 function isObject(value: unknown): value is object;
 ```
 
-Defined in: [is-object.ts:9](https://github.com/technobuddha/library/blob/main/src/is-object.ts#L9)
+Defined in: [is-object.ts:8](https://github.com/technobuddha/library/blob/main/src/is-object.ts#L8)
 
 Determines whether the provided value is a non-null object.
 

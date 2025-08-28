@@ -13,7 +13,7 @@ type Weighted = {
 };
 ```
 
-Defined in: [random-weighted-pick.ts:10](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L10)
+Defined in: [random-weighted-pick.ts:9](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L9)
 
 Represents an object with an associated weight value.
 
@@ -24,5 +24,5 @@ based on their relative weights, such as in weighted random selection.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="weight"></a> `weight` | `number` | The numeric weight assigned to the object. | [random-weighted-pick.ts:14](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L14) |
+| <a id="weight"></a> `weight` | `number` | The numeric weight assigned to the object. | [random-weighted-pick.ts:13](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L13) |
 

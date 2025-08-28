@@ -14,7 +14,7 @@ function plural(
    include?: boolean): string;
 ```
 
-Defined in: [plural.ts:22](https://github.com/technobuddha/library/blob/main/src/plural.ts#L22)
+Defined in: [plural.ts:21](https://github.com/technobuddha/library/blob/main/src/plural.ts#L21)
 
 Return the plural version of the input string
 

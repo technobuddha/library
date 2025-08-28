@@ -18,7 +18,7 @@ function scale(
    options?: OriginOptions): Cartesian;
 ```
 
-Defined in: [scale.ts:36](https://github.com/technobuddha/library/blob/main/src/scale.ts#L36)
+Defined in: [scale.ts:34](https://github.com/technobuddha/library/blob/main/src/scale.ts#L34)
 
 Scales a point around a given origin by a specified amount.
 
@@ -51,7 +51,7 @@ function scale(
    options?: OriginOptions): Cartesian[];
 ```
 
-Defined in: [scale.ts:49](https://github.com/technobuddha/library/blob/main/src/scale.ts#L49)
+Defined in: [scale.ts:47](https://github.com/technobuddha/library/blob/main/src/scale.ts#L47)
 
 Scales a polygon around a given origin by a specified amount.
 

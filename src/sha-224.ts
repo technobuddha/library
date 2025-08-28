@@ -6,7 +6,6 @@ import { ShaBase } from './sha-base.ts';
  *
  * These 32-bit integer values are the first 32 bits of the fractional parts of the cube roots of the first 64 prime numbers.
  * They are used as round constants in the main compression function of the SHA-2 family of algorithms.
- *
  * @see [FIPS PUB 180-4, Section 4.2.2](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)
  * @internal
  */
@@ -27,7 +26,6 @@ const K = [
  * This function uses bitwise OR with zero to truncate the input number
  * to a 32-bit signed integer, effectively emulating the behavior of
  * `Math.trunc(x) | 0` for integer conversion.
- *
  * @param x - The number to convert.
  * @returns The 32-bit signed integer representation of the input.
  * @internal
@@ -45,7 +43,6 @@ function int32(x: number): number {
  * otherwise, the bit from `z` is selected.
  *
  * Mathematically: ch(x, y, z) = (x & y) ^ (~x & z)
- *
  * @param x - The selector value.
  * @param y - The first input value.
  * @param z - The second input value.
@@ -61,7 +58,6 @@ function ch(x: number, y: number, z: number): number {
  *
  * For each bit position, the result is the value that occurs in at least two of the inputs.
  * This function is commonly used in cryptographic hash algorithms such as SHA-2.
- *
  * @param x - The first 32-bit integer input.
  * @param y - The second 32-bit integer input.
  * @param z - The third 32-bit integer input.
@@ -77,7 +73,6 @@ function maj(x: number, y: number, z: number): number {
  *
  * This function performs a bitwise rotation and XOR combination as defined in the SHA-2 specification:
  *   σ₀(x) = ROTR²(x) ⊕ ROTR¹³(x) ⊕ ROTR²²(x)
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the σ₀ function to the input.
  * @internal
@@ -91,7 +86,6 @@ function sigma0(x: number): number {
  *
  * This function performs bitwise right rotations and XORs as defined in the SHA-2 specification:
  *   σ₁(x) = ROTR⁶(x) ⊕ ROTR¹¹(x) ⊕ ROTR²⁵(x)
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the σ₁ function to the input.
  * @internal
@@ -106,7 +100,6 @@ function sigma1(x: number): number {
  * This function performs a bitwise rotation and shift, then combines the results using XOR,
  * as defined in the SHA-2 specification:
  *   σ₀(x) = ROTR⁷(x) ⊕ ROTR¹⁸(x) ⊕ SHR³(x)
- *
  * @param x - The 32-bit integer input.
  * @returns The result of the σ₀ transformation.
  * @internal
@@ -123,7 +116,6 @@ function gamma0(x: number): number {
  * where:
  *   - ROTR^n(x) is the right rotation of x by n bits,
  *   - SHR^n(x) is the right shift of x by n bits.
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the σ₁ function to the input.
  * @internal
@@ -134,7 +126,6 @@ function gamma1(x: number): number {
 
 /**
  * Secure Hash Algorithm, SHA2 SHA-224
- *
  * @example
  * ```typescript
  * const sha224 = new Sha224();

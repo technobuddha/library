@@ -11,7 +11,7 @@ Technobuddha Library
 function toDegrees(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [to-degrees.ts:17](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L17)
+Defined in: [to-degrees.ts:16](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L16)
 
 Convert an angle from radians to degrees
 

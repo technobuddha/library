@@ -13,7 +13,7 @@ type RomanOptions = {
 };
 ```
 
-Defined in: [roman-numeral.ts:123](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L123)
+Defined in: [roman-numeral.ts:121](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L121)
 
 Options for converting numbers to Roman numerals.
 
@@ -21,5 +21,5 @@ Options for converting numbers to Roman numerals.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="format"></a> `format?` | `"standard"` \| `"apostrophus"` \| `"vinculum"` | Specifies the output format for the Roman numeral. | [roman-numeral.ts:125](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L125) |
+| <a id="format"></a> `format?` | `"standard"` \| `"apostrophus"` \| `"vinculum"` | Specifies the output format for the Roman numeral. | [roman-numeral.ts:123](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L123) |
 

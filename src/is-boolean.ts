@@ -1,6 +1,5 @@
 /**
  * Determines whether the provided value is a boolean or a Boolean object.
- *
  * @param value - The value to test.
  * @returns True if the value is a primitive boolean or a Boolean object; otherwise, false.
  * @group Utility

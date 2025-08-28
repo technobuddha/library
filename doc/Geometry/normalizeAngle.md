@@ -11,7 +11,7 @@ Technobuddha Library
 function normalizeAngle(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [normalize-angle.ts:24](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L24)
+Defined in: [normalize-angle.ts:23](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L23)
 
 Normalizes an angle to be in range 0-1 turns.
 

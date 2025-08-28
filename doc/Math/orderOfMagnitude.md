@@ -11,7 +11,7 @@ Technobuddha Library
 function orderOfMagnitude(exponent: number): null | string;
 ```
 
-Defined in: [numbering/order-of-magnitude.ts:17](https://github.com/technobuddha/library/blob/main/src/numbering/order-of-magnitude.ts#L17)
+Defined in: order-of-magnitude.ts:20
 
 Get the spelled out word for an exponent
 
@@ -30,15 +30,15 @@ Order of Magnitude as text
 ## Remarks
 
 This is only using the exponent, There is no limit to the numbers this function can represents, however Javascript/Typescript can only represent
-numbers up to 1e308, which limits the numbers that this method can represent to 10^10^308 which is really really big.
+numbers up to 1e308, which limits the numbers that this method can represent to 10 \*\* 10 \*\* 308 which is really really big.
 
-## Examples
+## Example
 
-```ts
-6 is "million"
-```
-
-```ts
-303 is "centillion"
+```typescript
+orderOfMagnitude(3); // "thousand"
+orderOfMagnitude(6); // "million"
+orderOfMagnitude(9); // "billion"
+orderOfMagnitude(0); // ""
+orderOfMagnitude(-3); // null
 ```
 

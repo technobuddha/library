@@ -11,7 +11,7 @@ Technobuddha Library
 function possessive(input: string): string;
 ```
 
-Defined in: [possessive.ts:19](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L19)
+Defined in: [possessive.ts:18](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L18)
 
 Determine the possessive form of a word
 

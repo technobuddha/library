@@ -3,7 +3,7 @@ import { dayOfWeek } from './day-of-week.ts';
 import { dayOfYear } from './day-of-year.ts';
 import { isoWeekOfYear } from './iso-week-of-year.ts';
 import { julian } from './julian.ts';
-import { ordinal } from './numbering/ordinal.ts';
+import { ordinal } from './ordinal.ts';
 import { padNumber } from './pad-number.ts';
 import { timezone } from './timezone.ts';
 import { empty } from './unicode.ts';
@@ -89,7 +89,6 @@ export type FormatDateOptions = {
 
 /**
  * Format a date
- *
  * @param input - The date
  * @param mask - The mask
  * @param options - see {@link FormatDateOptions}

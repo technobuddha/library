@@ -11,7 +11,7 @@ Technobuddha Library
 function isSurrogate(input: string, options: IsSurrogateOptions): boolean;
 ```
 
-Defined in: [is-surrogate.ts:24](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L24)
+Defined in: [is-surrogate.ts:23](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L23)
 
 Determine is a character is a surrogate
 

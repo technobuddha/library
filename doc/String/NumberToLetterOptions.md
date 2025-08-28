@@ -13,7 +13,7 @@ type NumberToLetterOptions = {
 };
 ```
 
-Defined in: [number-to-letter.ts:13](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L13)
+Defined in: [number-to-letter.ts:12](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L12)
 
 Options for the [numberToLetter](numberToLetter.md) function
 
@@ -21,5 +21,5 @@ Options for the [numberToLetter](numberToLetter.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="alphabet"></a> `alphabet?` | `string` | The alphabet to use | [number-to-letter.ts:15](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L15) |
+| <a id="alphabet"></a> `alphabet?` | `string` | The alphabet to use | [number-to-letter.ts:14](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L14) |
 

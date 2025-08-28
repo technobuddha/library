@@ -8,7 +8,6 @@ import { toLineSegment } from './to-line-segment.ts';
 
 /**
  * Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon.
- *
  * @param shape - The shape to test for intersection, which can be either a LineSegment or a Polygon.
  * @param polygon - The polygon to test against.
  * @returns `true` if the shape intersects with the polygon, otherwise `false`.

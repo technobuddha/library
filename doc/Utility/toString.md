@@ -11,7 +11,7 @@ Technobuddha Library
 function toString(value: unknown): string;
 ```
 
-Defined in: [to-string.ts:19](https://github.com/technobuddha/library/blob/main/src/to-string.ts#L19)
+Defined in: [to-string.ts:18](https://github.com/technobuddha/library/blob/main/src/to-string.ts#L18)
 
 Converts an unknown value to its string representation.
 

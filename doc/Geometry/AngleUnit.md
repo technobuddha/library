@@ -23,7 +23,7 @@ type AngleUnit =
   | "gradians";
 ```
 
-Defined in: [angle.ts:24](https://github.com/technobuddha/library/blob/main/src/angle.ts#L24)
+Defined in: [angle.ts:23](https://github.com/technobuddha/library/blob/main/src/angle.ts#L23)
 
 Types of angle units
 

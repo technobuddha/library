@@ -4,7 +4,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Approximate the number of syllables in a string
- *
  * @param input - The string
  * @returns the number of syllables
  * @example

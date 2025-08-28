@@ -11,7 +11,7 @@ Technobuddha Library
 const ipV4: RegExp;
 ```
 
-Defined in: [regexp.ts:66](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L66)
+Defined in: [regexp.ts:64](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L64)
 
 validate an IPv4 address
 

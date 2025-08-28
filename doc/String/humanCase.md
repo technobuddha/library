@@ -11,7 +11,7 @@ Technobuddha Library
 function humanCase(input: string): string;
 ```
 
-Defined in: [human-case.ts:13](https://github.com/technobuddha/library/blob/main/src/human-case.ts#L13)
+Defined in: [human-case.ts:12](https://github.com/technobuddha/library/blob/main/src/human-case.ts#L12)
 
 Convert an identifier string to a human case
 

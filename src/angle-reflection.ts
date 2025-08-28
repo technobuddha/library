@@ -4,7 +4,6 @@ import { toAngle } from './to-angle.ts';
 
 /**
  * Calculates the reflection of an angle across a specified axis.
- *
  * @param angle - The angle to reflect.
  * @param axis - The axis across which to reflect the angle.
  * @param options - see {@link UnitOptions}

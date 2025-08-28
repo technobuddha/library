@@ -7,7 +7,7 @@ Technobuddha Library
 
 # Class: JSONSet\<T\>
 
-Defined in: [json-set.ts:32](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L32)
+Defined in: [json-set.ts:27](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L27)
 
 A Set-like collection for objects that can be serialized to JSON.
 
@@ -54,7 +54,7 @@ new JSONSet<T>(values?:
 | Iterable<T, any, any>): JSONSet<T>;
 ```
 
-Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L35)
+Defined in: [json-set.ts:30](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L30)
 
 #### Parameters
 
@@ -70,7 +70,7 @@ Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/s
 
 | Property | Modifier | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONSet"` | `'JSONSet'` | [json-set.ts:43](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L43) |
+| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONSet"` | `'JSONSet'` | [json-set.ts:38](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L38) |
 
 ## Accessors
 
@@ -82,7 +82,7 @@ Defined in: [json-set.ts:35](https://github.com/technobuddha/library/blob/main/s
 get size(): number;
 ```
 
-Defined in: [json-set.ts:50](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L50)
+Defined in: [json-set.ts:45](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L45)
 
 ##### Returns
 
@@ -104,7 +104,7 @@ Set.size
 iterator: SetIterator<T>;
 ```
 
-Defined in: [json-set.ts:155](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L155)
+Defined in: [json-set.ts:150](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L150)
 
 #### Returns
 
@@ -124,7 +124,7 @@ Set.[iterator]
 add(value: T): this;
 ```
 
-Defined in: [json-set.ts:54](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L54)
+Defined in: [json-set.ts:49](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L49)
 
 Appends a new element with a specified value to the end of the Set.
 
@@ -152,7 +152,7 @@ Set.add
 clear(): void;
 ```
 
-Defined in: [json-set.ts:59](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L59)
+Defined in: [json-set.ts:54](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L54)
 
 #### Returns
 
@@ -172,7 +172,7 @@ Set.clear
 delete(value: T): boolean;
 ```
 
-Defined in: [json-set.ts:63](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L63)
+Defined in: [json-set.ts:58](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L58)
 
 Removes a specified value from the Set.
 
@@ -202,7 +202,7 @@ Set.delete
 difference<U>(other: ReadonlySetLike<U>): Set<T>;
 ```
 
-Defined in: [json-set.ts:67](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L67)
+Defined in: [json-set.ts:62](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L62)
 
 #### Type Parameters
 
@@ -236,7 +236,7 @@ Set.difference
 entries(): SetIterator<[T, T]>;
 ```
 
-Defined in: [json-set.ts:73](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L73)
+Defined in: [json-set.ts:68](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L68)
 
 Returns an iterable of [v,v] pairs for every value `v` in the set.
 
@@ -258,7 +258,7 @@ Set.entries
 forEach(callback: (value: T, key: T, set: Set<T>) => void, thisArg?: unknown): void;
 ```
 
-Defined in: [json-set.ts:79](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L79)
+Defined in: [json-set.ts:74](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L74)
 
 Executes a provided function once per each value in the Set object, in insertion order.
 
@@ -287,7 +287,7 @@ Set.forEach
 has(value: T): boolean;
 ```
 
-Defined in: [json-set.ts:85](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L85)
+Defined in: [json-set.ts:80](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L80)
 
 #### Parameters
 
@@ -315,7 +315,7 @@ Set.has
 intersection<U>(other: ReadonlySetLike<U>): Set<T & U>;
 ```
 
-Defined in: [json-set.ts:89](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L89)
+Defined in: [json-set.ts:84](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L84)
 
 #### Type Parameters
 
@@ -349,7 +349,7 @@ Set.intersection
 isDisjointFrom(other: ReadonlySetLike<unknown>): boolean;
 ```
 
-Defined in: [json-set.ts:97](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L97)
+Defined in: [json-set.ts:92](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L92)
 
 #### Parameters
 
@@ -377,7 +377,7 @@ Set.isDisjointFrom
 isSubsetOf(other: ReadonlySetLike<unknown>): boolean;
 ```
 
-Defined in: [json-set.ts:106](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L106)
+Defined in: [json-set.ts:101](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L101)
 
 #### Parameters
 
@@ -405,7 +405,7 @@ Set.isSubsetOf
 isSupersetOf(other: ReadonlySetLike<unknown>): boolean;
 ```
 
-Defined in: [json-set.ts:115](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L115)
+Defined in: [json-set.ts:110](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L110)
 
 #### Parameters
 
@@ -433,7 +433,7 @@ Set.isSupersetOf
 keys(): SetIterator<T>;
 ```
 
-Defined in: [json-set.ts:124](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L124)
+Defined in: [json-set.ts:119](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L119)
 
 Despite its name, returns an iterable of the values in the set.
 
@@ -455,7 +455,7 @@ Set.keys
 symmetricDifference<U>(other: ReadonlySetLike<U>): Set<T | U>;
 ```
 
-Defined in: [json-set.ts:128](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L128)
+Defined in: [json-set.ts:123](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L123)
 
 #### Type Parameters
 
@@ -489,7 +489,7 @@ Set.symmetricDifference
 union<U>(other: ReadonlySetLike<U>): Set<T | U>;
 ```
 
-Defined in: [json-set.ts:145](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L145)
+Defined in: [json-set.ts:140](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L140)
 
 #### Type Parameters
 
@@ -523,7 +523,7 @@ Set.union
 values(): SetIterator<T>;
 ```
 
-Defined in: [json-set.ts:149](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L149)
+Defined in: [json-set.ts:144](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L144)
 
 Returns an iterable of values in the set.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function bounds(vertices: Polygon): Rect;
 ```
 
-Defined in: [bounds.ts:22](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L22)
+Defined in: [bounds.ts:21](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L21)
 
 Calculates the axis-aligned bounding rectangle for a given polygon.
 

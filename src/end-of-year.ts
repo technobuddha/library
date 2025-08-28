@@ -12,7 +12,6 @@ export type EndOfYearOptions = {
 
 /**
  * Determine the last day of the year containing a date
- *
  * @param input - The date
  * @param options - see {@link EndOfYearOptions}
  * @defaultValue utc false

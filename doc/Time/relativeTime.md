@@ -14,7 +14,7 @@ function relativeTime(
    options: RelativeTimeOptions): string;
 ```
 
-Defined in: [relative-time.ts:36](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L36)
+Defined in: [relative-time.ts:34](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L34)
 
 Describe the difference between two dates in a simple format
 

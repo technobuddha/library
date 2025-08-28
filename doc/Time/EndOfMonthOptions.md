@@ -13,7 +13,7 @@ type EndOfMonthOptions = {
 };
 ```
 
-Defined in: [end-of-month.ts:9](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L9)
+Defined in: [end-of-month.ts:8](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L8)
 
 Options for the [endOfMonth](endOfMonth.md) function
 
@@ -21,5 +21,5 @@ Options for the [endOfMonth](endOfMonth.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [end-of-month.ts:11](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L11) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [end-of-month.ts:10](https://github.com/technobuddha/library/blob/main/src/end-of-month.ts#L10) |
 

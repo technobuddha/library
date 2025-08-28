@@ -11,7 +11,7 @@ Technobuddha Library
 function toInteger(entity: unknown): number;
 ```
 
-Defined in: [to-integer.ts:13](https://github.com/technobuddha/library/blob/main/src/to-integer.ts#L13)
+Defined in: [to-integer.ts:12](https://github.com/technobuddha/library/blob/main/src/to-integer.ts#L12)
 
 Convert an entity to a integer number.
 

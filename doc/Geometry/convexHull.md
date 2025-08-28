@@ -11,7 +11,7 @@ Technobuddha Library
 function convexHull(vertices: Cartesian[]): undefined | Polygon;
 ```
 
-Defined in: [convex-hull.ts:27](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L27)
+Defined in: [convex-hull.ts:25](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L25)
 
 Computes the convex hull of a set of 2D points using the Monotone Chain algorithm.
 

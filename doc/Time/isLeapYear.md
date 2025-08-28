@@ -13,7 +13,7 @@ function isLeapYear(input:
   | Date, options: LeapYearOptions): boolean;
 ```
 
-Defined in: [is-leap-year.ts:20](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L20)
+Defined in: [is-leap-year.ts:19](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L19)
 
 Determine if a year is a leap year
 

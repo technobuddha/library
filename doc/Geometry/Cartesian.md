@@ -14,7 +14,7 @@ type Cartesian = {
 };
 ```
 
-Defined in: [@types/geometry.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L7)
+Defined in: [@types/geometry.ts:6](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L6)
 
 Represents a point in 2D Cartesian coordinate space.
 
@@ -22,6 +22,6 @@ Represents a point in 2D Cartesian coordinate space.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="x"></a> `x` | `number` | The x-coordinate value. | [@types/geometry.ts:9](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L9) |
-| <a id="y"></a> `y` | `number` | The y-coordinate value. | [@types/geometry.ts:11](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L11) |
+| <a id="x"></a> `x` | `number` | The x-coordinate value. | [@types/geometry.ts:8](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L8) |
+| <a id="y"></a> `y` | `number` | The y-coordinate value. | [@types/geometry.ts:10](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L10) |
 

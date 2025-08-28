@@ -11,7 +11,7 @@ Technobuddha Library
 function midpoint(line: LineSegment, part: number): Cartesian;
 ```
 
-Defined in: [midpoint.ts:17](https://github.com/technobuddha/library/blob/main/src/midpoint.ts#L17)
+Defined in: [midpoint.ts:16](https://github.com/technobuddha/library/blob/main/src/midpoint.ts#L16)
 
 Calculates a point at a given fraction (`part`) along a line segment.  By default it returns the
 true midpoint of the line segment

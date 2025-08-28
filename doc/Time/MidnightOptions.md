@@ -13,7 +13,7 @@ type MidnightOptions = {
 };
 ```
 
-Defined in: [is-midnight.ts:7](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L7)
+Defined in: [is-midnight.ts:6](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L6)
 
 Options for the [isMidnight](isMidnight.md) function
 
@@ -21,5 +21,5 @@ Options for the [isMidnight](isMidnight.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [is-midnight.ts:9](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L9) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [is-midnight.ts:8](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L8) |
 

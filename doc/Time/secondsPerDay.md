@@ -11,7 +11,7 @@ Technobuddha Library
 const secondsPerDay: number;
 ```
 
-Defined in: [constants.ts:96](https://github.com/technobuddha/library/blob/main/src/constants.ts#L96)
+Defined in: [constants.ts:85](https://github.com/technobuddha/library/blob/main/src/constants.ts#L85)
 
 Number of seconds in a day [86400]
 

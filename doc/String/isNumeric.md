@@ -11,7 +11,7 @@ Technobuddha Library
 function isNumeric(input: unknown): input is string | number;
 ```
 
-Defined in: [is-numeric.ts:14](https://github.com/technobuddha/library/blob/main/src/is-numeric.ts#L14)
+Defined in: [is-numeric.ts:13](https://github.com/technobuddha/library/blob/main/src/is-numeric.ts#L13)
 
 Test an object to see if it a number, or a string which can be converted into a number
 

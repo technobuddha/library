@@ -10,7 +10,6 @@ const badChars = /[/\\:*?<>|.]+/gu;
 
 /**
  * Options for the {@link toFilename} function
- *
  * @group String
  * @category Conversion
  */
@@ -27,7 +26,6 @@ export type FilenameOptions = {
 
 /**
  * Convert a string so that it can be used as a filename
- *
  * @param input - The string to escape
  * @param options - see {@link FilenameOptions}
  * @returns the file name

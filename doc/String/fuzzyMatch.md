@@ -14,7 +14,7 @@ function fuzzyMatch(
    options: FuzzyMatchOptions): number;
 ```
 
-Defined in: [fuzzy-match.ts:33](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L33)
+Defined in: [fuzzy-match.ts:31](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L31)
 
 Computes a fuzzy similarity score between two strings using a weighted combination
 of Levenshtein distance, Dice coefficient, and longest common substring metrics.

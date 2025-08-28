@@ -11,7 +11,7 @@ Technobuddha Library
 function macroCase(input: string): string;
 ```
 
-Defined in: [macro-case.ts:12](https://github.com/technobuddha/library/blob/main/src/macro-case.ts#L12)
+Defined in: [macro-case.ts:11](https://github.com/technobuddha/library/blob/main/src/macro-case.ts#L11)
 
 Convert an identifier string to macro case
 

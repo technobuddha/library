@@ -7,7 +7,6 @@ import { type Cartesian, type Polygon, type Rect } from './@types/geometry.ts';
  * @param pointA - The first corner point of the rectangle.
  * @param pointB - The opposite corner point of the rectangle.
  * @returns A rectangle shaped {@link Polygon}.
- *
  * @example
  * ```typescript
  * toPolygon({ x: 1, y: 2 }, { x: 4, y: 6 });
@@ -18,7 +17,6 @@ import { type Cartesian, type Polygon, type Rect } from './@types/geometry.ts';
  * //   { x: 1, y: 6 }
  * // ]
  * ```
- *
  * @group Geometry
  * @category Polygon
  */
@@ -29,7 +27,6 @@ export function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
  * Construct a rectangle defined by location and dimensions.
  * @param rect - The {@link Rect} to convert.
  * @returns A rectangle shaped {@link Polygon}.
- *
  * @example
  * ```typescript
  * toPolygon({ x: 1, y: 2, width: 3, height: 4 });
@@ -40,7 +37,6 @@ export function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
  * //   { x: 1, y: 6 }
  * // ]
  * ```
- *
  * @group Geometry
  * @category Polygon
  */

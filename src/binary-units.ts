@@ -3,7 +3,6 @@ import { metricUnits } from './metric-units.ts';
 
 /**
  * Options for the {@link binaryUnits} function
- *
  * @group String
  * @category Units
  */

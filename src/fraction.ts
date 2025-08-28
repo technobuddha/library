@@ -1,10 +1,8 @@
-import { empty, space } from '../unicode.ts';
-
-import { type Numbering, numbering } from './numbering.ts';
+import { type Numbering, numbering } from './numbering/numbering.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Options for customizing the output and behavior of fraction number representations.
- *
  * @group Math
  * @category Numbers
  */
@@ -63,13 +61,18 @@ export type FractionOptions = {
  *
  * The function finds the closest matching fraction from a predefined list and formats the output
  * based on the specified options. If the input is negative, the result is prefixed accordingly.
- * The output can be either a numeric representation (e.g., "1 1/2") or an alphabetic representation
+ * The output can be either a numeric representation (e.g., "1 1⁄2") or an alphabetic representation
  * (e.g., "one and one half").
- *
  * @param input - The number to convert to a fraction string.
  * @param options - An optional object specifying the output format.
  * @returns The formatted fraction string.
- *
+ * @example
+ * ```typescript
+ * fraction(1.5); // "one and one half"
+ * fraction(2.75, { output: 'numeric' }); // "2 3⁄4"
+ * fraction(-0.25, { output: 'alphabetic' }); // "negative one quarter"
+ * fraction(0.333, { precision: 2 }); // "one third"
+ * ```
  * @group Math
  * @category Numbers
  */

@@ -16,7 +16,7 @@ function cleanEnd(input: string, characters:
   | RegExp)[]): string;
 ```
 
-Defined in: [clean-end.ts:15](https://github.com/technobuddha/library/blob/main/src/clean-end.ts#L15)
+Defined in: [clean-end.ts:14](https://github.com/technobuddha/library/blob/main/src/clean-end.ts#L14)
 
 Remove all occurrences of characters from the end of the string
 

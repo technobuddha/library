@@ -3,7 +3,6 @@
  *
  * Checks whether the given value is not `null` or `undefined` and has a `[Symbol.iterator]` method,
  * indicating that it implements the `Iterable` interface.
- *
  * @param obj - The value to check for iterability.
  * @returns `true` if the object is iterable, otherwise `false`.
  * @example

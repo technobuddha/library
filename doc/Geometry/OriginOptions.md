@@ -13,7 +13,7 @@ type OriginOptions = {
 };
 ```
 
-Defined in: [angle.ts:85](https://github.com/technobuddha/library/blob/main/src/angle.ts#L85)
+Defined in: [angle.ts:83](https://github.com/technobuddha/library/blob/main/src/angle.ts#L83)
 
 Options for origin-related functions
 
@@ -21,5 +21,5 @@ Options for origin-related functions
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="origin"></a> `origin?` | [`Cartesian`](Cartesian.md) | The origin for this operation | [angle.ts:89](https://github.com/technobuddha/library/blob/main/src/angle.ts#L89) |
+| <a id="origin"></a> `origin?` | [`Cartesian`](Cartesian.md) | The origin for this operation | [angle.ts:87](https://github.com/technobuddha/library/blob/main/src/angle.ts#L87) |
 

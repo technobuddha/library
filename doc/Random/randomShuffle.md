@@ -11,7 +11,7 @@ Technobuddha Library
 function randomShuffle<T>(deck: readonly T[], random: () => number): T[];
 ```
 
-Defined in: [random-shuffle.ts:14](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L14)
+Defined in: [random-shuffle.ts:12](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L12)
 
 Returns a new array with the elements of the input array shuffled in random order.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function unescapeJS(input: string): string;
 ```
 
-Defined in: [unescape-js.ts:33](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L33)
+Defined in: [unescape-js.ts:32](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L32)
 
 Unescape a string encoded in Javascript style
 

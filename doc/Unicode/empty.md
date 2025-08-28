@@ -11,7 +11,7 @@ Technobuddha Library
 const empty: "" = '';
 ```
 
-Defined in: [unicode.ts:7](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L7)
+Defined in: [unicode.ts:6](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L6)
 
 The empty string
 

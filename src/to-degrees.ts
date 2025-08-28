@@ -2,7 +2,6 @@ import { type UnitOptions, angleUnits } from './angle.ts';
 
 /**
  * Convert an angle from radians to degrees
- *
  * @param angle - Angle
  * @param options - see {@link UnitOptions}
  * @returns angle in degrees

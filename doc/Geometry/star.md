@@ -15,7 +15,7 @@ function star(
    options: OriginOptions): Polygon;
 ```
 
-Defined in: [star.ts:32](https://github.com/technobuddha/library/blob/main/src/star.ts#L32)
+Defined in: [star.ts:29](https://github.com/technobuddha/library/blob/main/src/star.ts#L29)
 
 Generates a star-shaped polygon.
 

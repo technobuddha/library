@@ -13,7 +13,7 @@ type MaskOptions = {
 };
 ```
 
-Defined in: [mask.ts:10](https://github.com/technobuddha/library/blob/main/src/mask.ts#L10)
+Defined in: [mask.ts:9](https://github.com/technobuddha/library/blob/main/src/mask.ts#L9)
 
 Options for the [mask](mask.md) function
 
@@ -21,5 +21,5 @@ Options for the [mask](mask.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="missing"></a> `missing?` | `string` | if the mask is longer, fill with character | [mask.ts:12](https://github.com/technobuddha/library/blob/main/src/mask.ts#L12) |
+| <a id="missing"></a> `missing?` | `string` | if the mask is longer, fill with character | [mask.ts:11](https://github.com/technobuddha/library/blob/main/src/mask.ts#L11) |
 

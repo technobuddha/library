@@ -13,7 +13,7 @@ type CollapseWhitespaceOptions = {
 };
 ```
 
-Defined in: [collapse-whitespace.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L10)
+Defined in: [collapse-whitespace.ts:9](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L9)
 
 Options for the [collapseWhitespace](collapseWhitespace.md) function
 
@@ -21,5 +21,5 @@ Options for the [collapseWhitespace](collapseWhitespace.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="trim"></a> `trim?` | `boolean` | If true, trim | [collapse-whitespace.ts:12](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L12) |
+| <a id="trim"></a> `trim?` | `boolean` | If true, trim | [collapse-whitespace.ts:11](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L11) |
 

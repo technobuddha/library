@@ -14,7 +14,7 @@ function count(
    options: CountOptions): number;
 ```
 
-Defined in: [count.ts:21](https://github.com/technobuddha/library/blob/main/src/count.ts#L21)
+Defined in: [count.ts:20](https://github.com/technobuddha/library/blob/main/src/count.ts#L20)
 
 Compute the number of times a substring occurs within a string
 

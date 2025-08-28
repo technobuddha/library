@@ -4,7 +4,6 @@ import { modulo } from './modulo.ts';
 
 /**
  * Options for the {@link endOfWeek} function
- *
  * @group Time
  * @category Week
  */
@@ -17,7 +16,6 @@ export type EndOfWeekOptions = {
 
 /**
  * Determine the last day of the week containing a date
- *
  * @param input - The date
  * @param options - see {@link EndOfWeekOptions}
  * @defaultValue utc false

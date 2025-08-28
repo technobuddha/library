@@ -11,7 +11,7 @@ Technobuddha Library
 function unescapeC(input: string): string;
 ```
 
-Defined in: [unescape-c.ts:43](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L43)
+Defined in: [unescape-c.ts:42](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L42)
 
 Unescape a string encoded in C style
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function dayOfYear(input: Date, options: DayOfYearOptions): number;
 ```
 
-Defined in: [day-of-year.ts:24](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L24)
+Defined in: [day-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L22)
 
 Calculates the day of the year for a given date.
 

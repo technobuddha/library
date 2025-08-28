@@ -11,7 +11,7 @@ Technobuddha Library
 function isClosed(polygon: Polygon): boolean;
 ```
 
-Defined in: [is-closed.ts:15](https://github.com/technobuddha/library/blob/main/src/is-closed.ts#L15)
+Defined in: [is-closed.ts:13](https://github.com/technobuddha/library/blob/main/src/is-closed.ts#L13)
 
 Determines whether a given polygon is closed.
 

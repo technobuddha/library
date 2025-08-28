@@ -62,9 +62,7 @@ const MAG01 = [0, MATRIX_A];
  * The seed is calculated as the sum of the current minute (in milliseconds),
  * the current second (in milliseconds), and the current millisecond value.
  * This provides a pseudo-random seed that changes every millisecond.
- *
  * @returns A number representing the seed value derived from the current time.
- *
  * @internal
  */
 function defaultSeed(): number {
@@ -82,23 +80,19 @@ function defaultSeed(): number {
  * The Mersenne Twister is a widely used PRNG known for its long period (2^19937−1),
  * high performance, and high-quality randomness. This class provides methods to seed
  * the generator and produce random numbers in various formats and intervals.
- *
  * @example
  * ```typescript
  * const mt = new MersenneTwister(1234);
  * const randomInt = mt.genrandInt32();
  * const randomFloat = mt.genrandReal2();
  * ```
- *
  * @remarks
  * - The generator can be seeded with a single number or an array of numbers.
  * - Methods are provided to generate 32-bit and 31-bit integers, as well as floating-point numbers
  *   in different intervals.
  * - This implementation is based on the original C code by Makoto Matsumoto and Takuji Nishimura.
- *
  * @see https://en.wikipedia.org/wiki/Mersenne_Twister
  * @see http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html
- *
  * @group Random
  * @category Number Generation
  */

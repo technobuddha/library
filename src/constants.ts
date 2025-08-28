@@ -2,7 +2,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Negative Zero
- *
  * @group Math
  * @category Constants
  */
@@ -10,7 +9,6 @@ export const negativeZero = -0;
 
 /**
  * Number of ticks in a second [1000]
- *
  * @group Time
  * @category Constants
  */
@@ -18,7 +16,6 @@ export const ticksPerSecond = 1000;
 
 /**
  * Number of seconds in a minute [60]
- *
  * @group Time
  * @category Constants
  */
@@ -26,7 +23,6 @@ export const secondsPerMinute = 60;
 
 /**
  * Number of minutes in an hour [60]
- *
  * @group Time
  * @category Constants
  */
@@ -41,7 +37,6 @@ export const hoursPerDay = 24;
 
 /**
  * Number of days in a week [7]
- *
  * @group Time
  * @category Constants
  */
@@ -49,7 +44,6 @@ export const daysPerWeek = 7;
 
 /**
  * Number of ticks in a minute [60000]
- *
  * @group Time
  * @category Constants
  */
@@ -57,7 +51,6 @@ export const ticksPerMinute = ticksPerSecond * secondsPerMinute;
 
 /**
  * Number of ticks in an hour [3600000]
- *
  * @group Time
  * @category Constants
  */
@@ -65,7 +58,6 @@ export const ticksPerHour = ticksPerMinute * minutesPerHour;
 
 /**
  * Number of ticks in a day [86400000]
- *
  * @group Time
  * @category Constants
  */
@@ -73,7 +65,6 @@ export const ticksPerDay = ticksPerHour * hoursPerDay;
 
 /**
  * Number of ticks in a week [604800000]
- *
  * @group Time
  * @category Constants
  */
@@ -81,7 +72,6 @@ export const ticksPerWeek = ticksPerDay * daysPerWeek;
 
 /**
  * Number of seconds in an hour [3600]
- *
  * @group Time
  * @category Constants
  */
@@ -89,7 +79,6 @@ export const secondsPerHour = secondsPerMinute * minutesPerHour;
 
 /**
  * Number of seconds in a day [86400]
- *
  * @group Time
  * @category Constants
  */
@@ -97,7 +86,6 @@ export const secondsPerDay = secondsPerHour * hoursPerDay;
 
 /**
  * Number of seconds in a week [604800]
- *
  * @group Time
  * @category Constants
  */
@@ -105,7 +93,6 @@ export const secondsPerWeek = secondsPerDay * daysPerWeek;
 
 /**
  * Number of minutes in a day [1440]
- *
  * @group Time
  * @category Constants
  */
@@ -113,7 +100,6 @@ export const minutesPerDay = minutesPerHour * hoursPerDay;
 
 /**
  * Number of minutes in a week [10080]
- *
  * @group Time
  * @category Constants
  */
@@ -121,7 +107,6 @@ export const minutesPerWeek = minutesPerDay * daysPerWeek;
 
 /**
  * Number of hours in a week [168]
- *
  * @group Time
  * @category Constants
  */
@@ -129,7 +114,6 @@ export const hoursPerWeek = hoursPerDay * daysPerWeek;
 
 /**
  * Days of the week
- *
  * @group Time
  * @category Enumerations
  */
@@ -137,7 +121,6 @@ export type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 
 /**
  * Translation object for name of day to day number.
- *
  * @group Time
  * @category Enumerations
  */
@@ -170,7 +153,6 @@ export const day: Readonly<Record<string, DayOfWeek>> = Object.freeze({
 
 /**
  * Months of the year
- *
  * @group Time
  * @category Enumerations
  */
@@ -178,7 +160,6 @@ export type MonthOfYear = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11;
 
 /**
  * Translation object for name of month to month number
- *
  * @group Time
  * @category Enumerations
  */
@@ -212,6 +193,8 @@ export const month: Readonly<Record<string, MonthOfYear>> = Object.freeze({
 /**
  * Words for unit numbers 0-19
  *
+ * one, two, three, four, five, six, seven, eight, nine, ten,
+ * eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen
  * @group Math
  * @category Constants
  */
@@ -225,6 +208,8 @@ export const cardinalOnes = [
 
 /**
  * Words for tens 20-90
+ *
+ * twenty, thirty, forty, fifty, sixty, seventy, eighty, ninety
  * @group Math
  * @category Constants
  */
@@ -237,6 +222,8 @@ export const cardinalTens = [
 /**
  * Words for ordinal numbers 0-19
  *
+ * first, second, third, fourth, fifth, sixth, seventh, eighth, ninth, tenth,
+ * eleventh, twelfth, thirteenth, fourteenth, fifteenth, sixteenth, seventeenth, eighteenth, nineteenth
  * @group Math
  * @category Constants
  */
@@ -251,6 +238,7 @@ export const ordinalOnes = [
 /**
  * Words for ordinal tens 20-90
  *
+ * twentieth, thirtieth, fortieth, fiftieth, sixtieth, seventieth, eightieth, ninetieth
  * @group Math
  * @category Constants
  */

@@ -23,7 +23,6 @@ import { oct, u4, uu, x2 } from './escape.ts';
  *
  * [^1]: The sequence \\0 must not be followed by a octal digit (0-7) to avoid being interpreted
  * as a different character, \\x00 will be used to avoid ambiguity.
- *
  * @param input - The string to escape
  * @returns Sting escaped for Javascript
  * @example

@@ -11,7 +11,7 @@ Technobuddha Library
 const minutesPerWeek: number;
 ```
 
-Defined in: [constants.ts:120](https://github.com/technobuddha/library/blob/main/src/constants.ts#L120)
+Defined in: [constants.ts:106](https://github.com/technobuddha/library/blob/main/src/constants.ts#L106)
 
 Number of minutes in a week [10080]
 

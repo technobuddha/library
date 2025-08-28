@@ -3,7 +3,6 @@ import { day, type DayOfWeek } from './constants.ts';
 
 /**
  * Options for the {@link isSameWeek} function
- *
  * @group Time
  * @category Week
  */
@@ -16,7 +15,6 @@ export type SameWeekOptions = {
 
 /**
  * Determine if two dates occur in the same week
- *
  * @param input1 - The first date
  * @param input2 - The second date
  * @param options - see {@link SameWeekOptions}

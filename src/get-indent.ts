@@ -3,7 +3,6 @@ import { space } from './unicode.ts';
 
 /**
  * Determine the indentation level of text
- *
  * @param input - The indented text
  * @param options - see {@link IndentOptions}
  * @defaultValue indenter space

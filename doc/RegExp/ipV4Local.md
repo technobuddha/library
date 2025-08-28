@@ -11,7 +11,7 @@ Technobuddha Library
 const ipV4Local: RegExp;
 ```
 
-Defined in: [regexp.ts:91](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L91)
+Defined in: [regexp.ts:89](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L89)
 
 determine if Ipv4 address is local
 

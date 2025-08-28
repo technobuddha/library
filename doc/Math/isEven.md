@@ -11,7 +11,7 @@ Technobuddha Library
 function isEven(input: number): boolean;
 ```
 
-Defined in: [is-even.ts:11](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L11)
+Defined in: [is-even.ts:18](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L18)
 
 Tests to see if the specified value is an even integer
 
@@ -26,4 +26,14 @@ Tests to see if the specified value is an even integer
 `boolean`
 
 true if the number is an even integer
+
+## Example
+
+```typescript
+isEven(2); // true
+isEven(3); // false
+isEven(0); // true
+isEven(-4); // true
+isEven(2.2); // false
+```
 

@@ -7,7 +7,6 @@ const replacement = replacementCharacter.codePointAt(0)!;
 /* eslint-disable no-bitwise */
 /**
  * Decode a UTF8 encoded string into unicode
- *
  * @param input - the utf encoded string
  * @returns the decoded strings (which is encoded as UTF-16 by javascript)
  * @group Unicode

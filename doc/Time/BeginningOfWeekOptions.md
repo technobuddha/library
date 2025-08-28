@@ -14,7 +14,7 @@ type BeginningOfWeekOptions = {
 };
 ```
 
-Defined in: [beginning-of-week.ts:11](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L11)
+Defined in: [beginning-of-week.ts:10](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L10)
 
 Options for the [beginningOfWeek](beginningOfWeek.md) function
 
@@ -22,6 +22,6 @@ Options for the [beginningOfWeek](beginningOfWeek.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="firstdayofweek"></a> `firstDayOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | Which day of the week is considered the beginning | [beginning-of-week.ts:15](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L15) |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-week.ts:13](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L13) |
+| <a id="firstdayofweek"></a> `firstDayOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | Which day of the week is considered the beginning | [beginning-of-week.ts:14](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L14) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-week.ts:12](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L12) |
 

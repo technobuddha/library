@@ -55,7 +55,6 @@ const SAMPLE_POINT_COUNT = 20;
 /**
  * The tolerance value used to determine when two areas are considered equal.
  * This small epsilon helps account for floating-point precision errors in area calculations.
- *
  * @remarks
  * Used in geometric algorithms to compare areas with a margin of error.
  * @internal
@@ -77,7 +76,6 @@ const VERTICAL_LINE_EXTENT = 1e100; // For creating "infinite" vertical lines
 
 /**
  * Computes the largest rectangle that can be inscribed within the given polygon.
- *
  * @param polygon - The polygon within which to inscribe the rectangle.
  * @param options - Configuration options for the computation.
  * @returns The largest inscribed rectangle.

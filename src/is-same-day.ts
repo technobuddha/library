@@ -2,7 +2,6 @@ import { isSameMonth } from './is-same-month.ts';
 
 /**
  * Options for the {@link isSameDay} function
- *
  * @group Time
  * @category Day
  */
@@ -13,7 +12,6 @@ export type SameDayOptions = {
 
 /**
  * Determine if two dates occur on the same day
- *
  * @param input1 - The first date
  * @param input2 - The second date
  * @param options - see {@link SameDayOptions}

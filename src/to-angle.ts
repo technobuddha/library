@@ -2,7 +2,6 @@ import { type AngleUnit, angleUnits } from './angle.ts';
 
 /**
  * Converts an angle from one unit to another.
- *
  * @param input - Angle to convert
  * @param from - The input unit of the angle
  * @param to - The output unit of the angle

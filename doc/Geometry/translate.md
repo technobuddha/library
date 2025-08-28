@@ -15,7 +15,7 @@ Translate a point or polygon by a specified amount.
 function translate(point: Cartesian, amount: XY): Cartesian;
 ```
 
-Defined in: [translate.ts:25](https://github.com/technobuddha/library/blob/main/src/translate.ts#L25)
+Defined in: [translate.ts:24](https://github.com/technobuddha/library/blob/main/src/translate.ts#L24)
 
 Translate a point by a specified amount.
 
@@ -44,7 +44,7 @@ translate({ x: 1, y: 0 }t, { x: 1, y: 2 }); // { x: 2, y: 2 }
 function translate(polygon: Polygon, amount: Cartesian): Polygon;
 ```
 
-Defined in: [translate.ts:42](https://github.com/technobuddha/library/blob/main/src/translate.ts#L42)
+Defined in: [translate.ts:39](https://github.com/technobuddha/library/blob/main/src/translate.ts#L39)
 
 Translate a polygon by a specified amount.
 

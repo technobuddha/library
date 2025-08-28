@@ -11,7 +11,7 @@ Technobuddha Library
 function isOdd(input: number): boolean;
 ```
 
-Defined in: [is-odd.ts:11](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L11)
+Defined in: [is-odd.ts:18](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L18)
 
 Tests to see if the specified value is an odd integer
 
@@ -26,4 +26,14 @@ Tests to see if the specified value is an odd integer
 `boolean`
 
 true if the number is an odd integer
+
+## Example
+
+```typescript
+isOdd(1); // true
+isOdd(2); // false
+isOdd(0); // false
+isOdd(-3); // true
+isOdd(3.1); // false
+```
 

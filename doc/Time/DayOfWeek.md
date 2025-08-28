@@ -11,7 +11,7 @@ Technobuddha Library
 type DayOfWeek = 0 | 1 | 2 | 3 | 4 | 5 | 6;
 ```
 
-Defined in: [constants.ts:136](https://github.com/technobuddha/library/blob/main/src/constants.ts#L136)
+Defined in: [constants.ts:120](https://github.com/technobuddha/library/blob/main/src/constants.ts#L120)
 
 Days of the week
 

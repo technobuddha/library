@@ -11,7 +11,7 @@ Technobuddha Library
 function encodeText(input: string, _encoding?: TextEncoding): Uint8Array;
 ```
 
-Defined in: [encode-text.ts:14](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L14)
+Defined in: [encode-text.ts:13](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L13)
 
 Encode a unicode (UTF-16 encoded javascript) string into UTF8
 

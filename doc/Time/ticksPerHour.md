@@ -11,7 +11,7 @@ Technobuddha Library
 const ticksPerHour: number;
 ```
 
-Defined in: [constants.ts:64](https://github.com/technobuddha/library/blob/main/src/constants.ts#L64)
+Defined in: [constants.ts:57](https://github.com/technobuddha/library/blob/main/src/constants.ts#L57)
 
 Number of ticks in an hour [3600000]
 

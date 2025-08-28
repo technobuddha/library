@@ -11,7 +11,7 @@ Technobuddha Library
 function readability(text: string): number;
 ```
 
-Defined in: [readability.ts:30](https://github.com/technobuddha/library/blob/main/src/readability.ts#L30)
+Defined in: [readability.ts:28](https://github.com/technobuddha/library/blob/main/src/readability.ts#L28)
 
 Calculates the Flesch-Kincaid readability score for a given text.
 

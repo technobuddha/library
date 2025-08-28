@@ -16,7 +16,6 @@ import { empty } from './unicode.ts';
  * | Single Quote       | 0x27                 | \\'                  |
  * | Backslash          | 0x5c                 | \\\\                 |
  * | Control Characters | 0x00-0x1f, 0x7f-0x9f | \\unnnn              |
- *
  * @param input - The string to escape
  * @returns the escaped string
  * @example

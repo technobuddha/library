@@ -2,7 +2,6 @@ import { month } from './constants.ts';
 
 /**
  * Options for the {@link beginningOfYear} function
- *
  * @group Time
  * @category Year
  */
@@ -13,7 +12,6 @@ export type BeginningOfYearOptions = {
 
 /**
  * Determine the start of the year for a date
- *
  * @param input - The date
  * @param options - see {@link BeginningOfYearOptions}
  * @defaultValue utc false

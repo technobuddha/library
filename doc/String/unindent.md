@@ -11,7 +11,7 @@ Technobuddha Library
 function unindent(input: string, pattern: IndentOptions): string;
 ```
 
-Defined in: [unindent.ts:13](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L13)
+Defined in: [unindent.ts:12](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L12)
 
 Remove indentation from text
 

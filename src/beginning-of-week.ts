@@ -4,7 +4,6 @@ import { modulo } from './modulo.ts';
 
 /**
  * Options for the {@link beginningOfWeek} function
- *
  * @group Time
  * @category Week
  */
@@ -17,7 +16,6 @@ export type BeginningOfWeekOptions = {
 
 /**
  * Determine the start of the week for a date
- *
  * @param input - The date
  * @param options - see {@link BeginningOfWeekOptions}
  * @defaultValue utc false

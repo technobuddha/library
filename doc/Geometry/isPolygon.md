@@ -11,7 +11,7 @@ Technobuddha Library
 function isPolygon(object: unknown): object is Polygon;
 ```
 
-Defined in: [is-polygon.ts:15](https://github.com/technobuddha/library/blob/main/src/is-polygon.ts#L15)
+Defined in: [is-polygon.ts:13](https://github.com/technobuddha/library/blob/main/src/is-polygon.ts#L13)
 
 Determines if the provided object is a `Polygon`.
 

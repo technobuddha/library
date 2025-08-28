@@ -16,7 +16,6 @@ export type QuoteOptions = {
 
 /**
  * Surround text with quotes
- *
  * @param input - The text to surround
  * @param options - see {@link QuoteOptions}
  * @defaultValue quote double-quote (")

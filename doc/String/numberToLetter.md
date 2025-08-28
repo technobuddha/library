@@ -11,7 +11,7 @@ Technobuddha Library
 function numberToLetter(num: number, options: NumberToLetterOptions): string;
 ```
 
-Defined in: [number-to-letter.ts:26](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L26)
+Defined in: [number-to-letter.ts:25](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L25)
 
 Convert a number to a letter, using the alphabet (default: A-Z)
 

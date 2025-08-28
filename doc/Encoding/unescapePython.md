@@ -11,7 +11,7 @@ Technobuddha Library
 function unescapePython(input: string): string;
 ```
 
-Defined in: [unescape-python.ts:39](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L39)
+Defined in: [unescape-python.ts:38](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L38)
 
 Unescape a string encoded in Python style
 

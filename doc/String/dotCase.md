@@ -11,7 +11,7 @@ Technobuddha Library
 function dotCase(input: string): string;
 ```
 
-Defined in: [dot-case.ts:12](https://github.com/technobuddha/library/blob/main/src/dot-case.ts#L12)
+Defined in: [dot-case.ts:11](https://github.com/technobuddha/library/blob/main/src/dot-case.ts#L11)
 
 Convert an identifier string to a dot form
 

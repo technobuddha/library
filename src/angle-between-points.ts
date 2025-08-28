@@ -6,7 +6,6 @@ import { toAngle } from './to-angle.ts';
  * Computes the angle between two points (x1,y1) and (x2,y2).
  * Angle zero points in the +X direction, π/2 radians points in the +Y
  * direction (down) and from there we grow clockwise towards π*2 radians.
- *
  * @param a - first point.
  * @param b - second.
  * @param options - see {@link UnitOptions}

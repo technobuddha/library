@@ -7,7 +7,6 @@ import { type Numbering } from './numbering.ts';
 
 /**
  * Converts a numeric integer into its string representation.
- *
  * @param input - The numeric integer to be converted.
  * @param options - Configuration options for numbering.
  * @returns The string representation of the input number, formatted according to the provided options.

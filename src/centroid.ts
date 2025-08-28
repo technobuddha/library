@@ -6,7 +6,6 @@ import { modulo } from './modulo.ts';
  *
  * The centroid is computed using the formula for the centroid of a non-self-intersecting closed polygon.
  * The vertices should be provided in order (either clockwise or counterclockwise).
- *
  * @param vertices - An array of points representing the vertices of the polygon.
  * @returns The centroid as a Cartesian coordinate.
  * @example

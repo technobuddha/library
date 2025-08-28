@@ -6,7 +6,6 @@ import { isObject } from './is-object.ts';
  * This includes regular functions, generator functions, async functions, and proxies
  * that behave like functions. It uses both `typeof` and `Object.prototype.toString`
  * checks to ensure accurate detection.
- *
  * @param value - The value to test.
  * @returns True if the value is a function, otherwise false.
  * @group Utility

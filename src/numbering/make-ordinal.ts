@@ -6,11 +6,10 @@
  * Handles both numeric strings (e.g., "1", "2", "13") and English words (e.g., "one", "two", "three").
  * Applies appropriate ordinal suffixes ("st", "nd", "rd", "th") for numbers, and transforms
  * specific English words to their ordinal equivalents (e.g., "one" → "first", "five" → "fifth").
- *
  * @param word - The input string representing a number or its English word form.
  * @returns The ordinal form of the input string.
- *
  * @example
+ * ```typescript
  * makeOrdinal("1");      // "1st"
  * makeOrdinal("2");      // "2nd"
  * makeOrdinal("3");      // "3rd"
@@ -19,6 +18,7 @@
  * makeOrdinal("one");    // "first"
  * makeOrdinal("five");   // "fifth"
  * makeOrdinal("twenty"); // "twentieth"
+ * ```
  * @internal
  */
 export function makeOrdinal(word: string): string {

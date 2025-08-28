@@ -11,7 +11,7 @@ Technobuddha Library
 const angleUnits: Record<AngleUnit, number>;
 ```
 
-Defined in: [angle.ts:53](https://github.com/technobuddha/library/blob/main/src/angle.ts#L53)
+Defined in: [angle.ts:51](https://github.com/technobuddha/library/blob/main/src/angle.ts#L51)
 
 Number of units in a circle
 

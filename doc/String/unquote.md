@@ -11,7 +11,7 @@ Technobuddha Library
 function unquote(input: string, options: QuoteOptions): string;
 ```
 
-Defined in: [unquote.ts:16](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L16)
+Defined in: [unquote.ts:15](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L15)
 
 Remove surrounding quotes from text
 

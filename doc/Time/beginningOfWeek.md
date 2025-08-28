@@ -11,7 +11,7 @@ Technobuddha Library
 function beginningOfWeek(input: Date, options: BeginningOfWeekOptions): Date;
 ```
 
-Defined in: [beginning-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L28)
+Defined in: [beginning-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L26)
 
 Determine the start of the week for a date
 

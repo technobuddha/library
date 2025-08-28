@@ -4,7 +4,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Options for the {@link timezone} function
- *
  * @group Time
  * @category Time Zone
  */
@@ -17,7 +16,6 @@ export type TimezoneOptions = {
 
 /**
  * Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes
- *
  * @remarks the gmt flag overrides the z flag if both are set
  * @param input - The date, or a timezone offset in minutes
  * @param options - see {@link TimezoneOptions}

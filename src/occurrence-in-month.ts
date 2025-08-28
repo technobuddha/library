@@ -7,7 +7,6 @@ import { modulo } from './modulo.ts';
 
 /**
  * Options for {@link occurrenceInMonth}
- *
  * @group Time
  * @category Day
  */
@@ -18,7 +17,6 @@ export type GetOccurrenceInMonthOptions = {
 
 /**
  * Determine the date of an occurrence of a weekday within a month
- *
  * @param input - A date within the month in question
  * @param dayOfWeek - The day of the week to find the occurrence
  * @param occurrence - The occurrence number, or 'last' to find the last occurrence

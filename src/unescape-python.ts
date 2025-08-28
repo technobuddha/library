@@ -23,7 +23,6 @@
  * [^1]: An octal escape sequence consists of a backslash followed by one to three octal digits.
  * The octal escape sequence ends when it either contains three octal digits, or the next character
  * is not an octal digit.
- *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
  * @example

@@ -5,7 +5,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Convert an identifier string to a camel case
- *
  * @param input - The identifier string
  * @returns string in camel case
  * @group String

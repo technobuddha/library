@@ -11,7 +11,7 @@ Technobuddha Library
 function snakeCase(input: string): string;
 ```
 
-Defined in: [snake-case.ts:12](https://github.com/technobuddha/library/blob/main/src/snake-case.ts#L12)
+Defined in: [snake-case.ts:11](https://github.com/technobuddha/library/blob/main/src/snake-case.ts#L11)
 
 Convert an identifier string to snake case
 

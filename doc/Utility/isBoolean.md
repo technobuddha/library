@@ -11,7 +11,7 @@ Technobuddha Library
 function isBoolean(value: unknown): value is boolean;
 ```
 
-Defined in: [is-boolean.ts:9](https://github.com/technobuddha/library/blob/main/src/is-boolean.ts#L9)
+Defined in: [is-boolean.ts:8](https://github.com/technobuddha/library/blob/main/src/is-boolean.ts#L8)
 
 Determines whether the provided value is a boolean or a Boolean object.
 

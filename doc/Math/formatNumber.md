@@ -11,7 +11,7 @@ Technobuddha Library
 function formatNumber(input: number, mask: string): string;
 ```
 
-Defined in: [format-number.ts:560](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L560)
+Defined in: [format-number.ts:549](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L549)
 
 Formats a number according to the specified mask.
 

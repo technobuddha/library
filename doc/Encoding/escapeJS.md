@@ -11,7 +11,7 @@ Technobuddha Library
 function escapeJS(input: string): string;
 ```
 
-Defined in: [escape-js.ts:39](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L39)
+Defined in: [escape-js.ts:38](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L38)
 
 Escape a string for use in Javascript
 

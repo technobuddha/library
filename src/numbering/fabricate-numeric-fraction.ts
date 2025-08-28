@@ -16,7 +16,6 @@ type FNFOptions = Pick<Numbering, 'ordinal'> & Parameters<typeof deriveFraction>
 
 /**
  * Converts a numeric input into a fractional string representation.
- *
  * @param input - The numeric value to be converted into a fraction.
  * @param options - Configuration options for fraction formatting.
  * @returns The formatted fractional string, or `null` if the numerator is zero.

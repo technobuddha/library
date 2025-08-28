@@ -11,7 +11,7 @@ Technobuddha Library
 function endOfWeek(input: Date, options: EndOfWeekOptions): Date;
 ```
 
-Defined in: [end-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L28)
+Defined in: [end-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L26)
 
 Determine the last day of the week containing a date
 

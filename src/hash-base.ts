@@ -9,12 +9,10 @@ import { type TypedArray } from './@types/typed-array.ts';
  * retrieving the final digest in various formats. Concrete subclasses
  * must implement the `update` and `digest` methods according to the
  * specifics of the hash algorithm.
- *
  * @remarks
  * - The `update` methods allows chaining for incremental hashing.
  * - The `digest` methods finalize the hash computation and return the result
  *   either as a `Uint8Array` or as an encoded string.
- *
  * @group Encoding
  * @category Hash
  */

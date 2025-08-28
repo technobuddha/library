@@ -7,7 +7,6 @@ import { toAngle } from './to-angle.ts';
  *
  * Angles outside this range will be normalized to be the equivalent angle with that range.
  * Angles are always returned as radians.
- *
  * @param angle - Angle
  * @param options - see {@link UnitOptions}
  * @returns Standardized angle in radians.

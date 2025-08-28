@@ -11,7 +11,7 @@ Technobuddha Library
 function isRect(object: unknown): object is Rect;
 ```
 
-Defined in: [is-rect.ts:22](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L22)
+Defined in: [is-rect.ts:20](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L20)
 
 Determines if the provided value is a [Rect](Rect.md)e.
 

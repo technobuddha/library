@@ -11,7 +11,7 @@ Technobuddha Library
 function dataURL(input: BinaryObject, mimeType: string): string;
 ```
 
-Defined in: [data-url.ts:19](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L19)
+Defined in: [data-url.ts:18](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L18)
 
 Convert any binary object into a data URL
 

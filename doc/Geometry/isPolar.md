@@ -11,7 +11,7 @@ Technobuddha Library
 function isPolar(point: unknown): point is Polar;
 ```
 
-Defined in: [is-polar.ts:19](https://github.com/technobuddha/library/blob/main/src/is-polar.ts#L19)
+Defined in: [is-polar.ts:18](https://github.com/technobuddha/library/blob/main/src/is-polar.ts#L18)
 
 Determines if the provided value is a Polar point.
 

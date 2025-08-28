@@ -11,7 +11,7 @@ Technobuddha Library
 function toNumber(entity: unknown): number;
 ```
 
-Defined in: [to-number.ts:13](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L13)
+Defined in: [to-number.ts:12](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L12)
 
 Convert an entity to a number.
 

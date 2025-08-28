@@ -11,7 +11,7 @@ Technobuddha Library
 function toSquare(rect: Rect): Rect;
 ```
 
-Defined in: [to-square.ts:26](https://github.com/technobuddha/library/blob/main/src/to-square.ts#L26)
+Defined in: [to-square.ts:23](https://github.com/technobuddha/library/blob/main/src/to-square.ts#L23)
 
 Converts a [Rect](Rect.md) to the largest possible square that fits within it,
 centered along the longer dimension. If the rectangle is already a square,

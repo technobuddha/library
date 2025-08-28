@@ -2,7 +2,6 @@
  * Determines whether the provided object conforms to the Iterator interface.
  *
  * An object is considered an iterator if it is not `null` or `undefined` and has a `next` method of type `function`.
- *
  * @param obj - The object to test for iterator compliance.
  * @returns `true` if the object is an iterator, otherwise `false`.
  * @example

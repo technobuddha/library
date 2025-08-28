@@ -11,7 +11,7 @@ Technobuddha Library
 type BinaryUnitsOptions = Omit<MetricUnitsOptions, "macro" | "micro" | "unit">;
 ```
 
-Defined in: [binary-units.ts:10](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L10)
+Defined in: [binary-units.ts:9](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L9)
 
 Options for the [binaryUnits](binaryUnits.md) function
 

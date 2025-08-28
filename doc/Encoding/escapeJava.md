@@ -11,7 +11,7 @@ Technobuddha Library
 function escapeJava(input: string): string;
 ```
 
-Defined in: [escape-java.ts:38](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L38)
+Defined in: [escape-java.ts:37](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L37)
 
 Escape a string for use in Java
 

@@ -22,7 +22,6 @@ import { empty } from './unicode.ts';
  *
  * [^1]: Java does not support unicode escapes beyond 0xFFFF.  Astral characters must be
  * encoded as a two character surrogate pair.
- *
  * @param input - The string to escape
  * @returns The string escaped for Java
  * @example

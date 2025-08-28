@@ -11,7 +11,7 @@ Technobuddha Library
 function round(input: number, options: RoundOptions): number;
 ```
 
-Defined in: [round.ts:24](https://github.com/technobuddha/library/blob/main/src/round.ts#L24)
+Defined in: [round.ts:30](https://github.com/technobuddha/library/blob/main/src/round.ts#L30)
 
 Returns the nearest integer to the given number, with optional precision adjustments.
 
@@ -27,4 +27,14 @@ Returns the nearest integer to the given number, with optional precision adjustm
 `number`
 
 The nearest integer to the adjusted input.
+
+## Example
+
+```typescript
+round(2.3); // 2
+round(2.7); // 3
+round(-2.5); // -2
+round(2.345, { precision: 2 }); // 2.35
+round(-2.345, { precision: 2 }); // -2.35
+```
 

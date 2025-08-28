@@ -14,7 +14,7 @@ function isSameDay(
    options: SameDayOptions): boolean;
 ```
 
-Defined in: [is-same-day.ts:25](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L25)
+Defined in: [is-same-day.ts:23](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L23)
 
 Determine if two dates occur on the same day
 

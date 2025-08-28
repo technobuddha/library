@@ -14,7 +14,7 @@ function chop(
    __namedParameters: ChopOptions): string[];
 ```
 
-Defined in: [chop.ts:23](https://github.com/technobuddha/library/blob/main/src/chop.ts#L23)
+Defined in: [chop.ts:21](https://github.com/technobuddha/library/blob/main/src/chop.ts#L21)
 
 Break a string into equal sized segments of characters
 

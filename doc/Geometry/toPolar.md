@@ -11,7 +11,7 @@ Technobuddha Library
 function toPolar(coordinate: Cartesian, options: UnitOptions): Polar;
 ```
 
-Defined in: [to-polar.ts:15](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L15)
+Defined in: [to-polar.ts:14](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L14)
 
 Convert cartesian coordinates to polar
 

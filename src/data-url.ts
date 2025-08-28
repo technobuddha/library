@@ -3,7 +3,6 @@ import { encodeBase64 } from './encode-base-64.ts';
 
 /**
  * Convert any binary object into a data URL
- *
  * @param input - The binary object
  * @param mimeType - The MIME type for the URL
  * @returns The data URL

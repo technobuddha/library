@@ -11,7 +11,7 @@ Technobuddha Library
 const hyphen: "‐" = '‐';
 ```
 
-Defined in: [unicode.ts:47](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L47)
+Defined in: [unicode.ts:41](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L41)
 
 Hyphen
 

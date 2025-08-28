@@ -11,7 +11,7 @@ Technobuddha Library
 function getIndent(input: string, options: IndentOptions): number;
 ```
 
-Defined in: [get-indent.ts:14](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L14)
+Defined in: [get-indent.ts:13](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L13)
 
 Determine the indentation level of text
 

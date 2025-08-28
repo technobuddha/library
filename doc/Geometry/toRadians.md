@@ -11,7 +11,7 @@ Technobuddha Library
 function toRadians(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [to-radians.ts:18](https://github.com/technobuddha/library/blob/main/src/to-radians.ts#L18)
+Defined in: [to-radians.ts:17](https://github.com/technobuddha/library/blob/main/src/to-radians.ts#L17)
 
 Converts degrees to radians.
 

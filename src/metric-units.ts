@@ -78,7 +78,6 @@ export type MetricUnitsOptions = {
 
 /**
  * Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
- *
  * @param input - The number to abbreviate
  * @param options - {@link MetricUnitsOptions}
  * @group String

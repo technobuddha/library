@@ -4,7 +4,6 @@ import { empty, space } from './unicode.ts';
 
 /**
  * Remove indentation from text
- *
  * @param input - The indented text
  * @param pattern - (space)
  * @group String

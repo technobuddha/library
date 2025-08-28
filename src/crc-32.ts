@@ -15,7 +15,6 @@ import { HashBase } from './hash-base.ts';
  * one byte at a time.
  *
  * The table is based on the standard CRC-32 polynomial (0xEDB88320).
- *
  * @see https://en.wikipedia.org/wiki/Cyclic_redundancy_check
  * @see https://tools.ietf.org/html/rfc1952#section-8
  * @internal

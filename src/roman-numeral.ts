@@ -95,7 +95,6 @@ const glyphValues: Record<Glyph, number> = {
  * Parse a roman numeral string into its integer value.
  * @param val - The roman numeral string to parse
  * @returns Parsed roman number
- *
  * @group Math
  * @category Numbers
  */
@@ -116,7 +115,6 @@ export function parseRoman(val: string): number {
 
 /**
  * Options for converting numbers to Roman numerals.
- *
  * @group Math
  * @category Numbers
  */
@@ -125,11 +123,20 @@ export type RomanOptions = {
   format?: 'standard' | 'apostrophus' | 'vinculum';
 };
 
+// cspell:ignore MMXXIV
 /**
  * Parse number into a roman numeral string
  * @param input - The number to turn into a roman numeral
+ * @param options - see {@link RomanOptions}
  * @returns Converted roman numeral
- *
+ * @example
+ * ```typescript
+ * toRoman(1); // "I"
+ * toRoman(4); // "IV"
+ * toRoman(9); // "IX"
+ * toRoman(2024); // "MMXXIV"
+ * toRoman(49, { format: 'apostrophus' }); // "IL"
+ * ```
  * @group Math
  * @category Numbers
  */

@@ -14,7 +14,7 @@ type Polar = {
 };
 ```
 
-Defined in: [@types/geometry.ts:28](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L28)
+Defined in: [@types/geometry.ts:25](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L25)
 
 Polar coordinate (angle, radius)
 
@@ -22,6 +22,6 @@ Polar coordinate (angle, radius)
 
 | Property | Type | Defined in |
 | ------ | ------ | ------ |
-| <a id="r"></a> `r` | `number` | [@types/geometry.ts:29](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L29) |
-| <a id="φ"></a> `φ` | `number` | [@types/geometry.ts:30](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L30) |
+| <a id="r"></a> `r` | `number` | [@types/geometry.ts:26](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L26) |
+| <a id="φ"></a> `φ` | `number` | [@types/geometry.ts:27](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L27) |
 

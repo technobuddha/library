@@ -1,6 +1,5 @@
 /**
  * Options for {@link beginningOfDay}
- *
  * @group Time
  * @category Day
  */
@@ -11,7 +10,6 @@ export type BeginningOfDayOptions = {
 
 /**
  * Determine the start of the day for a date
- *
  * @param input - The date
  * @param options - see {@link BeginningOfDayOptions}
  * @defaultValue utc false

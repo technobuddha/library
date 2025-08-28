@@ -8,7 +8,6 @@ import { nbsp, zwsp } from './unicode.ts';
  * | &#n…;              | Numeric character        |
  * | &#xn…;             | Hexadecimal character    |
  * | &xc…;              | Named entity
- *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
  * @example

@@ -13,7 +13,6 @@ export type EscapeHtmlOptions = {
 
 /**
  * Escape a string for use in HTML
- *
  * @param input - The string to escape
  * @param options - see {@link EscapeHtmlOptions}
  * @example

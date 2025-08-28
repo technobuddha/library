@@ -11,7 +11,7 @@ Technobuddha Library
 function splitChars(input: string): string[];
 ```
 
-Defined in: [split-chars.ts:9](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L9)
+Defined in: [split-chars.ts:8](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L8)
 
 Split a string into an array of characters
 

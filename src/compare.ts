@@ -2,7 +2,6 @@ import { toPrimitive } from './to-primitive.ts';
 
 /**
  * Compare two objects
- *
  * @param a - First object
  * @param b - Second object
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b

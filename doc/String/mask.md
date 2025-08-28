@@ -14,7 +14,7 @@ function mask(
    options: MaskOptions): string;
 ```
 
-Defined in: [mask.ts:31](https://github.com/technobuddha/library/blob/main/src/mask.ts#L31)
+Defined in: [mask.ts:28](https://github.com/technobuddha/library/blob/main/src/mask.ts#L28)
 
 Use a simple mask to display a string
 

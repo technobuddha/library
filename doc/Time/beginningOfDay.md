@@ -11,7 +11,7 @@ Technobuddha Library
 function beginningOfDay(input: Date, options: BeginningOfDayOptions): Date;
 ```
 
-Defined in: [beginning-of-day.ts:22](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L22)
+Defined in: [beginning-of-day.ts:20](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L20)
 
 Determine the start of the day for a date
 

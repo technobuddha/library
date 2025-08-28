@@ -16,7 +16,7 @@ function randomDraw<T>(list: readonly T[], random: () => number):
 };
 ```
 
-Defined in: [random-draw.ts:11](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L11)
+Defined in: [random-draw.ts:10](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L10)
 
 Draw a random item from a list.  Returning both the item and the list without the drawn item.
 

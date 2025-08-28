@@ -14,7 +14,7 @@ function angleReflection(
    options: UnitOptions): number;
 ```
 
-Defined in: [angle-reflection.ts:21](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L21)
+Defined in: [angle-reflection.ts:20](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L20)
 
 Calculates the reflection of an angle across a specified axis.
 

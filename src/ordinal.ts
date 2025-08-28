@@ -1,11 +1,9 @@
-import { deconstructNumber } from '../deconstruct-number.ts';
-import { empty, space } from '../unicode.ts';
-
-import { type Numbering, numbering } from './numbering.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
+import { type Numbering, numbering } from './numbering/numbering.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Options for formatting ordinal numbers.
- *
  * @group Math
  * @category Numbers
  */
@@ -61,7 +59,16 @@ export type OrdinalOptions = {
 /**
  * Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
  * @param input - The number to convert
- *
+ * @param options - see {@link OrdinalOptions}
+ * @example
+ * ```typescript
+ * ordinal(1); // "first"
+ * ordinal(2); // "second"
+ * ordinal(3); // "third"
+ * ordinal(21); // "twenty first"
+ * ordinal(101, { and: ' and ' }); // "one hundred and first"
+ * ordinal(2, { output: 'suffix' }); // "nd"
+ * ```
  * @group Math
  * @category Numbers
  */

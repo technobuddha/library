@@ -13,7 +13,7 @@ function timezone(input:
   | Date, options: TimezoneOptions): string;
 ```
 
-Defined in: [timezone.ts:31](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L31)
+Defined in: [timezone.ts:29](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L29)
 
 Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes
 

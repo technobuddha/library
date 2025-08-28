@@ -11,7 +11,7 @@ Technobuddha Library
 function angleOfLine(line: LineSegment, options: UnitOptions): number;
 ```
 
-Defined in: [angle-of-line.ts:20](https://github.com/technobuddha/library/blob/main/src/angle-of-line.ts#L20)
+Defined in: [angle-of-line.ts:19](https://github.com/technobuddha/library/blob/main/src/angle-of-line.ts#L19)
 
 Calculates the angle of a given line segment, relative to the horizontal axis
 

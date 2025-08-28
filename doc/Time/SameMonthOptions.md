@@ -13,7 +13,7 @@ type SameMonthOptions = {
 };
 ```
 
-Defined in: [is-same-month.ts:9](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L9)
+Defined in: [is-same-month.ts:8](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L8)
 
 Options for the [isSameMonth](isSameMonth.md) function
 
@@ -21,5 +21,5 @@ Options for the [isSameMonth](isSameMonth.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [is-same-month.ts:11](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L11) |
+| <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [is-same-month.ts:10](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L10) |
 

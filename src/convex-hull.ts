@@ -4,7 +4,6 @@ import { crossProduct } from './cross-product.ts';
 /**
  * Computes the convex hull of a set of 2D points using the Monotone Chain algorithm.
  * @see {@link https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript| Monotone Chain}
- *
  * @param vertices - An array of points.
  * @returns The convex hull as an array of points in counterclockwise order, or `undefined` if there are fewer than 3 vertices.
  * @example
@@ -20,7 +19,6 @@ import { crossProduct } from './cross-product.ts';
  * @remarks
  * - The returned array does not repeat the starting point at the end.
  * - Points on the edge of the hull may be included or excluded depending on their order.
- *
  * @group Geometry
  * @category Polygon
  */

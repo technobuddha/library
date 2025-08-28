@@ -14,7 +14,7 @@ function toAngle(
    to: AngleUnit): number;
 ```
 
-Defined in: [to-angle.ts:19](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L19)
+Defined in: [to-angle.ts:18](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L18)
 
 Converts an angle from one unit to another.
 

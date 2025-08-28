@@ -13,7 +13,7 @@ type LevenshteinDistanceOptions = {
 };
 ```
 
-Defined in: [levenshtein-distance.ts:9](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L9)
+Defined in: [levenshtein-distance.ts:8](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L8)
 
 Options for the [levenshteinDistance](levenshteinDistance.md) function
 
@@ -21,5 +21,5 @@ Options for the [levenshteinDistance](levenshteinDistance.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | The comparison will ignore case | [levenshtein-distance.ts:11](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L11) |
+| <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | The comparison will ignore case | [levenshtein-distance.ts:10](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L10) |
 

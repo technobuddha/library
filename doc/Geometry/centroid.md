@@ -11,7 +11,7 @@ Technobuddha Library
 function centroid(vertices: Polygon): Cartesian;
 ```
 
-Defined in: [centroid.ts:27](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L27)
+Defined in: [centroid.ts:26](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L26)
 
 Calculates the centroid (geometric center) of a polygon.
 

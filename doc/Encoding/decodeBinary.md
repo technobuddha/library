@@ -11,7 +11,7 @@ Technobuddha Library
 function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Array;
 ```
 
-Defined in: [decode-binary.ts:30](https://github.com/technobuddha/library/blob/main/src/decode-binary.ts#L30)
+Defined in: [decode-binary.ts:28](https://github.com/technobuddha/library/blob/main/src/decode-binary.ts#L28)
 
 Decode a string into a binary object
 

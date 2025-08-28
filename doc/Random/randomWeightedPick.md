@@ -11,7 +11,7 @@ Technobuddha Library
 function randomWeightedPick<T>(list: readonly T[], random: () => number): undefined | T;
 ```
 
-Defined in: [random-weighted-pick.ts:30](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L30)
+Defined in: [random-weighted-pick.ts:27](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L27)
 
 Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked.
 

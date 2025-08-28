@@ -24,10 +24,8 @@ export type LongestCommonSubsequenceOptions<T> = {
 
 /**
  * Determine the longest possible array that is subsequence of both of given arrays.
- *
  * @remarks
  * Implementation of [Longest Common Subsequence](https://en.wikipedia.org/wiki/Longest_common_subsequence) algorithm.
- *
  * @typeParam T - Type of objects in the arrays.
  * @param array1 - First array of objects.
  * @param array2 - Second array of objects.

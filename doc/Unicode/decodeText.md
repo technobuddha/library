@@ -14,7 +14,7 @@ function decodeText(input:
   | ArrayBuffer, _encoding: TextEncoding): string;
 ```
 
-Defined in: [decode-text.ts:16](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L16)
+Defined in: [decode-text.ts:15](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L15)
 
 Decode a UTF8 encoded string into unicode
 

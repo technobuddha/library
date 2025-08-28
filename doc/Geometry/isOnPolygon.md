@@ -14,7 +14,7 @@ function isOnPolygon(
    tolerance: number): boolean;
 ```
 
-Defined in: [is-on-polygon.ts:20](https://github.com/technobuddha/library/blob/main/src/is-on-polygon.ts#L20)
+Defined in: [is-on-polygon.ts:18](https://github.com/technobuddha/library/blob/main/src/is-on-polygon.ts#L18)
 
 Determines whether a given point lies exactly on the boundary of a polygon.
 

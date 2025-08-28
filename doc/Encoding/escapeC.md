@@ -11,7 +11,7 @@ Technobuddha Library
 function escapeC(input: string): string;
 ```
 
-Defined in: [escape-c.ts:47](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L47)
+Defined in: [escape-c.ts:46](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L46)
 
 Escape a string for use in C/C++
 

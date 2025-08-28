@@ -6,11 +6,9 @@ import { empty } from './unicode.ts';
 //#region parse
 /**
  * Internal type representing the parsed components of a number format mask.
- *
  * @remarks
  * This type is used internally by the {@link parse} function to decompose a format mask
  * into its constituent parts for number formatting operations.
- *
  * @example
  * ```typescript
  * // For mask "#,##0.00"
@@ -26,7 +24,6 @@ import { empty } from './unicode.ts';
  *   precision: 2                 // 2 decimal places
  * };
  * ```
- *
  * @internal
  */
 type ParseReturn = {
@@ -95,7 +92,6 @@ type ParseReturn = {
  * The function analyzes the provided mask to determine digit placeholders,
  * grouping, scaling (e.g., percent, per mille), decimal precision, exponent formatting,
  * and literal characters. It returns an object describing the parsed mask.
- *
  * @param mask - The numeric format mask string to parse (e.g., "#,##0.00%").
  * @returns An object containing:
  * - `aMask`: Array of mask tokens after the decimal point.
@@ -107,7 +103,6 @@ type ParseReturn = {
  * - `exponent`: Number of digits in the exponent (if scientific notation is used).
  * - `signExponent`: Whether the exponent includes a sign.
  * - `precision`: Number of digits after the decimal point.
- *
  * @example
  * ```typescript
  * const result = parse("#,##0.00%");
@@ -284,7 +279,6 @@ function parse(mask: string): ParseReturn {
 //#region format
 /**
  * Options for formatting numbers.
- *
  * @internal
  */
 type FormatOptions = {
@@ -446,13 +440,11 @@ function format(
  * The `NumberFormatter` class provides a fluent API for constructing formatted number strings,
  * supporting features such as sign handling, digit grouping, decimal and fractional parts,
  * and scientific notation. The output is built incrementally and can be retrieved as a string.
- *
  * @example
  * ```typescript
  * const formatter = new NumberFormatter(1, ['1', '2', '3', '4'], 2);
  * const result = formatter.grouped().decimal().fraction().build(); // "1,2.34"
  * ```
- *
  * @internal
  */
 class NumberFormatter {
@@ -541,11 +533,9 @@ class NumberFormatter {
  *
  * Custom format strings can include digit placeholders, group separators, decimal points, and
  * optional sections for positive, negative, and zero values.
- *
  * @param input - The number to format.
  * @param mask - The format mask string.
  * @returns The formatted number as a string.
- *
  * @example
  * ```typescript
  * formatNumber(1234.56, "C2"); // "$1,234.56"
@@ -553,7 +543,6 @@ class NumberFormatter {
  * formatNumber(0.123, "P1");   // "12.3 %"
  * formatNumber(12345.678, "#,##0.00"); // "12,345.68"
  * ```
- *
  * @group Math
  * @category Numbers
  */

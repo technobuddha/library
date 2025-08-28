@@ -14,7 +14,7 @@ function angleDifference(
    options: UnitOptions): number;
 ```
 
-Defined in: [angle-difference.ts:28](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L28)
+Defined in: [angle-difference.ts:25](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L25)
 
 Computes the difference between startAngle and endAngle.
 

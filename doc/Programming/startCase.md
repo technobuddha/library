@@ -11,7 +11,7 @@ Technobuddha Library
 function startCase(input: string): string;
 ```
 
-Defined in: [start-case.ts:15](https://github.com/technobuddha/library/blob/main/src/start-case.ts#L15)
+Defined in: [start-case.ts:13](https://github.com/technobuddha/library/blob/main/src/start-case.ts#L13)
 
 Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function toBoolean(input: string, options: BooleanOptions): undefined | boolean;
 ```
 
-Defined in: [to-boolean.ts:38](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L38)
+Defined in: [to-boolean.ts:36](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L36)
 
 Convert a string to a boolean value
 

@@ -11,7 +11,7 @@ Technobuddha Library
 const isoDate: RegExp;
 ```
 
-Defined in: [regexp.ts:171](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L171)
+Defined in: [regexp.ts:169](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L169)
 
 Validate a ISO formatted date
 

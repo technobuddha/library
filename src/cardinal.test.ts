@@ -1,6 +1,5 @@
-import { fractionSlash, hyphen, negativeSign } from '../unicode.ts';
-
 import { cardinal } from './cardinal.ts';
+import { fractionSlash, hyphen, negativeSign } from './unicode.ts';
 
 describe('cardinal', () => {
   test('should handle simple numbers', () => {

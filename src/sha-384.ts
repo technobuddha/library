@@ -7,7 +7,6 @@ import { ShaBase } from './sha-base.ts';
  * The SHA-384 round constants array, `K`, used in the SHA-384 cryptographic hash function.
  * Each pair of 32-bit integers represents a 64-bit constant, as specified by the FIPS 180-4 standard.
  * These constants are used during the message schedule and compression function rounds.
- *
  * @see [FIPS 180-4: Secure Hash Standard (SHS)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)
  * @internal
  */
@@ -36,7 +35,6 @@ const K = [
 
 /**
  * Converts a given number to a 32-bit signed integer using bitwise OR.
- *
  * @param x - The number to convert.
  * @returns The 32-bit signed integer representation of the input.
  * @internal
@@ -53,7 +51,6 @@ function int32(x: number): number {
  * For each bit position, if the corresponding bit in `x` is 1, the result is the bit from `y`; otherwise, it is the bit from `z`.
  *
  * Mathematically: Ch(x, y, z) = (x & y) ^ (~x & z)
- *
  * @param x - The selector value.
  * @param y - The first input value.
  * @param z - The second input value.
@@ -69,7 +66,6 @@ function çh(x: number, y: number, z: number): number {
  *
  * For each bit position, the result is the value that appears in at least two of the inputs.
  * This function is commonly used in cryptographic hash algorithms such as SHA-2.
- *
  * @param x - The first 32-bit number.
  * @param y - The second 32-bit number.
  * @param z - The third 32-bit number.
@@ -85,7 +81,6 @@ function maj(x: number, y: number, z: number): number {
  *
  * This function performs bitwise operations (rotations and shifts) as specified in the SHA-384 algorithm.
  * The input is split into two 32-bit parts: `x` (high) and `xl` (low).
- *
  * @param x - The high 32 bits of the 64-bit input value.
  * @param xl - The low 32 bits of the 64-bit input value.
  * @returns The result of the σ₀ function as a 32-bit integer.
@@ -101,7 +96,6 @@ function sigma0(x: number, xl: number): number {
  * This function performs bitwise rotations and shifts according to the SHA-384 specification:
  *   σ₁(x) = ROTR^14(x) ⊕ ROTR^18(x) ⊕ ROTR^41(x)
  * where `x` is a 64-bit value split into high (`x`) and low (`xl`) 32-bit parts.
- *
  * @param x - The high 32 bits of the 64-bit input value.
  * @param xl - The low 32 bits of the 64-bit input value.
  * @returns The result of the σ₁ function as a 32-bit number.
@@ -117,7 +111,6 @@ function sigma1(x: number, xl: number): number {
  * This function performs bitwise operations as defined in the SHA-384 specification:
  *   γ₀(x) = (x \>\>\> 1 | x \<\< 63) ^ (x \>\>\> 8 | x \<\< 56) ^ (x \>\>\> 7)
  * Here, `x` is split into two 32-bit parts: `x` (high) and `xl` (low).
- *
  * @param x - The high 32 bits of the 64-bit input value.
  * @param xl - The low 32 bits of the 64-bit input value.
  * @returns The result of the γ₀ function as a 32-bit integer.
@@ -132,7 +125,6 @@ function gamma0(x: number, xl: number): number {
  *
  * This function performs bitwise right rotations and shifts on the input values and combines them using XOR,
  * as specified in the SHA-384/SHA-512 hash algorithm.
- *
  * @param x - The high 32 bits of the 64-bit word.
  * @param xl - The low 32 bits of the 64-bit word.
  * @returns The result of the Gamma0 function as a 32-bit integer.
@@ -147,7 +139,6 @@ function gamma0l(x: number, xl: number): number {
  *
  * This function applies bitwise rotation and shift operations as defined in the SHA-384 specification.
  * The input is split into high (`x`) and low (`xl`) 32-bit words of a 64-bit integer.
- *
  * @param x - The high 32 bits of the 64-bit input value.
  * @param xl - The low 32 bits of the 64-bit input value.
  * @returns The result of the Gamma1 function as a 32-bit integer.
@@ -163,7 +154,6 @@ function gamma1(x: number, xl: number): number {
  *
  * This function performs a combination of right rotations and shifts, as specified in the
  * SHA-384/SHA-512 algorithm, to produce the "gamma1" value for the lower 32 bits.
- *
  * @param x - The high 32 bits of the 64-bit input value.
  * @param xl - The low 32 bits of the 64-bit input value.
  * @returns The result of the gamma1l transformation on the input value.
@@ -175,7 +165,6 @@ function gamma1l(x: number, xl: number): number {
 
 /**
  * Calculates the carry bit resulting from the addition of two unsigned 32-bit integers.
- *
  * @param a - The first unsigned 32-bit integer operand.
  * @param b - The second unsigned 32-bit integer operand.
  * @returns 1 if adding `a` and `b` would result in an unsigned overflow (carry), otherwise 0.

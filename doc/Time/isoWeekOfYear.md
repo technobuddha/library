@@ -14,7 +14,7 @@ function isoWeekOfYear(input: Date, options: ISOWeekOfYearOptions): {
 };
 ```
 
-Defined in: [iso-week-of-year.ts:32](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L32)
+Defined in: [iso-week-of-year.ts:31](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L31)
 
 Determine the ISO week number for a given date
 
@@ -38,8 +38,8 @@ the week number (1-53)
 
 | Name | Type | Defined in |
 | ------ | ------ | ------ |
-| `week` | `number` | [iso-week-of-year.ts:39](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L39) |
-| `year` | `number` | [iso-week-of-year.ts:39](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L39) |
+| `week` | `number` | [iso-week-of-year.ts:38](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L38) |
+| `year` | `number` | [iso-week-of-year.ts:38](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L38) |
 
 ## Default Value
 

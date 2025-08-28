@@ -1,10 +1,8 @@
-import { empty, space } from '../unicode.ts';
-
-import { type Numbering, numbering } from './numbering.ts';
+import { type Numbering, numbering } from './numbering/numbering.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Configuration options for cardinal number conversion.
- *
  * @group Math
  * @category Numbers
  */
@@ -59,14 +57,19 @@ export type CardinalOptions = {
 
 /**
  * Convert a number into text (the cardinal number)
- *
  * @remarks There is no limit to the numbers that can be expressed, however Javascript/Typescript can only represent numbers
  * up to uncentillions (1e308).
- *
  * @param input - The number
  * @param options - see {@link CardinalOptions}
  * @returns The number spelled out
- *
+ * @example
+ * ```typescript
+ * cardinal(123); // "one hundred twenty three"
+ * cardinal(123, { hyphen: '-' }); // "one hundred twenty-three"
+ * cardinal(42.5, { output: 'alphabetic' }); // "forty two and one half"
+ * cardinal(101, { and: ' and ' }); // "one hundred and one"
+ * cardinal(3.14159, { precision: 2 }); // "three and fourteen hundredths"
+ * ```
  * @group Math
  * @category Numbers
  */

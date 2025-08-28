@@ -11,7 +11,7 @@ Technobuddha Library
 function toError(entity: unknown): Error;
 ```
 
-Defined in: [to-error.ts:12](https://github.com/technobuddha/library/blob/main/src/to-error.ts#L12)
+Defined in: [to-error.ts:11](https://github.com/technobuddha/library/blob/main/src/to-error.ts#L11)
 
 Convert the entity to an Error object.
 

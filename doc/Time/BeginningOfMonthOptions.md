@@ -13,7 +13,7 @@ type BeginningOfMonthOptions = {
 };
 ```
 
-Defined in: [beginning-of-month.ts:7](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L7)
+Defined in: [beginning-of-month.ts:6](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L6)
 
 Options for the [beginningOfMonth](beginningOfMonth.md) function
 
@@ -21,5 +21,5 @@ Options for the [beginningOfMonth](beginningOfMonth.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-month.ts:9](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L9) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-month.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L8) |
 

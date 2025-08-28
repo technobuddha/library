@@ -11,7 +11,7 @@ Technobuddha Library
 function zipperMerge<T>(...arrays: T): { [K in string | number | symbol]: T[K<K>] extends V[] ? V : never }[];
 ```
 
-Defined in: [zipper-merge.ts:23](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L23)
+Defined in: [zipper-merge.ts:21](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L21)
 
 Merges multiple arrays into a single array by interleaving their elements at each index.
 

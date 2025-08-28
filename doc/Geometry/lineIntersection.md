@@ -14,7 +14,7 @@ function lineIntersection(
    extend: boolean): undefined | null | Cartesian;
 ```
 
-Defined in: [line-intersection.ts:22](https://github.com/technobuddha/library/blob/main/src/line-intersection.ts#L22)
+Defined in: [line-intersection.ts:21](https://github.com/technobuddha/library/blob/main/src/line-intersection.ts#L21)
 
 Calculates the intersection point of two line segments.
 

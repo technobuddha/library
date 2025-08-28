@@ -11,7 +11,7 @@ Technobuddha Library
 function splitLines(input: string): string[];
 ```
 
-Defined in: [split-lines.ts:11](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L11)
+Defined in: [split-lines.ts:10](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L10)
 
 Split a string into an array of lines
 

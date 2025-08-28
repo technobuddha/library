@@ -13,7 +13,7 @@ type ApproximatelyEqualsOptions = {
 };
 ```
 
-Defined in: [approximately-equals.ts:7](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L7)
+Defined in: [approximately-equals.ts:6](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L6)
 
 Options for the [approximatelyEquals](approximatelyEquals.md) function
 
@@ -21,5 +21,5 @@ Options for the [approximatelyEquals](approximatelyEquals.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="tolerance"></a> `tolerance?` | `number` | Tolerance range. If specified, should be greater than 0. * | [approximately-equals.ts:9](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L9) |
+| <a id="tolerance"></a> `tolerance?` | `number` | Tolerance range. If specified, should be greater than 0. | [approximately-equals.ts:8](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L8) |
 

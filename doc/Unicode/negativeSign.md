@@ -11,7 +11,7 @@ Technobuddha Library
 const negativeSign: "˗" = '˗';
 ```
 
-Defined in: [unicode.ts:71](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L71)
+Defined in: [unicode.ts:62](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L62)
 
 Negative Sign
 

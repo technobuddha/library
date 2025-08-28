@@ -1,9 +1,16 @@
 /**
  * Add leading zeros to a number to ensure a string of a minimum length
- *
  * @param input - The number to pad
  * @param length - The minimum length of the resulting string
  * @returns number as a string with leading zeros as needed
+ * @example
+ * ```typescript
+ * padNumber(5); // "05"
+ * padNumber(42, 4); // "0042"
+ * padNumber(-7, 3); // "-07"
+ * padNumber(NaN, 4); // " NaN"
+ * padNumber(Infinity, 6); // "Infinity"
+ * ```
  * @group Math
  * @category Numbers
  */

@@ -11,7 +11,7 @@ Technobuddha Library
 function floor(input: number, options: FloorOptions): number;
 ```
 
-Defined in: [floor.ts:26](https://github.com/technobuddha/library/blob/main/src/floor.ts#L26)
+Defined in: [floor.ts:31](https://github.com/technobuddha/library/blob/main/src/floor.ts#L31)
 
 Returns the largest integer less than or equal to the given number, with optional tolerance and precision adjustments.
 
@@ -27,4 +27,13 @@ Returns the largest integer less than or equal to the given number, with optiona
 `number`
 
 The floored number, adjusted for tolerance and precision.
+
+## Example
+
+```typescript
+floor(2.7); // 2
+floor(-2.7); // -3
+floor(2.999, { tolerance: 0.001 }); // 2
+floor(2.345, { precision: 2 }); // 2.34
+```
 

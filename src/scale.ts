@@ -3,7 +3,6 @@ import { type OriginOptions } from './angle.ts';
 
 /**
  * Scales a point relative to a given origin by a specified amount.
- *
  * @param point - The point to be scaled, represented as a Cartesian coordinate.
  * @param amount - The scaling factor. Can be a single number (uniform scaling) or a Cartesian object for non-uniform scaling.
  * @param origin - The origin point about which the scaling is performed.
@@ -23,7 +22,6 @@ function scalePoint(point: Cartesian, amount: number | Cartesian, origin: Cartes
 
 /**
  * Scales a point around a given origin by a specified amount.
- *
  * @param point - The point to rotate.
  * @param amount - The amount to scale the point(s) by. This can be a number (uniform scaling) or a Cartesian object (non-uniform scaling).
  * @param options - see {@link OriginOptions}

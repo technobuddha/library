@@ -14,7 +14,7 @@ function isSameMonth(
    options: SameMonthOptions): boolean;
 ```
 
-Defined in: [is-same-month.ts:25](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L25)
+Defined in: [is-same-month.ts:23](https://github.com/technobuddha/library/blob/main/src/is-same-month.ts#L23)
 
 Determine if two dates occur in the same month
 

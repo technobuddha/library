@@ -11,7 +11,7 @@ Technobuddha Library
 function indefiniteArticle(word: string, options: IndefiniteArticleOptions): string;
 ```
 
-Defined in: [indefinite-article.ts:50](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L50)
+Defined in: [indefinite-article.ts:47](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L47)
 
 Determine the appropriate indefinite article to use with a word.
 

@@ -1,6 +1,5 @@
 /**
  * Represents a number that has been deconstructed into its mathematical components.
- *
  * @group Math
  * @category Numbers
  */

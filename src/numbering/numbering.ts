@@ -9,7 +9,6 @@ import { makeOrdinal } from './make-ordinal.ts';
 
 /**
  * Options for controlling how numbers are converted to words or symbols.
- *
  * @group Math
  * @category Numbers
  */
@@ -58,7 +57,6 @@ export type Numbering = {
 
 /**
  * Returns a string representation of the sign.
- *
  * @param sign - The sign of the number, where `1` represents positive and `-1` represents negative.
  * @returns An empty string for positive sign, or the string `'negative '` for negative sign.
  * @internal
@@ -69,7 +67,6 @@ export function signWord(sign: 1 | -1): string {
 
 /**
  * Returns the string representation of a sign symbol based on the input value.
- *
  * @param sign - The sign indicator, where `1` represents positive and `-1` represents negative.
  * @returns The corresponding sign symbol as a string.
  * @internal
@@ -84,13 +81,11 @@ export function signSymbol(sign: 1 | -1): string {
  * The formatting can be numeric, alphabetic, or hybrid, and supports custom precision, ordinal forms,
  * and special handling for zero, NaN, and infinity values. The output can include both integer and fractional
  * parts, formatted according to the specified options.
- *
  * @param input - The number to be formatted.
  * @param options - An object specifying formatting options, including:
  *   - `output`: Determines the style for integer and fractional parts (`numeric`, `alphabetic`, or `hybrid`).
  *   - `precision`: The number of decimal places to consider for the fractional part.
  *   - `ordinal`: Whether to return the ordinal form (e.g., "1st", "second", "zeroth").
- *
  * @returns The formatted string representation of the input number according to the specified options.
  * @internal
  */

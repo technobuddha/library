@@ -2,7 +2,6 @@ import { daysInMonth } from './days-in-month.ts';
 
 /**
  * Options for the {@link endOfMonth} function
- *
  * @group Time
  * @category Month
  */
@@ -13,7 +12,6 @@ export type EndOfMonthOptions = {
 
 /**
  * Determine the last day of the month containing the input date
- *
  * @param input - The date
  * @param options - see {@link EndOfMonthOptions}
  * @defaultValue utc false

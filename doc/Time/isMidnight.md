@@ -11,7 +11,7 @@ Technobuddha Library
 function isMidnight(input: Date, options: MidnightOptions): boolean;
 ```
 
-Defined in: [is-midnight.ts:21](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L21)
+Defined in: [is-midnight.ts:19](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L19)
 
 Determine if a date is at midnight
 

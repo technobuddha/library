@@ -17,7 +17,6 @@ export type ISOWeeksInYearOptions = {
 
 /**
  * Determine the number of ISO weeks within a year
- *
  * @param input - A date within the year, or a year number
  * @param options - see {@link ISOWeeksInYearOptions}
  * @defaultValue weekOneIncludes Thursday

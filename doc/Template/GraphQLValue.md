@@ -17,7 +17,7 @@ type GraphQLValue =
   | GraphQLObject;
 ```
 
-Defined in: [graph-ql.ts:31](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L31)
+Defined in: [graph-ql.ts:28](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L28)
 
 A GraphQL Value, similar to a JSONValue
 

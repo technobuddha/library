@@ -33,7 +33,6 @@ const splitter = /(.*?(?:[.!?‼‽⁇⁈⁉:…]|\.\.\.)["'”’]?)(?:[\s\r\n]
  * | '         | Single quotation mark      |
  * | ”         | Right double quotation mark|
  * | ’         | Right single quotation mark|
- *
  * @param input - The string to be split into sentences.
  * @returns An array of non-empty, trimmed sentences.
  * @example

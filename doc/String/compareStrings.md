@@ -11,10 +11,10 @@ Technobuddha Library
 function compareStrings(
    a: null | string, 
    b: null | string, 
-   caseInsensitive: CompareStringsOptions): -1 | 0 | 1;
+   caseInsensitive: CompareStringsOptions): number;
 ```
 
-Defined in: [compare-strings.ts:31](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L31)
+Defined in: [compare-strings.ts:29](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L29)
 
 Compare two strings
 
@@ -28,7 +28,7 @@ Compare two strings
 
 ## Returns
 
-`-1` \| `0` \| `1`
+`number`
 
 0 if a == b; -1 if a \< b; 1 if a \> b
 

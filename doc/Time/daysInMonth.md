@@ -11,7 +11,7 @@ Technobuddha Library
 function daysInMonth(input: Date, options: DaysInMonthOptions): number;
 ```
 
-Defined in: [days-in-month.ts:25](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L25)
+Defined in: [days-in-month.ts:23](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L23)
 
 Determine the number of days in the month for a date
 

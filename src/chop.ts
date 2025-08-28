@@ -2,7 +2,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Options for the {@link chop} function
- *
  * @group String
  * @category Chop
  */
@@ -13,7 +12,6 @@ export type ChopOptions = {
 
 /**
  * Break a string into equal sized segments of characters
- *
  * @param input - The string to break apart
  * @param length - The length of each segment
  * @returns Array of segments

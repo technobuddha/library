@@ -13,7 +13,7 @@ function isoWeeksInYear(input:
   | Date, options: ISOWeeksInYearOptions): number;
 ```
 
-Defined in: [iso-weeks-in-year.ts:28](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L28)
+Defined in: [iso-weeks-in-year.ts:27](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L27)
 
 Determine the number of ISO weeks within a year
 

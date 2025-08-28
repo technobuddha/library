@@ -11,7 +11,7 @@ Technobuddha Library
 function isFunction(value: unknown): value is Function;
 ```
 
-Defined in: [is-function.ts:16](https://github.com/technobuddha/library/blob/main/src/is-function.ts#L16)
+Defined in: [is-function.ts:15](https://github.com/technobuddha/library/blob/main/src/is-function.ts#L15)
 
 Determines whether the provided value is a function.
 

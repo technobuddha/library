@@ -11,7 +11,7 @@ Technobuddha Library
 function extractDigits(input: string): string;
 ```
 
-Defined in: [extract-digits.ts:11](https://github.com/technobuddha/library/blob/main/src/extract-digits.ts#L11)
+Defined in: [extract-digits.ts:10](https://github.com/technobuddha/library/blob/main/src/extract-digits.ts#L10)
 
 Remove all non-digit characters from a string
 

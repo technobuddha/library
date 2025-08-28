@@ -11,7 +11,7 @@ Technobuddha Library
 function beginningOfYear(input: Date, options: BeginningOfYearOptions): Date;
 ```
 
-Defined in: [beginning-of-year.ts:24](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L24)
+Defined in: [beginning-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L22)
 
 Determine the start of the year for a date
 

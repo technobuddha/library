@@ -14,7 +14,7 @@ type RootOptions = {
 };
 ```
 
-Defined in: [root.ts:7](https://github.com/technobuddha/library/blob/main/src/root.ts#L7)
+Defined in: [root.ts:6](https://github.com/technobuddha/library/blob/main/src/root.ts#L6)
 
 Options for the [root](root.md) function
 
@@ -22,6 +22,6 @@ Options for the [root](root.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="prefix"></a> `prefix?` | `string` | The refix string to remove | [root.ts:9](https://github.com/technobuddha/library/blob/main/src/root.ts#L9) |
-| <a id="suffix"></a> `suffix?` | `string` | The suffix string to remove | [root.ts:11](https://github.com/technobuddha/library/blob/main/src/root.ts#L11) |
+| <a id="prefix"></a> `prefix?` | `string` | The refix string to remove | [root.ts:8](https://github.com/technobuddha/library/blob/main/src/root.ts#L8) |
+| <a id="suffix"></a> `suffix?` | `string` | The suffix string to remove | [root.ts:10](https://github.com/technobuddha/library/blob/main/src/root.ts#L10) |
 

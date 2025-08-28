@@ -11,7 +11,7 @@ Technobuddha Library
 function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon): boolean;
 ```
 
-Defined in: [is-in-polygon.ts:33](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L33)
+Defined in: [is-in-polygon.ts:31](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L31)
 
 Determines whether a given point or rectangle is inside or on the edge of a polygon.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function isCartesian(point: unknown): point is Cartesian;
 ```
 
-Defined in: [is-cartesian.ts:19](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L19)
+Defined in: [is-cartesian.ts:18](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L18)
 
 Determines if the provided value is a Cartesian point.
 

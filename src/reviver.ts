@@ -2,7 +2,6 @@ import { specialBegin, specialFinish } from './json.ts';
 
 /**
  * Used with JSON.parse to decode objected encoded by {@link replacer}
- *
  * @param this - The raw object
  * @param _key - The key
  * @param value - The value

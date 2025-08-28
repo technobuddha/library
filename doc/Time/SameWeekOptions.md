@@ -14,7 +14,7 @@ type SameWeekOptions = {
 };
 ```
 
-Defined in: [is-same-week.ts:10](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L10)
+Defined in: [is-same-week.ts:9](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L9)
 
 Options for the [isSameWeek](isSameWeek.md) function
 
@@ -22,6 +22,6 @@ Options for the [isSameWeek](isSameWeek.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="firstdayofweek"></a> `firstDayOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | which day to use as the first day of the week | [is-same-week.ts:14](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L14) |
-| <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [is-same-week.ts:12](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L12) |
+| <a id="firstdayofweek"></a> `firstDayOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | which day to use as the first day of the week | [is-same-week.ts:13](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L13) |
+| <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [is-same-week.ts:11](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L11) |
 

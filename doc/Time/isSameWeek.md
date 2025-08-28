@@ -14,7 +14,7 @@ function isSameWeek(
    options: SameWeekOptions): boolean;
 ```
 
-Defined in: [is-same-week.ts:28](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L28)
+Defined in: [is-same-week.ts:26](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L26)
 
 Determine if two dates occur in the same week
 

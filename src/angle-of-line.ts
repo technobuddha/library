@@ -4,7 +4,6 @@ import { toAngle } from './to-angle.ts';
 
 /**
  * Calculates the angle of a given line segment, relative to the horizontal axis
- *
  * @param line - The line segment for which to calculate the angle.
  * @param options - see {@link UnitOptions}
  * @returns The angle of the line segment in the specified units.

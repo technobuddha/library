@@ -15,7 +15,7 @@ Tagged template function for constructing GraphQL queries or mutations.
 function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
 ```
 
-Defined in: [graph-ql.ts:39](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L39)
+Defined in: [graph-ql.ts:36](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L36)
 
 Escapes and formats GraphQL query strings or values.
 
@@ -38,7 +38,7 @@ The resulting GraphQL query string with interpolated values.
 function graphQL(arg: GraphQLValue): string;
 ```
 
-Defined in: [graph-ql.ts:45](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L45)
+Defined in: [graph-ql.ts:42](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L42)
 
 Escape and format an individual GraphQL query string.
 

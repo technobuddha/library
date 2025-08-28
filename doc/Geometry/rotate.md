@@ -18,7 +18,7 @@ function rotate(
    options?: UnitOptions & OriginOptions): Cartesian;
 ```
 
-Defined in: [rotate.ts:32](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L32)
+Defined in: [rotate.ts:31](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L31)
 
 Rotates a point around a given origin by a specified angle.
 
@@ -51,7 +51,7 @@ function rotate(
    options?: UnitOptions & OriginOptions): Polygon;
 ```
 
-Defined in: [rotate.ts:53](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L53)
+Defined in: [rotate.ts:52](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L52)
 
 Rotates a polygon around a given origin by a specified angle.
 

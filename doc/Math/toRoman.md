@@ -8,10 +8,10 @@ Technobuddha Library
 # Function: toRoman()
 
 ```ts
-function toRoman(input: number, __namedParameters: RomanOptions): string;
+function toRoman(input: number, options: RomanOptions): string;
 ```
 
-Defined in: [roman-numeral.ts:136](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L136)
+Defined in: [roman-numeral.ts:143](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L143)
 
 Parse number into a roman numeral string
 
@@ -20,11 +20,21 @@ Parse number into a roman numeral string
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `number` | The number to turn into a roman numeral |
-| `__namedParameters` | [`RomanOptions`](RomanOptions.md) | - |
+| `options` | [`RomanOptions`](RomanOptions.md) | see [RomanOptions](RomanOptions.md) |
 
 ## Returns
 
 `string`
 
 Converted roman numeral
+
+## Example
+
+```typescript
+toRoman(1); // "I"
+toRoman(4); // "IV"
+toRoman(9); // "IX"
+toRoman(2024); // "MMXXIV"
+toRoman(49, { format: 'apostrophus' }); // "IL"
+```
 

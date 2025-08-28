@@ -14,7 +14,7 @@ function tag(
    attributes: Record<string, string>): string;
 ```
 
-Defined in: [tag.ts:15](https://github.com/technobuddha/library/blob/main/src/tag.ts#L15)
+Defined in: [tag.ts:14](https://github.com/technobuddha/library/blob/main/src/tag.ts#L14)
 
 Surround text with an HTML tag
 

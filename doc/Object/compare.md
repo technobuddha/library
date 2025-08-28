@@ -11,7 +11,7 @@ Technobuddha Library
 function compare(a: unknown, b: unknown): number;
 ```
 
-Defined in: [compare.ts:12](https://github.com/technobuddha/library/blob/main/src/compare.ts#L12)
+Defined in: [compare.ts:11](https://github.com/technobuddha/library/blob/main/src/compare.ts#L11)
 
 Compare two objects
 

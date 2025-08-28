@@ -11,7 +11,7 @@ Technobuddha Library
 function isPunctuation(input: string): boolean;
 ```
 
-Defined in: [is-punctuation.ts:11](https://github.com/technobuddha/library/blob/main/src/is-punctuation.ts#L11)
+Defined in: [is-punctuation.ts:10](https://github.com/technobuddha/library/blob/main/src/is-punctuation.ts#L10)
 
 Test a string for all punctuation characters
 

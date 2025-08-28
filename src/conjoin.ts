@@ -3,7 +3,6 @@ import { empty, space } from './unicode.ts';
 
 /**
  * Options for creating a coordinated list with {@link conjoin}
- *
  * @group English
  * @category Parts of Speech
  */
@@ -28,7 +27,6 @@ export type ConjoinOptions = {
 // cspell:ignore Nederlander
 /**
  * Create a list from an array, separating values and inserting a conjunction
- *
  * @param input - Array of values
  * @param options - see {@link ConjoinOptions}
  * @example

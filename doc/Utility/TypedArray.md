@@ -19,7 +19,7 @@ type TypedArray =
   | Float64Array;
 ```
 
-Defined in: [@types/typed-array.ts:7](https://github.com/technobuddha/library/blob/main/src/@types/typed-array.ts#L7)
+Defined in: [@types/typed-array.ts:6](https://github.com/technobuddha/library/blob/main/src/@types/typed-array.ts#L6)
 
 Any of the built-in typed array types in JavaScript.
 

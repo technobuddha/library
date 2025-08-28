@@ -11,7 +11,7 @@ Technobuddha Library
 function escapePython(input: string): string;
 ```
 
-Defined in: [escape-python.ts:40](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L40)
+Defined in: [escape-python.ts:39](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L39)
 
 Escape a string for use in Python
 

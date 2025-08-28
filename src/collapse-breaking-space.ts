@@ -3,7 +3,6 @@ import { space } from './unicode.ts';
 
 /**
  * Options for the {@link collapseBreakingSpace} function
- *
  * @group String
  * @category Collapse
  */
@@ -14,7 +13,6 @@ export type CollapseBreakingSpaceOptions = {
 
 /**
  * Replace all breaking space (space, tab, carriage return, new line) with a single space
- *
  * @param input - The string
  * @param trim - If true, remove leading and trailing whitespace
  * @group String

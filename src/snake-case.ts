@@ -3,7 +3,6 @@ import { tokenize } from './tokenize.ts';
 
 /**
  * Convert an identifier string to snake case
- *
  * @param input - The identifier string
  * @returns the identifier in snake case
  * @group String

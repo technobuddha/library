@@ -11,7 +11,7 @@ Technobuddha Library
 function escapeHTML(input: string, options: EscapeHtmlOptions): string;
 ```
 
-Defined in: [escape-html.ts:27](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L27)
+Defined in: [escape-html.ts:26](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L26)
 
 Escape a string for use in HTML
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function isMultipleOf(input: number, multiplier: number): boolean;
 ```
 
-Defined in: [is-multiple-of.ts:12](https://github.com/technobuddha/library/blob/main/src/is-multiple-of.ts#L12)
+Defined in: [is-multiple-of.ts:20](https://github.com/technobuddha/library/blob/main/src/is-multiple-of.ts#L20)
 
 Tests to see if the specified value is an multiple of *multiplier*
 
@@ -27,4 +27,15 @@ Tests to see if the specified value is an multiple of *multiplier*
 `boolean`
 
 true, if the number is a multiple
+
+## Example
+
+```typescript
+isMultipleOf(6, 3); // true
+isMultipleOf(7, 3); // false
+isMultipleOf(0, 5); // true
+isMultipleOf(10, 2); // true
+isMultipleOf(10, 0); // false
+isMultipleOf(0, 0); // true
+```
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function summarize(input: number): string;
 ```
 
-Defined in: [numbering/summarize.ts:19](https://github.com/technobuddha/library/blob/main/src/numbering/summarize.ts#L19)
+Defined in: summarize.ts:19
 
 Get a short description of a number
 
@@ -31,13 +31,12 @@ number as text
 
 this is a shortcut to calling cardinal with options {groups: 1, digits: true}
 
-## Examples
+## Example
 
-```ts
-1000000 "1 million"
-```
-
-```ts
-101323847382459 "101 trillion"
+```typescript
+summarize(1000000); // "1 million"
+summarize(101323847382459); // "101 trillion"
+summarize(1234); // "1.23 thousand"
+summarize(0.00056); // "560 millionths"
 ```
 

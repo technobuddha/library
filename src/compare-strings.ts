@@ -2,7 +2,6 @@ import { compareNumbers } from './compare-numbers.ts';
 
 /**
  * Options for the {@link compareStrings} function
- *
  * @group String
  * @category Comparison
  */
@@ -17,7 +16,6 @@ export type CompareStringsOptions = {
 
 /**
  * Compare two strings
- *
  * @param a - First string
  * @param b - Second string
  * @param caseInsensitive - True if strings are to be compared case insensitive (default false)
@@ -32,7 +30,7 @@ export function compareStrings(
   a: string | null,
   b: string | null,
   { caseInsensitive = false, natural = false, version = false }: CompareStringsOptions = {},
-): -1 | 0 | 1 {
+): number {
   let strA = a;
   let strB = b;
 
@@ -58,7 +56,7 @@ export function compareStrings(
     const v1 = strA.trim().split(/[.-]/u);
     const v2 = strB.trim().split(/[.-]/u);
     const count = Math.max(v1.length, v2.length);
-    let order = 0 as -1 | 0 | 1;
+    let order = 0 as number;
 
     for (let i = 0; order === 0 && i < count; ++i) {
       order = compareStrings(v1[i], v2[i], { natural: true });
@@ -69,7 +67,7 @@ export function compareStrings(
     const t1 = strA.match(/(\.\d+|\d+|\D+)/gu) ?? [];
     const t2 = strB.match(/(\.\d+|\d+|\D+)/gu) ?? [];
     const count = Math.min(t1.length, t2.length);
-    let order = 0 as -1 | 0 | 1;
+    let order = 0 as number;
 
     for (let i = 0; order === 0 && i < count; ++i) {
       if (t1[i] !== t2[i]) {

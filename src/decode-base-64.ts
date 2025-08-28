@@ -34,7 +34,6 @@ export function decodeBase64(input: string, encoding: TextEncoding): string;
  * You can use the **decodeBase64** method to encode and transmit data which may otherwise cause
  * communication problems, then transmit it and use the {@link encodeBase64} method to decode the data again.
  * For example, you can encode, transmit, and decode control characters.
- *
  * @remarks Whitespace withing the Base64 encoded string is ignored.
  * @throws `TypeError` If the input string is not correctly encoded.
  * @group Encoding

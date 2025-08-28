@@ -11,7 +11,7 @@ Technobuddha Library
 function pascalCase(input: string): string;
 ```
 
-Defined in: [pascal-case.ts:14](https://github.com/technobuddha/library/blob/main/src/pascal-case.ts#L14)
+Defined in: [pascal-case.ts:13](https://github.com/technobuddha/library/blob/main/src/pascal-case.ts#L13)
 
 Convert an identifier string to pascal case
 

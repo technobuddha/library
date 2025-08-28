@@ -1,6 +1,5 @@
 /**
  * Draw a random item from a list.  Returning both the item and the list without the drawn item.
- *
  * @param list - Array of items to pick from
  * @param random - Random number generator
  * @defaultValue random  Math.random

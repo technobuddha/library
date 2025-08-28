@@ -11,7 +11,7 @@ Technobuddha Library
 type Polygon = Cartesian[];
 ```
 
-Defined in: [@types/geometry.ts:39](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L39)
+Defined in: [@types/geometry.ts:35](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L35)
 
 A polygon (a set of cartesian coordinates)
 

@@ -5,7 +5,6 @@ import { toAngle } from './to-angle.ts';
 
 /**
  * Convert cartesian coordinates to polar
- *
  * @param coordinate - The Cartesian coordinate to convert.
  * @param options - see {@link UnitOptions}
  * @returns polar coordinated

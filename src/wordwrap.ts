@@ -3,7 +3,6 @@ import { empty, space } from './unicode.ts';
 
 /**
  * Options for the {@link wordwrap} function
- *
  * @group String
  * @category Word Wrapping
  */
@@ -20,7 +19,6 @@ export type WordwrapOptions = {
 
 /**
  * Wrap text so that it fits within a area of fixed width
- *
  * @param input - the text to wrap
  * @param options - see {@link WordwrapOptions}
  * @defaultValue width 75

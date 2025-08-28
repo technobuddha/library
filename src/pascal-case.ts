@@ -5,7 +5,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Convert an identifier string to pascal case
- *
  * @param input - The identifier string
  * @returns the identifier in pascal case
  * @group String

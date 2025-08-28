@@ -11,7 +11,7 @@ Technobuddha Library
 const zwsp: "​" = '\u200B';
 ```
 
-Defined in: [unicode.ts:31](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L31)
+Defined in: [unicode.ts:27](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L27)
 
 Zero-width space
 

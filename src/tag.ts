@@ -4,7 +4,6 @@ import { space } from './unicode.ts';
 
 /**
  * Surround text with an HTML tag
- *
  * @param input - The text to surround
  * @param tagName - The name of the tag
  * @param attributes - A dictionary of name value pairs to use for attributes

@@ -4,7 +4,6 @@ import { modulo } from './modulo.ts';
 
 /**
  * Options for the {@link dayOfWeek} function
- *
  * @group Time
  * @category Week
  */
@@ -17,7 +16,6 @@ export type DayOfWeekOptions = {
 
 /**
  * Determine the day of the week for a specific date
- *
  * @param input - The date
  * @param options - see {@link DayOfWeekOptions}
  * @defaultValue utc false

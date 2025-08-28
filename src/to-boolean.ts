@@ -2,7 +2,6 @@ import { toEnumeration } from './to-enumeration.ts';
 
 /**
  * Options for the {@link toBoolean} function
- *
  * @group String
  * @category Conversion
  */
@@ -27,7 +26,6 @@ const defaultFalse = ['false', 'no', 'n', 'off', '0'];
 
 /**
  * Convert a string to a boolean value
- *
  * @param input - The string to convert
  * @param options - see {@link BooleanOptions}
  * @defaultValue trueValues 'true', 'yes', 'y', 'on', or '1'

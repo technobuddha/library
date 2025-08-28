@@ -92,7 +92,6 @@ function* pull4(input: string, charset: Base64Configuration): Generator<number[]
 
 /**
  * Decodes a Base64-encoded string into a text-encoded string.
- *
  * @param charset - The Base64 alphabet and configuration to use for decoding.
  * @param input - The Base64-encoded string to decode.
  * @param encoding - The text encoding to use for the output.
@@ -110,7 +109,6 @@ export function decode(charset: Base64Configuration, input: string): Uint8Array;
 export function decode(charset: Base64Configuration, input: string, encoding: TextEncoding): string;
 /**
  * Decodes a Base64-encoded string using the specified character set configuration.
- *
  * @remarks
  * This function is used internally by {@link decodeBase64} and {@link decodeBase64Url}
  * to perform the actual decoding logic. It supports decoding to a `Uint8Array` or,
@@ -118,7 +116,6 @@ export function decode(charset: Base64Configuration, input: string, encoding: Te
  *
  * Whitespace in the input string is ignored. If the input contains invalid Base64 characters,
  * a `TypeError` is thrown.
- *
  * @throws {@link TypeError} If the input string contains invalid Base64 characters.
  * @internal
  */

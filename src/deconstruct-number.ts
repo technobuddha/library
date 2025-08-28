@@ -6,13 +6,11 @@ import { empty } from './unicode.ts';
 
 /**
  * Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
- *
  * @param input - The number to deconstruct. Must be a finite number.
  * @param precision - The number of significant digits to use (default: 9, min: 1, max: 15).
  * @returns An object containing the normalized value, sign, mantissa, exponent, and separate representations
  *          of the whole and fractional parts.
  * @throws `TypeError` If the input is NaN or not a finite number.
- *
  * @example
  * ```typescript
  * const result = deconstructNumber(123.456);
@@ -25,7 +23,6 @@ import { empty } from './unicode.ts';
  * //   fraction: { ... }
  * // }
  * ```
- *
  * @group Math
  * @category Numbers
  */

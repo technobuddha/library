@@ -7,7 +7,6 @@ import { type Rect } from './@types/geometry.ts';
  * that contains numeric `x`, `y`, 'width', and 'height' properties.
  * @param object - The value to test for Rectangle structure.
  * @returns `true` if the value is a Rectangle, otherwise `false`.
- *
  * @example
  * ```typescript
  * isRect({ x: 1, y: 2, width: 3, height: 4 }); // true
@@ -15,7 +14,6 @@ import { type Rect } from './@types/geometry.ts';
  * isRect(null); // false
  * isRect([1, 2, 3, 4]); // false
  * ```
- *
  * @group Geometry
  * @category Rectangle
  */

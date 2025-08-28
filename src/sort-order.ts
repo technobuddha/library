@@ -2,7 +2,6 @@ import { clean } from './clean.ts';
 
 /**
  * Options for the {@link sortOrder} function
- *
  * @group String
  * @category Sorting
  */
@@ -15,7 +14,6 @@ export type SortOrderOptions = {
 
 /**
  * Convert a string into a sortable string
- *
  * @remarks for example "The Beatles" becomes "Beatles, The"
  * @param text - string to convert
  * @param options - see {@link SortOrderOptions}

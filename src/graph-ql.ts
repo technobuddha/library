@@ -8,7 +8,6 @@ import { zipperMerge } from './zipper-merge.ts';
 
 /**
  * A GraphQL Object, similar to a JSONObject
- *
  * @group Template
  * @category GraphQl
  */
@@ -16,7 +15,6 @@ export type GraphQLObject = { [Key in string]: GraphQLValue };
 
 /**
  * A GraphQL Array, similar to a JSONArray
- *
  * @group Template
  * @category GraphQl
  */
@@ -24,7 +22,6 @@ export type GraphQLArray = GraphQLValue[];
 
 /**
  * A GraphQL Value, similar to a JSONValue
- *
  * @group Template
  * @category GraphQl
  */

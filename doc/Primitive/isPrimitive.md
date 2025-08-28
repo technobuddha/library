@@ -11,7 +11,7 @@ Technobuddha Library
 function isPrimitive(input: unknown): input is undefined | null | string | number | bigint | boolean | symbol;
 ```
 
-Defined in: [is-primitive.ts:9](https://github.com/technobuddha/library/blob/main/src/is-primitive.ts#L9)
+Defined in: [is-primitive.ts:8](https://github.com/technobuddha/library/blob/main/src/is-primitive.ts#L8)
 
 Check to see if an object is a primitive
 

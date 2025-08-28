@@ -11,7 +11,7 @@ Technobuddha Library
 function isIterable(obj: unknown): obj is Iterable<unknown, any, any>;
 ```
 
-Defined in: [is-iterable.ts:20](https://github.com/technobuddha/library/blob/main/src/is-iterable.ts#L20)
+Defined in: [is-iterable.ts:19](https://github.com/technobuddha/library/blob/main/src/is-iterable.ts#L19)
 
 Determines if the provided object is iterable.
 

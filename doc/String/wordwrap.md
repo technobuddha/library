@@ -11,7 +11,7 @@ Technobuddha Library
 function wordwrap(input: string, options: WordwrapOptions): string;
 ```
 
-Defined in: [wordwrap.ts:34](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L34)
+Defined in: [wordwrap.ts:32](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L32)
 
 Wrap text so that it fits within a area of fixed width
 

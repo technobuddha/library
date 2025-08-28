@@ -11,7 +11,7 @@ Technobuddha Library
 function singleLine(template: TemplateStringsArray, ...args: unknown[]): string;
 ```
 
-Defined in: [single-line.ts:14](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L14)
+Defined in: [single-line.ts:13](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L13)
 
 Joins a template literal into a single line string by removing line breaks and leading whitespace,
 then interleaving the provided arguments. The result is a trimmed, single-line string.

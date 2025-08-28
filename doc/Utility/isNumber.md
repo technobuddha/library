@@ -11,7 +11,7 @@ Technobuddha Library
 function isNumber(value: unknown): value is number;
 ```
 
-Defined in: [is-number.ts:9](https://github.com/technobuddha/library/blob/main/src/is-number.ts#L9)
+Defined in: [is-number.ts:8](https://github.com/technobuddha/library/blob/main/src/is-number.ts#L8)
 
 Determines whether the provided value is a number or a Number object.
 

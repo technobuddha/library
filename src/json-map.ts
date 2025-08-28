@@ -8,22 +8,18 @@ import { deserialize, serialize } from './json-serializer.ts';
  *
  * `JSONMap` serializes keys using JSON.serialize, enabling the use of complex objects as map keys,
  * similar to how `Map` allows objects, but with value-based equality rather than reference-based.
- *
  * @typeParam K - The type of the key, which must extend `JsonObject`.
  * @typeParam V - The type of the value.
- *
  * @example
  * ```typescript
  * const map = new JSONMap<{ id: number }, string>();
  * map.set({ id: 1 }, "one");
  * map.get({ id: 1 }); // "one"
  * ```
- *
  * @remarks
  * - Keys are serialized using JSON, so only JSON-safe objects should be used as keys.
  * - Key equality is determined by the serialized JSON string, not by object reference.
  * - Circular references in keys are not supported.
- *
  * @group JSON
  * @category Data Structures
  */

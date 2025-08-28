@@ -11,7 +11,7 @@ Technobuddha Library
 function correctMSWord(input: string): string;
 ```
 
-Defined in: [correct-ms-word.ts:39](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L39)
+Defined in: [correct-ms-word.ts:38](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L38)
 
 Correct character sequences that Microsoft Word changes to make it look prettier
 

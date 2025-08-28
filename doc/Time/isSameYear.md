@@ -14,7 +14,7 @@ function isSameYear(
    options: SameYearOptions): boolean;
 ```
 
-Defined in: [is-same-year.ts:22](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L22)
+Defined in: [is-same-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L21)
 
 Determine if two dates occur in the same year
 

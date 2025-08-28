@@ -11,7 +11,7 @@ Technobuddha Library
 const subPositive: "₊" = '₊';
 ```
 
-Defined in: [unicode.ts:109](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L109)
+Defined in: [unicode.ts:95](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L95)
 
 Subscript Positive
 

@@ -2,7 +2,6 @@ import { isSameYear } from './is-same-year.ts';
 
 /**
  * Options for the {@link isSameMonth} function
- *
  * @group Time
  * @category Month
  */
@@ -13,7 +12,6 @@ export type SameMonthOptions = {
 
 /**
  * Determine if two dates occur in the same month
- *
  * @param input1 - The first date
  * @param input2 - The second date
  * @param options - see {@link SameMonthOptions}

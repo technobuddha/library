@@ -6,7 +6,6 @@ const titles = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?
 
 /**
  * Convert a string to a title, capitalizing each word, except for the small words
- *
  * @param input - the string to make title case
  * @returns the string in title case
  * @group String

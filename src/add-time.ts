@@ -1,6 +1,5 @@
 /**
  * Represents amount of time to use for {@link addTime}
- *
  * @group Time
  * @category Alteration
  */
@@ -16,9 +15,7 @@ export type TimeIncrement = {
 
 /**
  * Add units of time to a Date
- *
  * @remarks Negative values will subtract from the starting date
- *
  * @param input - Starting date
  * @param increment - Amount of time to increment
  * @returns Adjusted date.

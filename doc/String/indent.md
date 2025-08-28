@@ -11,7 +11,7 @@ Technobuddha Library
 function indent(input: string, options: IndentOptions): string;
 ```
 
-Defined in: [indent.ts:24](https://github.com/technobuddha/library/blob/main/src/indent.ts#L24)
+Defined in: [indent.ts:22](https://github.com/technobuddha/library/blob/main/src/indent.ts#L22)
 
 Indent each line of a string
 

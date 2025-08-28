@@ -11,7 +11,7 @@ Technobuddha Library
 function sum(numbers: number[]): number;
 ```
 
-Defined in: [sum.ts:10](https://github.com/technobuddha/library/blob/main/src/sum.ts#L10)
+Defined in: [sum.ts:15](https://github.com/technobuddha/library/blob/main/src/sum.ts#L15)
 
 Calculates the sum of an array of numbers.
 
@@ -26,4 +26,13 @@ Calculates the sum of an array of numbers.
 `number`
 
 The total sum of all numbers in the array.
+
+## Example
+
+```typescript
+sum([1, 2, 3, 4]); // 10
+sum([-1, 1, -1, 1]); // 0
+sum([]); // 0
+sum([2.5, 3.5]); // 6
+```
 

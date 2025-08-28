@@ -11,7 +11,7 @@ Technobuddha Library
 function splitWords(input: string, options: SplitWordsOptions): string[];
 ```
 
-Defined in: [split-words.ts:25](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L25)
+Defined in: [split-words.ts:23](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L23)
 
 Split a string into an array of words
 

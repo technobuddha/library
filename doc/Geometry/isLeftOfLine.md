@@ -11,7 +11,7 @@ Technobuddha Library
 function isLeftOfLine(point: Cartesian, line: LineSegment): boolean;
 ```
 
-Defined in: [is-left-of-line.ts:19](https://github.com/technobuddha/library/blob/main/src/is-left-of-line.ts#L19)
+Defined in: [is-left-of-line.ts:18](https://github.com/technobuddha/library/blob/main/src/is-left-of-line.ts#L18)
 
 Determines whether a given point lies to the left of a specified line segment.
 

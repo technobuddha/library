@@ -11,7 +11,7 @@ Technobuddha Library
 function dayOfWeek(input: Date, options: DayOfWeekOptions): DayOfWeek;
 ```
 
-Defined in: [day-of-week.ts:28](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L28)
+Defined in: [day-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L26)
 
 Determine the day of the week for a specific date
 

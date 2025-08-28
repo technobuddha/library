@@ -11,7 +11,7 @@ Technobuddha Library
 const hoursPerDay: 24 = 24;
 ```
 
-Defined in: [constants.ts:40](https://github.com/technobuddha/library/blob/main/src/constants.ts#L40)
+Defined in: [constants.ts:36](https://github.com/technobuddha/library/blob/main/src/constants.ts#L36)
 
 Number of hours in a day [24]
 

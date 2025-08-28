@@ -16,7 +16,7 @@ function toEnumeration(input: string, ...tests: (
   | RegExp, any, any>)[]): undefined | number;
 ```
 
-Defined in: [to-enumeration.ts:12](https://github.com/technobuddha/library/blob/main/src/to-enumeration.ts#L12)
+Defined in: [to-enumeration.ts:11](https://github.com/technobuddha/library/blob/main/src/to-enumeration.ts#L11)
 
 Convert a string to a numeric value
 

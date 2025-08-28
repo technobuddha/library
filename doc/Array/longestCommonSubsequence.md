@@ -14,7 +14,7 @@ function longestCommonSubsequence<T>(
    options: LongestCommonSubsequenceOptions<T>): T[];
 ```
 
-Defined in: [longest-common-subsequence.ts:48](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L48)
+Defined in: [longest-common-subsequence.ts:46](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L46)
 
 Determine the longest possible array that is subsequence of both of given arrays.
 

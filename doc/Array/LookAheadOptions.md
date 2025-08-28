@@ -17,7 +17,7 @@ type LookAheadOptions<T> =
 };
 ```
 
-Defined in: [look-ahead.ts:8](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L8)
+Defined in: [look-ahead.ts:7](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L7)
 
 Options for [lookAhead](lookAhead.md) operations.
 
@@ -37,7 +37,7 @@ Options for [lookAhead](lookAhead.md) operations.
 
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| `last` | `T` | Specifies the last item in the sequence. | [look-ahead.ts:13](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L13) |
+| `last` | `T` | Specifies the last item in the sequence. | [look-ahead.ts:12](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L12) |
 
 ```ts
 {
@@ -47,5 +47,5 @@ Options for [lookAhead](lookAhead.md) operations.
 
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| `wrapAround` | `boolean` | Determines whether the look-ahead should wrap around to the beginning when reaching the end. | [look-ahead.ts:19](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L19) |
+| `wrapAround` | `boolean` | Determines whether the look-ahead should wrap around to the beginning when reaching the end. | [look-ahead.ts:18](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L18) |
 

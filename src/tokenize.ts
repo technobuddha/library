@@ -6,7 +6,6 @@ const reWord = /(?:\p{Lu}\p{Ll}+)|(?:(?:\p{Lu}(?!\p{Ll}))+)|(?:\p{Ll}+)|(?:\p{N}
 
 /**
  * Splits the input string into an array of words.
- *
  * @param input - The string to tokenize.
  * @returns An array of words found in the input string. Returns an empty array if no matches are found.
  * @group Programming

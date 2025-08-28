@@ -11,7 +11,7 @@ Technobuddha Library
 function sortOrder(text: string, options: SortOrderOptions): string;
 ```
 
-Defined in: [sort-order.ts:26](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L26)
+Defined in: [sort-order.ts:24](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L24)
 
 Convert a string into a sortable string
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function syllables(input: string): number;
 ```
 
-Defined in: [syllables.ts:18](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L18)
+Defined in: [syllables.ts:17](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L17)
 
 Approximate the number of syllables in a string
 

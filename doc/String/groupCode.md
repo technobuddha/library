@@ -11,7 +11,7 @@ Technobuddha Library
 function groupCode(input: string): string;
 ```
 
-Defined in: [group-code.ts:16](https://github.com/technobuddha/library/blob/main/src/group-code.ts#L16)
+Defined in: [group-code.ts:14](https://github.com/technobuddha/library/blob/main/src/group-code.ts#L14)
 
 Determine the group code (A-Z, [] or #) to place an item under
 

@@ -13,7 +13,7 @@ type DiceCoefficientOptions = {
 };
 ```
 
-Defined in: [dice-coefficient.ts:9](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L9)
+Defined in: [dice-coefficient.ts:8](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L8)
 
 Options for the [diceCoefficient](diceCoefficient.md) function
 
@@ -21,5 +21,5 @@ Options for the [diceCoefficient](diceCoefficient.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | compare the two strings in case insensitive mode | [dice-coefficient.ts:11](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L11) |
+| <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | compare the two strings in case insensitive mode | [dice-coefficient.ts:10](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L10) |
 

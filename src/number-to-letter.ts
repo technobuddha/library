@@ -6,7 +6,6 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /**
  * Options for the {@link numberToLetter} function
- *
  * @group String
  * @category Sorting
  */

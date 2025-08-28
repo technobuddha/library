@@ -1,6 +1,5 @@
 /**
  * Represents a point in 2D Cartesian coordinate space.
- *
  * @group Geometry
  * @category Coordinates
  */
@@ -13,7 +12,6 @@ export type Cartesian = {
 
 /**
  * The origin of cartesian coordinates (0, 0)
- *
  * @group Geometry
  * @category Coordinates
  */
@@ -21,7 +19,6 @@ export const Origin: Cartesian = { x: 0, y: 0 };
 
 /**
  * Polar coordinate (angle, radius)
- *
  * @group Geometry
  * @category Coordinates
  */
@@ -32,7 +29,6 @@ export type Polar = {
 
 /**
  * A polygon (a set of cartesian coordinates)
- *
  * @group Geometry
  * @category Polygon
  */
@@ -40,7 +36,6 @@ export type Polygon = Cartesian[];
 
 /**
  * Represents a line segment in 2D space, defined by its start and end points.
- *
  * @group Geometry
  * @category Line Segment
  */
@@ -57,7 +52,6 @@ export type LineSegment = {
 
 /**
  * A rectangle (defined by its top-left corner, width and height)
- *
  * @group Geometry
  * @category Rectangle
  */

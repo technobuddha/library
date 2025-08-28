@@ -11,7 +11,7 @@ Technobuddha Library
 function unicodeLength(input: string): number;
 ```
 
-Defined in: [unicode-length.ts:11](https://github.com/technobuddha/library/blob/main/src/unicode-length.ts#L11)
+Defined in: [unicode-length.ts:10](https://github.com/technobuddha/library/blob/main/src/unicode-length.ts#L10)
 
 Return the number of unicode code points in a string
 

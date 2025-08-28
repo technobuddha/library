@@ -20,7 +20,7 @@ function shallowEquals(
    exclude: string[]): boolean;
 ```
 
-Defined in: [shallow-equals.ts:31](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L31)
+Defined in: [shallow-equals.ts:29](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L29)
 
 Compare two object for equality.  Testing goes one level deep.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function toPrimitive(input: unknown, hint: "string" | "number" | "default"): unknown;
 ```
 
-Defined in: [to-primitive.ts:13](https://github.com/technobuddha/library/blob/main/src/to-primitive.ts#L13)
+Defined in: [to-primitive.ts:12](https://github.com/technobuddha/library/blob/main/src/to-primitive.ts#L12)
 
 Convert an object into its primitive (string, number, etc.) value
 

@@ -11,7 +11,7 @@ Technobuddha Library
 type BinaryEncoding = "base64" | "base64url" | "hex" | "binary";
 ```
 
-Defined in: [@types/binary-encoding.ts:9](https://github.com/technobuddha/library/blob/main/src/@types/binary-encoding.ts#L9)
+Defined in: [@types/binary-encoding.ts:8](https://github.com/technobuddha/library/blob/main/src/@types/binary-encoding.ts#L8)
 
 Formats for binary encoding
 

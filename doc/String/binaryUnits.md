@@ -11,7 +11,7 @@ Technobuddha Library
 function binaryUnits(input: number, options: BinaryUnitsOptions): string;
 ```
 
-Defined in: [binary-units.ts:19](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L19)
+Defined in: [binary-units.ts:18](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L18)
 
 Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K)
 

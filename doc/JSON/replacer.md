@@ -14,7 +14,7 @@ function replacer(
    value: unknown): unknown;
 ```
 
-Defined in: replacer.ts:14
+Defined in: [replacer.ts:13](https://github.com/technobuddha/library/blob/main/src/replacer.ts#L13)
 
 Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with [reviver](reviver.md)
 

@@ -8,9 +8,7 @@ import { deserialize, serialize } from './json-serializer.ts';
  * `JSONSet` stores objects by serializing them to JSON strings, allowing for deep equality
  * comparison of objects rather than reference equality. This is useful for storing and comparing
  * objects with the same structure and values, regardless of their references.
- *
  * @typeParam T - The type of objects stored in the set. Must extend `JsonObject`.
- *
  * @example
  * ```typescript
  * const set = new JSONSet<{ a: number }>();
@@ -18,14 +16,11 @@ import { deserialize, serialize } from './json-serializer.ts';
  * set.has({ a: 1 }); // true
  * set.has({ a: 2 }); // false
  * ```
- *
  * @remarks
  * - All objects are serialized using a `serialize` function and deserialized with a `deserialize` function.
  * - The set supports standard set operations such as union, intersection, difference, and symmetricDifference.
  * - Iteration yields deserialized objects.
- *
  * @see Set
- *
  * @group JSON
  * @category Data Structures
  */

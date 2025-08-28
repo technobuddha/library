@@ -11,7 +11,7 @@ Technobuddha Library
 function isAlpha(input: string): boolean;
 ```
 
-Defined in: [is-alpha.ts:11](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L11)
+Defined in: [is-alpha.ts:10](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L10)
 
 Test a string for all alphabetic characters
 

@@ -5,7 +5,6 @@ import { type Polar } from './@types/geometry.ts';
  *
  * A value is considered a Polar point if it is a non-null object
  * that contains numeric `φ` and `r` properties.
- *
  * @param point - The value to test for Polar structure.
  * @returns `true` if the value is a Polar point, otherwise `false`.
  * @example

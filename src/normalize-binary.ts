@@ -2,7 +2,6 @@ import { type BinaryObject } from './binary-object.ts';
 
 /**
  * Normalizes {@link BinaryObject} to a `Uint8Array`.
- *
  * @param input - The {@link BinaryObject} to normalize.
  * @returns A `Uint8Array` representing the binary data.
  * @throws `TypeError` If the input is not a supported binary object type.

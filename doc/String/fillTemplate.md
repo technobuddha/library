@@ -14,7 +14,7 @@ function fillTemplate(
    options: FillTemplateOptions): string;
 ```
 
-Defined in: [fill-template.ts:26](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L26)
+Defined in: [fill-template.ts:25](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L25)
 
 Fill a template with supplied values
 

@@ -11,7 +11,7 @@ Technobuddha Library
 function kebabCase(input: string): string;
 ```
 
-Defined in: [kebab-case.ts:12](https://github.com/technobuddha/library/blob/main/src/kebab-case.ts#L12)
+Defined in: [kebab-case.ts:11](https://github.com/technobuddha/library/blob/main/src/kebab-case.ts#L11)
 
 Convert an identifier string to a kebab-case form
 

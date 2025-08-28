@@ -10,7 +10,6 @@ export type CountOptions = {
 
 /**
  * Compute the number of times a substring occurs within a string
- *
  * @param input - The string
  * @param substring - The substring to look for
  * @param options - see {@link CountOptions}

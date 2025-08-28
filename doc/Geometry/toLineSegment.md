@@ -11,7 +11,7 @@ Technobuddha Library
 function toLineSegment(pointA: Cartesian, pointB: Cartesian): LineSegment;
 ```
 
-Defined in: [to-line-segment.ts:13](https://github.com/technobuddha/library/blob/main/src/to-line-segment.ts#L13)
+Defined in: [to-line-segment.ts:11](https://github.com/technobuddha/library/blob/main/src/to-line-segment.ts#L11)
 
 Converts two Cartesian points into a `LineSegment` object.
 

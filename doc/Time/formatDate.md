@@ -14,7 +14,7 @@ function formatDate(
    options?: FormatDateOptions): string;
 ```
 
-Defined in: [format-date.ts:100](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L100)
+Defined in: [format-date.ts:99](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L99)
 
 Format a date
 

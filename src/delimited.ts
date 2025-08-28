@@ -2,7 +2,6 @@ import { empty } from './unicode.ts';
 
 /**
  * Return a field from a delimited string
- *
  * @param input - The delimited string
  * @param delimiter - The delimiter string
  * @param index - The position of the desired field, 0 is the first field, negative numbers count backwards from the end (default 0)

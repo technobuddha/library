@@ -17,7 +17,6 @@ import { type Cartesian } from './@types/geometry.ts';
  * | arcsecond     | 1296000               |
  * | grad          | 400                   |
  * | gradians      | 400                   |
- *
  * @group Geometry
  * @category Angle
  */
@@ -46,7 +45,6 @@ export type AngleUnit =
  * | 400      | grad, gradians        |
  * | 21600    | arcmin, arcminutes    |
  * | 1296000  | arcsec, arcseconds    |
- *
  * @group Geometry
  * @category Angle
  */

@@ -4,7 +4,6 @@ import { normalizeAngle } from './normalize-angle.ts';
 
 /**
  * Rotates a point around a given origin by a specified angle.
- *
  * @param point - The Cartesian coordinates of the point to rotate.
  * @param angle - The angle in radians to rotate the point. Positive values rotate counterclockwise.
  * @param origin - The Cartesian coordinates of the origin around which to rotate.

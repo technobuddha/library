@@ -11,7 +11,7 @@ Technobuddha Library
 function clearObject<T>(input: Record<string | number | symbol, T>): Record<string | number | symbol, T>;
 ```
 
-Defined in: [clear-object.ts:12](https://github.com/technobuddha/library/blob/main/src/clear-object.ts#L12)
+Defined in: [clear-object.ts:10](https://github.com/technobuddha/library/blob/main/src/clear-object.ts#L10)
 
 Delete all own enumerable string properties from an object
 

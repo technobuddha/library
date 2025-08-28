@@ -11,7 +11,7 @@ Technobuddha Library
 function isUpperCase(input: string): boolean;
 ```
 
-Defined in: [is-upper-case.ts:11](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L11)
+Defined in: [is-upper-case.ts:10](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L10)
 
 Test a string for all upper case characters
 

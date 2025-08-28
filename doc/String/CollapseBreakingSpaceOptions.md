@@ -13,7 +13,7 @@ type CollapseBreakingSpaceOptions = {
 };
 ```
 
-Defined in: [collapse-breaking-space.ts:10](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L10)
+Defined in: [collapse-breaking-space.ts:9](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L9)
 
 Options for the [collapseBreakingSpace](collapseBreakingSpace.md) function
 
@@ -21,5 +21,5 @@ Options for the [collapseBreakingSpace](collapseBreakingSpace.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="trim"></a> `trim?` | `boolean` | If true, trim leading and trailing whitespace | [collapse-breaking-space.ts:12](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L12) |
+| <a id="trim"></a> `trim?` | `boolean` | If true, trim leading and trailing whitespace | [collapse-breaking-space.ts:11](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L11) |
 

@@ -24,7 +24,6 @@ import { oct, u4, u8, x2 } from './escape.ts';
  *
  * [^1]: The sequence \\0 must not be followed by a octal digit (0-7) to avoid being interpreted
  * as a different character, \\000 will be used to avoid ambiguity.
- *
  * @param input - The string to escape
  * @returns the string escapes for use in python
  * @example

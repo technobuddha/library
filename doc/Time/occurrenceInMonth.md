@@ -17,7 +17,7 @@ function occurrenceInMonth(
   | Date;
 ```
 
-Defined in: [occurrence-in-month.ts:31](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L31)
+Defined in: [occurrence-in-month.ts:29](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L29)
 
 Determine the date of an occurrence of a weekday within a month
 

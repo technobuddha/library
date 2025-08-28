@@ -31,7 +31,6 @@ import { empty } from './unicode.ts';
  * (such as EBCDIC).
  * [^3]: The sequence \\xnn must not be followed by a hexadecimal digit (0-9, a-f, A-F) to avoid
  * being interpreted as a different character, \\unnnn will be used to avoid ambiguity.
- *
  * @param input - The string to escape
  * @returns the escaped string
  * @example

@@ -7,7 +7,6 @@ import { ShaBase } from './sha-base.ts';
  *
  * These 64 constant 32-bit words are used in each round of the SHA-256 hash computation.
  * They are derived from the fractional parts of the cube roots of the first 64 prime numbers.
- *
  * @see [FIPS PUB 180-4: Secure Hash Standard (SHS)](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf)
  * @internal
  */
@@ -28,7 +27,6 @@ const K = [
  * This function uses bitwise OR with zero to truncate the input number
  * to a 32-bit signed integer, effectively emulating the behavior of
  * JavaScript's internal ToInt32 operation.
- *
  * @param x - The number to convert.
  * @returns The 32-bit signed integer representation of the input.
  * @internal
@@ -45,7 +43,6 @@ function int32(x: number): number {
  * For each bit position, if the corresponding bit in `x` is 1, the result is the bit from `y`; otherwise, it is the bit from `z`.
  *
  * Mathematically: ch(x, y, z) = (x & y) ^ (~x & z)
- *
  * @param x - The selector value.
  * @param y - The value to select when the corresponding bit in `x` is 1.
  * @param z - The value to select when the corresponding bit in `x` is 0.
@@ -61,7 +58,6 @@ function ch(x: number, y: number, z: number): number {
  *
  * For each bit position, the result is the value that occurs in at least two of the inputs.
  * This function is commonly used in cryptographic hash functions such as SHA-256.
- *
  * @param x - The first 32-bit number.
  * @param y - The second 32-bit number.
  * @param z - The third 32-bit number.
@@ -78,7 +74,6 @@ function maj(x: number, y: number, z: number): number {
  * The σ₀ function is defined as:
  *   σ₀(x) = ROTR²(x) ⊕ ROTR¹³(x) ⊕ ROTR²²(x)
  * where ROTRⁿ(x) is the right rotation of x by n bits, and ⊕ is bitwise XOR.
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the σ₀ function to the input.
  * @internal
@@ -96,7 +91,6 @@ function sigma0(x: number): number {
  *   - Right rotate by 6 bits
  *   - Right rotate by 11 bits
  *   - Right rotate by 25 bits
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the σ₁ function to the input.
  * @internal
@@ -114,7 +108,6 @@ function sigma1(x: number): number {
  *   - ROTRⁿ(x) is the right rotation of x by n bits,
  *   - SHRⁿ(x) is the right shift of x by n bits,
  *   - ⊕ denotes bitwise XOR.
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the γ₀ function to the input.
  * @internal
@@ -131,7 +124,6 @@ function gamma0(x: number): number {
  * where:
  *   - ROTR^n(x) is the right rotation of x by n bits.
  *   - SHR^n(x) is the right shift of x by n bits.
- *
  * @param x - The 32-bit integer input.
  * @returns The result of applying the SHA-256 σ₁ function to the input.
  * @internal
