@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function unescapeJS(input: string): string;
 ```
 
-Defined in: [unescape-js.ts:26](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L26)
+Defined in: [unescape-js.ts:33](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L33)
 
 Unescape a string encoded in Javascript style
 
@@ -41,4 +42,13 @@ Unescape a string encoded in Javascript style
 `string`
 
 the string with escapes resolved
+
+## Example
+
+```typescript
+unescapeJS('Hello\\nWorld'); // "Hello\nWorld"
+unescapeJS('\\u20ac'); // "€"
+unescapeJS('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
+unescapeJS('\\u{1F600}'); // "😀"
+```
 

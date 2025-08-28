@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function unescapeC(input: string): string;
 ```
 
-Defined in: [unescape-c.ts:36](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L36)
+Defined in: [unescape-c.ts:43](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L43)
 
 Unescape a string encoded in C style
 
@@ -51,4 +52,13 @@ it continues for as many hex digits as there are.
 `string`
 
 the string with escapes resolved
+
+## Example
+
+```typescript
+unescapeC('Hello\\nWorld'); // "Hello\nWorld"
+unescapeC('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
+unescapeC('\\u20ac'); // "€"
+unescapeC('\\U0001f600'); // "😀"
+```
 

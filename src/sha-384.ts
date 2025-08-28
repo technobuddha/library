@@ -196,9 +196,9 @@ function getCarry(a: number, b: number): number {
  * ```
  * ```typescript
  * const sha384 = new Sha384();
- * sha384.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * sha384.update(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64]));
  * sha384.digest('hex');
- * 'aaea4534d11f220a214f60fe5d90d33c69a92bf53661512a0ff580c29a20ed6daf522e5ac647011408e0755eaf59711b'
+ * // 'fdbd8e75a67f29f701a4e040385e2e23986303ea10239211af907fcbb83578b3e417cb71ce646efd0819dd8c088de1bd'
  * ```
  * @group Encoding
  * @category Hash

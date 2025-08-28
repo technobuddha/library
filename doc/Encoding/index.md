@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -16,10 +17,10 @@ Technobuddha Library
 | [decodeBase64](decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBase64Url](decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBinary](decodeBinary.md) | Decode a string into a binary object |
-| [encodeBase64](encodeBase64.md) | Creates a encoded ASCII string from a string using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [encodeBase64Url](encodeBase64Url.md) | Creates a encoded ASCII string from a string using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [encodeBinary](encodeBinary.md) | Encode an binary object into a string |
-| [normalizeBinary](normalizeBinary.md) | Normalizes various binary object types to a `Uint8Array`. |
+| [encodeBase64](encodeBase64.md) | Creates a encoded ASCII string from a [BinaryObject](BinaryObject.md) or `string` using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64). |
+| [encodeBase64Url](encodeBase64Url.md) | Creates a encoded ASCII string from a [BinaryObject](BinaryObject.md) or `string` using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64). |
+| [encodeBinary](encodeBinary.md) | Encode an [BinaryObject](BinaryObject.md) into a string |
+| [normalizeBinary](normalizeBinary.md) | Normalizes [BinaryObject](BinaryObject.md) to a `Uint8Array`. |
 
 ### Escaping
 

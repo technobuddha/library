@@ -144,9 +144,9 @@ function gamma1(x: number): number {
  * ```
  * ```typescript
  * const sha224 = new Sha224();
- * sha224.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * sha224.update(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64]));
  * sha224.digest('hex');
- * // '82507bc68601eec5c8298780a809c1492519499595bd5e41198d5d6b'
+ * // '23097d223405d8228642a477bda255b32aadbce4bda0b3f7e36c9da7'
  * ```
  * @group Encoding
  * @category Hash

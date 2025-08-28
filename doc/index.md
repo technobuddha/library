@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -26,7 +27,7 @@ Technobuddha Library
 | ------ | ------ |
 | [Collapsible](Array/Collapsible.md) | Represents a value that can be "collapsed" into a flat sequence of values of type `T`. |
 | [CollapsiblePrimitive](Array/CollapsiblePrimitive.md) | Represents a primitive type that excludes `null` and `undefined`. |
-| [CollapsibleValue](Array/CollapsibleValue.md) | Represents a primitive value including `null` and `undefined`. |
+| [CollapsibleValue](Array/CollapsibleValue.md) | A `CollapsibleValue<T>` |
 | [LongestCommonSubsequenceOptions](Array/LongestCommonSubsequenceOptions.md) | Options for configuring the [longestCommonSubsequence](Array/longestCommonSubsequence.md) calculation. |
 | [collapse](Array/collapse.md) | Collapses an array of values into a flat array with `null` and `undefined` elements removed. |
 | [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
@@ -50,10 +51,10 @@ Technobuddha Library
 | [decodeBase64](Encoding/decodeBase64.md) | Decodes a string of data which has been encoded using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBase64Url](Encoding/decodeBase64Url.md) | Decodes a string of data which has been encoded using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
 | [decodeBinary](Encoding/decodeBinary.md) | Decode a string into a binary object |
-| [encodeBase64](Encoding/encodeBase64.md) | Creates a encoded ASCII string from a string using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [encodeBase64Url](Encoding/encodeBase64Url.md) | Creates a encoded ASCII string from a string using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding. |
-| [encodeBinary](Encoding/encodeBinary.md) | Encode an binary object into a string |
-| [normalizeBinary](Encoding/normalizeBinary.md) | Normalizes various binary object types to a `Uint8Array`. |
+| [encodeBase64](Encoding/encodeBase64.md) | Creates a encoded ASCII string from a [BinaryObject](Encoding/BinaryObject.md) or `string` using [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64). |
+| [encodeBase64Url](Encoding/encodeBase64Url.md) | Creates a encoded ASCII string from a [BinaryObject](Encoding/BinaryObject.md) or `string` using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64). |
+| [encodeBinary](Encoding/encodeBinary.md) | Encode an [BinaryObject](Encoding/BinaryObject.md) into a string |
+| [normalizeBinary](Encoding/normalizeBinary.md) | Normalizes [BinaryObject](Encoding/BinaryObject.md) to a `Uint8Array`. |
 
 ### Escaping
 
@@ -315,6 +316,13 @@ Technobuddha Library
 | ------ | ------ |
 | [compare](Object/compare.md) | Compare two objects |
 | [shallowEquals](Object/shallowEquals.md) | Compare two object for equality. Testing goes one level deep. |
+
+### Type Guards
+
+| Function | Description |
+| ------ | ------ |
+| [isIterable](Object/isIterable.md) | Determines if the provided object is iterable. |
+| [isIterator](Object/isIterator.md) | Determines whether the provided object conforms to the Iterator interface. |
 
 ### Utility
 

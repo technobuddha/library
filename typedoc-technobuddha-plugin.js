@@ -16,7 +16,7 @@ const tx = {
 };
 
 /** @type { string[] } */
-const header = ['<!-- markdownlint-disable -->', 'Technobuddha Library', '---', empty];
+const header = ['<!-- markdownlint-disable -->', '<!-- cspell: disable -->', 'Technobuddha Library', '---', empty];
 
 /** @type {Record<number, string>} */
 const reflectionKind = Object.fromEntries(

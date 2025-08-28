@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -6,29 +7,12 @@ Technobuddha Library
 
 # Function: encodeBase64Url()
 
-Creates a encoded ASCII string from a string using [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoding.
+Creates a encoded ASCII string from a [BinaryObject](BinaryObject.md) or `string` using
+[Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64).
 
 You can use this method to encode data which may otherwise cause communication problems,
 transmit it, then use the [decodeBase64Url](decodeBase64Url.md) method to decode the data again. For example, you can
-encode control characters such as ASCII values 0 through 31.
-
-Before encoding, the string is converted to binary using [encodeText](../Unicode/encodeText.md) and the supplied ***encoding***
-
-## Param
-
-The string to encode
-
-## Param
-
-The encoding of the input string
-
-## Example
-
-```typescript
-encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
-encodeBase64(new Uint8Array([1, 2, 3])); // "AQID"
-encodeBase64(new Uint8Array([1, 2, 3])); // "AQID"
-```
+encode control characters.
 
 ## Call Signature
 
@@ -36,9 +20,10 @@ encodeBase64(new Uint8Array([1, 2, 3])); // "AQID"
 function encodeBase64Url(chars: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [encode-base-64-url.ts:12](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L12)
+Defined in: [encode-base-64-url.ts:19](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L19)
 
-Before encoding, the string is converted to binary using [encodeText](../Unicode/encodeText.md) and the supplied `encoding`
+Convert a string to binary using [encodeText](../Unicode/encodeText.md) with the supplied encoding, and then
+encode it to `Base64Url`.
 
 ### Parameters
 
@@ -51,13 +36,23 @@ Before encoding, the string is converted to binary using [encodeText](../Unicode
 
 `string`
 
+An ASCII string containing the `Base64Url` representation
+
+### Example
+
+```typescript
+encodeBase64Url('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ"
+```
+
 ## Call Signature
 
 ```ts
 function encodeBase64Url(binary: BinaryObject): string;
 ```
 
-Defined in: [encode-base-64-url.ts:16](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L16)
+Defined in: [encode-base-64-url.ts:29](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L29)
+
+Encode a [BinaryObject](BinaryObject.md) to a `Base64Url` string.
 
 ### Parameters
 
@@ -68,4 +63,12 @@ Defined in: [encode-base-64-url.ts:16](https://github.com/technobuddha/library/b
 ### Returns
 
 `string`
+
+An ASCII string containing the `Base64Url` representation
+
+### Example
+
+```typescript
+encodeBase64Url(new Uint8Array([1, 2, 3])); // "AQID"
+```
 

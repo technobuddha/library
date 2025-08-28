@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -18,6 +19,13 @@ Technobuddha Library
 | ------ | ------ |
 | [compare](compare.md) | Compare two objects |
 | [shallowEquals](shallowEquals.md) | Compare two object for equality. Testing goes one level deep. |
+
+### Type Guards
+
+| Function | Description |
+| ------ | ------ |
+| [isIterable](isIterable.md) | Determines if the provided object is iterable. |
+| [isIterator](isIterator.md) | Determines whether the provided object conforms to the Iterator interface. |
 
 ### Utility
 

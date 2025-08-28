@@ -18,6 +18,13 @@ import { empty } from './unicode.ts';
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @example
+ * ```typescript
+ * unescapeJava('Hello\\nWorld'); // "Hello\nWorld"
+ * unescapeJava('\\u20ac'); // "€"
+ * unescapeJava('\\tTabbed'); // "\tTabbed"
+ * unescapeJava('\\\\'); // "\\"
+ * ```
  * @group Encoding
  * @category Escaping
  */

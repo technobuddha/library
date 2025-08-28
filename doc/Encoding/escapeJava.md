@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function escapeJava(input: string): string;
 ```
 
-Defined in: [escape-java.ts:31](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L31)
+Defined in: [escape-java.ts:38](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L38)
 
 Escape a string for use in Java
 
@@ -27,9 +28,9 @@ Escape a string for use in Java
 | Backslash          | 0x5c                 | \\\\                 |
 | Control Characters | 0x00-0x1f, 0x7f-0x9f | \\unnnn              |
 | BMP                | 0x0100-0xffff    | \\unnnn              |
-| Astral             | 0x10000-0x10ffff   | \\unnnn\\unnnn[^2]   |
+| Astral             | 0x10000-0x10ffff   | \\unnnn\\unnnn[^1]   |
 
-[^2]: Java does not support unicode escapes beyond 0xFFFF.  Astral characters must be
+[^1]: Java does not support unicode escapes beyond 0xFFFF.  Astral characters must be
 encoded as a two character surrogate pair.
 
 ## Parameters
@@ -43,4 +44,13 @@ encoded as a two character surrogate pair.
 `string`
 
 The string escaped for Java
+
+## Example
+
+```typescript
+escapeJava('Hello\nWorld'); // "Hello\\nWorld"
+escapeJava('"\\');          // "\\\"\\\\"
+escapeJava('\b');           // "\\b"
+escapeJava('\u20ac');       // "\\u20ac"
+```
 

@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function escapeJS(input: string): string;
 ```
 
-Defined in: [escape-js.ts:32](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L32)
+Defined in: [escape-js.ts:39](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L39)
 
 Escape a string for use in Javascript
 
@@ -44,4 +45,13 @@ as a different character, \\x00 will be used to avoid ambiguity.
 `string`
 
 Sting escaped for Javascript
+
+## Example
+
+```typescript
+escapeJS('Hello\nWorld'); // "Hello\\nWorld"
+escapeJS('"\\');          // "\\\"\\\\"
+escapeJS('\b');           // "\\b"
+escapeJS('\u20ac');       // "\\u20ac"
+```
 

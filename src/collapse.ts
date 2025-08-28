@@ -12,7 +12,13 @@ import { isPrimitive } from './is-primitive.ts';
 export type CollapsiblePrimitive = Exclude<Primitive, null | undefined>;
 
 /**
- * Represents a primitive value including `null` and `undefined`.
+ * A `CollapsibleValue<T>`
+ *
+ * A `CollapsibleValue<T>` can be:
+ * - A single value of type `T`
+ * - `null`
+ * - `undefined`
+ * - An iterable object returning T | null | undefined
  * @typeParam T - The primitive type that can be collapsed.
  * @group Array
  * @category Methods
@@ -21,7 +27,7 @@ export type CollapsibleValue<T extends CollapsiblePrimitive> =
   | T
   | null
   | undefined
-  | (T | null | undefined)[];
+  | Iterable<T | null | undefined>;
 
 /**
  * Represents a value that can be "collapsed" into a flat sequence of values of type `T`.
@@ -42,9 +48,7 @@ export type CollapsibleValue<T extends CollapsiblePrimitive> =
  */
 export type Collapsible<T extends CollapsiblePrimitive> =
   | CollapsibleValue<T>
-  | (() => CollapsibleValue<T>[])
-  | Iterable<CollapsibleValue<T>>
-  | Generator<CollapsibleValue<T>>;
+  | (() => CollapsibleValue<T>);
 
 /**
  * Collapses an array of values into a flat array with `null` and `undefined` elements removed.
@@ -80,10 +84,10 @@ export type Collapsible<T extends CollapsiblePrimitive> =
  */
 export function collapse<T extends CollapsiblePrimitive = string>(...args: Collapsible<T>[]): T[] {
   return args
-    .flatMap((a) =>
-      isPrimitive(a) || Array.isArray(a) ? a
-      : isFunction(a) ? a()
-      : (Array.from(a) as T[]),
-    )
-    .filter((a) => a != null) as T[];
+    .flatMap((arg) => {
+      const a = isFunction(arg) ? arg() : arg;
+
+      return isPrimitive(a) ? a : Array.from(a);
+    })
+    .filter((a): a is T => a != null);
 }

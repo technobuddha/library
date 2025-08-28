@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -20,9 +21,9 @@ sha1.digest('hex');
 ```
 ```typescript
 const sha1 = new Sha1();
-sha1.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]);
+sha1.update(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64]));
 sha1.digest('hex');
-// '1e371678fc62d4da116857a09490eb90b97db121'
+// '2aae6c35c94fcfb415dbe95f408b9ce91ee846ed'
 ```
 
 ## Extends

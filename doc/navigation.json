@@ -1165,6 +1165,23 @@
         ]
       },
       {
+        "title": "Type Guards",
+        "children": [
+          {
+            "title": "isIterable",
+            "kind": 64,
+            "path": "Object/isIterable.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isIterator",
+            "kind": 64,
+            "path": "Object/isIterator.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
         "title": "Utility",
         "children": [
           {

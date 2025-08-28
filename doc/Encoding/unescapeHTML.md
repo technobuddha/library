@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function unescapeHTML(input: string): string;
 ```
 
-Defined in: [unescape-html.ts:17](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L17)
+Defined in: [unescape-html.ts:24](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L24)
 
 Unescape a string encoded in HTML
 
@@ -31,4 +32,13 @@ Unescape a string encoded in HTML
 `string`
 
 the string with escapes resolved
+
+## Example
+
+```typescript
+unescapeHTML('Hello &amp; World'); // "Hello & World"
+unescapeHTML('2 &lt; 3 &gt; 1'); // "2 < 3 > 1"
+unescapeHTML('&#169; 2025'); // "© 2025"
+unescapeHTML('&#x1F600;'); // "😀"
+```
 

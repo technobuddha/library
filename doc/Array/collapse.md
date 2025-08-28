@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function collapse<T>(...args: Collapsible<T>[]): T[];
 ```
 
-Defined in: [collapse.ts:81](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L81)
+Defined in: [collapse.ts:85](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L85)
 
 Collapses an array of values into a flat array with `null` and `undefined` elements removed.
 

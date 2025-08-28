@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -22,7 +23,14 @@ type BinaryObject =
   | Float64Array;
 ```
 
-Defined in: [binary-object.ts:7](https://github.com/technobuddha/library/blob/main/src/binary-object.ts#L7)
+Defined in: [binary-object.ts:10](https://github.com/technobuddha/library/blob/main/src/binary-object.ts#L10)
 
 A type that represents various binary object types in JavaScript.
+
+## See
+
+ - [dataURL](dataURL.md)
+ - [normalizeBinary](normalizeBinary.md)
+ - [encodeBase64](encodeBase64.md)
+ - [encodeBase64Url](encodeBase64Url.md)
 

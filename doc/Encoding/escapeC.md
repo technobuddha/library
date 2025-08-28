@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function escapeC(input: string): string;
 ```
 
-Defined in: [escape-c.ts:40](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L40)
+Defined in: [escape-c.ts:47](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L47)
 
 Escape a string for use in C/C++
 
@@ -52,4 +53,13 @@ being interpreted as a different character, \\unnnn will be used to avoid ambigu
 `string`
 
 the escaped string
+
+## Example
+
+```typescript
+escapeC('Hello\nWorld'); // "Hello\\nWorld"
+escapeC('"\\');          // "\\\"\\\\"
+escapeC('\x07');         // "\\a"
+escapeC('\u20ac');       // "\\u20ac"
+```
 

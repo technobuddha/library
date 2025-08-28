@@ -8,13 +8,22 @@ import { decodeBase64Url } from './decode-base-64-url.ts';
  *
  * The string can be in `base64`, `base64url`, `hex`, or `binary` {@link BinaryEncoding} format.
  *
- * base64 or base64url: The binary object was encoded using {@link encodeBase64}
- * hex: each byte in the binary object is converted to a series of 2-digit hexadecimal numbers
- * binary: each byte in the binary object is converted to a characters
+ * - `base64`: The binary object was encoded using {@link encodeBase64}
+ * - `base64url`: The binary object was encoded using {@link encodeBase64Url}
+ * - `hex`: each byte in the binary object was converted to a 2-digit hexadecimal number.
+ * - `binary`: each byte in the binary object was converted to a single 8-bit character.
  *
  * @param input - encoded binary object
  * @param encoding - The encoding to use
  * @returns encoded string
+ *
+ * @example
+ * ```typescript
+ * decodeBinary('SGVsbG8=', 'base64');      // Uint8Array([72, 101, 108, 108, 111])
+ * decodeBinary('SGVsbG8', 'base64url');    // Uint8Array([72, 101, 108, 108, 111])
+ * decodeBinary('48656c6c6f', 'hex');       // Uint8Array([72, 101, 108, 108, 111])
+ * decodeBinary('Hello', 'binary');         // Uint8Array([72, 101, 108, 108, 111])
+ * ```
  * @group Encoding
  * @category Binary
  */

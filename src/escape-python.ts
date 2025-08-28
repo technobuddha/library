@@ -27,6 +27,13 @@ import { oct, u4, u8, x2 } from './escape.ts';
  *
  * @param input - The string to escape
  * @returns the string escapes for use in python
+ * @example
+ * ```typescript
+ * escapePython('Hello\nWorld'); // "Hello\\nWorld"
+ * escapePython('"\\');          // "\\\"\\\\"
+ * escapePython('\b');           // "\\b"
+ * escapePython('\u20ac');       // "\\u20ac"
+ * ```
  * @group Encoding
  * @category Escaping
  */

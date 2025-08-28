@@ -1,4 +1,4 @@
-import { normalizeBinary } from './binary-object.ts';
+import { normalizeBinary } from './normalize-binary.ts';
 
 describe('normalizeBinary', () => {
   test('should return the same Uint8Array instance', () => {

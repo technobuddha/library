@@ -18,13 +18,20 @@ import { empty } from './unicode.ts';
  * | Backslash          | 0x5c                 | \\\\                 |
  * | Control Characters | 0x00-0x1f, 0x7f-0x9f | \\unnnn              |
  * | BMP                | 0x0100-0xffff    | \\unnnn              |
- * | Astral             | 0x10000-0x10ffff   | \\unnnn\\unnnn[^2]   |
+ * | Astral             | 0x10000-0x10ffff   | \\unnnn\\unnnn[^1]   |
  *
- * [^2]: Java does not support unicode escapes beyond 0xFFFF.  Astral characters must be
+ * [^1]: Java does not support unicode escapes beyond 0xFFFF.  Astral characters must be
  * encoded as a two character surrogate pair.
  *
  * @param input - The string to escape
  * @returns The string escaped for Java
+ * @example
+ * ```typescript
+ * escapeJava('Hello\nWorld'); // "Hello\\nWorld"
+ * escapeJava('"\\');          // "\\\"\\\\"
+ * escapeJava('\b');           // "\\b"
+ * escapeJava('\u20ac');       // "\\u20ac"
+ * ```
  * @group Encoding
  * @category Escaping
  */

@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -7,12 +8,22 @@ Technobuddha Library
 # Type Alias: CollapsibleValue\<T\>
 
 ```ts
-type CollapsibleValue<T> = T | null | undefined | (T | null | undefined)[];
+type CollapsibleValue<T> = 
+  | T
+  | null
+  | undefined
+| Iterable<T | null | undefined>;
 ```
 
-Defined in: [collapse.ts:20](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L20)
+Defined in: [collapse.ts:26](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L26)
 
-Represents a primitive value including `null` and `undefined`.
+A `CollapsibleValue<T>`
+
+A `CollapsibleValue<T>` can be:
+- A single value of type `T`
+- `null`
+- `undefined`
+- An iterable object returning T | null | undefined
 
 ## Type Parameters
 

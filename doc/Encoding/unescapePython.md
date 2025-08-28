@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function unescapePython(input: string): string;
 ```
 
-Defined in: [unescape-python.ts:32](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L32)
+Defined in: [unescape-python.ts:39](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L39)
 
 Unescape a string encoded in Python style
 
@@ -47,4 +48,13 @@ is not an octal digit.
 `string`
 
 the string with escapes resolved
+
+## Example
+
+```typescript
+unescapePython('Hello\\nWorld'); // "Hello\nWorld"
+unescapePython('\\u20ac'); // "€"
+unescapePython('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
+unescapePython('\\U0001f600'); // "😀"
+```
 

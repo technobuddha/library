@@ -35,43 +35,157 @@ const K = [
   0x4cc5d4be, 0xcb3e42b6, 0x597f299c, 0xfc657e2a, 0x5fcb6fab, 0x3ad6faec, 0x6c44198c, 0x4a475817,
 ];
 
+/**
+ * Converts a number to a 32-bit signed integer using bitwise OR.
+ *
+ * This function effectively truncates the input number to a 32-bit signed integer,
+ * similar to `Math.trunc`, but using bitwise operations for performance.
+ *
+ * @param x - The number to convert.
+ * @returns The 32-bit signed integer representation of `x`.
+ * @internal
+ */
 function int32(x: number): number {
   // eslint-disable-next-line unicorn/prefer-math-trunc
   return x | 0;
 }
 
+/**
+ * Computes the "choose" (ch) function used in SHA-512 cryptographic hash algorithms.
+ *
+ * Given three 32-bit integers `x`, `y`, and `z`, the function returns the result of:
+ *   z ^ (x & (y ^ z))
+ * This operation selects bits from `y` or `z` based on the value of `x`.
+ *
+ * @param x - The first 32-bit integer input.
+ * @param y - The second 32-bit integer input.
+ * @param z - The third 32-bit integer input.
+ * @returns The result of the SHA-512 "choose" function.
+ * @internal
+ */
 function çh(x: number, y: number, z: number): number {
   return z ^ (x & (y ^ z));
 }
 
+/**
+ * Computes the majority function of three 32-bit numbers.
+ *
+ * For each bit position, the result is the value that appears in at least two of the inputs.
+ * This function is commonly used in cryptographic hash algorithms such as SHA-512.
+ *
+ * @param x - The first 32-bit integer input.
+ * @param y - The second 32-bit integer input.
+ * @param z - The third 32-bit integer input.
+ * @returns The majority value as a 32-bit integer.
+ * @internal
+ */
 function maj(x: number, y: number, z: number): number {
   return (x & y) | (z & (x | y));
 }
 
+/**
+ * Computes the SHA-512 σ₀ (sigma0) function for the given 64-bit value split into high (`x`) and low (`xl`) 32-bit words.
+ *
+ * The σ₀ function is defined as:
+ *   σ₀(x) = ROTR^1(x) ⊕ ROTR^8(x) ⊕ SHR^7(x)
+ * where ROTR is a right rotation and SHR is a right shift.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the σ₀ function as a 32-bit integer.
+ * @internal
+ */
 function sigma0(x: number, xl: number): number {
   return ((x >>> 28) | (xl << 4)) ^ ((xl >>> 2) | (x << 30)) ^ ((xl >>> 7) | (x << 25));
 }
 
+/**
+ * Computes the SHA-512 σ₁ (sigma1) function on a 64-bit word represented by two 32-bit numbers.
+ *
+ * The σ₁ function is defined as:
+ *   σ₁(x) = ROTR^14(x) ⊕ ROTR^18(x) ⊕ ROTR^41(x)
+ * where ROTR^n(x) is the right rotation of x by n bits.
+ *
+ * @param x - The high 32 bits of the 64-bit input word.
+ * @param xl - The low 32 bits of the 64-bit input word.
+ * @returns The result of the σ₁ function as a 32-bit number.
+ * @internal
+ */
 function sigma1(x: number, xl: number): number {
   return ((x >>> 14) | (xl << 18)) ^ ((x >>> 18) | (xl << 14)) ^ ((xl >>> 9) | (x << 23));
 }
 
-function ɣ0(x: number, xl: number): number {
+/**
+ * Computes the SHA-512 Gamma0 function on a 64-bit value represented by two 32-bit parts.
+ *
+ * This function applies bitwise rotations and shifts to the high (`x`) and low (`xl`) 32-bit words
+ * of a 64-bit integer, as specified in the SHA-512 specification for the Gamma0 function.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the Gamma0 function as a 32-bit integer.
+ * @internal
+ */
+function gamma0(x: number, xl: number): number {
   return ((x >>> 1) | (xl << 31)) ^ ((x >>> 8) | (xl << 24)) ^ (x >>> 7);
 }
 
-function ɣ0l(x: number, xl: number): number {
+/**
+ * Computes the SHA-512-specific Gamma0 function for 64-bit values represented as two 32-bit numbers.
+ *
+ * This function applies bitwise right rotations and shifts to the high (`x`) and low (`xl`) 32-bit parts
+ * of a 64-bit word, then combines the results using XOR operations. It is used in the message schedule
+ * expansion step of the SHA-512 hash algorithm.
+ *
+ * @param x - The high 32 bits of the 64-bit input word.
+ * @param xl - The low 32 bits of the 64-bit input word.
+ * @returns The result of the Gamma0 function as a 32-bit integer.
+ * @internal
+ */
+function gamma0l(x: number, xl: number): number {
   return ((x >>> 1) | (xl << 31)) ^ ((x >>> 8) | (xl << 24)) ^ ((x >>> 7) | (xl << 25));
 }
 
-function ɣ1(x: number, xl: number): number {
+/**
+ * Computes the SHA-512 Gamma1 function on a 64-bit value represented by two 32-bit numbers.
+ *
+ * The Gamma1 function is defined as:
+ *   Gamma1(x) = ROTR^19(x) XOR ROTR^61(x) XOR (x \>\>\> 6)
+ * where ROTR^n(x) is the right rotation of x by n bits.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the Gamma1 function as a 32-bit number.
+ * @internal
+ */
+function gamma1(x: number, xl: number): number {
   return ((x >>> 19) | (xl << 13)) ^ ((xl >>> 29) | (x << 3)) ^ (x >>> 6);
 }
 
-function ɣ1l(x: number, xl: number): number {
+/**
+ * Computes the lower 32 bits of the SHA-512 Gamma1 function.
+ *
+ * This function performs bitwise operations (rotations and shifts) on the input
+ * 64-bit value, which is split into two 32-bit parts (`x` as the high word and `xl` as the low word).
+ * It is used as part of the SHA-512 hash algorithm's message schedule.
+ *
+ * @param x - The high 32 bits of the 64-bit input value.
+ * @param xl - The low 32 bits of the 64-bit input value.
+ * @returns The result of the Gamma1 function applied to the lower 32 bits.
+ * @internal
+ */
+function gamma1l(x: number, xl: number): number {
   return ((x >>> 19) | (xl << 13)) ^ ((xl >>> 29) | (x << 3)) ^ ((x >>> 6) | (xl << 26));
 }
 
+/**
+ * Determines if adding two unsigned 32-bit integers results in a carry.
+ *
+ * @param a - The first unsigned 32-bit integer.
+ * @param b - The second unsigned 32-bit integer.
+ * @returns 1 if the addition of `a` and `b` causes an unsigned overflow (carry), otherwise 0.
+ * @internal
+ */
 function getCarry(a: number, b: number): number {
   return a >>> 0 < b >>> 0 ? 1 : 0;
 }
@@ -87,9 +201,9 @@ function getCarry(a: number, b: number): number {
  * ```
  * ```typescript
  * const sha512 = new Sha512();
- * sha512.update(new Uint8Array([0x72,0x69,0x4c,0x4c,0x4f]));
+ * sha512.update(new Uint8Array([0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x20, 0x77, 0x6f, 0x72, 0x6c, 0x64]));
  * sha512.digest('hex');
- * 'ea2f73c643b634dcff4de058c16391e91f9ac7d5d540346f5668cc0d0e21a21292c82c748108be10321c55e4c79b660794a4e578ef777223d3d6e1996177aeb7'
+ * // '309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f'
  * ```
  * @group Encoding
  * @category Hash
@@ -164,13 +278,13 @@ export class Sha512 extends ShaBase {
     for (; i < 160; i += 2) {
       let xh = w[i - 15 * 2];
       let xl = w[i - 15 * 2 + 1];
-      const gamma0 = ɣ0(xh, xl);
-      const gamma0l = ɣ0l(xl, xh);
+      const gama0 = gamma0(xh, xl);
+      const gama0l = gamma0l(xl, xh);
 
       xh = w[i - 2 * 2];
       xl = w[i - 2 * 2 + 1];
-      const gamma1 = ɣ1(xh, xl);
-      const gamma1l = ɣ1l(xl, xh);
+      const gama1 = gamma1(xh, xl);
+      const gama1l = gamma1l(xl, xh);
 
       const wi7h = w[i - 7 * 2];
       const wi7l = w[i - 7 * 2 + 1];
@@ -178,10 +292,10 @@ export class Sha512 extends ShaBase {
       const wi16h = w[i - 16 * 2];
       const wi16l = w[i - 16 * 2 + 1];
 
-      wil = int32(gamma0l + wi7l);
-      wih = int32(gamma0 + wi7h + getCarry(wil, gamma0l));
-      wil = int32(wil + gamma1l);
-      wih = int32(wih + gamma1 + getCarry(wil, gamma1l));
+      wil = int32(gama0l + wi7l);
+      wih = int32(gama0 + wi7h + getCarry(wil, gama0l));
+      wil = int32(wil + gama1l);
+      wih = int32(wih + gama1 + getCarry(wil, gama1l));
       wil = int32(wil + wi16l);
       wih = int32(wih + wi16h + getCarry(wil, wi16l));
 

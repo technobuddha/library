@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,18 +11,15 @@ Technobuddha Library
 function normalizeBinary(input: BinaryObject): Uint8Array;
 ```
 
-Defined in: [binary-object.ts:33](https://github.com/technobuddha/library/blob/main/src/binary-object.ts#L33)
+Defined in: normalize-binary.ts:19
 
-Normalizes various binary object types to a `Uint8Array`.
-
-Accepts an input of type `Uint8Array`, `ArrayBuffer`, or any ArrayBuffer view (e.g., `DataView`, `Int8Array`, etc.),
-and returns a `Uint8Array` representation of the input. Throws a `TypeError` if the input is not a supported binary object type.
+Normalizes [BinaryObject](BinaryObject.md) to a `Uint8Array`.
 
 ## Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `input` | [`BinaryObject`](BinaryObject.md) | The binary object to normalize. Can be a `Uint8Array`, `ArrayBuffer`, or any ArrayBuffer view. |
+| `input` | [`BinaryObject`](BinaryObject.md) | The [BinaryObject](BinaryObject.md) to normalize. |
 
 ## Returns
 
@@ -32,4 +30,13 @@ A `Uint8Array` representing the binary data.
 ## Throws
 
 `TypeError` If the input is not a supported binary object type.
+
+## Example
+
+```typescript
+normalizeBinary(new Uint8Array([1, 2, 3])); // Uint8Array([1, 2, 3])
+normalizeBinary(new ArrayBuffer(3));        // Uint8Array([0, 0, 0])
+normalizeBinary(new DataView(new Uint8Array([4, 5, 6]))); // Uint8Array([4, 5, 6])
+normalizeBinary(new Float32Array([1, 2]));  // Uint8Array([...])
+```
 

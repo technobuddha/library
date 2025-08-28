@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -17,7 +18,7 @@ specifics of the hash algorithm.
 
 ## Remarks
 
-- The `update` methods allow chaining for incremental hashing.
+- The `update` methods allows chaining for incremental hashing.
 - The `digest` methods finalize the hash computation and return the result
   either as a `Uint8Array` or as an encoded string.
 
@@ -66,7 +67,7 @@ The hash digest
 abstract digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [hash-base.ts:38](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L38)
+Defined in: [hash-base.ts:37](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L37)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -96,7 +97,7 @@ abstract update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [hash-base.ts:45](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L45)
+Defined in: [hash-base.ts:44](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L44)
 
 Updates the hash with the given binary data.
 
@@ -118,7 +119,7 @@ The hash instance for method chaining.
 abstract update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [hash-base.ts:53](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L53)
+Defined in: [hash-base.ts:52](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L52)
 
 Updates the hash with the given string data.
 

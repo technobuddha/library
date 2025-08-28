@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -31,7 +32,7 @@ The data URL
 
 ```typescript
 const bytes = new Uint8Array([72, 101, 108, 108, 111]); // "Hello"
-const url = dataURL(bytes, 'text/plain');
+dataURL(bytes, 'text/plain');
 // url === "data:text/plain;base64,SGVsbG8="
 ```
 

@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -9,12 +10,10 @@ Technobuddha Library
 ```ts
 type Collapsible<T> = 
   | CollapsibleValue<T>
-  | () => CollapsibleValue<T>[]
-  | Iterable<CollapsibleValue<T>>
-| Generator<CollapsibleValue<T>>;
+| () => CollapsibleValue<T>;
 ```
 
-Defined in: [collapse.ts:43](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L43)
+Defined in: [collapse.ts:49](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L49)
 
 Represents a value that can be "collapsed" into a flat sequence of values of type `T`.
 

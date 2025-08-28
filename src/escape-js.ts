@@ -26,6 +26,13 @@ import { oct, u4, uu, x2 } from './escape.ts';
  *
  * @param input - The string to escape
  * @returns Sting escaped for Javascript
+ * @example
+ * ```typescript
+ * escapeJS('Hello\nWorld'); // "Hello\\nWorld"
+ * escapeJS('"\\');          // "\\\"\\\\"
+ * escapeJS('\b');           // "\\b"
+ * escapeJS('\u20ac');       // "\\u20ac"
+ * ```
  * @group Encoding
  * @category Escaping
  */

@@ -30,6 +30,13 @@
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @example
+ * ```typescript
+ * unescapeC('Hello\\nWorld'); // "Hello\nWorld"
+ * unescapeC('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
+ * unescapeC('\\u20ac'); // "€"
+ * unescapeC('\\U0001f600'); // "😀"
+ * ```
  * @group Encoding
  * @category Escaping
  */

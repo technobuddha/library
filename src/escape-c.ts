@@ -34,6 +34,13 @@ import { empty } from './unicode.ts';
  *
  * @param input - The string to escape
  * @returns the escaped string
+ * @example
+ * ```typescript
+ * escapeC('Hello\nWorld'); // "Hello\\nWorld"
+ * escapeC('"\\');          // "\\\"\\\\"
+ * escapeC('\x07');         // "\\a"
+ * escapeC('\u20ac');       // "\\u20ac"
+ * ```
  * @group Encoding
  * @category Escaping
  */

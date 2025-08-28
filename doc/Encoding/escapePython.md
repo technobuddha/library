@@ -1,4 +1,5 @@
 <!-- markdownlint-disable -->
+<!-- cspell: disable -->
 Technobuddha Library
 ---
 
@@ -10,7 +11,7 @@ Technobuddha Library
 function escapePython(input: string): string;
 ```
 
-Defined in: [escape-python.ts:33](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L33)
+Defined in: [escape-python.ts:40](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L40)
 
 Escape a string for use in Python
 
@@ -45,4 +46,13 @@ as a different character, \\000 will be used to avoid ambiguity.
 `string`
 
 the string escapes for use in python
+
+## Example
+
+```typescript
+escapePython('Hello\nWorld'); // "Hello\\nWorld"
+escapePython('"\\');          // "\\\"\\\\"
+escapePython('\b');           // "\\b"
+escapePython('\u20ac');       // "\\u20ac"
+```
 

@@ -26,6 +26,13 @@
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @example
+ * ```typescript
+ * unescapePython('Hello\\nWorld'); // "Hello\nWorld"
+ * unescapePython('\\u20ac'); // "€"
+ * unescapePython('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
+ * unescapePython('\\U0001f600'); // "😀"
+ * ```
  * @group Encoding
  * @category Escaping
  */

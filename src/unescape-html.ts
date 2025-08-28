@@ -11,6 +11,13 @@ import { nbsp, zwsp } from './unicode.ts';
  *
  * @param input - The string to unescape
  * @returns the string with escapes resolved
+ * @example
+ * ```typescript
+ * unescapeHTML('Hello &amp; World'); // "Hello & World"
+ * unescapeHTML('2 &lt; 3 &gt; 1'); // "2 < 3 > 1"
+ * unescapeHTML('&#169; 2025'); // "© 2025"
+ * unescapeHTML('&#x1F600;'); // "😀"
+ * ```
  * @group Encoding
  * @category Escaping
  */

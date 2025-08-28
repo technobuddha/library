@@ -11,7 +11,7 @@ import { type TypedArray } from './@types/typed-array.ts';
  * specifics of the hash algorithm.
  *
  * @remarks
- * - The `update` methods allow chaining for incremental hashing.
+ * - The `update` methods allows chaining for incremental hashing.
  * - The `digest` methods finalize the hash computation and return the result
  *   either as a `Uint8Array` or as an encoded string.
  *
@@ -23,15 +23,14 @@ export abstract class HashBase {
    * Finalizes the hash computation and returns the resulting hash digest.
    * This method performs any necessary padding and processes the final block
    * of data according to the hash algorithm's specification.
-   *
    * @returns The hash digest
+   *
    */
   public abstract digest(): Uint8Array;
   /**
    * Finalizes the hash computation and returns the resulting hash digest.
    * This method performs any necessary padding and processes the final block
    * of data according to the hash algorithm's specification.
-   *
    * @param encoding - Optional. The encoding to use for the output digest (e.g., 'hex', 'base64').
    * @returns An encoded string, depending on the `encoding` parameter.
    */
