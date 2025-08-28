@@ -3,8 +3,18 @@ import { type DeconstructedNumber } from '../@types/deconstructed-number.ts';
 import { getDenominators } from './get-denominators.ts';
 import { type Numbering } from './numbering.ts';
 
+/**
+ * Represents the result of a fraction operation, containing both the numerator and denominator.
+ * @internal
+ */
 type FractionResult = {
+  /**
+   * The numerator part of the fraction.
+   */
   numerator: number;
+  /**
+   * The denominator part of the fraction.
+   */
   denominator: number;
 };
 
@@ -14,6 +24,7 @@ type FractionResult = {
  * @param input - The decimal number to approximate as a fraction.
  * @param options - Configuration options for the fraction search.
  * @returns An object containing the numerator and denominator of the closest fraction.
+ * @internal
  */
 export function deriveFraction(
   input: DeconstructedNumber,

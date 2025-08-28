@@ -1,3 +1,7 @@
+/**
+ * Regular expression matching common English articles, conjunctions, and prepositions for title casing.
+ * @internal
+ */
 const titles = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/iu;
 
 /**

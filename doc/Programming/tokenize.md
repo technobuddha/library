@@ -11,7 +11,7 @@ Technobuddha Library
 function tokenize(input: string): string[];
 ```
 
-Defined in: [tokenize.ts:11](https://github.com/technobuddha/library/blob/main/src/tokenize.ts#L11)
+Defined in: [tokenize.ts:15](https://github.com/technobuddha/library/blob/main/src/tokenize.ts#L15)
 
 Splits the input string into an array of words.
 

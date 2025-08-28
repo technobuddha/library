@@ -3,6 +3,19 @@ import { collapse } from './collapse.ts';
 import { month } from './constants.ts';
 import { zipperMerge } from './zipper-merge.ts';
 
+/**
+ * Constructs a new `RegExp` object by interpolating regular expressions into a template string.
+ *
+ * This function allows you to build complex regular expressions by combining template literals
+ * with embedded `RegExp` objects. The sources of the provided regular expressions are merged
+ * with the template string parts, and the resulting pattern is compiled with the Unicode (`u`) flag.
+ *
+ * @param template - The template string array containing the literal parts of the regular expression.
+ * @param args - The regular expressions to interpolate into the template.
+ * @returns A new `RegExp` object representing the combined pattern.
+ * @group RegExp
+ * @category Construction
+ */
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   return new RegExp(
     build(

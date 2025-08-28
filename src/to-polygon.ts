@@ -27,7 +27,7 @@ export function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
  * Convert a {@link Rect} into a {@link Polygon}.
  *
  * Construct a rectangle defined by location and dimensions.
- * @param rect - The {@link Rectangle} to convert.
+ * @param rect - The {@link Rect} to convert.
  * @returns A rectangle shaped {@link Polygon}.
  *
  * @example

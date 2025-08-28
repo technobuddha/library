@@ -2,6 +2,10 @@ import { clean } from './clean.ts';
 import { collapseWhitespace } from './collapse-whitespace.ts';
 import { empty } from './unicode.ts';
 
+/**
+ * Regular expression matching one or more invalid filename characters.
+ * @internal
+ */
 const badChars = /[/\\:*?<>|.]+/gu;
 
 /**

@@ -13,7 +13,16 @@ export type BooleanOptions = {
   falseValues?: Iterable<string | RegExp>;
 };
 
+/**
+ * List of string values interpreted as boolean true.
+ * @internal
+ */
 const defaultTrue = ['true', 'yes', 'y', 'on', '1'];
+
+/**
+ * List of string values interpreted as boolean false.
+ * @internal
+ */
 const defaultFalse = ['false', 'no', 'n', 'off', '0'];
 
 /**

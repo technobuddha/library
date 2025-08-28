@@ -11,7 +11,7 @@ Technobuddha Library
 function splitSentences(input: string): string[];
 ```
 
-Defined in: [split-sentences.ts:42](https://github.com/technobuddha/library/blob/main/src/split-sentences.ts#L42)
+Defined in: [split-sentences.ts:46](https://github.com/technobuddha/library/blob/main/src/split-sentences.ts#L46)
 
 Splits the input string into an array of sentences.
 

@@ -11,7 +11,7 @@ Technobuddha Library
 const specialFinish: "﴿" = '﴿';
 ```
 
-Defined in: [json.ts:12](https://github.com/technobuddha/library/blob/main/src/json.ts#L12)
+Defined in: [json.ts:51](https://github.com/technobuddha/library/blob/main/src/json.ts#L51)
 
 The end of a special JSON value
 

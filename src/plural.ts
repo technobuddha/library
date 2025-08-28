@@ -76,12 +76,22 @@ export function plural(input: string, quantity?: number, include = false): strin
   return include && quantity != null ? `${quantity}${space}${result}` : result;
 }
 
+/**
+ * Represents the structure of a database entry for pluralization rules.
+ * @internal
+ */
 type DBEntry = {
+  /** An array of tuples, each containing a regular expression and its corresponding replacement string, used for pluralization or singularization. */
   rules: [RegExp, string][];
+  /** An array of regular expressions that match words considered uncountable (i.e., words that do not change between singular and plural). */
   uncountableRules: RegExp[];
+  /** An array of specific words that are uncountable. */
   uncountableWords: string[];
+  /** An array of string prefixes that may affect pluralization rules. */
   prefixes: string[];
+  /** An array of string suffixes that may affect pluralization rules. */
   suffixes: string[];
+  /** A mapping of irregular word forms, where the key is the singular form and the value is the plural form (or vice versa). */
   irregulars: Record<string, string>;
 };
 

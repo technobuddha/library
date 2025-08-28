@@ -155,6 +155,8 @@ Technobuddha Library
 | [lineLength](Geometry/lineLength.md) | Calculates the length of a line segment. |
 | [midpoint](Geometry/midpoint.md) | Calculates a point at a given fraction (`part`) along a line segment. By default it returns the true midpoint of the line segment |
 | [normalizeLineSegment](Geometry/normalizeLineSegment.md) | Returns a [LineSegment](Geometry/LineSegment.md) where the point with the higher y-coordinate is always the starting point (x0, y0). If the original line's y1 is greater than y0, the line is returned as-is. Otherwise, the start and end points are swapped. |
+| [polygonSides](Geometry/polygonSides.md) | Generate line segments for each side of the polygon. |
+| [toLineSegment](Geometry/toLineSegment.md) | Converts two Cartesian points into a `LineSegment` object. |
 
 ### Point
 
@@ -163,6 +165,7 @@ Technobuddha Library
 | [isInPolygon](Geometry/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isLeftOfLine](Geometry/isLeftOfLine.md) | Determines whether a given point lies to the left of a specified line segment. |
 | [isOnLine](Geometry/isOnLine.md) | Determines whether a given point lies on a specified line segment or its extension. |
+| [isOnPolygon](Geometry/isOnPolygon.md) | Determines whether a given point lies exactly on the boundary of a polygon. |
 | [isRightOfLine](Geometry/isRightOfLine.md) | Determines whether a given point lies to the right of a specified line segment. |
 | [manhattanDistance](Geometry/manhattanDistance.md) | Calculates the Manhattan Distance between two points in Cartesian coordinates. |
 | [rotate](Geometry/rotate.md) | Rotates a point or a polygon around a given origin by a specified angle. |
@@ -179,14 +182,19 @@ Technobuddha Library
 | [centroid](Geometry/centroid.md) | Calculates the centroid (geometric center) of a polygon. |
 | [convexHull](Geometry/convexHull.md) | Computes the convex hull of a set of 2D points using the Monotone Chain algorithm. |
 | [edgeAngles](Geometry/edgeAngles.md) | Generate normalized edge angles from polygon edges. |
+| [isClosed](Geometry/isClosed.md) | Determines whether a given polygon is closed. |
 | [isInPolygon](Geometry/isInPolygon.md) | Determines whether a given point or rectangle is inside or on the edge of a polygon. |
 | [isIntersecting](Geometry/isIntersecting.md) | Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon. |
+| [isOnPolygon](Geometry/isOnPolygon.md) | Determines whether a given point lies exactly on the boundary of a polygon. |
+| [isPolygon](Geometry/isPolygon.md) | Determines if the provided object is a `Polygon`. |
 | [largestInscribedRectangle](Geometry/largestInscribedRectangle.md) | Computes the largest rectangle that can be inscribed within the given polygon. |
 | [perimeter](Geometry/perimeter.md) | Calculates the perimeter of a polygon. |
+| [polygonSides](Geometry/polygonSides.md) | Generate line segments for each side of the polygon. |
 | [regularPolygon](Geometry/regularPolygon.md) | Generates a regular polygon. |
 | [rotate](Geometry/rotate.md) | Rotates a point or a polygon around a given origin by a specified angle. |
 | [scale](Geometry/scale.md) | Scales a point or a polygon of points around a given origin by a specified amount. |
 | [star](Geometry/star.md) | Generates a star-shaped polygon. |
+| [toClosed](Geometry/toClosed.md) | Ensures that a given polygon is closed by checking if the first and last points are the same. If the polygon is not closed, it appends the first point to the end of the array. |
 | [toPolygon](Geometry/toPolygon.md) | Converts two [Cartesian](Geometry/Cartesian.md) points or a [Rect](Geometry/Rect.md) into a [Polygon](Geometry/Polygon.md). |
 | [translate](Geometry/translate.md) | Translate a point or polygon by a specified amount. |
 
@@ -208,13 +216,17 @@ Technobuddha Library
 
 | Class | Description |
 | ------ | ------ |
-| [JSONMap](JSON/JSONMap.md) | A Map-like data structure that allows objects conforming to `JsonObject` as keys. |
+| [JSONMap](JSON/JSONMap.md) | A [Map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map) that allows serializable objects keys. |
 | [JSONSet](JSON/JSONSet.md) | A Set-like collection for objects that can be serialized to JSON. |
 
 ### Serialization
 
 | Name | Description |
 | ------ | ------ |
+| [TBJsonArray](JSON/TBJsonArray.md) | Matches a JSON array. |
+| [TBJsonObject](JSON/TBJsonObject.md) | Matches a JSON object. |
+| [TBJsonPrimitive](JSON/TBJsonPrimitive.md) | Matches any valid JSON primitive value. |
+| [TBJsonValue](JSON/TBJsonValue.md) | Matches any valid JSON value. |
 | [specialBegin](JSON/specialBegin.md) | The beginning of a special JSON value |
 | [specialFinish](JSON/specialFinish.md) | The end of a special JSON value |
 | [replacer](JSON/replacer.md) | Used with JSON.stringify to encode a wider range of objects into strings that can later be decoded with [reviver](JSON/reviver.md) |
@@ -279,7 +291,7 @@ Technobuddha Library
 | [orderOfMagnitude](Math/orderOfMagnitude.md) | Get the spelled out word for an exponent |
 | [ordinal](Math/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
 | [padNumber](Math/padNumber.md) | Add leading zeros to a number to ensure a string of a minimum length |
-| [parseRoman](Math/parseRoman.md) | Parse a roman numeral string into it's integer value. |
+| [parseRoman](Math/parseRoman.md) | Parse a roman numeral string into its integer value. |
 | [summarize](Math/summarize.md) | Get a short description of a number |
 | [toRoman](Math/toRoman.md) | Parse number into a roman numeral string |
 
@@ -461,6 +473,8 @@ Technobuddha Library
 | Function | Description |
 | ------ | ------ |
 | [clean](String/clean.md) | Remove all occurrences of characters from the beginning and end of the string |
+| [cleanEnd](String/cleanEnd.md) | Remove all occurrences of characters from the end of the string |
+| [cleanStart](String/cleanStart.md) | Remove all occurrences of characters from the start of the string |
 
 ### Collapse
 

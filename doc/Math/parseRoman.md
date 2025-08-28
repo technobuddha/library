@@ -11,9 +11,9 @@ Technobuddha Library
 function parseRoman(val: string): number;
 ```
 
-Defined in: [roman-numeral.ts:94](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L94)
+Defined in: [roman-numeral.ts:102](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L102)
 
-Parse a roman numeral string into it's integer value.
+Parse a roman numeral string into its integer value.
 
 ## Parameters
 

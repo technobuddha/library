@@ -62,7 +62,7 @@ Construct a rectangle defined by location and dimensions.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `rect` | [`Rect`](Rect.md) | The Rectangle to convert. |
+| `rect` | [`Rect`](Rect.md) | The [Rect](Rect.md) to convert. |
 
 ### Returns
 

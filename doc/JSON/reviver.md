@@ -14,7 +14,7 @@ function reviver(
    value: unknown): unknown;
 ```
 
-Defined in: [json.ts:50](https://github.com/technobuddha/library/blob/main/src/json.ts#L50)
+Defined in: reviver.ts:13
 
 Used with JSON.parse to decode objected encoded by [replacer](replacer.md)
 

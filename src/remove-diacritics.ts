@@ -1,5 +1,9 @@
 import { empty } from './unicode.ts';
 
+/**
+ * Regular expression to match all Unicode combining diacritical marks.
+ * @internal
+ */
 const re = /\p{Mn}/gu;
 
 /**

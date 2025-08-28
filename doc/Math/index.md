@@ -64,7 +64,7 @@ Technobuddha Library
 | [orderOfMagnitude](orderOfMagnitude.md) | Get the spelled out word for an exponent |
 | [ordinal](ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
 | [padNumber](padNumber.md) | Add leading zeros to a number to ensure a string of a minimum length |
-| [parseRoman](parseRoman.md) | Parse a roman numeral string into it's integer value. |
+| [parseRoman](parseRoman.md) | Parse a roman numeral string into its integer value. |
 | [summarize](summarize.md) | Get a short description of a number |
 | [toRoman](toRoman.md) | Parse number into a roman numeral string |
 

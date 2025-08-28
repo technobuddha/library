@@ -1,3 +1,7 @@
+/**
+ * Regular expression to match words and numbers in a Unicode-aware manner.
+ * @internal
+ */
 const reWord = /(?:\p{Lu}\p{Ll}+)|(?:(?:\p{Lu}(?!\p{Ll}))+)|(?:\p{Ll}+)|(?:\p{N}+)/gu;
 
 /**

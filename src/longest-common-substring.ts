@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2d-array.ts';
+import { create2DArray } from './create-2-d-array.ts';
 
 /**
  * Options for configuring the longest common substring calculation.

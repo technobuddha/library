@@ -123,6 +123,7 @@ type ParseReturn = {
  * //   precision: 2
  * // }
  * ```
+ * @internal
  */
 function parse(mask: string): ParseReturn {
   let scale = 1;
@@ -305,6 +306,27 @@ type FormatOptions = {
   trim?: 'none' | 'front' | 'back' | 'all';
 };
 
+/**
+ * Internal utility for formatting a number into its sign, mantissa, and exponent components.
+ *
+ * This function prepares a number for custom formatting by extracting its sign, splitting it into digits,
+ * handling rounding, scaling, significant digits, leading zeros, and trimming zeros as specified.
+ * It returns a `NumberFormatter` instance, which provides a fluent API for building the final formatted string.
+ * @param input - The number to format.
+ * @param options - Formatting options:
+ *   - `round`: Number of decimal places to round to (optional).
+ *   - `precision`: Total number of significant digits to display (optional).
+ *   - `scale`: Power-of-10 exponent to add to the number before formatting (optional).
+ *   - `lead`: Minimum number of integer digits to display (default: 1).
+ *   - `trim`: Which zeros to trim ('none', 'front', 'back', 'all'; default: 'none').
+ * @returns A `NumberFormatter` instance for further formatting and string building.
+ * @example
+ * ```typescript
+ * const fmt = format(1234.567, { round: 2 });
+ * const str = fmt.minus('-').whole().decimal().fraction().build(); // "1234.57"
+ * ```
+ * @internal
+ */
 function format(
   input: number,
   { round, precision, scale, lead = 1, trim = 'none' }: FormatOptions,
@@ -523,6 +545,14 @@ class NumberFormatter {
  * @param input - The number to format.
  * @param mask - The format mask string.
  * @returns The formatted number as a string.
+ *
+ * @example
+ * ```typescript
+ * formatNumber(1234.56, "C2"); // "$1,234.56"
+ * formatNumber(-42, "D5");     // "-00042"
+ * formatNumber(0.123, "P1");   // "12.3 %"
+ * formatNumber(12345.678, "#,##0.00"); // "12,345.68"
+ * ```
  *
  * @group Math
  * @category Numbers

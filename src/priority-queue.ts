@@ -5,6 +5,8 @@
  */
 export class PriorityQueue<T> {
   /**
+   * Creates a new PriorityQueue.
+   *
    * @param comparator - Function to compare two elements and puts them in priority order.  Takes two elements as arguments and returns a number greater, less
    * then or equal to zero.
    * @param contents - Initial contents of the queue

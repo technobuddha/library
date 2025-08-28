@@ -11,7 +11,7 @@ Technobuddha Library
 function formatNumber(input: number, mask: string): string;
 ```
 
-Defined in: [format-number.ts:530](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L530)
+Defined in: [format-number.ts:560](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L560)
 
 Formats a number according to the specified mask.
 
@@ -45,4 +45,13 @@ optional sections for positive, negative, and zero values.
 `string`
 
 The formatted number as a string.
+
+## Example
+
+```typescript
+formatNumber(1234.56, "C2"); // "$1,234.56"
+formatNumber(-42, "D5");     // "-00042"
+formatNumber(0.123, "P1");   // "12.3 %"
+formatNumber(12345.678, "#,##0.00"); // "12,345.68"
+```
 

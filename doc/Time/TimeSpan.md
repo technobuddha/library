@@ -21,6 +21,8 @@ new TimeSpan(): TimeSpan;
 
 Defined in: [time-span.ts:23](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L23)
 
+Create a new TimeSpan
+
 #### Returns
 
 `TimeSpan`
@@ -32,6 +34,8 @@ new TimeSpan(ticks: number): TimeSpan;
 ```
 
 Defined in: [time-span.ts:28](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L28)
+
+Create a new TimeSpan from ticks (milliseconds)
 
 #### Parameters
 
@@ -53,6 +57,8 @@ new TimeSpan(
 ```
 
 Defined in: [time-span.ts:35](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L35)
+
+Create a new TimeSpan from hours, minutes, and seconds
 
 #### Parameters
 
@@ -77,6 +83,8 @@ new TimeSpan(
 ```
 
 Defined in: [time-span.ts:43](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L43)
+
+Create a new TimeSpan from days, hours, minutes, and seconds
 
 #### Parameters
 
@@ -104,6 +112,8 @@ new TimeSpan(
 
 Defined in: [time-span.ts:52](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L52)
 
+Create a new TimeSpan from days, hours, minutes, seconds, and milliseconds
+
 #### Parameters
 
 | Parameter | Type | Description |
@@ -125,6 +135,8 @@ new TimeSpan(text: string): TimeSpan;
 ```
 
 Defined in: [time-span.ts:57](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L57)
+
+Create a new TimeSpan from a formatted string
 
 #### Parameters
 

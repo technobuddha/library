@@ -32,7 +32,6 @@ import { toLineSegment } from './to-line-segment.ts';
  * @category Line Segment
  * @category Polygon
  */
-export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean;
 export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean {
   if (isPolygon(shape)) {
     let intersects = false;

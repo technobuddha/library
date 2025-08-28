@@ -9,6 +9,7 @@ import { type Numbering } from './numbering.ts';
  *
  * @param denominators - The type or array of denominators to use. Can be `'common'`, `'wrench'`, or a custom array of numbers.
  * @returns An array of denominators as numbers.
+ * @internal
  */
 export function getDenominators(denominators: Numbering['denominators']): number[] {
   if (denominators === 'common' || denominators === undefined) {

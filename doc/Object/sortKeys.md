@@ -11,7 +11,7 @@ Technobuddha Library
 function sortKeys<T>(object: T): T;
 ```
 
-Defined in: [sort-keys.ts:18](https://github.com/technobuddha/library/blob/main/src/sort-keys.ts#L18)
+Defined in: [sort-keys.ts:19](https://github.com/technobuddha/library/blob/main/src/sort-keys.ts#L19)
 
 Recursively sorts the keys of an object in lexicographical order.
 
@@ -22,7 +22,7 @@ For objects, all keys are sorted, and the function is applied recursively to all
 
 | Type Parameter | Description |
 | ------ | ------ |
-| `T` *extends* `JsonValue` | The type of the input value, extending JsonValue. |
+| `T` *extends* [`TBJsonValue`](../JSON/TBJsonValue.md) | The type of the input value, extending JsonValue. |
 
 ## Parameters
 

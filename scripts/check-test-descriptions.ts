@@ -2,7 +2,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
-import { kebabCase } from '../src/kebab-case.ts';
+import { kebabCase } from '../dist/index.js';
 
 interface TestFileInfo {
   filePath: string;

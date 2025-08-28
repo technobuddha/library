@@ -14,7 +14,7 @@ function create2DArray<T>(
    fill: T | (this: void, x: number, y: number) => T): T[][];
 ```
 
-Defined in: [create-2d-array.ts:25](https://github.com/technobuddha/library/blob/main/src/create-2d-array.ts#L25)
+Defined in: create-2-d-array.ts:25
 
 Create a two dimensional array with all elements initialized
 

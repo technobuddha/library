@@ -11,7 +11,7 @@ Technobuddha Library
 function normalizeBinary(input: BinaryObject): Uint8Array;
 ```
 
-Defined in: normalize-binary.ts:19
+Defined in: [normalize-binary.ts:19](https://github.com/technobuddha/library/blob/main/src/normalize-binary.ts#L19)
 
 Normalizes [BinaryObject](BinaryObject.md) to a `Uint8Array`.
 

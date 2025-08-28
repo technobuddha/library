@@ -11,7 +11,7 @@ Technobuddha Library
 function parseDate(input: string): Date;
 ```
 
-Defined in: [parse-date.ts:58](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L58)
+Defined in: [parse-date.ts:71](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L71)
 
 Parse a string into a Date object
 

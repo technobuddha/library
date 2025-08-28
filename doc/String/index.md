@@ -62,6 +62,8 @@ Technobuddha Library
 | Function | Description |
 | ------ | ------ |
 | [clean](clean.md) | Remove all occurrences of characters from the beginning and end of the string |
+| [cleanEnd](cleanEnd.md) | Remove all occurrences of characters from the end of the string |
+| [cleanStart](cleanStart.md) | Remove all occurrences of characters from the start of the string |
 
 ### Collapse
 

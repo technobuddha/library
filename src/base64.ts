@@ -91,6 +91,24 @@ function* pull4(input: string, charset: Base64Configuration): Generator<number[]
 }
 
 /**
+ * Decodes a Base64-encoded string into a text-encoded string.
+ *
+ * @param charset - The Base64 alphabet and configuration to use for decoding.
+ * @param input - The Base64-encoded string to decode.
+ * @param encoding - The text encoding to use for the output.
+ * @returns The decoded data as a string, encoded using the specified `encoding`.
+ * @throws {@link TypeError} If the input string contains invalid Base64 characters.
+ */
+export function decode(charset: Base64Configuration, input: string): Uint8Array;
+/**
+ * Decodes a Base64-encoded string into a `Uint8Array`.
+ * @param charset - The Base64 alphabet and configuration to use for decoding.
+ * @param input - The Base64-encoded string to decode.
+ * @returns The decoded data as a `Uint8Array`.
+ * @throws {@link TypeError} If the input string contains invalid Base64 characters.
+ */
+export function decode(charset: Base64Configuration, input: string, encoding: TextEncoding): string;
+/**
  * Decodes a Base64-encoded string using the specified character set configuration.
  *
  * @remarks
@@ -101,15 +119,9 @@ function* pull4(input: string, charset: Base64Configuration): Generator<number[]
  * Whitespace in the input string is ignored. If the input contains invalid Base64 characters,
  * a `TypeError` is thrown.
  *
- * @param charset - The Base64 alphabet and configuration to use for decoding.
- * @param input - The Base64-encoded string to decode.
- * @param encoding - (Optional) The text encoding to use for the output. If provided, the result is a string; otherwise, a `Uint8Array` is returned.
- * @returns The decoded data as a `Uint8Array` or a string, depending on the `encoding` parameter.
  * @throws {@link TypeError} If the input string contains invalid Base64 characters.
  * @internal
  */
-export function decode(charset: Base64Configuration, input: string): Uint8Array;
-export function decode(charset: Base64Configuration, input: string, encoding: TextEncoding): string;
 export function decode(
   charset: Base64Configuration,
   input: string,
@@ -135,6 +147,7 @@ export function decode(
  * Gather 3 bytes from the input buffer and yield theim.
  * @param input - The input buffer
  * @returns A generator that yields the char codes of the characters in the input string
+ * @internal
  */
 function* pull3(input: Uint8Array): Generator<number[]> {
   let bytes: number[] = [];
@@ -154,21 +167,28 @@ function* pull3(input: Uint8Array): Generator<number[]> {
 }
 
 /**
+ * Encodes a string into a Base64-encoded ASCII string.
+ * @param charset - The Base64 alphabet and configuration to use for encoding.
+ * @param chars - The input data to encode, either as a string or a `Uint8Array`.
+ * @param encoding - (Optional) The text encoding to use if the input is a string. Defaults to 'utf8'.
+ * @returns The Base64-encoded ASCII string.
+ */
+export function encode(charset: Base64Configuration, chars: string, encoding: TextEncoding): string;
+/**
+ * Encodes binary data into a Base64-encoded ASCII string.
+ * @param charset - The Base64 alphabet and configuration to use for encoding.
+ * @param binary - The input data to encode, either as a string or a `Uint8Array`.
+ * @returns The Base64-encoded ASCII string.
+ */
+export function encode(charset: Base64Configuration, binary: Uint8Array): string;
+/**
  * Encodes binary data or a string into a Base64-encoded ASCII string using the specified character set configuration.
- *
  * @remarks
  * This internal function is used by {@link encodeBase64} and {@link encodeBase64Url} to perform the actual encoding logic.
  * If a string is provided, it is first converted to a `Uint8Array` using {@link encodeText} and the specified encoding.
  * The function processes the input in 3-byte blocks, encodes them into 4 Base64 characters, and applies padding as needed.
- *
- * @param charset - The Base64 alphabet and configuration to use for encoding.
- * @param arg - The input data to encode, either as a string or a `Uint8Array`.
- * @param encoding - (Optional) The text encoding to use if the input is a string. Defaults to 'utf8'.
- * @returns The Base64-encoded ASCII string.
  * @internal
  */
-export function encode(charset: Base64Configuration, chars: string, encoding: TextEncoding): string;
-export function encode(charset: Base64Configuration, binary: Uint8Array): string;
 export function encode(
   charset: Base64Configuration,
   arg: string | Uint8Array,

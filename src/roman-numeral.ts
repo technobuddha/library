@@ -2,6 +2,14 @@ import { lookAhead } from './look-ahead.ts';
 import { splitChars } from './split-chars.ts';
 import { empty } from './unicode.ts';
 
+/**
+ * Represents a single Roman numeral glyph, including both uppercase and lowercase forms,
+ * as well as Unicode representations and some historical or less common variants.
+ *
+ * This type includes standard Roman numerals (I, V, X, L, C, D, M), their Unicode numeral forms,
+ * and additional glyphs such as 'ↀ', 'ↁ', 'ↂ', 'ↇ', 'ↈ', and others used in extended or historical contexts.
+ * @internal
+ */
 // prettier-ignore
 type Glyph =
   | 'ↈ' | 'ↇ' | 'ↂ' | 'ↁ' | 'm' | 'M' | 'Ⅿ' | 'ⅿ' | 'ↀ' | 'd' | 'D' | 'Ⅾ' | 'ⅾ'
@@ -84,7 +92,7 @@ const glyphValues: Record<Glyph, number> = {
 };
 
 /**
- * Parse a roman numeral string into it's integer value.
+ * Parse a roman numeral string into its integer value.
  * @param val - The roman numeral string to parse
  * @returns Parsed roman number
  *
@@ -142,6 +150,10 @@ export function toRoman(input: number, { format = 'standard' }: RomanOptions = {
 }
 
 // cspell:disable
+/**
+ * Maps Roman numeral styles to their value limits and glyph representations for each digit place.
+ * @internal
+ */
 const valueGlyphs = {
   standard: {
     limit: 3999,

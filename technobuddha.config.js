@@ -29,6 +29,12 @@ const config = {
     src: {
       environment: 'universal',
     },
+    scripts: {
+      environment: 'node',
+      tsconfig: {
+        references: ['./src/tsconfig.code.json'],
+      }
+    }
   },
 };
 

@@ -7,15 +7,17 @@ Technobuddha Library
 
 # Function: graphQL()
 
+Tagged template function for constructing GraphQL queries or mutations.
+
 ## Call Signature
 
 ```ts
 function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
 ```
 
-Defined in: [graph-ql.ts:43](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L43)
+Defined in: [graph-ql.ts:39](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L39)
 
-Tagged template function for constructing GraphQL queries or mutations.
+Escapes and formats GraphQL query strings or values.
 
 ### Parameters
 
@@ -36,15 +38,15 @@ The resulting GraphQL query string with interpolated values.
 function graphQL(arg: GraphQLValue): string;
 ```
 
-Defined in: [graph-ql.ts:44](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L44)
+Defined in: [graph-ql.ts:45](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L45)
 
-Tagged template function for constructing GraphQL queries or mutations.
+Escape and format an individual GraphQL query string.
 
 ### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `arg` | [`GraphQLValue`](GraphQLValue.md) |
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `arg` | [`GraphQLValue`](GraphQLValue.md) | The dynamic value to interpolate into the query. |
 
 ### Returns
 

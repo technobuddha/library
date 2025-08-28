@@ -25,7 +25,9 @@ A simple priority queue
 new PriorityQueue<T>(comparator: (a: T, b: T) => number, contents?: Iterable<T, any, any>): PriorityQueue<T>;
 ```
 
-Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L12)
+Defined in: [priority-queue.ts:14](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L14)
+
+Creates a new PriorityQueue.
 
 #### Parameters
 
@@ -48,7 +50,7 @@ Defined in: [priority-queue.ts:12](https://github.com/technobuddha/library/blob/
 get size(): number;
 ```
 
-Defined in: [priority-queue.ts:66](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L66)
+Defined in: [priority-queue.ts:68](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L68)
 
 Determine the number of items in the queue
 
@@ -66,7 +68,7 @@ number of element in the queue
 iterator: Iterator<T>;
 ```
 
-Defined in: [priority-queue.ts:54](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L54)
+Defined in: [priority-queue.ts:56](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L56)
 
 Iterate through all elements in the queue
 
@@ -84,7 +86,7 @@ generator function
 map<S>(f: (value: T, index: number, array: T[]) => S): S[];
 ```
 
-Defined in: [priority-queue.ts:76](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L76)
+Defined in: [priority-queue.ts:78](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L78)
 
 Transform all elements in the queue
 
@@ -114,7 +116,7 @@ array of transformed queue elements
 pop(): undefined | T;
 ```
 
-Defined in: [priority-queue.ts:42](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L42)
+Defined in: [priority-queue.ts:44](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L44)
 
 Return and remove the highest priority item from the queue
 
@@ -132,7 +134,7 @@ queue element
 push(...o: T[]): void;
 ```
 
-Defined in: [priority-queue.ts:32](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L32)
+Defined in: [priority-queue.ts:34](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L34)
 
 Add an element to the queue
 
@@ -154,7 +156,7 @@ Add an element to the queue
 reorder(newComparator: (a: T, b: T) => number): void;
 ```
 
-Defined in: [priority-queue.ts:88](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L88)
+Defined in: [priority-queue.ts:90](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L90)
 
 Change the function used to order the queue
 

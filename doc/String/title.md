@@ -11,7 +11,7 @@ Technobuddha Library
 function title(input: string): string;
 ```
 
-Defined in: [title.ts:11](https://github.com/technobuddha/library/blob/main/src/title.ts#L11)
+Defined in: [title.ts:15](https://github.com/technobuddha/library/blob/main/src/title.ts#L15)
 
 Convert a string to a title, capitalizing each word, except for the small words
 

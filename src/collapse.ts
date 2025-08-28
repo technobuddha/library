@@ -37,7 +37,7 @@ export type CollapsibleValue<T extends CollapsiblePrimitive> =
  * - `null` or `undefined`
  * - An array of values (and/or `null`/`undefined`)
  * - A function returning any of the above
- * - An iterable or generator yielding values (and/or `null`/`undefined`)
+ * - An iterable yielding values (and/or `null`/`undefined`)
  *
  * This type is useful for APIs that accept flexible input forms, such as single values,
  * arrays, lazy generators, or functions producing values, and need to process them uniformly.
@@ -58,8 +58,7 @@ export type Collapsible<T extends CollapsiblePrimitive> =
  * - `null`
  * - `undefined`
  * - a function returning `T` or `null` or `undefined` or an array
- * - A iterator returning `T` or `null` or `undefined`
- * - A generator returning `T` or `null` or `undefined`
+ * - An iterable returning `T` or `null` or `undefined`
  *
  * The function flattens all arguments, filters out `null`, and `undefined` values,
  * and returns the resulting array.

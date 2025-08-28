@@ -10,6 +10,6 @@
     "lib": ["esnext"],
     "noEmit": true
   },
-  "include": ["*.config.js", "*.ts", "*.js", "*.config.ts", "*.setup.ts"],
+  "include": ["*.config.js", "*.js", "*.config.ts", "*.setup.ts"],
   "exclude": []
 }

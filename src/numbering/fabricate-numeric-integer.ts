@@ -11,6 +11,7 @@ import { type Numbering } from './numbering.ts';
  * @param input - The numeric integer to be converted.
  * @param options - Configuration options for numbering.
  * @returns The string representation of the input number, formatted according to the provided options.
+ * @internal
  */
 export function fabricateNumericInteger(
   input: number,

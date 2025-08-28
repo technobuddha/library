@@ -8,10 +8,7 @@ Technobuddha Library
 # Function: largestInscribedRectangle()
 
 ```ts
-function largestInscribedRectangle(polygon: Polygon, options: {
-  aligned: false;
-  squareOnly?: boolean;
-}): RotatedRect;
+function largestInscribedRectangle(polygon: Polygon, options: LargestInscribedRectUnitOptions): Rect | RotatedRect;
 ```
 
 Defined in: [largest-inscribed-rectangle.ts:100](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L100)
@@ -23,13 +20,11 @@ Computes the largest rectangle that can be inscribed within the given polygon.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `polygon` | [`Polygon`](Polygon.md) | The polygon within which to inscribe the rectangle. |
-| `options` | \{ `aligned`: `false`; `squareOnly?`: `boolean`; \} | Configuration options for the computation. |
-| `options.aligned` | `false` | - |
-| `options.squareOnly?` | `boolean` | - |
+| `options` | [`LargestInscribedRectUnitOptions`](LargestInscribedRectUnitOptions.md) | Configuration options for the computation. |
 
 ## Returns
 
-[`RotatedRect`](RotatedRect.md)
+[`Rect`](Rect.md) \| [`RotatedRect`](RotatedRect.md)
 
 The largest inscribed rectangle.
 

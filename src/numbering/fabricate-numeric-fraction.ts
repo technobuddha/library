@@ -5,6 +5,13 @@ import { fractionSlash } from '../unicode.ts';
 import { deriveFraction } from './derive-fraction.ts';
 import { type Numbering } from './numbering.ts';
 
+/**
+ * Options for fabricating a numeric fraction.
+ *
+ * This type combines the 'ordinal' property from the `Numbering` type
+ * and the options accepted by the second parameter of the `deriveFraction` function.
+ * @internal
+ */
 type FNFOptions = Pick<Numbering, 'ordinal'> & Parameters<typeof deriveFraction>[1];
 
 /**
@@ -13,6 +20,7 @@ type FNFOptions = Pick<Numbering, 'ordinal'> & Parameters<typeof deriveFraction>
  * @param input - The numeric value to be converted into a fraction.
  * @param options - Configuration options for fraction formatting.
  * @returns The formatted fractional string, or `null` if the numerator is zero.
+ * @internal
  */
 export function fabricateNumericFraction(
   input: DeconstructedNumber,

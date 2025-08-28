@@ -11,7 +11,7 @@ Technobuddha Library
 function isIterator(obj: unknown): obj is Iterator<unknown, unknown, unknown>;
 ```
 
-Defined in: is-iterator.ts:19
+Defined in: [is-iterator.ts:19](https://github.com/technobuddha/library/blob/main/src/is-iterator.ts#L19)
 
 Determines whether the provided object conforms to the Iterator interface.
 

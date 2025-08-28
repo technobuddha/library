@@ -7,11 +7,11 @@ Technobuddha Library
 
 # Class: JSONMap\<K, V\>
 
-Defined in: [json-map.ts:29](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L29)
+Defined in: [json-map.ts:30](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L30)
 
-A Map-like data structure that allows objects conforming to `JsonObject` as keys.
+A [Map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map) that allows serializable objects keys.
 
-`JSONMap` serializes keys using JSON, enabling the use of complex objects as map keys,
+`JSONMap` serializes keys using JSON.serialize, enabling the use of complex objects as map keys,
 similar to how `Map` allows objects, but with value-based equality rather than reference-based.
 
 ## Example
@@ -49,7 +49,7 @@ new JSONMap<K, V>(values?:
 | Iterable<[K, V], any, any>): JSONMap<K, V>;
 ```
 
-Defined in: [json-map.ts:32](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L32)
+Defined in: [json-map.ts:33](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L33)
 
 #### Parameters
 
@@ -65,7 +65,7 @@ Defined in: [json-map.ts:32](https://github.com/technobuddha/library/blob/main/s
 
 | Property | Modifier | Type | Default value | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONMap"` | `'JSONMap'` | [json-map.ts:40](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L40) |
+| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONMap"` | `'JSONMap'` | [json-map.ts:41](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L41) |
 
 ## Accessors
 
@@ -77,7 +77,7 @@ Defined in: [json-map.ts:32](https://github.com/technobuddha/library/blob/main/s
 get size(): number;
 ```
 
-Defined in: [json-map.ts:42](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L42)
+Defined in: [json-map.ts:43](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L43)
 
 ##### Returns
 
@@ -99,7 +99,7 @@ Map.size
 iterator: MapIterator<[K, V]>;
 ```
 
-Defined in: [json-map.ts:92](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L92)
+Defined in: [json-map.ts:93](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L93)
 
 #### Returns
 
@@ -119,7 +119,7 @@ Map.[iterator]
 clear(): void;
 ```
 
-Defined in: [json-map.ts:46](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L46)
+Defined in: [json-map.ts:47](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L47)
 
 #### Returns
 
@@ -139,7 +139,7 @@ Map.clear
 delete(value: K): boolean;
 ```
 
-Defined in: [json-map.ts:50](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L50)
+Defined in: [json-map.ts:51](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L51)
 
 #### Parameters
 
@@ -167,7 +167,7 @@ Map.delete
 entries(): MapIterator<[K, V]>;
 ```
 
-Defined in: [json-map.ts:54](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L54)
+Defined in: [json-map.ts:55](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L55)
 
 Returns an iterable of key, value pairs for every entry in the map.
 
@@ -189,7 +189,7 @@ Map.entries
 forEach(callback: (value: V, key: K, map: JSONMap<K, V>) => void, thisArg?: unknown): void;
 ```
 
-Defined in: [json-map.ts:60](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L60)
+Defined in: [json-map.ts:61](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L61)
 
 Executes a provided function once per each key/value pair in the Map, in insertion order.
 
@@ -218,7 +218,7 @@ Map.forEach
 get(key: K): undefined | V;
 ```
 
-Defined in: [json-map.ts:69](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L69)
+Defined in: [json-map.ts:70](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L70)
 
 Returns a specified element from the Map object. If the value that is associated to the provided key is an object, then you will get a reference to that object and any change made to that object will effectively modify it inside the Map.
 
@@ -248,7 +248,7 @@ Map.get
 has(value: K): boolean;
 ```
 
-Defined in: [json-map.ts:73](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L73)
+Defined in: [json-map.ts:74](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L74)
 
 #### Parameters
 
@@ -276,7 +276,7 @@ Map.has
 keys(): MapIterator<K>;
 ```
 
-Defined in: [json-map.ts:77](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L77)
+Defined in: [json-map.ts:78](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L78)
 
 Returns an iterable of keys in the map
 
@@ -298,7 +298,7 @@ Map.keys
 set(key: K, value: V): this;
 ```
 
-Defined in: [json-map.ts:83](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L83)
+Defined in: [json-map.ts:84](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L84)
 
 Adds a new element with a specified key and value to the Map. If an element with the same key already exists, the element will be updated.
 
@@ -327,7 +327,7 @@ Map.set
 values(): MapIterator<V>;
 ```
 
-Defined in: [json-map.ts:88](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L88)
+Defined in: [json-map.ts:89](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L89)
 
 Returns an iterable of values in the map
 

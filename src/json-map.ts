@@ -2,10 +2,11 @@ import { type JsonObject } from 'type-fest';
 
 import { deserialize, serialize } from './json-serializer.ts';
 
+// TODO [2025-10-01]: Use reviver and replacer, will require updating the definition of JsonObject
 /**
- * A Map-like data structure that allows objects conforming to `JsonObject` as keys.
+ * A {@link Map} that allows serializable objects keys.
  *
- * `JSONMap` serializes keys using JSON, enabling the use of complex objects as map keys,
+ * `JSONMap` serializes keys using JSON.serialize, enabling the use of complex objects as map keys,
  * similar to how `Map` allows objects, but with value-based equality rather than reference-based.
  *
  * @typeParam K - The type of the key, which must extend `JsonObject`.

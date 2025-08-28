@@ -19,6 +19,7 @@
  * makeOrdinal("one");    // "first"
  * makeOrdinal("five");   // "fifth"
  * makeOrdinal("twenty"); // "twentieth"
+ * @internal
  */
 export function makeOrdinal(word: string): string {
   if (word.endsWith('11') || word.endsWith('12') || word.endsWith('13')) {

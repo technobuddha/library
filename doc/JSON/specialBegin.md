@@ -11,7 +11,7 @@ Technobuddha Library
 const specialBegin: "﴾" = '﴾';
 ```
 
-Defined in: [json.ts:6](https://github.com/technobuddha/library/blob/main/src/json.ts#L6)
+Defined in: [json.ts:44](https://github.com/technobuddha/library/blob/main/src/json.ts#L44)
 
 The beginning of a special JSON value
 

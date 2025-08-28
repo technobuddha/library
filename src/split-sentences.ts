@@ -1,3 +1,7 @@
+/**
+ * Regular expression to split text into sentences based on common sentence-ending punctuation.
+ * @internal
+ */
 const splitter = /(.*?(?:[.!?‼‽⁇⁈⁉:…]|\.\.\.)["'”’]?)(?:[\s\r\n]+|$)/gu;
 
 /**

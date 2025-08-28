@@ -45,6 +45,12 @@ export function diceCoefficient(
   return (count * 2) / (bg0.length + bg1.length);
 }
 
+/**
+ * Generates an array of bigrams (2-character substrings) from the given input string.
+ * @param input - The string from which to generate bigrams.
+ * @returns An array of bigrams extracted from the input string.
+ * @internal
+ */
 function biGrams(input: string): (string | null)[] {
   const biGram = [] as string[];
 

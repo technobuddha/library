@@ -11,7 +11,7 @@ Technobuddha Library
 function toRoman(input: number, __namedParameters: RomanOptions): string;
 ```
 
-Defined in: [roman-numeral.ts:128](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L128)
+Defined in: [roman-numeral.ts:136](https://github.com/technobuddha/library/blob/main/src/roman-numeral.ts#L136)
 
 Parse number into a roman numeral string
 

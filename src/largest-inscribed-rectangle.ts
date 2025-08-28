@@ -99,10 +99,6 @@ const VERTICAL_LINE_EXTENT = 1e100; // For creating "infinite" vertical lines
  */
 export function largestInscribedRectangle(
   polygon: Polygon,
-  options: { aligned: false; squareOnly?: boolean },
-): RotatedRect;
-export function largestInscribedRectangle(
-  polygon: Polygon,
   { aligned = true, squareOnly = false }: LargestInscribedRectUnitOptions = {},
 ): Rect | RotatedRect {
   if (polygon.length < 3) {
@@ -122,6 +118,7 @@ export function largestInscribedRectangle(
  * @param polygon - The polygon to search within
  * @param squareOnly - If true, only consider squares
  * @returns The largest inscribed rectangle with area and angle properties
+ * @internal
  */
 function findLargestRotatedRectangle(polygon: Polygon, squareOnly: boolean): RotatedRect {
   let maxRectangle: RotatedRect = { x: 0, y: 0, width: 0, height: 0, area: 0, angle: 0 };
@@ -150,6 +147,7 @@ function findLargestRotatedRectangle(polygon: Polygon, squareOnly: boolean): Rot
  * Combines polygon vertex x-coordinates with evenly spaced sample points.
  * @param polygon - The polygon to sample coordinates from
  * @returns Sorted array of unique x-coordinates
+ * @internal
  */
 function generateSampleXCoords(polygon: Polygon): number[] {
   const bounding = bounds(polygon);
@@ -170,6 +168,7 @@ function generateSampleXCoords(polygon: Polygon): number[] {
  * @param polygon - The polygon to search within
  * @param squareOnly - If true, only consider squares
  * @returns The largest inscribed rectangle with area and angle properties
+ * @internal
  */
 function findLargestAxisAlignedRectangle(polygon: Polygon, squareOnly: boolean): RotatedRect {
   let maxArea = 0;
@@ -201,6 +200,7 @@ function findLargestAxisAlignedRectangle(polygon: Polygon, squareOnly: boolean):
  * @param x1 - Second x-coordinate of the rectangle
  * @param squareOnly - If true, constrain to square dimensions
  * @returns Rectangle dimensions and y-position
+ * @internal
  */
 function calculateRectangleDimensions(
   polygon: Polygon,
@@ -231,6 +231,7 @@ function calculateRectangleDimensions(
  * @param x0 - First boundary x-coordinate
  * @param x1 - Second boundary x-coordinate
  * @returns Maximum height and optimal y-position
+ * @internal
  */
 function getMaxHeightBetweenX(
   polygon: Polygon,
@@ -280,6 +281,7 @@ function getMaxHeightBetweenX(
  * @param segment - The line segment to intersect
  * @param x - The x-coordinate of the vertical line
  * @returns The y-coordinate of intersection, or null if no intersection
+ * @internal
  */
 function getVerticalIntersection(segment: LineSegment, x: number): number | null {
   const verticalLine: LineSegment = {

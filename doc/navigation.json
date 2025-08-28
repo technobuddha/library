@@ -566,6 +566,18 @@
             "kind": 64,
             "path": "Geometry/normalizeLineSegment.md",
             "isDeprecated": false
+          },
+          {
+            "title": "polygonSides",
+            "kind": 64,
+            "path": "Geometry/polygonSides.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "toLineSegment",
+            "kind": 64,
+            "path": "Geometry/toLineSegment.md",
+            "isDeprecated": false
           }
         ]
       },
@@ -588,6 +600,12 @@
             "title": "isOnLine",
             "kind": 64,
             "path": "Geometry/isOnLine.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isOnPolygon",
+            "kind": 64,
+            "path": "Geometry/isOnPolygon.md",
             "isDeprecated": false
           },
           {
@@ -662,6 +680,12 @@
             "isDeprecated": false
           },
           {
+            "title": "isClosed",
+            "kind": 64,
+            "path": "Geometry/isClosed.md",
+            "isDeprecated": false
+          },
+          {
             "title": "isInPolygon",
             "kind": 64,
             "path": "Geometry/isInPolygon.md",
@@ -674,6 +698,18 @@
             "isDeprecated": false
           },
           {
+            "title": "isOnPolygon",
+            "kind": 64,
+            "path": "Geometry/isOnPolygon.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isPolygon",
+            "kind": 64,
+            "path": "Geometry/isPolygon.md",
+            "isDeprecated": false
+          },
+          {
             "title": "largestInscribedRectangle",
             "kind": 64,
             "path": "Geometry/largestInscribedRectangle.md",
@@ -683,6 +719,12 @@
             "title": "perimeter",
             "kind": 64,
             "path": "Geometry/perimeter.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "polygonSides",
+            "kind": 64,
+            "path": "Geometry/polygonSides.md",
             "isDeprecated": false
           },
           {
@@ -707,6 +749,12 @@
             "title": "star",
             "kind": 64,
             "path": "Geometry/star.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "toClosed",
+            "kind": 64,
+            "path": "Geometry/toClosed.md",
             "isDeprecated": false
           },
           {
@@ -795,6 +843,30 @@
       {
         "title": "Serialization",
         "children": [
+          {
+            "title": "TBJsonArray",
+            "kind": 2097152,
+            "path": "JSON/TBJsonArray.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "TBJsonObject",
+            "kind": 2097152,
+            "path": "JSON/TBJsonObject.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "TBJsonPrimitive",
+            "kind": 2097152,
+            "path": "JSON/TBJsonPrimitive.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "TBJsonValue",
+            "kind": 2097152,
+            "path": "JSON/TBJsonValue.md",
+            "isDeprecated": false
+          },
           {
             "title": "specialBegin",
             "kind": 32,
@@ -1570,6 +1642,18 @@
             "title": "clean",
             "kind": 64,
             "path": "String/clean.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "cleanEnd",
+            "kind": 64,
+            "path": "String/cleanEnd.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "cleanStart",
+            "kind": 64,
+            "path": "String/cleanStart.md",
             "isDeprecated": false
           }
         ]

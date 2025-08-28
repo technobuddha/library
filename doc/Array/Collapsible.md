@@ -22,7 +22,7 @@ A `Collapsible<T>` can be:
 - `null` or `undefined`
 - An array of values (and/or `null`/`undefined`)
 - A function returning any of the above
-- An iterable or generator yielding values (and/or `null`/`undefined`)
+- An iterable yielding values (and/or `null`/`undefined`)
 
 This type is useful for APIs that accept flexible input forms, such as single values,
 arrays, lazy generators, or functions producing values, and need to process them uniformly.

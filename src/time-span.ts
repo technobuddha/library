@@ -18,23 +18,23 @@ import { isString } from './is-string.ts';
  */
 export class TimeSpan {
   /**
-   *
+   * Create a new TimeSpan
    */
   public constructor();
   /**
-   *
+   * Create a new TimeSpan from ticks (milliseconds)
    * @param ticks - the number of ticks (milliseconds)
    */
   public constructor(ticks: number);
   /**
-   *
+   * Create a new TimeSpan from hours, minutes, and seconds
    * @param h - Hours
    * @param m - minutes
    * @param s - seconds
    */
   public constructor(h: number, m: number, s: number);
   /**
-   *
+   * Create a new TimeSpan from days, hours, minutes, and seconds
    * @param d - Days
    * @param h - Hours
    * @param m - minutes
@@ -42,7 +42,7 @@ export class TimeSpan {
    */
   public constructor(d: number, h: number, m: number, s: number);
   /**
-   *
+   * Create a new TimeSpan from days, hours, minutes, seconds, and milliseconds
    * @param d - Days
    * @param h - Hours
    * @param m - minutes
@@ -51,7 +51,7 @@ export class TimeSpan {
    */
   public constructor(d: number, h: number, m: number, s: number, ms: number);
   /**
-   *
+   * Create a new TimeSpan from a formatted string
    * @param text - formatted timespan (dd:hh:mm:ss.fff) leading zero fields can be omitted
    */
   public constructor(text: string);

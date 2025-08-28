@@ -2,13 +2,44 @@ import { empty } from '../unicode.ts';
 
 import { type Numbering } from './numbering.ts';
 
+/**
+ * Represents the result of converting a number into its "illion" representation.
+ * @internal
+ */
 type IllionReturn = {
+  // The numeric value represented.
   quantity: number;
+  // The corresponding "illion" word (e.g., "million", "billion"), or `null` if not applicable.
   word: string | null;
+  // The mantissa part of the number as a string.
   mantissa: string;
+  // The exponent part of the number.
   exponent: number;
 };
 
+/**
+ * Generates the "illion" name and associated information for a given number's mantissa and exponent.
+ *
+ * This function decomposes a number (represented by its mantissa and exponent) into a quantity, remaining mantissa,
+ * adjusted exponent, and the corresponding "illion" word (e.g., "thousand", "million", "billion", etc.).
+ * It supports extended illion names for very large numbers, following the Latin-based naming conventions.
+ *
+ * @param argMantissa - The string representation of the number's mantissa (the significant digits).
+ * @param argExponent - The exponent part of the number (power of 10).
+ * @param shift - A boolean flag from the Numbering type indicating whether to shift and combine remaining mantissa digits into the quantity as a decimal.
+ * @returns An object containing:
+ *   - `quantity`: The numeric value extracted from the mantissa for the current illion group.
+ *   - `mantissa`: The remaining mantissa string after extracting the quantity.
+ *   - `exponent`: The adjusted exponent after processing.
+ *   - `word`: The illion word corresponding to the exponent (or `null` if not applicable).
+ *
+ * @remarks
+ * - If the exponent is less than 3, the function returns with `word` as `null`.
+ * - If the exponent is exactly 3, the function returns with `word` as `'thousand'`.
+ * - For larger exponents, the function constructs the appropriate illion name using Latin prefixes and suffixes.
+ * - The function supports fractional quantities if `shift` is true and there are remaining mantissa digits.
+ * @internal
+ */
 export function illion(
   argMantissa: string,
   argExponent: number,
