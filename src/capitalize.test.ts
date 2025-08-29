@@ -1,5 +1,5 @@
 import { capitalize } from './capitalize.ts';
-import { hyphen, nbHyphen } from './unicode.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('capitalize', () => {
   test('simple words should be capitalized', () => {
@@ -15,7 +15,7 @@ describe('capitalize', () => {
   test('all parts of hyphenated words should be capitalized', () => {
     expect(capitalize('duck-billed-platypus')).toBe('Duck-Billed-Platypus');
     expect(capitalize(`prairie${hyphen}dog`)).toBe(`Prairie${hyphen}Dog`);
-    expect(capitalize(`jack${nbHyphen}rabbit`)).toBe(`Jack${nbHyphen}Rabbit`);
+    expect(capitalize(`jack${nonBreakingHyphen}rabbit`)).toBe(`Jack${nonBreakingHyphen}Rabbit`);
   });
 
   test('should capitalize only the first word', () => {

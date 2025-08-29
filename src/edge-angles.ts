@@ -27,7 +27,6 @@ import { modulo } from './modulo.ts';
  * @group Geometry
  * @category Polygon
  */
-// TODO [2025-08-28]: Add units argument
 export function* edgeAngles(
   polygon: Polygon,
   normalizeTo: number = Math.PI * 2,

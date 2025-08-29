@@ -13,7 +13,7 @@ function mean(numbers: number[]): number;
 
 Defined in: [mean.ts:10](https://github.com/technobuddha/library/blob/main/src/mean.ts#L10)
 
-Calculates the arithmetic mean (average) of an array of numbers.
+Calculates the Operations mean (average) of an array of numbers.
 
 ## Parameters
 

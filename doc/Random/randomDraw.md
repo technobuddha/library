@@ -16,7 +16,7 @@ function randomDraw<T>(list: readonly T[], random: () => number):
 };
 ```
 
-Defined in: [random-draw.ts:10](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L10)
+Defined in: [random-draw.ts:15](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L15)
 
 Draw a random item from a list.  Returning both the item and the list without the drawn item.
 
@@ -43,9 +43,11 @@ Draw a random item from a list.  Returning both the item and the list without th
 
 Randomly selected item & the list without the drawn item
 
-## Default Value
+## Example
 
-```ts
-random  Math.random
+```typescript
+const items = ['a', 'b', 'c'];
+randomDraw(items, () => 0.5); // deterministic for example
+// { draw: 'b', list: ['a', 'c'] }
 ```
 

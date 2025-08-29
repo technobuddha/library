@@ -11,7 +11,7 @@ Technobuddha Library
 function cardinal(input: number, options: CardinalOptions): string;
 ```
 
-Defined in: cardinal.ts:76
+Defined in: [cardinal.ts:76](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L76)
 
 Convert a number into text (the cardinal number)
 

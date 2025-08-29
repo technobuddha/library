@@ -1,7 +1,7 @@
 import { splitWords } from './split-words.ts';
-import { hyphen, nbHyphen, space } from './unicode.ts';
+import { hyphen, nonBreakingHyphen, space } from './unicode.ts';
 
-const reWord = new RegExp(`^\\w|[${hyphen}${nbHyphen}-]\\w`, 'gui');
+const reWord = new RegExp(`^\\w|[${hyphen}${nonBreakingHyphen}-]\\w`, 'gui');
 
 /**
  * Capitalize the first word in a sentence, or capitalize a single word.

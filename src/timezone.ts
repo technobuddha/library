@@ -1,5 +1,5 @@
 import { isDate } from './is-date.ts';
-import { padNumber } from './pad-number.ts';
+import { pad } from './pad.ts';
 import { empty } from './unicode.ts';
 
 /**
@@ -43,5 +43,5 @@ export function timezone(
   const n = Math.abs(offset) / 60;
   const h = Math.floor(n);
   const m = (n - h) * 60;
-  return `${(gmt ? 'GMT' : empty) + (offset > 0 ? '-' : '+') + padNumber(h, 2)}:${padNumber(m, 2)}`;
+  return `${(gmt ? 'GMT' : empty) + (offset > 0 ? '-' : '+') + pad(h, 2)}:${pad(m, 2)}`;
 }

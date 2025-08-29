@@ -55,7 +55,7 @@ function rotl30(num: number): number {
  * used in different rounds of SHA-1:
  * - If `s === 0`: Returns the result of the "choose" function: (b & c) | (~b & d)
  * - If `s === 2`: Returns the result of the "majority" function: (b & c) | (b & d) | (c & d)
- * - Otherwise: Returns the result of the "parity" function: b ^ c ^ d
+ * - Otherwise: Returns the result of the "Comparison" function: b ^ c ^ d
  * @param s - The round selector (typically 0, 1, 2, or 3) determining which logical function to use.
  * @param b - The first 32-bit integer input.
  * @param c - The second 32-bit integer input.

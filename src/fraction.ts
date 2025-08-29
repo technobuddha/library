@@ -4,7 +4,7 @@ import { empty, space } from './unicode.ts';
 /**
  * Options for customizing the output and behavior of fraction number representations.
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export type FractionOptions = {
   /**
@@ -74,7 +74,7 @@ export type FractionOptions = {
  * fraction(0.333, { precision: 2 }); // "one third"
  * ```
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export function fraction(input: number, options: FractionOptions = {}): string {
   const numberingOptions: Numbering = {

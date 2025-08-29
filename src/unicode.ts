@@ -45,7 +45,7 @@ export const hyphen = '‐'; // U+2010 HYPHEN
  * @group Unicode
  * @category Characters
  */
-export const nbHyphen = '‑'; // U+2011 NON-BREAKING HYPHEN
+export const nonBreakingHyphen = '‑'; // U+2011 NON-BREAKING HYPHEN
 
 /**
  * Soft Hyphen

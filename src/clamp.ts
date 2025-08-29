@@ -12,7 +12,7 @@
  * clamp(3, 3, 3); // 3
  * ```
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export function clamp(value: number, min: number, max: number): number {
   return Math.min(Math.max(value, min), max);

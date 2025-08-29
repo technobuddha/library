@@ -11,7 +11,7 @@ Technobuddha Library
 function summarize(input: number): string;
 ```
 
-Defined in: summarize.ts:19
+Defined in: [summarize.ts:19](https://github.com/technobuddha/library/blob/main/src/summarize.ts#L19)
 
 Get a short description of a number
 

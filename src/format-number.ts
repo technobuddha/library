@@ -1,5 +1,5 @@
 import { build } from './build.ts';
-import { padNumber } from './pad-number.ts';
+import { pad } from './pad.ts';
 import { splitChars } from './split-chars.ts';
 import { empty } from './unicode.ts';
 
@@ -502,7 +502,7 @@ class NumberFormatter {
       this.mantissa.slice(1),
       e,
       this.exponent > 0 ? '+' : empty,
-      padNumber(this.exponent - 1, 3),
+      pad(this.exponent - 1, 3),
     );
     return this;
   }
@@ -544,7 +544,7 @@ class NumberFormatter {
  * formatNumber(12345.678, "#,##0.00"); // "12,345.68"
  * ```
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export function formatNumber(input: number, mask: string): string {
   // cspell:ignore CDEFGNPX
@@ -739,7 +739,7 @@ export function formatNumber(input: number, mask: string): string {
         b--;
       }
     } else if (x === 'e' || x === 'E') {
-      o = `${x}-${padNumber(Math.abs(exp), fmt.exponent)}${o}`;
+      o = `${x}-${pad(Math.abs(exp), fmt.exponent)}${o}`;
     } else {
       o = x.slice(1) + o;
     }
@@ -776,7 +776,7 @@ export function formatNumber(input: number, mask: string): string {
                 '-'
               : '+'
             : empty) +
-            padNumber(Math.abs(exp), fmt.exponent);
+            pad(Math.abs(exp), fmt.exponent);
 
           break;
         }

@@ -11,7 +11,7 @@ Technobuddha Library
 function ordinal(input: number, options: OrdinalOptions): string;
 ```
 
-Defined in: ordinal.ts:75
+Defined in: [ordinal.ts:75](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L75)
 
 Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 

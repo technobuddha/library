@@ -12,7 +12,14 @@ import { isString } from './is-string.ts';
  * @param match - A string, RegExp, or iterable of strings/RegExps to match against the input text.
  * @returns `true` if the text matches the criteria; otherwise, `false`.
  * @group RegExp
- * @category Matching
+ * @category Operations
+ * @example
+ * ```typescript
+ * matches('Hello', 'hello'); // true
+ * matches('Hello', /he.*\/ui); // true
+ * matches('Hello', ['hi', /he.*\/ui]); // true
+ * matches('Hello', ['hi', 'hey']); // false
+ * ```
  */
 export function matches(text: string, match: string | RegExp | Iterable<string | RegExp>): boolean {
   const str = text.trim().toLocaleLowerCase();

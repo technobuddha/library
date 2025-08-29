@@ -15,3 +15,12 @@ Defined in: [regexp.ts:226](https://github.com/technobuddha/library/blob/main/sr
 
 validate an valid email address
 
+## Example
+
+```typescript
+email.test('user@example.com'); // true
+email.test('user@sub.example.co'); // true
+email.test('invalid@domain'); // false
+email.test('not-an-email'); // false
+```
+

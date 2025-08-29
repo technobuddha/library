@@ -20,7 +20,7 @@ function shallowEquals(
    exclude: string[]): boolean;
 ```
 
-Defined in: [shallow-equals.ts:29](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L29)
+Defined in: [shallow-equals.ts:38](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L38)
 
 Compare two object for equality.  Testing goes one level deep.
 
@@ -37,4 +37,15 @@ Compare two object for equality.  Testing goes one level deep.
 `boolean`
 
 true if the two objects have the same members
+
+## Example
+
+```typescript
+const a = \{ x: 1, y: 2 \};
+const b = \{ x: 1, y: 2 \};
+shallowEquals(a, b); // true
+shallowEquals(a, \{ x: 1 \}); // false
+shallowEquals(a, \{ x: 1, y: 3 \}); // false
+shallowEquals(a, b, ['y']); // true
+```
 

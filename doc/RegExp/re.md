@@ -11,7 +11,7 @@ Technobuddha Library
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
 ```
 
-Defined in: [regexp.ts:21](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L21)
+Defined in: re.ts:18
 
 Constructs a new `RegExp` by interpolating template strings and provided regular expressions.
 

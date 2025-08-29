@@ -16,7 +16,7 @@ import { type Cartesian } from './@types/geometry.ts';
  * crossProduct({ x: 1, y: 1 }, { x: 2, y: 2 }, { x: 0, y: 0 }); // 0
  * ```
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export function crossProduct(a: Cartesian, b: Cartesian, o: Cartesian): number {
   return (a.x - o.x) * (b.y - o.y) - (a.y - o.y) * (b.x - o.x);

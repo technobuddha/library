@@ -16,7 +16,7 @@
  * lerp(10, 20, 2); // 30
  * ```
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export function lerp(a: number, b: number, proportion: number): number {
   return a + proportion * (b - a);

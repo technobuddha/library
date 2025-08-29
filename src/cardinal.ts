@@ -4,7 +4,7 @@ import { empty, space } from './unicode.ts';
 /**
  * Configuration options for cardinal number conversion.
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export type CardinalOptions = {
   /**
@@ -71,7 +71,7 @@ export type CardinalOptions = {
  * cardinal(3.14159, { precision: 2 }); // "three and fourteen hundredths"
  * ```
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export function cardinal(input: number, options: CardinalOptions = {}): string {
   const numberingOptions: Numbering = {

@@ -26,15 +26,9 @@ Technobuddha Library
 
 | Function | Description |
 | ------ | ------ |
-| [camelCase](camelCase.md) | Convert an identifier string to a camel case |
 | [capitalize](capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
-| [dotCase](dotCase.md) | Convert an identifier string to a dot form |
-| [humanCase](humanCase.md) | Convert an identifier string to a human case |
-| [kebabCase](kebabCase.md) | Convert an identifier string to a kebab-case form |
-| [macroCase](macroCase.md) | Convert an identifier string to macro case |
 | [matchCase](matchCase.md) | Attempt to convert the input string into the same case as the target string |
-| [pascalCase](pascalCase.md) | Convert an identifier string to pascal case |
-| [snakeCase](snakeCase.md) | Convert an identifier string to snake case |
+| [startCase](startCase.md) | Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase. |
 | [title](title.md) | Convert a string to a title, capitalizing each word, except for the small words |
 | [uncapitalize](uncapitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 
@@ -96,6 +90,7 @@ Technobuddha Library
 | [toBoolean](toBoolean.md) | Convert a string to a boolean value |
 | [toEnumeration](toEnumeration.md) | Convert a string to a numeric value |
 | [toFilename](toFilename.md) | Convert a string so that it can be used as a filename |
+| [toString](toString.md) | Converts an unknown value to its string representation. |
 
 ### Correction
 
@@ -153,6 +148,12 @@ Technobuddha Library
 | [MaskOptions](MaskOptions.md) | Options for the [mask](mask.md) function |
 | [mask](mask.md) | Use a simple mask to display a string |
 
+### Operations
+
+| Function | Description |
+| ------ | ------ |
+| [singleLine](singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |
+
 ### Quoting
 
 | Name | Description |
@@ -185,15 +186,6 @@ Technobuddha Library
 | ------ | ------ |
 | [FillTemplateOptions](FillTemplateOptions.md) | Options for the [fillTemplate](fillTemplate.md) function |
 | [fillTemplate](fillTemplate.md) | Fill a template with supplied values |
-
-### Units
-
-| Name | Description |
-| ------ | ------ |
-| [BinaryUnitsOptions](BinaryUnitsOptions.md) | Options for the [binaryUnits](binaryUnits.md) function |
-| [MetricUnitsOptions](MetricUnitsOptions.md) | Options for the [metricUnits](metricUnits.md) function w |
-| [binaryUnits](binaryUnits.md) | Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K) |
-| [metricUnits](metricUnits.md) | Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m) |
 
 ### Word Wrapping
 

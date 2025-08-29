@@ -2,7 +2,6 @@ import { type JsonObject } from 'type-fest';
 
 import { deserialize, serialize } from './json-serializer.ts';
 
-// TODO [2025-10-01]: Use reviver and replacer, will require updating the definition of JsonObject
 /**
  * A {@link Map} that allows serializable objects keys.
  *

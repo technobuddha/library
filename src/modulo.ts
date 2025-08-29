@@ -19,7 +19,7 @@
  * modulo(-10, -3); // -1
  * ```
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export function modulo(dividend: number, divisor: number): number {
   const remainder = dividend % divisor;

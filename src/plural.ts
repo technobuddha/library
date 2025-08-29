@@ -210,7 +210,7 @@ const database: DBEntry = {
     'anger',
     'anime',
     'applause',
-    'arithmetic',
+    'Operations',
     'art',
     'athletics',
     'audio',

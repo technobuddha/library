@@ -7,7 +7,7 @@ Technobuddha Library
 
 # Class: MersenneTwister
 
-Defined in: [mersenne-twister.ts:99](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L99)
+Defined in: [mersenne-twister.ts:126](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L126)
 
 Implements the Mersenne Twister pseudorandom number generator (MT19937).
 
@@ -15,20 +15,22 @@ The Mersenne Twister is a widely used PRNG known for its long period (2^19937−
 high performance, and high-quality randomness. This class provides methods to seed
 the generator and produce random numbers in various formats and intervals.
 
-## Example
-
-```typescript
-const mt = new MersenneTwister(1234);
-const randomInt = mt.genrandInt32();
-const randomFloat = mt.genrandReal2();
-```
-
 ## Remarks
 
 - The generator can be seeded with a single number or an array of numbers.
 - Methods are provided to generate 32-bit and 31-bit integers, as well as floating-point numbers
   in different intervals.
 - This implementation is based on the original C code by Makoto Matsumoto and Takuji Nishimura.
+
+## Example
+
+```typescript
+const mt = new MersenneTwister(1234);
+mt.genrandInt32(); // 1982695502
+mt.genrandReal1(); // 0.33979119391641377
+mt.genrandReal2(); // 0.006705045932903886
+mt.genrandRes53(); // 0.489361593755425
+```
 
 ## See
 
@@ -43,7 +45,7 @@ const randomFloat = mt.genrandReal2();
 new MersenneTwister(seed: number | number[]): MersenneTwister;
 ```
 
-Defined in: [mersenne-twister.ts:103](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L103)
+Defined in: [mersenne-twister.ts:130](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L130)
 
 #### Parameters
 
@@ -59,7 +61,7 @@ Defined in: [mersenne-twister.ts:103](https://github.com/technobuddha/library/bl
 
 | Property | Modifier | Type | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="mt"></a> `mt` | `public` | [`Uint32Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)\<[`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)\> | [mersenne-twister.ts:101](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L101) |
+| <a id="mt"></a> `mt` | `public` | [`Uint32Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)\<[`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)\> | [mersenne-twister.ts:128](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L128) |
 
 ## Methods
 
@@ -69,7 +71,7 @@ Defined in: [mersenne-twister.ts:103](https://github.com/technobuddha/library/bl
 genrandInt31(): number;
 ```
 
-Defined in: [mersenne-twister.ts:201](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L201)
+Defined in: [mersenne-twister.ts:228](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L228)
 
 #### Returns
 
@@ -83,7 +85,7 @@ Defined in: [mersenne-twister.ts:201](https://github.com/technobuddha/library/bl
 genrandInt32(): number;
 ```
 
-Defined in: [mersenne-twister.ts:169](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L169)
+Defined in: [mersenne-twister.ts:196](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L196)
 
 #### Returns
 
@@ -97,7 +99,7 @@ Defined in: [mersenne-twister.ts:169](https://github.com/technobuddha/library/bl
 genrandReal1(): number;
 ```
 
-Defined in: [mersenne-twister.ts:206](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L206)
+Defined in: [mersenne-twister.ts:233](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L233)
 
 #### Returns
 
@@ -111,7 +113,7 @@ Defined in: [mersenne-twister.ts:206](https://github.com/technobuddha/library/bl
 genrandReal2(): number;
 ```
 
-Defined in: [mersenne-twister.ts:212](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L212)
+Defined in: [mersenne-twister.ts:239](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L239)
 
 #### Returns
 
@@ -125,7 +127,7 @@ Defined in: [mersenne-twister.ts:212](https://github.com/technobuddha/library/bl
 genrandReal3(): number;
 ```
 
-Defined in: [mersenne-twister.ts:218](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L218)
+Defined in: [mersenne-twister.ts:245](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L245)
 
 #### Returns
 
@@ -139,7 +141,7 @@ Defined in: [mersenne-twister.ts:218](https://github.com/technobuddha/library/bl
 genrandRes53(): number;
 ```
 
-Defined in: [mersenne-twister.ts:224](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L224)
+Defined in: [mersenne-twister.ts:251](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L251)
 
 #### Returns
 
@@ -153,7 +155,7 @@ Defined in: [mersenne-twister.ts:224](https://github.com/technobuddha/library/bl
 initByArray(key: number[]): void;
 ```
 
-Defined in: [mersenne-twister.ts:133](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L133)
+Defined in: [mersenne-twister.ts:160](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L160)
 
 #### Parameters
 
@@ -173,7 +175,7 @@ Defined in: [mersenne-twister.ts:133](https://github.com/technobuddha/library/bl
 initGenrand(seed: number): void;
 ```
 
-Defined in: [mersenne-twister.ts:116](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L116)
+Defined in: [mersenne-twister.ts:143](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L143)
 
 #### Parameters
 
@@ -193,7 +195,7 @@ Defined in: [mersenne-twister.ts:116](https://github.com/technobuddha/library/bl
 setSeed(seed: number | number[]): void;
 ```
 
-Defined in: [mersenne-twister.ts:107](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L107)
+Defined in: [mersenne-twister.ts:134](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L134)
 
 #### Parameters
 

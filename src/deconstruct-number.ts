@@ -24,7 +24,7 @@ import { empty } from './unicode.ts';
  * // }
  * ```
  * @group Math
- * @category Numbers
+ * @category Number
  */
 export function deconstructNumber(
   input: number,

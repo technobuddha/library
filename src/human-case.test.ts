@@ -1,5 +1,5 @@
 import { humanCase } from './human-case.ts';
-import { hyphen, nbHyphen } from './unicode.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('humanCase', () => {
   test('should take human case', () => {
@@ -49,7 +49,7 @@ describe('humanCase', () => {
   test('should break on hyphens', () => {
     expect(humanCase('well-known')).toBe('well known');
     expect(humanCase(`well${hyphen}known`)).toBe('well known');
-    expect(humanCase(`well${nbHyphen}known`)).toBe('well known');
+    expect(humanCase(`well${nonBreakingHyphen}known`)).toBe('well known');
   });
 
   test('should handle words with multiple upper-case letters', () => {

@@ -1,5 +1,5 @@
 import { macroCase } from './macro-case.ts';
-import { hyphen, nbHyphen } from './unicode.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('macroCase', () => {
   test('should take human case', () => {
@@ -49,7 +49,7 @@ describe('macroCase', () => {
   test('should break on hyphens', () => {
     expect(macroCase('well-known')).toBe('WELL_KNOWN');
     expect(macroCase(`well${hyphen}known`)).toBe('WELL_KNOWN');
-    expect(macroCase(`well${nbHyphen}known`)).toBe('WELL_KNOWN');
+    expect(macroCase(`well${nonBreakingHyphen}known`)).toBe('WELL_KNOWN');
   });
 
   test('should handle words with multiple upper-case letters', () => {

@@ -11,7 +11,7 @@ Technobuddha Library
 function edgeAngles(polygon: Polygon, normalizeTo: number): Generator<number>;
 ```
 
-Defined in: [edge-angles.ts:31](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L31)
+Defined in: [edge-angles.ts:30](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L30)
 
 Generate normalized edge angles from polygon edges.
 

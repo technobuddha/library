@@ -7,17 +7,17 @@ Technobuddha Library
 
 # RegExp
 
-### Matching
-
-| Function | Description |
-| ------ | ------ |
-| [matches](matches.md) | Determines if the given `text` matches the provided `match` criteria. |
-
-### Template
+### Construction
 
 | Function | Description |
 | ------ | ------ |
 | [re](re.md) | Constructs a new `RegExp` by interpolating template strings and provided regular expressions. |
+
+### Operations
+
+| Function | Description |
+| ------ | ------ |
+| [matches](matches.md) | Determines if the given `text` matches the provided `match` criteria. |
 
 ### Validation
 

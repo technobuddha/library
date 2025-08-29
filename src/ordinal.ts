@@ -5,7 +5,7 @@ import { empty, space } from './unicode.ts';
 /**
  * Options for formatting ordinal numbers.
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export type OrdinalOptions = {
   /**
@@ -70,7 +70,7 @@ export type OrdinalOptions = {
  * ordinal(2, { output: 'suffix' }); // "nd"
  * ```
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export function ordinal(input: number, options: OrdinalOptions = {}): string {
   if (options.output === 'suffix') {

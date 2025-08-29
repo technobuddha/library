@@ -11,7 +11,7 @@ Technobuddha Library
 function fraction(input: number, options: FractionOptions): string;
 ```
 
-Defined in: fraction.ts:79
+Defined in: [fraction.ts:79](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L79)
 
 Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form.
 

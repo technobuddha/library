@@ -4,9 +4,24 @@ import { toPrimitive } from './to-primitive.ts';
  * Compare two objects
  * @param a - First object
  * @param b - Second object
- * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
+ * @returns
+ * - 0 if a == b
+ * - -1 if a \< b
+ * - 1 if a \> b
  * @group Object
  * @category Comparison
+ * @example
+ * ```typescript
+ * compare(1, 2); // -1
+ * compare(2, 1); // 1
+ * compare(2, 2); // 0
+ * compare('a', 'b'); // -1
+ * compare('b', 'a'); // 1
+ * compare('a', 'a'); // 0
+ * compare(null, undefined); // -1
+ * compare(undefined, undefined); // 0
+ * compare(NaN, NaN); // 0
+ * ```
  */
 export function compare(a: unknown, b: unknown): number {
   const pa = toPrimitive(a, 'number');

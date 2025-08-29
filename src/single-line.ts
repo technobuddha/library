@@ -7,8 +7,8 @@ import { zipperMerge } from './zipper-merge.ts';
  * @param template - The template strings array from a tagged template literal.
  * @param args - The values to be interpolated into the template.
  * @returns A single-line string with all line breaks and leading whitespace removed.
- * @group Template
- * @category Single Line
+ * @group String
+ * @category Operations
  */
 export function singleLine(template: TemplateStringsArray, ...args: unknown[]): string {
   return zipperMerge(

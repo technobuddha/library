@@ -15,7 +15,7 @@ import { isNumber } from './is-number.ts';
  * isMultipleOf(0, 0); // true
  * ```
  * @group Math
- * @category Parity
+ * @category Comparison
  */
 export function isMultipleOf(input: number, multiplier: number): boolean {
   return isNumber(input) && (input % multiplier === 0 || (input === 0 && multiplier === 0));

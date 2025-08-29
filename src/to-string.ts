@@ -12,7 +12,7 @@ import { empty } from './unicode.ts';
  * - For all other types, returns the result of `Object.prototype.toString`.
  * @param value - The value to convert to a string.
  * @returns The string representation of the input value.
- * @group Utility
+ * @group String
  * @category Conversion
  */
 export function toString(value: unknown): string {

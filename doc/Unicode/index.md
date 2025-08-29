@@ -14,8 +14,8 @@ Technobuddha Library
 | [fractionSlash](fractionSlash.md) | Fraction Slash |
 | [hyphen](hyphen.md) | Hyphen |
 | [invisiblePlus](invisiblePlus.md) | Invisible Plus sign |
-| [nbHyphen](nbHyphen.md) | Non-Breaking Hyphen |
 | [negativeSign](negativeSign.md) | Negative Sign |
+| [nonBreakingHyphen](nonBreakingHyphen.md) | Non-Breaking Hyphen |
 | [positiveSign](positiveSign.md) | Positive Sign |
 | [softHyphen](softHyphen.md) | Soft Hyphen |
 | [subNegative](subNegative.md) | Subscript Negative |

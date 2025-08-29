@@ -14,7 +14,7 @@ import { empty, space } from './unicode.ts';
  * @param input - number to convert
  * @returns number as text
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export function summarize(input: number): string {
   return numbering(input, {

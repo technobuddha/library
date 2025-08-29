@@ -49,11 +49,34 @@
 */
 
 /* Period parameters */
+/**
+ * The size of the state vector for the Mersenne Twister algorithm.
+ */
 const N = 624;
+
+/**
+ * The middle word, an offset used in the recurrence relation defining the series x, 1 ≤ m < n
+ */
 const M = 397;
-const MATRIX_A = 0x9908b0df; /* constant vector a */
-const UPPER_MASK = 0x80000000; /* most significant w-r bits */
-const LOWER_MASK = 0x7fffffff; /* least significant r bits */
+
+/**
+ * Constant vector a
+ */
+const MATRIX_A = 0x9908b0df;
+
+/**
+ * Most significant w-r bits
+ */
+const UPPER_MASK = 0x80000000;
+
+/**
+ * Least significant r bits
+ */
+const LOWER_MASK = 0x7fffffff;
+
+/**
+ * Lookup table used in the Mersenne Twister algorithm for conditional XOR operations.
+ */
 const MAG01 = [0, MATRIX_A];
 
 /**
@@ -80,17 +103,21 @@ function defaultSeed(): number {
  * The Mersenne Twister is a widely used PRNG known for its long period (2^19937−1),
  * high performance, and high-quality randomness. This class provides methods to seed
  * the generator and produce random numbers in various formats and intervals.
- * @example
- * ```typescript
- * const mt = new MersenneTwister(1234);
- * const randomInt = mt.genrandInt32();
- * const randomFloat = mt.genrandReal2();
- * ```
  * @remarks
  * - The generator can be seeded with a single number or an array of numbers.
  * - Methods are provided to generate 32-bit and 31-bit integers, as well as floating-point numbers
  *   in different intervals.
  * - This implementation is based on the original C code by Makoto Matsumoto and Takuji Nishimura.
+ *
+ * @example
+ * ```typescript
+ * const mt = new MersenneTwister(1234);
+ * mt.genrandInt32(); // 1982695502
+ * mt.genrandReal1(); // 0.33979119391641377
+ * mt.genrandReal2(); // 0.006705045932903886
+ * mt.genrandRes53(); // 0.489361593755425
+ * ```
+ *
  * @see https://en.wikipedia.org/wiki/Mersenne_Twister
  * @see http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html
  * @group Random

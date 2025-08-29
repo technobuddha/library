@@ -10,7 +10,7 @@ import { makeOrdinal } from './make-ordinal.ts';
 /**
  * Options for controlling how numbers are converted to words or symbols.
  * @group Math
- * @category Numbers
+ * @category Verbalization
  */
 export type Numbering = {
   /**

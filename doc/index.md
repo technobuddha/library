@@ -234,7 +234,37 @@ Technobuddha Library
 
 ## Math
 
-### Arithmetic
+### Comparison
+
+| Name | Description |
+| ------ | ------ |
+| [ApproximatelyEqualsOptions](Math/ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](Math/approximatelyEquals.md) function |
+| [approximatelyEquals](Math/approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
+| [compareNumbers](Math/compareNumbers.md) | Compare two numbers |
+| [isEven](Math/isEven.md) | Tests to see if the specified value is an even integer |
+| [isMultipleOf](Math/isMultipleOf.md) | Tests to see if the specified value is an multiple of *multiplier* |
+| [isNegativeZero](Math/isNegativeZero.md) | Tests to see if the specified value is negative zero |
+| [isOdd](Math/isOdd.md) | Tests to see if the specified value is an odd integer |
+
+### Constants
+
+| Variable | Description |
+| ------ | ------ |
+| [cardinalOnes](Math/cardinalOnes.md) | Words for unit numbers 0-19 |
+| [cardinalTens](Math/cardinalTens.md) | Words for tens 20-90 |
+| [negativeZero](Math/negativeZero.md) | Negative Zero |
+| [ordinalOnes](Math/ordinalOnes.md) | Words for ordinal numbers 0-19 |
+| [ordinalTens](Math/ordinalTens.md) | Words for ordinal tens 20-90 |
+
+### Number
+
+| Name | Description |
+| ------ | ------ |
+| [DeconstructedNumber](Math/DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
+| [constructNumber](Math/constructNumber.md) | Reconstructs a number from its deconstructed representation. |
+| [deconstructNumber](Math/deconstructNumber.md) | Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts. |
+
+### Operations
 
 | Name | Description |
 | ------ | ------ |
@@ -249,78 +279,46 @@ Technobuddha Library
 | [modulo](Math/modulo.md) | The % operator in JavaScript returns the remainder of a / b, but differs from some other languages in that the result will have the same sign as the dividend. For example, -1 % 8 == -1, whereas in some other languages (such as Python) the result would be 7. This function emulates the more correct modulo behavior, which is useful for certain applications such as calculating an offset index in a circular list. |
 | [round](Math/round.md) | Returns the nearest integer to the given number, with optional precision adjustments. |
 
-### Comparison
+### Roman Numerals
 
 | Name | Description |
 | ------ | ------ |
-| [ApproximatelyEqualsOptions](Math/ApproximatelyEqualsOptions.md) | Options for the [approximatelyEquals](Math/approximatelyEquals.md) function |
-| [approximatelyEquals](Math/approximatelyEquals.md) | Tests whether the two values are equal to each other, within a certain tolerance, taking into account floating point errors (numbers within EPSILON). |
-| [compareNumbers](Math/compareNumbers.md) | Compare two numbers |
-| [isNegativeZero](Math/isNegativeZero.md) | Tests to see if the specified value is negative zero |
-
-### Constants
-
-| Variable | Description |
-| ------ | ------ |
-| [cardinalOnes](Math/cardinalOnes.md) | Words for unit numbers 0-19 |
-| [cardinalTens](Math/cardinalTens.md) | Words for tens 20-90 |
-| [negativeZero](Math/negativeZero.md) | Negative Zero |
-| [ordinalOnes](Math/ordinalOnes.md) | Words for ordinal numbers 0-19 |
-| [ordinalTens](Math/ordinalTens.md) | Words for ordinal tens 20-90 |
-
-### Number
-
-| Function | Description |
-| ------ | ------ |
-| [constructNumber](Math/constructNumber.md) | Reconstructs a number from its deconstructed representation. |
-
-### Numbers
-
-| Name | Description |
-| ------ | ------ |
-| [CardinalOptions](Math/CardinalOptions.md) | Configuration options for cardinal number conversion. |
-| [DeconstructedNumber](Math/DeconstructedNumber.md) | Represents a number that has been deconstructed into its mathematical components. |
-| [FractionOptions](Math/FractionOptions.md) | Options for customizing the output and behavior of fraction number representations. |
-| [Numbering](Math/Numbering.md) | Options for controlling how numbers are converted to words or symbols. |
-| [OrdinalOptions](Math/OrdinalOptions.md) | Options for formatting ordinal numbers. |
 | [RomanOptions](Math/RomanOptions.md) | Options for converting numbers to Roman numerals. |
-| [cardinal](Math/cardinal.md) | Convert a number into text (the cardinal number) |
-| [deconstructNumber](Math/deconstructNumber.md) | Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts. |
-| [formatNumber](Math/formatNumber.md) | Formats a number according to the specified mask. |
-| [fraction](Math/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
-| [orderOfMagnitude](Math/orderOfMagnitude.md) | Get the spelled out word for an exponent |
-| [ordinal](Math/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
-| [padNumber](Math/padNumber.md) | Add leading zeros to a number to ensure a string of a minimum length |
-| [parseRoman](Math/parseRoman.md) | Parse a roman numeral string into its integer value. |
-| [summarize](Math/summarize.md) | Get a short description of a number |
-| [toRoman](Math/toRoman.md) | Parse number into a roman numeral string |
-
-### Parity
-
-| Function | Description |
-| ------ | ------ |
-| [isEven](Math/isEven.md) | Tests to see if the specified value is an even integer |
-| [isMultipleOf](Math/isMultipleOf.md) | Tests to see if the specified value is an multiple of *multiplier* |
-| [isOdd](Math/isOdd.md) | Tests to see if the specified value is an odd integer |
+| [deromanize](Math/deromanize.md) | Parse a roman numeral string into its integer value. |
+| [romanize](Math/romanize.md) | Convert a number into a roman numeral string |
 
 ### Statistics
 
 | Function | Description |
 | ------ | ------ |
-| [mean](Math/mean.md) | Calculates the arithmetic mean (average) of an array of numbers. |
+| [mean](Math/mean.md) | Calculates the Operations mean (average) of an array of numbers. |
 | [median](Math/median.md) | Calculates the median value of an array of numbers. |
 | [mode](Math/mode.md) | Returns the mode (the most frequently occurring element) of the given array. If multiple elements have the same highest frequency, the first encountered is returned. Returns `undefined` if the array is empty. |
 | [standardDeviation](Math/standardDeviation.md) | Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments. |
 | [sum](Math/sum.md) | Calculates the sum of an array of numbers. |
 | [variance](Math/variance.md) | Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments. |
 
-## Object
+### Verbalization
 
-### Clear Object
-
-| Function | Description |
+| Name | Description |
 | ------ | ------ |
-| [clearObject](Object/clearObject.md) | Delete all own enumerable string properties from an object |
+| [BinaryUnitsOptions](Math/BinaryUnitsOptions.md) | Options for the [binaryUnits](Math/binaryUnits.md) function |
+| [CardinalOptions](Math/CardinalOptions.md) | Configuration options for cardinal number conversion. |
+| [FractionOptions](Math/FractionOptions.md) | Options for customizing the output and behavior of fraction number representations. |
+| [MetricUnitsOptions](Math/MetricUnitsOptions.md) | Options for the [metricUnits](Math/metricUnits.md) function w |
+| [Numbering](Math/Numbering.md) | Options for controlling how numbers are converted to words or symbols. |
+| [OrdinalOptions](Math/OrdinalOptions.md) | Options for formatting ordinal numbers. |
+| [binaryUnits](Math/binaryUnits.md) | Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1KiB) |
+| [cardinal](Math/cardinal.md) | Convert a number into text (the cardinal number) |
+| [formatNumber](Math/formatNumber.md) | Formats a number according to the specified mask. |
+| [fraction](Math/fraction.md) | Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form. |
+| [metricUnits](Math/metricUnits.md) | Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m) |
+| [orderOfMagnitude](Math/orderOfMagnitude.md) | Get the spelled out word for an exponent |
+| [ordinal](Math/ordinal.md) | Convert a number into an ordinal number string (1st, 2nd, 3rd, etc). |
+| [pad](Math/pad.md) | Add leading zeros to a number to ensure a string of a minimum length |
+| [summarize](Math/summarize.md) | Get a short description of a number |
+
+## Object
 
 ### Comparison
 
@@ -329,43 +327,58 @@ Technobuddha Library
 | [compare](Object/compare.md) | Compare two objects |
 | [shallowEquals](Object/shallowEquals.md) | Compare two object for equality. Testing goes one level deep. |
 
-### Type Guards
-
-| Function | Description |
-| ------ | ------ |
-| [isIterable](Object/isIterable.md) | Determines if the provided object is iterable. |
-| [isIterator](Object/isIterator.md) | Determines whether the provided object conforms to the Iterator interface. |
-
-### Utility
-
-| Function | Description |
-| ------ | ------ |
-| [sortKeys](Object/sortKeys.md) | Recursively sorts the keys of an object in lexicographical order. |
-
-## Primitive
-
 ### Conversion
 
 | Function | Description |
 | ------ | ------ |
-| [toError](Primitive/toError.md) | Convert the entity to an Error object. |
-| [toInteger](Primitive/toInteger.md) | Convert an entity to a integer number. |
-| [toNumber](Primitive/toNumber.md) | Convert an entity to a number. |
-| [toPrimitive](Primitive/toPrimitive.md) | Convert an object into its primitive (string, number, etc.) value |
+| [toError](Object/toError.md) | Convert the entity to an Error object. |
+| [toInteger](Object/toInteger.md) | Convert an entity to a integer number. |
+| [toNumber](Object/toNumber.md) | Convert an entity to a number. |
+| [toPrimitive](Object/toPrimitive.md) | Convert an object into its primitive (string, number, etc.) value |
 
-### Testing
+### Operations
 
 | Function | Description |
 | ------ | ------ |
-| [isPrimitive](Primitive/isPrimitive.md) | Check to see if an object is a primitive |
+| [clear](Object/clear.md) | Delete all own enumerable string properties from an object |
+| [sortKeys](Object/sortKeys.md) | Recursively sorts the keys of an object in lexicographical order. |
+
+### Type Guards
+
+| Function | Description |
+| ------ | ------ |
+| [isBoolean](Object/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
+| [isFunction](Object/isFunction.md) | Determines whether the provided value is a function. |
+| [isIterable](Object/isIterable.md) | Determines if the provided object is iterable. |
+| [isIterator](Object/isIterator.md) | Determines whether the provided object conforms to the Iterator interface. |
+| [isNumber](Object/isNumber.md) | Determines whether the provided value is a number or a Number object. |
+| [isObject](Object/isObject.md) | Determines whether the provided value is a non-null object. |
+| [isPrimitive](Object/isPrimitive.md) | Check to see if an object is a primitive |
+| [isRegExp](Object/isRegExp.md) | Determines whether the provided value is a `RegExp` object. |
+| [isString](Object/isString.md) | Determines whether the provided value is a string. |
 
 ## Programming
 
-### Case Conversion
+### GraphQl
+
+| Name | Description |
+| ------ | ------ |
+| [GraphQLArray](Programming/GraphQLArray.md) | A GraphQL Array, similar to a JSONArray |
+| [GraphQLObject](Programming/GraphQLObject.md) | A GraphQL Object, similar to a JSONObject |
+| [GraphQLValue](Programming/GraphQLValue.md) | A GraphQL Value, similar to a JSONValue |
+| [graphQL](Programming/graphQL.md) | Tagged template function for constructing GraphQL queries or mutations. |
+
+### Variables
 
 | Function | Description |
 | ------ | ------ |
-| [startCase](Programming/startCase.md) | Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase. |
+| [camelCase](Programming/camelCase.md) | Convert an identifier string to a camel case |
+| [dotCase](Programming/dotCase.md) | Convert an identifier string to a dot form |
+| [humanCase](Programming/humanCase.md) | Convert an identifier string to a human case |
+| [kebabCase](Programming/kebabCase.md) | Convert an identifier string to a kebab-case form |
+| [macroCase](Programming/macroCase.md) | Convert an identifier string to macro case |
+| [pascalCase](Programming/pascalCase.md) | Convert an identifier string to pascal case |
+| [snakeCase](Programming/snakeCase.md) | Convert an identifier string to snake case |
 | [tokenize](Programming/tokenize.md) | Splits the input string into an array of words. |
 
 ## Random
@@ -393,17 +406,17 @@ Technobuddha Library
 
 ## RegExp
 
-### Matching
-
-| Function | Description |
-| ------ | ------ |
-| [matches](RegExp/matches.md) | Determines if the given `text` matches the provided `match` criteria. |
-
-### Template
+### Construction
 
 | Function | Description |
 | ------ | ------ |
 | [re](RegExp/re.md) | Constructs a new `RegExp` by interpolating template strings and provided regular expressions. |
+
+### Operations
+
+| Function | Description |
+| ------ | ------ |
+| [matches](RegExp/matches.md) | Determines if the given `text` matches the provided `match` criteria. |
 
 ### Validation
 
@@ -437,15 +450,9 @@ Technobuddha Library
 
 | Function | Description |
 | ------ | ------ |
-| [camelCase](String/camelCase.md) | Convert an identifier string to a camel case |
 | [capitalize](String/capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
-| [dotCase](String/dotCase.md) | Convert an identifier string to a dot form |
-| [humanCase](String/humanCase.md) | Convert an identifier string to a human case |
-| [kebabCase](String/kebabCase.md) | Convert an identifier string to a kebab-case form |
-| [macroCase](String/macroCase.md) | Convert an identifier string to macro case |
 | [matchCase](String/matchCase.md) | Attempt to convert the input string into the same case as the target string |
-| [pascalCase](String/pascalCase.md) | Convert an identifier string to pascal case |
-| [snakeCase](String/snakeCase.md) | Convert an identifier string to snake case |
+| [startCase](String/startCase.md) | Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase. |
 | [title](String/title.md) | Convert a string to a title, capitalizing each word, except for the small words |
 | [uncapitalize](String/uncapitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 
@@ -507,6 +514,7 @@ Technobuddha Library
 | [toBoolean](String/toBoolean.md) | Convert a string to a boolean value |
 | [toEnumeration](String/toEnumeration.md) | Convert a string to a numeric value |
 | [toFilename](String/toFilename.md) | Convert a string so that it can be used as a filename |
+| [toString](String/toString.md) | Converts an unknown value to its string representation. |
 
 ### Correction
 
@@ -564,6 +572,12 @@ Technobuddha Library
 | [MaskOptions](String/MaskOptions.md) | Options for the [mask](String/mask.md) function |
 | [mask](String/mask.md) | Use a simple mask to display a string |
 
+### Operations
+
+| Function | Description |
+| ------ | ------ |
+| [singleLine](String/singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |
+
 ### Quoting
 
 | Name | Description |
@@ -597,38 +611,12 @@ Technobuddha Library
 | [FillTemplateOptions](String/FillTemplateOptions.md) | Options for the [fillTemplate](String/fillTemplate.md) function |
 | [fillTemplate](String/fillTemplate.md) | Fill a template with supplied values |
 
-### Units
-
-| Name | Description |
-| ------ | ------ |
-| [BinaryUnitsOptions](String/BinaryUnitsOptions.md) | Options for the [binaryUnits](String/binaryUnits.md) function |
-| [MetricUnitsOptions](String/MetricUnitsOptions.md) | Options for the [metricUnits](String/metricUnits.md) function w |
-| [binaryUnits](String/binaryUnits.md) | Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1K) |
-| [metricUnits](String/metricUnits.md) | Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m) |
-
 ### Word Wrapping
 
 | Name | Description |
 | ------ | ------ |
 | [WordwrapOptions](String/WordwrapOptions.md) | Options for the [wordwrap](String/wordwrap.md) function |
 | [wordwrap](String/wordwrap.md) | Wrap text so that it fits within a area of fixed width |
-
-## Template
-
-### GraphQl
-
-| Name | Description |
-| ------ | ------ |
-| [GraphQLArray](Template/GraphQLArray.md) | A GraphQL Array, similar to a JSONArray |
-| [GraphQLObject](Template/GraphQLObject.md) | A GraphQL Object, similar to a JSONObject |
-| [GraphQLValue](Template/GraphQLValue.md) | A GraphQL Value, similar to a JSONValue |
-| [graphQL](Template/graphQL.md) | Tagged template function for constructing GraphQL queries or mutations. |
-
-### Single Line
-
-| Function | Description |
-| ------ | ------ |
-| [singleLine](Template/singleLine.md) | Joins a template literal into a single line string by removing line breaks and leading whitespace, then interleaving the provided arguments. The result is a trimmed, single-line string. |
 
 ## Time
 
@@ -787,8 +775,8 @@ Technobuddha Library
 | [fractionSlash](Unicode/fractionSlash.md) | Fraction Slash |
 | [hyphen](Unicode/hyphen.md) | Hyphen |
 | [invisiblePlus](Unicode/invisiblePlus.md) | Invisible Plus sign |
-| [nbHyphen](Unicode/nbHyphen.md) | Non-Breaking Hyphen |
 | [negativeSign](Unicode/negativeSign.md) | Negative Sign |
+| [nonBreakingHyphen](Unicode/nonBreakingHyphen.md) | Non-Breaking Hyphen |
 | [positiveSign](Unicode/positiveSign.md) | Positive Sign |
 | [softHyphen](Unicode/softHyphen.md) | Soft Hyphen |
 | [subNegative](Unicode/subNegative.md) | Subscript Negative |
@@ -841,26 +829,9 @@ Technobuddha Library
 | ------ | ------ |
 | [PriorityQueue](Utility/PriorityQueue.md) | A simple priority queue |
 
-### Conversion
-
-| Function | Description |
-| ------ | ------ |
-| [toString](Utility/toString.md) | Converts an unknown value to its string representation. |
-
 ### Global Types
 
 | Type Alias | Description |
 | ------ | ------ |
 | [TypedArray](Utility/TypedArray.md) | Any of the built-in typed array types in JavaScript. |
-
-### Type Checking
-
-| Function | Description |
-| ------ | ------ |
-| [isBoolean](Utility/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
-| [isFunction](Utility/isFunction.md) | Determines whether the provided value is a function. |
-| [isNumber](Utility/isNumber.md) | Determines whether the provided value is a number or a Number object. |
-| [isObject](Utility/isObject.md) | Determines whether the provided value is a non-null object. |
-| [isRegExp](Utility/isRegExp.md) | Determines whether the provided value is a `RegExp` object. |
-| [isString](Utility/isString.md) | Determines whether the provided value is a string. |
 

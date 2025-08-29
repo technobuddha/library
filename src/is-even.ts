@@ -13,7 +13,7 @@ import { isMultipleOf } from './is-multiple-of.ts';
  * isEven(2.2); // false
  * ```
  * @group Math
- * @category Parity
+ * @category Comparison
  */
 export function isEven(input: number): boolean {
   return Number.isInteger(input) && isMultipleOf(input, 2);

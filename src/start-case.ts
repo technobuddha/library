@@ -7,7 +7,7 @@
  * startCase('hello world'); // "Hello World"
  * startCase('fooBar');      // "Foobar"
  * ```
- * @group Programming
+ * @group String
  * @category Case Conversion
  */
 export function startCase(input: string): string {

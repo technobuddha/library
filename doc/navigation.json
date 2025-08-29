@@ -899,7 +899,112 @@
     "title": "Math",
     "children": [
       {
-        "title": "Arithmetic",
+        "title": "Comparison",
+        "children": [
+          {
+            "title": "ApproximatelyEqualsOptions",
+            "kind": 2097152,
+            "path": "Math/ApproximatelyEqualsOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "approximatelyEquals",
+            "kind": 64,
+            "path": "Math/approximatelyEquals.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "compareNumbers",
+            "kind": 64,
+            "path": "Math/compareNumbers.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isEven",
+            "kind": 64,
+            "path": "Math/isEven.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isMultipleOf",
+            "kind": 64,
+            "path": "Math/isMultipleOf.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isNegativeZero",
+            "kind": 64,
+            "path": "Math/isNegativeZero.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isOdd",
+            "kind": 64,
+            "path": "Math/isOdd.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Constants",
+        "children": [
+          {
+            "title": "cardinalOnes",
+            "kind": 32,
+            "path": "Math/cardinalOnes.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "cardinalTens",
+            "kind": 32,
+            "path": "Math/cardinalTens.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "negativeZero",
+            "kind": 32,
+            "path": "Math/negativeZero.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "ordinalOnes",
+            "kind": 32,
+            "path": "Math/ordinalOnes.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "ordinalTens",
+            "kind": 32,
+            "path": "Math/ordinalTens.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Number",
+        "children": [
+          {
+            "title": "DeconstructedNumber",
+            "kind": 2097152,
+            "path": "Math/DeconstructedNumber.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "constructNumber",
+            "kind": 64,
+            "path": "Math/constructNumber.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "deconstructNumber",
+            "kind": 64,
+            "path": "Math/deconstructNumber.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Operations",
         "children": [
           {
             "title": "CeilOptions",
@@ -964,113 +1069,8 @@
         ]
       },
       {
-        "title": "Comparison",
+        "title": "Roman Numerals",
         "children": [
-          {
-            "title": "ApproximatelyEqualsOptions",
-            "kind": 2097152,
-            "path": "Math/ApproximatelyEqualsOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "approximatelyEquals",
-            "kind": 64,
-            "path": "Math/approximatelyEquals.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "compareNumbers",
-            "kind": 64,
-            "path": "Math/compareNumbers.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isNegativeZero",
-            "kind": 64,
-            "path": "Math/isNegativeZero.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Constants",
-        "children": [
-          {
-            "title": "cardinalOnes",
-            "kind": 32,
-            "path": "Math/cardinalOnes.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "cardinalTens",
-            "kind": 32,
-            "path": "Math/cardinalTens.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "negativeZero",
-            "kind": 32,
-            "path": "Math/negativeZero.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "ordinalOnes",
-            "kind": 32,
-            "path": "Math/ordinalOnes.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "ordinalTens",
-            "kind": 32,
-            "path": "Math/ordinalTens.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Number",
-        "children": [
-          {
-            "title": "constructNumber",
-            "kind": 64,
-            "path": "Math/constructNumber.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Numbers",
-        "children": [
-          {
-            "title": "CardinalOptions",
-            "kind": 2097152,
-            "path": "Math/CardinalOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "DeconstructedNumber",
-            "kind": 2097152,
-            "path": "Math/DeconstructedNumber.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "FractionOptions",
-            "kind": 2097152,
-            "path": "Math/FractionOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "Numbering",
-            "kind": 2097152,
-            "path": "Math/Numbering.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "OrdinalOptions",
-            "kind": 2097152,
-            "path": "Math/OrdinalOptions.md",
-            "isDeprecated": false
-          },
           {
             "title": "RomanOptions",
             "kind": 2097152,
@@ -1078,86 +1078,15 @@
             "isDeprecated": false
           },
           {
-            "title": "cardinal",
+            "title": "deromanize",
             "kind": 64,
-            "path": "Math/cardinal.md",
+            "path": "Math/deromanize.md",
             "isDeprecated": false
           },
           {
-            "title": "deconstructNumber",
+            "title": "romanize",
             "kind": 64,
-            "path": "Math/deconstructNumber.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "formatNumber",
-            "kind": 64,
-            "path": "Math/formatNumber.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "fraction",
-            "kind": 64,
-            "path": "Math/fraction.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "orderOfMagnitude",
-            "kind": 64,
-            "path": "Math/orderOfMagnitude.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "ordinal",
-            "kind": 64,
-            "path": "Math/ordinal.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "padNumber",
-            "kind": 64,
-            "path": "Math/padNumber.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "parseRoman",
-            "kind": 64,
-            "path": "Math/parseRoman.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "summarize",
-            "kind": 64,
-            "path": "Math/summarize.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toRoman",
-            "kind": 64,
-            "path": "Math/toRoman.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Parity",
-        "children": [
-          {
-            "title": "isEven",
-            "kind": 64,
-            "path": "Math/isEven.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isMultipleOf",
-            "kind": 64,
-            "path": "Math/isMultipleOf.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isOdd",
-            "kind": 64,
-            "path": "Math/isOdd.md",
+            "path": "Math/romanize.md",
             "isDeprecated": false
           }
         ]
@@ -1202,23 +1131,107 @@
             "isDeprecated": false
           }
         ]
+      },
+      {
+        "title": "Verbalization",
+        "children": [
+          {
+            "title": "BinaryUnitsOptions",
+            "kind": 2097152,
+            "path": "Math/BinaryUnitsOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "CardinalOptions",
+            "kind": 2097152,
+            "path": "Math/CardinalOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "FractionOptions",
+            "kind": 2097152,
+            "path": "Math/FractionOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "MetricUnitsOptions",
+            "kind": 2097152,
+            "path": "Math/MetricUnitsOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "Numbering",
+            "kind": 2097152,
+            "path": "Math/Numbering.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "OrdinalOptions",
+            "kind": 2097152,
+            "path": "Math/OrdinalOptions.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "binaryUnits",
+            "kind": 64,
+            "path": "Math/binaryUnits.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "cardinal",
+            "kind": 64,
+            "path": "Math/cardinal.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "formatNumber",
+            "kind": 64,
+            "path": "Math/formatNumber.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "fraction",
+            "kind": 64,
+            "path": "Math/fraction.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "metricUnits",
+            "kind": 64,
+            "path": "Math/metricUnits.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "orderOfMagnitude",
+            "kind": 64,
+            "path": "Math/orderOfMagnitude.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "ordinal",
+            "kind": 64,
+            "path": "Math/ordinal.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "pad",
+            "kind": 64,
+            "path": "Math/pad.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "summarize",
+            "kind": 64,
+            "path": "Math/summarize.md",
+            "isDeprecated": false
+          }
+        ]
       }
     ]
   },
   {
     "title": "Object",
     "children": [
-      {
-        "title": "Clear Object",
-        "children": [
-          {
-            "title": "clearObject",
-            "kind": 64,
-            "path": "Object/clearObject.md",
-            "isDeprecated": false
-          }
-        ]
-      },
       {
         "title": "Comparison",
         "children": [
@@ -1237,8 +1250,66 @@
         ]
       },
       {
+        "title": "Conversion",
+        "children": [
+          {
+            "title": "toError",
+            "kind": 64,
+            "path": "Object/toError.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "toInteger",
+            "kind": 64,
+            "path": "Object/toInteger.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "toNumber",
+            "kind": 64,
+            "path": "Object/toNumber.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "toPrimitive",
+            "kind": 64,
+            "path": "Object/toPrimitive.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "children": [
+          {
+            "title": "clear",
+            "kind": 64,
+            "path": "Object/clear.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "sortKeys",
+            "kind": 64,
+            "path": "Object/sortKeys.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
         "title": "Type Guards",
         "children": [
+          {
+            "title": "isBoolean",
+            "kind": 64,
+            "path": "Object/isBoolean.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isFunction",
+            "kind": 64,
+            "path": "Object/isFunction.md",
+            "isDeprecated": false
+          },
           {
             "title": "isIterable",
             "kind": 64,
@@ -1250,61 +1321,35 @@
             "kind": 64,
             "path": "Object/isIterator.md",
             "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Utility",
-        "children": [
+          },
           {
-            "title": "sortKeys",
+            "title": "isNumber",
             "kind": 64,
-            "path": "Object/sortKeys.md",
-            "isDeprecated": false
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Primitive",
-    "children": [
-      {
-        "title": "Conversion",
-        "children": [
-          {
-            "title": "toError",
-            "kind": 64,
-            "path": "Primitive/toError.md",
+            "path": "Object/isNumber.md",
             "isDeprecated": false
           },
           {
-            "title": "toInteger",
+            "title": "isObject",
             "kind": 64,
-            "path": "Primitive/toInteger.md",
+            "path": "Object/isObject.md",
             "isDeprecated": false
           },
-          {
-            "title": "toNumber",
-            "kind": 64,
-            "path": "Primitive/toNumber.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "toPrimitive",
-            "kind": 64,
-            "path": "Primitive/toPrimitive.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Testing",
-        "children": [
           {
             "title": "isPrimitive",
             "kind": 64,
-            "path": "Primitive/isPrimitive.md",
+            "path": "Object/isPrimitive.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isRegExp",
+            "kind": 64,
+            "path": "Object/isRegExp.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "isString",
+            "kind": 64,
+            "path": "Object/isString.md",
             "isDeprecated": false
           }
         ]
@@ -1315,12 +1360,77 @@
     "title": "Programming",
     "children": [
       {
-        "title": "Case Conversion",
+        "title": "GraphQl",
         "children": [
           {
-            "title": "startCase",
+            "title": "GraphQLArray",
+            "kind": 2097152,
+            "path": "Programming/GraphQLArray.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "GraphQLObject",
+            "kind": 2097152,
+            "path": "Programming/GraphQLObject.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "GraphQLValue",
+            "kind": 2097152,
+            "path": "Programming/GraphQLValue.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "graphQL",
             "kind": 64,
-            "path": "Programming/startCase.md",
+            "path": "Programming/graphQL.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Variables",
+        "children": [
+          {
+            "title": "camelCase",
+            "kind": 64,
+            "path": "Programming/camelCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "dotCase",
+            "kind": 64,
+            "path": "Programming/dotCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "humanCase",
+            "kind": 64,
+            "path": "Programming/humanCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "kebabCase",
+            "kind": 64,
+            "path": "Programming/kebabCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "macroCase",
+            "kind": 64,
+            "path": "Programming/macroCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "pascalCase",
+            "kind": 64,
+            "path": "Programming/pascalCase.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "snakeCase",
+            "kind": 64,
+            "path": "Programming/snakeCase.md",
             "isDeprecated": false
           },
           {
@@ -1393,23 +1503,23 @@
     "title": "RegExp",
     "children": [
       {
-        "title": "Matching",
-        "children": [
-          {
-            "title": "matches",
-            "kind": 64,
-            "path": "RegExp/matches.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Template",
+        "title": "Construction",
         "children": [
           {
             "title": "re",
             "kind": 64,
             "path": "RegExp/re.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
+        "title": "Operations",
+        "children": [
+          {
+            "title": "matches",
+            "kind": 64,
+            "path": "RegExp/matches.md",
             "isDeprecated": false
           }
         ]
@@ -1504,39 +1614,9 @@
         "title": "Case Conversion",
         "children": [
           {
-            "title": "camelCase",
-            "kind": 64,
-            "path": "String/camelCase.md",
-            "isDeprecated": false
-          },
-          {
             "title": "capitalize",
             "kind": 64,
             "path": "String/capitalize.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "dotCase",
-            "kind": 64,
-            "path": "String/dotCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "humanCase",
-            "kind": 64,
-            "path": "String/humanCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "kebabCase",
-            "kind": 64,
-            "path": "String/kebabCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "macroCase",
-            "kind": 64,
-            "path": "String/macroCase.md",
             "isDeprecated": false
           },
           {
@@ -1546,15 +1626,9 @@
             "isDeprecated": false
           },
           {
-            "title": "pascalCase",
+            "title": "startCase",
             "kind": 64,
-            "path": "String/pascalCase.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "snakeCase",
-            "kind": 64,
-            "path": "String/snakeCase.md",
+            "path": "String/startCase.md",
             "isDeprecated": false
           },
           {
@@ -1747,6 +1821,12 @@
             "kind": 64,
             "path": "String/toFilename.md",
             "isDeprecated": false
+          },
+          {
+            "title": "toString",
+            "kind": 64,
+            "path": "String/toString.md",
+            "isDeprecated": false
           }
         ]
       },
@@ -1912,6 +1992,17 @@
         ]
       },
       {
+        "title": "Operations",
+        "children": [
+          {
+            "title": "singleLine",
+            "kind": 64,
+            "path": "String/singleLine.md",
+            "isDeprecated": false
+          }
+        ]
+      },
+      {
         "title": "Quoting",
         "children": [
           {
@@ -2010,35 +2101,6 @@
         ]
       },
       {
-        "title": "Units",
-        "children": [
-          {
-            "title": "BinaryUnitsOptions",
-            "kind": 2097152,
-            "path": "String/BinaryUnitsOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "MetricUnitsOptions",
-            "kind": 2097152,
-            "path": "String/MetricUnitsOptions.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "binaryUnits",
-            "kind": 64,
-            "path": "String/binaryUnits.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "metricUnits",
-            "kind": 64,
-            "path": "String/metricUnits.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
         "title": "Word Wrapping",
         "children": [
           {
@@ -2051,51 +2113,6 @@
             "title": "wordwrap",
             "kind": 64,
             "path": "String/wordwrap.md",
-            "isDeprecated": false
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Template",
-    "children": [
-      {
-        "title": "GraphQl",
-        "children": [
-          {
-            "title": "GraphQLArray",
-            "kind": 2097152,
-            "path": "Template/GraphQLArray.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "GraphQLObject",
-            "kind": 2097152,
-            "path": "Template/GraphQLObject.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "GraphQLValue",
-            "kind": 2097152,
-            "path": "Template/GraphQLValue.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "graphQL",
-            "kind": 64,
-            "path": "Template/graphQL.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Single Line",
-        "children": [
-          {
-            "title": "singleLine",
-            "kind": 64,
-            "path": "Template/singleLine.md",
             "isDeprecated": false
           }
         ]
@@ -2633,15 +2650,15 @@
             "isDeprecated": false
           },
           {
-            "title": "nbHyphen",
-            "kind": 32,
-            "path": "Unicode/nbHyphen.md",
-            "isDeprecated": false
-          },
-          {
             "title": "negativeSign",
             "kind": 32,
             "path": "Unicode/negativeSign.md",
+            "isDeprecated": false
+          },
+          {
+            "title": "nonBreakingHyphen",
+            "kind": 32,
+            "path": "Unicode/nonBreakingHyphen.md",
             "isDeprecated": false
           },
           {
@@ -2796,64 +2813,12 @@
         ]
       },
       {
-        "title": "Conversion",
-        "children": [
-          {
-            "title": "toString",
-            "kind": 64,
-            "path": "Utility/toString.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
         "title": "Global Types",
         "children": [
           {
             "title": "TypedArray",
             "kind": 2097152,
             "path": "Utility/TypedArray.md",
-            "isDeprecated": false
-          }
-        ]
-      },
-      {
-        "title": "Type Checking",
-        "children": [
-          {
-            "title": "isBoolean",
-            "kind": 64,
-            "path": "Utility/isBoolean.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isFunction",
-            "kind": 64,
-            "path": "Utility/isFunction.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isNumber",
-            "kind": 64,
-            "path": "Utility/isNumber.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isObject",
-            "kind": 64,
-            "path": "Utility/isObject.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isRegExp",
-            "kind": 64,
-            "path": "Utility/isRegExp.md",
-            "isDeprecated": false
-          },
-          {
-            "title": "isString",
-            "kind": 64,
-            "path": "Utility/isString.md",
             "isDeprecated": false
           }
         ]

@@ -25,6 +25,15 @@ function sameValue(x: unknown, y: unknown): boolean {
  * @returns true if the two objects have the same members
  * @group Object
  * @category Comparison
+ * @example
+ * ```typescript
+ * const a = \{ x: 1, y: 2 \};
+ * const b = \{ x: 1, y: 2 \};
+ * shallowEquals(a, b); // true
+ * shallowEquals(a, \{ x: 1 \}); // false
+ * shallowEquals(a, \{ x: 1, y: 3 \}); // false
+ * shallowEquals(a, b, ['y']); // true
+ * ```
  */
 export function shallowEquals(
   objA: Record<string, unknown> | null | undefined,

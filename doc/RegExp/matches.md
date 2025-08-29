@@ -16,7 +16,7 @@ function matches(text: string, match:
   | RegExp, any, any>): boolean;
 ```
 
-Defined in: [matches.ts:17](https://github.com/technobuddha/library/blob/main/src/matches.ts#L17)
+Defined in: [matches.ts:24](https://github.com/technobuddha/library/blob/main/src/matches.ts#L24)
 
 Determines if the given `text` matches the provided `match` criteria.
 
@@ -37,4 +37,13 @@ The `match` parameter can be:
 `boolean`
 
 `true` if the text matches the criteria; otherwise, `false`.
+
+## Example
+
+```typescript
+matches('Hello', 'hello'); // true
+matches('Hello', /he.*/ui); // true
+matches('Hello', ['hi', /he.*/ui]); // true
+matches('Hello', ['hi', 'hey']); // false
+```
 

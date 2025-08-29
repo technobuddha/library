@@ -1,54 +1,8 @@
 /* eslint-disable unicorn/better-regex */
 /* eslint-disable require-unicode-regexp */
 /* eslint-disable no-control-regex */
-import { build } from './build.ts';
-import { collapse } from './collapse.ts';
-import { splitChars } from './split-chars.ts';
-import { zipperMerge } from './zipper-merge.ts';
 
-/**
- * Constructs a new `RegExp` by interpolating template strings and provided regular expressions.
- *
- * This function allows you to compose regular expressions using template literals,
- * automatically merging flags and wrapping interpolated regex sources as non-capturing groups
- * when appropriate.
- * @param template - The template string array containing the literal parts of the pattern.
- * @param args - The regular expressions to interpolate into the template.
- * @returns A new `RegExp` object with the combined pattern and merged flags.
- * @group RegExp
- * @category Template
- */
-export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
-  const flags = new Set<string>(['u']);
-  const reText = build(
-    collapse(
-      zipperMerge(
-        Array.from(template),
-        args.map((a) => {
-          for (const flag of splitChars(a.flags)) {
-            flags.add(flag);
-          }
-          let { source } = a;
-          if (source.startsWith('^') && source.endsWith('$')) {
-            source = source.slice(1, -1);
-          }
-
-          if (source.startsWith('[') && source.endsWith(']')) {
-            return source;
-          }
-
-          if (source.startsWith('(?:') && source.endsWith(')')) {
-            return source;
-          }
-
-          return `(?:${source})`;
-        }),
-      ).flat(),
-    ),
-  );
-
-  return new RegExp(reText, build(flags.values()));
-}
+import { re } from './re.ts';
 
 /**
  * Validate an IPv4 segment.
@@ -60,6 +14,13 @@ const IPV4SEG = /(25[0-5]|(?:2[0-4]|1[0-9]|0?[0-9]|0{0,2})[0-9])/;
  * validate an IPv4 address
  * @group RegExp
  * @category Validation
+ * @example
+ * ```typescript
+ * ipV4.test('192.168.1.1'); // true
+ * ipV4.test('255.255.255.255'); // true
+ * ipV4.test('256.0.0.1'); // false
+ * ipV4.test('abc.def.ghi.jkl'); // false
+ * ```
  */
 export const ipV4 = re`^${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}$`;
 
@@ -85,6 +46,14 @@ const NET192 = /^192[.]168$/;
  * determine if Ipv4 address is local
  * @group RegExp
  * @category Validation
+ * @example
+ * ```typescript
+ * ipV4Local.test('192.168.1.1'); // true
+ * ipV4Local.test('10.0.0.1'); // true
+ * ipV4Local.test('172.16.0.1'); // true
+ * ipV4Local.test('8.8.8.8'); // false
+ * ipV4Local.test('256.0.0.1'); // false
+ * ```
  */
 export const ipV4Local = re`^(?:${NET10}|${NET172}|${NET192})[.]${IPV4SEG}[.]${IPV4SEG}$`;
 
@@ -165,6 +134,14 @@ const TIMEZONE = re`^(?:(?:${ZONEHOUR}(?::${ZONEMINUTE})?)|Z)$`;
  * Validate a ISO formatted date
  * @group RegExp
  * @category Validation
+ * @example
+ * ```typescript
+ * isoDate.test('2023-08-29T12:34:56Z'); // true
+ * isoDate.test('2023-08-29T12:34:56.789+02:00'); // true
+ * isoDate.test('2023-08-29T12:34'); // true
+ * isoDate.test('2023-08-29'); // false
+ * isoDate.test('not-a-date'); // false
+ * ```
  */
 export const isoDate = re`^${YEAR}-${MONTH}-${DAY}T${HOUR}:${MINUTE}(?::${SECOND}(?:[.]${FRACTION})?)?${TIMEZONE}$`;
 
@@ -172,6 +149,16 @@ export const isoDate = re`^${YEAR}-${MONTH}-${DAY}T${HOUR}:${MINUTE}(?::${SECOND
  * Validate a valid number
  * @group RegExp
  * @category Validation
+ * @example
+ * ```typescript
+ * numeric.test('123'); // true
+ * numeric.test('-123.45'); // true
+ * numeric.test('1.23e4'); // true
+ * numeric.test('Infinity'); // true
+ * numeric.test('NaN'); // true
+ * numeric.test('abc'); // false
+ * numeric.test(''); // false
+ * ```
  */
 export const numeric = /^((?:NaN|[+-]?(?:(?:\d+|\d*[.]\d+)(?:[Ee][+-]?\d+)?|[+-]?Infinity)))$/;
 
@@ -191,6 +178,12 @@ const TLD = /^[a-z]{2,}$/;
  * Regular expression for matching a domain name composed of a host and a top-level domain (TLD).
  * @group RegExp
  * @category Validation
+ * @example
+ * ```typescript
+ * domain.test('example.com'); // true
+ * domain.test('sub.example.co'); // true
+ * domain.test('invalid_domain'); // false
+ * ```
  */
 export const domain = re`^${HOST}+${TLD}$`;
 
@@ -222,5 +215,12 @@ const EMAILADDRESS = re`(?:${EMAILGLYPH}+(?:[.]${EMAILGLYPH}+)*|"(?:${EMAILQUOTE
  * validate an valid email address
  * @group RegExp
  * @category Validation
+ * @example
+ * ```typescript
+ * email.test('user@example.com'); // true
+ * email.test('user@sub.example.co'); // true
+ * email.test('invalid@domain'); // false
+ * email.test('not-an-email'); // false
+ * ```
  */
 export const email = re`${EMAILADDRESS}@(?:\\[${ipV4}\\]|${domain})$`;

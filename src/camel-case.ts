@@ -7,8 +7,15 @@ import { empty } from './unicode.ts';
  * Convert an identifier string to a camel case
  * @param input - The identifier string
  * @returns string in camel case
- * @group String
- * @category Case Conversion
+ * @group Programming
+ * @category Variables
+ * @example
+ * ```typescript
+ * camelCase('hello world'); // 'helloWorld'
+ * camelCase('Hello World'); // 'helloWorld'
+ * camelCase('foo_bar-baz'); // 'fooBarBaz'
+ * camelCase('FOO BAR'); // 'fooBar'
+ * ```
  */
 export function camelCase(input: string): string {
   const [first, ...rest] = tokenize(removeDiacritics(input));

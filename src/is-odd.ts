@@ -13,7 +13,7 @@ import { isMultipleOf } from './is-multiple-of.ts';
  * isOdd(3.1); // false
  * ```
  * @group Math
- * @category Parity
+ * @category Comparison
  */
 export function isOdd(input: number): boolean {
   return Number.isInteger(input) && !isMultipleOf(input, 2);

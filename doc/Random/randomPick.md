@@ -11,7 +11,7 @@ Technobuddha Library
 function randomPick<T>(list: readonly T[], random: () => number): undefined | T;
 ```
 
-Defined in: [random-pick.ts:10](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L10)
+Defined in: [random-pick.ts:15](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L15)
 
 Pick a random items from a list.
 
@@ -34,9 +34,11 @@ Pick a random items from a list.
 
 Randomly selected item
 
-## Default Value
+## Example
 
-```ts
-random  Math.random
+```typescript
+const items = ['a', 'b', 'c'];
+randomPick(items, () => 0.5); // 'b' (deterministic for example)
+randomPick([], () => 0.5); // undefined
 ```
 

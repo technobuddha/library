@@ -12,7 +12,14 @@ import { type TBJsonValue } from './json.ts';
  * @param object - The object or value whose keys should be sorted.
  * @returns A new object with keys sorted, or the original value if it is a primitive or array.
  * @group Object
- * @category Utility
+ * @category Operations
+ * @example
+ * ```typescript
+ * sortKeys(\{ b: 2, a: 1 \}); // returns \{ a: 1, b: 2 \}
+ * sortKeys(\{ z: 1, y: \{ b: 2, a: 1 \} \}); // returns \{ y: \{ a: 1, b: 2 \}, z: 1 \}
+ * sortKeys([\{ b: 2, a: 1 \}, \{ d: 4, c: 3 \}]); // returns [\{ a: 1, b: 2 \}, \{ c: 3, d: 4 \}]
+ * sortKeys(42); // returns 42
+ * ```
  */
 export function sortKeys<T extends TBJsonValue>(object: T): T {
   if (isPrimitive(object) || isDate(object) || isRegExp(object)) {

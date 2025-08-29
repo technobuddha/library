@@ -8,8 +8,17 @@ import { isObject } from './is-object.ts';
  * checks to ensure accurate detection.
  * @param value - The value to test.
  * @returns True if the value is a function, otherwise false.
- * @group Utility
- * @category Type Checking
+ * @group Object
+ * @category Type Guards
+ * @example
+ * ```typescript
+ * isFunction(function() {}); // true
+ * isFunction(() => {}); // true
+ * isFunction(async function() {}); // true
+ * isFunction(function* () {}); // true
+ * isFunction(null); // false
+ * isFunction({}); // false
+ * ```
  */
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export function isFunction(value: unknown): value is Function {

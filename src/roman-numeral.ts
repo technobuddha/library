@@ -1,5 +1,3 @@
-import { lookAhead } from './look-ahead.ts';
-import { splitChars } from './split-chars.ts';
 import { empty } from './unicode.ts';
 
 /**
@@ -11,14 +9,14 @@ import { empty } from './unicode.ts';
  * @internal
  */
 // prettier-ignore
-type Glyph =
+export type Glyph =
   | 'ↈ' | 'ↇ' | 'ↂ' | 'ↁ' | 'm' | 'M' | 'Ⅿ' | 'ⅿ' | 'ↀ' | 'd' | 'D' | 'Ⅾ' | 'ⅾ'
   | 'c' | 'C' | 'Ⅽ' | 'ⅽ' | 'l' | 'L' | 'Ⅼ' | 'ⅼ' | 'ↆ' | 'Ⅻ' | 'ⅻ' | 'Ⅺ' | 'ⅺ' | 'x'
   | 'X' | 'Ⅹ' | 'ⅹ' | 'Ⅸ' | 'ⅸ' | 'Ⅷ' | 'ⅷ' | 'Ⅶ' | 'ⅶ' | 'Ⅵ' | 'ⅵ' | 'ↅ'
   | 'v' | 'V' | 'Ⅴ' | 'ⅴ' | 'Ⅳ' | 'ⅳ' | 'ⅲ' | 'Ⅲ' | 'ⅱ' | 'Ⅱ' | 'i' | 'I' | 'j' | 'Ⅰ'
   | 'ⅰ';
 
-const glyphValues: Record<Glyph, number> = {
+export const glyphValues: Record<Glyph, number> = {
   ↈ: 100000,
   ↇ: 50000,
   ↂ: 10000,
@@ -91,77 +89,12 @@ const glyphValues: Record<Glyph, number> = {
   ⅰ: 1,
 };
 
-/**
- * Parse a roman numeral string into its integer value.
- * @param val - The roman numeral string to parse
- * @returns Parsed roman number
- * @group Math
- * @category Numbers
- */
-export function parseRoman(val: string): number {
-  const values = splitChars(val).map((g) => glyphValues[g as Glyph]);
-  if (values.some((g) => g === undefined)) {
-    return Number.NaN;
-  }
-
-  for (const [thisGlyph, nextGlyph, i] of lookAhead(values)) {
-    if (thisGlyph < nextGlyph) {
-      values[i] *= -1;
-    }
-  }
-
-  return values.reduce((total, n) => total + n);
-}
-
-/**
- * Options for converting numbers to Roman numerals.
- * @group Math
- * @category Numbers
- */
-export type RomanOptions = {
-  /** Specifies the output format for the Roman numeral. */
-  format?: 'standard' | 'apostrophus' | 'vinculum';
-};
-
-// cspell:ignore MMXXIV
-/**
- * Parse number into a roman numeral string
- * @param input - The number to turn into a roman numeral
- * @param options - see {@link RomanOptions}
- * @returns Converted roman numeral
- * @example
- * ```typescript
- * toRoman(1); // "I"
- * toRoman(4); // "IV"
- * toRoman(9); // "IX"
- * toRoman(2024); // "MMXXIV"
- * toRoman(49, { format: 'apostrophus' }); // "IL"
- * ```
- * @group Math
- * @category Numbers
- */
-export function toRoman(input: number, { format = 'standard' }: RomanOptions = {}): string {
-  const vg = valueGlyphs[format];
-
-  if (input < 1 || input > vg.limit || !Number.isInteger(input)) {
-    throw new RangeError(`Input must be an integer between 1 and ${vg.limit}`);
-  }
-
-  const digits = splitChars(input.toString());
-  let roman = empty;
-  for (let i = 0; i < vg.glyphs.length && digits.length > 0; ++i) {
-    roman = vg.glyphs[i][Number.parseInt(digits.pop()!)] + roman;
-  }
-  // return lastGlyph.repeat(Number.parseInt(build(digits))) + roman;
-  return roman;
-}
-
 // cspell:disable
 /**
  * Maps Roman numeral styles to their value limits and glyph representations for each digit place.
  * @internal
  */
-const valueGlyphs = {
+export const valueGlyphs = {
   standard: {
     limit: 3999,
     glyphs: [

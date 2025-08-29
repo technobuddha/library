@@ -46,8 +46,8 @@ import { empty } from './unicode.ts';
 /**
  * Options for the {@link metricUnits} function
  *w
- * @group String
- * @category Units
+ * @group Math
+ * @category Verbalization
  */
 export type MetricUnitsOptions = {
   /**
@@ -80,8 +80,17 @@ export type MetricUnitsOptions = {
  * Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
  * @param input - The number to abbreviate
  * @param options - {@link MetricUnitsOptions}
- * @group String
- * @category Units
+ * @group Math
+ * @category Verbalization
+ * @example
+ * ```typescript
+ * metricUnits(1000); // '1K'
+ * metricUnits(1500); // '1.5K'
+ * metricUnits(0.001); // '1m'
+ * metricUnits(0.000001); // '1µ'
+ * metricUnits(123456789); // '123.46M'
+ * metricUnits(0); // '0'
+ * ```
  */
 export function metricUnits(
   input: number,
@@ -89,7 +98,7 @@ export function metricUnits(
     format,
     pad,
     macro = ['K', 'M', 'G', 'T', 'P', 'E', 'Z', 'Y', 'R', 'Q'],
-    micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y', 'r'],
+    micro = ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y', 'r', 'q'],
     unit = 1000,
     precision = 2,
   }: MetricUnitsOptions = {},

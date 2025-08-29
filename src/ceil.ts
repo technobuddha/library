@@ -4,7 +4,7 @@ import { deconstructNumber } from './deconstruct-number.ts';
 /**
  * Options for the {@link ceil} function
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export type CeilOptions = {
   /** A small value to subtract from the input before applying the ceiling, useful for floating-point tolerance. Defaults to 0. */
@@ -26,7 +26,7 @@ export type CeilOptions = {
  * ceil(2.345, { precision: 2 }); // 2.35
  * ```
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export function ceil(input: number, { tolerance = 0, precision = 0 }: CeilOptions = {}): number {
   if (Number.isNaN(input) || !Number.isFinite(input)) {

@@ -11,7 +11,7 @@ Technobuddha Library
 function orderOfMagnitude(exponent: number): null | string;
 ```
 
-Defined in: order-of-magnitude.ts:20
+Defined in: [order-of-magnitude.ts:20](https://github.com/technobuddha/library/blob/main/src/order-of-magnitude.ts#L20)
 
 Get the spelled out word for an exponent
 
