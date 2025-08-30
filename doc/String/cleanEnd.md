@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / cleanEnd
 
 # Function: cleanEnd()

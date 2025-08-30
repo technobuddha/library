@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / ShaBase
 
 # Abstract Class: ShaBase
@@ -31,7 +28,7 @@ The base class for sha based cryptographic hash functions
 new ShaBase(blockSize: number, finalSize: number): ShaBase;
 ```
 
-Defined in: [sha-base.ts:45](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L45)
+Defined in: [src/sha-base.ts:45](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L45)
 
 Creates a new instance of the hash base class.
 
@@ -60,7 +57,7 @@ Creates a new instance of the hash base class.
 digest(): Uint8Array;
 ```
 
-Defined in: [sha-base.ts:77](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L77)
+Defined in: [src/sha-base.ts:77](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L77)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -82,7 +79,7 @@ The hash digest
 digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
+Defined in: [src/sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -117,7 +114,7 @@ update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [sha-base.ts:119](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L119)
+Defined in: [src/sha-base.ts:119](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L119)
 
 Updates the hash with the given binary data.
 
@@ -143,7 +140,7 @@ The hash instance for method chaining.
 update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
+Defined in: [src/sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
 
 Updates the hash with the given string data.
 

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [RegExp](./index.md) / re
 
 # Function: re()
@@ -11,7 +8,7 @@ Technobuddha Library
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
 ```
 
-Defined in: re.ts:18
+Defined in: [re.ts:18](https://github.com/technobuddha/library/blob/main/src/re.ts#L18)
 
 Constructs a new `RegExp` by interpolating template strings and provided regular expressions.
 

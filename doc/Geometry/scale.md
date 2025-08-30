@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / scale
 
 # Function: scale()
@@ -51,7 +48,7 @@ function scale(
    options?: OriginOptions): Cartesian[];
 ```
 
-Defined in: [scale.ts:47](https://github.com/technobuddha/library/blob/main/src/scale.ts#L47)
+Defined in: [src/scale.ts:47](https://github.com/technobuddha/library/blob/main/src/scale.ts#L47)
 
 Scales a polygon around a given origin by a specified amount.
 

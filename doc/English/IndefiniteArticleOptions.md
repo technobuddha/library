@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [English](./index.md) / IndefiniteArticleOptions
 
 # Type Alias: IndefiniteArticleOptions
@@ -21,5 +18,5 @@ Options for [indefiniteArticle](indefiniteArticle.md) to determine the indefinit
 
 | Property | Type | Default value | Description | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="only"></a> `only?` | `boolean` | `false` | Only return the indefinite article, do not combine with the input | [indefinite-article.ts:32](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L32) |
+| <a id="only"></a> `only?` | `boolean` | `false` | Only return the indefinite article, do not combine with the input | [src/indefinite-article.ts:32](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L32) |
 

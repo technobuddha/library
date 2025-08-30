@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / TimezoneOptions
 
 # Type Alias: TimezoneOptions
@@ -22,6 +19,6 @@ Options for the [timezone](timezone.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="gmt"></a> `gmt?` | `boolean` | Display 'gmt' in time zones | [timezone.ts:12](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L12) |
-| <a id="z"></a> `z?` | `boolean` | Display 'z' for the gmt time zone | [timezone.ts:14](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L14) |
+| <a id="gmt"></a> `gmt?` | `boolean` | Display 'gmt' in time zones | [src/timezone.ts:12](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L12) |
+| <a id="z"></a> `z?` | `boolean` | Display 'z' for the gmt time zone | [src/timezone.ts:14](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L14) |
 

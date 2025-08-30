@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / translate
 
 # Function: translate()
@@ -44,7 +41,7 @@ translate({ x: 1, y: 0 }t, { x: 1, y: 2 }); // { x: 2, y: 2 }
 function translate(polygon: Polygon, amount: Cartesian): Polygon;
 ```
 
-Defined in: [translate.ts:39](https://github.com/technobuddha/library/blob/main/src/translate.ts#L39)
+Defined in: [src/translate.ts:39](https://github.com/technobuddha/library/blob/main/src/translate.ts#L39)
 
 Translate a polygon by a specified amount.
 

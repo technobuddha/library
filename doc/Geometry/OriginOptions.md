@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / OriginOptions
 
 # Type Alias: OriginOptions
@@ -21,5 +18,5 @@ Options for origin-related functions
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="origin"></a> `origin?` | [`Cartesian`](Cartesian.md) | The origin for this operation | [angle.ts:87](https://github.com/technobuddha/library/blob/main/src/angle.ts#L87) |
+| <a id="origin"></a> `origin?` | [`Cartesian`](Cartesian.md) | The origin for this operation | [src/angle.ts:87](https://github.com/technobuddha/library/blob/main/src/angle.ts#L87) |
 

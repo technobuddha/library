@@ -16,7 +16,7 @@
  * | \\n…n[^1]            | Octal Escape       | 0x0000-0x01ff    |
  * | \\xnn                | Hexadecimal Escape | 0x0000-0x00ff    |
  * | \\unnnn              | Unicode Escape     | 0x00000-0x00ffff   |
- * | \\u\{n…\}            | Code Point Escape  | 0x00000-0x10ffff   |
+ * | \\u\{code-point\}    | Code Point Escape  | 0x00000-0x10ffff   |
  * @param input - the string to unescape
  * @returns the string with escapes resolved
  * @example

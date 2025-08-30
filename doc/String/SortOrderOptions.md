@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / SortOrderOptions
 
 # Type Alias: SortOrderOptions
@@ -22,6 +19,6 @@ Options for the [sortOrder](sortOrder.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="ignorequotes"></a> `ignoreQuotes?` | `boolean` | Ignore a leading quote (") | [sort-order.ts:10](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L10) |
-| <a id="movearticles"></a> `moveArticles?` | `boolean` | move article (a, an, the) to the end of the string | [sort-order.ts:12](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L12) |
+| <a id="ignorequotes"></a> `ignoreQuotes?` | `boolean` | Ignore a leading quote (") | [src/sort-order.ts:10](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L10) |
+| <a id="movearticles"></a> `moveArticles?` | `boolean` | move article (a, an, the) to the end of the string | [src/sort-order.ts:12](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L12) |
 

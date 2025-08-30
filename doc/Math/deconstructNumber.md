@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Math](./index.md) / deconstructNumber
 
 # Function: deconstructNumber()
@@ -26,11 +23,6 @@ Deconstructs a number into its sign, value, mantissa, and exponent, and separate
 | `precision` | `number` | `9` | The number of significant digits to use (default: 9, min: 1, max: 15). |
 
 ## Returns
-
-[`DeconstructedNumber`](DeconstructedNumber.md) & \{
-  `fractional`: [`DeconstructedNumber`](DeconstructedNumber.md);
-  `whole`: [`DeconstructedNumber`](DeconstructedNumber.md);
-\}
 
 An object containing the normalized value, sign, mantissa, exponent, and separate representations
          of the whole and fractional parts.

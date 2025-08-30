@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / UnitOptions
 
 # Type Alias: UnitOptions
@@ -21,5 +18,5 @@ Options for angle-related functions
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="unit"></a> `unit?` | [`AngleUnit`](AngleUnit.md) | The unit of the angle (e.g., degrees, radians). | [angle.ts:75](https://github.com/technobuddha/library/blob/main/src/angle.ts#L75) |
+| <a id="unit"></a> `unit?` | [`AngleUnit`](AngleUnit.md) | The unit of the angle (e.g., degrees, radians). | [src/angle.ts:75](https://github.com/technobuddha/library/blob/main/src/angle.ts#L75) |
 

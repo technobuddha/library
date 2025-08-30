@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / RootOptions
 
 # Type Alias: RootOptions
@@ -22,6 +19,6 @@ Options for the [root](root.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="prefix"></a> `prefix?` | `string` | The refix string to remove | [root.ts:8](https://github.com/technobuddha/library/blob/main/src/root.ts#L8) |
-| <a id="suffix"></a> `suffix?` | `string` | The suffix string to remove | [root.ts:10](https://github.com/technobuddha/library/blob/main/src/root.ts#L10) |
+| <a id="prefix"></a> `prefix?` | `string` | The refix string to remove | [src/root.ts:8](https://github.com/technobuddha/library/blob/main/src/root.ts#L8) |
+| <a id="suffix"></a> `suffix?` | `string` | The suffix string to remove | [src/root.ts:10](https://github.com/technobuddha/library/blob/main/src/root.ts#L10) |
 

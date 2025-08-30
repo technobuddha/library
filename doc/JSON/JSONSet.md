@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [JSON](./index.md) / JSONSet
 
 # Class: JSONSet\<T\>
@@ -54,7 +51,7 @@ new JSONSet<T>(values?:
 | Iterable<T, any, any>): JSONSet<T>;
 ```
 
-Defined in: [json-set.ts:30](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L30)
+Defined in: [src/json-set.ts:30](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L30)
 
 #### Parameters
 
@@ -68,9 +65,9 @@ Defined in: [json-set.ts:30](https://github.com/technobuddha/library/blob/main/s
 
 ## Properties
 
-| Property | Modifier | Type | Default value | Defined in |
-| ------ | ------ | ------ | ------ | ------ |
-| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONSet"` | `'JSONSet'` | [json-set.ts:38](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L38) |
+| Property | Modifier | Type | Default value | Description | Defined in |
+| ------ | ------ | ------ | ------ | ------ | ------ |
+| <a id="tostringtag"></a> `[toStringTag]` | `readonly` | `"JSONSet"` | `'JSONSet'` | The string tag used by Object.prototype.toString for this class. | [src/json-set.ts:41](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L41) |
 
 ## Accessors
 
@@ -82,13 +79,13 @@ Defined in: [json-set.ts:30](https://github.com/technobuddha/library/blob/main/s
 get size(): number;
 ```
 
-Defined in: [json-set.ts:45](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L45)
+Defined in: [src/json-set.ts:51](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L51)
+
+Gets the number of elements in the set.
 
 ##### Returns
 
 `number`
-
-the number of (unique) elements in Set.
 
 #### Implementation of
 
@@ -104,7 +101,9 @@ Set.size
 iterator: SetIterator<T>;
 ```
 
-Defined in: [json-set.ts:150](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L150)
+Defined in: [src/json-set.ts:204](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L204)
+
+Returns an iterator over the values in the set.
 
 #### Returns
 
@@ -124,9 +123,9 @@ Set.[iterator]
 add(value: T): this;
 ```
 
-Defined in: [json-set.ts:49](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L49)
+Defined in: [src/json-set.ts:58](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L58)
 
-Appends a new element with a specified value to the end of the Set.
+Adds a serialized value to the set.
 
 #### Parameters
 
@@ -152,7 +151,9 @@ Set.add
 clear(): void;
 ```
 
-Defined in: [json-set.ts:54](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L54)
+Defined in: [src/json-set.ts:66](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L66)
+
+Removes all elements from the set.
 
 #### Returns
 
@@ -172,9 +173,9 @@ Set.clear
 delete(value: T): boolean;
 ```
 
-Defined in: [json-set.ts:58](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L58)
+Defined in: [src/json-set.ts:73](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L73)
 
-Removes a specified value from the Set.
+Removes the specified value from the set if it exists.
 
 #### Parameters
 
@@ -185,8 +186,6 @@ Removes a specified value from the Set.
 #### Returns
 
 `boolean`
-
-Returns true if an element in the Set existed and has been removed, or false if the element does not exist.
 
 #### Implementation of
 
@@ -202,7 +201,9 @@ Set.delete
 difference<U>(other: ReadonlySetLike<U>): Set<T>;
 ```
 
-Defined in: [json-set.ts:62](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L62)
+Defined in: [src/json-set.ts:80](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L80)
+
+Returns a new set containing elements present in this set but not in the other set.
 
 #### Type Parameters
 
@@ -220,8 +221,6 @@ Defined in: [json-set.ts:62](https://github.com/technobuddha/library/blob/main/s
 
 [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T`\>
 
-a new Set containing all the elements in this Set which are not also in the argument.
-
 #### Implementation of
 
 ```ts
@@ -236,9 +235,9 @@ Set.difference
 entries(): SetIterator<[T, T]>;
 ```
 
-Defined in: [json-set.ts:68](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L68)
+Defined in: [src/json-set.ts:89](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L89)
 
-Returns an iterable of [v,v] pairs for every value `v` in the set.
+Returns an iterator over the set's values as [value, value] pairs.
 
 #### Returns
 
@@ -258,9 +257,9 @@ Set.entries
 forEach(callback: (value: T, key: T, set: Set<T>) => void, thisArg?: unknown): void;
 ```
 
-Defined in: [json-set.ts:74](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L74)
+Defined in: [src/json-set.ts:98](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L98)
 
-Executes a provided function once per each value in the Set object, in insertion order.
+Executes a provided function once for each value in the set.
 
 #### Parameters
 
@@ -287,7 +286,9 @@ Set.forEach
 has(value: T): boolean;
 ```
 
-Defined in: [json-set.ts:80](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L80)
+Defined in: [src/json-set.ts:107](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L107)
+
+Determines whether the specified value exists in the set.
 
 #### Parameters
 
@@ -298,8 +299,6 @@ Defined in: [json-set.ts:80](https://github.com/technobuddha/library/blob/main/s
 #### Returns
 
 `boolean`
-
-a boolean indicating whether an element with the specified value exists in the Set or not.
 
 #### Implementation of
 
@@ -315,7 +314,9 @@ Set.has
 intersection<U>(other: ReadonlySetLike<U>): Set<T & U>;
 ```
 
-Defined in: [json-set.ts:84](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L84)
+Defined in: [src/json-set.ts:114](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L114)
+
+Returns a new set containing only the elements present in both this set and the provided set.
 
 #### Type Parameters
 
@@ -333,8 +334,6 @@ Defined in: [json-set.ts:84](https://github.com/technobuddha/library/blob/main/s
 
 [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T` & `U`\>
 
-a new Set containing all the elements which are both in this Set and in the argument.
-
 #### Implementation of
 
 ```ts
@@ -349,7 +348,9 @@ Set.intersection
 isDisjointFrom(other: ReadonlySetLike<unknown>): boolean;
 ```
 
-Defined in: [json-set.ts:92](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L92)
+Defined in: [src/json-set.ts:125](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L125)
+
+Determines whether this set and the specified set have no elements in common.
 
 #### Parameters
 
@@ -360,8 +361,6 @@ Defined in: [json-set.ts:92](https://github.com/technobuddha/library/blob/main/s
 #### Returns
 
 `boolean`
-
-a boolean indicating whether this Set has no elements in common with the argument.
 
 #### Implementation of
 
@@ -377,7 +376,9 @@ Set.isDisjointFrom
 isSubsetOf(other: ReadonlySetLike<unknown>): boolean;
 ```
 
-Defined in: [json-set.ts:101](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L101)
+Defined in: [src/json-set.ts:137](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L137)
+
+Determines whether all elements of this set are contained in another set.
 
 #### Parameters
 
@@ -388,8 +389,6 @@ Defined in: [json-set.ts:101](https://github.com/technobuddha/library/blob/main/
 #### Returns
 
 `boolean`
-
-a boolean indicating whether all the elements in this Set are also in the argument.
 
 #### Implementation of
 
@@ -405,7 +404,9 @@ Set.isSubsetOf
 isSupersetOf(other: ReadonlySetLike<unknown>): boolean;
 ```
 
-Defined in: [json-set.ts:110](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L110)
+Defined in: [src/json-set.ts:149](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L149)
+
+Determines whether this set contains all elements of the specified set.
 
 #### Parameters
 
@@ -416,8 +417,6 @@ Defined in: [json-set.ts:110](https://github.com/technobuddha/library/blob/main/
 #### Returns
 
 `boolean`
-
-a boolean indicating whether all the elements in the argument are also in this Set.
 
 #### Implementation of
 
@@ -433,9 +432,9 @@ Set.isSupersetOf
 keys(): SetIterator<T>;
 ```
 
-Defined in: [json-set.ts:119](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L119)
+Defined in: [src/json-set.ts:161](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L161)
 
-Despite its name, returns an iterable of the values in the set.
+Returns an iterator over the keys in the set.
 
 #### Returns
 
@@ -455,7 +454,9 @@ Set.keys
 symmetricDifference<U>(other: ReadonlySetLike<U>): Set<T | U>;
 ```
 
-Defined in: [json-set.ts:123](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L123)
+Defined in: [src/json-set.ts:168](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L168)
+
+Returns a new set containing elements that are in either this set or the other set, but not in both.
 
 #### Type Parameters
 
@@ -472,8 +473,6 @@ Defined in: [json-set.ts:123](https://github.com/technobuddha/library/blob/main/
 #### Returns
 
 [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T` \| `U`\>
-
-a new Set containing all the elements which are in either this Set or in the argument, but not in both.
 
 #### Implementation of
 
@@ -489,7 +488,9 @@ Set.symmetricDifference
 union<U>(other: ReadonlySetLike<U>): Set<T | U>;
 ```
 
-Defined in: [json-set.ts:140](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L140)
+Defined in: [src/json-set.ts:188](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L188)
+
+Returns a new set containing all unique elements from this set and another set.
 
 #### Type Parameters
 
@@ -507,8 +508,6 @@ Defined in: [json-set.ts:140](https://github.com/technobuddha/library/blob/main/
 
 [`Set`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set)\<`T` \| `U`\>
 
-a new Set containing all the elements in this Set and also all the elements in the argument.
-
 #### Implementation of
 
 ```ts
@@ -523,9 +522,9 @@ Set.union
 values(): SetIterator<T>;
 ```
 
-Defined in: [json-set.ts:144](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L144)
+Defined in: [src/json-set.ts:195](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L195)
 
-Returns an iterable of values in the set.
+Returns an iterator that yields each value in the set after deserialization.
 
 #### Returns
 

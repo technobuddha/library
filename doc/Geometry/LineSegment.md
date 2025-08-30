@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / LineSegment
 
 # Type Alias: LineSegment
@@ -16,7 +13,7 @@ type LineSegment = {
 };
 ```
 
-Defined in: [@types/geometry.ts:42](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L42)
+Defined in: [@types/geometry.ts:44](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L44)
 
 Represents a line segment in 2D space, defined by its start and end points.
 
@@ -24,8 +21,8 @@ Represents a line segment in 2D space, defined by its start and end points.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="x0"></a> `x0` | `number` | The x-coordinate of the start point. | [@types/geometry.ts:44](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L44) |
-| <a id="x1"></a> `x1` | `number` | The x-coordinate of the end point. | [@types/geometry.ts:48](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L48) |
-| <a id="y0"></a> `y0` | `number` | The y-coordinate of the start point. | [@types/geometry.ts:46](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L46) |
-| <a id="y1"></a> `y1` | `number` | The y-coordinate of the end point. | [@types/geometry.ts:50](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L50) |
+| <a id="x0"></a> `x0` | `number` | The x-coordinate of the start point. | [src/@types/geometry.ts:46](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L46) |
+| <a id="x1"></a> `x1` | `number` | The x-coordinate of the end point. | [src/@types/geometry.ts:50](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L50) |
+| <a id="y0"></a> `y0` | `number` | The y-coordinate of the start point. | [src/@types/geometry.ts:48](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L48) |
+| <a id="y1"></a> `y1` | `number` | The y-coordinate of the end point. | [src/@types/geometry.ts:52](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L52) |
 

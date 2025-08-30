@@ -33,26 +33,44 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
     }
   }
 
+  /**
+   * The string tag used when calling Object.prototype.toString on instances of this class.
+   */
   public readonly [Symbol.toStringTag] = 'JSONMap';
 
+  /**
+   * Returns the number of elements in the map.
+   */
   public get size(): number {
     return this.map.size;
   }
 
+  /**
+   * Removes all key-value pairs from the map.
+   */
   public clear(): void {
     this.map.clear();
   }
 
+  /**
+   * Deletes the entry associated with the given key from the map.
+   */
   public delete(value: K): boolean {
     return this.map.delete(serialize(value));
   }
 
+  /**
+   * Returns an iterator over the deserialized key-value pairs in the map.
+   */
   public *entries(): MapIterator<[K, V]> {
     for (const [key, value] of this.map.entries()) {
       yield [deserialize(key) as K, value];
     }
   }
 
+  /**
+   * Executes a provided function once for each key-value pair in the JSONMap.
+   */
   public forEach(
     callback: (value: V, key: K, map: JSONMap<K, V>) => void,
     thisArg?: unknown,
@@ -62,29 +80,47 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
     }
   }
 
+  /**
+   * Retrieves the value associated with the given key, or undefined if the key is not found.
+   */
   public get(key: K): V | undefined {
     return this.map.get(serialize(key));
   }
 
+  /**
+   * Determines whether the specified key exists in the map.
+   */
   public has(value: K): boolean {
     return this.map.has(serialize(value));
   }
 
+  /**
+   * Returns an iterator over the deserialized keys of the map.
+   */
   public *keys(): MapIterator<K> {
     for (const key of this.map.keys()) {
       yield deserialize(key) as K;
     }
   }
 
+  /**
+   * Sets the value for the specified key in the map.
+   */
   public set(key: K, value: V): this {
     this.map.set(serialize(key), value);
     return this;
   }
 
+  /**
+   * Returns an iterator over the values in the map.
+   */
   public *values(): MapIterator<V> {
     yield* this.map.values();
   }
 
+  /**
+   * Returns an iterator over the key-value pairs in the map.
+   */
   public [Symbol.iterator](): MapIterator<[K, V]> {
     return this.entries();
   }

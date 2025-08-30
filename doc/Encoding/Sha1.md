@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / Sha1
 
 # Class: Sha1
@@ -38,7 +35,7 @@ sha1.digest('hex');
 new Sha1(): Sha1;
 ```
 
-Defined in: [sha-1.ts:134](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L134)
+Defined in: [src/sha-1.ts:134](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L134)
 
 Creates a new SHA-1 hash instance and initializes its internal state.
 
@@ -66,7 +63,7 @@ final hash value.
 digest(): Uint8Array;
 ```
 
-Defined in: [sha-base.ts:77](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L77)
+Defined in: [src/sha-base.ts:77](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L77)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -88,7 +85,7 @@ The hash digest
 digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
+Defined in: [src/sha-base.ts:78](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L78)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -123,7 +120,7 @@ update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [sha-base.ts:119](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L119)
+Defined in: [src/sha-base.ts:119](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L119)
 
 Updates the hash with the given binary data.
 
@@ -149,7 +146,7 @@ The hash instance for method chaining.
 update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
+Defined in: [src/sha-base.ts:120](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L120)
 
 Updates the hash with the given string data.
 

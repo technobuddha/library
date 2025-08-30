@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [JSON](./index.md) / TBJsonValue
 
 # Type Alias: TBJsonValue

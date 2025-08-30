@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / BeginningOfYearOptions
 
 # Type Alias: BeginningOfYearOptions
@@ -21,5 +18,5 @@ Options for the [beginningOfYear](beginningOfYear.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L10) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/beginning-of-year.ts:10](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L10) |
 

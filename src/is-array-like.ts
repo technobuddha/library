@@ -30,8 +30,8 @@ function isLength(value: unknown): value is number {
  * is not a function, has a 'length' property, and the length is a valid array length.
  * @param value - The value to check.
  * @returns True if the value is array-like, otherwise false.
- * @group Array
- * @category Type Check
+ * @group Object
+ * @category Type Guards
  * @example
  * ```typescript
  * isArrayLike([1, 2, 3]); // true

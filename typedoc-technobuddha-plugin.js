@@ -1,8 +1,9 @@
 // @ts-check
 import fs from 'node:fs';
 import { ReflectionKind } from 'typedoc';
+import { MarkdownPageEvent } from 'typedoc-plugin-markdown';
 
-import { empty, plural, conjoin, fillTemplate, splitLines } from './dist/index.js';
+import { empty, plural, conjoin, fillTemplate, splitLines/*, escapeHTML*/ } from './dist/index.js';
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 const LINK = isDevelopment ? empty : 'https://github.com/technobuddha/library/blob/main/';
@@ -16,7 +17,13 @@ const tx = {
 };
 
 /** @type { string[] } */
-const header = ['<!-- markdownlint-disable -->', '<!-- cspell: disable -->', 'Technobuddha Library', '---', empty];
+const header = [
+  '<!-- markdownlint-disable -->',
+  '<!-- cspell: disable -->',
+  //, 'Technobuddha Library',
+  //  '---',
+  //  empty
+];
 
 /** @type {Record<number, string>} */
 const reflectionKind = Object.fromEntries(
@@ -66,32 +73,55 @@ function gather(item, count, total, pages) {
  */
 function alignTables(index) {
   return index;
-  // /** @type {string[]} */
-  // const result = [];
-  // let table = false;
+  //   /** @type {string[]} */
+  //   const result = [];
+  //   let table = false;
 
-  // for (const line of index) {
-  //   if (/^\| [A-Za-z\s]+ \| Description \|$/u.test(line)) {
-  //     result.push('<table>', '<thead>', '<tr>', '<th style="width: 200px;">Name</th>', '<th>Description</th>', '</tr>', '</thead>', '<tbody>');
-  //     table = true;
-  //   } else if (/^\| ------  \| ------ \|$/u.test(line)) {
-  //     // Skip the line
-  //   } else {
-  //     const matches = line.match(/^\| (.*) \| (.*) \|$/u);
-  //     if (matches) {
-  //       const [, name, description] = matches;
-  //       result.push('<tr>', `<td style="width: 200px;">${name}</td>`, `<td>${description}</td>`, '</tr>');
+  //   for (const line of index) {
+  //     if (/^\| [A-Za-z\s]+ \| Description \|$/u.test(line)) {
+  //       result.push(
+  //         '<table style="width: 100%;">',
+  //         '<colgroup>',
+  //         '<col style="width: 300px;"/>',
+  //         '</colgroup>',
+  //         '<thead>',
+  //         '<tr>',
+  //         '<th>Name</th>',
+  //         '<th>Description</th>',
+  //         '</tr>',
+  //         '</thead>',
+  //         '<tbody>',
+  //       );
+  //       table = true;
+  //     } else if (/^\| -+ \| -+ \|$/u.test(line)) {
+  //       // Skip the line
   //     } else {
-  //       if (table) {
-  //         result.push('</tbody>', '</table>', empty);
-  //         table = false;
+  //       const matches = line.match(/^\| (.*) \| (.*) \|$/u);
+  //       if (matches) {
+  //         const [, name, description] = matches;
+
+  //         const names = name.match(/^\[(.*)\]\((.*)\)$/u);
+  //         if (names) {
+  //           const [, text, url] = names;
+
+  //           result.push(
+  //             '<tr>',
+  //             `<td><a href="${url.replace('.md', '.html')}">${escapeHTML(text)}</a></td>`,
+  //             `<td>${escapeHTML(description)}</td>`,
+  //             '</tr>',
+  //           );
+  //         }
+  //       } else {
+  //         if (table) {
+  //           result.push('</tbody>', '</table>', empty);
+  //           table = false;
+  //         }
+  //         result.push(line);
   //       }
-  //       result.push(line);
   //     }
   //   }
-  // }
-  //
-  // return result;
+
+  //   return result;
 }
 
 /**
@@ -101,6 +131,9 @@ export function load(app) {
   app.renderer.markdownHooks.on('page.begin', () => `<!-- markdownlint-disable -->`);
   app.renderer.markdownHooks.on('index.page.begin', () => `<!-- markdownlint-disable -->`);
 
+  app.renderer.on(MarkdownPageEvent.END, (page) => {
+    page.contents = page.contents?.replace(/(?<=Defined in: \[)\.?\/?src\//u, empty);
+  });
   // Update the top-level README
   app.renderer.postRenderAsyncJobs.push(async (renderer) => {
     /** @type {string[]} */

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / RotatedRect
 
 # Type Alias: RotatedRect
@@ -22,8 +19,8 @@ const hull = convexHull(points);
 
 ## Type declaration
 
-| Name | Type | Defined in |
-| ------ | ------ | ------ |
-| `angle` | `number` | [largest-inscribed-rectangle.ts:21](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L21) |
-| `area` | `number` | [largest-inscribed-rectangle.ts:19](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L19) |
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| `angle` | `number` | The rotation angle of the rectangle, in radians. | [src/largest-inscribed-rectangle.ts:21](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L21) |
+| `area` | `number` | The area of the rotated rectangle. | [src/largest-inscribed-rectangle.ts:19](https://github.com/technobuddha/library/blob/main/src/largest-inscribed-rectangle.ts#L19) |
 

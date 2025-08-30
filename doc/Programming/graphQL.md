@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Programming](./index.md) / graphQL
 
 # Function: graphQL()
@@ -48,7 +45,7 @@ const query = graphQL`
 function graphQL(arg: GraphQLValue): string;
 ```
 
-Defined in: [graph-ql.ts:57](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L57)
+Defined in: [src/graph-ql.ts:57](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L57)
 
 Escape and format an individual GraphQL query string.
 

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / Object
 
 # Object
@@ -34,6 +31,7 @@ Technobuddha Library
 
 | Function | Description |
 | ------ | ------ |
+| [isArrayLike](isArrayLike.md) | Determines whether the provided value is array-like. |
 | [isBoolean](isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
 | [isFunction](isFunction.md) | Determines whether the provided value is a function. |
 | [isIterable](isIterable.md) | Determines if the provided object is iterable. |

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / unescapeJS
 
 # Function: unescapeJS()
@@ -29,7 +26,7 @@ Unescape a string encoded in Javascript style
 | \\n…n[^1]            | Octal Escape       | 0x0000-0x01ff    |
 | \\xnn                | Hexadecimal Escape | 0x0000-0x00ff    |
 | \\unnnn              | Unicode Escape     | 0x00000-0x00ffff   |
-| \\u{n…}            | Code Point Escape  | 0x00000-0x10ffff   |
+| \\u{code-point}    | Code Point Escape  | 0x00000-0x10ffff   |
 
 ## Parameters
 

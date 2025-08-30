@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Random](./index.md) / MersenneTwister
 
 # Class: MersenneTwister
@@ -45,7 +42,7 @@ mt.genrandRes53(); // 0.489361593755425
 new MersenneTwister(seed: number | number[]): MersenneTwister;
 ```
 
-Defined in: [mersenne-twister.ts:130](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L130)
+Defined in: [src/mersenne-twister.ts:130](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L130)
 
 #### Parameters
 
@@ -57,12 +54,6 @@ Defined in: [mersenne-twister.ts:130](https://github.com/technobuddha/library/bl
 
 `MersenneTwister`
 
-## Properties
-
-| Property | Modifier | Type | Defined in |
-| ------ | ------ | ------ | ------ |
-| <a id="mt"></a> `mt` | `public` | [`Uint32Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array)\<[`ArrayBuffer`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)\> | [mersenne-twister.ts:128](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L128) |
-
 ## Methods
 
 ### genrandInt31()
@@ -71,7 +62,9 @@ Defined in: [mersenne-twister.ts:130](https://github.com/technobuddha/library/bl
 genrandInt31(): number;
 ```
 
-Defined in: [mersenne-twister.ts:228](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L228)
+Defined in: [src/mersenne-twister.ts:230](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L230)
+
+generates a random number on [0,0x7fffffff]-interval
 
 #### Returns
 
@@ -85,7 +78,9 @@ Defined in: [mersenne-twister.ts:228](https://github.com/technobuddha/library/bl
 genrandInt32(): number;
 ```
 
-Defined in: [mersenne-twister.ts:196](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L196)
+Defined in: [src/mersenne-twister.ts:198](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L198)
+
+generates a random number on [0,0xffffffff]-interval
 
 #### Returns
 
@@ -99,7 +94,9 @@ Defined in: [mersenne-twister.ts:196](https://github.com/technobuddha/library/bl
 genrandReal1(): number;
 ```
 
-Defined in: [mersenne-twister.ts:233](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L233)
+Defined in: [src/mersenne-twister.ts:235](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L235)
+
+generates a random number on [0,1]-real-interval
 
 #### Returns
 
@@ -113,7 +110,9 @@ Defined in: [mersenne-twister.ts:233](https://github.com/technobuddha/library/bl
 genrandReal2(): number;
 ```
 
-Defined in: [mersenne-twister.ts:239](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L239)
+Defined in: [src/mersenne-twister.ts:241](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L241)
+
+generates a random number on [0,1)-real-interval
 
 #### Returns
 
@@ -127,7 +126,9 @@ Defined in: [mersenne-twister.ts:239](https://github.com/technobuddha/library/bl
 genrandReal3(): number;
 ```
 
-Defined in: [mersenne-twister.ts:245](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L245)
+Defined in: [src/mersenne-twister.ts:247](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L247)
+
+generates a random number on (0,1)-real-interval
 
 #### Returns
 
@@ -141,7 +142,9 @@ Defined in: [mersenne-twister.ts:245](https://github.com/technobuddha/library/bl
 genrandRes53(): number;
 ```
 
-Defined in: [mersenne-twister.ts:251](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L251)
+Defined in: [src/mersenne-twister.ts:253](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L253)
+
+generates a random number on [0,1) with 53-bit resolution
 
 #### Returns
 
@@ -155,7 +158,9 @@ Defined in: [mersenne-twister.ts:251](https://github.com/technobuddha/library/bl
 initByArray(key: number[]): void;
 ```
 
-Defined in: [mersenne-twister.ts:160](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L160)
+Defined in: [src/mersenne-twister.ts:162](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L162)
+
+initialize with array
 
 #### Parameters
 
@@ -175,7 +180,9 @@ Defined in: [mersenne-twister.ts:160](https://github.com/technobuddha/library/bl
 initGenrand(seed: number): void;
 ```
 
-Defined in: [mersenne-twister.ts:143](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L143)
+Defined in: [src/mersenne-twister.ts:146](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L146)
+
+initialize with a seed
 
 #### Parameters
 
@@ -195,7 +202,9 @@ Defined in: [mersenne-twister.ts:143](https://github.com/technobuddha/library/bl
 setSeed(seed: number | number[]): void;
 ```
 
-Defined in: [mersenne-twister.ts:134](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L134)
+Defined in: [src/mersenne-twister.ts:137](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L137)
+
+Sets the seed for the random number generator.
 
 #### Parameters
 

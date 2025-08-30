@@ -76,17 +76,6 @@
             "isDeprecated": false
           }
         ]
-      },
-      {
-        "title": "Type Check",
-        "children": [
-          {
-            "title": "isArrayLike",
-            "kind": 64,
-            "path": "Array/isArrayLike.md",
-            "isDeprecated": false
-          }
-        ]
       }
     ]
   },
@@ -296,6 +285,12 @@
       {
         "title": "Analysis",
         "children": [
+          {
+            "title": "SplitWordsOptions",
+            "kind": 2097152,
+            "path": "English/SplitWordsOptions.md",
+            "isDeprecated": false
+          },
           {
             "title": "readability",
             "kind": 64,
@@ -1299,6 +1294,12 @@
         "title": "Type Guards",
         "children": [
           {
+            "title": "isArrayLike",
+            "kind": 64,
+            "path": "Object/isArrayLike.md",
+            "isDeprecated": false
+          },
+          {
             "title": "isBoolean",
             "kind": 64,
             "path": "Object/isBoolean.md",
@@ -1632,9 +1633,9 @@
             "isDeprecated": false
           },
           {
-            "title": "title",
+            "title": "titleCase",
             "kind": 64,
-            "path": "String/title.md",
+            "path": "String/titleCase.md",
             "isDeprecated": false
           },
           {
@@ -2063,12 +2064,6 @@
       {
         "title": "Split",
         "children": [
-          {
-            "title": "SplitWordsOptions",
-            "kind": 2097152,
-            "path": "String/SplitWordsOptions.md",
-            "isDeprecated": false
-          },
           {
             "title": "splitChars",
             "kind": 64,

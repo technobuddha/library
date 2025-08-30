@@ -70,3 +70,5 @@ node_modules/
 
 #!.yarn/cache
 .pnp.*
+
+.vitepress/cache

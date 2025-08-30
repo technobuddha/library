@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / addTime
 
 # Function: addTime()
@@ -11,7 +8,7 @@ Technobuddha Library
 function addTime(input: Date, increment: TimeIncrement): Date;
 ```
 
-Defined in: [add-time.ts:25](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L25)
+Defined in: [add-time.ts:32](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L32)
 
 Add units of time to a Date
 

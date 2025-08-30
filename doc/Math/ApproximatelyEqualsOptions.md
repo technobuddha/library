@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Math](./index.md) / ApproximatelyEqualsOptions
 
 # Type Alias: ApproximatelyEqualsOptions
@@ -21,5 +18,5 @@ Options for the [approximatelyEquals](approximatelyEquals.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="tolerance"></a> `tolerance?` | `number` | Tolerance range. If specified, should be greater than 0. | [approximately-equals.ts:8](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L8) |
+| <a id="tolerance"></a> `tolerance?` | `number` | Tolerance range. If specified, should be greater than 0. | [src/approximately-equals.ts:8](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L8) |
 

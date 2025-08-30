@@ -23,7 +23,9 @@ export const Origin: Cartesian = { x: 0, y: 0 };
  * @category Coordinates
  */
 export type Polar = {
+  /** The radius (distance from the origin). */
   r: number;
+  /** The angle. */
   φ: number;
 };
 

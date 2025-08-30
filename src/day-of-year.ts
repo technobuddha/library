@@ -8,6 +8,7 @@ import { floor } from './floor.ts';
  * @category Year
  */
 export type DayOfYearOptions = {
+  /** Use the UTC timezone */
   utc?: boolean;
 };
 

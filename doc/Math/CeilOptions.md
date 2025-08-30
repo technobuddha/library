@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Math](./index.md) / CeilOptions
 
 # Type Alias: CeilOptions
@@ -22,6 +19,6 @@ Options for the [ceil](ceil.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [ceil.ts:13](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L13) |
-| <a id="tolerance"></a> `tolerance?` | `number` | A small value to subtract from the input before applying the ceiling, useful for floating-point tolerance. Defaults to 0. | [ceil.ts:11](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L11) |
+| <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [src/ceil.ts:13](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L13) |
+| <a id="tolerance"></a> `tolerance?` | `number` | A small value to subtract from the input before applying the ceiling, useful for floating-point tolerance. Defaults to 0. | [src/ceil.ts:11](https://github.com/technobuddha/library/blob/main/src/ceil.ts#L11) |
 

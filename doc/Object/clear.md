@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Object](./index.md) / clear
 
 # Function: clear()
@@ -11,7 +8,7 @@ Technobuddha Library
 function clear<T>(input: Record<string | number | symbol, T>): Record<string | number | symbol, T>;
 ```
 
-Defined in: clear.ts:15
+Defined in: [clear.ts:15](https://github.com/technobuddha/library/blob/main/src/clear.ts#L15)
 
 Delete all own enumerable string properties from an object
 

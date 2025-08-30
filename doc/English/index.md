@@ -1,16 +1,14 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / English
 
 # English
 
 ### Analysis
 
-| Function | Description |
+| Name | Description |
 | ------ | ------ |
+| [SplitWordsOptions](SplitWordsOptions.md) | Options for the [splitWords](splitWords.md) function |
 | [readability](readability.md) | Calculates the Flesch-Kincaid readability score for a given text. |
 | [splitSentences](splitSentences.md) | Splits the input string into an array of sentences. |
 | [splitWords](splitWords.md) | Split a string into an array of words |

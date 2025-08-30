@@ -35,7 +35,12 @@ export function isoWeekOfYear(
     weekOneIncludes = day.thursday,
     firstDayOfWeek = day.monday,
   }: ISOWeekOfYearOptions = {},
-): { year: number; week: number } {
+): {
+  /** The year */
+  year: number;
+  /** The ISO week number */
+  week: number;
+} {
   const bow = beginningOfWeek(input, { utc, firstDayOfWeek });
 
   const week1 =

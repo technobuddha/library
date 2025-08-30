@@ -55,7 +55,7 @@
 const N = 624;
 
 /**
- * The middle word, an offset used in the recurrence relation defining the series x, 1 ≤ m < n
+ * The middle word, an offset used in the recurrence relation defining the series x, 1 ≤ m \< n
  */
 const M = 397;
 
@@ -125,12 +125,15 @@ function defaultSeed(): number {
  */
 export class MersenneTwister {
   private mti = N + 1; /* the array for the state vector  */
-  public mt = new Uint32Array(N);
+  private mt = new Uint32Array(N);
 
   public constructor(seed: number | number[] = defaultSeed()) {
     this.setSeed(seed);
   }
 
+  /**
+   * Sets the seed for the random number generator.
+   */
   public setSeed(seed: number | number[]): void {
     if (typeof seed === 'number') {
       this.initGenrand(seed);
@@ -139,7 +142,7 @@ export class MersenneTwister {
     }
   }
 
-  /* initializes mt[N] with a seed */
+  /** initialize with a seed */
   public initGenrand(seed: number): void {
     this.mt[0] = seed;
     this.mti = 1;
@@ -155,8 +158,7 @@ export class MersenneTwister {
     /* 2002/01/09 modified by Makoto Matsumoto             */
   }
 
-  /* initialize by an array with array */
-  /* init_key is the array for initializing keys */
+  /** initialize with array */
   public initByArray(key: number[]): void {
     this.initGenrand(19650218);
 
@@ -192,7 +194,7 @@ export class MersenneTwister {
     this.mt[0] = 0x80000000; /* MSB is 1; assuring non-zero initial array */
   }
 
-  /* generates a random number on [0,0xffffffff]-interval */
+  /** generates a random number on [0,0xffffffff]-interval */
   public genrandInt32(): number {
     let y;
 
@@ -224,30 +226,30 @@ export class MersenneTwister {
     return y;
   }
 
-  /* generates a random number on [0,0x7fffffff]-interval */
+  /** generates a random number on [0,0x7fffffff]-interval */
   public genrandInt31(): number {
     return this.genrandInt32() >>> 1;
   }
 
-  /* generates a random number on [0,1]-real-interval */
+  /** generates a random number on [0,1]-real-interval */
   public genrandReal1(): number {
     return this.genrandInt32() / 4294967295.0;
     /* divided by 2^32-1 */
   }
 
-  /* generates a random number on [0,1)-real-interval */
+  /** generates a random number on [0,1)-real-interval */
   public genrandReal2(): number {
     return this.genrandInt32() / 4294967296.0;
     /* divided by 2^32 */
   }
 
-  /* generates a random number on (0,1)-real-interval */
+  /** generates a random number on (0,1)-real-interval */
   public genrandReal3(): number {
     return (this.genrandInt32() + 0.5) / 4294967296.0;
     /* divided by 2^32 */
   }
 
-  /* generates a random number on [0,1) with 53-bit resolution*/
+  /** generates a random number on [0,1) with 53-bit resolution*/
   public genrandRes53(): number {
     const a = this.genrandInt32() >> 5;
     const b = this.genrandInt32() >> 6;

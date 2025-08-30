@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / Crc32
 
 # Class: Crc32
@@ -38,7 +35,7 @@ crc.digest('hex');
 new Crc32(): Crc32;
 ```
 
-Defined in: [crc-32.ts:93](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L93)
+Defined in: [src/crc-32.ts:93](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L93)
 
 Creates a new CRC32 hash instance and initializes its internal state.
 
@@ -65,7 +62,7 @@ Use [update](#update) to process data and [digest](#digest) to obtain the final 
 digest(): Uint8Array;
 ```
 
-Defined in: [crc-32.ts:116](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L116)
+Defined in: [src/crc-32.ts:116](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L116)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -87,7 +84,7 @@ The hash digest
 digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [crc-32.ts:117](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L117)
+Defined in: [src/crc-32.ts:117](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L117)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -122,7 +119,7 @@ update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [crc-32.ts:98](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L98)
+Defined in: [src/crc-32.ts:98](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L98)
 
 Updates the hash with the given binary data.
 
@@ -148,7 +145,7 @@ The hash instance for method chaining.
 update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [crc-32.ts:99](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L99)
+Defined in: [src/crc-32.ts:99](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L99)
 
 Updates the hash with the given string data.
 

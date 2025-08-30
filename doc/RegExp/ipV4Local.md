@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [RegExp](./index.md) / ipV4Local
 
 # Variable: ipV4Local

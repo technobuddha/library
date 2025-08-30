@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / DaysInMonthOptions
 
 # Type Alias: DaysInMonthOptions
@@ -21,5 +18,5 @@ Options for the [daysInMonth](daysInMonth.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [days-in-month.ts:11](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L11) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/days-in-month.ts:11](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L11) |
 

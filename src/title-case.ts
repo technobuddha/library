@@ -11,7 +11,7 @@ const titles = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?
  * @group String
  * @category Case Conversion
  */
-export function title(input: string): string {
+export function titleCase(input: string): string {
   return input.replaceAll(
     /[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/gu,
     (match, index: number, word: string) => {

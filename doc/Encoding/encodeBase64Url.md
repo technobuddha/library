@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / encodeBase64Url
 
 # Function: encodeBase64Url()
@@ -50,7 +47,7 @@ encodeBase64Url('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ"
 function encodeBase64Url(binary: BinaryObject): string;
 ```
 
-Defined in: [encode-base-64-url.ts:29](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L29)
+Defined in: [src/encode-base-64-url.ts:29](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L29)
 
 Encode a [BinaryObject](BinaryObject.md) to a `Base64Url` string.
 

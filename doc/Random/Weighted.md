@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Random](./index.md) / Weighted
 
 # Type Alias: Weighted
@@ -24,5 +21,5 @@ based on their relative weights, such as in weighted random selection.
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="weight"></a> `weight` | `number` | The numeric weight assigned to the object. | [random-weighted-pick.ts:13](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L13) |
+| <a id="weight"></a> `weight` | `number` | The numeric weight assigned to the object. | [src/random-weighted-pick.ts:13](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L13) |
 

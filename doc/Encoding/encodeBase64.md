@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / encodeBase64
 
 # Function: encodeBase64()
@@ -50,7 +47,7 @@ encodeBase64('Hello, world!', 'utf8'); // "SGVsbG8sIHdvcmxkIQ=="
 function encodeBase64(binary: BinaryObject): string;
 ```
 
-Defined in: [encode-base-64.ts:29](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L29)
+Defined in: [src/encode-base-64.ts:29](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L29)
 
 Encode a [BinaryObject](BinaryObject.md) to a `Base64` string.
 

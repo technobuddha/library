@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / decodeBase64
 
 # Function: decodeBase64()
@@ -58,7 +55,7 @@ decodeBase64('SGVsbG8sIHdvcmxkIQ==');
 function decodeBase64(input: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [decode-base-64.ts:29](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L29)
+Defined in: [src/decode-base-64.ts:29](https://github.com/technobuddha/library/blob/main/src/decode-base-64.ts#L29)
 
 Decode a [Base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoded string as a
 string with the specified text encoding.

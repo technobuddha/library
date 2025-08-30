@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Math](./index.md) / romanize
 
 # Function: romanize()
@@ -11,7 +8,7 @@ Technobuddha Library
 function romanize(input: number, options: RomanOptions): string;
 ```
 
-Defined in: romanize.ts:32
+Defined in: [romanize.ts:32](https://github.com/technobuddha/library/blob/main/src/romanize.ts#L32)
 
 Convert a number into a roman numeral string
 

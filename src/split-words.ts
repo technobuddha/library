@@ -3,8 +3,8 @@ import { isWhitespace } from './is-whitespace.ts';
 
 /**
  * Options for the {@link splitWords} function
- * @group String
- * @category Split
+ * @group English
+ * @category Analysis
  */
 export type SplitWordsOptions = {
   /** The delimiter between words */

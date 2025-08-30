@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / String
 
 # String
@@ -29,7 +26,7 @@ Technobuddha Library
 | [capitalize](capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 | [matchCase](matchCase.md) | Attempt to convert the input string into the same case as the target string |
 | [startCase](startCase.md) | Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase. |
-| [title](title.md) | Convert a string to a title, capitalizing each word, except for the small words |
+| [titleCase](titleCase.md) | Convert a string to a title, capitalizing each word, except for the small words |
 | [uncapitalize](uncapitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 
 ### Categorization
@@ -174,9 +171,8 @@ Technobuddha Library
 
 ### Split
 
-| Name | Description |
+| Function | Description |
 | ------ | ------ |
-| [SplitWordsOptions](SplitWordsOptions.md) | Options for the [splitWords](English/splitWords.md) function |
 | [splitChars](splitChars.md) | Split a string into an array of characters |
 | [splitLines](splitLines.md) | Split a string into an array of lines |
 

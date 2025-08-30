@@ -216,7 +216,7 @@ export * from './syllables.ts';
 export * from './tag.ts';
 export * from './time-span.ts';
 export * from './timezone.ts';
-export * from './title.ts';
+export * from './title-case.ts';
 export * from './to-angle.ts';
 export * from './to-ascii.ts';
 export * from './to-boolean.ts';

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Array](./index.md) / LookAheadOptions
 
 # Type Alias: LookAheadOptions\<T\>
@@ -37,7 +34,7 @@ Options for [lookAhead](lookAhead.md) operations.
 
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| `last` | `T` | Specifies the last item in the sequence. | [look-ahead.ts:12](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L12) |
+| `last` | `T` | Specifies the last item in the sequence. | [src/look-ahead.ts:12](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L12) |
 
 ```ts
 {
@@ -47,5 +44,5 @@ Options for [lookAhead](lookAhead.md) operations.
 
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| `wrapAround` | `boolean` | Determines whether the look-ahead should wrap around to the beginning when reaching the end. | [look-ahead.ts:18](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L18) |
+| `wrapAround` | `boolean` | Determines whether the look-ahead should wrap around to the beginning when reaching the end. | [src/look-ahead.ts:18](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L18) |
 

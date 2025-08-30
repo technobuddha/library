@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Programming](./index.md) / GraphQLValue
 
 # Type Alias: GraphQLValue

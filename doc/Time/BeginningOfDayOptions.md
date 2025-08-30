@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / BeginningOfDayOptions
 
 # Type Alias: BeginningOfDayOptions
@@ -21,5 +18,5 @@ Options for [beginningOfDay](beginningOfDay.md)
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the UTC timezone | [beginning-of-day.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L8) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the UTC timezone | [src/beginning-of-day.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L8) |
 

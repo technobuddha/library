@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [English](./index.md) / splitWords
 
 # Function: splitWords()
@@ -20,7 +17,7 @@ Split a string into an array of words
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `input` | `string` | The string to split |
-| `options` | [`SplitWordsOptions`](../String/SplitWordsOptions.md) | see [SplitWordsOptions](../String/SplitWordsOptions.md) |
+| `options` | [`SplitWordsOptions`](SplitWordsOptions.md) | see [SplitWordsOptions](SplitWordsOptions.md) |
 
 ## Returns
 

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / MidnightOptions
 
 # Type Alias: MidnightOptions
@@ -21,5 +18,5 @@ Options for the [isMidnight](isMidnight.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [is-midnight.ts:8](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L8) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/is-midnight.ts:8](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L8) |
 

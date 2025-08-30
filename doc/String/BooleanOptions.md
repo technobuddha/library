@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / BooleanOptions
 
 # Type Alias: BooleanOptions
@@ -26,6 +23,6 @@ Options for the [toBoolean](toBoolean.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="falsevalues"></a> `falseValues?` | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\< \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\> | An iterable list of values that are "false" | [to-boolean.ts:12](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L12) |
-| <a id="truevalues"></a> `trueValues?` | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\< \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\> | An iterable list of values that are "true" | [to-boolean.ts:10](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L10) |
+| <a id="falsevalues"></a> `falseValues?` | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\< \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\> | An iterable list of values that are "false" | [src/to-boolean.ts:12](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L12) |
+| <a id="truevalues"></a> `trueValues?` | [`Iterable`](https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html#iterable-interface)\< \| `string` \| [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)\> | An iterable list of values that are "true" | [src/to-boolean.ts:10](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L10) |
 

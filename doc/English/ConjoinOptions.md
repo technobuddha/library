@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [English](./index.md) / ConjoinOptions
 
 # Type Alias: ConjoinOptions
@@ -23,7 +20,7 @@ Options for creating a coordinated list with [conjoin](conjoin.md)
 
 | Property | Type | Default value | Description | Defined in |
 | ------ | ------ | ------ | ------ | ------ |
-| <a id="conjunction"></a> `conjunction?` | `string` | `'and'` | Conjunction to insert in the last position | [conjoin.ts:14](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L14) |
-| <a id="oxford"></a> `oxford?` | `boolean` | `true` | If true, use the oxford comma | [conjoin.ts:19](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L19) |
-| <a id="separator"></a> `separator?` | `string` | `','` | String used to separate values | [conjoin.ts:24](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L24) |
+| <a id="conjunction"></a> `conjunction?` | `string` | `'and'` | Conjunction to insert in the last position | [src/conjoin.ts:14](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L14) |
+| <a id="oxford"></a> `oxford?` | `boolean` | `true` | If true, use the oxford comma | [src/conjoin.ts:19](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L19) |
+| <a id="separator"></a> `separator?` | `string` | `','` | String used to separate values | [src/conjoin.ts:24](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L24) |
 

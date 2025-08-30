@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / Array
 
 # Array
@@ -31,9 +28,3 @@ Technobuddha Library
 | [collapse](collapse.md) | Collapses an array of values into a flat array with `null` and `undefined` elements removed. |
 | [longestCommonSubsequence](longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
 | [zipperMerge](zipperMerge.md) | Merges multiple arrays into a single array by interleaving their elements at each index. |
-
-### Type Check
-
-| Function | Description |
-| ------ | ------ |
-| [isArrayLike](isArrayLike.md) | Determines whether the provided value is array-like. |

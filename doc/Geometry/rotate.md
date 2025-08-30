@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / rotate
 
 # Function: rotate()
@@ -51,7 +48,7 @@ function rotate(
    options?: UnitOptions & OriginOptions): Polygon;
 ```
 
-Defined in: [rotate.ts:52](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L52)
+Defined in: [src/rotate.ts:52](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L52)
 
 Rotates a polygon around a given origin by a specified angle.
 

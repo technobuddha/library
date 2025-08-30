@@ -19,7 +19,10 @@ export type Numbering = {
    * - fraction: 'numeric' | 'alphabetic'
    */
   output: {
+    /** integer output format: 'numeric', 'alphabetic', or 'hybrid' */
     integer: 'numeric' | 'alphabetic' | 'hybrid';
+
+    /** fraction output format: 'numeric' or 'alphabetic' */
     fraction: 'numeric' | 'alphabetic';
   };
 

@@ -15,9 +15,9 @@ import { rotate } from './rotate.ts';
  * @category Rectangle
  */
 export type RotatedRect = Rect & {
-  /* The area of the rotated rectangle. */
+  /** The area of the rotated rectangle. */
   area: number;
-  /* The rotation angle of the rectangle, in radians. */
+  /** The rotation angle of the rectangle, in radians. */
   angle: number;
 };
 

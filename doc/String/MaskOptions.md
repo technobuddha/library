@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / MaskOptions
 
 # Type Alias: MaskOptions
@@ -21,5 +18,5 @@ Options for the [mask](mask.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="missing"></a> `missing?` | `string` | if the mask is longer, fill with character | [mask.ts:11](https://github.com/technobuddha/library/blob/main/src/mask.ts#L11) |
+| <a id="missing"></a> `missing?` | `string` | if the mask is longer, fill with character | [src/mask.ts:11](https://github.com/technobuddha/library/blob/main/src/mask.ts#L11) |
 

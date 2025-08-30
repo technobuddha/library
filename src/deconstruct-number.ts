@@ -30,7 +30,9 @@ export function deconstructNumber(
   input: number,
   precision = 9,
 ): DeconstructedNumber & {
+  /** The fractional part of the number. */
   fractional: DeconstructedNumber;
+  /** The whole part of the number. */
   whole: DeconstructedNumber;
 } {
   if (Number.isNaN(input) || !Number.isFinite(input)) {

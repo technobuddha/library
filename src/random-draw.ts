@@ -15,7 +15,14 @@
 export function randomDraw<T = unknown>(
   list: readonly T[],
   random: () => number = Math.random,
-): { draw: T; list: T[] } | undefined {
+):
+  | {
+      /** The item that was randomly drawn from the list */
+      draw: T;
+      /** The list with the drawn item removed */
+      list: T[];
+    }
+  | undefined {
   if (list.length === 0) {
     return undefined;
   }

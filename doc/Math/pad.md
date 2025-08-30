@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Math](./index.md) / pad
 
 # Function: pad()
@@ -11,7 +8,7 @@ Technobuddha Library
 function pad(input: number, length: number): string;
 ```
 
-Defined in: pad.ts:17
+Defined in: [pad.ts:17](https://github.com/technobuddha/library/blob/main/src/pad.ts#L17)
 
 Add leading zeros to a number to ensure a string of a minimum length
 

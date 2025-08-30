@@ -1,9 +1,6 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
-[Library](../index.md) / [Array](./index.md) / isArrayLike
+[Library](../index.md) / [Object](./index.md) / isArrayLike
 
 # Function: isArrayLike()
 

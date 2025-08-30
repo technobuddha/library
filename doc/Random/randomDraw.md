@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Random](./index.md) / randomDraw
 
 # Function: randomDraw()
@@ -35,11 +32,19 @@ Draw a random item from a list.  Returning both the item and the list without th
 
 ## Returns
 
-  \| `undefined`
-  \| \{
-  `draw`: `T`;
-  `list`: `T`[];
-\}
+`undefined`
+
+```ts
+{
+  draw: T;
+  list: T[];
+}
+```
+
+| Name | Type | Description | Defined in |
+| ------ | ------ | ------ | ------ |
+| `draw` | `T` | The item that was randomly drawn from the list | [src/random-draw.ts:21](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L21) |
+| `list` | `T`[] | The list with the drawn item removed | [src/random-draw.ts:23](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L23) |
 
 Randomly selected item & the list without the drawn item
 

@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / dayOfYear
 
 # Function: dayOfYear()
@@ -11,7 +8,7 @@ Technobuddha Library
 function dayOfYear(input: Date, options: DayOfYearOptions): number;
 ```
 
-Defined in: [day-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L22)
+Defined in: [day-of-year.ts:23](https://github.com/technobuddha/library/blob/main/src/day-of-year.ts#L23)
 
 Calculates the day of the year for a given date.
 

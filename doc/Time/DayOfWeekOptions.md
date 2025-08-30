@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / DayOfWeekOptions
 
 # Type Alias: DayOfWeekOptions
@@ -22,6 +19,6 @@ Options for the [dayOfWeek](dayOfWeek-1.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="startofweek"></a> `startOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | Which day of the week is considered the beginning | [day-of-week.ts:14](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L14) |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [day-of-week.ts:12](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L12) |
+| <a id="startofweek"></a> `startOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | Which day of the week is considered the beginning | [src/day-of-week.ts:14](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L14) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/day-of-week.ts:12](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L12) |
 

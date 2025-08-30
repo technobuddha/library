@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / decodeBase64Url
 
 # Function: decodeBase64Url()
@@ -58,7 +55,7 @@ decodeBase64('SGVsbG8sIHdvcmxkIQ==');
 function decodeBase64Url(input: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [decode-base-64-url.ts:29](https://github.com/technobuddha/library/blob/main/src/decode-base-64-url.ts#L29)
+Defined in: [src/decode-base-64-url.ts:29](https://github.com/technobuddha/library/blob/main/src/decode-base-64-url.ts#L29)
 
 Decode a [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoded string as a
 string with the specified text encoding.

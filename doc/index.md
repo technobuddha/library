@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 
 # Index
 
@@ -32,12 +29,6 @@ Technobuddha Library
 | [collapse](Array/collapse.md) | Collapses an array of values into a flat array with `null` and `undefined` elements removed. |
 | [longestCommonSubsequence](Array/longestCommonSubsequence.md) | Determine the longest possible array that is subsequence of both of given arrays. |
 | [zipperMerge](Array/zipperMerge.md) | Merges multiple arrays into a single array by interleaving their elements at each index. |
-
-### Type Check
-
-| Function | Description |
-| ------ | ------ |
-| [isArrayLike](Array/isArrayLike.md) | Determines whether the provided value is array-like. |
 
 ## Encoding
 
@@ -90,8 +81,9 @@ Technobuddha Library
 
 ### Analysis
 
-| Function | Description |
+| Name | Description |
 | ------ | ------ |
+| [SplitWordsOptions](English/SplitWordsOptions.md) | Options for the [splitWords](English/splitWords.md) function |
 | [readability](English/readability.md) | Calculates the Flesch-Kincaid readability score for a given text. |
 | [splitSentences](English/splitSentences.md) | Splits the input string into an array of sentences. |
 | [splitWords](English/splitWords.md) | Split a string into an array of words |
@@ -347,6 +339,7 @@ Technobuddha Library
 
 | Function | Description |
 | ------ | ------ |
+| [isArrayLike](Object/isArrayLike.md) | Determines whether the provided value is array-like. |
 | [isBoolean](Object/isBoolean.md) | Determines whether the provided value is a boolean or a Boolean object. |
 | [isFunction](Object/isFunction.md) | Determines whether the provided value is a function. |
 | [isIterable](Object/isIterable.md) | Determines if the provided object is iterable. |
@@ -453,7 +446,7 @@ Technobuddha Library
 | [capitalize](String/capitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 | [matchCase](String/matchCase.md) | Attempt to convert the input string into the same case as the target string |
 | [startCase](String/startCase.md) | Converts a given string to start case, capitalizing the first letter of each word and converting the rest to lowercase. |
-| [title](String/title.md) | Convert a string to a title, capitalizing each word, except for the small words |
+| [titleCase](String/titleCase.md) | Convert a string to a title, capitalizing each word, except for the small words |
 | [uncapitalize](String/uncapitalize.md) | Capitalize the first word in a sentence, or capitalize a single word. |
 
 ### Categorization
@@ -598,9 +591,8 @@ Technobuddha Library
 
 ### Split
 
-| Name | Description |
+| Function | Description |
 | ------ | ------ |
-| [SplitWordsOptions](String/SplitWordsOptions.md) | Options for the [splitWords](English/splitWords.md) function |
 | [splitChars](String/splitChars.md) | Split a string into an array of characters |
 | [splitLines](String/splitLines.md) | Split a string into an array of lines |
 

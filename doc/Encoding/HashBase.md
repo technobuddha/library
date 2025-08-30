@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Encoding](./index.md) / HashBase
 
 # Abstract Class: HashBase
@@ -49,7 +46,7 @@ new HashBase(): HashBase;
 abstract digest(): Uint8Array;
 ```
 
-Defined in: [hash-base.ts:27](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L27)
+Defined in: [src/hash-base.ts:27](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L27)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -67,7 +64,7 @@ The hash digest
 abstract digest(encoding: BinaryEncoding): string;
 ```
 
-Defined in: [hash-base.ts:35](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L35)
+Defined in: [src/hash-base.ts:35](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L35)
 
 Finalizes the hash computation and returns the resulting hash digest.
 This method performs any necessary padding and processes the final block
@@ -97,7 +94,7 @@ abstract update(data:
   | ArrayBuffer): this;
 ```
 
-Defined in: [hash-base.ts:42](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L42)
+Defined in: [src/hash-base.ts:42](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L42)
 
 Updates the hash with the given binary data.
 
@@ -119,7 +116,7 @@ The hash instance for method chaining.
 abstract update(data: string, encoding?: TextEncoding): this;
 ```
 
-Defined in: [hash-base.ts:50](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L50)
+Defined in: [src/hash-base.ts:50](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L50)
 
 Updates the hash with the given string data.
 

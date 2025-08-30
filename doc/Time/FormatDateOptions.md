@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / FormatDateOptions
 
 # Type Alias: FormatDateOptions
@@ -21,5 +18,5 @@ Options for formatting a date
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Format the date in the UTC timezone | [format-date.ts:87](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L87) |
+| <a id="utc"></a> `utc?` | `boolean` | Format the date in the UTC timezone | [src/format-date.ts:87](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L87) |
 

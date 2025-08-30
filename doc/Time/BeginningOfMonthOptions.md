@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Time](./index.md) / BeginningOfMonthOptions
 
 # Type Alias: BeginningOfMonthOptions
@@ -21,5 +18,5 @@ Options for the [beginningOfMonth](beginningOfMonth.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [beginning-of-month.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L8) |
+| <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/beginning-of-month.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L8) |
 

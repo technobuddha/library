@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / NumberToLetterOptions
 
 # Type Alias: NumberToLetterOptions
@@ -21,5 +18,5 @@ Options for the [numberToLetter](numberToLetter.md) function
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="alphabet"></a> `alphabet?` | `string` | The alphabet to use | [number-to-letter.ts:14](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L14) |
+| <a id="alphabet"></a> `alphabet?` | `string` | The alphabet to use | [src/number-to-letter.ts:14](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L14) |
 

@@ -7,6 +7,7 @@ const config = {
   tsconfig: 'src/tsconfig.code.json',
   plugin: [
     'typedoc-plugin-markdown',
+    'typedoc-vitepress-theme',
     'typedoc-plugin-mdn-links',
     '@giancosta86/typedoc-readonly',
     'typedoc-plugin-coverage',
@@ -19,15 +20,15 @@ const config = {
   excludePrivate: true,
   excludeProtected: true,
   gitRevision: 'main',
-  readme: 'none',
+  readme: 'none', //'foo/readme.md',
   //  Output
   out: 'doc',
   router: 'group',
-  basePath: 'src',
+  basePath: '.',
   navigation: {
     includeCategories: true,
     includeGroups: true,
-    includeFolders: true,
+    includeFolders: false,
     compactFolders: true,
     excludeReferences: true,
   },

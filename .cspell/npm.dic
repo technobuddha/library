@@ -1,9 +1,12 @@
 cheferize
 colorjs
 comlink
+dotenv
 dotenvx
+eslintcache
 giancosta
 isbot
+jscoverage
 languagedetector
 letsencrypt
 modelcontextprotocol
@@ -13,4 +16,8 @@ nuqs
 openmcp
 quattuordecillion
 readlines
+stylelintcache
+typedoc
+vitepress
+yarnrc
 zxcvbn

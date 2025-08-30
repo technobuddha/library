@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Geometry](./index.md) / toPolygon
 
 # Function: toPolygon()
@@ -52,7 +49,7 @@ toPolygon({ x: 1, y: 2 }, { x: 4, y: 6 });
 function toPolygon(rect: Rect): Polygon;
 ```
 
-Defined in: [to-polygon.ts:43](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L43)
+Defined in: [src/to-polygon.ts:43](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L43)
 
 Convert a [Rect](Rect.md) into a [Polygon](Polygon.md).
 

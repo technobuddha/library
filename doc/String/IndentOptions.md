@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [String](./index.md) / IndentOptions
 
 # Type Alias: IndentOptions
@@ -21,5 +18,5 @@ Options for the indentation functions: [getIndent](getIndent.md), [indent](inden
 
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
-| <a id="indenter"></a> `indenter?` | `string` | The indentation character | [indent.ts:10](https://github.com/technobuddha/library/blob/main/src/indent.ts#L10) |
+| <a id="indenter"></a> `indenter?` | `string` | The indentation character | [src/indent.ts:10](https://github.com/technobuddha/library/blob/main/src/indent.ts#L10) |
 

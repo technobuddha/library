@@ -1,8 +1,5 @@
 <!-- markdownlint-disable -->
 <!-- cspell: disable -->
-Technobuddha Library
----
-
 [Library](../index.md) / [Array](./index.md) / CollapsiblePrimitive
 
 # Type Alias: CollapsiblePrimitive
