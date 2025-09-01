@@ -10,43 +10,9 @@
  * See [MD5](https://pajhome.org.uk/crypt/md5) for details.
  */
 
+import { int32 } from './int32.ts';
+import { rotl } from './rotl.ts';
 import { ShaBase } from './sha-base.ts';
-
-/**
- * Rotates a 32-bit number left by 1 bit.
- * @param num - The 32-bit integer to rotate.
- * @returns The result of rotating `num` left by 1 bit.
- * @internal
- */
-function rotl1(num: number): number {
-  return (num << 1) | (num >>> 31);
-}
-
-/**
- * Rotates a 32-bit number to the left by 5 bits.
- *
- * This function performs a circular left shift (rotation) on the input number,
- * moving the highest 5 bits to the lowest 5 bit positions.
- * @param num - The 32-bit number to rotate.
- * @returns The result of rotating `num` to the left by 5 bits.
- * @internal
- */
-function rotl5(num: number): number {
-  return (num << 5) | (num >>> 27);
-}
-
-/**
- * Rotates a 32-bit number to the left by 30 bits.
- *
- * This function performs a circular left shift (rotate left) on the input number by 30 bits.
- * Bits shifted out on the left are reintroduced on the right.
- * @param num - The 32-bit number to rotate.
- * @returns The result of rotating `num` to the left by 30 bits.
- * @internal
- */
-function rotl30(num: number): number {
-  return (num << 30) | (num >>> 2);
-}
 
 /**
  * SHA-1 auxiliary function `ft` used in the main loop of the SHA-1 hash algorithm.
@@ -82,20 +48,6 @@ function ft(s: number, b: number, c: number, d: number): number {
  * @internal
  */
 const K = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6];
-
-/**
- * Converts a number to a 32-bit signed integer using bitwise OR.
- *
- * This function effectively truncates the decimal part of the number
- * and ensures the result fits within the 32-bit signed integer range.
- * @param x - The number to convert.
- * @returns The 32-bit signed integer representation of the input.
- * @internal
- */
-function int32(x: number): number {
-  // eslint-disable-next-line unicorn/prefer-math-trunc
-  return x | 0;
-}
 
 /**
  * Secure Hash Algorithm, SHA-1
@@ -154,16 +106,16 @@ export class Sha1 extends ShaBase {
       );
     }
     for (; i < 80; ++i) {
-      w[i] = rotl1(w[i - 3] ^ w[i - 8] ^ w[i - 14] ^ w[i - 16]);
+      w[i] = rotl(w[i - 3] ^ w[i - 8] ^ w[i - 14] ^ w[i - 16], 1);
     }
 
     for (let j = 0; j < 80; ++j) {
       const s = int32(j / 20);
-      const t = int32(rotl5(a) + ft(s, b, c, d) + e + w[j] + int32(K[s]));
+      const t = int32(rotl(a, 5) + ft(s, b, c, d) + e + w[j] + int32(K[s]));
 
       e = d;
       d = c;
-      c = rotl30(b);
+      c = rotl(b, 30);
       b = a;
       a = t;
     }

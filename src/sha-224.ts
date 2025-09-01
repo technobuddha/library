@@ -1,4 +1,7 @@
 /* eslint-disable no-bitwise */
+import { ch } from './ch.ts';
+import { int32 } from './int32.ts';
+import { maj } from './maj.ts';
 import { ShaBase } from './sha-base.ts';
 
 /**
@@ -19,54 +22,6 @@ const K = [
   0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3,
   0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2,
 ];
-
-/**
- * Converts a given number to a 32-bit signed integer.
- *
- * This function uses bitwise OR with zero to truncate the input number
- * to a 32-bit signed integer, effectively emulating the behavior of
- * `Math.trunc(x) | 0` for integer conversion.
- * @param x - The number to convert.
- * @returns The 32-bit signed integer representation of the input.
- * @internal
- */
-function int32(x: number): number {
-  // eslint-disable-next-line unicorn/prefer-math-trunc
-  return x | 0;
-}
-
-/**
- * Computes the SHA-2 'choose' (ch) function.
- *
- * The function selects bits from `y` or `z` based on the value of `x`.
- * For each bit position, if the corresponding bit in `x` is 1, the bit from `y` is selected;
- * otherwise, the bit from `z` is selected.
- *
- * Mathematically: ch(x, y, z) = (x & y) ^ (~x & z)
- * @param x - The selector value.
- * @param y - The first input value.
- * @param z - The second input value.
- * @returns The result of the 'choose' function.
- * @internal
- */
-function ch(x: number, y: number, z: number): number {
-  return z ^ (x & (y ^ z));
-}
-
-/**
- * Computes the majority function of three 32-bit numbers.
- *
- * For each bit position, the result is the value that occurs in at least two of the inputs.
- * This function is commonly used in cryptographic hash algorithms such as SHA-2.
- * @param x - The first 32-bit integer input.
- * @param y - The second 32-bit integer input.
- * @param z - The third 32-bit integer input.
- * @returns The majority value as a 32-bit integer.
- * @internal
- */
-function maj(x: number, y: number, z: number): number {
-  return (x & y) | (z & (x | y));
-}
 
 /**
  * Computes the SHA-224/SHA-256 σ₀ (sigma0) function for a 32-bit integer.

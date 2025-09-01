@@ -1,4 +1,7 @@
 /* eslint-disable no-bitwise */
+import { ch } from './ch.ts';
+import { int32 } from './int32.ts';
+import { maj } from './maj.ts';
 import { ShaBase } from './sha-base.ts';
 
 /**
@@ -35,63 +38,18 @@ const K = [
 ];
 
 /**
- * Converts a number to a 32-bit signed integer using bitwise OR.
- *
- * This function effectively truncates the input number to a 32-bit signed integer,
- * similar to `Math.trunc`, but using bitwise operations for performance.
- * @param x - The number to convert.
- * @returns The 32-bit signed integer representation of `x`.
- * @internal
- */
-function int32(x: number): number {
-  // eslint-disable-next-line unicorn/prefer-math-trunc
-  return x | 0;
-}
-
-/**
- * Computes the "choose" (ch) function used in SHA-512 cryptographic hash algorithms.
- *
- * Given three 32-bit integers `x`, `y`, and `z`, the function returns the result of:
- *   z ^ (x & (y ^ z))
- * This operation selects bits from `y` or `z` based on the value of `x`.
- * @param x - The first 32-bit integer input.
- * @param y - The second 32-bit integer input.
- * @param z - The third 32-bit integer input.
- * @returns The result of the SHA-512 "choose" function.
- * @internal
- */
-function çh(x: number, y: number, z: number): number {
-  return z ^ (x & (y ^ z));
-}
-
-/**
- * Computes the majority function of three 32-bit numbers.
- *
- * For each bit position, the result is the value that appears in at least two of the inputs.
- * This function is commonly used in cryptographic hash algorithms such as SHA-512.
- * @param x - The first 32-bit integer input.
- * @param y - The second 32-bit integer input.
- * @param z - The third 32-bit integer input.
- * @returns The majority value as a 32-bit integer.
- * @internal
- */
-function maj(x: number, y: number, z: number): number {
-  return (x & y) | (z & (x | y));
-}
-
-/**
- * Computes the SHA-512 σ₀ (sigma0) function for the given 64-bit value split into high (`x`) and low (`xl`) 32-bit words.
+ * Computes the SHA-512 σ₀ (sigma0) function for the given 64-bit value split into high (`xH`) and low (`xl`) 32-bit words.
  *
  * The σ₀ function is defined as:
  *   σ₀(x) = ROTR^1(x) ⊕ ROTR^8(x) ⊕ SHR^7(x)
  * where ROTR is a right rotation and SHR is a right shift.
- * @param x - The high 32 bits of the 64-bit input value.
- * @param xl - The low 32 bits of the 64-bit input value.
+ * @param xH - The high 32 bits of the 64-bit input value.
+ * @param xL - The low 32 bits of the 64-bit input value.
  * @returns The result of the σ₀ function as a 32-bit integer.
  * @internal
  */
-function sigma0(x: number, xl: number): number {
-  return ((x >>> 28) | (xl << 4)) ^ ((xl >>> 2) | (x << 30)) ^ ((xl >>> 7) | (x << 25));
+function sigma0(xH: number, xL: number): number {
+  return ((xH >>> 28) | (xL << 4)) ^ ((xL >>> 2) | (xH << 30)) ^ ((xL >>> 7) | (xH << 25));
 }
 
 /**
@@ -101,41 +59,41 @@ function sigma0(x: number, xl: number): number {
  *   σ₁(x) = ROTR^14(x) ⊕ ROTR^18(x) ⊕ ROTR^41(x)
  * where ROTR^n(x) is the right rotation of x by n bits.
  * @param x - The high 32 bits of the 64-bit input word.
- * @param xl - The low 32 bits of the 64-bit input word.
+ * @param xL - The low 32 bits of the 64-bit input word.
  * @returns The result of the σ₁ function as a 32-bit number.
  * @internal
  */
-function sigma1(x: number, xl: number): number {
-  return ((x >>> 14) | (xl << 18)) ^ ((x >>> 18) | (xl << 14)) ^ ((xl >>> 9) | (x << 23));
+function sigma1(x: number, xL: number): number {
+  return ((x >>> 14) | (xL << 18)) ^ ((x >>> 18) | (xL << 14)) ^ ((xL >>> 9) | (x << 23));
 }
 
 /**
  * Computes the SHA-512 Gamma0 function on a 64-bit value represented by two 32-bit parts.
  *
- * This function applies bitwise rotations and shifts to the high (`x`) and low (`xl`) 32-bit words
+ * This function applies bitwise rotations and shifts to the high (`x`) and low (`xL`) 32-bit words
  * of a 64-bit integer, as specified in the SHA-512 specification for the Gamma0 function.
  * @param x - The high 32 bits of the 64-bit input value.
- * @param xl - The low 32 bits of the 64-bit input value.
+ * @param xL - The low 32 bits of the 64-bit input value.
  * @returns The result of the Gamma0 function as a 32-bit integer.
  * @internal
  */
-function gamma0(x: number, xl: number): number {
-  return ((x >>> 1) | (xl << 31)) ^ ((x >>> 8) | (xl << 24)) ^ (x >>> 7);
+function gamma0(x: number, xL: number): number {
+  return ((x >>> 1) | (xL << 31)) ^ ((x >>> 8) | (xL << 24)) ^ (x >>> 7);
 }
 
 /**
  * Computes the SHA-512-specific Gamma0 function for 64-bit values represented as two 32-bit numbers.
  *
- * This function applies bitwise right rotations and shifts to the high (`x`) and low (`xl`) 32-bit parts
+ * This function applies bitwise right rotations and shifts to the high (`x`) and low (`xL`) 32-bit parts
  * of a 64-bit word, then combines the results using XOR operations. It is used in the message schedule
  * expansion step of the SHA-512 hash algorithm.
  * @param x - The high 32 bits of the 64-bit input word.
- * @param xl - The low 32 bits of the 64-bit input word.
+ * @param xL - The low 32 bits of the 64-bit input word.
  * @returns The result of the Gamma0 function as a 32-bit integer.
  * @internal
  */
-function gamma0l(x: number, xl: number): number {
-  return ((x >>> 1) | (xl << 31)) ^ ((x >>> 8) | (xl << 24)) ^ ((x >>> 7) | (xl << 25));
+function gamma0L(x: number, xL: number): number {
+  return ((x >>> 1) | (xL << 31)) ^ ((x >>> 8) | (xL << 24)) ^ ((x >>> 7) | (xL << 25));
 }
 
 /**
@@ -145,27 +103,27 @@ function gamma0l(x: number, xl: number): number {
  *   Gamma1(x) = ROTR^19(x) XOR ROTR^61(x) XOR (x \>\>\> 6)
  * where ROTR^n(x) is the right rotation of x by n bits.
  * @param x - The high 32 bits of the 64-bit input value.
- * @param xl - The low 32 bits of the 64-bit input value.
+ * @param xL - The low 32 bits of the 64-bit input value.
  * @returns The result of the Gamma1 function as a 32-bit number.
  * @internal
  */
-function gamma1(x: number, xl: number): number {
-  return ((x >>> 19) | (xl << 13)) ^ ((xl >>> 29) | (x << 3)) ^ (x >>> 6);
+function gamma1(x: number, xL: number): number {
+  return ((x >>> 19) | (xL << 13)) ^ ((xL >>> 29) | (x << 3)) ^ (x >>> 6);
 }
 
 /**
  * Computes the lower 32 bits of the SHA-512 Gamma1 function.
  *
  * This function performs bitwise operations (rotations and shifts) on the input
- * 64-bit value, which is split into two 32-bit parts (`x` as the high word and `xl` as the low word).
+ * 64-bit value, which is split into two 32-bit parts (`x` as the high word and `xL` as the low word).
  * It is used as part of the SHA-512 hash algorithm's message schedule.
- * @param x - The high 32 bits of the 64-bit input value.
- * @param xl - The low 32 bits of the 64-bit input value.
+ * @param xH - The high 32 bits of the 64-bit input value.
+ * @param xL - The low 32 bits of the 64-bit input value.
  * @returns The result of the Gamma1 function applied to the lower 32 bits.
  * @internal
  */
-function gamma1l(x: number, xl: number): number {
-  return ((x >>> 19) | (xl << 13)) ^ ((xl >>> 29) | (x << 3)) ^ ((x >>> 6) | (xl << 26));
+function gamma1L(xH: number, xL: number): number {
+  return ((xH >>> 19) | (xL << 13)) ^ ((xL >>> 29) | (xH << 3)) ^ ((xH >>> 6) | (xL << 26));
 }
 
 /**
@@ -198,23 +156,23 @@ function getCarry(a: number, b: number): number {
  * @category Hash
  */
 export class Sha512 extends ShaBase {
-  private ah = 0x6a09e667;
-  private bh = 0xbb67ae85;
-  private ch = 0x3c6ef372;
-  private dh = 0xa54ff53a;
-  private eh = 0x510e527f;
-  private fh = 0x9b05688c;
-  private gh = 0x1f83d9ab;
-  private hh = 0x5be0cd19;
+  private aH = 0x6a09e667;
+  private bH = 0xbb67ae85;
+  private cH = 0x3c6ef372;
+  private dH = 0xa54ff53a;
+  private eH = 0x510e527f;
+  private fH = 0x9b05688c;
+  private gH = 0x1f83d9ab;
+  private hH = 0x5be0cd19;
 
-  private al = 0xf3bcc908;
-  private bl = 0x84caa73b;
-  private cl = 0xfe94f82b;
-  private dl = 0x5f1d36f1;
-  private el = 0xade682d1;
-  private fl = 0x2b3e6c1f;
-  private gl = 0xfb41bd6b;
-  private hl = 0x137e2179;
+  private aL = 0xf3bcc908;
+  private bL = 0x84caa73b;
+  private cL = 0xfe94f82b;
+  private dL = 0x5f1d36f1;
+  private eL = 0xade682d1;
+  private fL = 0x2b3e6c1f;
+  private gL = 0xfb41bd6b;
+  private hL = 0x137e2179;
   private readonly w: number[];
 
   /**
@@ -231,22 +189,22 @@ export class Sha512 extends ShaBase {
 
   protected override updateCounters(buffer: Uint8Array): void {
     const { w } = this;
-    let ah = int32(this.ah);
-    let bh = int32(this.bh);
-    let ch = int32(this.ch);
-    let dh = int32(this.dh);
-    let eh = int32(this.eh);
-    let fh = int32(this.fh);
-    let gh = int32(this.gh);
-    let hh = int32(this.hh);
-    let al = int32(this.al);
-    let bl = int32(this.bl);
-    let cl = int32(this.cl);
-    let dl = int32(this.dl);
-    let el = int32(this.el);
-    let fl = int32(this.fl);
-    let gl = int32(this.gl);
-    let hl = int32(this.hl);
+    let aH = int32(this.aH);
+    let bH = int32(this.bH);
+    let cH = int32(this.cH);
+    let dH = int32(this.dH);
+    let eH = int32(this.eH);
+    let fH = int32(this.fH);
+    let gH = int32(this.gH);
+    let hH = int32(this.hH);
+    let aL = int32(this.aL);
+    let bL = int32(this.bL);
+    let cL = int32(this.cL);
+    let dL = int32(this.dL);
+    let eL = int32(this.eL);
+    let fL = int32(this.fL);
+    let gL = int32(this.gL);
+    let hL = int32(this.hL);
 
     let i: number;
     for (i = 0; i < 32; i += 2) {
@@ -262,170 +220,170 @@ export class Sha512 extends ShaBase {
         buffer[i * 4 + 7];
     }
 
-    let wil: number;
-    let wih: number;
+    let wiL: number;
+    let wiH: number;
     for (; i < 160; i += 2) {
-      let xh = w[i - 15 * 2];
-      let xl = w[i - 15 * 2 + 1];
-      const gama0 = gamma0(xh, xl);
-      const gama0l = gamma0l(xl, xh);
+      let xH = w[i - 15 * 2];
+      let xL = w[i - 15 * 2 + 1];
+      const gama0 = gamma0(xH, xL);
+      const gama0L = gamma0L(xL, xH);
 
-      xh = w[i - 2 * 2];
-      xl = w[i - 2 * 2 + 1];
-      const gama1 = gamma1(xh, xl);
-      const gama1l = gamma1l(xl, xh);
+      xH = w[i - 2 * 2];
+      xL = w[i - 2 * 2 + 1];
+      const gama1 = gamma1(xH, xL);
+      const gama1L = gamma1L(xL, xH);
 
-      const wi7h = w[i - 7 * 2];
-      const wi7l = w[i - 7 * 2 + 1];
+      const wi7H = w[i - 7 * 2];
+      const wi7L = w[i - 7 * 2 + 1];
 
-      const wi16h = w[i - 16 * 2];
-      const wi16l = w[i - 16 * 2 + 1];
+      const wi16H = w[i - 16 * 2];
+      const wi16L = w[i - 16 * 2 + 1];
 
-      wil = int32(gama0l + wi7l);
-      wih = int32(gama0 + wi7h + getCarry(wil, gama0l));
-      wil = int32(wil + gama1l);
-      wih = int32(wih + gama1 + getCarry(wil, gama1l));
-      wil = int32(wil + wi16l);
-      wih = int32(wih + wi16h + getCarry(wil, wi16l));
+      wiL = int32(gama0L + wi7L);
+      wiH = int32(gama0 + wi7H + getCarry(wiL, gama0L));
+      wiL = int32(wiL + gama1L);
+      wiH = int32(wiH + gama1 + getCarry(wiL, gama1L));
+      wiL = int32(wiL + wi16L);
+      wiH = int32(wiH + wi16H + getCarry(wiL, wi16L));
 
-      w[i] = wih;
-      w[i + 1] = wil;
+      w[i] = wiH;
+      w[i + 1] = wiL;
     }
 
     for (let j = 0; j < 160; j += 2) {
-      wih = w[j];
-      wil = w[j + 1];
+      wiH = w[j];
+      wiL = w[j + 1];
 
       // cspell:ignore majh majl
-      const majh = maj(ah, bh, ch);
-      const majl = maj(al, bl, cl);
+      const majH = maj(aH, bH, cH);
+      const majL = maj(aL, bL, cL);
 
-      const sigma0h = sigma0(ah, al);
-      const sigma0l = sigma0(al, ah);
-      const sigma1h = sigma1(eh, el);
-      const sigma1l = sigma1(el, eh);
+      const sigma0H = sigma0(aH, aL);
+      const sigma0L = sigma0(aL, aH);
+      const sigma1H = sigma1(eH, eL);
+      const sigma1L = sigma1(eL, eH);
 
-      const kih = K[j];
-      const kil = K[j + 1];
+      const kiH = K[j];
+      const kiL = K[j + 1];
 
-      const chh = çh(eh, fh, gh);
-      const chl = çh(el, fl, gl);
+      const chH = ch(eH, fH, gH);
+      const chL = ch(eL, fL, gL);
 
-      let t1l = int32(hl + sigma1l);
-      let t1h = int32(hh + sigma1h + getCarry(t1l, hl));
-      t1l = int32(t1l + chl);
-      t1h = int32(t1h + chh + getCarry(t1l, chl));
-      t1l = int32(t1l + kil);
-      t1h = int32(t1h + kih + getCarry(t1l, kil));
-      t1l = int32(t1l + wil);
-      t1h = int32(t1h + wih + getCarry(t1l, wil));
+      let t1L = int32(hL + sigma1L);
+      let t1H = int32(hH + sigma1H + getCarry(t1L, hL));
+      t1L = int32(t1L + chL);
+      t1H = int32(t1H + chH + getCarry(t1L, chL));
+      t1L = int32(t1L + kiL);
+      t1H = int32(t1H + kiH + getCarry(t1L, kiL));
+      t1L = int32(t1L + wiL);
+      t1H = int32(t1H + wiH + getCarry(t1L, wiL));
 
-      const t2l = int32(sigma0l + majl);
-      const t2h = int32(sigma0h + majh + getCarry(t2l, sigma0l));
+      const t2L = int32(sigma0L + majL);
+      const t2H = int32(sigma0H + majH + getCarry(t2L, sigma0L));
 
-      hh = gh;
-      hl = gl;
-      gh = fh;
-      gl = fl;
-      fh = eh;
-      fl = el;
-      el = int32(dl + t1l);
-      eh = int32(dh + t1h + getCarry(el, dl));
-      dh = ch;
-      dl = cl;
-      ch = bh;
-      cl = bl;
-      bh = ah;
-      bl = al;
-      al = int32(t1l + t2l);
-      ah = int32(t1h + t2h + getCarry(al, t1l));
+      hH = gH;
+      hL = gL;
+      gH = fH;
+      gL = fL;
+      fH = eH;
+      fL = eL;
+      eL = int32(dL + t1L);
+      eH = int32(dH + t1H + getCarry(eL, dL));
+      dH = cH;
+      dL = cL;
+      cH = bH;
+      cL = bL;
+      bH = aH;
+      bL = aL;
+      aL = int32(t1L + t2L);
+      aH = int32(t1H + t2H + getCarry(aL, t1L));
     }
 
-    this.al = int32(this.al + al);
-    this.bl = int32(this.bl + bl);
-    this.cl = int32(this.cl + cl);
-    this.dl = int32(this.dl + dl);
-    this.el = int32(this.el + el);
-    this.fl = int32(this.fl + fl);
-    this.gl = int32(this.gl + gl);
-    this.hl = int32(this.hl + hl);
+    this.aL = int32(this.aL + aL);
+    this.bL = int32(this.bL + bL);
+    this.cL = int32(this.cL + cL);
+    this.dL = int32(this.dL + dL);
+    this.eL = int32(this.eL + eL);
+    this.fL = int32(this.fL + fL);
+    this.gL = int32(this.gL + gL);
+    this.hL = int32(this.hL + hL);
 
-    this.ah = int32(this.ah + ah + getCarry(this.al, al));
-    this.bh = int32(this.bh + bh + getCarry(this.bl, bl));
-    this.ch = int32(this.ch + ch + getCarry(this.cl, cl));
-    this.dh = int32(this.dh + dh + getCarry(this.dl, dl));
-    this.eh = int32(this.eh + eh + getCarry(this.el, el));
-    this.fh = int32(this.fh + fh + getCarry(this.fl, fl));
-    this.gh = int32(this.gh + gh + getCarry(this.gl, gl));
-    this.hh = int32(this.hh + hh + getCarry(this.hl, hl));
+    this.aH = int32(this.aH + aH + getCarry(this.aL, aL));
+    this.bH = int32(this.bH + bH + getCarry(this.bL, bL));
+    this.cH = int32(this.cH + cH + getCarry(this.cL, cL));
+    this.dH = int32(this.dH + dH + getCarry(this.dL, dL));
+    this.eH = int32(this.eH + eH + getCarry(this.eL, eL));
+    this.fH = int32(this.fH + fH + getCarry(this.fL, fL));
+    this.gH = int32(this.gH + gH + getCarry(this.gL, gL));
+    this.hH = int32(this.hH + hH + getCarry(this.hL, hL));
   }
 
   protected override hash(): Uint8Array {
     return new Uint8Array([
-      (this.ah & 0xff000000) >>> 24,
-      (this.ah & 0x00ff0000) >>> 16,
-      (this.ah & 0x0000ff00) >>> 8,
-      this.ah & 0x000000ff,
-      (this.al & 0xff000000) >>> 24,
-      (this.al & 0x00ff0000) >>> 16,
-      (this.al & 0x0000ff00) >>> 8,
-      this.al & 0x000000ff,
-      (this.bh & 0xff000000) >>> 24,
-      (this.bh & 0x00ff0000) >>> 16,
-      (this.bh & 0x0000ff00) >>> 8,
-      this.bh & 0x000000ff,
-      (this.bl & 0xff000000) >>> 24,
-      (this.bl & 0x00ff0000) >>> 16,
-      (this.bl & 0x0000ff00) >>> 8,
-      this.bl & 0x000000ff,
-      (this.ch & 0xff000000) >>> 24,
-      (this.ch & 0x00ff0000) >>> 16,
-      (this.ch & 0x0000ff00) >>> 8,
-      this.ch & 0x000000ff,
-      (this.cl & 0xff000000) >>> 24,
-      (this.cl & 0x00ff0000) >>> 16,
-      (this.cl & 0x0000ff00) >>> 8,
-      this.cl & 0x000000ff,
-      (this.dh & 0xff000000) >>> 24,
-      (this.dh & 0x00ff0000) >>> 16,
-      (this.dh & 0x0000ff00) >>> 8,
-      this.dh & 0x000000ff,
-      (this.dl & 0xff000000) >>> 24,
-      (this.dl & 0x00ff0000) >>> 16,
-      (this.dl & 0x0000ff00) >>> 8,
-      this.dl & 0x000000ff,
-      (this.eh & 0xff000000) >>> 24,
-      (this.eh & 0x00ff0000) >>> 16,
-      (this.eh & 0x0000ff00) >>> 8,
-      this.eh & 0x000000ff,
-      (this.el & 0xff000000) >>> 24,
-      (this.el & 0x00ff0000) >>> 16,
-      (this.el & 0x0000ff00) >>> 8,
-      this.el & 0x000000ff,
-      (this.fh & 0xff000000) >>> 24,
-      (this.fh & 0x00ff0000) >>> 16,
-      (this.fh & 0x0000ff00) >>> 8,
-      this.fh & 0x000000ff,
-      (this.fl & 0xff000000) >>> 24,
-      (this.fl & 0x00ff0000) >>> 16,
-      (this.fl & 0x0000ff00) >>> 8,
-      this.fl & 0x000000ff,
-      (this.gh & 0xff000000) >>> 24,
-      (this.gh & 0x00ff0000) >>> 16,
-      (this.gh & 0x0000ff00) >>> 8,
-      this.gh & 0x000000ff,
-      (this.gl & 0xff000000) >>> 24,
-      (this.gl & 0x00ff0000) >>> 16,
-      (this.gl & 0x0000ff00) >>> 8,
-      this.gl & 0x000000ff,
-      (this.hh & 0xff000000) >>> 24,
-      (this.hh & 0x00ff0000) >>> 16,
-      (this.hh & 0x0000ff00) >>> 8,
-      this.hh & 0x000000ff,
-      (this.hl & 0xff000000) >>> 24,
-      (this.hl & 0x00ff0000) >>> 16,
-      (this.hl & 0x0000ff00) >>> 8,
-      this.hl & 0x000000ff,
+      (this.aH & 0xff000000) >>> 24,
+      (this.aH & 0x00ff0000) >>> 16,
+      (this.aH & 0x0000ff00) >>> 8,
+      this.aH & 0x000000ff,
+      (this.aL & 0xff000000) >>> 24,
+      (this.aL & 0x00ff0000) >>> 16,
+      (this.aL & 0x0000ff00) >>> 8,
+      this.aL & 0x000000ff,
+      (this.bH & 0xff000000) >>> 24,
+      (this.bH & 0x00ff0000) >>> 16,
+      (this.bH & 0x0000ff00) >>> 8,
+      this.bH & 0x000000ff,
+      (this.bL & 0xff000000) >>> 24,
+      (this.bL & 0x00ff0000) >>> 16,
+      (this.bL & 0x0000ff00) >>> 8,
+      this.bL & 0x000000ff,
+      (this.cH & 0xff000000) >>> 24,
+      (this.cH & 0x00ff0000) >>> 16,
+      (this.cH & 0x0000ff00) >>> 8,
+      this.cH & 0x000000ff,
+      (this.cL & 0xff000000) >>> 24,
+      (this.cL & 0x00ff0000) >>> 16,
+      (this.cL & 0x0000ff00) >>> 8,
+      this.cL & 0x000000ff,
+      (this.dH & 0xff000000) >>> 24,
+      (this.dH & 0x00ff0000) >>> 16,
+      (this.dH & 0x0000ff00) >>> 8,
+      this.dH & 0x000000ff,
+      (this.dL & 0xff000000) >>> 24,
+      (this.dL & 0x00ff0000) >>> 16,
+      (this.dL & 0x0000ff00) >>> 8,
+      this.dL & 0x000000ff,
+      (this.eH & 0xff000000) >>> 24,
+      (this.eH & 0x00ff0000) >>> 16,
+      (this.eH & 0x0000ff00) >>> 8,
+      this.eH & 0x000000ff,
+      (this.eL & 0xff000000) >>> 24,
+      (this.eL & 0x00ff0000) >>> 16,
+      (this.eL & 0x0000ff00) >>> 8,
+      this.eL & 0x000000ff,
+      (this.fH & 0xff000000) >>> 24,
+      (this.fH & 0x00ff0000) >>> 16,
+      (this.fH & 0x0000ff00) >>> 8,
+      this.fH & 0x000000ff,
+      (this.fL & 0xff000000) >>> 24,
+      (this.fL & 0x00ff0000) >>> 16,
+      (this.fL & 0x0000ff00) >>> 8,
+      this.fL & 0x000000ff,
+      (this.gH & 0xff000000) >>> 24,
+      (this.gH & 0x00ff0000) >>> 16,
+      (this.gH & 0x0000ff00) >>> 8,
+      this.gH & 0x000000ff,
+      (this.gL & 0xff000000) >>> 24,
+      (this.gL & 0x00ff0000) >>> 16,
+      (this.gL & 0x0000ff00) >>> 8,
+      this.gL & 0x000000ff,
+      (this.hH & 0xff000000) >>> 24,
+      (this.hH & 0x00ff0000) >>> 16,
+      (this.hH & 0x0000ff00) >>> 8,
+      this.hH & 0x000000ff,
+      (this.hL & 0xff000000) >>> 24,
+      (this.hL & 0x00ff0000) >>> 16,
+      (this.hL & 0x0000ff00) >>> 8,
+      this.hL & 0x000000ff,
     ]);
   }
 }

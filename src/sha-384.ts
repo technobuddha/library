@@ -1,6 +1,9 @@
 /* eslint-disable no-bitwise */
 // cspell:ignore majh majl
 
+import { ch } from './ch.ts';
+import { int32 } from './int32.ts';
+import { maj } from './maj.ts';
 import { ShaBase } from './sha-base.ts';
 
 /**
@@ -32,49 +35,6 @@ const K = [
   0x28db77f5, 0x23047d84, 0x32caab7b, 0x40c72493, 0x3c9ebe0a, 0x15c9bebc, 0x431d67c4, 0x9c100d4c,
   0x4cc5d4be, 0xcb3e42b6, 0x597f299c, 0xfc657e2a, 0x5fcb6fab, 0x3ad6faec, 0x6c44198c, 0x4a475817,
 ];
-
-/**
- * Converts a given number to a 32-bit signed integer using bitwise OR.
- * @param x - The number to convert.
- * @returns The 32-bit signed integer representation of the input.
- * @internal
- */
-function int32(x: number): number {
-  // eslint-disable-next-line unicorn/prefer-math-trunc
-  return x | 0;
-}
-
-/**
- * Computes the SHA-384 'choose' (Ch) function.
- *
- * The function selects bits from `y` or `z` based on the value of `x`.
- * For each bit position, if the corresponding bit in `x` is 1, the result is the bit from `y`; otherwise, it is the bit from `z`.
- *
- * Mathematically: Ch(x, y, z) = (x & y) ^ (~x & z)
- * @param x - The selector value.
- * @param y - The first input value.
- * @param z - The second input value.
- * @returns The result of the choose function.
- * @internal
- */
-function çh(x: number, y: number, z: number): number {
-  return z ^ (x & (y ^ z));
-}
-
-/**
- * Computes the majority function of three 32-bit numbers.
- *
- * For each bit position, the result is the value that appears in at least two of the inputs.
- * This function is commonly used in cryptographic hash algorithms such as SHA-2.
- * @param x - The first 32-bit number.
- * @param y - The second 32-bit number.
- * @param z - The third 32-bit number.
- * @returns The majority value for each bit position among `x`, `y`, and `z`.
- * @internal
- */
-function maj(x: number, y: number, z: number): number {
-  return (x & y) | (z & (x | y));
-}
 
 /**
  * Computes the SHA-384 σ₀ (sigma0) function on a 64-bit value represented by two 32-bit numbers.
@@ -193,23 +153,23 @@ function getCarry(a: number, b: number): number {
  * @category Hash
  */
 export class Sha384 extends ShaBase {
-  private ah = 0xcbbb9d5d;
-  private bh = 0x629a292a;
-  private ch = 0x9159015a;
-  private dh = 0x152fecd8;
-  private eh = 0x67332667;
-  private fh = 0x8eb44a87;
-  private gh = 0xdb0c2e0d;
-  private hh = 0x47b5481d;
+  private aH = 0xcbbb9d5d;
+  private bH = 0x629a292a;
+  private cH = 0x9159015a;
+  private dH = 0x152fecd8;
+  private eH = 0x67332667;
+  private fH = 0x8eb44a87;
+  private gH = 0xdb0c2e0d;
+  private hH = 0x47b5481d;
 
-  private al = 0xc1059ed8;
-  private bl = 0x367cd507;
-  private cl = 0x3070dd17;
-  private dl = 0xf70e5939;
-  private el = 0xffc00b31;
-  private fl = 0x68581511;
-  private gl = 0x64f98fa7;
-  private hl = 0xbefa4fa4;
+  private aL = 0xc1059ed8;
+  private bL = 0x367cd507;
+  private cL = 0x3070dd17;
+  private dL = 0xf70e5939;
+  private eL = 0xffc00b31;
+  private fL = 0x68581511;
+  private gL = 0x64f98fa7;
+  private hL = 0xbefa4fa4;
   private readonly w: number[];
 
   /**
@@ -226,22 +186,22 @@ export class Sha384 extends ShaBase {
 
   protected override updateCounters(buffer: Uint8Array): void {
     const { w } = this;
-    let ah = int32(this.ah);
-    let bh = int32(this.bh);
-    let ch = int32(this.ch);
-    let dh = int32(this.dh);
-    let eh = int32(this.eh);
-    let fh = int32(this.fh);
-    let gh = int32(this.gh);
-    let hh = int32(this.hh);
-    let al = int32(this.al);
-    let bl = int32(this.bl);
-    let cl = int32(this.cl);
-    let dl = int32(this.dl);
-    let el = int32(this.el);
-    let fl = int32(this.fl);
-    let gl = int32(this.gl);
-    let hl = int32(this.hl);
+    let aH = int32(this.aH);
+    let bH = int32(this.bH);
+    let cH = int32(this.cH);
+    let dH = int32(this.dH);
+    let eH = int32(this.eH);
+    let fH = int32(this.fH);
+    let gH = int32(this.gH);
+    let hH = int32(this.hH);
+    let aL = int32(this.aL);
+    let bL = int32(this.bL);
+    let cL = int32(this.cL);
+    let dL = int32(this.dL);
+    let eL = int32(this.eL);
+    let fL = int32(this.fL);
+    let gL = int32(this.gL);
+    let hL = int32(this.hL);
 
     let i: number;
     for (i = 0; i < 32; i += 2) {
@@ -260,28 +220,28 @@ export class Sha384 extends ShaBase {
     let wil: number;
     let wih: number;
     for (; i < 160; i += 2) {
-      let xh = w[i - 15 * 2];
-      let xl = w[i - 15 * 2 + 1];
-      const gama0 = gamma0(xh, xl);
-      const gama0l = gamma0l(xl, xh);
+      let xH = w[i - 15 * 2];
+      let xL = w[i - 15 * 2 + 1];
+      const gama0 = gamma0(xH, xL);
+      const gama0l = gamma0l(xL, xH);
 
-      xh = w[i - 2 * 2];
-      xl = w[i - 2 * 2 + 1];
-      const gama1 = gamma1(xh, xl);
-      const gama1l = gamma1l(xl, xh);
+      xH = w[i - 2 * 2];
+      xL = w[i - 2 * 2 + 1];
+      const gama1 = gamma1(xH, xL);
+      const gama1l = gamma1l(xL, xH);
 
-      const wi7h = w[i - 7 * 2];
-      const wi7l = w[i - 7 * 2 + 1];
+      const wi7H = w[i - 7 * 2];
+      const wi7L = w[i - 7 * 2 + 1];
 
-      const wi16h = w[i - 16 * 2];
-      const wi16l = w[i - 16 * 2 + 1];
+      const wi16H = w[i - 16 * 2];
+      const wi16L = w[i - 16 * 2 + 1];
 
-      wil = int32(gama0l + wi7l);
-      wih = int32(gama0 + wi7h + getCarry(wil, gama0l));
+      wil = int32(gama0l + wi7L);
+      wih = int32(gama0 + wi7H + getCarry(wil, gama0l));
       wil = int32(wil + gama1l);
       wih = int32(wih + gama1 + getCarry(wil, gama1l));
-      wil = int32(wil + wi16l);
-      wih = int32(wih + wi16h + getCarry(wil, wi16l));
+      wil = int32(wil + wi16L);
+      wih = int32(wih + wi16H + getCarry(wil, wi16L));
 
       w[i] = wih;
       w[i + 1] = wil;
@@ -291,119 +251,119 @@ export class Sha384 extends ShaBase {
       wih = w[j];
       wil = w[j + 1];
 
-      const majh = maj(ah, bh, ch);
-      const majl = maj(al, bl, cl);
+      const majH = maj(aH, bH, cH);
+      const majL = maj(aL, bL, cL);
 
-      const sigma0h = sigma0(ah, al);
-      const sigma0l = sigma0(al, ah);
-      const sigma1h = sigma1(eh, el);
-      const sigma1l = sigma1(el, eh);
+      const sigma0H = sigma0(aH, aL);
+      const sigma0L = sigma0(aL, aH);
+      const sigma1H = sigma1(eH, eL);
+      const sigma1L = sigma1(eL, eH);
 
-      const kih = K[j];
-      const kil = K[j + 1];
+      const kiH = K[j];
+      const kiL = K[j + 1];
 
-      const chh = çh(eh, fh, gh);
-      const chl = çh(el, fl, gl);
+      const chH = ch(eH, fH, gH);
+      const chL = ch(eL, fL, gL);
 
-      let t1l = int32(hl + sigma1l);
-      let t1h = int32(hh + sigma1h + getCarry(t1l, hl));
-      t1l = int32(t1l + chl);
-      t1h = int32(t1h + chh + getCarry(t1l, chl));
-      t1l = int32(t1l + kil);
-      t1h = int32(t1h + kih + getCarry(t1l, kil));
-      t1l = int32(t1l + wil);
-      t1h = int32(t1h + wih + getCarry(t1l, wil));
+      let t1L = int32(hL + sigma1L);
+      let t1H = int32(hH + sigma1H + getCarry(t1L, hL));
+      t1L = int32(t1L + chL);
+      t1H = int32(t1H + chH + getCarry(t1L, chL));
+      t1L = int32(t1L + kiL);
+      t1H = int32(t1H + kiH + getCarry(t1L, kiL));
+      t1L = int32(t1L + wil);
+      t1H = int32(t1H + wih + getCarry(t1L, wil));
 
-      const t2l = int32(sigma0l + majl);
-      const t2h = int32(sigma0h + majh + getCarry(t2l, sigma0l));
+      const t2L = int32(sigma0L + majL);
+      const t2H = int32(sigma0H + majH + getCarry(t2L, sigma0L));
 
-      hh = gh;
-      hl = gl;
-      gh = fh;
-      gl = fl;
-      fh = eh;
-      fl = el;
-      el = int32(dl + t1l);
-      eh = int32(dh + t1h + getCarry(el, dl));
-      dh = ch;
-      dl = cl;
-      ch = bh;
-      cl = bl;
-      bh = ah;
-      bl = al;
-      al = int32(t1l + t2l);
-      ah = int32(t1h + t2h + getCarry(al, t1l));
+      hH = gH;
+      hL = gL;
+      gH = fH;
+      gL = fL;
+      fH = eH;
+      fL = eL;
+      eL = int32(dL + t1L);
+      eH = int32(dH + t1H + getCarry(eL, dL));
+      dH = cH;
+      dL = cL;
+      cH = bH;
+      cL = bL;
+      bH = aH;
+      bL = aL;
+      aL = int32(t1L + t2L);
+      aH = int32(t1H + t2H + getCarry(aL, t1L));
     }
 
-    this.al = int32(this.al + al);
-    this.bl = int32(this.bl + bl);
-    this.cl = int32(this.cl + cl);
-    this.dl = int32(this.dl + dl);
-    this.el = int32(this.el + el);
-    this.fl = int32(this.fl + fl);
-    this.gl = int32(this.gl + gl);
-    this.hl = int32(this.hl + hl);
+    this.aL = int32(this.aL + aL);
+    this.bL = int32(this.bL + bL);
+    this.cL = int32(this.cL + cL);
+    this.dL = int32(this.dL + dL);
+    this.eL = int32(this.eL + eL);
+    this.fL = int32(this.fL + fL);
+    this.gL = int32(this.gL + gL);
+    this.hL = int32(this.hL + hL);
 
-    this.ah = int32(this.ah + ah + getCarry(this.al, al));
-    this.bh = int32(this.bh + bh + getCarry(this.bl, bl));
-    this.ch = int32(this.ch + ch + getCarry(this.cl, cl));
-    this.dh = int32(this.dh + dh + getCarry(this.dl, dl));
-    this.eh = int32(this.eh + eh + getCarry(this.el, el));
-    this.fh = int32(this.fh + fh + getCarry(this.fl, fl));
-    this.gh = int32(this.gh + gh + getCarry(this.gl, gl));
-    this.hh = int32(this.hh + hh + getCarry(this.hl, hl));
+    this.aH = int32(this.aH + aH + getCarry(this.aL, aL));
+    this.bH = int32(this.bH + bH + getCarry(this.bL, bL));
+    this.cH = int32(this.cH + cH + getCarry(this.cL, cL));
+    this.dH = int32(this.dH + dH + getCarry(this.dL, dL));
+    this.eH = int32(this.eH + eH + getCarry(this.eL, eL));
+    this.fH = int32(this.fH + fH + getCarry(this.fL, fL));
+    this.gH = int32(this.gH + gH + getCarry(this.gL, gL));
+    this.hH = int32(this.hH + hH + getCarry(this.hL, hL));
   }
 
   protected override hash(): Uint8Array {
     return new Uint8Array([
-      (this.ah & 0xff000000) >>> 24,
-      (this.ah & 0x00ff0000) >>> 16,
-      (this.ah & 0x0000ff00) >>> 8,
-      this.ah & 0x000000ff,
-      (this.al & 0xff000000) >>> 24,
-      (this.al & 0x00ff0000) >>> 16,
-      (this.al & 0x0000ff00) >>> 8,
-      this.al & 0x000000ff,
-      (this.bh & 0xff000000) >>> 24,
-      (this.bh & 0x00ff0000) >>> 16,
-      (this.bh & 0x0000ff00) >>> 8,
-      this.bh & 0x000000ff,
-      (this.bl & 0xff000000) >>> 24,
-      (this.bl & 0x00ff0000) >>> 16,
-      (this.bl & 0x0000ff00) >>> 8,
-      this.bl & 0x000000ff,
-      (this.ch & 0xff000000) >>> 24,
-      (this.ch & 0x00ff0000) >>> 16,
-      (this.ch & 0x0000ff00) >>> 8,
-      this.ch & 0x000000ff,
-      (this.cl & 0xff000000) >>> 24,
-      (this.cl & 0x00ff0000) >>> 16,
-      (this.cl & 0x0000ff00) >>> 8,
-      this.cl & 0x000000ff,
-      (this.dh & 0xff000000) >>> 24,
-      (this.dh & 0x00ff0000) >>> 16,
-      (this.dh & 0x0000ff00) >>> 8,
-      this.dh & 0x000000ff,
-      (this.dl & 0xff000000) >>> 24,
-      (this.dl & 0x00ff0000) >>> 16,
-      (this.dl & 0x0000ff00) >>> 8,
-      this.dl & 0x000000ff,
-      (this.eh & 0xff000000) >>> 24,
-      (this.eh & 0x00ff0000) >>> 16,
-      (this.eh & 0x0000ff00) >>> 8,
-      this.eh & 0x000000ff,
-      (this.el & 0xff000000) >>> 24,
-      (this.el & 0x00ff0000) >>> 16,
-      (this.el & 0x0000ff00) >>> 8,
-      this.el & 0x000000ff,
-      (this.fh & 0xff000000) >>> 24,
-      (this.fh & 0x00ff0000) >>> 16,
-      (this.fh & 0x0000ff00) >>> 8,
-      this.fh & 0x000000ff,
-      (this.fl & 0xff000000) >>> 24,
-      (this.fl & 0x00ff0000) >>> 16,
-      (this.fl & 0x0000ff00) >>> 8,
-      this.fl & 0x000000ff,
+      (this.aH & 0xff000000) >>> 24,
+      (this.aH & 0x00ff0000) >>> 16,
+      (this.aH & 0x0000ff00) >>> 8,
+      this.aH & 0x000000ff,
+      (this.aL & 0xff000000) >>> 24,
+      (this.aL & 0x00ff0000) >>> 16,
+      (this.aL & 0x0000ff00) >>> 8,
+      this.aL & 0x000000ff,
+      (this.bH & 0xff000000) >>> 24,
+      (this.bH & 0x00ff0000) >>> 16,
+      (this.bH & 0x0000ff00) >>> 8,
+      this.bH & 0x000000ff,
+      (this.bL & 0xff000000) >>> 24,
+      (this.bL & 0x00ff0000) >>> 16,
+      (this.bL & 0x0000ff00) >>> 8,
+      this.bL & 0x000000ff,
+      (this.cH & 0xff000000) >>> 24,
+      (this.cH & 0x00ff0000) >>> 16,
+      (this.cH & 0x0000ff00) >>> 8,
+      this.cH & 0x000000ff,
+      (this.cL & 0xff000000) >>> 24,
+      (this.cL & 0x00ff0000) >>> 16,
+      (this.cL & 0x0000ff00) >>> 8,
+      this.cL & 0x000000ff,
+      (this.dH & 0xff000000) >>> 24,
+      (this.dH & 0x00ff0000) >>> 16,
+      (this.dH & 0x0000ff00) >>> 8,
+      this.dH & 0x000000ff,
+      (this.dL & 0xff000000) >>> 24,
+      (this.dL & 0x00ff0000) >>> 16,
+      (this.dL & 0x0000ff00) >>> 8,
+      this.dL & 0x000000ff,
+      (this.eH & 0xff000000) >>> 24,
+      (this.eH & 0x00ff0000) >>> 16,
+      (this.eH & 0x0000ff00) >>> 8,
+      this.eH & 0x000000ff,
+      (this.eL & 0xff000000) >>> 24,
+      (this.eL & 0x00ff0000) >>> 16,
+      (this.eL & 0x0000ff00) >>> 8,
+      this.eL & 0x000000ff,
+      (this.fH & 0xff000000) >>> 24,
+      (this.fH & 0x00ff0000) >>> 16,
+      (this.fH & 0x0000ff00) >>> 8,
+      this.fH & 0x000000ff,
+      (this.fL & 0xff000000) >>> 24,
+      (this.fL & 0x00ff0000) >>> 16,
+      (this.fL & 0x0000ff00) >>> 8,
+      this.fL & 0x000000ff,
     ]);
   }
 }
