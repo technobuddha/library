@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / syllables
+[@technobuddha/library](../modules.md) / syllables
 
 # Function: syllables()
 
@@ -8,7 +6,7 @@
 function syllables(input: string): number;
 ```
 
-Defined in: [syllables.ts:17](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L17)
+Defined in: [src/syllables.ts:17](https://github.com/technobuddha/library/blob/main/src/syllables.ts#L17)
 
 Approximate the number of syllables in a string
 
@@ -30,4 +28,3 @@ the number of syllables
 syllables('hello'); // 2
 syllables('syllable'); // 3
 ```
-

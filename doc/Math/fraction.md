@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / fraction
+[@technobuddha/library](../modules.md) / fraction
 
 # Function: fraction()
 
@@ -8,7 +6,7 @@
 function fraction(input: number, options: FractionOptions): string;
 ```
 
-Defined in: [fraction.ts:79](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L79)
+Defined in: [src/fraction.ts:79](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L79)
 
 Converts a numeric input into a formatted fraction string, either in numeric or alphabetic form.
 
@@ -38,4 +36,3 @@ fraction(2.75, { output: 'numeric' }); // "2 3⁄4"
 fraction(-0.25, { output: 'alphabetic' }); // "negative one quarter"
 fraction(0.333, { precision: 2 }); // "one third"
 ```
-

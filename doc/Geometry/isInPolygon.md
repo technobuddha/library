@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isInPolygon
+[@technobuddha/library](../modules.md) / isInPolygon
 
 # Function: isInPolygon()
 
@@ -8,7 +6,7 @@
 function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon): boolean;
 ```
 
-Defined in: [is-in-polygon.ts:31](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L31)
+Defined in: [src/is-in-polygon.ts:31](https://github.com/technobuddha/library/blob/main/src/is-in-polygon.ts#L31)
 
 Determines whether a given point or rectangle is inside or on the edge of a polygon.
 
@@ -40,4 +38,3 @@ isInPolygon(
 - Points on the edge of the polygon return `true`.
 - For rectangles, all corners must be inside the polygon.
 - Uses ray-casting algorithm with explicit edge detection.
-

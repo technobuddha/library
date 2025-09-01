@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / hoursPerDay
+[@technobuddha/library](../modules.md) / hoursPerDay
 
 # Variable: hoursPerDay
 
@@ -8,7 +6,6 @@
 const hoursPerDay: 24 = 24;
 ```
 
-Defined in: [constants.ts:36](https://github.com/technobuddha/library/blob/main/src/constants.ts#L36)
+Defined in: [src/constants.ts:36](https://github.com/technobuddha/library/blob/main/src/constants.ts#L36)
 
 Number of hours in a day [24]
-

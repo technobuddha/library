@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / ticksPerDay
+[@technobuddha/library](../modules.md) / ticksPerDay
 
 # Variable: ticksPerDay
 
@@ -8,7 +6,6 @@
 const ticksPerDay: number;
 ```
 
-Defined in: [constants.ts:64](https://github.com/technobuddha/library/blob/main/src/constants.ts#L64)
+Defined in: [src/constants.ts:64](https://github.com/technobuddha/library/blob/main/src/constants.ts#L64)
 
 Number of ticks in a day [86400000]
-

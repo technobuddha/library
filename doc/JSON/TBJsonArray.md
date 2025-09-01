@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / TBJsonArray
+[@technobuddha/library](../modules.md) / TBJsonArray
 
 # Type Alias: TBJsonArray
 
@@ -10,7 +8,6 @@ type TBJsonArray =
   | readonly TBJsonValue[];
 ```
 
-Defined in: [json.ts:23](https://github.com/technobuddha/library/blob/main/src/json.ts#L23)
+Defined in: [src/json.ts:23](https://github.com/technobuddha/library/blob/main/src/json.ts#L23)
 
 Matches a JSON array.
-

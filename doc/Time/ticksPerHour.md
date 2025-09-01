@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / ticksPerHour
+[@technobuddha/library](../modules.md) / ticksPerHour
 
 # Variable: ticksPerHour
 
@@ -8,7 +6,6 @@
 const ticksPerHour: number;
 ```
 
-Defined in: [constants.ts:57](https://github.com/technobuddha/library/blob/main/src/constants.ts#L57)
+Defined in: [src/constants.ts:57](https://github.com/technobuddha/library/blob/main/src/constants.ts#L57)
 
 Number of ticks in an hour [3600000]
-

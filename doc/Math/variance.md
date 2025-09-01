@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / variance
+[@technobuddha/library](../modules.md) / variance
 
 # Function: variance()
 
@@ -8,7 +6,7 @@
 function variance(...dataPoints: number[]): number;
 ```
 
-Defined in: [variance.ts:20](https://github.com/technobuddha/library/blob/main/src/variance.ts#L20)
+Defined in: [src/variance.ts:20](https://github.com/technobuddha/library/blob/main/src/variance.ts#L20)
 
 Returns the unbiased sample [Variance](https://en.wikipedia.org/wiki/Variance) of the arguments.
 
@@ -34,4 +32,3 @@ variance(1, 1, 1, 1); // 0
 variance(); // NaN
 variance(1, 2, NaN); // NaN
 ```
-

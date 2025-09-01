@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / diceCoefficient
+[@technobuddha/library](../modules.md) / diceCoefficient
 
 # Function: diceCoefficient()
 
@@ -11,7 +9,7 @@ function diceCoefficient(
    __nameParameters: DiceCoefficientOptions): number;
 ```
 
-Defined in: [dice-coefficient.ts:22](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L22)
+Defined in: [src/dice-coefficient.ts:22](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L22)
 
 Compute the dice coefficient measure of similarity between two strings
 
@@ -28,4 +26,3 @@ Compute the dice coefficient measure of similarity between two strings
 `number`
 
 a number from 0 (not similar) to 1 (equal) measuring the similarity
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / isNumeric
+[@technobuddha/library](../modules.md) / isNumeric
 
 # Function: isNumeric()
 
@@ -8,7 +6,7 @@
 function isNumeric(input: unknown): input is string | number;
 ```
 
-Defined in: [is-numeric.ts:13](https://github.com/technobuddha/library/blob/main/src/is-numeric.ts#L13)
+Defined in: [src/is-numeric.ts:13](https://github.com/technobuddha/library/blob/main/src/is-numeric.ts#L13)
 
 Test an object to see if it a number, or a string which can be converted into a number
 
@@ -23,4 +21,3 @@ Test an object to see if it a number, or a string which can be converted into a 
 input is string \| number
 
 true, if the object is a number, or can be converted to a number
-

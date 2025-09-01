@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / encodeBase64Url
+[@technobuddha/library](../modules.md) / encodeBase64Url
 
 # Function: encodeBase64Url()
 
@@ -17,7 +15,7 @@ encode control characters.
 function encodeBase64Url(chars: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [encode-base-64-url.ts:19](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L19)
+Defined in: [src/encode-base-64-url.ts:19](https://github.com/technobuddha/library/blob/main/src/encode-base-64-url.ts#L19)
 
 Convert a string to binary using [encodeText](../Unicode/encodeText.md) with the supplied encoding, and then
 encode it to `Base64Url`.
@@ -68,4 +66,3 @@ An ASCII string containing the `Base64Url` representation
 ```typescript
 encodeBase64Url(new Uint8Array([1, 2, 3])); // "AQID"
 ```
-

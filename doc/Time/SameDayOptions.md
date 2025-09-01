@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / SameDayOptions
+[@technobuddha/library](../modules.md) / SameDayOptions
 
 # Type Alias: SameDayOptions
 
@@ -10,7 +8,7 @@ type SameDayOptions = {
 };
 ```
 
-Defined in: [is-same-day.ts:8](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L8)
+Defined in: [src/is-same-day.ts:8](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L8)
 
 Options for the [isSameDay](isSameDay.md) function
 
@@ -19,4 +17,3 @@ Options for the [isSameDay](isSameDay.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | use the utc timezone | [src/is-same-day.ts:10](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L10) |
-

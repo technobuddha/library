@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / isAlphaNumeric
+[@technobuddha/library](../modules.md) / isAlphaNumeric
 
 # Function: isAlphaNumeric()
 
@@ -8,7 +6,7 @@
 function isAlphaNumeric(input: string): boolean;
 ```
 
-Defined in: [is-alpha-numeric.ts:10](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L10)
+Defined in: [src/is-alpha-numeric.ts:10](https://github.com/technobuddha/library/blob/main/src/is-alpha-numeric.ts#L10)
 
 Test a string for all alphanumeric characters
 
@@ -23,4 +21,3 @@ Test a string for all alphanumeric characters
 `boolean`
 
 true, if all characters in the string are alphanumeric
-

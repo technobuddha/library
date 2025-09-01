@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [RegExp](./index.md) / numeric
+[@technobuddha/library](../modules.md) / numeric
 
 # Variable: numeric
 
@@ -8,7 +6,7 @@
 const numeric: RegExp;
 ```
 
-Defined in: [regexp.ts:163](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L163)
+Defined in: [src/regexp.ts:163](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L163)
 
 Validate a valid number
 
@@ -23,4 +21,3 @@ numeric.test('NaN'); // true
 numeric.test('abc'); // false
 numeric.test(''); // false
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / occurrenceInMonth
+[@technobuddha/library](../modules.md) / occurrenceInMonth
 
 # Function: occurrenceInMonth()
 
@@ -14,7 +12,7 @@ function occurrenceInMonth(
   | Date;
 ```
 
-Defined in: [occurrence-in-month.ts:29](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L29)
+Defined in: [src/occurrence-in-month.ts:29](https://github.com/technobuddha/library/blob/main/src/occurrence-in-month.ts#L29)
 
 Determine the date of an occurrence of a weekday within a month
 
@@ -39,4 +37,3 @@ A date object corresponding to the occurrence requested, or null if no such date
 ```ts
 utc false
 ```
-

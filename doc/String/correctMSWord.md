@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / correctMSWord
+[@technobuddha/library](../modules.md) / correctMSWord
 
 # Function: correctMSWord()
 
@@ -8,7 +6,7 @@
 function correctMSWord(input: string): string;
 ```
 
-Defined in: [correct-ms-word.ts:38](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L38)
+Defined in: [src/correct-ms-word.ts:38](https://github.com/technobuddha/library/blob/main/src/correct-ms-word.ts#L38)
 
 Correct character sequences that Microsoft Word changes to make it look prettier
 
@@ -23,4 +21,3 @@ Correct character sequences that Microsoft Word changes to make it look prettier
 `string`
 
 string with special characters corrected
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / manhattanDistance
+[@technobuddha/library](../modules.md) / manhattanDistance
 
 # Function: manhattanDistance()
 
@@ -8,7 +6,7 @@
 function manhattanDistance(a: Cartesian, b: Cartesian): number;
 ```
 
-Defined in: [manhattan-distance.ts:21](https://github.com/technobuddha/library/blob/main/src/manhattan-distance.ts#L21)
+Defined in: [src/manhattan-distance.ts:21](https://github.com/technobuddha/library/blob/main/src/manhattan-distance.ts#L21)
 
 Calculates the Manhattan Distance between two points in Cartesian coordinates.
 
@@ -36,4 +34,3 @@ The Manhattan distance between the two points.
 ```typescript
 manhattanDistance({ x: 1, y: 2 }, { x: 4, y: 6 }); // 7
 ```
-

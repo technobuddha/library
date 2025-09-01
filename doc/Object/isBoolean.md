@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isBoolean
+[@technobuddha/library](../modules.md) / isBoolean
 
 # Function: isBoolean()
 
@@ -8,7 +6,7 @@
 function isBoolean(value: unknown): value is boolean;
 ```
 
-Defined in: [is-boolean.ts:16](https://github.com/technobuddha/library/blob/main/src/is-boolean.ts#L16)
+Defined in: [src/is-boolean.ts:16](https://github.com/technobuddha/library/blob/main/src/is-boolean.ts#L16)
 
 Determines whether the provided value is a boolean or a Boolean object.
 
@@ -33,4 +31,3 @@ isBoolean(new Boolean(false)); // true
 isBoolean(0); // false
 isBoolean('true'); // false
 ```
-

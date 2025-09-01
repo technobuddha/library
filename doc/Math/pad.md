@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / pad
+[@technobuddha/library](../modules.md) / pad
 
 # Function: pad()
 
@@ -8,7 +6,7 @@
 function pad(input: number, length: number): string;
 ```
 
-Defined in: [pad.ts:17](https://github.com/technobuddha/library/blob/main/src/pad.ts#L17)
+Defined in: [src/pad.ts:17](https://github.com/technobuddha/library/blob/main/src/pad.ts#L17)
 
 Add leading zeros to a number to ensure a string of a minimum length
 
@@ -34,4 +32,3 @@ pad(-7, 3); // "-07"
 pad(NaN, 4); // " NaN"
 pad(Infinity, 6); // "Infinity"
 ```
-

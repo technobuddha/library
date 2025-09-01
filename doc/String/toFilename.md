@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / toFilename
+[@technobuddha/library](../modules.md) / toFilename
 
 # Function: toFilename()
 
@@ -8,7 +6,7 @@
 function toFilename(input: string, options: FilenameOptions): string;
 ```
 
-Defined in: [to-filename.ts:35](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L35)
+Defined in: [src/to-filename.ts:35](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L35)
 
 Convert a string so that it can be used as a filename
 
@@ -24,4 +22,3 @@ Convert a string so that it can be used as a filename
 `string`
 
 the file name
-

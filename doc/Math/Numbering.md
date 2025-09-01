@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / Numbering
+[@technobuddha/library](../modules.md) / Numbering
 
 # Type Alias: Numbering
 
@@ -20,7 +18,7 @@ type Numbering = {
 };
 ```
 
-Defined in: [numbering/numbering.ts:15](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L15)
+Defined in: [src/numbering/numbering.ts:15](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L15)
 
 Options for controlling how numbers are converted to words or symbols.
 
@@ -38,4 +36,3 @@ Options for controlling how numbers are converted to words or symbols.
 | <a id="precision"></a> `precision` | `1` \| `2` \| `3` \| `4` \| `5` \| `6` \| `7` \| `8` \| `9` | Number of decimal places or significant digits to use (1-9). | [src/numbering/numbering.ts:47](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L47) |
 | <a id="shift"></a> `shift` | `false` \| `"decimal"` \| `"fraction"` | Whether to shift the output. - false: no shift - 'decimal': shift decimal part - 'fraction': shift fraction part | [src/numbering/numbering.ts:58](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L58) |
 | <a id="tolerance"></a> `tolerance` | `number` | Maximum allowed difference between the actual and represented value. | [src/numbering/numbering.ts:36](https://github.com/technobuddha/library/blob/main/src/numbering/numbering.ts#L36) |
-

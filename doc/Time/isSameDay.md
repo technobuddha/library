@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isSameDay
+[@technobuddha/library](../modules.md) / isSameDay
 
 # Function: isSameDay()
 
@@ -11,7 +9,7 @@ function isSameDay(
    options: SameDayOptions): boolean;
 ```
 
-Defined in: [is-same-day.ts:23](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L23)
+Defined in: [src/is-same-day.ts:23](https://github.com/technobuddha/library/blob/main/src/is-same-day.ts#L23)
 
 Determine if two dates occur on the same day
 
@@ -34,4 +32,3 @@ true, if the two dates fall on the same day
 ```ts
 utc false
 ```
-

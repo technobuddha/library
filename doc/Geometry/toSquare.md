@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toSquare
+[@technobuddha/library](../modules.md) / toSquare
 
 # Function: toSquare()
 
@@ -8,7 +6,7 @@
 function toSquare(rect: Rect): Rect;
 ```
 
-Defined in: [to-square.ts:23](https://github.com/technobuddha/library/blob/main/src/to-square.ts#L23)
+Defined in: [src/to-square.ts:23](https://github.com/technobuddha/library/blob/main/src/to-square.ts#L23)
 
 Converts a [Rect](Rect.md) to the largest possible square that fits within it,
 centered along the longer dimension. If the rectangle is already a square,
@@ -38,4 +36,3 @@ toSquare({ x: 1, y: 2, width: 3, height: 7 });
 toSquare({ x: 0, y: 0, width: 5, height: 5 });
 // { x: 0, y: 0, width: 5, height: 5 }
 ```
-

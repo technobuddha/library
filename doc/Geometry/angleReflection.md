@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / angleReflection
+[@technobuddha/library](../modules.md) / angleReflection
 
 # Function: angleReflection()
 
@@ -11,7 +9,7 @@ function angleReflection(
    options: UnitOptions): number;
 ```
 
-Defined in: [angle-reflection.ts:20](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L20)
+Defined in: [src/angle-reflection.ts:20](https://github.com/technobuddha/library/blob/main/src/angle-reflection.ts#L20)
 
 Calculates the reflection of an angle across a specified axis.
 
@@ -36,4 +34,3 @@ angleReflection(0, Math.PI / 2); // π
 angleReflection((3 * Math.PI) / 2, Math.PI); // π/2
 angleReflection(60, 30, 'degrees'); // 0
 ```
-

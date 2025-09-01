@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / matchCase
+[@technobuddha/library](../modules.md) / matchCase
 
 # Function: matchCase()
 
@@ -8,7 +6,7 @@
 function matchCase(input: string, target: string): string;
 ```
 
-Defined in: [match-case.ts:19](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L19)
+Defined in: [src/match-case.ts:19](https://github.com/technobuddha/library/blob/main/src/match-case.ts#L19)
 
 Attempt to convert the input string into the same case as the target string
 
@@ -32,4 +30,3 @@ The best guess is made to try to figure out what case the target is in:
  * UPPERCASE
  * Capitalcase
  * PascalCase
-

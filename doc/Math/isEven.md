@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / isEven
+[@technobuddha/library](../modules.md) / isEven
 
 # Function: isEven()
 
@@ -8,7 +6,7 @@
 function isEven(input: number): boolean;
 ```
 
-Defined in: [is-even.ts:18](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L18)
+Defined in: [src/is-even.ts:18](https://github.com/technobuddha/library/blob/main/src/is-even.ts#L18)
 
 Tests to see if the specified value is an even integer
 
@@ -33,4 +31,3 @@ isEven(0); // true
 isEven(-4); // true
 isEven(2.2); // false
 ```
-

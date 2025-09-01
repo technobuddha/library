@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / bounds
+[@technobuddha/library](../modules.md) / bounds
 
 # Function: bounds()
 
@@ -8,7 +6,7 @@
 function bounds(vertices: Polygon): Rect;
 ```
 
-Defined in: [bounds.ts:21](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L21)
+Defined in: [src/bounds.ts:21](https://github.com/technobuddha/library/blob/main/src/bounds.ts#L21)
 
 Calculates the axis-aligned bounding rectangle for a given polygon.
 
@@ -39,4 +37,3 @@ bounds([
 ]);
 // { x: 0, y: 0, width: 10, height: 5 }
 ```
-

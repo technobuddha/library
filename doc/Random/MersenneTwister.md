@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Random](./index.md) / MersenneTwister
+[@technobuddha/library](../modules.md) / MersenneTwister
 
 # Class: MersenneTwister
 
-Defined in: [mersenne-twister.ts:126](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L126)
+Defined in: [src/mersenne-twister.ts:126](https://github.com/technobuddha/library/blob/main/src/mersenne-twister.ts#L126)
 
 Implements the Mersenne Twister pseudorandom number generator (MT19937).
 
@@ -215,4 +213,3 @@ Sets the seed for the random number generator.
 #### Returns
 
 `void`
-

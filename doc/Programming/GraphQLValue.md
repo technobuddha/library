@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / GraphQLValue
+[@technobuddha/library](../modules.md) / GraphQLValue
 
 # Type Alias: GraphQLValue
 
@@ -14,7 +12,6 @@ type GraphQLValue =
   | GraphQLObject;
 ```
 
-Defined in: [graph-ql.ts:28](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L28)
+Defined in: [src/graph-ql.ts:28](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L28)
 
 A GraphQL Value, similar to a JSONValue
-

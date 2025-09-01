@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / tokenize
+[@technobuddha/library](../modules.md) / tokenize
 
 # Function: tokenize()
 
@@ -8,7 +6,7 @@
 function tokenize(input: string): string[];
 ```
 
-Defined in: [tokenize.ts:14](https://github.com/technobuddha/library/blob/main/src/tokenize.ts#L14)
+Defined in: [src/tokenize.ts:14](https://github.com/technobuddha/library/blob/main/src/tokenize.ts#L14)
 
 Splits the input string into an array of words.
 
@@ -23,4 +21,3 @@ Splits the input string into an array of words.
 `string`[]
 
 An array of words found in the input string. Returns an empty array if no matches are found.
-

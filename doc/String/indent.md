@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / indent
+[@technobuddha/library](../modules.md) / indent
 
 # Function: indent()
 
@@ -8,7 +6,7 @@
 function indent(input: string, options: IndentOptions): string;
 ```
 
-Defined in: [indent.ts:22](https://github.com/technobuddha/library/blob/main/src/indent.ts#L22)
+Defined in: [src/indent.ts:22](https://github.com/technobuddha/library/blob/main/src/indent.ts#L22)
 
 Indent each line of a string
 
@@ -30,4 +28,3 @@ string with each line indented
 ```ts
 indenter space
 ```
-

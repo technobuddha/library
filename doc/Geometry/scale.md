@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / scale
+[@technobuddha/library](../modules.md) / scale
 
 # Function: scale()
 
@@ -15,7 +13,7 @@ function scale(
    options?: OriginOptions): Cartesian;
 ```
 
-Defined in: [scale.ts:34](https://github.com/technobuddha/library/blob/main/src/scale.ts#L34)
+Defined in: [src/scale.ts:34](https://github.com/technobuddha/library/blob/main/src/scale.ts#L34)
 
 Scales a point around a given origin by a specified amount.
 
@@ -72,4 +70,3 @@ The rotated polygon
 scale([{ x: 0, y: 0 }, { x: 2, y: 0 }, { x: 1, y: 2}], 2);
 // [{ x: 0, y: 0 }, { x: 4, y: 0 }, { x: 2, y: 4 }]
 ```
-

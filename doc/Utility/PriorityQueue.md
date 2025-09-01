@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Utility](./index.md) / PriorityQueue
+[@technobuddha/library](../modules.md) / PriorityQueue
 
 # Class: PriorityQueue\<T\>
 
-Defined in: [priority-queue.ts:6](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L6)
+Defined in: [src/priority-queue.ts:6](https://github.com/technobuddha/library/blob/main/src/priority-queue.ts#L6)
 
 A simple priority queue
 
@@ -166,4 +164,3 @@ Change the function used to order the queue
 #### Returns
 
 `void`
-

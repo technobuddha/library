@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / isWhitespace
+[@technobuddha/library](../modules.md) / isWhitespace
 
 # Function: isWhitespace()
 
@@ -8,7 +6,7 @@
 function isWhitespace(input: string): boolean;
 ```
 
-Defined in: [is-whitespace.ts:8](https://github.com/technobuddha/library/blob/main/src/is-whitespace.ts#L8)
+Defined in: [src/is-whitespace.ts:8](https://github.com/technobuddha/library/blob/main/src/is-whitespace.ts#L8)
 
 Test a string for all white space characters
 
@@ -23,4 +21,3 @@ Test a string for all white space characters
 `boolean`
 
 true, if all characters in the string are white space
-

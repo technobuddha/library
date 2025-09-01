@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / convexHull
+[@technobuddha/library](../modules.md) / convexHull
 
 # Function: convexHull()
 
@@ -8,7 +6,7 @@
 function convexHull(vertices: Cartesian[]): undefined | Polygon;
 ```
 
-Defined in: [convex-hull.ts:25](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L25)
+Defined in: [src/convex-hull.ts:25](https://github.com/technobuddha/library/blob/main/src/convex-hull.ts#L25)
 
 Computes the convex hull of a set of 2D points using the Monotone Chain algorithm.
 
@@ -44,4 +42,3 @@ convexHull([
 
 - The returned array does not repeat the starting point at the end.
 - Points on the edge of the hull may be included or excluded depending on their order.
-

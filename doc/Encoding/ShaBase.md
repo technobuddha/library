@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / ShaBase
+[@technobuddha/library](../modules.md) / ShaBase
 
 # Abstract Class: ShaBase
 
-Defined in: [sha-base.ts:14](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L14)
+Defined in: [src/sha-base.ts:14](https://github.com/technobuddha/library/blob/main/src/sha-base.ts#L14)
 
 The base class for sha based cryptographic hash functions
 
@@ -160,4 +158,3 @@ The hash instance for method chaining.
 ##### Overrides
 
 [`HashBase`](HashBase.md).[`update`](HashBase.md#update)
-

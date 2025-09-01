@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [RegExp](./index.md) / re
+[@technobuddha/library](../modules.md) / re
 
 # Function: re()
 
@@ -8,7 +6,7 @@
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
 ```
 
-Defined in: [re.ts:18](https://github.com/technobuddha/library/blob/main/src/re.ts#L18)
+Defined in: [src/re.ts:18](https://github.com/technobuddha/library/blob/main/src/re.ts#L18)
 
 Constructs a new `RegExp` by interpolating template strings and provided regular expressions.
 
@@ -28,4 +26,3 @@ when appropriate.
 [`RegExp`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
 A new `RegExp` object with the combined pattern and merged flags.
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / GraphQLArray
+[@technobuddha/library](../modules.md) / GraphQLArray
 
 # Type Alias: GraphQLArray
 
@@ -8,7 +6,6 @@
 type GraphQLArray = GraphQLValue[];
 ```
 
-Defined in: [graph-ql.ts:21](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L21)
+Defined in: [src/graph-ql.ts:21](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L21)
 
 A GraphQL Array, similar to a JSONArray
-

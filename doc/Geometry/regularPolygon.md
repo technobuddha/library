@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / regularPolygon
+[@technobuddha/library](../modules.md) / regularPolygon
 
 # Function: regularPolygon()
 
@@ -11,7 +9,7 @@ function regularPolygon(
    options: OriginOptions): Polygon;
 ```
 
-Defined in: [regular-polygon.ts:24](https://github.com/technobuddha/library/blob/main/src/regular-polygon.ts#L24)
+Defined in: [src/regular-polygon.ts:24](https://github.com/technobuddha/library/blob/main/src/regular-polygon.ts#L24)
 
 Generates a regular polygon.
 
@@ -44,4 +42,3 @@ regularPolygon(4, 2);
 //   { x: 0, y: -2 }
 // ]
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / graphQL
+[@technobuddha/library](../modules.md) / graphQL
 
 # Function: graphQL()
 
@@ -12,7 +10,7 @@ Tagged template function for constructing GraphQL queries or mutations.
 function graphQL(template: TemplateStringsArray, ...args: GraphQLValue[]): string;
 ```
 
-Defined in: [graph-ql.ts:44](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L44)
+Defined in: [src/graph-ql.ts:44](https://github.com/technobuddha/library/blob/main/src/graph-ql.ts#L44)
 
 Escapes and formats GraphQL query strings or values.
 
@@ -69,4 +67,3 @@ graphQL('hello'); // '"hello"'
 graphQL(42); // '42'
 graphQL({ foo: 'bar' }); // '{foo:"bar"}'
 ```
-

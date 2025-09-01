@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isRect
+[@technobuddha/library](../modules.md) / isRect
 
 # Function: isRect()
 
@@ -8,7 +6,7 @@
 function isRect(object: unknown): object is Rect;
 ```
 
-Defined in: [is-rect.ts:20](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L20)
+Defined in: [src/is-rect.ts:20](https://github.com/technobuddha/library/blob/main/src/is-rect.ts#L20)
 
 Determines if the provided value is a [Rect](Rect.md)e.
 
@@ -35,4 +33,3 @@ isRect({ x: 1, y: 2, width: 3 }); // false
 isRect(null); // false
 isRect([1, 2, 3, 4]); // false
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / toPrimitive
+[@technobuddha/library](../modules.md) / toPrimitive
 
 # Function: toPrimitive()
 
@@ -8,7 +6,7 @@
 function toPrimitive(input: unknown, hint: "string" | "number" | "default"): unknown;
 ```
 
-Defined in: [to-primitive.ts:21](https://github.com/technobuddha/library/blob/main/src/to-primitive.ts#L21)
+Defined in: [src/to-primitive.ts:21](https://github.com/technobuddha/library/blob/main/src/to-primitive.ts#L21)
 
 Convert an object into its primitive (string, number, etc.) value
 
@@ -35,4 +33,3 @@ toPrimitive(new String('abc')); // 'abc'
 toPrimitive({ valueOf() { return 7; } }); // 7
 toPrimitive({ toString() { return 'x'; } }, 'string'); // 'x'
 ```
-

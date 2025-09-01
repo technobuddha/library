@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / RootOptions
+[@technobuddha/library](../modules.md) / RootOptions
 
 # Type Alias: RootOptions
 
@@ -11,7 +9,7 @@ type RootOptions = {
 };
 ```
 
-Defined in: [root.ts:6](https://github.com/technobuddha/library/blob/main/src/root.ts#L6)
+Defined in: [src/root.ts:6](https://github.com/technobuddha/library/blob/main/src/root.ts#L6)
 
 Options for the [root](root.md) function
 
@@ -21,4 +19,3 @@ Options for the [root](root.md) function
 | ------ | ------ | ------ | ------ |
 | <a id="prefix"></a> `prefix?` | `string` | The refix string to remove | [src/root.ts:8](https://github.com/technobuddha/library/blob/main/src/root.ts#L8) |
 | <a id="suffix"></a> `suffix?` | `string` | The suffix string to remove | [src/root.ts:10](https://github.com/technobuddha/library/blob/main/src/root.ts#L10) |
-

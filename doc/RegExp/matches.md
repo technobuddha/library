@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [RegExp](./index.md) / matches
+[@technobuddha/library](../modules.md) / matches
 
 # Function: matches()
 
@@ -13,7 +11,7 @@ function matches(text: string, match:
   | RegExp, any, any>): boolean;
 ```
 
-Defined in: [matches.ts:24](https://github.com/technobuddha/library/blob/main/src/matches.ts#L24)
+Defined in: [src/matches.ts:24](https://github.com/technobuddha/library/blob/main/src/matches.ts#L24)
 
 Determines if the given `text` matches the provided `match` criteria.
 
@@ -43,4 +41,3 @@ matches('Hello', /he.*/ui); // true
 matches('Hello', ['hi', /he.*/ui]); // true
 matches('Hello', ['hi', 'hey']); // false
 ```
-

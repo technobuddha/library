@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / kebabCase
+[@technobuddha/library](../modules.md) / kebabCase
 
 # Function: kebabCase()
 
@@ -8,7 +6,7 @@
 function kebabCase(input: string): string;
 ```
 
-Defined in: [kebab-case.ts:18](https://github.com/technobuddha/library/blob/main/src/kebab-case.ts#L18)
+Defined in: [src/kebab-case.ts:18](https://github.com/technobuddha/library/blob/main/src/kebab-case.ts#L18)
 
 Convert an identifier string to a kebab-case form
 
@@ -32,4 +30,3 @@ kebabCase('HelloWorld'); // 'hello-world'
 kebabCase('foo_bar-baz'); // 'foo-bar-baz'
 kebabCase('FOO BAR'); // 'foo-bar'
 ```
-

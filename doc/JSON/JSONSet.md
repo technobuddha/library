@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / JSONSet
+[@technobuddha/library](../modules.md) / JSONSet
 
 # Class: JSONSet\<T\>
 
-Defined in: [json-set.ts:27](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L27)
+Defined in: [src/json-set.ts:27](https://github.com/technobuddha/library/blob/main/src/json-set.ts#L27)
 
 A Set-like collection for objects that can be serialized to JSON.
 
@@ -535,4 +533,3 @@ Returns an iterator that yields each value in the set after deserialization.
 ```ts
 Set.values
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / AngleUnit
+[@technobuddha/library](../modules.md) / AngleUnit
 
 # Type Alias: AngleUnit
 
@@ -20,7 +18,7 @@ type AngleUnit =
   | "gradians";
 ```
 
-Defined in: [angle.ts:23](https://github.com/technobuddha/library/blob/main/src/angle.ts#L23)
+Defined in: [src/angle.ts:23](https://github.com/technobuddha/library/blob/main/src/angle.ts#L23)
 
 Types of angle units
 
@@ -38,4 +36,3 @@ Types of angle units
 | arcsecond     | 1296000               |
 | grad          | 400                   |
 | gradians      | 400                   |
-

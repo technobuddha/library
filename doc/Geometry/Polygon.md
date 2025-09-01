@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / Polygon
+[@technobuddha/library](../modules.md) / Polygon
 
 # Type Alias: Polygon
 
@@ -8,7 +6,6 @@
 type Polygon = Cartesian[];
 ```
 
-Defined in: [@types/geometry.ts:37](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L37)
+Defined in: [src/@types/geometry.ts:37](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L37)
 
 A polygon (a set of cartesian coordinates)
-

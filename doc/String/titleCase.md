@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / titleCase
+[@technobuddha/library](../modules.md) / titleCase
 
 # Function: titleCase()
 
@@ -8,7 +6,7 @@
 function titleCase(input: string): string;
 ```
 
-Defined in: [title-case.ts:14](https://github.com/technobuddha/library/blob/main/src/title-case.ts#L14)
+Defined in: [src/title-case.ts:14](https://github.com/technobuddha/library/blob/main/src/title-case.ts#L14)
 
 Convert a string to a title, capitalizing each word, except for the small words
 
@@ -23,4 +21,3 @@ Convert a string to a title, capitalizing each word, except for the small words
 `string`
 
 the string in title case
-

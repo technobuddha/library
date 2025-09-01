@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / dayOfWeek
+[@technobuddha/library](../modules.md) / dayOfWeek
 
 # Function: dayOfWeek()
 
@@ -8,7 +6,7 @@
 function dayOfWeek(input: Date, options: DayOfWeekOptions): DayOfWeek;
 ```
 
-Defined in: [day-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L26)
+Defined in: [src/day-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/day-of-week.ts#L26)
 
 Determine the day of the week for a specific date
 
@@ -30,4 +28,3 @@ The date value for midnight on the first day of the specified year
 ```ts
 utc false
 ```
-

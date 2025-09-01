@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / clamp
+[@technobuddha/library](../modules.md) / clamp
 
 # Function: clamp()
 
@@ -11,7 +9,7 @@ function clamp(
    max: number): number;
 ```
 
-Defined in: [clamp.ts:17](https://github.com/technobuddha/library/blob/main/src/clamp.ts#L17)
+Defined in: [src/clamp.ts:17](https://github.com/technobuddha/library/blob/main/src/clamp.ts#L17)
 
 Clamps a number within the inclusive range specified by `min` and `max`.
 
@@ -37,4 +35,3 @@ clamp(-2, 0, 7); // 0
 clamp(15, 0, 10); // 10
 clamp(3, 3, 3); // 3
 ```
-

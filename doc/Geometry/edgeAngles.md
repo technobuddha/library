@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / edgeAngles
+[@technobuddha/library](../modules.md) / edgeAngles
 
 # Function: edgeAngles()
 
@@ -8,7 +6,7 @@
 function edgeAngles(polygon: Polygon, normalizeTo: number): Generator<number>;
 ```
 
-Defined in: [edge-angles.ts:30](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L30)
+Defined in: [src/edge-angles.ts:30](https://github.com/technobuddha/library/blob/main/src/edge-angles.ts#L30)
 
 Generate normalized edge angles from polygon edges.
 
@@ -44,4 +42,3 @@ for (const angle of angles) {
 // 3.9269908169872414
 // 5.497787143782138
 ```
-

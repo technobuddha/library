@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / isAlpha
+[@technobuddha/library](../modules.md) / isAlpha
 
 # Function: isAlpha()
 
@@ -8,7 +6,7 @@
 function isAlpha(input: string): boolean;
 ```
 
-Defined in: [is-alpha.ts:10](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L10)
+Defined in: [src/is-alpha.ts:10](https://github.com/technobuddha/library/blob/main/src/is-alpha.ts#L10)
 
 Test a string for all alphabetic characters
 
@@ -23,4 +21,3 @@ Test a string for all alphabetic characters
 `boolean`
 
 true, if all characters in the string are alphabetic
-

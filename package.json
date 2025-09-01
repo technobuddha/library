@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "1.9.44",
+  "version": "1.9.45",
   "description": "A large library of useful functions",
   "author": {
     "name": "Phil Hill",
@@ -32,9 +32,6 @@
     "jest-matcher-deep-close-to": "3.0.2",
     "npm-run-all": "4.1.5",
     "typedoc": "0.28.10",
-    "typedoc-plugin-coverage": "4.0.1",
-    "typedoc-plugin-markdown": "4.8.1",
-    "typedoc-plugin-mdn-links": "5.0.8",
     "vite": "7.1.3",
     "vitest": "3.2.4"
   },
@@ -48,8 +45,5 @@
     "node": ">=22.0.0"
   },
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "typedoc-vitepress-theme": "1.1.2"
-  }
+  "types": "dist/index.d.ts"
 }

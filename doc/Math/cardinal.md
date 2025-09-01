@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / cardinal
+[@technobuddha/library](../modules.md) / cardinal
 
 # Function: cardinal()
 
@@ -8,7 +6,7 @@
 function cardinal(input: number, options: CardinalOptions): string;
 ```
 
-Defined in: [cardinal.ts:76](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L76)
+Defined in: [src/cardinal.ts:76](https://github.com/technobuddha/library/blob/main/src/cardinal.ts#L76)
 
 Convert a number into text (the cardinal number)
 
@@ -39,4 +37,3 @@ cardinal(42.5, { output: 'alphabetic' }); // "forty two and one half"
 cardinal(101, { and: ' and ' }); // "one hundred and one"
 cardinal(3.14159, { precision: 2 }); // "three and fourteen hundredths"
 ```
-

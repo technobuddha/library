@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / MidnightOptions
+[@technobuddha/library](../modules.md) / MidnightOptions
 
 # Type Alias: MidnightOptions
 
@@ -10,7 +8,7 @@ type MidnightOptions = {
 };
 ```
 
-Defined in: [is-midnight.ts:6](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L6)
+Defined in: [src/is-midnight.ts:6](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L6)
 
 Options for the [isMidnight](isMidnight.md) function
 
@@ -19,4 +17,3 @@ Options for the [isMidnight](isMidnight.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/is-midnight.ts:8](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L8) |
-

@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / Sha1
+[@technobuddha/library](../modules.md) / Sha1
 
 # Class: Sha1
 
-Defined in: [sha-1.ts:118](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L118)
+Defined in: [src/sha-1.ts:118](https://github.com/technobuddha/library/blob/main/src/sha-1.ts#L118)
 
 Secure Hash Algorithm, SHA-1
 
@@ -166,4 +164,3 @@ The hash instance for method chaining.
 ##### Inherited from
 
 [`ShaBase`](ShaBase.md).[`update`](ShaBase.md#update)
-

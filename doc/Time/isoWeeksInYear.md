@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isoWeeksInYear
+[@technobuddha/library](../modules.md) / isoWeeksInYear
 
 # Function: isoWeeksInYear()
 
@@ -10,7 +8,7 @@ function isoWeeksInYear(input:
   | Date, options: ISOWeeksInYearOptions): number;
 ```
 
-Defined in: [iso-weeks-in-year.ts:27](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L27)
+Defined in: [src/iso-weeks-in-year.ts:27](https://github.com/technobuddha/library/blob/main/src/iso-weeks-in-year.ts#L27)
 
 Determine the number of ISO weeks within a year
 
@@ -32,4 +30,3 @@ The number of weeks in the year (52 or 53)
 ```ts
 weekOneIncludes Thursday
 ```
-

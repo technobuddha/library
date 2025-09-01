@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / encodeBinary
+[@technobuddha/library](../modules.md) / encodeBinary
 
 # Function: encodeBinary()
 
@@ -8,7 +6,7 @@
 function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): string;
 ```
 
-Defined in: [encode-binary.ts:30](https://github.com/technobuddha/library/blob/main/src/encode-binary.ts#L30)
+Defined in: [src/encode-binary.ts:30](https://github.com/technobuddha/library/blob/main/src/encode-binary.ts#L30)
 
 Encode an [BinaryObject](BinaryObject.md) into a string
 
@@ -48,4 +46,3 @@ A string encoded in `binary` format may not be "well-formed"
 ## See
 
 [isWellFormed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/isWellFormed)
-

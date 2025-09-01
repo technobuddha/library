@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isString
+[@technobuddha/library](../modules.md) / isString
 
 # Function: isString()
 
@@ -8,7 +6,7 @@
 function isString(value: unknown): value is string;
 ```
 
-Defined in: [is-string.ts:20](https://github.com/technobuddha/library/blob/main/src/is-string.ts#L20)
+Defined in: [src/is-string.ts:20](https://github.com/technobuddha/library/blob/main/src/is-string.ts#L20)
 
 Determines whether the provided value is a string.
 
@@ -35,4 +33,3 @@ isString(42); // false
 isString(['a', 'b']); // false
 isString(null); // false
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / nonBreakingHyphen
+[@technobuddha/library](../modules.md) / nonBreakingHyphen
 
 # Variable: nonBreakingHyphen
 
@@ -8,7 +6,6 @@
 const nonBreakingHyphen: "‑" = '‑';
 ```
 
-Defined in: [unicode.ts:48](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L48)
+Defined in: [src/unicode.ts:48](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L48)
 
 Non-Breaking Hyphen
-

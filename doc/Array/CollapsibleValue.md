@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / CollapsibleValue
+[@technobuddha/library](../modules.md) / CollapsibleValue
 
 # Type Alias: CollapsibleValue\<T\>
 
@@ -12,7 +10,7 @@ type CollapsibleValue<T> =
 | Iterable<T | null | undefined>;
 ```
 
-Defined in: [collapse.ts:26](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L26)
+Defined in: [src/collapse.ts:26](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L26)
 
 A `CollapsibleValue<T>`
 
@@ -27,4 +25,3 @@ A `CollapsibleValue<T>` can be:
 | Type Parameter | Description |
 | ------ | ------ |
 | `T` *extends* [`CollapsiblePrimitive`](CollapsiblePrimitive.md) | The primitive type that can be collapsed. |
-

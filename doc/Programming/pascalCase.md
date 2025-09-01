@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / pascalCase
+[@technobuddha/library](../modules.md) / pascalCase
 
 # Function: pascalCase()
 
@@ -8,7 +6,7 @@
 function pascalCase(input: string): string;
 ```
 
-Defined in: [pascal-case.ts:20](https://github.com/technobuddha/library/blob/main/src/pascal-case.ts#L20)
+Defined in: [src/pascal-case.ts:20](https://github.com/technobuddha/library/blob/main/src/pascal-case.ts#L20)
 
 Convert an identifier string to pascal case
 
@@ -32,4 +30,3 @@ pascalCase('Hello world'); // 'HelloWorld'
 pascalCase('foo_bar-baz'); // 'FooBarBaz'
 pascalCase('FOO BAR'); // 'FooBar'
 ```
-

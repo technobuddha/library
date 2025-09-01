@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / compareNumbers
+[@technobuddha/library](../modules.md) / compareNumbers
 
 # Function: compareNumbers()
 
@@ -8,7 +6,7 @@
 function compareNumbers(a: null | number, b: null | number): number;
 ```
 
-Defined in: [compare-numbers.ts:18](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L18)
+Defined in: [src/compare-numbers.ts:18](https://github.com/technobuddha/library/blob/main/src/compare-numbers.ts#L18)
 
 Compare two numbers
 
@@ -35,4 +33,3 @@ compareNumbers(null, 2); // -1
 compareNumbers(2, null); // 1
 compareNumbers(null, null); // 0
 ```
-

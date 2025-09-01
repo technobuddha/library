@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / polygonSides
+[@technobuddha/library](../modules.md) / polygonSides
 
 # Function: polygonSides()
 
@@ -8,7 +6,7 @@
 function polygonSides(polygon: Polygon): Generator<LineSegment>;
 ```
 
-Defined in: [polygon-sides.ts:13](https://github.com/technobuddha/library/blob/main/src/polygon-sides.ts#L13)
+Defined in: [src/polygon-sides.ts:13](https://github.com/technobuddha/library/blob/main/src/polygon-sides.ts#L13)
 
 Generate line segments for each side of the polygon.
 
@@ -23,4 +21,3 @@ Generate line segments for each side of the polygon.
 [`Generator`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Generator)\<[`LineSegment`](LineSegment.md)\>
 
 Generator that yields line segments for each edge
-

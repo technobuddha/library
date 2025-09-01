@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / endOfYear
+[@technobuddha/library](../modules.md) / endOfYear
 
 # Function: endOfYear()
 
@@ -8,7 +6,7 @@
 function endOfYear(input: Date, options: EndOfYearOptions): Date;
 ```
 
-Defined in: [end-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L22)
+Defined in: [src/end-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/end-of-year.ts#L22)
 
 Determine the last day of the year containing a date
 
@@ -30,4 +28,3 @@ Midnight of the last day of the year containing the input date
 ```ts
 utc false
 ```
-

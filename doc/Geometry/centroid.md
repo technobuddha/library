@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / centroid
+[@technobuddha/library](../modules.md) / centroid
 
 # Function: centroid()
 
@@ -8,7 +6,7 @@
 function centroid(vertices: Polygon): Cartesian;
 ```
 
-Defined in: [centroid.ts:26](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L26)
+Defined in: [src/centroid.ts:26](https://github.com/technobuddha/library/blob/main/src/centroid.ts#L26)
 
 Calculates the centroid (geometric center) of a polygon.
 
@@ -42,4 +40,3 @@ centroid([
 ## Remarks
 
 The function assumes the polygon is non-self-intersecting.
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / humanCase
+[@technobuddha/library](../modules.md) / humanCase
 
 # Function: humanCase()
 
@@ -8,7 +6,7 @@
 function humanCase(input: string): string;
 ```
 
-Defined in: [human-case.ts:19](https://github.com/technobuddha/library/blob/main/src/human-case.ts#L19)
+Defined in: [src/human-case.ts:19](https://github.com/technobuddha/library/blob/main/src/human-case.ts#L19)
 
 Convert an identifier string to a human case
 
@@ -32,4 +30,3 @@ humanCase('HelloWorld'); // 'hello world'
 humanCase('foo_bar-baz'); // 'foo bar baz'
 humanCase('FOO BAR'); // 'foo bar'
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / rotate
+[@technobuddha/library](../modules.md) / rotate
 
 # Function: rotate()
 
@@ -15,7 +13,7 @@ function rotate(
    options?: UnitOptions & OriginOptions): Cartesian;
 ```
 
-Defined in: [rotate.ts:31](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L31)
+Defined in: [src/rotate.ts:31](https://github.com/technobuddha/library/blob/main/src/rotate.ts#L31)
 
 Rotates a point around a given origin by a specified angle.
 
@@ -76,4 +74,3 @@ rotate(
 );
 // [{ x: 0, y: 1 }, { x: -1, y: 0 }]
 ```
-

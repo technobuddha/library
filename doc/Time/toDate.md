@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / toDate
+[@technobuddha/library](../modules.md) / toDate
 
 # Function: toDate()
 
@@ -8,7 +6,7 @@
 function toDate(entity: unknown): Date;
 ```
 
-Defined in: [to-date.ts:18](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L18)
+Defined in: [src/to-date.ts:18](https://github.com/technobuddha/library/blob/main/src/to-date.ts#L18)
 
 Converts an unknown entity to a `Date` object.
 
@@ -28,4 +26,3 @@ Converts an unknown entity to a `Date` object.
 [`Date`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 A `Date` object representing the input, or an invalid `Date` if conversion is not possible.
-

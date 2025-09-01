@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / EscapeHtmlOptions
+[@technobuddha/library](../modules.md) / EscapeHtmlOptions
 
 # Type Alias: EscapeHtmlOptions
 
@@ -10,7 +8,7 @@ type EscapeHtmlOptions = {
 };
 ```
 
-Defined in: [escape-html.ts:9](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L9)
+Defined in: [src/escape-html.ts:9](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L9)
 
 Options for [escapeHTML](escapeHTML.md)
 
@@ -19,4 +17,3 @@ Options for [escapeHTML](escapeHTML.md)
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="escapenonascii"></a> `escapeNonASCII?` | `boolean` | escape all characters outside the 7-bit ASCII range | [src/escape-html.ts:11](https://github.com/technobuddha/library/blob/main/src/escape-html.ts#L11) |
-

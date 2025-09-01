@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / FilenameOptions
+[@technobuddha/library](../modules.md) / FilenameOptions
 
 # Type Alias: FilenameOptions
 
@@ -13,7 +11,7 @@ type FilenameOptions = {
 };
 ```
 
-Defined in: [to-filename.ts:16](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L16)
+Defined in: [src/to-filename.ts:16](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L16)
 
 Options for the [toFilename](toFilename.md) function
 
@@ -25,4 +23,3 @@ Options for the [toFilename](toFilename.md) function
 | <a id="maxlength"></a> `maxLength?` | `number` | the file name will be truncated to this length | [src/to-filename.ts:18](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L18) |
 | <a id="replacement"></a> `replacement?` | `string` | character to use to replace "bad" characters | [src/to-filename.ts:20](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L20) |
 | <a id="separator"></a> `separator?` | `string` | string to separate the main section from the disambiguated section | [src/to-filename.ts:24](https://github.com/technobuddha/library/blob/main/src/to-filename.ts#L24) |
-

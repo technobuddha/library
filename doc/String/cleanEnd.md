@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / cleanEnd
+[@technobuddha/library](../modules.md) / cleanEnd
 
 # Function: cleanEnd()
 
@@ -13,7 +11,7 @@ function cleanEnd(input: string, characters:
   | RegExp)[]): string;
 ```
 
-Defined in: [clean-end.ts:14](https://github.com/technobuddha/library/blob/main/src/clean-end.ts#L14)
+Defined in: [src/clean-end.ts:14](https://github.com/technobuddha/library/blob/main/src/clean-end.ts#L14)
 
 Remove all occurrences of characters from the end of the string
 
@@ -27,4 +25,3 @@ Remove all occurrences of characters from the end of the string
 ## Returns
 
 `string`
-

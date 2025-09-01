@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / toEnumeration
+[@technobuddha/library](../modules.md) / toEnumeration
 
 # Function: toEnumeration()
 
@@ -13,7 +11,7 @@ function toEnumeration(input: string, ...tests: (
   | RegExp, any, any>)[]): undefined | number;
 ```
 
-Defined in: [to-enumeration.ts:11](https://github.com/technobuddha/library/blob/main/src/to-enumeration.ts#L11)
+Defined in: [src/to-enumeration.ts:11](https://github.com/technobuddha/library/blob/main/src/to-enumeration.ts#L11)
 
 Convert a string to a numeric value
 
@@ -29,4 +27,3 @@ Convert a string to a numeric value
 `undefined` \| `number`
 
 The index of the first test to match the input string
-

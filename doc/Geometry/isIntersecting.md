@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isIntersecting
+[@technobuddha/library](../modules.md) / isIntersecting
 
 # Function: isIntersecting()
 
@@ -8,7 +6,7 @@
 function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean;
 ```
 
-Defined in: [is-intersecting.ts:34](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L34)
+Defined in: [src/is-intersecting.ts:34](https://github.com/technobuddha/library/blob/main/src/is-intersecting.ts#L34)
 
 Determines whether a given shape (either a LineSegment or a Polygon) intersects with a polygon.
 
@@ -44,4 +42,3 @@ isIntersecting(
   or if two of its vertices lie on the polygon.
 - If `shape` is a LineSegment, the function checks if it intersects with any edge of the polygon,
   or if both endpoints of a polygon edge lie on the line segment.
-

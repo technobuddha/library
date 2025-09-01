@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Random](./index.md) / randomPick
+[@technobuddha/library](../modules.md) / randomPick
 
 # Function: randomPick()
 
@@ -8,7 +6,7 @@
 function randomPick<T>(list: readonly T[], random: () => number): undefined | T;
 ```
 
-Defined in: [random-pick.ts:15](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L15)
+Defined in: [src/random-pick.ts:15](https://github.com/technobuddha/library/blob/main/src/random-pick.ts#L15)
 
 Pick a random items from a list.
 
@@ -38,4 +36,3 @@ const items = ['a', 'b', 'c'];
 randomPick(items, () => 0.5); // 'b' (deterministic for example)
 randomPick([], () => 0.5); // undefined
 ```
-

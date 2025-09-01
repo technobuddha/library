@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / metricUnits
+[@technobuddha/library](../modules.md) / metricUnits
 
 # Function: metricUnits()
 
@@ -8,7 +6,7 @@
 function metricUnits(input: number, options: MetricUnitsOptions): string;
 ```
 
-Defined in: [metric-units.ts:95](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L95)
+Defined in: [src/metric-units.ts:95](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L95)
 
 Abbreviate a number by adding a suffix for metric units (i.e. 1000 =\> 1K, .0001 = 1m)
 
@@ -33,4 +31,3 @@ metricUnits(0.000001); // '1µ'
 metricUnits(123456789); // '123.46M'
 metricUnits(0); // '0'
 ```
-

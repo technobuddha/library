@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / levenshteinDistance
+[@technobuddha/library](../modules.md) / levenshteinDistance
 
 # Function: levenshteinDistance()
 
@@ -11,7 +9,7 @@ function levenshteinDistance(
    options: LevenshteinDistanceOptions): number;
 ```
 
-Defined in: [levenshtein-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L23)
+Defined in: [src/levenshtein-distance.ts:23](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L23)
 
 Compute the levenshtein distance between two strings (similarity)
 
@@ -34,4 +32,3 @@ the levenshteinDistance between the two strings (0 for no similarity through 1 f
 ```ts
 caseInsensitive true
 ```
-

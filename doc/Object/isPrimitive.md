@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isPrimitive
+[@technobuddha/library](../modules.md) / isPrimitive
 
 # Function: isPrimitive()
 
@@ -8,7 +6,7 @@
 function isPrimitive(input: unknown): input is undefined | null | string | number | bigint | boolean | symbol;
 ```
 
-Defined in: [is-primitive.ts:18](https://github.com/technobuddha/library/blob/main/src/is-primitive.ts#L18)
+Defined in: [src/is-primitive.ts:18](https://github.com/technobuddha/library/blob/main/src/is-primitive.ts#L18)
 
 Check to see if an object is a primitive
 
@@ -35,4 +33,3 @@ isPrimitive(Symbol('s')); // true
 isPrimitive({}); // false
 isPrimitive([]); // false
 ```
-

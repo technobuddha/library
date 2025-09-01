@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / round
+[@technobuddha/library](../modules.md) / round
 
 # Function: round()
 
@@ -8,7 +6,7 @@
 function round(input: number, options: RoundOptions): number;
 ```
 
-Defined in: [round.ts:30](https://github.com/technobuddha/library/blob/main/src/round.ts#L30)
+Defined in: [src/round.ts:30](https://github.com/technobuddha/library/blob/main/src/round.ts#L30)
 
 Returns the nearest integer to the given number, with optional precision adjustments.
 
@@ -34,4 +32,3 @@ round(-2.5); // -2
 round(2.345, { precision: 2 }); // 2.35
 round(-2.345, { precision: 2 }); // -2.35
 ```
-

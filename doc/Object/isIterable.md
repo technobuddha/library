@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isIterable
+[@technobuddha/library](../modules.md) / isIterable
 
 # Function: isIterable()
 
@@ -8,7 +6,7 @@
 function isIterable(obj: unknown): obj is Iterable<unknown, any, any>;
 ```
 
-Defined in: [is-iterable.ts:19](https://github.com/technobuddha/library/blob/main/src/is-iterable.ts#L19)
+Defined in: [src/is-iterable.ts:19](https://github.com/technobuddha/library/blob/main/src/is-iterable.ts#L19)
 
 Determines if the provided object is iterable.
 
@@ -36,4 +34,3 @@ isIterable(new Map()); // true
 isIterable(123);       // false
 isIterable(null);      // false
 ```
-

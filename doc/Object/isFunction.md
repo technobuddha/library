@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isFunction
+[@technobuddha/library](../modules.md) / isFunction
 
 # Function: isFunction()
 
@@ -8,7 +6,7 @@
 function isFunction(value: unknown): value is Function;
 ```
 
-Defined in: [is-function.ts:24](https://github.com/technobuddha/library/blob/main/src/is-function.ts#L24)
+Defined in: [src/is-function.ts:24](https://github.com/technobuddha/library/blob/main/src/is-function.ts#L24)
 
 Determines whether the provided value is a function.
 
@@ -38,4 +36,3 @@ isFunction(function* () {}); // true
 isFunction(null); // false
 isFunction({}); // false
 ```
-

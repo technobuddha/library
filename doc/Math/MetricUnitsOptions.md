@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / MetricUnitsOptions
+[@technobuddha/library](../modules.md) / MetricUnitsOptions
 
 # Type Alias: MetricUnitsOptions
 
@@ -15,7 +13,7 @@ type MetricUnitsOptions = {
 };
 ```
 
-Defined in: [metric-units.ts:52](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L52)
+Defined in: [src/metric-units.ts:52](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L52)
 
 Options for the [metricUnits](metricUnits.md) function
 w
@@ -30,4 +28,3 @@ w
 | <a id="pad"></a> `pad?` | `number` | left padding to apply to numeric value | [src/metric-units.ts:60](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L60) |
 | <a id="precision"></a> `precision?` | `number` | Number of digits after the decimal point to display | [src/metric-units.ts:76](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L76) |
 | <a id="unit"></a> `unit?` | `number` | Multiplier for each level of suffixes (default: 1000) | [src/metric-units.ts:72](https://github.com/technobuddha/library/blob/main/src/metric-units.ts#L72) |
-

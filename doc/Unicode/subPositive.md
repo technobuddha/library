@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / subPositive
+[@technobuddha/library](../modules.md) / subPositive
 
 # Variable: subPositive
 
@@ -8,7 +6,6 @@
 const subPositive: "₊" = '₊';
 ```
 
-Defined in: [unicode.ts:95](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L95)
+Defined in: [src/unicode.ts:95](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L95)
 
 Subscript Positive
-

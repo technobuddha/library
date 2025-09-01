@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isNumber
+[@technobuddha/library](../modules.md) / isNumber
 
 # Function: isNumber()
 
@@ -8,7 +6,7 @@
 function isNumber(value: unknown): value is number;
 ```
 
-Defined in: [is-number.ts:16](https://github.com/technobuddha/library/blob/main/src/is-number.ts#L16)
+Defined in: [src/is-number.ts:16](https://github.com/technobuddha/library/blob/main/src/is-number.ts#L16)
 
 Determines whether the provided value is a number or a Number object.
 
@@ -33,4 +31,3 @@ isNumber(NaN); // true
 isNumber('42'); // false
 isNumber(null); // false
 ```
-

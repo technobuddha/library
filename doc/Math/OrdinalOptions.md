@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / OrdinalOptions
+[@technobuddha/library](../modules.md) / OrdinalOptions
 
 # Type Alias: OrdinalOptions
 
@@ -21,7 +19,7 @@ type OrdinalOptions = {
 };
 ```
 
-Defined in: [ordinal.ts:10](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L10)
+Defined in: [src/ordinal.ts:10](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L10)
 
 Options for formatting ordinal numbers.
 
@@ -37,4 +35,3 @@ Options for formatting ordinal numbers.
 | <a id="precision"></a> `precision?` | [`Numbering`](Numbering.md)\[`"precision"`\] | `9` | Precision for decimal/fraction conversion. | [src/ordinal.ts:45](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L45) |
 | <a id="shift"></a> `shift?` | [`Numbering`](Numbering.md)\[`"shift"`\] | `undefined` | Whether to shift the fractional part of the number. | [src/ordinal.ts:56](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L56) |
 | <a id="tolerance"></a> `tolerance?` | [`Numbering`](Numbering.md)\[`"tolerance"`\] | `0.01` | Tolerance for floating-point comparison when converting decimals to fractions. | [src/ordinal.ts:33](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L33) |
-

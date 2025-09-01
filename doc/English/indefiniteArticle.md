@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / indefiniteArticle
+[@technobuddha/library](../modules.md) / indefiniteArticle
 
 # Function: indefiniteArticle()
 
@@ -8,7 +6,7 @@
 function indefiniteArticle(word: string, options: IndefiniteArticleOptions): string;
 ```
 
-Defined in: [indefinite-article.ts:47](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L47)
+Defined in: [src/indefinite-article.ts:47](https://github.com/technobuddha/library/blob/main/src/indefinite-article.ts#L47)
 
 Determine the appropriate indefinite article to use with a word.
 
@@ -31,4 +29,3 @@ option is used, only the indefinite article is returned.
 The answer is derived from a simple rules engine, it attempts to cover most exceptions
 to the rules, but the English language has lots of quirks, and this rules engine can not cover them
 all
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / getIndent
+[@technobuddha/library](../modules.md) / getIndent
 
 # Function: getIndent()
 
@@ -8,7 +6,7 @@
 function getIndent(input: string, options: IndentOptions): number;
 ```
 
-Defined in: [get-indent.ts:13](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L13)
+Defined in: [src/get-indent.ts:13](https://github.com/technobuddha/library/blob/main/src/get-indent.ts#L13)
 
 Determine the indentation level of text
 
@@ -30,4 +28,3 @@ The minimum amount of indentation on each line
 ```ts
 indenter space
 ```
-

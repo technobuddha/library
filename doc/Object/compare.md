@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / compare
+[@technobuddha/library](../modules.md) / compare
 
 # Function: compare()
 
@@ -8,7 +6,7 @@
 function compare(a: unknown, b: unknown): number;
 ```
 
-Defined in: [compare.ts:26](https://github.com/technobuddha/library/blob/main/src/compare.ts#L26)
+Defined in: [src/compare.ts:26](https://github.com/technobuddha/library/blob/main/src/compare.ts#L26)
 
 Compare two objects
 
@@ -40,4 +38,3 @@ compare(null, undefined); // -1
 compare(undefined, undefined); // 0
 compare(NaN, NaN); // 0
 ```
-

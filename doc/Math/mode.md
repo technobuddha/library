@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / mode
+[@technobuddha/library](../modules.md) / mode
 
 # Function: mode()
 
@@ -8,7 +6,7 @@
 function mode<T>(array: T[]): undefined | T;
 ```
 
-Defined in: [mode.ts:18](https://github.com/technobuddha/library/blob/main/src/mode.ts#L18)
+Defined in: [src/mode.ts:18](https://github.com/technobuddha/library/blob/main/src/mode.ts#L18)
 
 Returns the mode (the most frequently occurring element) of the given array.
 If multiple elements have the same highest frequency, the first encountered is returned.
@@ -40,4 +38,3 @@ mode(['a', 'b', 'b', 'a', 'c']); // 'a'
 mode([true, false, false, true, true]); // true
 mode([]); // undefined
 ```
-

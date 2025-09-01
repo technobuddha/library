@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / zipperMerge
+[@technobuddha/library](../modules.md) / zipperMerge
 
 # Function: zipperMerge()
 
@@ -8,7 +6,7 @@
 function zipperMerge<T>(...arrays: T): { [K in string | number | symbol]: T[K<K>] extends V[] ? V : never }[];
 ```
 
-Defined in: [zipper-merge.ts:21](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L21)
+Defined in: [src/zipper-merge.ts:21](https://github.com/technobuddha/library/blob/main/src/zipper-merge.ts#L21)
 
 Merges multiple arrays into a single array by interleaving their elements at each index.
 
@@ -44,4 +42,3 @@ zipperMerge([1, 2, 3], ['a', 'b', 'c']);
 zipperMerge([1, 2], ['a', 'b', 'c']);
 // Returns: [[1, 'a'], [2, 'b'], [undefined, 'c']]
 ```
-

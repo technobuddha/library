@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / dotCase
+[@technobuddha/library](../modules.md) / dotCase
 
 # Function: dotCase()
 
@@ -8,7 +6,7 @@
 function dotCase(input: string): string;
 ```
 
-Defined in: [dot-case.ts:18](https://github.com/technobuddha/library/blob/main/src/dot-case.ts#L18)
+Defined in: [src/dot-case.ts:18](https://github.com/technobuddha/library/blob/main/src/dot-case.ts#L18)
 
 Convert an identifier string to a dot form
 
@@ -32,4 +30,3 @@ dotCase('HelloWorld'); // 'hello.world'
 dotCase('foo_bar-baz'); // 'foo.bar.baz'
 dotCase('FOO BAR'); // 'foo.bar'
 ```
-

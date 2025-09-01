@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isoWeekOfYear
+[@technobuddha/library](../modules.md) / isoWeekOfYear
 
 # Function: isoWeekOfYear()
 
@@ -11,7 +9,7 @@ function isoWeekOfYear(input: Date, options: ISOWeekOfYearOptions): {
 };
 ```
 
-Defined in: [iso-week-of-year.ts:31](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L31)
+Defined in: [src/iso-week-of-year.ts:31](https://github.com/technobuddha/library/blob/main/src/iso-week-of-year.ts#L31)
 
 Determine the ISO week number for a given date
 
@@ -42,4 +40,3 @@ weekOneIncludes Thursday
 ```ts
 firstDayOfWeek Monday
 ```
-

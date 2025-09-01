@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / ensurePrefix
+[@technobuddha/library](../modules.md) / ensurePrefix
 
 # Function: ensurePrefix()
 
@@ -8,7 +6,7 @@
 function ensurePrefix(input: string, prefix: string): string;
 ```
 
-Defined in: [ensure-prefix.ts:9](https://github.com/technobuddha/library/blob/main/src/ensure-prefix.ts#L9)
+Defined in: [src/ensure-prefix.ts:9](https://github.com/technobuddha/library/blob/main/src/ensure-prefix.ts#L9)
 
 Add a prefix to a string, if it does not already have the prefix
 
@@ -24,4 +22,3 @@ Add a prefix to a string, if it does not already have the prefix
 `string`
 
 The prefix followed by the string
-

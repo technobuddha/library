@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / ordinal
+[@technobuddha/library](../modules.md) / ordinal
 
 # Function: ordinal()
 
@@ -8,7 +6,7 @@
 function ordinal(input: number, options: OrdinalOptions): string;
 ```
 
-Defined in: [ordinal.ts:75](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L75)
+Defined in: [src/ordinal.ts:75](https://github.com/technobuddha/library/blob/main/src/ordinal.ts#L75)
 
 Convert a number into an ordinal number string (1st, 2nd, 3rd, etc).
 
@@ -33,4 +31,3 @@ ordinal(21); // "twenty first"
 ordinal(101, { and: ' and ' }); // "one hundred and first"
 ordinal(2, { output: 'suffix' }); // "nd"
 ```
-

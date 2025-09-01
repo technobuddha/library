@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / LevenshteinDistanceOptions
+[@technobuddha/library](../modules.md) / LevenshteinDistanceOptions
 
 # Type Alias: LevenshteinDistanceOptions
 
@@ -10,7 +8,7 @@ type LevenshteinDistanceOptions = {
 };
 ```
 
-Defined in: [levenshtein-distance.ts:8](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L8)
+Defined in: [src/levenshtein-distance.ts:8](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L8)
 
 Options for the [levenshteinDistance](levenshteinDistance.md) function
 
@@ -19,4 +17,3 @@ Options for the [levenshteinDistance](levenshteinDistance.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | The comparison will ignore case | [src/levenshtein-distance.ts:10](https://github.com/technobuddha/library/blob/main/src/levenshtein-distance.ts#L10) |
-

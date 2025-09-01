@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / formatDate
+[@technobuddha/library](../modules.md) / formatDate
 
 # Function: formatDate()
 
@@ -11,7 +9,7 @@ function formatDate(
    options?: FormatDateOptions): string;
 ```
 
-Defined in: [format-date.ts:99](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L99)
+Defined in: [src/format-date.ts:99](https://github.com/technobuddha/library/blob/main/src/format-date.ts#L99)
 
 Format a date
 
@@ -32,4 +30,3 @@ Format a date
 ```ts
 utc false
 ```
-

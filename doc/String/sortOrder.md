@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / sortOrder
+[@technobuddha/library](../modules.md) / sortOrder
 
 # Function: sortOrder()
 
@@ -8,7 +6,7 @@
 function sortOrder(text: string, options: SortOrderOptions): string;
 ```
 
-Defined in: [sort-order.ts:24](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L24)
+Defined in: [src/sort-order.ts:24](https://github.com/technobuddha/library/blob/main/src/sort-order.ts#L24)
 
 Convert a string into a sortable string
 
@@ -28,4 +26,3 @@ sortable string
 ## Remarks
 
 for example "The Beatles" becomes "Beatles, The"
-

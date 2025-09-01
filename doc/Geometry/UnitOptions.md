@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / UnitOptions
+[@technobuddha/library](../modules.md) / UnitOptions
 
 # Type Alias: UnitOptions
 
@@ -10,7 +8,7 @@ type UnitOptions = {
 };
 ```
 
-Defined in: [angle.ts:71](https://github.com/technobuddha/library/blob/main/src/angle.ts#L71)
+Defined in: [src/angle.ts:71](https://github.com/technobuddha/library/blob/main/src/angle.ts#L71)
 
 Options for angle-related functions
 
@@ -19,4 +17,3 @@ Options for angle-related functions
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="unit"></a> `unit?` | [`AngleUnit`](AngleUnit.md) | The unit of the angle (e.g., degrees, radians). | [src/angle.ts:75](https://github.com/technobuddha/library/blob/main/src/angle.ts#L75) |
-

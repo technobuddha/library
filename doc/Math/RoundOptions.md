@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / RoundOptions
+[@technobuddha/library](../modules.md) / RoundOptions
 
 # Type Alias: RoundOptions
 
@@ -10,7 +8,7 @@ type RoundOptions = {
 };
 ```
 
-Defined in: [round.ts:9](https://github.com/technobuddha/library/blob/main/src/round.ts#L9)
+Defined in: [src/round.ts:9](https://github.com/technobuddha/library/blob/main/src/round.ts#L9)
 
 Options for the [round](round.md) function
 
@@ -19,4 +17,3 @@ Options for the [round](round.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="precision"></a> `precision?` | `number` | The number of decimal places to consider when applying the ceiling. Defaults to 0. | [src/round.ts:11](https://github.com/technobuddha/library/blob/main/src/round.ts#L11) |
-

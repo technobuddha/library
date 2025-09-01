@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / toError
+[@technobuddha/library](../modules.md) / toError
 
 # Function: toError()
 
@@ -8,7 +6,7 @@
 function toError(entity: unknown): Error;
 ```
 
-Defined in: [to-error.ts:17](https://github.com/technobuddha/library/blob/main/src/to-error.ts#L17)
+Defined in: [src/to-error.ts:17](https://github.com/technobuddha/library/blob/main/src/to-error.ts#L17)
 
 Convert the entity to an Error object.
 
@@ -31,4 +29,3 @@ toError(new Error('fail')); // returns the same Error object
 toError('fail'); // returns Error: fail
 toError(404); // returns Error: 404
 ```
-

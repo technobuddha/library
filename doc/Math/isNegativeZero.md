@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / isNegativeZero
+[@technobuddha/library](../modules.md) / isNegativeZero
 
 # Function: isNegativeZero()
 
@@ -8,7 +6,7 @@
 function isNegativeZero(input: number): boolean;
 ```
 
-Defined in: [is-negative-zero.ts:15](https://github.com/technobuddha/library/blob/main/src/is-negative-zero.ts#L15)
+Defined in: [src/is-negative-zero.ts:15](https://github.com/technobuddha/library/blob/main/src/is-negative-zero.ts#L15)
 
 Tests to see if the specified value is negative zero
 
@@ -32,4 +30,3 @@ isNegativeZero(0); // false
 isNegativeZero(1); // false
 isNegativeZero(-1); // false
 ```
-

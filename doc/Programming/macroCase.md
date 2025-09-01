@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / macroCase
+[@technobuddha/library](../modules.md) / macroCase
 
 # Function: macroCase()
 
@@ -8,7 +6,7 @@
 function macroCase(input: string): string;
 ```
 
-Defined in: [macro-case.ts:18](https://github.com/technobuddha/library/blob/main/src/macro-case.ts#L18)
+Defined in: [src/macro-case.ts:18](https://github.com/technobuddha/library/blob/main/src/macro-case.ts#L18)
 
 Convert an identifier string to macro case
 
@@ -32,4 +30,3 @@ macroCase('HelloWorld'); // 'HELLO_WORLD'
 macroCase('foo_bar-baz'); // 'FOO_BAR_BAZ'
 macroCase('FOO BAR'); // 'FOO_BAR'
 ```
-

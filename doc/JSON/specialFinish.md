@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / specialFinish
+[@technobuddha/library](../modules.md) / specialFinish
 
 # Variable: specialFinish
 
@@ -8,7 +6,6 @@
 const specialFinish: "﴿" = '﴿';
 ```
 
-Defined in: [json.ts:51](https://github.com/technobuddha/library/blob/main/src/json.ts#L51)
+Defined in: [src/json.ts:51](https://github.com/technobuddha/library/blob/main/src/json.ts#L51)
 
 The end of a special JSON value
-

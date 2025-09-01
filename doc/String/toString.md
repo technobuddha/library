@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / toString
+[@technobuddha/library](../modules.md) / toString
 
 # Function: toString()
 
@@ -8,7 +6,7 @@
 function toString(value: unknown): string;
 ```
 
-Defined in: [to-string.ts:18](https://github.com/technobuddha/library/blob/main/src/to-string.ts#L18)
+Defined in: [src/to-string.ts:18](https://github.com/technobuddha/library/blob/main/src/to-string.ts#L18)
 
 Converts an unknown value to its string representation.
 
@@ -31,4 +29,3 @@ Converts an unknown value to its string representation.
 `string`
 
 The string representation of the input value.
-

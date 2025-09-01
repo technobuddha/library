@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / beginningOfDay
+[@technobuddha/library](../modules.md) / beginningOfDay
 
 # Function: beginningOfDay()
 
@@ -8,7 +6,7 @@
 function beginningOfDay(input: Date, options: BeginningOfDayOptions): Date;
 ```
 
-Defined in: [beginning-of-day.ts:20](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L20)
+Defined in: [src/beginning-of-day.ts:20](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L20)
 
 Determine the start of the day for a date
 
@@ -30,4 +28,3 @@ The date value for midnight on the specified day
 ```ts
 utc false
 ```
-

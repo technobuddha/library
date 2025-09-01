@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / FillTemplateOptions
+[@technobuddha/library](../modules.md) / FillTemplateOptions
 
 # Type Alias: FillTemplateOptions
 
@@ -11,7 +9,7 @@ type FillTemplateOptions = {
 };
 ```
 
-Defined in: [fill-template.ts:7](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L7)
+Defined in: [src/fill-template.ts:7](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L7)
 
 Options for the [fillTemplate](fillTemplate.md) function
 
@@ -21,4 +19,3 @@ Options for the [fillTemplate](fillTemplate.md) function
 | ------ | ------ | ------ | ------ |
 | <a id="close"></a> `close?` | `string` | The closing field delimiter | [src/fill-template.ts:11](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L11) |
 | <a id="open"></a> `open?` | `string` | The opening field delimiter | [src/fill-template.ts:9](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L9) |
-

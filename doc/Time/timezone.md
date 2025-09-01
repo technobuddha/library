@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / timezone
+[@technobuddha/library](../modules.md) / timezone
 
 # Function: timezone()
 
@@ -10,7 +8,7 @@ function timezone(input:
   | Date, options: TimezoneOptions): string;
 ```
 
-Defined in: [timezone.ts:29](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L29)
+Defined in: [src/timezone.ts:29](https://github.com/technobuddha/library/blob/main/src/timezone.ts#L29)
 
 Determine the correct timezone string for a specified date using a local timezone, or an offset in minutes
 
@@ -43,4 +41,3 @@ gmt false
 ```ts
 z true
 ```
-

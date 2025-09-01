@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / perimeter
+[@technobuddha/library](../modules.md) / perimeter
 
 # Function: perimeter()
 
@@ -8,7 +6,7 @@
 function perimeter(polygon: Polygon): number;
 ```
 
-Defined in: [perimeter.ts:23](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L23)
+Defined in: [src/perimeter.ts:23](https://github.com/technobuddha/library/blob/main/src/perimeter.ts#L23)
 
 Calculates the perimeter of a polygon.
 
@@ -36,4 +34,3 @@ const polygon: Polygon = [
 const result = perimeter(polygon);
 // result: 40
 ```
-

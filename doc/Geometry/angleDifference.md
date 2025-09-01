@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / angleDifference
+[@technobuddha/library](../modules.md) / angleDifference
 
 # Function: angleDifference()
 
@@ -11,7 +9,7 @@ function angleDifference(
    options: UnitOptions): number;
 ```
 
-Defined in: [angle-difference.ts:25](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L25)
+Defined in: [src/angle-difference.ts:25](https://github.com/technobuddha/library/blob/main/src/angle-difference.ts#L25)
 
 Computes the difference between startAngle and endAngle.
 
@@ -43,4 +41,3 @@ angleDifference(Math.PI * 1/6, Math.PI * 2/6); // π * 1/6
 angleDifference(Math.PI * 2/6, Math.PI * 1/6); // -π * 1/6.
 angleDifference(30, 60, 'deg'); // 30
 ```
-

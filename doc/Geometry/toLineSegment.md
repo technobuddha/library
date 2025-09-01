@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toLineSegment
+[@technobuddha/library](../modules.md) / toLineSegment
 
 # Function: toLineSegment()
 
@@ -8,7 +6,7 @@
 function toLineSegment(pointA: Cartesian, pointB: Cartesian): LineSegment;
 ```
 
-Defined in: [to-line-segment.ts:11](https://github.com/technobuddha/library/blob/main/src/to-line-segment.ts#L11)
+Defined in: [src/to-line-segment.ts:11](https://github.com/technobuddha/library/blob/main/src/to-line-segment.ts#L11)
 
 Converts two Cartesian points into a `LineSegment` object.
 
@@ -24,4 +22,3 @@ Converts two Cartesian points into a `LineSegment` object.
 [`LineSegment`](LineSegment.md)
 
 A `LineSegment` object representing the line from `pointA` to `pointB`.
-

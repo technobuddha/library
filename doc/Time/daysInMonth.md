@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / daysInMonth
+[@technobuddha/library](../modules.md) / daysInMonth
 
 # Function: daysInMonth()
 
@@ -8,7 +6,7 @@
 function daysInMonth(input: Date, options: DaysInMonthOptions): number;
 ```
 
-Defined in: [days-in-month.ts:23](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L23)
+Defined in: [src/days-in-month.ts:23](https://github.com/technobuddha/library/blob/main/src/days-in-month.ts#L23)
 
 Determine the number of days in the month for a date
 
@@ -30,4 +28,3 @@ The number of days in the specified month
 ```ts
 utc false
 ```
-

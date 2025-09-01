@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isDate
+[@technobuddha/library](../modules.md) / isDate
 
 # Function: isDate()
 
@@ -8,7 +6,7 @@
 function isDate(value: unknown): value is Date;
 ```
 
-Defined in: [is-date.ts:10](https://github.com/technobuddha/library/blob/main/src/is-date.ts#L10)
+Defined in: [src/is-date.ts:10](https://github.com/technobuddha/library/blob/main/src/is-date.ts#L10)
 
 Determines whether the provided value is a `Date` object.
 
@@ -23,4 +21,3 @@ Determines whether the provided value is a `Date` object.
 `value is Date`
 
 `true` if the value is a `Date` object, otherwise `false`.
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / TBJsonObject
+[@technobuddha/library](../modules.md) / TBJsonObject
 
 # Type Alias: TBJsonObject
 
@@ -8,7 +6,7 @@
 type TBJsonObject = { [Key in string]: TBJsonValue } & { [Key in string]?: TBJsonValue };
 ```
 
-Defined in: [json.ts:14](https://github.com/technobuddha/library/blob/main/src/json.ts#L14)
+Defined in: [src/json.ts:14](https://github.com/technobuddha/library/blob/main/src/json.ts#L14)
 
 Matches a JSON object.
 
@@ -17,4 +15,3 @@ extended from. Don't use this as a direct return type as the user would have to 
 `jsonObject as unknown as CustomResponse`. Instead, you could extend your CustomResponse type from
 it to ensure your type only uses JSON-compatible types:
 `interface CustomResponse extends TBJsonObject { … }`.
-

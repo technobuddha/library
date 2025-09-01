@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / Collapsible
+[@technobuddha/library](../modules.md) / Collapsible
 
 # Type Alias: Collapsible\<T\>
 
@@ -10,7 +8,7 @@ type Collapsible<T> =
 | () => CollapsibleValue<T>;
 ```
 
-Defined in: [collapse.ts:48](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L48)
+Defined in: [src/collapse.ts:48](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L48)
 
 Represents a value that can be "collapsed" into a flat sequence of values of type `T`.
 
@@ -29,4 +27,3 @@ arrays, lazy generators, or functions producing values, and need to process them
 | Type Parameter | Description |
 | ------ | ------ |
 | `T` *extends* [`CollapsiblePrimitive`](CollapsiblePrimitive.md) | The primitive type that can be collapsed. |
-

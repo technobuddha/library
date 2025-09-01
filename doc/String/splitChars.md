@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / splitChars
+[@technobuddha/library](../modules.md) / splitChars
 
 # Function: splitChars()
 
@@ -8,7 +6,7 @@
 function splitChars(input: string): string[];
 ```
 
-Defined in: [split-chars.ts:8](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L8)
+Defined in: [src/split-chars.ts:8](https://github.com/technobuddha/library/blob/main/src/split-chars.ts#L8)
 
 Split a string into an array of characters
 
@@ -23,4 +21,3 @@ Split a string into an array of characters
 `string`[]
 
 array of characters
-

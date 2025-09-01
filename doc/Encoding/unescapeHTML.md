@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / unescapeHTML
+[@technobuddha/library](../modules.md) / unescapeHTML
 
 # Function: unescapeHTML()
 
@@ -8,7 +6,7 @@
 function unescapeHTML(input: string): string;
 ```
 
-Defined in: [unescape-html.ts:23](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L23)
+Defined in: [src/unescape-html.ts:23](https://github.com/technobuddha/library/blob/main/src/unescape-html.ts#L23)
 
 Unescape a string encoded in HTML
 
@@ -38,4 +36,3 @@ unescapeHTML('2 &lt; 3 &gt; 1'); // "2 < 3 > 1"
 unescapeHTML('&#169; 2025'); // "© 2025"
 unescapeHTML('&#x1F600;'); // "😀"
 ```
-

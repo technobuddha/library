@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / isOdd
+[@technobuddha/library](../modules.md) / isOdd
 
 # Function: isOdd()
 
@@ -8,7 +6,7 @@
 function isOdd(input: number): boolean;
 ```
 
-Defined in: [is-odd.ts:18](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L18)
+Defined in: [src/is-odd.ts:18](https://github.com/technobuddha/library/blob/main/src/is-odd.ts#L18)
 
 Tests to see if the specified value is an odd integer
 
@@ -33,4 +31,3 @@ isOdd(0); // false
 isOdd(-3); // true
 isOdd(3.1); // false
 ```
-

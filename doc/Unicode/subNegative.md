@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / subNegative
+[@technobuddha/library](../modules.md) / subNegative
 
 # Variable: subNegative
 
@@ -8,7 +6,6 @@
 const subNegative: "₋" = '₋';
 ```
 
-Defined in: [unicode.ts:89](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L89)
+Defined in: [src/unicode.ts:89](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L89)
 
 Subscript Negative
-

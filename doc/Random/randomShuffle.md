@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Random](./index.md) / randomShuffle
+[@technobuddha/library](../modules.md) / randomShuffle
 
 # Function: randomShuffle()
 
@@ -8,7 +6,7 @@
 function randomShuffle<T>(deck: readonly T[], random: () => number): T[];
 ```
 
-Defined in: [random-shuffle.ts:19](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L19)
+Defined in: [src/random-shuffle.ts:19](https://github.com/technobuddha/library/blob/main/src/random-shuffle.ts#L19)
 
 Returns a new array with the elements of the input array shuffled in random order.
 
@@ -41,4 +39,3 @@ randomShuffle(items, () => 0.5); // deterministic shuffle for example
 // result could be: [2, 3, 1]
 randomShuffle([]); // []
 ```
-

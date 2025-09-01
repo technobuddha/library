@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / delimited
+[@technobuddha/library](../modules.md) / delimited
 
 # Function: delimited()
 
@@ -12,7 +10,7 @@ function delimited(
    count: number): string;
 ```
 
-Defined in: [delimited.ts:12](https://github.com/technobuddha/library/blob/main/src/delimited.ts#L12)
+Defined in: [src/delimited.ts:12](https://github.com/technobuddha/library/blob/main/src/delimited.ts#L12)
 
 Return a field from a delimited string
 
@@ -28,4 +26,3 @@ Return a field from a delimited string
 ## Returns
 
 `string`
-

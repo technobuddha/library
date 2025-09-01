@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / binaryUnits
+[@technobuddha/library](../modules.md) / binaryUnits
 
 # Function: binaryUnits()
 
@@ -8,7 +6,7 @@
 function binaryUnits(input: number, options: BinaryUnitsOptions): string;
 ```
 
-Defined in: [binary-units.ts:26](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L26)
+Defined in: [src/binary-units.ts:26](https://github.com/technobuddha/library/blob/main/src/binary-units.ts#L26)
 
 Abbreviate a binary number by adding a suffix for metric units (i.e. 1024 =\> 1KiB)
 
@@ -32,4 +30,3 @@ binaryUnits(1536); // '1.5KiB'
 binaryUnits(500); // '500B'
 binaryUnits(0); // '0B'
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [RegExp](./index.md) / isoDate
+[@technobuddha/library](../modules.md) / isoDate
 
 # Variable: isoDate
 
@@ -8,7 +6,7 @@
 const isoDate: RegExp;
 ```
 
-Defined in: [regexp.ts:146](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L146)
+Defined in: [src/regexp.ts:146](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L146)
 
 Validate a ISO formatted date
 
@@ -21,4 +19,3 @@ isoDate.test('2023-08-29T12:34'); // true
 isoDate.test('2023-08-29'); // false
 isoDate.test('not-a-date'); // false
 ```
-

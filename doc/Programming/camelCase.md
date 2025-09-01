@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / camelCase
+[@technobuddha/library](../modules.md) / camelCase
 
 # Function: camelCase()
 
@@ -8,7 +6,7 @@
 function camelCase(input: string): string;
 ```
 
-Defined in: [camel-case.ts:20](https://github.com/technobuddha/library/blob/main/src/camel-case.ts#L20)
+Defined in: [src/camel-case.ts:20](https://github.com/technobuddha/library/blob/main/src/camel-case.ts#L20)
 
 Convert an identifier string to a camel case
 
@@ -32,4 +30,3 @@ camelCase('Hello World'); // 'helloWorld'
 camelCase('foo_bar-baz'); // 'fooBarBaz'
 camelCase('FOO BAR'); // 'fooBar'
 ```
-

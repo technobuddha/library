@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / wordwrap
+[@technobuddha/library](../modules.md) / wordwrap
 
 # Function: wordwrap()
 
@@ -8,7 +6,7 @@
 function wordwrap(input: string, options: WordwrapOptions): string;
 ```
 
-Defined in: [wordwrap.ts:32](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L32)
+Defined in: [src/wordwrap.ts:32](https://github.com/technobuddha/library/blob/main/src/wordwrap.ts#L32)
 
 Wrap text so that it fits within a area of fixed width
 
@@ -48,4 +46,3 @@ cut default false
 ```ts
 trailingSpaces false
 ```
-

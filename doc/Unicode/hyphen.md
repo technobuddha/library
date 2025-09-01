@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / hyphen
+[@technobuddha/library](../modules.md) / hyphen
 
 # Variable: hyphen
 
@@ -8,7 +6,6 @@
 const hyphen: "‐" = '‐';
 ```
 
-Defined in: [unicode.ts:41](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L41)
+Defined in: [src/unicode.ts:41](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L41)
 
 Hyphen
-

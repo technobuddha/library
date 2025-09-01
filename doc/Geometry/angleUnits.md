@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / angleUnits
+[@technobuddha/library](../modules.md) / angleUnits
 
 # Variable: angleUnits
 
@@ -8,7 +6,7 @@
 const angleUnits: Record<AngleUnit, number>;
 ```
 
-Defined in: [angle.ts:51](https://github.com/technobuddha/library/blob/main/src/angle.ts#L51)
+Defined in: [src/angle.ts:51](https://github.com/technobuddha/library/blob/main/src/angle.ts#L51)
 
 Number of units in a circle
 
@@ -20,4 +18,3 @@ Number of units in a circle
 | 400      | grad, gradians        |
 | 21600    | arcmin, arcminutes    |
 | 1296000  | arcsec, arcseconds    |
-

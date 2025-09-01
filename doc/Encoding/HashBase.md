@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / HashBase
+[@technobuddha/library](../modules.md) / HashBase
 
 # Abstract Class: HashBase
 
-Defined in: [hash-base.ts:19](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L19)
+Defined in: [src/hash-base.ts:19](https://github.com/technobuddha/library/blob/main/src/hash-base.ts#L19)
 
 Abstract base class for hash algorithm implementations.
 
@@ -132,4 +130,3 @@ Updates the hash with the given string data.
 `this`
 
 The hash instance for method chaining.
-

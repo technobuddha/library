@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / BeginningOfWeekOptions
+[@technobuddha/library](../modules.md) / BeginningOfWeekOptions
 
 # Type Alias: BeginningOfWeekOptions
 
@@ -11,7 +9,7 @@ type BeginningOfWeekOptions = {
 };
 ```
 
-Defined in: [beginning-of-week.ts:10](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L10)
+Defined in: [src/beginning-of-week.ts:10](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L10)
 
 Options for the [beginningOfWeek](beginningOfWeek.md) function
 
@@ -21,4 +19,3 @@ Options for the [beginningOfWeek](beginningOfWeek.md) function
 | ------ | ------ | ------ | ------ |
 | <a id="firstdayofweek"></a> `firstDayOfWeek?` | [`DayOfWeek`](DayOfWeek.md) | Which day of the week is considered the beginning | [src/beginning-of-week.ts:14](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L14) |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/beginning-of-week.ts:12](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L12) |
-

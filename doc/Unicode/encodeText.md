@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / encodeText
+[@technobuddha/library](../modules.md) / encodeText
 
 # Function: encodeText()
 
@@ -8,7 +6,7 @@
 function encodeText(input: string, _encoding?: TextEncoding): Uint8Array;
 ```
 
-Defined in: [encode-text.ts:13](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L13)
+Defined in: [src/encode-text.ts:13](https://github.com/technobuddha/library/blob/main/src/encode-text.ts#L13)
 
 Encode a unicode (UTF-16 encoded javascript) string into UTF8
 
@@ -24,4 +22,3 @@ Encode a unicode (UTF-16 encoded javascript) string into UTF8
 [`Uint8Array`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)
 
 The UTF-8 encoded string
-

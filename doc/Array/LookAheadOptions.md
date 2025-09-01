@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / LookAheadOptions
+[@technobuddha/library](../modules.md) / LookAheadOptions
 
 # Type Alias: LookAheadOptions\<T\>
 
@@ -14,7 +12,7 @@ type LookAheadOptions<T> =
 };
 ```
 
-Defined in: [look-ahead.ts:7](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L7)
+Defined in: [src/look-ahead.ts:7](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L7)
 
 Options for [lookAhead](lookAhead.md) operations.
 
@@ -45,4 +43,3 @@ Options for [lookAhead](lookAhead.md) operations.
 | Name | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | `wrapAround` | `boolean` | Determines whether the look-ahead should wrap around to the beginning when reaching the end. | [src/look-ahead.ts:18](https://github.com/technobuddha/library/blob/main/src/look-ahead.ts#L18) |
-

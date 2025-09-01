@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / collapseBreakingSpace
+[@technobuddha/library](../modules.md) / collapseBreakingSpace
 
 # Function: collapseBreakingSpace()
 
@@ -8,7 +6,7 @@
 function collapseBreakingSpace(input: string, trim: CollapseBreakingSpaceOptions): string;
 ```
 
-Defined in: [collapse-breaking-space.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L21)
+Defined in: [src/collapse-breaking-space.ts:21](https://github.com/technobuddha/library/blob/main/src/collapse-breaking-space.ts#L21)
 
 Replace all breaking space (space, tab, carriage return, new line) with a single space
 
@@ -22,4 +20,3 @@ Replace all breaking space (space, tab, carriage return, new line) with a single
 ## Returns
 
 `string`
-

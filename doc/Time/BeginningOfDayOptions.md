@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / BeginningOfDayOptions
+[@technobuddha/library](../modules.md) / BeginningOfDayOptions
 
 # Type Alias: BeginningOfDayOptions
 
@@ -10,7 +8,7 @@ type BeginningOfDayOptions = {
 };
 ```
 
-Defined in: [beginning-of-day.ts:6](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L6)
+Defined in: [src/beginning-of-day.ts:6](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L6)
 
 Options for [beginningOfDay](beginningOfDay.md)
 
@@ -19,4 +17,3 @@ Options for [beginningOfDay](beginningOfDay.md)
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the UTC timezone | [src/beginning-of-day.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-day.ts#L8) |
-

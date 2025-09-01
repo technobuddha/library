@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / FuzzyMatchOptions
+[@technobuddha/library](../modules.md) / FuzzyMatchOptions
 
 # Type Alias: FuzzyMatchOptions
 
@@ -13,7 +11,7 @@ type FuzzyMatchOptions = {
 };
 ```
 
-Defined in: [fuzzy-match.ts:10](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L10)
+Defined in: [src/fuzzy-match.ts:10](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L10)
 
 Options for the [fuzzyMatch](fuzzyMatch.md) function
 
@@ -25,4 +23,3 @@ Options for the [fuzzyMatch](fuzzyMatch.md) function
 | <a id="weightdicecoefficient"></a> `weightDiceCoefficient?` | `number` | Weight of diceCoefficient | [src/fuzzy-match.ts:16](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L16) |
 | <a id="weightlevenshteindistance"></a> `weightLevenshteinDistance?` | `number` | Weight of levenshtein distance | [src/fuzzy-match.ts:14](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L14) |
 | <a id="weightlongestcommonsubstring"></a> `weightLongestCommonSubstring?` | `number` | Weight of longestCommonSubstring | [src/fuzzy-match.ts:18](https://github.com/technobuddha/library/blob/main/src/fuzzy-match.ts#L18) |
-

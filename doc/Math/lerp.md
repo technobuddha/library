@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / lerp
+[@technobuddha/library](../modules.md) / lerp
 
 # Function: lerp()
 
@@ -11,7 +9,7 @@ function lerp(
    proportion: number): number;
 ```
 
-Defined in: [lerp.ts:21](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L21)
+Defined in: [src/lerp.ts:21](https://github.com/technobuddha/library/blob/main/src/lerp.ts#L21)
 
 Performs linear interpolation between values a and b. Returns the value
 between a and b proportional to x (when x is between 0 and 1. When x is
@@ -41,4 +39,3 @@ lerp(10, 20, 0.25); // 12.5
 lerp(10, 20, -1); // 0
 lerp(10, 20, 2); // 30
 ```
-

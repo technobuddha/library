@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / escapeC
+[@technobuddha/library](../modules.md) / escapeC
 
 # Function: escapeC()
 
@@ -8,7 +6,7 @@
 function escapeC(input: string): string;
 ```
 
-Defined in: [escape-c.ts:46](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L46)
+Defined in: [src/escape-c.ts:46](https://github.com/technobuddha/library/blob/main/src/escape-c.ts#L46)
 
 Escape a string for use in C/C++
 
@@ -59,4 +57,3 @@ escapeC('"\\');          // "\\\"\\\\"
 escapeC('\x07');         // "\\a"
 escapeC('\u20ac');       // "\\u20ac"
 ```
-

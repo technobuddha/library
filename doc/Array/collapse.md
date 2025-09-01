@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / collapse
+[@technobuddha/library](../modules.md) / collapse
 
 # Function: collapse()
 
@@ -8,7 +6,7 @@
 function collapse<T>(...args: Collapsible<T>[]): T[];
 ```
 
-Defined in: [collapse.ts:82](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L82)
+Defined in: [src/collapse.ts:82](https://github.com/technobuddha/library/blob/main/src/collapse.ts#L82)
 
 Collapses an array of values into a flat array with `null` and `undefined` elements removed.
 
@@ -53,4 +51,3 @@ collapse(
 );
 // Returns: ["hello", "world", "foo", "bar", "baz", "qux"]
 ```
-

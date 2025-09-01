@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / minutesPerDay
+[@technobuddha/library](../modules.md) / minutesPerDay
 
 # Variable: minutesPerDay
 
@@ -8,7 +6,6 @@
 const minutesPerDay: number;
 ```
 
-Defined in: [constants.ts:99](https://github.com/technobuddha/library/blob/main/src/constants.ts#L99)
+Defined in: [src/constants.ts:99](https://github.com/technobuddha/library/blob/main/src/constants.ts#L99)
 
 Number of minutes in a day [1440]
-

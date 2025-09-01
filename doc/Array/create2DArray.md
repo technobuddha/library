@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / create2DArray
+[@technobuddha/library](../modules.md) / create2DArray
 
 # Function: create2DArray()
 
@@ -11,7 +9,7 @@ function create2DArray<T>(
    fill: T | (this: void, x: number, y: number) => T): T[][];
 ```
 
-Defined in: [create-2-d-array.ts:22](https://github.com/technobuddha/library/blob/main/src/create-2-d-array.ts#L22)
+Defined in: [src/create-2-d-array.ts:22](https://github.com/technobuddha/library/blob/main/src/create-2-d-array.ts#L22)
 
 Create a two dimensional array with all elements initialized
 
@@ -47,4 +45,3 @@ create2DArray(2, 3, 0);  // [[0, 0, 0], [0, 0, 0]]
 
 create2DArray(2, 3, (x, y) => x + y); // [[0, 1, 2], [1, 2, 3]]
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Programming](./index.md) / snakeCase
+[@technobuddha/library](../modules.md) / snakeCase
 
 # Function: snakeCase()
 
@@ -8,7 +6,7 @@
 function snakeCase(input: string): string;
 ```
 
-Defined in: [snake-case.ts:18](https://github.com/technobuddha/library/blob/main/src/snake-case.ts#L18)
+Defined in: [src/snake-case.ts:18](https://github.com/technobuddha/library/blob/main/src/snake-case.ts#L18)
 
 Convert an identifier string to snake case
 
@@ -32,4 +30,3 @@ snakeCase('HelloWorld'); // 'hello_world'
 snakeCase('foo_bar-baz'); // 'foo_bar_baz'
 snakeCase('FOO BAR'); // 'foo_bar'
 ```
-

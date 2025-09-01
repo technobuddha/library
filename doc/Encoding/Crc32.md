@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / Crc32
+[@technobuddha/library](../modules.md) / Crc32
 
 # Class: Crc32
 
-Defined in: [crc-32.ts:84](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L84)
+Defined in: [src/crc-32.ts:84](https://github.com/technobuddha/library/blob/main/src/crc-32.ts#L84)
 
 Compute the CRC32 checksum of a binary object
 
@@ -165,4 +163,3 @@ The hash instance for method chaining.
 ##### Overrides
 
 [`HashBase`](HashBase.md).[`update`](HashBase.md#update)
-

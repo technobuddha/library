@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / decodeText
+[@technobuddha/library](../modules.md) / decodeText
 
 # Function: decodeText()
 
@@ -11,7 +9,7 @@ function decodeText(input:
   | ArrayBuffer, _encoding: TextEncoding): string;
 ```
 
-Defined in: [decode-text.ts:15](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L15)
+Defined in: [src/decode-text.ts:15](https://github.com/technobuddha/library/blob/main/src/decode-text.ts#L15)
 
 Decode a UTF8 encoded string into unicode
 
@@ -27,4 +25,3 @@ Decode a UTF8 encoded string into unicode
 `string`
 
 the decoded strings (which is encoded as UTF-16 by javascript)
-

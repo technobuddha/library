@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / summarize
+[@technobuddha/library](../modules.md) / summarize
 
 # Function: summarize()
 
@@ -8,7 +6,7 @@
 function summarize(input: number): string;
 ```
 
-Defined in: [summarize.ts:19](https://github.com/technobuddha/library/blob/main/src/summarize.ts#L19)
+Defined in: [src/summarize.ts:19](https://github.com/technobuddha/library/blob/main/src/summarize.ts#L19)
 
 Get a short description of a number
 
@@ -36,4 +34,3 @@ summarize(101323847382459); // "101 trillion"
 summarize(1234); // "1.23 thousand"
 summarize(0.00056); // "560 millionths"
 ```
-

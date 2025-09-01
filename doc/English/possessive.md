@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / possessive
+[@technobuddha/library](../modules.md) / possessive
 
 # Function: possessive()
 
@@ -8,7 +6,7 @@
 function possessive(input: string): string;
 ```
 
-Defined in: [possessive.ts:18](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L18)
+Defined in: [src/possessive.ts:18](https://github.com/technobuddha/library/blob/main/src/possessive.ts#L18)
 
 Determine the possessive form of a word
 
@@ -32,4 +30,3 @@ possessive('Hobbes');  // "Hobbes'"
 possessive('BUGS');    // "BUGS'"
 possessive('ELMER');   // "ELMER'S"
 ```
-

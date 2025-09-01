@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / DiceCoefficientOptions
+[@technobuddha/library](../modules.md) / DiceCoefficientOptions
 
 # Type Alias: DiceCoefficientOptions
 
@@ -10,7 +8,7 @@ type DiceCoefficientOptions = {
 };
 ```
 
-Defined in: [dice-coefficient.ts:8](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L8)
+Defined in: [src/dice-coefficient.ts:8](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L8)
 
 Options for the [diceCoefficient](diceCoefficient.md) function
 
@@ -19,4 +17,3 @@ Options for the [diceCoefficient](diceCoefficient.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="caseinsensitive"></a> `caseInsensitive?` | `boolean` | compare the two strings in case insensitive mode | [src/dice-coefficient.ts:10](https://github.com/technobuddha/library/blob/main/src/dice-coefficient.ts#L10) |
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / decodeBase64Url
+[@technobuddha/library](../modules.md) / decodeBase64Url
 
 # Function: decodeBase64Url()
 
@@ -25,7 +23,7 @@ Whitespace within the Base64 encoded string is ignored.
 function decodeBase64Url(input: string): Uint8Array;
 ```
 
-Defined in: [decode-base-64-url.ts:16](https://github.com/technobuddha/library/blob/main/src/decode-base-64-url.ts#L16)
+Defined in: [src/decode-base-64-url.ts:16](https://github.com/technobuddha/library/blob/main/src/decode-base-64-url.ts#L16)
 
 Decode a [Base64Url](https://developer.mozilla.org/en-US/docs/Glossary/Base64) encoded string and
 output in binary format.
@@ -79,4 +77,3 @@ An `string` containing the decoded data.
 decodeBase64('SGVsbG8sIHdvcmxkIQ==', 'utf-8');
 // "Hello, world!"
 ```
-

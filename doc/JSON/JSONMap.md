@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / JSONMap
+[@technobuddha/library](../modules.md) / JSONMap
 
 # Class: JSONMap\<K, V\>
 
-Defined in: [json-map.ts:25](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L25)
+Defined in: [src/json-map.ts:25](https://github.com/technobuddha/library/blob/main/src/json-map.ts#L25)
 
 A [Map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Map) that allows serializable objects keys.
 
@@ -339,4 +337,3 @@ Returns an iterator over the values in the map.
 ```ts
 Map.values
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / conjoin
+[@technobuddha/library](../modules.md) / conjoin
 
 # Function: conjoin()
 
@@ -8,7 +6,7 @@
 function conjoin<T>(input: ArrayLike<T>, options: ConjoinOptions): string;
 ```
 
-Defined in: [conjoin.ts:46](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L46)
+Defined in: [src/conjoin.ts:46](https://github.com/technobuddha/library/blob/main/src/conjoin.ts#L46)
 
 Create a list from an array, separating values and inserting a conjunction
 
@@ -41,4 +39,3 @@ const amigos = ['Lucky Day', 'Dusty Bottoms', 'Ned Nederlander'];
 conjoin(amigos, { conjunction: 'or', oxford: false, separator: ';' });
 // 'Lucky Day; Dusty Bottoms or Ned Nederlander'
 ```
-

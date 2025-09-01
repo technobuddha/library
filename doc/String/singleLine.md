@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / singleLine
+[@technobuddha/library](../modules.md) / singleLine
 
 # Function: singleLine()
 
@@ -8,7 +6,7 @@
 function singleLine(template: TemplateStringsArray, ...args: unknown[]): string;
 ```
 
-Defined in: [single-line.ts:13](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L13)
+Defined in: [src/single-line.ts:13](https://github.com/technobuddha/library/blob/main/src/single-line.ts#L13)
 
 Joins a template literal into a single line string by removing line breaks and leading whitespace,
 then interleaving the provided arguments. The result is a trimmed, single-line string.
@@ -25,4 +23,3 @@ then interleaving the provided arguments. The result is a trimmed, single-line s
 `string`
 
 A single-line string with all line breaks and leading whitespace removed.
-

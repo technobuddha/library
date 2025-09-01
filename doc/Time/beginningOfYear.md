@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / beginningOfYear
+[@technobuddha/library](../modules.md) / beginningOfYear
 
 # Function: beginningOfYear()
 
@@ -8,7 +6,7 @@
 function beginningOfYear(input: Date, options: BeginningOfYearOptions): Date;
 ```
 
-Defined in: [beginning-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L22)
+Defined in: [src/beginning-of-year.ts:22](https://github.com/technobuddha/library/blob/main/src/beginning-of-year.ts#L22)
 
 Determine the start of the year for a date
 
@@ -30,4 +28,3 @@ The date value for midnight on the first day of the specified year
 ```ts
 utc false
 ```
-

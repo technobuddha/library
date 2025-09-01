@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / TimeIncrement
+[@technobuddha/library](../modules.md) / TimeIncrement
 
 # Type Alias: TimeIncrement
 
@@ -16,7 +14,7 @@ type TimeIncrement = {
 };
 ```
 
-Defined in: [add-time.ts:6](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L6)
+Defined in: [src/add-time.ts:6](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L6)
 
 Represents amount of time to use for [addTime](addTime.md)
 
@@ -31,4 +29,3 @@ Represents amount of time to use for [addTime](addTime.md)
 | <a id="months"></a> `months?` | `number` | Number of months to increment. | [src/add-time.ts:10](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L10) |
 | <a id="seconds"></a> `seconds?` | `number` | Number of seconds to increment. | [src/add-time.ts:18](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L18) |
 | <a id="years"></a> `years?` | `number` | Number of years to increment. | [src/add-time.ts:8](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L8) |
-

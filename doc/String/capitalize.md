@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / capitalize
+[@technobuddha/library](../modules.md) / capitalize
 
 # Function: capitalize()
 
@@ -8,7 +6,7 @@
 function capitalize(input: string): string;
 ```
 
-Defined in: [capitalize.ts:12](https://github.com/technobuddha/library/blob/main/src/capitalize.ts#L12)
+Defined in: [src/capitalize.ts:12](https://github.com/technobuddha/library/blob/main/src/capitalize.ts#L12)
 
 Capitalize the first word in a sentence, or capitalize a single word.
 
@@ -21,4 +19,3 @@ Capitalize the first word in a sentence, or capitalize a single word.
 ## Returns
 
 `string`
-

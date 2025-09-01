@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / CollapseWhitespaceOptions
+[@technobuddha/library](../modules.md) / CollapseWhitespaceOptions
 
 # Type Alias: CollapseWhitespaceOptions
 
@@ -10,7 +8,7 @@ type CollapseWhitespaceOptions = {
 };
 ```
 
-Defined in: [collapse-whitespace.ts:9](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L9)
+Defined in: [src/collapse-whitespace.ts:9](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L9)
 
 Options for the [collapseWhitespace](collapseWhitespace.md) function
 
@@ -19,4 +17,3 @@ Options for the [collapseWhitespace](collapseWhitespace.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="trim"></a> `trim?` | `boolean` | If true, trim | [src/collapse-whitespace.ts:11](https://github.com/technobuddha/library/blob/main/src/collapse-whitespace.ts#L11) |
-

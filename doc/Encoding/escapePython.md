@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / escapePython
+[@technobuddha/library](../modules.md) / escapePython
 
 # Function: escapePython()
 
@@ -8,7 +6,7 @@
 function escapePython(input: string): string;
 ```
 
-Defined in: [escape-python.ts:39](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L39)
+Defined in: [src/escape-python.ts:39](https://github.com/technobuddha/library/blob/main/src/escape-python.ts#L39)
 
 Escape a string for use in Python
 
@@ -52,4 +50,3 @@ escapePython('"\\');          // "\\\"\\\\"
 escapePython('\b');           // "\\b"
 escapePython('\u20ac');       // "\\u20ac"
 ```
-

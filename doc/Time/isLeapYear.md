@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isLeapYear
+[@technobuddha/library](../modules.md) / isLeapYear
 
 # Function: isLeapYear()
 
@@ -10,7 +8,7 @@ function isLeapYear(input:
   | Date, options: LeapYearOptions): boolean;
 ```
 
-Defined in: [is-leap-year.ts:19](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L19)
+Defined in: [src/is-leap-year.ts:19](https://github.com/technobuddha/library/blob/main/src/is-leap-year.ts#L19)
 
 Determine if a year is a leap year
 
@@ -26,4 +24,3 @@ Determine if a year is a leap year
 `boolean`
 
 true, if the specified year is a leap year
-

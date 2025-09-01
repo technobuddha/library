@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / endOfWeek
+[@technobuddha/library](../modules.md) / endOfWeek
 
 # Function: endOfWeek()
 
@@ -8,7 +6,7 @@
 function endOfWeek(input: Date, options: EndOfWeekOptions): Date;
 ```
 
-Defined in: [end-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L26)
+Defined in: [src/end-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/end-of-week.ts#L26)
 
 Determine the last day of the week containing a date
 
@@ -30,4 +28,3 @@ Midnight of the last day of the week containing the input date
 ```ts
 utc false
 ```
-

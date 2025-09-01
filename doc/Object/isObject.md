@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isObject
+[@technobuddha/library](../modules.md) / isObject
 
 # Function: isObject()
 
@@ -8,7 +6,7 @@
 function isObject(value: unknown): value is object;
 ```
 
-Defined in: [is-object.ts:16](https://github.com/technobuddha/library/blob/main/src/is-object.ts#L16)
+Defined in: [src/is-object.ts:16](https://github.com/technobuddha/library/blob/main/src/is-object.ts#L16)
 
 Determines whether the provided value is a non-null object.
 
@@ -33,4 +31,3 @@ isObject(null); // false
 isObject(42); // false
 isObject('hello'); // false
 ```
-

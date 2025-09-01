@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / standardDeviation
+[@technobuddha/library](../modules.md) / standardDeviation
 
 # Function: standardDeviation()
 
@@ -8,7 +6,7 @@
 function standardDeviation(...dataPoints: number[]): number;
 ```
 
-Defined in: [standard-deviation.ts:19](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L19)
+Defined in: [src/standard-deviation.ts:19](https://github.com/technobuddha/library/blob/main/src/standard-deviation.ts#L19)
 
 Returns the sample [Standard Deviation](https://en.wikipedia.org/wiki/Standard_deviation) of the arguments.
 
@@ -34,4 +32,3 @@ standardDeviation(1, 1, 1, 1); // 0
 standardDeviation(); // 0
 standardDeviation(1, 2, NaN); // NaN
 ```
-

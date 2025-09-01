@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / unescapePython
+[@technobuddha/library](../modules.md) / unescapePython
 
 # Function: unescapePython()
 
@@ -8,7 +6,7 @@
 function unescapePython(input: string): string;
 ```
 
-Defined in: [unescape-python.ts:38](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L38)
+Defined in: [src/unescape-python.ts:38](https://github.com/technobuddha/library/blob/main/src/unescape-python.ts#L38)
 
 Unescape a string encoded in Python style
 
@@ -54,4 +52,3 @@ unescapePython('\\u20ac'); // "€"
 unescapePython('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
 unescapePython('\\U0001f600'); // "😀"
 ```
-

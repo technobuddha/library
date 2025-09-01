@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / encodeBase64
+[@technobuddha/library](../modules.md) / encodeBase64
 
 # Function: encodeBase64()
 
@@ -17,7 +15,7 @@ encode control characters.
 function encodeBase64(chars: string, encoding: TextEncoding): string;
 ```
 
-Defined in: [encode-base-64.ts:19](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L19)
+Defined in: [src/encode-base-64.ts:19](https://github.com/technobuddha/library/blob/main/src/encode-base-64.ts#L19)
 
 Convert a string to binary using [encodeText](../Unicode/encodeText.md) with the supplied encoding, and then
 encode it to `Base64`.
@@ -68,4 +66,3 @@ An ASCII string containing the `Base64` representation
 ```typescript
 encodeBase64(new Uint8Array([1, 2, 3]); // "AQID"
 ```
-

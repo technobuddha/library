@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isCartesian
+[@technobuddha/library](../modules.md) / isCartesian
 
 # Function: isCartesian()
 
@@ -8,7 +6,7 @@
 function isCartesian(point: unknown): point is Cartesian;
 ```
 
-Defined in: [is-cartesian.ts:18](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L18)
+Defined in: [src/is-cartesian.ts:18](https://github.com/technobuddha/library/blob/main/src/is-cartesian.ts#L18)
 
 Determines if the provided value is a Cartesian point.
 
@@ -33,4 +31,3 @@ that contains numeric `x` and `y` properties.
 isCartesian({ x: 10, y: 20 }); // true
 isCartesian({ r: 10, φ: 20 }); // false
 ```
-

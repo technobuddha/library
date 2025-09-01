@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / constructNumber
+[@technobuddha/library](../modules.md) / constructNumber
 
 # Function: constructNumber()
 
@@ -8,7 +6,7 @@
 function constructNumber(deconstructed: Omit<DeconstructedNumber, "value">): number;
 ```
 
-Defined in: [construct-number.ts:16](https://github.com/technobuddha/library/blob/main/src/construct-number.ts#L16)
+Defined in: [src/construct-number.ts:16](https://github.com/technobuddha/library/blob/main/src/construct-number.ts#L16)
 
 Reconstructs a number from its deconstructed representation.
 
@@ -31,4 +29,3 @@ constructNumber({ sign: 1, mantissa: '123', exponent: 0 }); // 1.23
 constructNumber({ sign: -1, mantissa: '500', exponent: 2 }); // -5
 constructNumber({ sign: 1, mantissa: '', exponent: 0 }); // 0
 ```
-

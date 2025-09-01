@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / deconstructNumber
+[@technobuddha/library](../modules.md) / deconstructNumber
 
 # Function: deconstructNumber()
 
@@ -11,7 +9,7 @@ function deconstructNumber(input: number, precision: number): DeconstructedNumbe
 };
 ```
 
-Defined in: [deconstruct-number.ts:29](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L29)
+Defined in: [src/deconstruct-number.ts:29](https://github.com/technobuddha/library/blob/main/src/deconstruct-number.ts#L29)
 
 Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
 
@@ -44,4 +42,3 @@ const result = deconstructNumber(123.456);
 //   fraction: { ... }
 // }
 ```
-

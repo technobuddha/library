@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / julian
+[@technobuddha/library](../modules.md) / julian
 
 # Function: julian()
 
@@ -8,7 +6,7 @@
 function julian(input: Date): number;
 ```
 
-Defined in: [julian.ts:11](https://github.com/technobuddha/library/blob/main/src/julian.ts#L11)
+Defined in: [src/julian.ts:11](https://github.com/technobuddha/library/blob/main/src/julian.ts#L11)
 
 Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
 
@@ -27,4 +25,3 @@ The julian date.
 ## Remarks
 
 Julian dates are always in the UTC timezone
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / IndentOptions
+[@technobuddha/library](../modules.md) / IndentOptions
 
 # Type Alias: IndentOptions
 
@@ -10,7 +8,7 @@ type IndentOptions = {
 };
 ```
 
-Defined in: [indent.ts:8](https://github.com/technobuddha/library/blob/main/src/indent.ts#L8)
+Defined in: [src/indent.ts:8](https://github.com/technobuddha/library/blob/main/src/indent.ts#L8)
 
 Options for the indentation functions: [getIndent](getIndent.md), [indent](indent.md), and [unindent](unindent.md)
 
@@ -19,4 +17,3 @@ Options for the indentation functions: [getIndent](getIndent.md), [indent](inden
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="indenter"></a> `indenter?` | `string` | The indentation character | [src/indent.ts:10](https://github.com/technobuddha/library/blob/main/src/indent.ts#L10) |
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / modulo
+[@technobuddha/library](../modules.md) / modulo
 
 # Function: modulo()
 
@@ -8,7 +6,7 @@
 function modulo(dividend: number, divisor: number): number;
 ```
 
-Defined in: [modulo.ts:24](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L24)
+Defined in: [src/modulo.ts:24](https://github.com/technobuddha/library/blob/main/src/modulo.ts#L24)
 
 The % operator in JavaScript returns the remainder of a / b, but differs from
 some other languages in that the result will have the same sign as the
@@ -40,4 +38,3 @@ modulo(-10, 3); // 2
 modulo(10, -3); // -2
 modulo(-10, -3); // -1
 ```
-

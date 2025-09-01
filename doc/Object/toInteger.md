@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / toInteger
+[@technobuddha/library](../modules.md) / toInteger
 
 # Function: toInteger()
 
@@ -8,7 +6,7 @@
 function toInteger(entity: unknown): number;
 ```
 
-Defined in: [to-integer.ts:21](https://github.com/technobuddha/library/blob/main/src/to-integer.ts#L21)
+Defined in: [src/to-integer.ts:21](https://github.com/technobuddha/library/blob/main/src/to-integer.ts#L21)
 
 Convert an entity to a integer number.
 
@@ -34,4 +32,3 @@ toInteger('123'); // 123
 toInteger('abc'); // NaN
 toInteger(null); // NaN
 ```
-

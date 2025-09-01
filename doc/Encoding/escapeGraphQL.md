@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / escapeGraphQL
+[@technobuddha/library](../modules.md) / escapeGraphQL
 
 # Function: escapeGraphQL()
 
@@ -8,7 +6,7 @@
 function escapeGraphQL(input: string): string;
 ```
 
-Defined in: [escape-graph-ql.ts:31](https://github.com/technobuddha/library/blob/main/src/escape-graph-ql.ts#L31)
+Defined in: [src/escape-graph-ql.ts:31](https://github.com/technobuddha/library/blob/main/src/escape-graph-ql.ts#L31)
 
 Escape a string for use in GraphQL
 
@@ -44,4 +42,3 @@ escapeGraphQL('"\\');          // "\\\"\\\\"
 escapeGraphQL('\b');           // "\\b"
 escapeGraphQL('\u20ac');       // "\\u20ac"
 ```
-

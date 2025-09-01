@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / ApproximatelyEqualsOptions
+[@technobuddha/library](../modules.md) / ApproximatelyEqualsOptions
 
 # Type Alias: ApproximatelyEqualsOptions
 
@@ -10,7 +8,7 @@ type ApproximatelyEqualsOptions = {
 };
 ```
 
-Defined in: [approximately-equals.ts:6](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L6)
+Defined in: [src/approximately-equals.ts:6](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L6)
 
 Options for the [approximatelyEquals](approximatelyEquals.md) function
 
@@ -19,4 +17,3 @@ Options for the [approximatelyEquals](approximatelyEquals.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="tolerance"></a> `tolerance?` | `number` | Tolerance range. If specified, should be greater than 0. | [src/approximately-equals.ts:8](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L8) |
-

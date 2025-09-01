@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / unquote
+[@technobuddha/library](../modules.md) / unquote
 
 # Function: unquote()
 
@@ -8,7 +6,7 @@
 function unquote(input: string, options: QuoteOptions): string;
 ```
 
-Defined in: [unquote.ts:15](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L15)
+Defined in: [src/unquote.ts:15](https://github.com/technobuddha/library/blob/main/src/unquote.ts#L15)
 
 Remove surrounding quotes from text
 
@@ -36,4 +34,3 @@ quote double-quote (")
 ```ts
 escape unescapeJS
 ```
-

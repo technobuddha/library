@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / mask
+[@technobuddha/library](../modules.md) / mask
 
 # Function: mask()
 
@@ -11,7 +9,7 @@ function mask(
    options: MaskOptions): string;
 ```
 
-Defined in: [mask.ts:28](https://github.com/technobuddha/library/blob/main/src/mask.ts#L28)
+Defined in: [src/mask.ts:28](https://github.com/technobuddha/library/blob/main/src/mask.ts#L28)
 
 Use a simple mask to display a string
 
@@ -39,4 +37,3 @@ are output as-is, to output a '#' use '\#'
 ```ts
 missing space
 ```
-

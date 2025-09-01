@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / lineLength
+[@technobuddha/library](../modules.md) / lineLength
 
 # Function: lineLength()
 
@@ -8,7 +6,7 @@
 function lineLength(line: LineSegment): number;
 ```
 
-Defined in: [line-length.ts:14](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L14)
+Defined in: [src/line-length.ts:14](https://github.com/technobuddha/library/blob/main/src/line-length.ts#L14)
 
 Calculates the length of a line segment.
 
@@ -29,4 +27,3 @@ The length of the line segment.
 ```typescript
 lineLength({ x0: 0, y0: 0, x1: 3, y1: 4 }); // 5
 ```
-

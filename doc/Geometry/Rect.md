@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / Rect
+[@technobuddha/library](../modules.md) / Rect
 
 # Type Alias: Rect
 
@@ -11,7 +9,7 @@ type Rect = Cartesian & {
 };
 ```
 
-Defined in: [@types/geometry.ts:60](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L60)
+Defined in: [src/@types/geometry.ts:60](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L60)
 
 A rectangle (defined by its top-left corner, width and height)
 
@@ -21,4 +19,3 @@ A rectangle (defined by its top-left corner, width and height)
 | ------ | ------ | ------ | ------ |
 | `height` | `number` | The height of the rectangle. | [src/@types/geometry.ts:64](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L64) |
 | `width` | `number` | The width of the rectangle. | [src/@types/geometry.ts:62](https://github.com/technobuddha/library/blob/main/src/@types/geometry.ts#L62) |
-

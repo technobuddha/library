@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Random](./index.md) / randomWeightedPick
+[@technobuddha/library](../modules.md) / randomWeightedPick
 
 # Function: randomWeightedPick()
 
@@ -8,7 +6,7 @@
 function randomWeightedPick<T>(list: readonly T[], random: () => number): undefined | T;
 ```
 
-Defined in: [random-weighted-pick.ts:39](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L39)
+Defined in: [src/random-weighted-pick.ts:39](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L39)
 
 Selects a random item from a list, where each item has an associated weight that determines its likelihood of being picked.
 
@@ -46,4 +44,3 @@ randomWeightedPick(items, () => 0.2); // { value: 'b', weight: 3 }
 randomWeightedPick(items, () => 0.8); // { value: 'c', weight: 6 }
 randomWeightedPick([], () => 0.5); // undefined
 ```
-

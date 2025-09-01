@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / decodeBinary
+[@technobuddha/library](../modules.md) / decodeBinary
 
 # Function: decodeBinary()
 
@@ -8,7 +6,7 @@
 function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Array;
 ```
 
-Defined in: [decode-binary.ts:28](https://github.com/technobuddha/library/blob/main/src/decode-binary.ts#L28)
+Defined in: [src/decode-binary.ts:28](https://github.com/technobuddha/library/blob/main/src/decode-binary.ts#L28)
 
 Decode a string into a binary object
 
@@ -40,4 +38,3 @@ decodeBinary('SGVsbG8', 'base64url');    // Uint8Array([72, 101, 108, 108, 111])
 decodeBinary('48656c6c6f', 'hex');       // Uint8Array([72, 101, 108, 108, 111])
 decodeBinary('Hello', 'binary');         // Uint8Array([72, 101, 108, 108, 111])
 ```
-

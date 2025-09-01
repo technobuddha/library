@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / isSurrogate
+[@technobuddha/library](../modules.md) / isSurrogate
 
 # Function: isSurrogate()
 
@@ -8,7 +6,7 @@
 function isSurrogate(input: string, options: IsSurrogateOptions): boolean;
 ```
 
-Defined in: [is-surrogate.ts:23](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L23)
+Defined in: [src/is-surrogate.ts:23](https://github.com/technobuddha/library/blob/main/src/is-surrogate.ts#L23)
 
 Determine is a character is a surrogate
 
@@ -36,4 +34,3 @@ high true
 ```ts
 low true
 ```
-

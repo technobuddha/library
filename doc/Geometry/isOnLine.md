@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isOnLine
+[@technobuddha/library](../modules.md) / isOnLine
 
 # Function: isOnLine()
 
@@ -11,7 +9,7 @@ function isOnLine(
    options: OnLineOptions): boolean;
 ```
 
-Defined in: [is-on-line.ts:37](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L37)
+Defined in: [src/is-on-line.ts:37](https://github.com/technobuddha/library/blob/main/src/is-on-line.ts#L37)
 
 Determines whether a given point lies on a specified line segment or its extension.
 
@@ -34,4 +32,3 @@ Determines whether a given point lies on a specified line segment or its extensi
 ```typescript
 isOnLine({ x: 2, y: 2 }, { x0: 0, y0: 0, x1: 4, y1: 4 }); // true
 ```
-

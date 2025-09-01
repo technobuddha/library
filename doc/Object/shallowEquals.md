@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / shallowEquals
+[@technobuddha/library](../modules.md) / shallowEquals
 
 # Function: shallowEquals()
 
@@ -17,7 +15,7 @@ function shallowEquals(
    exclude: string[]): boolean;
 ```
 
-Defined in: [shallow-equals.ts:38](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L38)
+Defined in: [src/shallow-equals.ts:38](https://github.com/technobuddha/library/blob/main/src/shallow-equals.ts#L38)
 
 Compare two object for equality.  Testing goes one level deep.
 
@@ -45,4 +43,3 @@ shallowEquals(a, \{ x: 1 \}); // false
 shallowEquals(a, \{ x: 1, y: 3 \}); // false
 shallowEquals(a, b, ['y']); // true
 ```
-

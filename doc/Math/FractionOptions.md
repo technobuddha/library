@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / FractionOptions
+[@technobuddha/library](../modules.md) / FractionOptions
 
 # Type Alias: FractionOptions
 
@@ -20,7 +18,7 @@ type FractionOptions = {
 };
 ```
 
-Defined in: [fraction.ts:9](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L9)
+Defined in: [src/fraction.ts:9](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L9)
 
 Options for customizing the output and behavior of fraction number representations.
 
@@ -36,4 +34,3 @@ Options for customizing the output and behavior of fraction number representatio
 | <a id="precision"></a> `precision?` | [`Numbering`](Numbering.md)\[`"precision"`\] | `9` | Precision for decimal/fraction conversion. | [src/fraction.ts:44](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L44) |
 | <a id="shift"></a> `shift?` | [`Numbering`](Numbering.md)\[`"shift"`\] | `undefined` | Whether to shift the fractional part of the number. | [src/fraction.ts:56](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L56) |
 | <a id="tolerance"></a> `tolerance?` | [`Numbering`](Numbering.md)\[`"tolerance"`\] | `0.01` | Tolerance for floating-point comparison when converting decimals to fractions. | [src/fraction.ts:32](https://github.com/technobuddha/library/blob/main/src/fraction.ts#L32) |
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isValidDate
+[@technobuddha/library](../modules.md) / isValidDate
 
 # Function: isValidDate()
 
@@ -8,7 +6,7 @@
 function isValidDate(input: Date): boolean;
 ```
 
-Defined in: [is-valid-date.ts:9](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L9)
+Defined in: [src/is-valid-date.ts:9](https://github.com/technobuddha/library/blob/main/src/is-valid-date.ts#L9)
 
 Determine if a date is valid
 
@@ -23,4 +21,3 @@ Determine if a date is valid
 `boolean`
 
 true, if the date is valid
-

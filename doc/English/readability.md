@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / readability
+[@technobuddha/library](../modules.md) / readability
 
 # Function: readability()
 
@@ -8,7 +6,7 @@
 function readability(text: string): number;
 ```
 
-Defined in: [readability.ts:28](https://github.com/technobuddha/library/blob/main/src/readability.ts#L28)
+Defined in: [src/readability.ts:28](https://github.com/technobuddha/library/blob/main/src/readability.ts#L28)
 
 Calculates the Flesch-Kincaid readability score for a given text.
 
@@ -42,4 +40,3 @@ The Flesch-Kincaid readability score as a number.
 ## See
 
 https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
-

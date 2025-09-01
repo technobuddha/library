@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toCartesian
+[@technobuddha/library](../modules.md) / toCartesian
 
 # Function: toCartesian()
 
@@ -8,7 +6,7 @@
 function toCartesian(point: Polar, options: UnitOptions): Cartesian;
 ```
 
-Defined in: [to-cartesian.ts:18](https://github.com/technobuddha/library/blob/main/src/to-cartesian.ts#L18)
+Defined in: [src/to-cartesian.ts:18](https://github.com/technobuddha/library/blob/main/src/to-cartesian.ts#L18)
 
 Convert polar coordinates to cartesian
 
@@ -31,4 +29,3 @@ Object containing the X and Y-distance for the angle and radius.
 toCartesian({ r: 1, φ: Math.PI / 4 }); // { x: √2/2, y: √2/2 }
 toCartesian({ r: 1, φ: 90 }, 'degrees'); // { x: 0, y: 1 }
 ```
-

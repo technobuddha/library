@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / supNegative
+[@technobuddha/library](../modules.md) / supNegative
 
 # Variable: supNegative
 
@@ -8,7 +6,6 @@
 const supNegative: "⁻" = '⁻';
 ```
 
-Defined in: [unicode.ts:76](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L76)
+Defined in: [src/unicode.ts:76](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L76)
 
 Superscript Negative
-

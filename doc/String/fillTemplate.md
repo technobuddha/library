@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / fillTemplate
+[@technobuddha/library](../modules.md) / fillTemplate
 
 # Function: fillTemplate()
 
@@ -11,7 +9,7 @@ function fillTemplate(
    options: FillTemplateOptions): string;
 ```
 
-Defined in: [fill-template.ts:25](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L25)
+Defined in: [src/fill-template.ts:25](https://github.com/technobuddha/library/blob/main/src/fill-template.ts#L25)
 
 Fill a template with supplied values
 
@@ -40,4 +38,3 @@ open '{{'
 ```ts
 close '}}'
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / beginningOfWeek
+[@technobuddha/library](../modules.md) / beginningOfWeek
 
 # Function: beginningOfWeek()
 
@@ -8,7 +6,7 @@
 function beginningOfWeek(input: Date, options: BeginningOfWeekOptions): Date;
 ```
 
-Defined in: [beginning-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L26)
+Defined in: [src/beginning-of-week.ts:26](https://github.com/technobuddha/library/blob/main/src/beginning-of-week.ts#L26)
 
 Determine the start of the week for a date
 
@@ -30,4 +28,3 @@ The date value for midnight on the first day of the specified week
 ```ts
 utc false
 ```
-

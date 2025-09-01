@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isArrayLike
+[@technobuddha/library](../modules.md) / isArrayLike
 
 # Function: isArrayLike()
 
@@ -8,7 +6,7 @@
 function isArrayLike(value: unknown): value is ArrayLike<unknown>;
 ```
 
-Defined in: [is-array-like.ts:45](https://github.com/technobuddha/library/blob/main/src/is-array-like.ts#L45)
+Defined in: [src/is-array-like.ts:45](https://github.com/technobuddha/library/blob/main/src/is-array-like.ts#L45)
 
 Determines whether the provided value is array-like.
 
@@ -37,4 +35,3 @@ isArrayLike({}); // false
 isArrayLike(() => {}); // false
 isArrayLike(null); // false
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / ticksPerWeek
+[@technobuddha/library](../modules.md) / ticksPerWeek
 
 # Variable: ticksPerWeek
 
@@ -8,7 +6,6 @@
 const ticksPerWeek: number;
 ```
 
-Defined in: [constants.ts:71](https://github.com/technobuddha/library/blob/main/src/constants.ts#L71)
+Defined in: [src/constants.ts:71](https://github.com/technobuddha/library/blob/main/src/constants.ts#L71)
 
 Number of ticks in a week [604800000]
-

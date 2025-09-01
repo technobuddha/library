@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toPolar
+[@technobuddha/library](../modules.md) / toPolar
 
 # Function: toPolar()
 
@@ -8,7 +6,7 @@
 function toPolar(coordinate: Cartesian, options: UnitOptions): Polar;
 ```
 
-Defined in: [to-polar.ts:14](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L14)
+Defined in: [src/to-polar.ts:14](https://github.com/technobuddha/library/blob/main/src/to-polar.ts#L14)
 
 Convert cartesian coordinates to polar
 
@@ -24,4 +22,3 @@ Convert cartesian coordinates to polar
 [`Polar`](Polar.md)
 
 polar coordinated
-

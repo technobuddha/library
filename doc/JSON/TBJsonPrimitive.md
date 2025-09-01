@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / TBJsonPrimitive
+[@technobuddha/library](../modules.md) / TBJsonPrimitive
 
 # Type Alias: TBJsonPrimitive
 
@@ -12,7 +10,6 @@ type TBJsonPrimitive =
   | bigint;
 ```
 
-Defined in: [json.ts:30](https://github.com/technobuddha/library/blob/main/src/json.ts#L30)
+Defined in: [src/json.ts:30](https://github.com/technobuddha/library/blob/main/src/json.ts#L30)
 
 Matches any valid JSON primitive value.
-

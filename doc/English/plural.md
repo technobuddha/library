@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / plural
+[@technobuddha/library](../modules.md) / plural
 
 # Function: plural()
 
@@ -11,7 +9,7 @@ function plural(
    include?: boolean): string;
 ```
 
-Defined in: [plural.ts:21](https://github.com/technobuddha/library/blob/main/src/plural.ts#L21)
+Defined in: [src/plural.ts:21](https://github.com/technobuddha/library/blob/main/src/plural.ts#L21)
 
 Return the plural version of the input string
 
@@ -38,4 +36,3 @@ plural('mouse', 2); // mice
 plural('dog', 1, true); // 1 dog
 plural('dog', 2, true); // 2 dogs
 ```
-

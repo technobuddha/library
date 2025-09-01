@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / beginningOfMonth
+[@technobuddha/library](../modules.md) / beginningOfMonth
 
 # Function: beginningOfMonth()
 
@@ -8,7 +6,7 @@
 function beginningOfMonth(input: Date, options: BeginningOfMonthOptions): Date;
 ```
 
-Defined in: [beginning-of-month.ts:20](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L20)
+Defined in: [src/beginning-of-month.ts:20](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L20)
 
 Determine the start of the month for a dateDetermine the start of the month for a date
 
@@ -30,4 +28,3 @@ The date value for midnight on the first day of the specified month
 ```ts
 utc false
 ```
-

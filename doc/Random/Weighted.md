@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Random](./index.md) / Weighted
+[@technobuddha/library](../modules.md) / Weighted
 
 # Type Alias: Weighted
 
@@ -10,7 +8,7 @@ type Weighted = {
 };
 ```
 
-Defined in: [random-weighted-pick.ts:9](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L9)
+Defined in: [src/random-weighted-pick.ts:9](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L9)
 
 Represents an object with an associated weight value.
 
@@ -22,4 +20,3 @@ based on their relative weights, such as in weighted random selection.
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="weight"></a> `weight` | `number` | The numeric weight assigned to the object. | [src/random-weighted-pick.ts:13](https://github.com/technobuddha/library/blob/main/src/random-weighted-pick.ts#L13) |
-

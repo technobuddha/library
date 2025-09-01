@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / sum
+[@technobuddha/library](../modules.md) / sum
 
 # Function: sum()
 
@@ -8,7 +6,7 @@
 function sum(numbers: number[]): number;
 ```
 
-Defined in: [sum.ts:15](https://github.com/technobuddha/library/blob/main/src/sum.ts#L15)
+Defined in: [src/sum.ts:15](https://github.com/technobuddha/library/blob/main/src/sum.ts#L15)
 
 Calculates the sum of an array of numbers.
 
@@ -32,4 +30,3 @@ sum([-1, 1, -1, 1]); // 0
 sum([]); // 0
 sum([2.5, 3.5]); // 6
 ```
-

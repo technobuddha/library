@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toPolygon
+[@technobuddha/library](../modules.md) / toPolygon
 
 # Function: toPolygon()
 
@@ -12,7 +10,7 @@ Converts two [Cartesian](Cartesian.md) points or a [Rect](Rect.md) into a [Polyg
 function toPolygon(pointA: Cartesian, pointB: Cartesian): Polygon;
 ```
 
-Defined in: [to-polygon.ts:23](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L23)
+Defined in: [src/to-polygon.ts:23](https://github.com/technobuddha/library/blob/main/src/to-polygon.ts#L23)
 
 Converts two [Cartesian](Cartesian.md) points into a [Polygon](Polygon.md).
 
@@ -78,4 +76,3 @@ toPolygon({ x: 1, y: 2, width: 3, height: 4 });
 //   { x: 1, y: 6 }
 // ]
 ```
-

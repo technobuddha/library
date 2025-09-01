@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / toASCII
+[@technobuddha/library](../modules.md) / toASCII
 
 # Function: toASCII()
 
@@ -8,7 +6,7 @@
 function toASCII(input: string): string;
 ```
 
-Defined in: [to-ascii.ts:11](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L11)
+Defined in: [src/to-ascii.ts:11](https://github.com/technobuddha/library/blob/main/src/to-ascii.ts#L11)
 
 Change a string to be all from the basic latin unicode plane
 
@@ -21,4 +19,3 @@ Change a string to be all from the basic latin unicode plane
 ## Returns
 
 `string`
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / unescapeJS
+[@technobuddha/library](../modules.md) / unescapeJS
 
 # Function: unescapeJS()
 
@@ -8,7 +6,7 @@
 function unescapeJS(input: string): string;
 ```
 
-Defined in: [unescape-js.ts:32](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L32)
+Defined in: [src/unescape-js.ts:32](https://github.com/technobuddha/library/blob/main/src/unescape-js.ts#L32)
 
 Unescape a string encoded in Javascript style
 
@@ -48,4 +46,3 @@ unescapeJS('\\u20ac'); // "€"
 unescapeJS('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
 unescapeJS('\\u{1F600}'); // "😀"
 ```
-

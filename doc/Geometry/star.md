@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / star
+[@technobuddha/library](../modules.md) / star
 
 # Function: star()
 
@@ -12,7 +10,7 @@ function star(
    options: OriginOptions): Polygon;
 ```
 
-Defined in: [star.ts:29](https://github.com/technobuddha/library/blob/main/src/star.ts#L29)
+Defined in: [src/star.ts:29](https://github.com/technobuddha/library/blob/main/src/star.ts#L29)
 
 Generates a star-shaped polygon.
 
@@ -50,4 +48,3 @@ star(4, 2, 1);
 //   { x: √2/2, y: -√2/2 }
 // ]
 ```
-

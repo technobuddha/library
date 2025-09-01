@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isMidnight
+[@technobuddha/library](../modules.md) / isMidnight
 
 # Function: isMidnight()
 
@@ -8,7 +6,7 @@
 function isMidnight(input: Date, options: MidnightOptions): boolean;
 ```
 
-Defined in: [is-midnight.ts:19](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L19)
+Defined in: [src/is-midnight.ts:19](https://github.com/technobuddha/library/blob/main/src/is-midnight.ts#L19)
 
 Determine if a date is at midnight
 
@@ -24,4 +22,3 @@ Determine if a date is at midnight
 `boolean`
 
 true, if the date is at midnight
-

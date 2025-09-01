@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / toNumber
+[@technobuddha/library](../modules.md) / toNumber
 
 # Function: toNumber()
 
@@ -8,7 +6,7 @@
 function toNumber(entity: unknown): number;
 ```
 
-Defined in: [to-number.ts:21](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L21)
+Defined in: [src/to-number.ts:21](https://github.com/technobuddha/library/blob/main/src/to-number.ts#L21)
 
 Convert an entity to a number.
 
@@ -34,4 +32,3 @@ toNumber('123.45'); // 123.45
 toNumber('abc'); // NaN
 toNumber(null); // NaN
 ```
-

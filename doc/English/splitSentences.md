@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / splitSentences
+[@technobuddha/library](../modules.md) / splitSentences
 
 # Function: splitSentences()
 
@@ -8,7 +6,7 @@
 function splitSentences(input: string): string[];
 ```
 
-Defined in: [split-sentences.ts:45](https://github.com/technobuddha/library/blob/main/src/split-sentences.ts#L45)
+Defined in: [src/split-sentences.ts:45](https://github.com/technobuddha/library/blob/main/src/split-sentences.ts#L45)
 
 Splits the input string into an array of sentences.
 
@@ -56,4 +54,3 @@ An array of non-empty, trimmed sentences.
 ```ts
 splitSentences("Hello! How are you? I'm 'OK.'"); // ["Hello!", "How are you?", "I'm 'OK.'"]
 ```
-

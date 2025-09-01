@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / toBoolean
+[@technobuddha/library](../modules.md) / toBoolean
 
 # Function: toBoolean()
 
@@ -8,7 +6,7 @@
 function toBoolean(input: string, options: BooleanOptions): undefined | boolean;
 ```
 
-Defined in: [to-boolean.ts:36](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L36)
+Defined in: [src/to-boolean.ts:36](https://github.com/technobuddha/library/blob/main/src/to-boolean.ts#L36)
 
 Convert a string to a boolean value
 
@@ -34,4 +32,3 @@ trueValues 'true', 'yes', 'y', 'on', or '1'
 ```ts
 falseValues 'false', 'no', 'n', 'off', '0'
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / relativeTime
+[@technobuddha/library](../modules.md) / relativeTime
 
 # Function: relativeTime()
 
@@ -11,7 +9,7 @@ function relativeTime(
    options: RelativeTimeOptions): string;
 ```
 
-Defined in: [relative-time.ts:34](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L34)
+Defined in: [src/relative-time.ts:34](https://github.com/technobuddha/library/blob/main/src/relative-time.ts#L34)
 
 Describe the difference between two dates in a simple format
 
@@ -28,4 +26,3 @@ Describe the difference between two dates in a simple format
 `string`
 
 string describing the time difference between the two dates
-

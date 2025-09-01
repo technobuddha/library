@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / crossProduct
+[@technobuddha/library](../modules.md) / crossProduct
 
 # Function: crossProduct()
 
@@ -11,7 +9,7 @@ function crossProduct(
    o: Cartesian): number;
 ```
 
-Defined in: [cross-product.ts:21](https://github.com/technobuddha/library/blob/main/src/cross-product.ts#L21)
+Defined in: [src/cross-product.ts:21](https://github.com/technobuddha/library/blob/main/src/cross-product.ts#L21)
 
 Calculates the cross product of vectors OA and OB, where O, A, and B are points in 2D Cartesian space.
 The result is positive if the sequence OAB makes a counter-clockwise turn,
@@ -42,4 +40,3 @@ crossProduct({ x: 1, y: 0 }, { x: 0, y: 1 }, { x: 0, y: 0 }); // 1
 crossProduct({ x: 0, y: 1 }, { x: 1, y: 0 }, { x: 0, y: 0 }); // -1
 crossProduct({ x: 1, y: 1 }, { x: 2, y: 2 }, { x: 0, y: 0 }); // 0
 ```
-

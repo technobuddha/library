@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [RegExp](./index.md) / ipV4Local
+[@technobuddha/library](../modules.md) / ipV4Local
 
 # Variable: ipV4Local
 
@@ -8,7 +6,7 @@
 const ipV4Local: RegExp;
 ```
 
-Defined in: [regexp.ts:58](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L58)
+Defined in: [src/regexp.ts:58](https://github.com/technobuddha/library/blob/main/src/regexp.ts#L58)
 
 determine if Ipv4 address is local
 
@@ -21,4 +19,3 @@ ipV4Local.test('172.16.0.1'); // true
 ipV4Local.test('8.8.8.8'); // false
 ipV4Local.test('256.0.0.1'); // false
 ```
-

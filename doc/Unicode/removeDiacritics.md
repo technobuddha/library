@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / removeDiacritics
+[@technobuddha/library](../modules.md) / removeDiacritics
 
 # Function: removeDiacritics()
 
@@ -8,7 +6,7 @@
 function removeDiacritics(input: string): string;
 ```
 
-Defined in: [remove-diacritics.ts:16](https://github.com/technobuddha/library/blob/main/src/remove-diacritics.ts#L16)
+Defined in: [src/remove-diacritics.ts:16](https://github.com/technobuddha/library/blob/main/src/remove-diacritics.ts#L16)
 
 Remove all diacritics from a string
 
@@ -23,4 +21,3 @@ Remove all diacritics from a string
 `string`
 
 string with diacritics removed
-

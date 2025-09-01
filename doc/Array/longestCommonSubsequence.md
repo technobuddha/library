@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Array](./index.md) / longestCommonSubsequence
+[@technobuddha/library](../modules.md) / longestCommonSubsequence
 
 # Function: longestCommonSubsequence()
 
@@ -11,7 +9,7 @@ function longestCommonSubsequence<T>(
    options: LongestCommonSubsequenceOptions<T>): T[];
 ```
 
-Defined in: [longest-common-subsequence.ts:46](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L46)
+Defined in: [src/longest-common-subsequence.ts:46](https://github.com/technobuddha/library/blob/main/src/longest-common-subsequence.ts#L46)
 
 Determine the longest possible array that is subsequence of both of given arrays.
 
@@ -49,4 +47,3 @@ longestCommonSubsequence(
  ['a', 'c', ' ', 'd', 'e', 'c'],
 ); // ['a', 'c', ' ', 'd', 'e']
 ```
-

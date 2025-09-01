@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / splitLines
+[@technobuddha/library](../modules.md) / splitLines
 
 # Function: splitLines()
 
@@ -8,7 +6,7 @@
 function splitLines(input: string): string[];
 ```
 
-Defined in: [split-lines.ts:10](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L10)
+Defined in: [src/split-lines.ts:10](https://github.com/technobuddha/library/blob/main/src/split-lines.ts#L10)
 
 Split a string into an array of lines
 
@@ -23,4 +21,3 @@ Split a string into an array of lines
 `string`[]
 
 array of lines
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isSameYear
+[@technobuddha/library](../modules.md) / isSameYear
 
 # Function: isSameYear()
 
@@ -11,7 +9,7 @@ function isSameYear(
    options: SameYearOptions): boolean;
 ```
 
-Defined in: [is-same-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L21)
+Defined in: [src/is-same-year.ts:21](https://github.com/technobuddha/library/blob/main/src/is-same-year.ts#L21)
 
 Determine if two dates occur in the same year
 
@@ -34,4 +32,3 @@ true, if the two dates occur in the same year
 ```ts
 utc false
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / sortKeys
+[@technobuddha/library](../modules.md) / sortKeys
 
 # Function: sortKeys()
 
@@ -8,7 +6,7 @@
 function sortKeys<T>(object: T): T;
 ```
 
-Defined in: [sort-keys.ts:24](https://github.com/technobuddha/library/blob/main/src/sort-keys.ts#L24)
+Defined in: [src/sort-keys.ts:24](https://github.com/technobuddha/library/blob/main/src/sort-keys.ts#L24)
 
 Recursively sorts the keys of an object in lexicographical order.
 
@@ -41,4 +39,3 @@ sortKeys(\{ z: 1, y: \{ b: 2, a: 1 \} \}); // returns \{ y: \{ a: 1, b: 2 \}, z:
 sortKeys([\{ b: 2, a: 1 \}, \{ d: 4, c: 3 \}]); // returns [\{ a: 1, b: 2 \}, \{ c: 3, d: 4 \}]
 sortKeys(42); // returns 42
 ```
-

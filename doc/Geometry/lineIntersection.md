@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / lineIntersection
+[@technobuddha/library](../modules.md) / lineIntersection
 
 # Function: lineIntersection()
 
@@ -11,7 +9,7 @@ function lineIntersection(
    extend: boolean): undefined | null | Cartesian;
 ```
 
-Defined in: [line-intersection.ts:21](https://github.com/technobuddha/library/blob/main/src/line-intersection.ts#L21)
+Defined in: [src/line-intersection.ts:21](https://github.com/technobuddha/library/blob/main/src/line-intersection.ts#L21)
 
 Calculates the intersection point of two line segments.
 
@@ -39,4 +37,3 @@ lineIntersection(
   { x0: 0, y0: 4, x1: 4, y1: 0 }
 ); // { x: 2, y: 2 }
 ```
-

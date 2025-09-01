@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Object](./index.md) / isRegExp
+[@technobuddha/library](../modules.md) / isRegExp
 
 # Function: isRegExp()
 
@@ -8,7 +6,7 @@
 function isRegExp(value: unknown): value is RegExp;
 ```
 
-Defined in: [is-reg-exp.ts:18](https://github.com/technobuddha/library/blob/main/src/is-reg-exp.ts#L18)
+Defined in: [src/is-reg-exp.ts:18](https://github.com/technobuddha/library/blob/main/src/is-reg-exp.ts#L18)
 
 Determines whether the provided value is a `RegExp` object.
 
@@ -33,4 +31,3 @@ isRegExp('abc'); // false
 isRegExp({}); // false
 isRegExp(null); // false
 ```
-

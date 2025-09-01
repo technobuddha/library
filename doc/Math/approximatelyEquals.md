@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / approximatelyEquals
+[@technobuddha/library](../modules.md) / approximatelyEquals
 
 # Function: approximatelyEquals()
 
@@ -11,7 +9,7 @@ function approximatelyEquals(
    options: ApproximatelyEqualsOptions): boolean;
 ```
 
-Defined in: [approximately-equals.ts:30](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L30)
+Defined in: [src/approximately-equals.ts:30](https://github.com/technobuddha/library/blob/main/src/approximately-equals.ts#L30)
 
 Tests whether the two values are equal to each other, within a certain
 tolerance, taking into account floating point errors (numbers within EPSILON).
@@ -45,4 +43,3 @@ approximatelyEquals(100, 100.1); // false
 approximatelyEquals(5, 7, { tolerance: 2 }); // true
 approximatelyEquals(5, 8, { tolerance: 2 }); // false
 ```
-

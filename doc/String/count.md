@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / count
+[@technobuddha/library](../modules.md) / count
 
 # Function: count()
 
@@ -11,7 +9,7 @@ function count(
    options: CountOptions): number;
 ```
 
-Defined in: [count.ts:20](https://github.com/technobuddha/library/blob/main/src/count.ts#L20)
+Defined in: [src/count.ts:20](https://github.com/technobuddha/library/blob/main/src/count.ts#L20)
 
 Compute the number of times a substring occurs within a string
 
@@ -28,4 +26,3 @@ Compute the number of times a substring occurs within a string
 `number`
 
 number of times *substring* occurs within *input*
-

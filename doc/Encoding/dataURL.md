@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / dataURL
+[@technobuddha/library](../modules.md) / dataURL
 
 # Function: dataURL()
 
@@ -8,7 +6,7 @@
 function dataURL(input: BinaryObject, mimeType: string): string;
 ```
 
-Defined in: [data-url.ts:18](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L18)
+Defined in: [src/data-url.ts:18](https://github.com/technobuddha/library/blob/main/src/data-url.ts#L18)
 
 Convert any binary object into a data URL
 
@@ -32,4 +30,3 @@ const bytes = new Uint8Array([72, 101, 108, 108, 111]); // "Hello"
 dataURL(bytes, 'text/plain');
 // url === "data:text/plain;base64,SGVsbG8="
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / romanize
+[@technobuddha/library](../modules.md) / romanize
 
 # Function: romanize()
 
@@ -8,7 +6,7 @@
 function romanize(input: number, options: RomanOptions): string;
 ```
 
-Defined in: [romanize.ts:32](https://github.com/technobuddha/library/blob/main/src/romanize.ts#L32)
+Defined in: [src/romanize.ts:32](https://github.com/technobuddha/library/blob/main/src/romanize.ts#L32)
 
 Convert a number into a roman numeral string
 
@@ -34,4 +32,3 @@ toRoman(9); // "IX"
 toRoman(2024); // "MMXXIV"
 toRoman(49, { format: 'apostrophus' }); // "IL"
 ```
-

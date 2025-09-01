@@ -1,10 +1,8 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / TimeSpan
+[@technobuddha/library](../modules.md) / TimeSpan
 
 # Class: TimeSpan
 
-Defined in: [time-span.ts:19](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L19)
+Defined in: [src/time-span.ts:19](https://github.com/technobuddha/library/blob/main/src/time-span.ts#L19)
 
 Store and manipulate a duration of time
 
@@ -433,4 +431,3 @@ Compare two TimeSpans
 `number`
 
 -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
-

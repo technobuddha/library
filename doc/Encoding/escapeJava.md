@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / escapeJava
+[@technobuddha/library](../modules.md) / escapeJava
 
 # Function: escapeJava()
 
@@ -8,7 +6,7 @@
 function escapeJava(input: string): string;
 ```
 
-Defined in: [escape-java.ts:37](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L37)
+Defined in: [src/escape-java.ts:37](https://github.com/technobuddha/library/blob/main/src/escape-java.ts#L37)
 
 Escape a string for use in Java
 
@@ -50,4 +48,3 @@ escapeJava('"\\');          // "\\\"\\\\"
 escapeJava('\b');           // "\\b"
 escapeJava('\u20ac');       // "\\u20ac"
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / compareStrings
+[@technobuddha/library](../modules.md) / compareStrings
 
 # Function: compareStrings()
 
@@ -11,7 +9,7 @@ function compareStrings(
    caseInsensitive: CompareStringsOptions): number;
 ```
 
-Defined in: [compare-strings.ts:29](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L29)
+Defined in: [src/compare-strings.ts:29](https://github.com/technobuddha/library/blob/main/src/compare-strings.ts#L29)
 
 Compare two strings
 
@@ -46,4 +44,3 @@ natural false
 ```ts
 version false
 ```
-

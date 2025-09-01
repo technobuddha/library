@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / unindent
+[@technobuddha/library](../modules.md) / unindent
 
 # Function: unindent()
 
@@ -8,7 +6,7 @@
 function unindent(input: string, pattern: IndentOptions): string;
 ```
 
-Defined in: [unindent.ts:12](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L12)
+Defined in: [src/unindent.ts:12](https://github.com/technobuddha/library/blob/main/src/unindent.ts#L12)
 
 Remove indentation from text
 
@@ -22,4 +20,3 @@ Remove indentation from text
 ## Returns
 
 `string`
-

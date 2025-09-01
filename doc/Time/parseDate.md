@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / parseDate
+[@technobuddha/library](../modules.md) / parseDate
 
 # Function: parseDate()
 
@@ -8,7 +6,7 @@
 function parseDate(input: string): Date;
 ```
 
-Defined in: [parse-date.ts:68](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L68)
+Defined in: [src/parse-date.ts:68](https://github.com/technobuddha/library/blob/main/src/parse-date.ts#L68)
 
 Parse a string into a Date object
 
@@ -28,4 +26,3 @@ new Date object
 
 this is a little more generous about what formats it will take for a date, and if it can't match the input to one of it's supported formats it falls
 back to new Date(text)
-

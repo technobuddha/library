@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / extractDigits
+[@technobuddha/library](../modules.md) / extractDigits
 
 # Function: extractDigits()
 
@@ -8,7 +6,7 @@
 function extractDigits(input: string): string;
 ```
 
-Defined in: [extract-digits.ts:10](https://github.com/technobuddha/library/blob/main/src/extract-digits.ts#L10)
+Defined in: [src/extract-digits.ts:10](https://github.com/technobuddha/library/blob/main/src/extract-digits.ts#L10)
 
 Remove all non-digit characters from a string
 
@@ -23,4 +21,3 @@ Remove all non-digit characters from a string
 `string`
 
 digits from the string
-

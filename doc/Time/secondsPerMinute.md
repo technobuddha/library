@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / secondsPerMinute
+[@technobuddha/library](../modules.md) / secondsPerMinute
 
 # Variable: secondsPerMinute
 
@@ -8,7 +6,6 @@
 const secondsPerMinute: 60 = 60;
 ```
 
-Defined in: [constants.ts:22](https://github.com/technobuddha/library/blob/main/src/constants.ts#L22)
+Defined in: [src/constants.ts:22](https://github.com/technobuddha/library/blob/main/src/constants.ts#L22)
 
 Number of seconds in a minute [60]
-

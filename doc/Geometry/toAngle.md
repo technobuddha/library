@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toAngle
+[@technobuddha/library](../modules.md) / toAngle
 
 # Function: toAngle()
 
@@ -11,7 +9,7 @@ function toAngle(
    to: AngleUnit): number;
 ```
 
-Defined in: [to-angle.ts:18](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L18)
+Defined in: [src/to-angle.ts:18](https://github.com/technobuddha/library/blob/main/src/to-angle.ts#L18)
 
 Converts an angle from one unit to another.
 
@@ -36,4 +34,3 @@ toAngle(180, 'degrees'); // π
 toAngle(Math.PI, 'radians', 'degrees'); // 180
 toAngle(1, 'turns', 'radians'); // 2π
 ```
-

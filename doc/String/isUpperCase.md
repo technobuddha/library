@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / isUpperCase
+[@technobuddha/library](../modules.md) / isUpperCase
 
 # Function: isUpperCase()
 
@@ -8,7 +6,7 @@
 function isUpperCase(input: string): boolean;
 ```
 
-Defined in: [is-upper-case.ts:10](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L10)
+Defined in: [src/is-upper-case.ts:10](https://github.com/technobuddha/library/blob/main/src/is-upper-case.ts#L10)
 
 Test a string for all upper case characters
 
@@ -23,4 +21,3 @@ Test a string for all upper case characters
 `boolean`
 
 true, if all characters in the string are upper case
-

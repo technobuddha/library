@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [JSON](./index.md) / reviver
+[@technobuddha/library](../modules.md) / reviver
 
 # Function: reviver()
 
@@ -11,7 +9,7 @@ function reviver(
    value: unknown): unknown;
 ```
 
-Defined in: [reviver.ts:12](https://github.com/technobuddha/library/blob/main/src/reviver.ts#L12)
+Defined in: [src/reviver.ts:12](https://github.com/technobuddha/library/blob/main/src/reviver.ts#L12)
 
 Used with JSON.parse to decode objected encoded by [replacer](replacer.md)
 
@@ -28,4 +26,3 @@ Used with JSON.parse to decode objected encoded by [replacer](replacer.md)
 `unknown`
 
 the decoded value
-

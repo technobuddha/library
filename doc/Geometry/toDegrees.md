@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / toDegrees
+[@technobuddha/library](../modules.md) / toDegrees
 
 # Function: toDegrees()
 
@@ -8,7 +6,7 @@
 function toDegrees(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [to-degrees.ts:16](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L16)
+Defined in: [src/to-degrees.ts:16](https://github.com/technobuddha/library/blob/main/src/to-degrees.ts#L16)
 
 Convert an angle from radians to degrees
 
@@ -31,4 +29,3 @@ angle in degrees
 toDegrees(Math.PI); // 180
 toDegrees(1, 'turns'); // 360
 ```
-

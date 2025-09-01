@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / build
+[@technobuddha/library](../modules.md) / build
 
 # Function: build()
 
@@ -8,7 +6,7 @@
 function build(...args: Collapsible<string>[]): string;
 ```
 
-Defined in: [build.ts:11](https://github.com/technobuddha/library/blob/main/src/build.ts#L11)
+Defined in: [src/build.ts:11](https://github.com/technobuddha/library/blob/main/src/build.ts#L11)
 
 Concatenates strings and/or arrays of strings
 
@@ -23,4 +21,3 @@ Concatenates strings and/or arrays of strings
 `string`
 
 The concatenation of *args*.
-

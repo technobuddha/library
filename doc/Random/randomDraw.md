@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Random](./index.md) / randomDraw
+[@technobuddha/library](../modules.md) / randomDraw
 
 # Function: randomDraw()
 
@@ -13,7 +11,7 @@ function randomDraw<T>(list: readonly T[], random: () => number):
 };
 ```
 
-Defined in: [random-draw.ts:15](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L15)
+Defined in: [src/random-draw.ts:15](https://github.com/technobuddha/library/blob/main/src/random-draw.ts#L15)
 
 Draw a random item from a list.  Returning both the item and the list without the drawn item.
 
@@ -55,4 +53,3 @@ const items = ['a', 'b', 'c'];
 randomDraw(items, () => 0.5); // deterministic for example
 // { draw: 'b', list: ['a', 'c'] }
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / day
+[@technobuddha/library](../modules.md) / day
 
 # Variable: day
 
@@ -8,7 +6,6 @@
 const day: Readonly<Record<string, DayOfWeek>>;
 ```
 
-Defined in: [constants.ts:127](https://github.com/technobuddha/library/blob/main/src/constants.ts#L127)
+Defined in: [src/constants.ts:127](https://github.com/technobuddha/library/blob/main/src/constants.ts#L127)
 
 Translation object for name of day to day number.
-

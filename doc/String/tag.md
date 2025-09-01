@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / tag
+[@technobuddha/library](../modules.md) / tag
 
 # Function: tag()
 
@@ -11,7 +9,7 @@ function tag(
    attributes: Record<string, string>): string;
 ```
 
-Defined in: [tag.ts:14](https://github.com/technobuddha/library/blob/main/src/tag.ts#L14)
+Defined in: [src/tag.ts:14](https://github.com/technobuddha/library/blob/main/src/tag.ts#L14)
 
 Surround text with an HTML tag
 
@@ -28,4 +26,3 @@ Surround text with an HTML tag
 `string`
 
 HTML tag with text
-

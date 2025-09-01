@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / addTime
+[@technobuddha/library](../modules.md) / addTime
 
 # Function: addTime()
 
@@ -8,7 +6,7 @@
 function addTime(input: Date, increment: TimeIncrement): Date;
 ```
 
-Defined in: [add-time.ts:32](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L32)
+Defined in: [src/add-time.ts:32](https://github.com/technobuddha/library/blob/main/src/add-time.ts#L32)
 
 Add units of time to a Date
 
@@ -28,4 +26,3 @@ Adjusted date.
 ## Remarks
 
 Negative values will subtract from the starting date
-

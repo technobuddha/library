@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / deromanize
+[@technobuddha/library](../modules.md) / deromanize
 
 # Function: deromanize()
 
@@ -8,7 +6,7 @@
 function deromanize(val: string): number;
 ```
 
-Defined in: [deromanize.ts:12](https://github.com/technobuddha/library/blob/main/src/deromanize.ts#L12)
+Defined in: [src/deromanize.ts:12](https://github.com/technobuddha/library/blob/main/src/deromanize.ts#L12)
 
 Parse a roman numeral string into its integer value.
 
@@ -23,4 +21,3 @@ Parse a roman numeral string into its integer value.
 `number`
 
 Parsed roman number
-

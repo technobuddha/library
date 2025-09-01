@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / orderOfMagnitude
+[@technobuddha/library](../modules.md) / orderOfMagnitude
 
 # Function: orderOfMagnitude()
 
@@ -8,7 +6,7 @@
 function orderOfMagnitude(exponent: number): null | string;
 ```
 
-Defined in: [order-of-magnitude.ts:20](https://github.com/technobuddha/library/blob/main/src/order-of-magnitude.ts#L20)
+Defined in: [src/order-of-magnitude.ts:20](https://github.com/technobuddha/library/blob/main/src/order-of-magnitude.ts#L20)
 
 Get the spelled out word for an exponent
 
@@ -38,4 +36,3 @@ orderOfMagnitude(9); // "billion"
 orderOfMagnitude(0); // ""
 orderOfMagnitude(-3); // null
 ```
-

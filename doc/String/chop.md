@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / chop
+[@technobuddha/library](../modules.md) / chop
 
 # Function: chop()
 
@@ -11,7 +9,7 @@ function chop(
    __namedParameters: ChopOptions): string[];
 ```
 
-Defined in: [chop.ts:21](https://github.com/technobuddha/library/blob/main/src/chop.ts#L21)
+Defined in: [src/chop.ts:21](https://github.com/technobuddha/library/blob/main/src/chop.ts#L21)
 
 Break a string into equal sized segments of characters
 
@@ -28,4 +26,3 @@ Break a string into equal sized segments of characters
 `string`[]
 
 Array of segments
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / numberToLetter
+[@technobuddha/library](../modules.md) / numberToLetter
 
 # Function: numberToLetter()
 
@@ -8,7 +6,7 @@
 function numberToLetter(num: number, options: NumberToLetterOptions): string;
 ```
 
-Defined in: [number-to-letter.ts:25](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L25)
+Defined in: [src/number-to-letter.ts:25](https://github.com/technobuddha/library/blob/main/src/number-to-letter.ts#L25)
 
 Convert a number to a letter, using the alphabet (default: A-Z)
 
@@ -24,4 +22,3 @@ Convert a number to a letter, using the alphabet (default: A-Z)
 `string`
 
 The letter
-

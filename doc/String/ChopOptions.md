@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / ChopOptions
+[@technobuddha/library](../modules.md) / ChopOptions
 
 # Type Alias: ChopOptions
 
@@ -10,7 +8,7 @@ type ChopOptions = {
 };
 ```
 
-Defined in: [chop.ts:8](https://github.com/technobuddha/library/blob/main/src/chop.ts#L8)
+Defined in: [src/chop.ts:8](https://github.com/technobuddha/library/blob/main/src/chop.ts#L8)
 
 Options for the [chop](chop.md) function
 
@@ -19,4 +17,3 @@ Options for the [chop](chop.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="truncate"></a> `truncate?` | `boolean` | If true, the last block will be omitted if has insufficient characters * | [src/chop.ts:10](https://github.com/technobuddha/library/blob/main/src/chop.ts#L10) |
-

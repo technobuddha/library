@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / formatNumber
+[@technobuddha/library](../modules.md) / formatNumber
 
 # Function: formatNumber()
 
@@ -8,7 +6,7 @@
 function formatNumber(input: number, mask: string): string;
 ```
 
-Defined in: [format-number.ts:549](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L549)
+Defined in: [src/format-number.ts:549](https://github.com/technobuddha/library/blob/main/src/format-number.ts#L549)
 
 Formats a number according to the specified mask.
 
@@ -51,4 +49,3 @@ formatNumber(-42, "D5");     // "-00042"
 formatNumber(0.123, "P1");   // "12.3 %"
 formatNumber(12345.678, "#,##0.00"); // "12,345.68"
 ```
-

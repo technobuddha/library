@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / normalizeBinary
+[@technobuddha/library](../modules.md) / normalizeBinary
 
 # Function: normalizeBinary()
 
@@ -8,7 +6,7 @@
 function normalizeBinary(input: BinaryObject): Uint8Array;
 ```
 
-Defined in: [normalize-binary.ts:18](https://github.com/technobuddha/library/blob/main/src/normalize-binary.ts#L18)
+Defined in: [src/normalize-binary.ts:18](https://github.com/technobuddha/library/blob/main/src/normalize-binary.ts#L18)
 
 Normalizes [BinaryObject](BinaryObject.md) to a `Uint8Array`.
 
@@ -36,4 +34,3 @@ normalizeBinary(new ArrayBuffer(3));        // Uint8Array([0, 0, 0])
 normalizeBinary(new DataView(new Uint8Array([4, 5, 6]))); // Uint8Array([4, 5, 6])
 normalizeBinary(new Float32Array([1, 2]));  // Uint8Array([...])
 ```
-

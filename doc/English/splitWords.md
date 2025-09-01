@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [English](./index.md) / splitWords
+[@technobuddha/library](../modules.md) / splitWords
 
 # Function: splitWords()
 
@@ -8,7 +6,7 @@
 function splitWords(input: string, options: SplitWordsOptions): string[];
 ```
 
-Defined in: [split-words.ts:23](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L23)
+Defined in: [src/split-words.ts:23](https://github.com/technobuddha/library/blob/main/src/split-words.ts#L23)
 
 Split a string into an array of words
 
@@ -30,4 +28,3 @@ array of words
 ```ts
 delimiter whitespace
 ```
-

@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / isSameWeek
+[@technobuddha/library](../modules.md) / isSameWeek
 
 # Function: isSameWeek()
 
@@ -11,7 +9,7 @@ function isSameWeek(
    options: SameWeekOptions): boolean;
 ```
 
-Defined in: [is-same-week.ts:26](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L26)
+Defined in: [src/is-same-week.ts:26](https://github.com/technobuddha/library/blob/main/src/is-same-week.ts#L26)
 
 Determine if two dates occur in the same week
 
@@ -34,4 +32,3 @@ true, if the two dates occur in the same week
 ```ts
 utc false
 ```
-

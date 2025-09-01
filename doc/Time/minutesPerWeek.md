@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / minutesPerWeek
+[@technobuddha/library](../modules.md) / minutesPerWeek
 
 # Variable: minutesPerWeek
 
@@ -8,7 +6,6 @@
 const minutesPerWeek: number;
 ```
 
-Defined in: [constants.ts:106](https://github.com/technobuddha/library/blob/main/src/constants.ts#L106)
+Defined in: [src/constants.ts:106](https://github.com/technobuddha/library/blob/main/src/constants.ts#L106)
 
 Number of minutes in a week [10080]
-

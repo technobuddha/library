@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / unescapeC
+[@technobuddha/library](../modules.md) / unescapeC
 
 # Function: unescapeC()
 
@@ -8,7 +6,7 @@
 function unescapeC(input: string): string;
 ```
 
-Defined in: [unescape-c.ts:42](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L42)
+Defined in: [src/unescape-c.ts:42](https://github.com/technobuddha/library/blob/main/src/unescape-c.ts#L42)
 
 Unescape a string encoded in C style
 
@@ -58,4 +56,3 @@ unescapeC('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
 unescapeC('\\u20ac'); // "€"
 unescapeC('\\U0001f600'); // "😀"
 ```
-

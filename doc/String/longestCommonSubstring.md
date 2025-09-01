@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / longestCommonSubstring
+[@technobuddha/library](../modules.md) / longestCommonSubstring
 
 # Function: longestCommonSubstring()
 
@@ -11,7 +9,7 @@ function longestCommonSubstring(
    __namedParameters: LongestCommonSubstringOptions): string;
 ```
 
-Defined in: [longest-common-substring.ts:24](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L24)
+Defined in: [src/longest-common-substring.ts:24](https://github.com/technobuddha/library/blob/main/src/longest-common-substring.ts#L24)
 
 Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm.
 
@@ -31,4 +29,3 @@ Returns the longest possible substring that is substring of both of given string
 
 A string that is common to both strings such that there is no
 common substring with size greater than the length of the string.
-

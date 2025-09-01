@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isOnPolygon
+[@technobuddha/library](../modules.md) / isOnPolygon
 
 # Function: isOnPolygon()
 
@@ -11,7 +9,7 @@ function isOnPolygon(
    tolerance: number): boolean;
 ```
 
-Defined in: [is-on-polygon.ts:18](https://github.com/technobuddha/library/blob/main/src/is-on-polygon.ts#L18)
+Defined in: [src/is-on-polygon.ts:18](https://github.com/technobuddha/library/blob/main/src/is-on-polygon.ts#L18)
 
 Determines whether a given point lies exactly on the boundary of a polygon.
 
@@ -28,4 +26,3 @@ Determines whether a given point lies exactly on the boundary of a polygon.
 `boolean`
 
 `true` if the point lies on any edge of the polygon within the given tolerance, otherwise `false`.
-

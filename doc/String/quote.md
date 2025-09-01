@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / quote
+[@technobuddha/library](../modules.md) / quote
 
 # Function: quote()
 
@@ -8,7 +6,7 @@
 function quote(input: string, options: QuoteOptions): string;
 ```
 
-Defined in: [quote.ts:27](https://github.com/technobuddha/library/blob/main/src/quote.ts#L27)
+Defined in: [src/quote.ts:27](https://github.com/technobuddha/library/blob/main/src/quote.ts#L27)
 
 Surround text with quotes
 
@@ -34,4 +32,3 @@ quote double-quote (")
 ## Default Value
 
 escape [escapeJS](../Encoding/escapeJS.md)
-

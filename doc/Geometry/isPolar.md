@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / isPolar
+[@technobuddha/library](../modules.md) / isPolar
 
 # Function: isPolar()
 
@@ -8,7 +6,7 @@
 function isPolar(point: unknown): point is Polar;
 ```
 
-Defined in: [is-polar.ts:18](https://github.com/technobuddha/library/blob/main/src/is-polar.ts#L18)
+Defined in: [src/is-polar.ts:18](https://github.com/technobuddha/library/blob/main/src/is-polar.ts#L18)
 
 Determines if the provided value is a Polar point.
 
@@ -33,4 +31,3 @@ that contains numeric `φ` and `r` properties.
 isPolar({ r: 10, φ: 20 }); // true
 isPolar({ x: 10, y: 20 }); // false
 ```
-

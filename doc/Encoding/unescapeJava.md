@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / unescapeJava
+[@technobuddha/library](../modules.md) / unescapeJava
 
 # Function: unescapeJava()
 
@@ -8,7 +6,7 @@
 function unescapeJava(input: string): string;
 ```
 
-Defined in: [unescape-java.ts:30](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L30)
+Defined in: [src/unescape-java.ts:30](https://github.com/technobuddha/library/blob/main/src/unescape-java.ts#L30)
 
 Unescape a string encoded in Java style
 
@@ -44,4 +42,3 @@ unescapeJava('\\u20ac'); // "€"
 unescapeJava('\\tTabbed'); // "\tTabbed"
 unescapeJava('\\\\'); // "\\"
 ```
-

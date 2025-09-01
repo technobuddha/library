@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Geometry](./index.md) / normalizeAngle
+[@technobuddha/library](../modules.md) / normalizeAngle
 
 # Function: normalizeAngle()
 
@@ -8,7 +6,7 @@
 function normalizeAngle(angle: number, options: UnitOptions): number;
 ```
 
-Defined in: [normalize-angle.ts:23](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L23)
+Defined in: [src/normalize-angle.ts:23](https://github.com/technobuddha/library/blob/main/src/normalize-angle.ts#L23)
 
 Normalizes an angle to be in range 0-1 turns.
 
@@ -36,4 +34,3 @@ normalizeAngle(2 * Math.PI); // 0
 normalizeAngle(180, 'degrees'); // π
 normalizeAngle(540, 'degrees'); // π
 ```
-

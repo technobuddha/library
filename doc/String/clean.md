@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / clean
+[@technobuddha/library](../modules.md) / clean
 
 # Function: clean()
 
@@ -13,7 +11,7 @@ function clean(input: string, characters:
   | RegExp)[]): string;
 ```
 
-Defined in: [clean.ts:14](https://github.com/technobuddha/library/blob/main/src/clean.ts#L14)
+Defined in: [src/clean.ts:14](https://github.com/technobuddha/library/blob/main/src/clean.ts#L14)
 
 Remove all occurrences of characters from the beginning and end of the string
 
@@ -27,4 +25,3 @@ Remove all occurrences of characters from the beginning and end of the string
 ## Returns
 
 `string`
-

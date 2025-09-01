@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Encoding](./index.md) / escapeJS
+[@technobuddha/library](../modules.md) / escapeJS
 
 # Function: escapeJS()
 
@@ -8,7 +6,7 @@
 function escapeJS(input: string): string;
 ```
 
-Defined in: [escape-js.ts:38](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L38)
+Defined in: [src/escape-js.ts:38](https://github.com/technobuddha/library/blob/main/src/escape-js.ts#L38)
 
 Escape a string for use in Javascript
 
@@ -51,4 +49,3 @@ escapeJS('"\\');          // "\\\"\\\\"
 escapeJS('\b');           // "\\b"
 escapeJS('\u20ac');       // "\\u20ac"
 ```
-

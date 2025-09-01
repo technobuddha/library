@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Unicode](./index.md) / zwsp
+[@technobuddha/library](../modules.md) / zwsp
 
 # Variable: zwsp
 
@@ -8,7 +6,6 @@
 const zwsp: "​" = '\u200B';
 ```
 
-Defined in: [unicode.ts:27](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L27)
+Defined in: [src/unicode.ts:27](https://github.com/technobuddha/library/blob/main/src/unicode.ts#L27)
 
 Zero-width space
-

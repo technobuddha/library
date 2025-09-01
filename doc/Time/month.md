@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / month
+[@technobuddha/library](../modules.md) / month
 
 # Variable: month
 
@@ -8,7 +6,6 @@
 const month: Readonly<Record<string, MonthOfYear>>;
 ```
 
-Defined in: [constants.ts:166](https://github.com/technobuddha/library/blob/main/src/constants.ts#L166)
+Defined in: [src/constants.ts:166](https://github.com/technobuddha/library/blob/main/src/constants.ts#L166)
 
 Translation object for name of month to month number
-

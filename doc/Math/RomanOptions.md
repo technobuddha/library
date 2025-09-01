@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / RomanOptions
+[@technobuddha/library](../modules.md) / RomanOptions
 
 # Type Alias: RomanOptions
 
@@ -10,7 +8,7 @@ type RomanOptions = {
 };
 ```
 
-Defined in: [romanize.ts:10](https://github.com/technobuddha/library/blob/main/src/romanize.ts#L10)
+Defined in: [src/romanize.ts:10](https://github.com/technobuddha/library/blob/main/src/romanize.ts#L10)
 
 Options for converting numbers to Roman numerals.
 
@@ -19,4 +17,3 @@ Options for converting numbers to Roman numerals.
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="format"></a> `format?` | `"standard"` \| `"apostrophus"` \| `"vinculum"` | Specifies the output format for the Roman numeral. | [src/romanize.ts:12](https://github.com/technobuddha/library/blob/main/src/romanize.ts#L12) |
-

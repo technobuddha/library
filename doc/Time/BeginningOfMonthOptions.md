@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Time](./index.md) / BeginningOfMonthOptions
+[@technobuddha/library](../modules.md) / BeginningOfMonthOptions
 
 # Type Alias: BeginningOfMonthOptions
 
@@ -10,7 +8,7 @@ type BeginningOfMonthOptions = {
 };
 ```
 
-Defined in: [beginning-of-month.ts:6](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L6)
+Defined in: [src/beginning-of-month.ts:6](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L6)
 
 Options for the [beginningOfMonth](beginningOfMonth.md) function
 
@@ -19,4 +17,3 @@ Options for the [beginningOfMonth](beginningOfMonth.md) function
 | Property | Type | Description | Defined in |
 | ------ | ------ | ------ | ------ |
 | <a id="utc"></a> `utc?` | `boolean` | Use the utc timezone | [src/beginning-of-month.ts:8](https://github.com/technobuddha/library/blob/main/src/beginning-of-month.ts#L8) |
-

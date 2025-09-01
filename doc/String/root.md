@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [String](./index.md) / root
+[@technobuddha/library](../modules.md) / root
 
 # Function: root()
 
@@ -8,7 +6,7 @@
 function root(text: string, options: RootOptions): string;
 ```
 
-Defined in: [root.ts:21](https://github.com/technobuddha/library/blob/main/src/root.ts#L21)
+Defined in: [src/root.ts:21](https://github.com/technobuddha/library/blob/main/src/root.ts#L21)
 
 Extract the root word, removing a prefix and/or suffix
 
@@ -29,4 +27,3 @@ The root word
 
  - prefix before it, and
  - suffix after it.
-

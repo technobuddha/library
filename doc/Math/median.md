@@ -1,6 +1,4 @@
-<!-- markdownlint-disable -->
-<!-- cspell: disable -->
-[Library](../index.md) / [Math](./index.md) / median
+[@technobuddha/library](../modules.md) / median
 
 # Function: median()
 
@@ -8,7 +6,7 @@
 function median(numbers: number[]): number;
 ```
 
-Defined in: [median.ts:21](https://github.com/technobuddha/library/blob/main/src/median.ts#L21)
+Defined in: [src/median.ts:21](https://github.com/technobuddha/library/blob/main/src/median.ts#L21)
 
 Calculates the median value of an array of numbers.
 
@@ -35,4 +33,3 @@ median([1, 2, 3, 4]); // 2.5
 median([7, 1, 3, 5]); // 4
 median([]); // NaN
 ```
-
