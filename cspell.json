@@ -42,7 +42,7 @@
     {
       "name": "more-fonts",
       "path": "./.cspell/fonts.dic",
-      "description": "Additional font package names",
+      "description": "Additional font names",
       "addWords": true
     },
     {
@@ -55,6 +55,12 @@
       "name": "more-english",
       "path": "./.cspell/english.dic",
       "description": "Additional English words",
+      "addWords": true
+    },
+    {
+      "name": "more-names",
+      "path": "./.cspell/names.dic",
+      "description": "Additional Proper Names",
       "addWords": true
     },
     {
@@ -90,6 +96,7 @@
     "more-color",
     "more-db",
     "more-english",
+    "more-names",
     "more-fonts",
     "more-math",
     "more-numbers",

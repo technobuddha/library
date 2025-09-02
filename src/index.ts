@@ -27,6 +27,7 @@ export { cardinal, type CardinalOptions } from './cardinal.ts';
 export * from './ceil.ts';
 export * from './centroid.ts';
 export * from './ch.ts';
+export * from './changed.ts';
 export * from './chop.ts';
 export * from './clamp.ts';
 export * from './clean.ts';
