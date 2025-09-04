@@ -12,8 +12,8 @@ import { encodeBase64 } from './encode-base-64.ts';
  * dataURL(bytes, 'text/plain');
  * // url === "data:text/plain;base64,SGVsbG8="
  * ```
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Encoding
  */
 export function dataURL(input: BinaryObject, mimeType: string): string {
   const buffer = input instanceof ArrayBuffer ? input : input.buffer;

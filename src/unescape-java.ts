@@ -24,7 +24,7 @@ import { empty } from './unicode.ts';
  * unescapeJava('\\tTabbed'); // "\tTabbed"
  * unescapeJava('\\\\'); // "\\"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function unescapeJava(input: string): string {

@@ -1,23 +1,12 @@
 import { type DayOfWeek } from './constants.ts';
 import { day, daysPerWeek } from './constants.ts';
+import { type DateOptions } from './date.ts';
 import { modulo } from './modulo.ts';
-
-/**
- * Options for the {@link dayOfWeek} function
- * @group Time
- * @category Week
- */
-export type DayOfWeekOptions = {
-  /** Use the utc timezone */
-  utc?: boolean;
-  /** Which day of the week is considered the beginning */
-  startOfWeek?: DayOfWeek;
-};
 
 /**
  * Determine the day of the week for a specific date
  * @param input - The date
- * @param options - see {@link DayOfWeekOptions}
+ * @param options - see {@link DateOptions}
  * @defaultValue utc false
  * @returns The date value for midnight on the first day of the specified year
  * @group Time
@@ -25,11 +14,11 @@ export type DayOfWeekOptions = {
  */
 export function dayOfWeek(
   input: Date,
-  { utc = false, startOfWeek = day.sunday }: DayOfWeekOptions = {},
+  { utc = false, firstDayOfWeek = day.sunday }: DateOptions = {},
 ): DayOfWeek {
   if (utc) {
-    return modulo(input.getUTCDay() + daysPerWeek - startOfWeek, daysPerWeek) as DayOfWeek;
+    return modulo(input.getUTCDay() + daysPerWeek - firstDayOfWeek, daysPerWeek) as DayOfWeek;
   }
 
-  return modulo(input.getDay() + daysPerWeek - startOfWeek, daysPerWeek) as DayOfWeek;
+  return modulo(input.getDay() + daysPerWeek - firstDayOfWeek, daysPerWeek) as DayOfWeek;
 }

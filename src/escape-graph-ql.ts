@@ -25,7 +25,7 @@ import { empty } from './unicode.ts';
  * escapeGraphQL('\b');           // "\\b"
  * escapeGraphQL('\u20ac');       // "\\u20ac"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function escapeGraphQL(input: string): string {

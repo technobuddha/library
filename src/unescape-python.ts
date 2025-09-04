@@ -32,7 +32,7 @@
  * unescapePython('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
  * unescapePython('\\U0001f600'); // "😀"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function unescapePython(input: string): string {

@@ -64,7 +64,7 @@ const K = [0x5a827999, 0x6ed9eba1, 0x8f1bbcdc, 0xca62c1d6];
  * sha1.digest('hex');
  * // '2aae6c35c94fcfb415dbe95f408b9ce91ee846ed'
  * ```
- * @group Encoding
+ * @group Binary
  * @category Hash
  */
 export class Sha1 extends ShaBase {

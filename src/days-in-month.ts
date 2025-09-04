@@ -1,26 +1,17 @@
 import { month } from './constants.ts';
+import { type DateOptions } from './date.ts';
 import { isLeapYear } from './is-leap-year.ts';
-
-/**
- * Options for the {@link daysInMonth} function
- * @group Time
- * @category Month
- */
-export type DaysInMonthOptions = {
-  /** Use the utc timezone */
-  utc?: boolean;
-};
 
 /**
  * Determine the number of days in the month for a date
  * @param input - The date
- * @param options - see {@link DaysInMonthOptions}
+ * @param options - see {@link DateOptions}
  * @defaultValue utc false
  * @returns The number of days in the specified month
  * @group Time
  * @category Month
  */
-export function daysInMonth(input: Date, { utc = false }: DaysInMonthOptions = {}): number {
+export function daysInMonth(input: Date, { utc = false }: DateOptions = {}): number {
   switch (utc ? input.getUTCMonth() : input.getMonth()) {
     case month.april:
     case month.june:

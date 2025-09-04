@@ -5,7 +5,7 @@ import { isFunction } from './is-function.ts';
 /**
  * Options for the {@link quote} and {@link unquote} function
  * @group String
- * @category Quoting
+ * @category Construction
  */
 export type QuoteOptions = {
   /** The quote character(s) to use */
@@ -22,7 +22,7 @@ export type QuoteOptions = {
  * @defaultValue escape {@link escapeJS}
  * @returns text surrounded by quotes
  * @group String
- * @category Quoting
+ * @category Construction
  */
 export function quote(
   input: string,

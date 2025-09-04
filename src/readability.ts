@@ -22,7 +22,7 @@ import { syllables } from './syllables.ts';
  * @param text - The input text to analyze.
  * @returns The Flesch-Kincaid readability score as a number.
  * @see https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests
- * @group English
+ * @group String
  * @category Analysis
  */
 export function readability(text: string): number {

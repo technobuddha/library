@@ -24,8 +24,8 @@ import { empty } from './unicode.ts';
  * ```
  * @remarks A string encoded in `binary` format may not be "well-formed"
  * @see [isWellFormed](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/isWellFormed)
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Encoding
  */
 export function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): string {
   switch (encoding) {

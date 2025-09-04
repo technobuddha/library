@@ -3,7 +3,7 @@ import { empty } from './unicode.ts';
 /**
  * Options for the {@link chop} function
  * @group String
- * @category Chop
+ * @category Deconstruction
  */
 export type ChopOptions = {
   /** If true, the last block will be omitted if has insufficient characters **/
@@ -16,7 +16,7 @@ export type ChopOptions = {
  * @param length - The length of each segment
  * @returns Array of segments
  * @group String
- * @category Chop
+ * @category Deconstruction
  */
 export function chop(
   input: string,

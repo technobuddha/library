@@ -78,7 +78,7 @@ const crcTable: number[] = [
  * crc.digest('hex');
  * // 'c031d497'
  * ```
- * @group Encoding
+ * @group Binary
  * @category Hash
  */
 export class Crc32 extends HashBase {

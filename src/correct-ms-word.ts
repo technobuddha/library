@@ -33,7 +33,7 @@ const replace: Readonly<Record<string, string>> = Object.freeze({
  * @param input - The mangled string
  * @returns string with special characters corrected
  * @group String
- * @category Correction
+ * @category Operations
  */
 export function correctMSWord(input: string): string {
   return input.replaceAll(find, (a) => replace[a]);

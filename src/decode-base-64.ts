@@ -36,8 +36,8 @@ export function decodeBase64(input: string, encoding: TextEncoding): string;
  * For example, you can encode, transmit, and decode control characters.
  * @remarks Whitespace withing the Base64 encoded string is ignored.
  * @throws `TypeError` If the input string is not correctly encoded.
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Encoding
  */
 export function decodeBase64(input: string, encoding?: TextEncoding): Uint8Array | string {
   return encoding ? decode(base64Config, input, encoding) : decode(base64Config, input);

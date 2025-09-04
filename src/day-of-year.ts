@@ -1,16 +1,7 @@
 import { beginningOfYear } from './beginning-of-year.ts';
 import { ticksPerDay } from './constants.ts';
+import { type DateOptions } from './date.ts';
 import { floor } from './floor.ts';
-
-/**
- * Options for the {@link dayOfYear} function
- * @group Time
- * @category Year
- */
-export type DayOfYearOptions = {
-  /** Use the UTC timezone */
-  utc?: boolean;
-};
 
 /**
  * Calculates the day of the year for a given date.
@@ -20,7 +11,7 @@ export type DayOfYearOptions = {
  * @group Time
  * @category Year
  */
-export function dayOfYear(input: Date, { utc = false }: DayOfYearOptions = {}): number {
+export function dayOfYear(input: Date, { utc = false }: DateOptions = {}): number {
   return (
     floor((input.getTime() - beginningOfYear(input, { utc }).getTime()) / ticksPerDay, {
       tolerance: 0.05,

@@ -12,8 +12,8 @@ import { type BinaryObject } from './binary-object.ts';
  * normalizeBinary(new DataView(new Uint8Array([4, 5, 6]))); // Uint8Array([4, 5, 6])
  * normalizeBinary(new Float32Array([1, 2]));  // Uint8Array([...])
  * ```
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Operations
  */
 export function normalizeBinary(input: BinaryObject): Uint8Array {
   if (input instanceof Uint8Array) {

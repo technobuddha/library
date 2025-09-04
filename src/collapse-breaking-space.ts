@@ -4,7 +4,7 @@ import { space } from './unicode.ts';
 /**
  * Options for the {@link collapseBreakingSpace} function
  * @group String
- * @category Collapse
+ * @category Operations
  */
 export type CollapseBreakingSpaceOptions = {
   /** If true, trim leading and trailing whitespace */
@@ -16,7 +16,7 @@ export type CollapseBreakingSpaceOptions = {
  * @param input - The string
  * @param trim - If true, remove leading and trailing whitespace
  * @group String
- * @category Collapse
+ * @category Operations
  */
 export function collapseBreakingSpace(
   input: string,

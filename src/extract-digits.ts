@@ -5,7 +5,7 @@ import { empty } from './unicode.ts';
  * @param input - The string
  * @returns digits from the string
  * @group String
- * @category Extraction
+ * @category Deconstruction
  */
 export function extractDigits(input: string): string {
   return input.replaceAll(/\D/gu, empty);

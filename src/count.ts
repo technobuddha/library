@@ -1,7 +1,7 @@
 /**
  * Options for the {@link count} function
  * @group String
- * @category Delimited
+ * @category Operations
  */
 export type CountOptions = {
   /** if true, counts overlapping strings */
@@ -15,7 +15,7 @@ export type CountOptions = {
  * @param options - see {@link CountOptions}
  * @returns number of times *substring* occurs within *input*
  * @group String
- * @category Delimited
+ * @category Operations
  */
 export function count(
   input: string,

@@ -4,7 +4,7 @@
  * @param suffix - The suffix
  * @returns The string followed by the suffix
  * @group String
- * @category Affix
+ * @category Construction
  */
 export function ensureSuffix(input: string, suffix: string): string {
   return input.endsWith(suffix) ? input : input + suffix;

@@ -4,7 +4,7 @@ import { create2DArray } from './create-2-d-array.ts';
  * Options for configuring the {@link longestCommonSubsequence} calculation.
  * @typeParam T - Type of objects in the arrays.
  * @group Array
- * @category Methods
+ * @category Analysis
  */
 export type LongestCommonSubsequenceOptions<T> = {
   /**
@@ -41,7 +41,7 @@ export type LongestCommonSubsequenceOptions<T> = {
  * ); // ['a', 'c', ' ', 'd', 'e']
  * ```
  * @group Array
- * @category Methods
+ * @category Analysis
  */
 export function longestCommonSubsequence<T>(
   array1: ArrayLike<T>,

@@ -26,7 +26,7 @@
  * unescapeJS('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
  * unescapeJS('\\u{1F600}'); // "😀"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function unescapeJS(input: string): string {

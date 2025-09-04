@@ -7,7 +7,7 @@ import { empty, space } from './unicode.ts';
  * @param input - The indented text
  * @param pattern - (space)
  * @group String
- * @category Indentation
+ * @category Operations
  */
 export function unindent(input: string, { indenter = space }: IndentOptions = {}): string {
   const indent = getIndent(input, { indenter });

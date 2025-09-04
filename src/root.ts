@@ -1,7 +1,7 @@
 /**
  * Options for the {@link root} function
  * @group String
- * @category Affix
+ * @category Deconstruction
  */
 export type RootOptions = {
   /** The refix string to remove */
@@ -16,7 +16,7 @@ export type RootOptions = {
  * @param options - see {@link RootOptions}
  * @returns The root word
  * @group String
- * @category Affix
+ * @category Deconstruction
  */
 export function root(text: string, { prefix, suffix }: RootOptions = {}): string {
   let input = text;

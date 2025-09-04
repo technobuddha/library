@@ -94,7 +94,7 @@ function gamma1(x: number): number {
  * sha224.digest('hex');
  * // '23097d223405d8228642a477bda255b32aadbce4bda0b3f7e36c9da7'
  * ```
- * @group Encoding
+ * @group Binary
  * @category Hash
  */
 export class Sha224 extends ShaBase {

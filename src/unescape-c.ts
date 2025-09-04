@@ -36,7 +36,7 @@
  * unescapeC('\\u20ac'); // "€"
  * unescapeC('\\U0001f600'); // "😀"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function unescapeC(input: string): string {

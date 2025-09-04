@@ -11,7 +11,7 @@ import { empty } from './unicode.ts';
  * syllables('hello'); // 2
  * syllables('syllable'); // 3
  * ```
- * @group English
+ * @group String
  * @category Analysis
  */
 export function syllables(input: string): number {

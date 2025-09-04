@@ -10,7 +10,7 @@ import { unescapeJS } from './unescape-js.ts';
  * @defaultValue escape unescapeJS
  * @returns the unescaped text with quotes removed
  * @group String
- * @category Quoting
+ * @category Deconstruction
  */
 export function unquote(
   input: string,

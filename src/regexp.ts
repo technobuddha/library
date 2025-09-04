@@ -8,12 +8,12 @@ import { re } from './re.ts';
  * Validate an IPv4 segment.
  * @internal
  */
-const IPV4SEG = /(25[0-5]|(?:2[0-4]|1[0-9]|0?[0-9]|0{0,2})[0-9])/;
+const IPV4SEG = /(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])/;
 
 /**
  * validate an IPv4 address
  * @group RegExp
- * @category Validation
+ * @category Constants
  * @example
  * ```typescript
  * ipV4.test('192.168.1.1'); // true
@@ -22,7 +22,7 @@ const IPV4SEG = /(25[0-5]|(?:2[0-4]|1[0-9]|0?[0-9]|0{0,2})[0-9])/;
  * ipV4.test('abc.def.ghi.jkl'); // false
  * ```
  */
-export const ipV4 = re`^${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}$`;
+export const ipV4 = re`^${IPV4SEG}\\.${IPV4SEG}\\.${IPV4SEG}\\.${IPV4SEG}$`;
 
 /**
  * Validate a private network 10.x.x.x address.
@@ -45,7 +45,7 @@ const NET192 = /^192[.]168$/;
 /**
  * determine if Ipv4 address is local
  * @group RegExp
- * @category Validation
+ * @category Constants
  * @example
  * ```typescript
  * ipV4Local.test('192.168.1.1'); // true
@@ -62,7 +62,7 @@ export const ipV4Local = re`^(?:${NET10}|${NET172}|${NET192})[.]${IPV4SEG}[.]${I
  * Validate a year component in a date string.
  * @internal
  */
-const YEAR = /^\d{4}$/;
+const YEAR = /^[0-9]{4}$/;
 
 /**
  * Validate a month component in a date string.
@@ -133,7 +133,7 @@ const TIMEZONE = re`^(?:(?:${ZONEHOUR}(?::${ZONEMINUTE})?)|Z)$`;
 /**
  * Validate a ISO formatted date
  * @group RegExp
- * @category Validation
+ * @category Constants
  * @example
  * ```typescript
  * isoDate.test('2023-08-29T12:34:56Z'); // true
@@ -148,7 +148,7 @@ export const isoDate = re`^${YEAR}-${MONTH}-${DAY}T${HOUR}:${MINUTE}(?::${SECOND
 /**
  * Validate a valid number
  * @group RegExp
- * @category Validation
+ * @category Constants
  * @example
  * ```typescript
  * numeric.test('123'); // true
@@ -161,6 +161,8 @@ export const isoDate = re`^${YEAR}-${MONTH}-${DAY}T${HOUR}:${MINUTE}(?::${SECOND
  * ```
  */
 export const numeric = /^((?:NaN|[+-]?(?:(?:\d+|\d*[.]\d+)(?:[Ee][+-]?\d+)?|[+-]?Infinity)))$/;
+// TODO [>2.1]: enhance numeric regex to support hexadecimal and binary literals
+// TODO [>2.1]: Add isNumeric function, but with a different name
 
 /**
  * Regular expression to match a valid hostname label ending with a dot.
@@ -177,7 +179,7 @@ const TLD = /^[a-z]{2,}$/;
 /**
  * Regular expression for matching a domain name composed of a host and a top-level domain (TLD).
  * @group RegExp
- * @category Validation
+ * @category Constants
  * @example
  * ```typescript
  * domain.test('example.com'); // true
@@ -186,6 +188,7 @@ const TLD = /^[a-z]{2,}$/;
  * ```
  */
 export const domain = re`^${HOST}+${TLD}$`;
+// TODO [>2.1]: enable punycode support
 
 // cspell:ignore EMAILGLYPH, EMAILQUOTE, EMAILESCAPE, EMAILADDRESS
 /**
@@ -214,7 +217,7 @@ const EMAILADDRESS = re`(?:${EMAILGLYPH}+(?:[.]${EMAILGLYPH}+)*|"(?:${EMAILQUOTE
 /**
  * validate an valid email address
  * @group RegExp
- * @category Validation
+ * @category Constants
  * @example
  * ```typescript
  * email.test('user@example.com'); // true
@@ -224,3 +227,12 @@ const EMAILADDRESS = re`(?:${EMAILGLYPH}+(?:[.]${EMAILGLYPH}+)*|"(?:${EMAILQUOTE
  * ```
  */
 export const email = re`${EMAILADDRESS}@(?:\\[${ipV4}\\]|${domain})$`;
+
+/**
+ * Regular expression that matches any whitespace character, including standard spaces,
+ * non-breaking spaces (`\u00A0`), and zero-width no-break spaces (`\uFEFF`).
+ * Useful for trimming or identifying whitespace-equivalent characters in strings.
+ * @group RegExp
+ * @category Constants
+ */
+export const trimEquivalent = /[\s\uFEFF\u00A0]/u;

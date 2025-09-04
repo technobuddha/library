@@ -3,8 +3,8 @@ import { empty, space } from './unicode.ts';
 
 /**
  * Options for creating a coordinated list with {@link conjoin}
- * @group English
- * @category Parts of Speech
+ * @group Array
+ * @category Operations
  */
 export type ConjoinOptions = {
   /**
@@ -40,8 +40,8 @@ export type ConjoinOptions = {
  * conjoin(amigos, { conjunction: 'or', oxford: false, separator: ';' });
  * // 'Lucky Day; Dusty Bottoms or Ned Nederlander'
  * ```
- * @group English
- * @category Parts of Speech
+ * @group Array
+ * @category Operations
  */
 export function conjoin<T = unknown>(
   input: ArrayLike<T>,

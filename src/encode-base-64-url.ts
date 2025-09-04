@@ -34,8 +34,8 @@ export function encodeBase64Url(binary: BinaryObject): string;
  * You can use this method to encode data which may otherwise cause communication problems,
  * transmit it, then use the {@link decodeBase64Url} method to decode the data again. For example, you can
  * encode control characters.
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Encoding
  */
 export function encodeBase64Url(arg: string | BinaryObject, encoding?: TextEncoding): string {
   return typeof arg === 'string' ?

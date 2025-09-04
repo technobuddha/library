@@ -3,7 +3,7 @@ import { clean } from './clean.ts';
 /**
  * Options for the {@link sortOrder} function
  * @group String
- * @category Sorting
+ * @category Operations
  */
 export type SortOrderOptions = {
   /** Ignore a leading quote (") */
@@ -19,7 +19,7 @@ export type SortOrderOptions = {
  * @param options - see {@link SortOrderOptions}
  * @returns sortable string
  * @group String
- * @category Sorting
+ * @category Operations
  */
 export function sortOrder(
   text: string,

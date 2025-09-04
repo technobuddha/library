@@ -4,8 +4,8 @@
  * @param y - 32-bit integer
  * @param z - 32-bit integer
  * @returns Unsigned 32-bit integer result
- * @group Math
- * @category 32-bit Arithmetic
+ * @group Binary
+ * @category Arithmetic
  */
 export function ch(x: number, y: number, z: number): number {
   // eslint-disable-next-line no-bitwise

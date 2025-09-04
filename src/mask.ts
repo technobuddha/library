@@ -4,7 +4,7 @@ import { space } from './unicode.ts';
 /**
  * Options for the {@link mask} function
  * @group String
- * @category Mask
+ * @category Operations
  */
 export type MaskOptions = {
   /** if the mask is longer, fill with character */
@@ -23,7 +23,7 @@ const tokenizer = /\\#|#|./gu;
  * @defaultValue missing space
  * @returns The mask filled with characters from the string
  * @group String
- * @category Mask
+ * @category Operations
  */
 export function mask(
   input: string,

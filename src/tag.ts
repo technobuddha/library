@@ -9,7 +9,7 @@ import { space } from './unicode.ts';
  * @param attributes - A dictionary of name value pairs to use for attributes
  * @returns HTML tag with text
  * @group String
- * @category HTML
+ * @category Construction
  */
 export function tag(
   input: string,

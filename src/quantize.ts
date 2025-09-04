@@ -33,7 +33,19 @@ const MAX_ITERATIONS = 1000;
 const FRACTION_POPULATIONS = 0.75;
 
 //#region RGB
-export type RGB = { r: number; g: number; b: number };
+/**
+ * Represents an RGB color.
+ * @group Array
+ * @category Operations
+ */
+export type RGB = {
+  /** r - The red component (0-255). */
+  r: number;
+  /** g - The green component (0-255). */
+  g: number;
+  /** b - The blue component (0-255). */
+  b: number;
+};
 //#endregion
 //#region VBox
 class VBox {
@@ -333,19 +345,44 @@ function medianCut(histogram: Histogram, vbox: VBox): [VBox | null, VBox | null]
 }
 //#endregion
 //#region quantize
+/**
+ * Quantizes an array of RGB pixels into a reduced color palette with a maximum number of colors.
+ * Utilizes a median cut algorithm to partition the color space and generate a color map.
+ * Returns `undefined` if the input is invalid or the constraints are not met.
+ *
+ * @param pixels - An array of RGB pixel values to be quantized.
+ * @param maxColors - The maximum number of colors allowed in the resulting palette (must be between 2 and 256).
+ * @returns A `ColorMap` representing the quantized palette, or `undefined` if quantization is not possible.
+ *
+ * @example
+ * ```typescript
+ * const pixels: RGB[] = [
+ *   { r: 255, g: 0, b: 0 },
+ *   { r: 0, g: 255, b: 0 },
+ *   { r: 0, g: 0, b: 255 },
+ *   // ... more pixels
+ * ];
+ * const palette = quantize(pixels, 16);
+ * if (palette) {
+ *   // Use the palette for image processing
+ * }
+ * ```
+ * @group Array
+ * @category Operations
+ */
 export function quantize(pixels: RGB[], maxColors: number): ColorMap | undefined {
   if (pixels.length === 0 || maxColors < 2 || maxColors > 256) {
     return undefined;
   }
 
-  // TODO: check color content and convert to grayscale if insufficient
+  // TODO [>2.1]: check color content and convert to grayscale if insufficient
 
   const histogram = new Histogram(pixels);
 
   // check that we aren't below maxColors already
   const nColors = histogram.colors();
   if (nColors <= maxColors) {
-    // TODO: generate the new colors from the histogram  and return
+    // TODO [>2.1]: generate the new colors from the histogram  and return
   }
 
   // get the beginning vbox from the colors

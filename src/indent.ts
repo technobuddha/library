@@ -3,7 +3,7 @@ import { space } from './unicode.ts';
 /**
  * Options for the indentation functions: {@link  getIndent}, {@link indent}, and {@link unindent}
  * @group String
- * @category Indentation
+ * @category Operations
  */
 export type IndentOptions = {
   /** The indentation character */
@@ -17,7 +17,7 @@ export type IndentOptions = {
  * @defaultValue indenter space
  * @returns string with each line indented
  * @group String
- * @category Indentation
+ * @category Operations
  */
 export function indent(input: string, { indenter = space }: IndentOptions = {}): string {
   return input.replaceAll(/^/gmu, indenter);

@@ -17,7 +17,7 @@ import { isFunction } from './is-function.ts';
  * @param height - Height of the array
  * @param fill - Value to fill the array, or a function returning the fill value for each element
  * @group Array
- * @category Creation
+ * @category Construction
  */
 export function create2DArray<T>(
   width: number,

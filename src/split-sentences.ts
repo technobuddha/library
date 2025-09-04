@@ -39,8 +39,8 @@ const splitter = /(.*?(?:[.!?‼‽⁇⁈⁉:…]|\.\.\.)["'”’]?)(?:[\s\r\n]
  * ```ts
  * splitSentences("Hello! How are you? I'm 'OK.'"); // ["Hello!", "How are you?", "I'm 'OK.'"]
  * ```
- * @group English
- * @category Analysis
+ * @group String
+ * @category Deconstruction
  */
 export function splitSentences(input: string): string[] {
   return input.split(splitter).filter((s) => s.trim().length > 0);

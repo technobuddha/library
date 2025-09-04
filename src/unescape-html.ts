@@ -17,7 +17,7 @@ import { nbsp, zwsp } from './unicode.ts';
  * unescapeHTML('&#169; 2025'); // "© 2025"
  * unescapeHTML('&#x1F600;'); // "😀"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function unescapeHTML(input: string): string {

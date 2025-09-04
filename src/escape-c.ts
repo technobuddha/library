@@ -40,7 +40,7 @@ import { empty } from './unicode.ts';
  * escapeC('\x07');         // "\\a"
  * escapeC('\u20ac');       // "\\u20ac"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function escapeC(input: string): string {

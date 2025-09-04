@@ -8,7 +8,7 @@ import { space } from './unicode.ts';
  * @defaultValue indenter space
  * @returns The minimum amount of indentation on each line
  * @group String
- * @category Indentation
+ * @category Analysis
  */
 export function getIndent(input: string, { indenter = space }: IndentOptions = {}): number {
   const matches = new RegExp(`^(${RegExp.escape(indenter)})+`, 'ugm').exec(input);

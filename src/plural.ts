@@ -15,7 +15,7 @@ import { empty, space } from './unicode.ts';
  * plural('dog', 1, true); // 1 dog
  * plural('dog', 2, true); // 2 dogs
  * ```
- * @group English
+ * @group String
  * @category Parts of Speech
  */
 export function plural(input: string, quantity?: number, include = false): string {

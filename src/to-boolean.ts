@@ -2,7 +2,7 @@ import { toEnumeration } from './to-enumeration.ts';
 
 /**
  * Options for the {@link toBoolean} function
- * @group String
+ * @group Object
  * @category Conversion
  */
 export type BooleanOptions = {
@@ -30,7 +30,7 @@ const defaultFalse = ['false', 'no', 'n', 'off', '0'];
  * @param options - see {@link BooleanOptions}
  * @defaultValue trueValues 'true', 'yes', 'y', 'on', or '1'
  * @defaultValue falseValues 'false', 'no', 'n', 'off', '0'
- * @group String
+ * @group Object
  * @category Conversion
  */
 export function toBoolean(

@@ -5,7 +5,7 @@
  *
  * @param words - The input string from which to extract initials.
  * @returns The uppercase initials of the input string.
- * @group English
+ * @group String
  * @category Operations
  * @example
  * ```typescript

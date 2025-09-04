@@ -13,7 +13,7 @@ import { type TypedArray } from './@types/typed-array.ts';
  * - The `update` methods allows chaining for incremental hashing.
  * - The `digest` methods finalize the hash computation and return the result
  *   either as a `Uint8Array` or as an encoded string.
- * @group Encoding
+ * @group Binary
  * @category Hash
  */
 export abstract class HashBase {

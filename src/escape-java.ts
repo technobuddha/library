@@ -31,7 +31,7 @@ import { empty } from './unicode.ts';
  * escapeJava('\b');           // "\\b"
  * escapeJava('\u20ac');       // "\\u20ac"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function escapeJava(input: string): string {

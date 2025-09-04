@@ -22,8 +22,8 @@ import { decodeBase64Url } from './decode-base-64-url.ts';
  * decodeBinary('48656c6c6f', 'hex');       // Uint8Array([72, 101, 108, 108, 111])
  * decodeBinary('Hello', 'binary');         // Uint8Array([72, 101, 108, 108, 111])
  * ```
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Encoding
  */
 export function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Array {
   switch (encoding) {

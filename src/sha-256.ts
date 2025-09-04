@@ -103,7 +103,7 @@ function gamma1(x: number): number {
  * sha256.digest('hex');
  * // 'b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9'
  * ```
- * @group Encoding
+ * @group Binary
  * @category Hash
  */
 export class Sha256 extends ShaBase {

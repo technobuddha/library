@@ -12,7 +12,7 @@ import { removeDiacritics } from './remove-diacritics.ts';
  * possessive('BUGS');    // "BUGS'"
  * possessive('ELMER');   // "ELMER'S"
  * ```
- * @group English
+ * @group String
  * @category Parts of Speech
  */
 export function possessive(input: string): string {

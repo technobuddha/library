@@ -33,7 +33,7 @@ import { oct, u4, u8, x2 } from './escape.ts';
  * escapePython('\b');           // "\\b"
  * escapePython('\u20ac');       // "\\u20ac"
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function escapePython(input: string): string {

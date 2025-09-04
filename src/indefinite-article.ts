@@ -21,7 +21,7 @@ const TESTS: [string, RegExp][] = [
 
 /**
  * Options for {@link indefiniteArticle} to determine the indefinite article to use with a word.
- * @group English
+ * @group String
  * @category Parts of Speech
  */
 export type IndefiniteArticleOptions = {
@@ -41,7 +41,7 @@ export type IndefiniteArticleOptions = {
  * @param options - see {@link IndefiniteArticleOptions}
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.
- * @group English
+ * @group String
  * @category Parts of Speech
  */
 export function indefiniteArticle(

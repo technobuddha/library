@@ -8,8 +8,8 @@
  * @param y - The second input number.
  * @param z - The third input number.
  * @returns The majority value for each bit position among the three inputs.
- * @group Math
- * @category 32-bit Arithmetic
+ * @group Binary
+ * @category Arithmetic
  */
 export function maj(x: number, y: number, z: number): number {
   // eslint-disable-next-line no-bitwise

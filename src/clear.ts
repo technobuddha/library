@@ -5,7 +5,7 @@
  * @param input - Object to clear all properties
  * @returns Original input with all properties deleted.
  * @group Object
- * @category Operations
+ * @category Mutation
  * @example
  * ```typescript
  * const obj = \{ a: 1, b: 2 \};

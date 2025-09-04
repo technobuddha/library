@@ -12,7 +12,7 @@ import { toString } from './to-string.ts';
  * - Otherwise, converts the entity to a string and creates a `Date` from that string.
  * @param entity - The value to convert to a `Date`.
  * @returns A `Date` object representing the input, or an invalid `Date` if conversion is not possible.
- * @group Time
+ * @group Object
  * @category Conversion
  */
 export function toDate(entity: unknown): Date {

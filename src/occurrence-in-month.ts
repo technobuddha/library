@@ -2,25 +2,16 @@ import { addTime } from './add-time.ts';
 import { beginningOfMonth } from './beginning-of-month.ts';
 import { type DayOfWeek } from './constants.ts';
 import { daysPerWeek } from './constants.ts';
+import { type DateOptions } from './date.ts';
 import { daysInMonth } from './days-in-month.ts';
 import { modulo } from './modulo.ts';
-
-/**
- * Options for {@link occurrenceInMonth}
- * @group Time
- * @category Day
- */
-export type GetOccurrenceInMonthOptions = {
-  /** Use the utc timezone */
-  utc?: boolean;
-};
 
 /**
  * Determine the date of an occurrence of a weekday within a month
  * @param input - A date within the month in question
  * @param dayOfWeek - The day of the week to find the occurrence
  * @param occurrence - The occurrence number, or 'last' to find the last occurrence
- * @param options - see {@link GetOccurrenceInMonthOptions}
+ * @param options - see {@link DateOptions}
  * @defaultValue utc false
  * @returns A date object corresponding to the occurrence requested, or null if no such date exists in the month
  * @group Time
@@ -30,7 +21,7 @@ export function occurrenceInMonth(
   input: Date,
   dayOfWeek: DayOfWeek,
   occurrence: number | 'last',
-  { utc = false }: GetOccurrenceInMonthOptions = {},
+  { utc = false }: DateOptions = {},
 ): Date | null {
   let day = beginningOfMonth(input, { utc });
   const jump = modulo(dayOfWeek - (utc ? day.getUTCDay() : day.getDay()), daysPerWeek);

@@ -16,7 +16,7 @@
  * // Returns: [[1, 'a'], [2, 'b'], [undefined, 'c']]
  * ```
  * @group Array
- * @category Methods
+ * @category Operations
  */
 export function zipperMerge<T extends unknown[][]>(
   ...arrays: T

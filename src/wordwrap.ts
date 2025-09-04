@@ -4,7 +4,7 @@ import { empty, space } from './unicode.ts';
 /**
  * Options for the {@link wordwrap} function
  * @group String
- * @category Word Wrapping
+ * @category Operations
  */
 export type WordwrapOptions = {
   /** The width to wrap to */
@@ -27,7 +27,7 @@ export type WordwrapOptions = {
  * @defaultValue trailingSpaces false
  * @returns wrapped text
  * @group String
- * @category Word Wrapping
+ * @category Operations
  */
 export function wordwrap(
   input: string,

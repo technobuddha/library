@@ -7,7 +7,7 @@ import { isPrimitive } from './is-primitive.ts';
  * Represents a primitive type that excludes `null` and `undefined`.
  * @see Primitive
  * @group Array
- * @category Methods
+ * @category Operations
  */
 export type CollapsiblePrimitive = Exclude<Primitive, null | undefined>;
 
@@ -21,7 +21,7 @@ export type CollapsiblePrimitive = Exclude<Primitive, null | undefined>;
  * - An iterable object returning T | null | undefined
  * @typeParam T - The primitive type that can be collapsed.
  * @group Array
- * @category Methods
+ * @category Operations
  */
 export type CollapsibleValue<T extends CollapsiblePrimitive> =
   | T
@@ -43,7 +43,7 @@ export type CollapsibleValue<T extends CollapsiblePrimitive> =
  * arrays, lazy generators, or functions producing values, and need to process them uniformly.
  * @typeParam T - The primitive type that can be collapsed.
  * @group Array
- * @category Methods
+ * @category Operations
  */
 export type Collapsible<T extends CollapsiblePrimitive> =
   | CollapsibleValue<T>
@@ -77,7 +77,7 @@ export type Collapsible<T extends CollapsiblePrimitive> =
  * // Returns: ["hello", "world", "foo", "bar", "baz", "qux"]
  * ```
  * @group Array
- * @category Methods
+ * @category Operations
  */
 export function collapse<T extends CollapsiblePrimitive = string>(...args: Collapsible<T>[]): T[] {
   return args

@@ -9,7 +9,7 @@ import { toASCII } from './to-ascii.ts';
  * @param input - a description
  * @returns The group code
  * @group String
- * @category Sorting
+ * @category Analysis
  */
 export function groupCode(input: string): string {
   const group = toASCII(sortOrder(input).slice(0, 1)).toLocaleUpperCase();

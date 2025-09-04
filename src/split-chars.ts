@@ -3,7 +3,7 @@
  * @param input - The string
  * @returns array of characters
  * @group String
- * @category Split
+ * @category Deconstruction
  */
 export function splitChars(input: string): string[] {
   return Array.from(input);

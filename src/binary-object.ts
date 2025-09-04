@@ -4,8 +4,8 @@
  * @see {@link normalizeBinary}
  * @see {@link encodeBase64}
  * @see {@link encodeBase64Url}
- * @group Encoding
- * @category Binary
+ * @group Binary
+ * @category Container
  */
 export type BinaryObject =
   | ArrayBuffer

@@ -6,7 +6,7 @@ import { empty } from './unicode.ts';
  * @param args - Concatenates a list of strings, string arrays, or functions that return a string or string array.
  * @returns The concatenation of *args*.
  * @group String
- * @category Build
+ * @category Construction
  */
 export function build(...args: Parameters<typeof collapse<string>>): string {
   return collapse(...args).join(empty);

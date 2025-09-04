@@ -11,7 +11,7 @@ const badChars = /[/\\:*?<>|.]+/gu;
 /**
  * Options for the {@link toFilename} function
  * @group String
- * @category Conversion
+ * @category Operations
  */
 export type FilenameOptions = {
   /** the file name will be truncated to this length */
@@ -30,7 +30,7 @@ export type FilenameOptions = {
  * @param options - see {@link FilenameOptions}
  * @returns the file name
  * @group String
- * @category Conversion
+ * @category Operations
  */
 export function toFilename(
   input: string,

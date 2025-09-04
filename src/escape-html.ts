@@ -3,7 +3,7 @@ import { splitChars } from './split-chars.ts';
 
 /**
  * Options for {@link escapeHTML}
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export type EscapeHtmlOptions = {
@@ -20,7 +20,7 @@ export type EscapeHtmlOptions = {
  * escapeHTML('<div>hello</div>'); // '&lt;div&gt;hello&lt;/div&gt';
  * escapeHTML('aáΔ😀', { escapeNonASCII: true }); // 'a&#225;&#916;&#128512';
  * ```
- * @group Encoding
+ * @group Programming
  * @category Escaping
  */
 export function escapeHTML(

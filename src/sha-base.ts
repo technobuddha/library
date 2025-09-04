@@ -8,7 +8,7 @@ import { HashBase } from './hash-base.ts';
 
 /**
  * The base class for sha based cryptographic hash functions
- * @group Encoding
+ * @group Binary
  * @category Hash
  */
 export abstract class ShaBase extends HashBase {
