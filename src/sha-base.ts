@@ -1,10 +1,10 @@
 /* eslint-disable no-bitwise */
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { type TextEncoding } from './@types/text-encoding.ts';
-import { type TypedArray } from './@types/typed-array.ts';
 import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
 import { HashBase } from './hash-base.ts';
+import { type BinaryObject } from './index.ts';
 
 /**
  * The base class for sha based cryptographic hash functions
@@ -116,10 +116,10 @@ export abstract class ShaBase extends HashBase {
     return encoding ? encodeBinary(hash, encoding) : hash;
   }
 
-  public update(data: TypedArray | ArrayBuffer | ArrayLike<number>): this;
+  public update(data: BinaryObject | ArrayLike<number>): this;
   public update(data: string, encoding?: TextEncoding): this;
   public update(
-    data: string | TypedArray | ArrayBuffer | ArrayLike<number>,
+    data: string | BinaryObject | ArrayLike<number>,
     encoding: TextEncoding = 'utf8',
   ): this {
     const buffer =

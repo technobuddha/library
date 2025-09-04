@@ -1,11 +1,11 @@
 import { type DeconstructedNumber } from '../@types/deconstructed-number.ts';
+import { ordinal } from '../ordinal.ts';
 import { plural } from '../plural.ts';
 import { empty, hyphen, space } from '../unicode.ts';
 
 import { deriveFraction } from './derive-fraction.ts';
 import { fabricateAlphabeticInteger } from './fabricate-alphabetic-integer.ts';
 import { type Numbering } from './numbering.ts';
-import { ordinal } from '../ordinal.ts';
 
 /**
  * Returns the English word representation of a fractional denominator.

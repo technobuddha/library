@@ -1,6 +1,6 @@
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { type TextEncoding } from './@types/text-encoding.ts';
-import { type TypedArray } from './@types/typed-array.ts';
+import { type BinaryObject } from './binary-object.ts';
 
 /**
  * Abstract base class for hash algorithm implementations.
@@ -36,10 +36,10 @@ export abstract class HashBase {
 
   /**
    * Updates the hash with the given binary data.
-   * @param data - The data to update the hash with, as a TypedArray or ArrayBuffer.
+   * @param data - The data to update the hash with, as a `BinaryObject`.
    * @returns The hash instance for method chaining.
    */
-  public abstract update(data: TypedArray | ArrayBuffer): this;
+  public abstract update(data: BinaryObject): this;
 
   /**
    * Updates the hash with the given string data.

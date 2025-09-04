@@ -1,5 +1,5 @@
 import { type TextEncoding } from './@types/text-encoding.ts';
-import { type TypedArray } from './@types/typed-array.ts';
+import { type BinaryObject } from './binary-object.ts';
 import { replacementCharacter } from './unicode.ts';
 
 const replacement = replacementCharacter.codePointAt(0)!;
@@ -13,7 +13,7 @@ const replacement = replacementCharacter.codePointAt(0)!;
  * @category Encoding
  */
 export function decodeText(
-  input: ArrayLike<number> | TypedArray | ArrayBuffer,
+  input: BinaryObject | ArrayLike<number>,
   _encoding: TextEncoding = 'utf8',
 ): string {
   const buffer =

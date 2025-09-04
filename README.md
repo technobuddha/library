@@ -2,11 +2,10 @@
 
 ## Technobuddha Library
 
-![image](../doc/coverage.svg)
 ![image](https://img.shields.io/npm/last-update/@technobuddha/library)
 ![image](https://img.shields.io/badge/code%20coverage-100%-4fc921)
 
-<div style="text-align: center; font-size: large;">13 Classes, 49 Constants, 242 Functions, and 77 Types</div>
+<div style="text-align: center; font-size: large;">13 Classes, 49 Constants, 241 Functions, and 75 Types</div>
 <div style="text-align: center; font-size: x-large; color: #4fc921">0 dependencies</div>
 
 ## Introduction

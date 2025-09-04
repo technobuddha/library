@@ -1,7 +1,7 @@
 /* eslint-disable no-bitwise */
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { type TextEncoding } from './@types/text-encoding.ts';
-import { type TypedArray } from './@types/typed-array.ts';
+import { type BinaryObject } from './binary-object.ts';
 import { encodeBinary } from './encode-binary.ts';
 import { encodeText } from './encode-text.ts';
 import { HashBase } from './hash-base.ts';
@@ -95,10 +95,10 @@ export class Crc32 extends HashBase {
     this.crc = -1;
   }
 
-  public update(data: TypedArray | ArrayBuffer | ArrayLike<number>): this;
+  public update(data: BinaryObject | ArrayLike<number>): this;
   public update(data: string, encoding?: TextEncoding): this;
   public update(
-    data: TypedArray | ArrayBuffer | ArrayLike<number> | string,
+    data: BinaryObject | ArrayLike<number> | string,
     encoding: TextEncoding = 'utf8',
   ): this {
     const buffer =
