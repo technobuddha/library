@@ -1,3 +1,6 @@
+# 🚨
+# 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+# 🚨
 .git/
 node_modules/
 dist/
@@ -67,3 +70,6 @@ node_modules/
 
 #!.yarn/cache
 .pnp.*
+
+# Local Git Ignore
+

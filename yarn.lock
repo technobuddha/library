@@ -2077,7 +2077,7 @@ __metadata:
   resolution: "@technobuddha/library@workspace:."
   dependencies:
     "@giancosta86/typedoc-readonly": "npm:1.0.1"
-    "@technobuddha/project": "npm:0.0.185"
+    "@technobuddha/project": "npm:0.99.1"
     "@vitest/coverage-v8": "npm:3.2.4"
     cspell: "npm:9.2.0"
     jest-matcher-deep-close-to: "npm:3.0.2"
@@ -2089,9 +2089,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.0.185":
-  version: 0.0.185
-  resolution: "@technobuddha/project@npm:0.0.185"
+"@technobuddha/project@npm:0.99.1":
+  version: 0.99.1
+  resolution: "@technobuddha/project@npm:0.99.1"
   dependencies:
     "@eslint/js": "npm:9.34.0"
     "@inquirer/prompts": "npm:7.8.4"
@@ -2133,14 +2133,15 @@ __metadata:
     jest-extended: "npm:6.0.0"
     lodash-es: "npm:4.17.21"
     mustache: "npm:4.2.0"
+    package-up: "npm:5.0.0"
     react: "npm:19.1.1"
     read-package-up: "npm:11.0.0"
     semver: "npm:7.7.2"
     typescript: "npm:5.9.2"
     watch: "npm:1.0.2"
   bin:
-    tbproject: dist/bin/tbproject
-  checksum: 10c0/03752d1596fd6eb5e0234ab60e632caf7fb515dda5fe58c022eea5b0410d67709bca2200aac868bd12b144bef546323e247efa514aa87716cd62c3550420d2f0
+    tbproject: bin/tbproject
+  checksum: 10c0/d2555089a6e34844df0e25e323b933723093423872f49c531c59b46f7f29565d611a4d826c585e676dc47786095f9b92b3510a1fab336f99913da439ba21cea9
   languageName: node
   linkType: hard
 
@@ -7179,6 +7180,15 @@ __metadata:
   version: 1.0.1
   resolution: "package-json-from-dist@npm:1.0.1"
   checksum: 10c0/62ba2785eb655fec084a257af34dbe24292ab74516d6aecef97ef72d4897310bc6898f6c85b5cd22770eaa1ce60d55a0230e150fb6a966e3ecd6c511e23d164b
+  languageName: node
+  linkType: hard
+
+"package-up@npm:5.0.0":
+  version: 5.0.0
+  resolution: "package-up@npm:5.0.0"
+  dependencies:
+    find-up-simple: "npm:^1.0.0"
+  checksum: 10c0/539ca3cded589ed374b9f729a94a0e09f1ffa9e640037c557ac209293d56685c8a6cee1f6fe08585ed125335ec7276d10e9c556cfc6bb3258dcb99af32fd5cb5
   languageName: node
   linkType: hard
 
