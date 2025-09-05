@@ -63,6 +63,7 @@ export * from './delimited.ts';
 export * from './deromanize.ts';
 export * from './dice-coefficient.ts';
 export * from './dot-case.ts';
+export * from './duration.ts';
 export * from './edge-angles.ts';
 export * from './encode-base-64.ts';
 export * from './encode-base-64-url.ts';

@@ -8,5 +8,6 @@ describe('summarize', () => {
     expect(summarize(1230000)).toBe('1.23 million');
     expect(summarize(1234000)).toBe('1.23 million');
     expect(summarize(1235000)).toBe('1.24 million');
+    expect(summarize(Number.MAX_SAFE_INTEGER)).toBe('9.01 quadrillion');
   });
 });
