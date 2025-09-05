@@ -1,7 +1,5 @@
 <!-- markdownlint-disable -->
 
-## Technobuddha Library
-
 ![image](https://img.shields.io/github/last-commit/technobuddha/library)
 ![image](https://img.shields.io/npm/d18m/%40technobuddha%2Flibrary.svg)
 ![image](https://img.shields.io/github/license/technobuddha/library)
@@ -22,7 +20,12 @@
 
 This is a large library of many things that the
 [Technobuddha](https://technobuddha.com)
-has found useful over the years. There is a plethora of functions and classes for working with arrays, strings, numbers, dates, objects, and more. Ranging from the simple ([clamp](https://doc.technobuddha.com/library/clamp.html)) to the complex ([largestInscribedRectangle](https://doc.technobuddha.com/library/largestInscribedRectangle.html)), this library has something for everyone.
+has found useful over the years. There is a plethora of functions and classes for working with
+arrays, strings, numbers, dates, objects, and more. Ranging from the simple
+([clamp](https://doc.technobuddha.com/library/clamp.html))
+to the complex
+([largestInscribedRectangle](https://doc.technobuddha.com/library/largestInscribedRectangle.html)),
+this library has something for everyone.
 
 ## Contents
 
