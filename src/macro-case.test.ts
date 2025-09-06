@@ -60,7 +60,7 @@ describe('macroCase', () => {
   });
 
   test('should handle words suffixed by numbers', () => {
-    expect(macroCase('version1')).toBe('VERSION_1');
+    expect(macroCase('version1')).toBe('VERSION1');
   });
 
   test('should handle words prefixed by numbers', () => {

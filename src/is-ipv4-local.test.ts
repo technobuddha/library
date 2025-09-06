@@ -1,4 +1,4 @@
-import { isIPV4Local } from './is-ip-v4-local.ts';
+import { isIPV4Local } from './is-ipv4-local.ts';
 
 describe('isIPV4Local', () => {
   test('should return true for 10.0.0.0/8 addresses', () => {

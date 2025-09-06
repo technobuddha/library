@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2-d-array.ts';
+import { create2dArray } from './create2d-array.ts';
 
 /**
  * Options for configuring the {@link longestCommonSubsequence} calculation.
@@ -53,7 +53,7 @@ export function longestCommonSubsequence<T>(
 ): T[] {
   const l1 = array1.length;
   const l2 = array2.length;
-  const c = create2DArray(l1 + 1, l2 + 1, 0);
+  const c = create2dArray(l1 + 1, l2 + 1, 0);
 
   let i: number;
   let j: number;

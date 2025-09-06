@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2-d-array.ts';
+import { create2dArray } from './create2d-array.ts';
 
 /**
  * Options for configuring the longest common substring calculation.
@@ -29,7 +29,7 @@ export function longestCommonSubstring(
   const ci1 = caseInsensitive ? string1.toLocaleLowerCase() : string1;
   const ci2 = caseInsensitive ? string2.toLocaleLowerCase() : string2;
 
-  const comparisons = create2DArray(ci1.length + 1, ci2.length + 1, 0);
+  const comparisons = create2dArray(ci1.length + 1, ci2.length + 1, 0);
   let maxSubStrLength = 0;
   let lastMaxSubStrIndex = -1;
 

@@ -15,6 +15,6 @@ import { ipV4 } from './regexp.ts';
  * @group RegExp
  * @category Validation
  */
-export function isIpV4(text: string): boolean {
+export function isIPV4(text: string): boolean {
   return ipV4.test(text);
 }

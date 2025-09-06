@@ -1,6 +1,6 @@
 // cspell: ignore AAEC AQID AQIDBA ΑΒΓΔ
 
-import { decodeBase64Url } from './decode-base-64-url.ts';
+import { decodeBase64Url } from './decode-base64-url.ts';
 import { empty } from './unicode.ts';
 
 describe('decodeBase64Url', () => {

@@ -1,4 +1,4 @@
-import { create2DArray } from './create-2-d-array.ts';
+import { create2dArray } from './create2d-array.ts';
 
 /**
  * Options for the {@link levenshteinDistance} function
@@ -39,7 +39,7 @@ export function levenshteinDistance(
 
   const inputLen = argInput.length;
   const comparedToLen = argComparedTo.length;
-  const matrix = create2DArray(inputLen, comparedToLen, 0);
+  const matrix = create2dArray(inputLen, comparedToLen, 0);
 
   //initialize
   for (let i = 0; i < inputLen; ++i) {

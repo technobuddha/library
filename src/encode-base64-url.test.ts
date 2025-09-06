@@ -1,6 +1,6 @@
 // cspell:ignore ΑΒΓΔ AAEC AQID AQIDBA
 
-import { encodeBase64Url } from './encode-base-64-url.ts';
+import { encodeBase64Url } from './encode-base64-url.ts';
 import { empty } from './unicode.ts';
 
 describe('encodeBase64Url', () => {

@@ -1,6 +1,7 @@
 import { type JsonObject } from 'type-fest';
 
-import { deserialize, serialize } from './json-serializer.ts';
+import { jsonDeserialize } from './json-deserialize.ts';
+import { jsonSerialize } from './json-serialize.ts';
 
 /**
  * A Set-like collection for objects that can be serialized to JSON.
@@ -56,7 +57,7 @@ export class JSONSet<T extends JsonObject> implements Set<T> {
    * Adds a serialized value to the set.
    */
   public add(value: T): this {
-    this.set.add(serialize(value));
+    this.set.add(jsonSerialize(value));
     return this;
   }
 
@@ -71,7 +72,7 @@ export class JSONSet<T extends JsonObject> implements Set<T> {
    * Removes the specified value from the set if it exists.
    */
   public delete(value: T): boolean {
-    return this.set.delete(serialize(value));
+    return this.set.delete(jsonSerialize(value));
   }
 
   /**
@@ -105,7 +106,7 @@ export class JSONSet<T extends JsonObject> implements Set<T> {
    * Determines whether the specified value exists in the set.
    */
   public has(value: T): boolean {
-    return this.set.has(serialize(value));
+    return this.set.has(jsonSerialize(value));
   }
 
   /**
@@ -194,7 +195,7 @@ export class JSONSet<T extends JsonObject> implements Set<T> {
    */
   public *values(): SetIterator<T> {
     for (const object of this.set) {
-      yield deserialize(object) as T;
+      yield jsonDeserialize(object) as T;
     }
   }
 

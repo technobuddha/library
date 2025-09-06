@@ -60,7 +60,7 @@ describe('snakeCase', () => {
   });
 
   test('should handle words suffixed by numbers', () => {
-    expect(snakeCase('version1')).toBe('version_1');
+    expect(snakeCase('version1')).toBe('version1');
   });
 
   test('should handle words prefixed by numbers', () => {

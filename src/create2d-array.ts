@@ -19,7 +19,7 @@ import { isFunction } from './is-function.ts';
  * @group Array
  * @category Construction
  */
-export function create2DArray<T>(
+export function create2dArray<T>(
   width: number,
   height: number,
   fill: T | ((this: void, x: number, y: number) => T),

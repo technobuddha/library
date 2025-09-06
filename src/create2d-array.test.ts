@@ -1,8 +1,8 @@
-import { create2DArray } from './create-2-d-array.ts';
+import { create2dArray } from './create2d-array.ts';
 
-describe('create2DArray', () => {
+describe('create2dArray', () => {
   test('should fill from value', () => {
-    expect(create2DArray(3, 4, 0)).toEqual([
+    expect(create2dArray(3, 4, 0)).toEqual([
       [0, 0, 0, 0],
       [0, 0, 0, 0],
       [0, 0, 0, 0],
@@ -10,7 +10,7 @@ describe('create2DArray', () => {
   });
 
   test('should fill from function', () => {
-    expect(create2DArray(3, 4, (x, y) => x * 10 + y)).toEqual([
+    expect(create2dArray(3, 4, (x, y) => x * 10 + y)).toEqual([
       [0, 1, 2, 3],
       [10, 11, 12, 13],
       [20, 21, 22, 23],

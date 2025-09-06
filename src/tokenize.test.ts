@@ -37,7 +37,8 @@ describe('tokenize', () => {
   });
 
   test('handles string with numbers', () => {
-    expect(tokenize('abc123 456def')).toEqual(['abc', '123', '456', 'def']);
+    expect(tokenize('abc123 456def')).toEqual(['abc123', '456', 'def']);
+    expect(tokenize('isIPV4Local')).toEqual(['is', 'IPV4', 'Local']);
   });
 
   test('handles unicode letters', () => {

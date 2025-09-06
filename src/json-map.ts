@@ -1,6 +1,7 @@
 import { type JsonObject } from 'type-fest';
 
-import { deserialize, serialize } from './json-serializer.ts';
+import { jsonDeserialize } from './json-deserialize.ts';
+import { jsonSerialize } from './json-serialize.ts';
 
 /**
  * A {@link Map} that allows serializable objects keys.
@@ -56,7 +57,7 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
    * Deletes the entry associated with the given key from the map.
    */
   public delete(value: K): boolean {
-    return this.map.delete(serialize(value));
+    return this.map.delete(jsonSerialize(value));
   }
 
   /**
@@ -64,7 +65,7 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
    */
   public *entries(): MapIterator<[K, V]> {
     for (const [key, value] of this.map.entries()) {
-      yield [deserialize(key) as K, value];
+      yield [jsonDeserialize(key) as K, value];
     }
   }
 
@@ -84,14 +85,14 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
    * Retrieves the value associated with the given key, or undefined if the key is not found.
    */
   public get(key: K): V | undefined {
-    return this.map.get(serialize(key));
+    return this.map.get(jsonSerialize(key));
   }
 
   /**
    * Determines whether the specified key exists in the map.
    */
   public has(value: K): boolean {
-    return this.map.has(serialize(value));
+    return this.map.has(jsonSerialize(value));
   }
 
   /**
@@ -99,7 +100,7 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
    */
   public *keys(): MapIterator<K> {
     for (const key of this.map.keys()) {
-      yield deserialize(key) as K;
+      yield jsonDeserialize(key) as K;
     }
   }
 
@@ -107,7 +108,7 @@ export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
    * Sets the value for the specified key in the map.
    */
   public set(key: K, value: V): this {
-    this.map.set(serialize(key), value);
+    this.map.set(jsonSerialize(key), value);
     return this;
   }
 
