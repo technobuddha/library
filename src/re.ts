@@ -90,6 +90,8 @@ export function re(flags: string): (template: TemplateStringsArray, ...args: Reg
 export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
 /**
  * Creates a tagged template function for building regular expressions with optional specified flags.
+ * @group RegExp
+ * @category Construction
  */
 export function re(
   first: string | TemplateStringsArray,

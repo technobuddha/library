@@ -38,7 +38,7 @@
   </svg>
   <font size="6">Technobuddha Library</font>
   <br/>
-  <font size="4">13 Classes, 49 Constants, 241 Functions, and 75 Types</font>
+  <font size="4">{{ total }}</font>
   <br/>
   <font color="#4fc921" size="5">0 dependencies</font>
 </center>

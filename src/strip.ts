@@ -3,6 +3,8 @@ import { empty } from './unicode.ts';
 
 /**
  * Options for stripping unwanted characters or sequences from strings.
+ * @group String
+ * @category Operations
  */
 export type StripOptions = {
   /**
@@ -19,6 +21,8 @@ export type StripOptions = {
  * @param input - The string to be processed.
  * @param options - Options to control what is stripped.  see {@link StripOptions}.
  * @returns The processed string with specified sequences removed.
+ * @group String
+ * @category Operations
  */
 export function strip(input: string, { ansiEscape = true }: StripOptions = {}): string {
   let output = input;

@@ -43,7 +43,7 @@
   </svg>
   <font size="6">Technobuddha Library</font>
   <br/>
-  <font size="4">13 Classes, 49 Constants, 241 Functions, and 75 Types</font>
+  <font size="4">13 Classes, 50 Constants, 244 Functions, and 77 Types</font>
   <br/>
   <font color="#4fc921" size="5">0 dependencies</font>
 </center>
@@ -71,8 +71,8 @@ this library has something for everyone.
 | [Object](https://doc.technobuddha.com//library/index_object.html) | 25 Functions and 1 Type |
 | [Programming](https://doc.technobuddha.com//library/index_programming.html) | 20 Functions and 4 Types |
 | [Random](https://doc.technobuddha.com//library/index_random.html) | 1 Class, 4 Functions, and 1 Type |
-| [RegExp](https://doc.technobuddha.com//library/index_regExp.html) | 7 Constants and 7 Functions |
-| [String](https://doc.technobuddha.com//library/index_string.html) | 57 Functions and 20 Types |
+| [RegExp](https://doc.technobuddha.com//library/index_regExp.html) | 8 Constants and 7 Functions |
+| [String](https://doc.technobuddha.com//library/index_string.html) | 58 Functions and 21 Types |
 | [Time](https://doc.technobuddha.com//library/index_time.html) | 1 Class, 17 Constants, 28 Functions, and 12 Types |
 | [Unicode](https://doc.technobuddha.com//library/index_unicode.html) | 16 Constants, 5 Functions, and 2 Types |
 | [Utility](https://doc.technobuddha.com//library/index_utility.html) | 1 Class |
