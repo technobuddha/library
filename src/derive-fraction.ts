@@ -1,5 +1,4 @@
-import { type DeconstructedNumber } from '../@types/deconstructed-number.ts';
-
+import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
 import { getDenominators } from './get-denominators.ts';
 import { type Numbering } from './numbering.ts';
 

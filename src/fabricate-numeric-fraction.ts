@@ -1,9 +1,8 @@
-import { type DeconstructedNumber } from '../@types/deconstructed-number.ts';
-import { deconstructNumber } from '../deconstruct-number.ts';
-import { fractionSlash } from '../unicode.ts';
-
+import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
 import { deriveFraction } from './derive-fraction.ts';
 import { type Numbering } from './numbering.ts';
+import { fractionSlash } from './unicode.ts';
 
 /**
  * Options for fabricating a numeric fraction.

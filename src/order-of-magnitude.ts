@@ -1,4 +1,4 @@
-import { illion } from './numbering/illion.ts';
+import { illion } from './illion.ts';
 
 /**
  * Get the spelled out word for an exponent

@@ -1,4 +1,4 @@
-import { type Numbering, numbering } from './numbering/numbering.ts';
+import { type Numbering, numbering } from './numbering.ts';
 import { empty, space } from './unicode.ts';
 
 /**

@@ -175,7 +175,7 @@ export * from './normalize-angle.ts';
 export * from './normalize-binary.ts';
 export * from './normalize-line-segment.ts';
 export * from './number-to-letter.ts';
-export * from './numbering/index.ts';
+export { type Numbering } from './numbering.ts';
 export * from './occurrence-in-month.ts';
 export { orderOfMagnitude } from './order-of-magnitude.ts';
 export { ordinal, type OrdinalOptions } from './ordinal.ts';

@@ -1,7 +1,6 @@
-import { cardinalOnes, cardinalTens } from '../constants.ts';
-import { space } from '../unicode.ts';
-
+import { cardinalOnes, cardinalTens } from './constants.ts';
 import { type Numbering } from './numbering.ts';
+import { space } from './unicode.ts';
 
 const ZERO = 0;
 const TEN = 10;

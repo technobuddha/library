@@ -1,6 +1,5 @@
-import { empty } from '../unicode.ts';
-
 import { type Numbering } from './numbering.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Represents the result of converting a number into its "illion" representation.

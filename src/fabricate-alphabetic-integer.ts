@@ -1,14 +1,13 @@
-import { cleanEnd } from '../clean-end.ts';
-import { cardinalOnes } from '../constants.ts';
-import { deconstructNumber } from '../deconstruct-number.ts';
-import { fraction } from '../fraction.ts';
-import { splitChars } from '../split-chars.ts';
-import { space } from '../unicode.ts';
-
+import { cleanEnd } from './clean-end.ts';
+import { cardinalOnes } from './constants.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
+import { fraction } from './fraction.ts';
 import { hundreds } from './hundreds.ts';
 import { illion } from './illion.ts';
 import { makeOrdinal } from './make-ordinal.ts';
 import { type Numbering } from './numbering.ts';
+import { splitChars } from './split-chars.ts';
+import { space } from './unicode.ts';
 
 /**
  * Converts a numeric input into its alphabetic (word-based) representation according to the specified numbering options.

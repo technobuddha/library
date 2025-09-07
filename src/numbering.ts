@@ -1,11 +1,10 @@
-import { deconstructNumber } from '../deconstruct-number.ts';
-import { empty, negativeSign, space } from '../unicode.ts';
-
+import { deconstructNumber } from './deconstruct-number.ts';
 import { fabricateAlphabeticFraction } from './fabricate-alphabetic-fraction.ts';
 import { fabricateAlphabeticInteger } from './fabricate-alphabetic-integer.ts';
 import { fabricateNumericFraction } from './fabricate-numeric-fraction.ts';
 import { fabricateNumericInteger } from './fabricate-numeric-integer.ts';
 import { makeOrdinal } from './make-ordinal.ts';
+import { empty, negativeSign, space } from './unicode.ts';
 
 /**
  * Options for controlling how numbers are converted to words or symbols.

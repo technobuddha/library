@@ -1,9 +1,8 @@
-import { deconstructNumber } from '../deconstruct-number.ts';
-import { empty } from '../unicode.ts';
-
+import { deconstructNumber } from './deconstruct-number.ts';
 import { illion } from './illion.ts';
 import { makeOrdinal } from './make-ordinal.ts';
 import { type Numbering } from './numbering.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Converts a numeric integer into its string representation.
