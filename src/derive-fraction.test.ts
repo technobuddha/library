@@ -1,6 +1,5 @@
-import { negativeZero } from '../constants.ts';
-import { deconstructNumber } from '../deconstruct-number.ts';
-
+import { negativeZero } from './constants.ts';
+import { deconstructNumber } from './deconstruct-number.ts';
 import { deriveFraction } from './derive-fraction.ts';
 
 const defaultOptions: Parameters<typeof deriveFraction>[1] = {

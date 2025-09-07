@@ -2273,7 +2273,7 @@ __metadata:
   resolution: "@technobuddha/library@workspace:."
   dependencies:
     "@giancosta86/typedoc-readonly": "npm:1.0.1"
-    "@technobuddha/project": "npm:0.99.6"
+    "@technobuddha/project": "npm:0.99.8"
     "@vitest/coverage-v8": "npm:3.2.4"
     cspell: "npm:9.2.0"
     jest-matcher-deep-close-to: "npm:3.0.2"
@@ -2285,9 +2285,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.99.6":
-  version: 0.99.6
-  resolution: "@technobuddha/project@npm:0.99.6"
+"@technobuddha/project@npm:0.99.8":
+  version: 0.99.8
+  resolution: "@technobuddha/project@npm:0.99.8"
   dependencies:
     "@eslint/js": "npm:9.35.0"
     "@inquirer/prompts": "npm:7.8.4"
@@ -2337,7 +2337,7 @@ __metadata:
     watch: "npm:1.0.2"
   bin:
     tbproject: bin/tbproject
-  checksum: 10c0/26315e373a4ffbc45b3153aec51051db929292f2d95cbc9f6cdd32804e564e78b3cf438de894ce9a9469bd3dfe5d2b59f742092ee94ec9ab0c3194b9dcae2cc4
+  checksum: 10c0/e33ea3e173f619f79cd0c74b0e3f4e9b02716f46b63b1dee7d7847d11ad65a6fda012650b777382ff1571d250b79b1b4a5c7da2d35e0bf9c07bf835a43524755
   languageName: node
   linkType: hard
 
