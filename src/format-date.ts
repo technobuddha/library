@@ -41,8 +41,8 @@ const masks: Readonly<Record<string, string>> = Object.freeze({
   isoWeekTimeZone: 'Wy"W"Www-Wd"T"hh:mm:ssTZ',
   isoWeekFullZone: 'Wy"W"Www-Wd"T"hh:mm:ss.ffTZ',
   isoOrdinal: 'YYYY-OO',
-  // cspell:ignore hhmmssfff
-  timestamp: 'YYYYMMDDhhmmssfff',
+  // cspell:ignore hhmmssff
+  timestamp: 'YYYYMMDDhhmmssff',
 
   cookie: 'dddd, DD MMM YYYY hh:mm:ss GMT',
 });
