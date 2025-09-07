@@ -1,6 +1,6 @@
 import { build } from './build.ts';
 import { collapse } from './collapse.ts';
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { zipperMerge } from './zipper-merge.ts';
 
 /**

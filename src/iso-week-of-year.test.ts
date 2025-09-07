@@ -1,4 +1,4 @@
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { isoWeekOfYear } from './iso-week-of-year.ts';
 
 describe('isoWeekOfYear', () => {

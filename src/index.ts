@@ -226,6 +226,7 @@ export * from './split-words.ts';
 export * from './standard-deviation.ts';
 export * from './star.ts';
 export * from './start-case.ts';
+export * from './strip.ts';
 export * from './sum.ts';
 export { summarize } from './summarize.ts';
 export * from './syllables.ts';

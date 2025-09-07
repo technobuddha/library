@@ -1,6 +1,4 @@
-import { type DayOfWeek } from './constants.ts';
-import { day, daysPerWeek } from './constants.ts';
-import { type DateOptions } from './date.ts';
+import { type DateOptions, day, type DayOfWeek, daysPerWeek } from './date.ts';
 import { modulo } from './modulo.ts';
 
 /**

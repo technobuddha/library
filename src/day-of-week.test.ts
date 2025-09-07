@@ -1,4 +1,4 @@
-import { day } from './constants.ts';
+import { day } from './date.ts';
 import { dayOfWeek } from './day-of-week.ts';
 
 describe('dayOfWeek', () => {

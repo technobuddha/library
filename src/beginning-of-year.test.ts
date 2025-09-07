@@ -1,5 +1,5 @@
 import { beginningOfYear } from './beginning-of-year.ts';
-import { month } from './constants.ts';
+import { month } from './date.ts';
 
 describe('beginningOfYear', () => {
   test('should compute the beginning of the year', () => {

@@ -1,4 +1,4 @@
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { isSameYear } from './is-same-year.ts';
 
 describe('isSameYear', () => {

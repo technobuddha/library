@@ -1,4 +1,4 @@
-import { secondsPerHour, secondsPerMinute } from './constants.ts';
+import { secondsPerHour, secondsPerMinute } from './date.ts';
 import { dayOfWeek } from './day-of-week.ts';
 import { dayOfYear } from './day-of-year.ts';
 import { isoWeekOfYear } from './iso-week-of-year.ts';

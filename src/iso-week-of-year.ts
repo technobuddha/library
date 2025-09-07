@@ -1,6 +1,5 @@
 import { beginningOfWeek } from './beginning-of-week.ts';
-import { type DayOfWeek } from './constants.ts';
-import { day, month, ticksPerWeek } from './constants.ts';
+import { day, type DayOfWeek, month, ticksPerWeek } from './date.ts';
 import { floor } from './floor.ts';
 import { isoWeeksInYear } from './iso-weeks-in-year.ts';
 

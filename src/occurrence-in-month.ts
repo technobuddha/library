@@ -1,8 +1,6 @@
 import { addTime } from './add-time.ts';
 import { beginningOfMonth } from './beginning-of-month.ts';
-import { type DayOfWeek } from './constants.ts';
-import { daysPerWeek } from './constants.ts';
-import { type DateOptions } from './date.ts';
+import { type DateOptions, type DayOfWeek, daysPerWeek } from './date.ts';
 import { daysInMonth } from './days-in-month.ts';
 import { modulo } from './modulo.ts';
 

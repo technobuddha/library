@@ -1,6 +1,5 @@
 import { beginningOfYear } from './beginning-of-year.ts';
-import { ticksPerDay } from './constants.ts';
-import { type DateOptions } from './date.ts';
+import { type DateOptions, ticksPerDay } from './date.ts';
 import { floor } from './floor.ts';
 
 /**

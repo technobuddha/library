@@ -1,5 +1,4 @@
-import { type DayOfWeek } from './constants.ts';
-import { day, daysPerWeek, month } from './constants.ts';
+import { day, type DayOfWeek, daysPerWeek, month } from './date.ts';
 import { isNumber } from './is-number.ts';
 import { modulo } from './modulo.ts';
 

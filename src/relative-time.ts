@@ -1,5 +1,5 @@
 import { addTime } from './add-time.ts';
-import { secondsPerDay, secondsPerHour, secondsPerMinute, ticksPerSecond } from './constants.ts';
+import { secondsPerDay, secondsPerHour, secondsPerMinute, ticksPerSecond } from './date.ts';
 import { floor } from './floor.ts';
 import { formatDate } from './format-date.ts';
 import { isSameDay } from './is-same-day.ts';

@@ -1,4 +1,4 @@
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { endOfWeek } from './end-of-week.ts';
 
 describe('endOfWeek', () => {

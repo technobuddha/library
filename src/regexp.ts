@@ -1,7 +1,6 @@
 /* eslint-disable unicorn/better-regex */
 /* eslint-disable require-unicode-regexp */
 /* eslint-disable no-control-regex */
-
 import { re } from './re.ts';
 
 /**
@@ -22,7 +21,7 @@ const IPV4SEG = /(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])/;
  * ipV4.test('abc.def.ghi.jkl'); // false
  * ```
  */
-export const ipV4 = re`^${IPV4SEG}\\.${IPV4SEG}\\.${IPV4SEG}\\.${IPV4SEG}$`;
+export const ipV4 = re`^${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}\.${IPV4SEG}$`;
 
 /**
  * Validate a private network 10.x.x.x address.
@@ -226,7 +225,7 @@ const EMAILADDRESS = re`(?:${EMAILGLYPH}+(?:[.]${EMAILGLYPH}+)*|"(?:${EMAILQUOTE
  * email.test('not-an-email'); // false
  * ```
  */
-export const email = re`${EMAILADDRESS}@(?:\\[${ipV4}\\]|${domain})$`;
+export const email = re`${EMAILADDRESS}@(?:\[${ipV4}\]|${domain})$`;
 
 /**
  * Regular expression that matches any whitespace character, including standard spaces,
@@ -236,3 +235,49 @@ export const email = re`${EMAILADDRESS}@(?:\\[${ipV4}\\]|${domain})$`;
  * @category Constants
  */
 export const trimEquivalent = /[\s\uFEFF\u00A0]/u;
+
+// Valid string terminator sequences are BEL, ESC\, and 0x9c (String Terminator))
+
+/**
+ * Matches ANSI terminator: Bell (BEL), String Terminator (ST), ESC\\
+ * @internal
+ */
+const ST = re`\u0007|\u001b\u005c|\u009c`;
+
+/**
+ * OSC sequences only: ESC ] ... ST (non-greedy until the first ST)
+ * @internal
+ */
+const osc = re`\u001B\][\s\S]*?${ST}`;
+
+/**
+ * CSI and related: ESC/C1, optional intermediates, optional params (supports ; and :) then final byte
+ * @internal
+ */
+const csi = re`[\u001B\u009B][\[\]()#;?]*(?:\d{1,4}(?:[;:]\d{0,4})*)?[\dA-PR-TZcf-nq-uy=><~]`;
+
+/**
+ * Regular expression that matches ANSI escape sequences, including OSC (Operating System Command)
+ * and CSI (Control Sequence Introducer) patterns. Useful for stripping or identifying ANSI codes
+ * in strings, such as those used for terminal text formatting.
+ *
+ * @see https://en.wikipedia.org/wiki/ANSI_escape_code
+ * @group RegExp
+ * @category Constants
+ */
+export const ansiEscapes = re('g')`${osc}|${csi}`;
+
+// ymd
+// dmy
+// mdy
+
+// yy yyyy
+// m mm mmm mmmm
+// dd ddd dddd
+
+// /
+// - (- and hyphen)
+// .
+// (space)
+
+// const date1 = /\d{4}-\d{2}-\d{2}/; // YYYY-MM-DD

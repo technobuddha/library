@@ -1,4 +1,4 @@
-import { day } from './constants.ts';
+import { day } from './date.ts';
 import { occurrenceInMonth } from './occurrence-in-month.ts';
 
 describe('occurrenceInMonth', () => {

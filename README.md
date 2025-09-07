@@ -73,7 +73,7 @@ this library has something for everyone.
 | [Random](https://doc.technobuddha.com//library/index_random.html) | 1 Class, 4 Functions, and 1 Type |
 | [RegExp](https://doc.technobuddha.com//library/index_regExp.html) | 7 Constants and 7 Functions |
 | [String](https://doc.technobuddha.com//library/index_string.html) | 57 Functions and 20 Types |
-| [Time](https://doc.technobuddha.com//library/index_time.html) | 1 Class, 17 Constants, 27 Functions, and 12 Types |
+| [Time](https://doc.technobuddha.com//library/index_time.html) | 1 Class, 17 Constants, 28 Functions, and 12 Types |
 | [Unicode](https://doc.technobuddha.com//library/index_unicode.html) | 16 Constants, 5 Functions, and 2 Types |
 | [Utility](https://doc.technobuddha.com//library/index_utility.html) | 1 Class |
 

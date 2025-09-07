@@ -8,7 +8,7 @@ import {
   ticksPerHour,
   ticksPerMinute,
   ticksPerSecond,
-} from './constants.ts';
+} from './date.ts';
 import { isString } from './is-string.ts';
 
 /**

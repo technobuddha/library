@@ -1,5 +1,4 @@
-import { month } from './constants.ts';
-import { type DateOptions } from './date.ts';
+import { type DateOptions, month } from './date.ts';
 import { isLeapYear } from './is-leap-year.ts';
 
 /**

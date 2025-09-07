@@ -1,4 +1,4 @@
-import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond } from './constants.ts';
+import { ticksPerDay, ticksPerHour, ticksPerMinute, ticksPerSecond } from './date.ts';
 import { floor } from './floor.ts';
 import { space } from './unicode.ts';
 

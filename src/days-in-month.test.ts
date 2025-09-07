@@ -1,4 +1,4 @@
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { daysInMonth } from './days-in-month.ts';
 
 describe('daysInMonth', () => {

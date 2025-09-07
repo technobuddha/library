@@ -1,5 +1,5 @@
 import { beginningOfWeek } from './beginning-of-week.ts';
-import { day } from './constants.ts';
+import { day } from './date.ts';
 import { type DateOptions } from './date.ts';
 
 /**
