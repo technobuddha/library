@@ -1,5 +1,5 @@
-import { empty } from './constants.ts';
 import { splitWords } from './split-words.ts';
+import { empty } from './unicode.ts';
 
 describe('splitWords', () => {
   test('should split on whitespace', () => {

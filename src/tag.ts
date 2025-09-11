@@ -1,16 +1,15 @@
 import { build } from './build.ts';
-import { space } from './constants.ts';
 import { escapeHTML } from './escape-html.ts';
+import { space } from './unicode.ts';
 
 /**
  * Surround text with an HTML tag
- *
  * @param input - The text to surround
  * @param tagName - The name of the tag
  * @param attributes - A dictionary of name value pairs to use for attributes
  * @returns HTML tag with text
  * @group String
- * @category HTML
+ * @category Construction
  */
 export function tag(
   input: string,

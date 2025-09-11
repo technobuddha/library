@@ -1,8 +1,7 @@
 /**
  * Represents a number that has been deconstructed into its mathematical components.
- *
  * @group Math
- * @category Numbers
+ * @category Number
  */
 export type DeconstructedNumber = {
   /** The original numeric value, rounded to the specified precision */

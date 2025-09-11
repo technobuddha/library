@@ -10,7 +10,6 @@ export type LeapYearOptions = {
 
 /**
  * Determine if a year is a leap year
- *
  * @param input - A date, or a year number
  * @param options - see {@link LeapYearOptions}
  * @returns true, if the specified year is a leap year

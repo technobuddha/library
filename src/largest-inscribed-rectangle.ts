@@ -10,24 +10,23 @@ import { rotate } from './rotate.ts';
 /**
  * Represents a rectangle that has been rotated by a certain angle.
  * Extends the `Rect` type with additional properties for the area and rotation angle.
- *
+ * const hull = convexHull(points);
  * @group Geometry
  * @category Rectangle
  */
 export type RotatedRect = Rect & {
-  /* The area of the rotated rectangle. */
+  /** The area of the rotated rectangle. */
   area: number;
-  /* The rotation angle of the rectangle, in radians. */
+  /** The rotation angle of the rectangle, in radians. */
   angle: number;
 };
 
 /**
  * Configuration options for the largest inscribed rectangle algorithm.
- *
  * @group Geometry
  * @category Rectangle
  */
-export type LargestInscribedRectangleOptions = {
+export type LargestInscribedRectUnitOptions = {
   /**
    * If true, only consider axis-aligned rectangles.
    * If false, considers rectangles at all orientations.
@@ -43,35 +42,62 @@ export type LargestInscribedRectangleOptions = {
   squareOnly?: boolean;
 };
 
-// Algorithm constants
+/**
+ * The number of sample points to use when performing calculations
+ * related to finding the largest inscribed rectangle.
+ *
+ * Adjusting this value changes the resolution and accuracy of the
+ * sampling process. Higher values may yield more precise results
+ * at the cost of increased computation time.
+ * @internal
+ */
 const SAMPLE_POINT_COUNT = 20;
+/**
+ * The tolerance value used to determine when two areas are considered equal.
+ * This small epsilon helps account for floating-point precision errors in area calculations.
+ * @remarks
+ * Used in geometric algorithms to compare areas with a margin of error.
+ * @internal
+ */
 const AREA_TOLERANCE = 1e-10;
+/**
+ * The tolerance value used to compare angles for equality.
+ * Any difference between angles less than this value is considered negligible.
+ * This helps to account for floating-point precision errors in angle calculations.
+ * @internal
+ */
 const ANGLE_TOLERANCE = 1e-10;
+/**
+ * Represents an extremely large value used to simulate an "infinite" vertical line extent.
+ * Useful for geometric algorithms that require a practical substitute for infinity.
+ * @internal
+ */
 const VERTICAL_LINE_EXTENT = 1e100; // For creating "infinite" vertical lines
 
 /**
  * Computes the largest rectangle that can be inscribed within the given polygon.
- *
  * @param polygon - The polygon within which to inscribe the rectangle.
  * @param options - Configuration options for the computation.
  * @returns The largest inscribed rectangle.
  * @throws `Error` When polygon has fewer than 3 vertices
- *
  * @group Geometry
  * @category Polygon
  * @category Rectangle
+ * @example
+ * ```typescript
+ * const polygon: Polygon = [
+ *   { x: 0, y: 0 },
+ *   { x: 10, y: 0 },
+ *   { x: 10, y: 10 },
+ *   { x: 0, y: 10 }
+ * ];
+ * const rect = largestInscribedRectangle(polygon, { aligned: true });
+ * // rect: { x: 0, y: 0, width: 10, height: 10 }
+ * ```
  */
 export function largestInscribedRectangle(
   polygon: Polygon,
-  options?: { aligned?: true; squareOnly?: boolean },
-): Rect;
-export function largestInscribedRectangle(
-  polygon: Polygon,
-  options: { aligned: false; squareOnly?: boolean },
-): RotatedRect;
-export function largestInscribedRectangle(
-  polygon: Polygon,
-  { aligned = true, squareOnly = false }: LargestInscribedRectangleOptions = {},
+  { aligned = true, squareOnly = false }: LargestInscribedRectUnitOptions = {},
 ): Rect | RotatedRect {
   if (polygon.length < 3) {
     throw new Error(`Polygon must have at least 3 vertices, received ${polygon.length}`);
@@ -90,6 +116,7 @@ export function largestInscribedRectangle(
  * @param polygon - The polygon to search within
  * @param squareOnly - If true, only consider squares
  * @returns The largest inscribed rectangle with area and angle properties
+ * @internal
  */
 function findLargestRotatedRectangle(polygon: Polygon, squareOnly: boolean): RotatedRect {
   let maxRectangle: RotatedRect = { x: 0, y: 0, width: 0, height: 0, area: 0, angle: 0 };
@@ -118,6 +145,7 @@ function findLargestRotatedRectangle(polygon: Polygon, squareOnly: boolean): Rot
  * Combines polygon vertex x-coordinates with evenly spaced sample points.
  * @param polygon - The polygon to sample coordinates from
  * @returns Sorted array of unique x-coordinates
+ * @internal
  */
 function generateSampleXCoords(polygon: Polygon): number[] {
   const bounding = bounds(polygon);
@@ -138,6 +166,7 @@ function generateSampleXCoords(polygon: Polygon): number[] {
  * @param polygon - The polygon to search within
  * @param squareOnly - If true, only consider squares
  * @returns The largest inscribed rectangle with area and angle properties
+ * @internal
  */
 function findLargestAxisAlignedRectangle(polygon: Polygon, squareOnly: boolean): RotatedRect {
   let maxArea = 0;
@@ -169,6 +198,7 @@ function findLargestAxisAlignedRectangle(polygon: Polygon, squareOnly: boolean):
  * @param x1 - Second x-coordinate of the rectangle
  * @param squareOnly - If true, constrain to square dimensions
  * @returns Rectangle dimensions and y-position
+ * @internal
  */
 function calculateRectangleDimensions(
   polygon: Polygon,
@@ -199,6 +229,7 @@ function calculateRectangleDimensions(
  * @param x0 - First boundary x-coordinate
  * @param x1 - Second boundary x-coordinate
  * @returns Maximum height and optimal y-position
+ * @internal
  */
 function getMaxHeightBetweenX(
   polygon: Polygon,
@@ -248,6 +279,7 @@ function getMaxHeightBetweenX(
  * @param segment - The line segment to intersect
  * @param x - The x-coordinate of the vertical line
  * @returns The y-coordinate of intersection, or null if no intersection
+ * @internal
  */
 function getVerticalIntersection(segment: LineSegment, x: number): number | null {
   const verticalLine: LineSegment = {

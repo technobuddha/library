@@ -1,20 +1,19 @@
 import { type TextEncoding } from './@types/text-encoding.ts';
-import { type TypedArray } from './@types/typed-array.ts';
-import { replacementCharacter } from './constants.ts';
+import { type BinaryObject } from './binary-object.ts';
+import { replacementCharacter } from './unicode.ts';
 
 const replacement = replacementCharacter.codePointAt(0)!;
 
 /* eslint-disable no-bitwise */
 /**
  * Decode a UTF8 encoded string into unicode
- *
  * @param input - the utf encoded string
  * @returns the decoded strings (which is encoded as UTF-16 by javascript)
  * @group Unicode
  * @category Encoding
  */
 export function decodeText(
-  input: ArrayLike<number> | TypedArray | ArrayBuffer,
+  input: BinaryObject | ArrayLike<number>,
   _encoding: TextEncoding = 'utf8',
 ): string {
   const buffer =

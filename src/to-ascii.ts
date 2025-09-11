@@ -6,7 +6,7 @@ import { splitChars } from './split-chars.ts';
  * Change a string to be all from the basic latin unicode plane
  * @param input - The string
  * @group String
- * @category Extraction
+ * @category Operations
  */
 export function toASCII(input: string): string {
   return build(collapse(splitChars(input).map((c) => convertToASCII[c])));

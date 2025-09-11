@@ -1,12 +1,11 @@
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Split a string into an array of lines
- *
  * @param input - The string to split
  * @returns array of lines
  * @group String
- * @category Split
+ * @category Deconstruction
  */
 export function splitLines(input: string): string[] {
   if (input === empty) {

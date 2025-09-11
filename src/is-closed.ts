@@ -5,10 +5,8 @@ import { type Polygon } from './@types/geometry.ts';
  *
  * A polygon is considered closed if it has more than one point and
  * its first and last points have identical `x` and `y` coordinates.
- *
  * @param polygon - An array of points representing the polygon, where each point has `x` and `y` properties.
  * @returns `true` if the polygon is closed; otherwise, `false`.
- *
  * @group Geometry
  * @category Polygon
  */

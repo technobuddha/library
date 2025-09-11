@@ -3,9 +3,8 @@ import { deconstructNumber } from './deconstruct-number.ts';
 
 /**
  * Options for the {@link floor} function
- *
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export type FloorOptions = {
   /** A small value to add to the input before applying the floor, useful for floating-point tolerance. Defaults to 0. */
@@ -16,12 +15,18 @@ export type FloorOptions = {
 
 /**
  * Returns the largest integer less than or equal to the given number, with optional tolerance and precision adjustments.
- *
  * @param input - The number to floor.
  * @param options - Optional settings for the operation.
  * @returns The floored number, adjusted for tolerance and precision.
+ * @example
+ * ```typescript
+ * floor(2.7); // 2
+ * floor(-2.7); // -3
+ * floor(2.999, { tolerance: 0.001 }); // 2
+ * floor(2.345, { precision: 2 }); // 2.34
+ * ```
  * @group Math
- * @category Arithmetic
+ * @category Operations
  */
 export function floor(input: number, { tolerance = 0, precision = 0 }: FloorOptions = {}): number {
   if (Number.isNaN(input) || !Number.isFinite(input)) {

@@ -1,13 +1,21 @@
 /**
  * Compare two numbers
- *
- * @param a - First object
- * @param b -  Second object
+ * @param a - First number
+ * @param b - Second number
  * @returns 0 if a == b; -1 if a \< b; 1 if a \> b
+ * @example
+ * ```typescript
+ * compareNumbers(2, 3); // -1
+ * compareNumbers(3, 2); // 1
+ * compareNumbers(2, 2); // 0
+ * compareNumbers(null, 2); // -1
+ * compareNumbers(2, null); // 1
+ * compareNumbers(null, null); // 0
+ * ```
  * @group Math
  * @category Comparison
  */
-export function compareNumbers(a: number | null, b: number | null): -1 | 0 | 1 {
+export function compareNumbers(a: number | null, b: number | null): number {
   if (a === b) {
     return 0;
   }

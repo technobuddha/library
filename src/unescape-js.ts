@@ -1,9 +1,32 @@
+// cspell:ignore unnnn
 /**
  * Unescape a string encoded in Javascript style
  *
+ * | Escape Sequence      | Character          | Hex                  |
+ * | -------------------- | ------------------ | -------------------- |
+ * | \\b                  | Backspace          | 0x08                 |
+ * | \\t                  | Tab                | 0x09                 |
+ * | \\n                  | Newline            | 0x0a                 |
+ * | \\v                  | Vertical Tab       | 0x0b                 |
+ * | \\f                  | Form Feed          | 0x0c                 |
+ * | \\r                  | Carriage Return    | 0x0d                 |
+ * | \\"                  | Double Quote       | 0x22                 |
+ * | \\'                  | Single Quote       | 0x27                 |
+ * | \\\\                 | Backslash          | 0x5c                 |
+ * | \\n…n[^1]            | Octal Escape       | 0x0000-0x01ff    |
+ * | \\xnn                | Hexadecimal Escape | 0x0000-0x00ff    |
+ * | \\unnnn              | Unicode Escape     | 0x00000-0x00ffff   |
+ * | \\u\{code-point\}    | Code Point Escape  | 0x00000-0x10ffff   |
  * @param input - the string to unescape
  * @returns the string with escapes resolved
- * @group Encoding
+ * @example
+ * ```typescript
+ * unescapeJS('Hello\\nWorld'); // "Hello\nWorld"
+ * unescapeJS('\\u20ac'); // "€"
+ * unescapeJS('\\x48\\x65\\x6c\\x6c\\x6f'); // "Hello"
+ * unescapeJS('\\u{1F600}'); // "😀"
+ * ```
+ * @group Programming
  * @category Escaping
  */
 export function unescapeJS(input: string): string {

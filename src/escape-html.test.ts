@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { escapeHTML } from './escape-html.ts';
+import { space } from './unicode.ts';
 
 describe('escapeHTML', () => {
   test('should escape basic characters', () => {
@@ -26,13 +26,13 @@ describe('escapeHTML', () => {
   });
 
   test('should escape Latin-1, BMP or astral when escapeNonAscii is set', () => {
-    expect(escapeHTML('¡¢£ýþÿ', { escapeNonAscii: true })).toBe(
+    expect(escapeHTML('¡¢£ýþÿ', { escapeNonASCII: true })).toBe(
       '&#161;&#162;&#163;&#253;&#254;&#255;',
     );
-    expect(escapeHTML('ΑΒΓΔΕΖ', { escapeNonAscii: true })).toBe(
+    expect(escapeHTML('ΑΒΓΔΕΖ', { escapeNonASCII: true })).toBe(
       '&#913;&#914;&#915;&#916;&#917;&#918;',
     );
-    expect(escapeHTML('😀😁😂😺😸😹', { escapeNonAscii: true })).toBe(
+    expect(escapeHTML('😀😁😂😺😸😹', { escapeNonASCII: true })).toBe(
       '&#128512;&#128513;&#128514;&#128570;&#128568;&#128569;',
     );
   });

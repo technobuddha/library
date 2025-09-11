@@ -1,17 +1,13 @@
-import { type StringLike } from './@types/string-like.ts';
 import { collapse } from './collapse.ts';
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Concatenates strings and/or arrays of strings
- *
  * @param args - Concatenates a list of strings, string arrays, or functions that return a string or string array.
  * @returns The concatenation of *args*.
  * @group String
- * @category Build
+ * @category Construction
  */
-export function build(
-  ...args: (StringLike | Generator<StringLike> | Iterable<StringLike> | (() => StringLike))[]
-): string {
+export function build(...args: Parameters<typeof collapse<string>>): string {
   return collapse(...args).join(empty);
 }

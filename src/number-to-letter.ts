@@ -1,14 +1,13 @@
-import { empty } from './constants.ts';
 import { floor } from './floor.ts';
+import { empty } from './unicode.ts';
 
 // eslint-disable-next-line no-secrets/no-secrets
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 /**
  * Options for the {@link numberToLetter} function
- *
  * @group String
- * @category Sorting
+ * @category Operations
  */
 export type NumberToLetterOptions = {
   /** The alphabet to use */
@@ -21,7 +20,7 @@ export type NumberToLetterOptions = {
  * @param options - see {@link NumberToLetterOptions}
  * @returns The letter
  * @group String
- * @category Sorting
+ * @category Operations
  */
 export function numberToLetter(
   num: number,

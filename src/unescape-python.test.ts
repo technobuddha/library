@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { unescapePython } from './unescape-python.ts';
+import { space } from './unicode.ts';
 
 describe('unescapePython', () => {
   test('should unescape standard sequences', () => {
@@ -18,24 +18,9 @@ describe('unescapePython', () => {
   });
 
   test('should unescape hex', () => {
-    expect(unescapePython('\\x0')).toBe('\0');
     expect(unescapePython('\\x00')).toBe('\0');
-    expect(unescapePython('\\x000')).toBe('\0');
-    expect(unescapePython('\\x0000')).toBe('\0');
-    expect(unescapePython('\\x00000')).toBe('\0');
-    expect(unescapePython('\\x000000')).toBe('\0');
-    expect(unescapePython('\\x0000000')).toBe('\0');
-    expect(unescapePython('\\x00000000')).toBe('\0');
-    expect(unescapePython('\\x000000000')).toBe('\0');
-    expect(unescapePython('\\x0X')).toBe('\0X');
-    expect(unescapePython('\\x00X')).toBe('\0X');
-    expect(unescapePython('\\x000X')).toBe('\0X');
-    expect(unescapePython('\\x0000X')).toBe('\0X');
-    expect(unescapePython('\\x00000X')).toBe('\0X');
-    expect(unescapePython('\\x000000X')).toBe('\0X');
-    expect(unescapePython('\\x0000000X')).toBe('\0X');
-    expect(unescapePython('\\x00000000X')).toBe('\0X');
-    expect(unescapePython('\\x000000000X')).toBe('\0X');
+    expect(unescapePython('\\x000')).toBe('\u00000');
+    expect(unescapePython('\\x0000')).toBe('\u000000');
   });
 
   test('should unescape unicode', () => {

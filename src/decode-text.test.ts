@@ -1,7 +1,7 @@
 // cspell:ignore ΑΒΓΔΕΖ, ΑΒΓΔ
 
-import { replacementCharacter } from './constants.ts';
 import { decodeText } from './decode-text.ts';
+import { replacementCharacter } from './unicode.ts';
 
 describe('decodeText', () => {
   test('should not change ASCII', () => {

@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { pascalCase } from './pascal-case.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('pascalCase', () => {
   test('should take human case', () => {
@@ -49,7 +49,7 @@ describe('pascalCase', () => {
   test('should break on hyphens', () => {
     expect(pascalCase('well-known')).toBe('WellKnown');
     expect(pascalCase(`well${hyphen}known`)).toBe('WellKnown');
-    expect(pascalCase(`well${nbHyphen}known`)).toBe('WellKnown');
+    expect(pascalCase(`well${nonBreakingHyphen}known`)).toBe('WellKnown');
   });
 
   test('should handle words with multiple upper-case letters', () => {

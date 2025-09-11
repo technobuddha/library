@@ -27,26 +27,26 @@ describe('normalizeAngle', () => {
   });
 
   test('converts positive angles with units', () => {
-    expect(normalizeAngle(0, 'degrees')).toBe((0 * Math.PI) / 2);
-    expect(normalizeAngle(90, 'degrees')).toBe((1 * Math.PI) / 2);
-    expect(normalizeAngle(180, 'degrees')).toBe((2 * Math.PI) / 2);
-    expect(normalizeAngle(270, 'degrees')).toBe((3 * Math.PI) / 2);
-    expect(normalizeAngle(360, 'degrees')).toBe((0 * Math.PI) / 2);
-    expect(normalizeAngle(450, 'degrees')).toBe((1 * Math.PI) / 2);
-    expect(normalizeAngle(540, 'degrees')).toBe((2 * Math.PI) / 2);
-    expect(normalizeAngle(630, 'degrees')).toBe((3 * Math.PI) / 2);
-    expect(normalizeAngle(720, 'degrees')).toBe((0 * Math.PI) / 2);
+    expect(normalizeAngle(0, { unit: 'degrees' })).toBe((0 * Math.PI) / 2);
+    expect(normalizeAngle(90, { unit: 'degrees' })).toBe((1 * Math.PI) / 2);
+    expect(normalizeAngle(180, { unit: 'degrees' })).toBe((2 * Math.PI) / 2);
+    expect(normalizeAngle(270, { unit: 'degrees' })).toBe((3 * Math.PI) / 2);
+    expect(normalizeAngle(360, { unit: 'degrees' })).toBe((0 * Math.PI) / 2);
+    expect(normalizeAngle(450, { unit: 'degrees' })).toBe((1 * Math.PI) / 2);
+    expect(normalizeAngle(540, { unit: 'degrees' })).toBe((2 * Math.PI) / 2);
+    expect(normalizeAngle(630, { unit: 'degrees' })).toBe((3 * Math.PI) / 2);
+    expect(normalizeAngle(720, { unit: 'degrees' })).toBe((0 * Math.PI) / 2);
   });
 
   test('converts negative angles with units', () => {
-    expect(normalizeAngle(-0, 'degrees')).toBe((0 * Math.PI) / 2);
-    expect(normalizeAngle(-90, 'degrees')).toBe((3 * Math.PI) / 2);
-    expect(normalizeAngle(-180, 'degrees')).toBe((2 * Math.PI) / 2);
-    expect(normalizeAngle(-270, 'degrees')).toBe((1 * Math.PI) / 2);
-    expect(normalizeAngle(-360, 'degrees')).toBe((0 * Math.PI) / 2);
-    expect(normalizeAngle(-450, 'degrees')).toBe((3 * Math.PI) / 2);
-    expect(normalizeAngle(-540, 'degrees')).toBe((2 * Math.PI) / 2);
-    expect(normalizeAngle(-630, 'degrees')).toBe((1 * Math.PI) / 2);
-    expect(normalizeAngle(-720, 'degrees')).toBe((0 * Math.PI) / 2);
+    expect(normalizeAngle(-0, { unit: 'degrees' })).toBe((0 * Math.PI) / 2);
+    expect(normalizeAngle(-90, { unit: 'degrees' })).toBe((3 * Math.PI) / 2);
+    expect(normalizeAngle(-180, { unit: 'degrees' })).toBe((2 * Math.PI) / 2);
+    expect(normalizeAngle(-270, { unit: 'degrees' })).toBe((1 * Math.PI) / 2);
+    expect(normalizeAngle(-360, { unit: 'degrees' })).toBe((0 * Math.PI) / 2);
+    expect(normalizeAngle(-450, { unit: 'degrees' })).toBe((3 * Math.PI) / 2);
+    expect(normalizeAngle(-540, { unit: 'degrees' })).toBe((2 * Math.PI) / 2);
+    expect(normalizeAngle(-630, { unit: 'degrees' })).toBe((1 * Math.PI) / 2);
+    expect(normalizeAngle(-720, { unit: 'degrees' })).toBe((0 * Math.PI) / 2);
   });
 });

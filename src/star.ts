@@ -1,15 +1,28 @@
-import { type Cartesian, type Polygon } from './@types/geometry.ts';
+import { type Cartesian, Origin, type Polygon } from './@types/geometry.ts';
+import { type OriginOptions } from './angle.ts';
 
 /**
- * Generates the vertices of a star-shaped polygon.
- *
+ * Generates a star-shaped polygon.
  * @param sides - The number of points (arms) of the star. Must be at least 3.
  * @param outer - The radius from the origin to the outer vertices (tips) of the star.
  * @param inner - The radius from the origin to the inner vertices (indentations) of the star. Defaults to half of `outer`.
- * @param origin - The center point of the star, as a Cartesian coordinate. Defaults to `{ x: 0, y: 0 }`.
- * @returns An array of `Cartesian` points representing the vertices of the star in drawing order.
+ * @param options - see {@link OriginOptions}
+ * @returns A star shaped polygon.
  * @throws `TypeError` If `sides` is less than 3.
- *
+ * @example
+ * ```typescript
+ * star(4, 2, 1);
+ * // [
+ * //   { x: 2, y: 0 },
+ * //   { x: √2/2, y: √2/2 },
+ * //   { x: 0, y: 2 },
+ * //   { x: -√2/2, y: √2/2 },
+ * //   { x: -2, y: 0 },
+ * //   { x: -√2/2, y: -√2/2 },
+ * //   { x: 0, y: -2 },
+ * //   { x: √2/2, y: -√2/2 }
+ * // ]
+ * ```
  * @group Geometry
  * @category Polygon
  */
@@ -17,8 +30,8 @@ export function star(
   sides = 3,
   outer = 1,
   inner = outer * 0.5,
-  // eslint-disable-next-line unicorn/no-object-as-default-parameter
-  origin: Cartesian = { x: 0, y: 0 },
+
+  { origin = Origin }: OriginOptions = {},
 ): Polygon {
   if (sides < 3) {
     throw new TypeError('A polygon must have at least 3 sides.');

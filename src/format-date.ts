@@ -1,11 +1,12 @@
-import { empty, secondsPerHour, secondsPerMinute } from './constants.ts';
+import { secondsPerHour, secondsPerMinute } from './date.ts';
 import { dayOfWeek } from './day-of-week.ts';
 import { dayOfYear } from './day-of-year.ts';
 import { isoWeekOfYear } from './iso-week-of-year.ts';
 import { julian } from './julian.ts';
-import { ordinal } from './numbering/ordinal.ts';
-import { padNumber } from './pad-number.ts';
+import { ordinal } from './ordinal.ts';
+import { pad } from './pad.ts';
 import { timezone } from './timezone.ts';
+import { empty } from './unicode.ts';
 
 const tokenizer =
   /[hHmDfO]{1,2}|[s]{1,3}|YYYY|YY|[Md]{1,4}|W(y|w{1,2}|d)|TZ|GMT|TH|T{1,2}|AM|PM|CE|BCE|AD|BC|E{2,3}|J|Q|"[^"]*"|'[^']*'/gu;
@@ -40,6 +41,8 @@ const masks: Readonly<Record<string, string>> = Object.freeze({
   isoWeekTimeZone: 'Wy"W"Www-Wd"T"hh:mm:ssTZ',
   isoWeekFullZone: 'Wy"W"Www-Wd"T"hh:mm:ss.ffTZ',
   isoOrdinal: 'YYYY-OO',
+  // cspell:ignore hhmmssff
+  timestamp: 'YYYYMMDDhhmmssff',
 
   cookie: 'dddd, DD MMM YYYY hh:mm:ss GMT',
 });
@@ -88,7 +91,6 @@ export type FormatDateOptions = {
 
 /**
  * Format a date
- *
  * @param input - The date
  * @param mask - The mask
  * @param options - see {@link FormatDateOptions}
@@ -121,49 +123,49 @@ export function formatDate(
   return argMask.replaceAll(tokenizer, (token) => {
     switch (token) {
       case 'h': {
-        return padNumber(ho, 0);
+        return pad(ho, 0);
       } //Hours (24)
       case 'hh': {
-        return padNumber(ho, 2);
+        return pad(ho, 2);
       } //Hours (24)
       case 'H': {
-        return padNumber(ho % 12 || 12, 0);
+        return pad(ho % 12 || 12, 0);
       } //Hours (12)
       case 'HH': {
-        return padNumber(ho % 12 || 12, 2);
+        return pad(ho % 12 || 12, 2);
       } //Hours (12)
       case 'm': {
-        return padNumber(mi, 0);
+        return pad(mi, 0);
       } //Minutes
       case 'mm': {
-        return padNumber(mi, 2);
+        return pad(mi, 2);
       } //Minutes
       case 's': {
-        return padNumber(se, 0);
+        return pad(se, 0);
       } //Seconds
       case 'ss': {
-        return padNumber(se, 2);
+        return pad(se, 2);
       } //Seconds
       case 'sss': {
-        return padNumber(ho * secondsPerHour + mi * secondsPerMinute + se, 0);
+        return pad(ho * secondsPerHour + mi * secondsPerMinute + se, 0);
       } //Seconds
       case 'f': {
-        return padNumber(ms, 0);
+        return pad(ms, 0);
       } //Milliseconds
       case 'ff': {
-        return padNumber(ms, 3);
+        return pad(ms, 3);
       } //Milliseconds
       case 'YYYY': {
-        return padNumber(yr < 1 ? -yr + 1 : yr, 4);
+        return pad(yr < 1 ? -yr + 1 : yr, 4);
       } //Year
       case 'YY': {
-        return padNumber((yr < 1 ? -yr + 1 : yr) % 100, 2);
+        return pad((yr < 1 ? -yr + 1 : yr) % 100, 2);
       } //Year
       case 'M': {
-        return padNumber(mo + 1, 0);
+        return pad(mo + 1, 0);
       } //Month
       case 'MM': {
-        return padNumber(mo + 1, 2);
+        return pad(mo + 1, 2);
       } //Month
       case 'MMM': {
         return monthAbbrev[mo];
@@ -172,10 +174,10 @@ export function formatDate(
         return monthName[mo];
       } //Month
       case 'D': {
-        return padNumber(da, 0);
+        return pad(da, 0);
       } //Day
       case 'DD': {
-        return padNumber(da, 2);
+        return pad(da, 2);
       } //Day
       case 'TH': {
         return ordinal(da);
@@ -193,22 +195,22 @@ export function formatDate(
         return dayName[dy];
       }
       case 'O': {
-        return padNumber(dayOfYear(input, { utc }), 0);
+        return pad(dayOfYear(input, { utc }), 0);
       } //Day of Year (1-366)
       case 'OO': {
-        return padNumber(dayOfYear(input, { utc }), 3);
+        return pad(dayOfYear(input, { utc }), 3);
       } //Day of Year (1-366)
       case 'Wy': {
-        return padNumber(isoWeekOfYear(input, { utc }).year, 0);
+        return pad(isoWeekOfYear(input, { utc }).year, 0);
       }
       case 'Ww': {
-        return padNumber(isoWeekOfYear(input, { utc }).week, 0);
+        return pad(isoWeekOfYear(input, { utc }).week, 0);
       } //Week of Year (1-53)
       case 'Www': {
-        return padNumber(isoWeekOfYear(input, { utc }).week, 2);
+        return pad(isoWeekOfYear(input, { utc }).week, 2);
       } //
       case 'Wd': {
-        return padNumber(dayOfWeek(input, { utc }), 0);
+        return pad(dayOfWeek(input, { utc }), 0);
       }
       case 'TZ': {
         return timezone(o);
@@ -247,10 +249,10 @@ export function formatDate(
         return yr < 1 ? 'BCE' : 'CE';
       } //BCE / CE
       case 'J': {
-        return padNumber(Math.floor(julian(input)), 0);
+        return pad(Math.floor(julian(input)), 0);
       }
       case 'Q': {
-        return padNumber(Math.floor((mo + 3) / 3), 0);
+        return pad(Math.floor((mo + 3) / 3), 0);
       }
       //RM:        Month in roman numerals (UC);
       //rm:        Month in roman numerals (LC);

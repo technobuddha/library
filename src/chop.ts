@@ -1,10 +1,9 @@
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Options for the {@link chop} function
- *
  * @group String
- * @category Chop
+ * @category Deconstruction
  */
 export type ChopOptions = {
   /** If true, the last block will be omitted if has insufficient characters **/
@@ -13,12 +12,11 @@ export type ChopOptions = {
 
 /**
  * Break a string into equal sized segments of characters
- *
  * @param input - The string to break apart
  * @param length - The length of each segment
  * @returns Array of segments
  * @group String
- * @category Chop
+ * @category Deconstruction
  */
 export function chop(
   input: string,

@@ -1,8 +1,6 @@
 /**
  * Options for {@link lookAhead} operations.
- *
  * @typeParam T - The type of the items in the sequence.
- *
  * @group Array
  * @category Iteration
  */
@@ -23,40 +21,35 @@ export type LookAheadOptions<T> =
 /**
  * Generates pairs of consecutive elements from the input array, with optional handling for the last
  * element.
- *
  * @typeParam T - The type of elements in the input array.
  * @param array - The array to iterate over.
  * @param options - Optional configuration for handling the last element.
  * @returns A generator yielding a tuple containing each element, the next element in the sequence,
  * and the index of the element within the sequence.  Optionally, a tuple is generated for the last
  * element as specified by options.
- *
  * @example
- * Basic usage
- * ```ts
+ * ```typescript
+ * // Basic usage
  * const arr = [1, 2, 3];
  * for (const [current, next] of lookAhead(arr)) {
  *   console.log(current, next);
  * }
- * ```
- * Output: [1, 2], [2, 3]
+ * // [1, 2], [2, 3]
  *
- * With wrapAround
- * ```ts
+ * // With wrapAround
  * for (const [current, next] of lookAhead(arr, { wrapAround: true })) {
  *   console.log(current, next);
  * }
+ * // [1, 2], [2, 3], [3, 1]
  * ```
- * Output: [1, 2], [2, 3], [3, 1]
  *
  * With last
- * ```ts
+ * ```typescript
  * for (const [current, next] of lookAhead(arr, { last: 0 })) {
  *   console.log(current, next);
  * }
+ * // [1, 2], [2, 3], [3, 0]
  * ```
- * Output: [1, 2], [2, 3], [3, 0]
- *
  * @group Array
  * @category Iteration
  */

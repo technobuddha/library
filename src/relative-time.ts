@@ -1,19 +1,13 @@
 import { addTime } from './add-time.ts';
-import {
-  secondsPerDay,
-  secondsPerHour,
-  secondsPerMinute,
-  space,
-  ticksPerSecond,
-} from './constants.ts';
+import { secondsPerDay, secondsPerHour, secondsPerMinute, ticksPerSecond } from './date.ts';
 import { floor } from './floor.ts';
 import { formatDate } from './format-date.ts';
 import { isSameDay } from './is-same-day.ts';
 import { plural } from './plural.ts';
+import { space } from './unicode.ts';
 
 /**
  * Options for the {@link relativeTime} function
- *
  * @group Time
  * @category Relative Time
  */
@@ -30,7 +24,6 @@ export type RelativeTimeOptions = {
 
 /**
  * Describe the difference between two dates in a simple format
- *
  * @param input - The date
  * @param relativeTo - The date to compare to
  * @param options - see {@link RelativeTimeOptions}

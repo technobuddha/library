@@ -1,4 +1,4 @@
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { isLeapYear } from './is-leap-year.ts';
 
 describe('isLeapYear', () => {

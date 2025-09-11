@@ -7,6 +7,7 @@ export default defineConfig(() => ({
     globals: true,
     setupFiles: ['./vitest.setup.ts'],
     coverage: {
+      reportsDirectory: '../coverage',
       skipFull: true,
       enabled: true,
       exclude: [

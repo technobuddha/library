@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { uncapitalize } from './uncapitalize.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('uncapitalize', () => {
   test('simple words should remain the same', () => {
@@ -15,7 +15,7 @@ describe('uncapitalize', () => {
   test('all parts of hyphenated words should be uncapitalized', () => {
     expect(uncapitalize('Duck-Billed-Platypus')).toBe('duck-billed-platypus');
     expect(uncapitalize(`Prairie${hyphen}Dog`)).toBe(`prairie${hyphen}dog`);
-    expect(uncapitalize(`Jack${nbHyphen}Rabbit`)).toBe(`jack${nbHyphen}rabbit`);
+    expect(uncapitalize(`Jack${nonBreakingHyphen}Rabbit`)).toBe(`jack${nonBreakingHyphen}rabbit`);
   });
 
   test('should uncapitalize only the first word', () => {

@@ -1,8 +1,17 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/packages/cspell-types/cspell.schema.json",
   "version": "0.2",
-  "ignorePaths": ["**/*.svg", "**/*.tsbuildinfo", "./locales/**/*.*", "./dist/**/*.*"],
+  "ignorePaths": ["**/*.svg", "./locales/**/*.*", "./dist/**/*.*", "**/*.tsbuildinfo"],
   "dictionaryDefinitions": [
+    {
+      "name": "internal",
+      "path": "./.cspell/internal.dic",
+      "description": "Internal Project specific words",
+      "addWords": true
+    },
     {
       "name": "more-css",
       "path": "./.cspell/css.dic",
@@ -10,39 +19,9 @@
       "addWords": true
     },
     {
-      "name": "more-html",
-      "path": "./.cspell/html.dic",
-      "description": "Additional html keywords",
-      "addWords": true
-    },
-    {
       "name": "more-color",
       "path": "./.cspell/color.dic",
       "description": "Additional color keywords",
-      "addWords": true
-    },
-    {
-      "name": "more-math",
-      "path": "./.cspell/math.dic",
-      "description": "Additional math keywords",
-      "addWords": true
-    },
-    {
-      "name": "more-numbers",
-      "path": "./.cspell/numbers.dic",
-      "description": "Additional numbers keywords",
-      "addWords": true
-    },
-    {
-      "name": "more-npm",
-      "path": "./.cspell/npm.dic",
-      "description": "Additional npm package names",
-      "addWords": true
-    },
-    {
-      "name": "more-fonts",
-      "path": "./.cspell/fonts.dic",
-      "description": "Additional font package names",
       "addWords": true
     },
     {
@@ -58,10 +37,34 @@
       "addWords": true
     },
     {
-      "name": "more-unicode",
-      "path": "./.cspell/unicode.dic",
-      "description": "Additional Unicode words",
+      "name": "more-fonts",
+      "path": "./.cspell/fonts.dic",
+      "description": "Additional font package names",
       "addWords": true
+    },
+    {
+      "name": "more-html",
+      "path": "./.cspell/html.dic",
+      "description": "HTML words",
+      "addWords": true,
+    },
+    {
+      "name": "more-math",
+      "path": "./.cspell/math.dic",
+      "description": "Math terms",
+      "addWords": true,
+    },
+    {
+      "name": "more-npm",
+      "path": "./.cspell/npm.dic",
+      "description": "Additional npm package names",
+      "addWords": true
+    },
+    {
+      "name": "more-numbers",
+      "path": "./.cspell/numbers.dic",
+      "description": "Math terms",
+      "addWords": true,
     },
     {
       "name": "more-programming",
@@ -69,7 +72,6 @@
       "description": "Additional programming keywords",
       "addWords": true
     },
-
     {
       "name": "technobuddha",
       "path": "./.cspell/technobuddha.dic",
@@ -77,25 +79,26 @@
       "addWords": true
     },
     {
-      "name": "maze",
-      "path": "./.cspell/maze.dic",
+      "name": "unicode",
+      "path": "./.cspell/unicode.dic",
+      "description": "Unicode names",
       "addWords": true
-    }
+    },
   ],
   "dictionaries": [
-    "technobuddha",
-    "maze",
+    "internal",
     "more-css",
-    "more-html",
     "more-color",
     "more-db",
     "more-english",
     "more-fonts",
+    "more-html",
     "more-math",
-    "more-numbers",
     "more-npm",
+    "more-numbers",
     "more-programming",
-    "more-unicode"
+    "technobuddha",
+    "unicode",
   ],
   "ignoreWords": [],
   "import": []

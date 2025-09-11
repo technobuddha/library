@@ -1,32 +1,34 @@
 import { type BinaryEncoding } from './@types/binary-encoding.ts';
 import { type TextEncoding } from './@types/text-encoding.ts';
-import { type TypedArray } from './@types/typed-array.ts';
+import { type BinaryObject } from './binary-object.ts';
 
 /**
- * Class representing a generic hash algorithm implementation.
+ * Abstract base class for hash algorithm implementations.
  *
+ * Provides a standard interface for updating hash state with data and
+ * retrieving the final digest in various formats. Concrete subclasses
+ * must implement the `update` and `digest` methods according to the
+ * specifics of the hash algorithm.
  * @remarks
- * This class defines the contract for hash classes, supporting
- * updating the hash with data and producing a digest in various formats.
- *
- * @group Encoding
+ * - The `update` methods allows chaining for incremental hashing.
+ * - The `digest` methods finalize the hash computation and return the result
+ *   either as a `Uint8Array` or as an encoded string.
+ * @group Binary
  * @category Hash
  */
 export abstract class HashBase {
   /**
-   * The output is returned as a `Uint8Array`.
+   * Finalizes the hash computation and returns the resulting hash digest.
+   * This method performs any necessary padding and processes the final block
+   * of data according to the hash algorithm's specification.
+   * @returns The hash digest
    *
-   * @returns The hash digest as a `Uint8Array`
    */
   public abstract digest(): Uint8Array;
-
   /**
    * Finalizes the hash computation and returns the resulting hash digest.
    * This method performs any necessary padding and processes the final block
    * of data according to the hash algorithm's specification.
-   *
-   * The output is encoded as a string in the specified binary encoding.
-   *
    * @param encoding - Optional. The encoding to use for the output digest (e.g., 'hex', 'base64').
    * @returns An encoded string, depending on the `encoding` parameter.
    */
@@ -34,10 +36,10 @@ export abstract class HashBase {
 
   /**
    * Updates the hash with the given binary data.
-   * @param data - The data to update the hash with, as a TypedArray or ArrayBuffer.
+   * @param data - The data to update the hash with, as a `BinaryObject`.
    * @returns The hash instance for method chaining.
    */
-  public abstract update(data: TypedArray | ArrayBuffer): this;
+  public abstract update(data: BinaryObject): this;
 
   /**
    * Updates the hash with the given string data.

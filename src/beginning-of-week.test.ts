@@ -1,5 +1,5 @@
 import { beginningOfWeek } from './beginning-of-week.ts';
-import { month } from './constants.ts';
+import { month } from './date.ts';
 
 describe('beginningOfWeek', () => {
   test('should find the beginning of the week', () => {

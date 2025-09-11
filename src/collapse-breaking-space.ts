@@ -1,11 +1,10 @@
 import { clean } from './clean.ts';
-import { space } from './constants.ts';
+import { space } from './unicode.ts';
 
 /**
  * Options for the {@link collapseBreakingSpace} function
- *
  * @group String
- * @category Collapse
+ * @category Operations
  */
 export type CollapseBreakingSpaceOptions = {
   /** If true, trim leading and trailing whitespace */
@@ -14,11 +13,10 @@ export type CollapseBreakingSpaceOptions = {
 
 /**
  * Replace all breaking space (space, tab, carriage return, new line) with a single space
- *
  * @param input - The string
  * @param trim - If true, remove leading and trailing whitespace
  * @group String
- * @category Collapse
+ * @category Operations
  */
 export function collapseBreakingSpace(
   input: string,

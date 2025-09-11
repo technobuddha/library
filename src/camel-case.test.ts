@@ -1,6 +1,6 @@
 import { camelCase } from './camel-case.ts';
 
-describe('toCamelCase', () => {
+describe('camelCase', () => {
   test('should sentences', () => {
     expect(camelCase('now is the time for all good men to come to the aid of their country')).toBe(
       'nowIsTheTimeForAllGoodMenToComeToTheAidOfTheirCountry',

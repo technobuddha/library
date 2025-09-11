@@ -6,6 +6,9 @@ import { toLineSegment } from './to-line-segment.ts';
  * Generate line segments for each side of the polygon.
  * @param polygon - The polygon to extract sides from
  * @returns Generator that yields line segments for each edge
+ * @group Geometry
+ * @category Polygon
+ * @category Line Segment
  */
 export function* polygonSides(polygon: Polygon): Generator<LineSegment> {
   for (let i = 0; i < polygon.length; i++) {

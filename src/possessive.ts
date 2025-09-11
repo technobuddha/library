@@ -3,10 +3,16 @@ import { removeDiacritics } from './remove-diacritics.ts';
 
 /**
  * Determine the possessive form of a word
- *
- * @param input - the word
- * @returns the possessive form of the word
- * @group English
+ * @param input - The word
+ * @returns The possessive form of the word
+ * @example
+ * ```typescript
+ * possessive('Calvin');  // "Calvin's"
+ * possessive('Hobbes');  // "Hobbes'"
+ * possessive('BUGS');    // "BUGS'"
+ * possessive('ELMER');   // "ELMER'S"
+ * ```
+ * @group String
  * @category Parts of Speech
  */
 export function possessive(input: string): string {

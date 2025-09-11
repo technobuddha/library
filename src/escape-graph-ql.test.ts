@@ -1,7 +1,7 @@
 // cspell:ignore unnnn ΑΒΓΔΕΖ
 
-import { space } from './constants.ts';
 import { escapeGraphQL } from './escape-graph-ql.ts';
+import { space } from './unicode.ts';
 
 describe('escapeGraphQL', () => {
   test('should escape standard sequences', () => {

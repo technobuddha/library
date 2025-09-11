@@ -5,7 +5,6 @@ import { toNumber } from './to-number.ts';
 
 /**
  * Test an object to see if it a number, or a string which can be converted into a number
- *
  * @param input - the object to test
  * @returns true, if the object is a number, or can be converted to a number
  * @group String

@@ -1,5 +1,5 @@
-import { empty } from './constants.ts';
 import { delimited } from './delimited.ts';
+import { empty } from './unicode.ts';
 
 describe('delimited', () => {
   test('should extract from delimited string', () => {

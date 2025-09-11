@@ -1,14 +1,18 @@
-import { empty } from './constants.ts';
 import { splitWords } from './split-words.ts';
 import { toASCII } from './to-ascii.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Approximate the number of syllables in a string
- *
  * @param input - The string
  * @returns the number of syllables
- * @group English
- * @category Syllables
+ * @example
+ * ```typescript
+ * syllables('hello'); // 2
+ * syllables('syllable'); // 3
+ * ```
+ * @group String
+ * @category Analysis
  */
 export function syllables(input: string): number {
   return splitWords(toASCII(input.toLocaleLowerCase())).reduce((c, w) => {

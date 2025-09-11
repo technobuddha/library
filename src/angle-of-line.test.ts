@@ -35,25 +35,25 @@ describe('angleOfLine', () => {
 
   test('should return 0 for horizontal line to the right (degrees)', () => {
     const line: LineSegment = { x0: 0, y0: 0, x1: 1, y1: 0 };
-    const result = angleOfLine(line, 'degrees');
+    const result = angleOfLine(line, { unit: 'degrees' });
     expect(result).toBeCloseTo(0, 10);
   });
 
   test('should return 90 for vertical line upwards (degrees)', () => {
     const line: LineSegment = { x0: 0, y0: 0, x1: 0, y1: 1 };
-    const result = angleOfLine(line, 'degrees');
+    const result = angleOfLine(line, { unit: 'degrees' });
     expect(result).toBeCloseTo(90, 10);
   });
 
   test('should return 180 for horizontal line to the left (degrees)', () => {
     const line: LineSegment = { x0: 0, y0: 0, x1: -1, y1: 0 };
-    const result = angleOfLine(line, 'degrees');
+    const result = angleOfLine(line, { unit: 'degrees' });
     expect(result).toBeCloseTo(180, 10);
   });
 
   test('should return -90 for vertical line downwards (degrees)', () => {
     const line: LineSegment = { x0: 0, y0: 0, x1: 0, y1: -1 };
-    const result = angleOfLine(line, 'degrees');
+    const result = angleOfLine(line, { unit: 'degrees' });
     expect(result).toBeCloseTo(-90, 10);
   });
 

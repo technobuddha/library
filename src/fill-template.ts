@@ -1,9 +1,8 @@
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 /**
  * Options for the {@link fillTemplate} function
- *
  * @group String
- * @category Templates
+ * @category Operations
  */
 export type FillTemplateOptions = {
   /** The opening field delimiter */
@@ -21,7 +20,7 @@ export type FillTemplateOptions = {
  * @defaultValue close '\}\}'
  * @returns template with values replaced
  * @group String
- * @category Templates
+ * @category Operations
  */
 export function fillTemplate(
   input: string,

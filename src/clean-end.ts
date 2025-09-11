@@ -1,15 +1,15 @@
-import { empty, trimEquivalent } from './constants.ts';
 import { isRegExp } from './is-reg-exp.ts';
 import { isString } from './is-string.ts';
+import { trimEquivalent } from './regexp.ts';
 import { splitChars } from './split-chars.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Remove all occurrences of characters from the end of the string
- *
  * @param input - The string
  * @param characters - the characters(s) to remove
  * @group String
- * @category Clean
+ * @category Operations
  */
 export function cleanEnd(
   input: string,

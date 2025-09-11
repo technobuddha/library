@@ -1,24 +1,14 @@
-/**
- * Options for the {@link isMidnight} function
- *
- * @group Time
- * @category Day
- */
-export type MidnightOptions = {
-  /** Use the utc timezone */
-  utc?: boolean;
-};
+import { type DateOptions } from './date.ts';
 
 /**
  * Determine if a date is at midnight
- *
  * @param input - A date
- * @param options - see {@link MidnightOptions}
+ * @param options - see {@link DateOptions}
  * @returns true, if the date is at midnight
  * @group Time
  * @category Day
  */
-export function isMidnight(input: Date, { utc = false }: MidnightOptions = {}): boolean {
+export function isMidnight(input: Date, { utc = false }: DateOptions = {}): boolean {
   if (utc) {
     return (
       input.getUTCHours() === 0 &&

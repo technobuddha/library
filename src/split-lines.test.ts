@@ -1,5 +1,5 @@
-import { empty } from './constants.ts';
 import { splitLines } from './split-lines.ts';
+import { empty } from './unicode.ts';
 
 describe('splitLines', () => {
   test('should not split strings', () => {

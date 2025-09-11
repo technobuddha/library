@@ -1,10 +1,8 @@
-import { ticksPerDay } from './constants.ts';
+import { ticksPerDay } from './date.ts';
 
 /**
  * Get the Julian date (number of days since noon on Monday, January 1 4713 BCE)
- *
  * @remarks Julian dates are always in the UTC timezone
- *
  * @param input - The date and time to convert
  * @returns The julian date.
  * @group Time

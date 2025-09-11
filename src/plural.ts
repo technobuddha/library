@@ -1,14 +1,21 @@
-import { empty, space } from './constants.ts';
 import { matchCase } from './match-case.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Return the plural version of the input string
- *
  * @param input - The word to pluralize
  * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
  * @param include - If true and quantity is supplied, the quantity is prepended to the output.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)
- * @group English
+ * @example
+ * ```typescript
+ * plural('cat'); // cats
+ * plural('mouse', 1); // mouse
+ * plural('mouse', 2); // mice
+ * plural('dog', 1, true); // 1 dog
+ * plural('dog', 2, true); // 2 dogs
+ * ```
+ * @group String
  * @category Parts of Speech
  */
 export function plural(input: string, quantity?: number, include = false): string {
@@ -68,12 +75,22 @@ export function plural(input: string, quantity?: number, include = false): strin
   return include && quantity != null ? `${quantity}${space}${result}` : result;
 }
 
+/**
+ * Represents the structure of a database entry for pluralization rules.
+ * @internal
+ */
 type DBEntry = {
+  /** An array of tuples, each containing a regular expression and its corresponding replacement string, used for pluralization or singularization. */
   rules: [RegExp, string][];
+  /** An array of regular expressions that match words considered uncountable (i.e., words that do not change between singular and plural). */
   uncountableRules: RegExp[];
+  /** An array of specific words that are uncountable. */
   uncountableWords: string[];
+  /** An array of string prefixes that may affect pluralization rules. */
   prefixes: string[];
+  /** An array of string suffixes that may affect pluralization rules. */
   suffixes: string[];
+  /** A mapping of irregular word forms, where the key is the singular form and the value is the plural form (or vice versa). */
   irregulars: Record<string, string>;
 };
 
@@ -193,7 +210,7 @@ const database: DBEntry = {
     'anger',
     'anime',
     'applause',
-    'arithmetic',
+    'Operations',
     'art',
     'athletics',
     'audio',

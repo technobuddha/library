@@ -1,20 +1,18 @@
 import { type DeconstructedNumber } from './@types/deconstructed-number.ts';
 import { clamp } from './clamp.ts';
 import { cleanEnd } from './clean-end.ts';
-import { empty } from './constants.ts';
 import { isNegativeZero } from './is-negative-zero.ts';
+import { empty } from './unicode.ts';
 
 /**
  * Deconstructs a number into its sign, value, mantissa, and exponent, and separates its whole and fractional parts.
- *
  * @param input - The number to deconstruct. Must be a finite number.
  * @param precision - The number of significant digits to use (default: 9, min: 1, max: 15).
  * @returns An object containing the normalized value, sign, mantissa, exponent, and separate representations
  *          of the whole and fractional parts.
  * @throws `TypeError` If the input is NaN or not a finite number.
- *
  * @example
- * ```ts
+ * ```typescript
  * const result = deconstructNumber(123.456);
  * // result = {
  * //   value: 123.456,
@@ -25,15 +23,16 @@ import { isNegativeZero } from './is-negative-zero.ts';
  * //   fraction: { ... }
  * // }
  * ```
- *
  * @group Math
- * @category Numbers
+ * @category Number
  */
 export function deconstructNumber(
   input: number,
   precision = 9,
 ): DeconstructedNumber & {
+  /** The fractional part of the number. */
   fractional: DeconstructedNumber;
+  /** The whole part of the number. */
   whole: DeconstructedNumber;
 } {
   if (Number.isNaN(input) || !Number.isFinite(input)) {

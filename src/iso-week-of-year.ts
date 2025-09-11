@@ -1,6 +1,5 @@
 import { beginningOfWeek } from './beginning-of-week.ts';
-import { type DayOfWeek } from './constants.ts';
-import { day, month, ticksPerWeek } from './constants.ts';
+import { day, type DayOfWeek, month, ticksPerWeek } from './date.ts';
 import { floor } from './floor.ts';
 import { isoWeeksInYear } from './iso-weeks-in-year.ts';
 
@@ -20,7 +19,6 @@ export type ISOWeekOfYearOptions = {
 
 /**
  * Determine the ISO week number for a given date
- *
  * @param input - The date
  * @param options - see {@link ISOWeekOfYearOptions}
  * @defaultValue weekOneIncludes Thursday
@@ -36,7 +34,12 @@ export function isoWeekOfYear(
     weekOneIncludes = day.thursday,
     firstDayOfWeek = day.monday,
   }: ISOWeekOfYearOptions = {},
-): { year: number; week: number } {
+): {
+  /** The year */
+  year: number;
+  /** The ISO week number */
+  week: number;
+} {
   const bow = beginningOfWeek(input, { utc, firstDayOfWeek });
 
   const week1 =

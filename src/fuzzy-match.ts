@@ -4,7 +4,6 @@ import { longestCommonSubstring } from './longest-common-substring.ts';
 
 /**
  * Options for the {@link fuzzyMatch} function
- *
  * @group String
  * @category Fuzzy Match
  */
@@ -22,7 +21,6 @@ export type FuzzyMatchOptions = {
 /**
  * Computes a fuzzy similarity score between two strings using a weighted combination
  * of Levenshtein distance, Dice coefficient, and longest common substring metrics.
- *
  * @param input - The input string to compare.
  * @param comparedTo - The string to compare against.
  * @param options - Optional configuration for the comparison.

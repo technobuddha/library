@@ -1,5 +1,5 @@
-import { empty } from './constants.ts';
 import { extractDigits } from './extract-digits.ts';
+import { empty } from './unicode.ts';
 
 describe('extractDigits', () => {
   test('should add Suffixes when needed', () => {

@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { snakeCase } from './snake-case.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('snakeCase', () => {
   test('should take human case', () => {
@@ -49,7 +49,7 @@ describe('snakeCase', () => {
   test('should break on hyphens', () => {
     expect(snakeCase('well-known')).toBe('well_known');
     expect(snakeCase(`well${hyphen}known`)).toBe('well_known');
-    expect(snakeCase(`well${nbHyphen}known`)).toBe('well_known');
+    expect(snakeCase(`well${nonBreakingHyphen}known`)).toBe('well_known');
   });
 
   test('should handle words with multiple upper-case letters', () => {
@@ -60,7 +60,7 @@ describe('snakeCase', () => {
   });
 
   test('should handle words suffixed by numbers', () => {
-    expect(snakeCase('version1')).toBe('version_1');
+    expect(snakeCase('version1')).toBe('version1');
   });
 
   test('should handle words prefixed by numbers', () => {

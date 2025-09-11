@@ -4,14 +4,13 @@ import { unescapeJS } from './unescape-js.ts';
 
 /**
  * Remove surrounding quotes from text
- *
  * @param input - The text to surrounded by quotes
  * @param options - see {@link QuoteOptions}
  * @defaultValue quote double-quote (")
  * @defaultValue escape unescapeJS
  * @returns the unescaped text with quotes removed
  * @group String
- * @category Quoting
+ * @category Deconstruction
  */
 export function unquote(
   input: string,

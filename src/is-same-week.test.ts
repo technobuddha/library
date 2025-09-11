@@ -1,4 +1,4 @@
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { isSameWeek } from './is-same-week.ts';
 
 describe('isSameWeek', () => {

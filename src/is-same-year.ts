@@ -10,7 +10,6 @@ export type SameYearOptions = {
 
 /**
  * Determine if two dates occur in the same year
- *
  * @param input1 - The first date
  * @param input2 - The second date
  * @param options - see {@link SameYearOptions}

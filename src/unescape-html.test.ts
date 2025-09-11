@@ -1,5 +1,5 @@
-import { space } from './constants.ts';
 import { unescapeHTML } from './unescape-html.ts';
+import { space } from './unicode.ts';
 
 describe('unescapeHTML', () => {
   test('should unescape basic characters', () => {

@@ -36,6 +36,7 @@ aring
 ascr
 asymp
 asympeq
+Atail
 atilde
 auml
 awconint
@@ -729,7 +730,6 @@ propto
 prsim
 prurel
 pscr
-realine
 puncsp
 qint
 qopf
@@ -743,11 +743,11 @@ raemptyv
 rangd
 rangle
 raquo
+rarr
 rarrap
 rarrb
 rarrbfs
 rarrc
-rarr
 rarrfs
 rarrhk
 rarrlp
@@ -756,7 +756,6 @@ rarrsim
 rarrtl
 rarrw
 ratail
-Atail
 rbarr
 rbbrk
 rbrack
@@ -772,6 +771,7 @@ rdldhar
 rdquo
 rdquor
 rdsh
+realine
 realpart
 rfisht
 rfloor
@@ -791,8 +791,8 @@ rightthreetimes
 risingdotseq
 rlarr
 rlhar
-rmoustache
 rmoust
+rmoustache
 rnmid
 roang
 roarr
@@ -828,8 +828,8 @@ scnap
 scnsim
 scpolint
 scsim
-sdotb
 sdot
+sdotb
 sdote
 searhk
 searr
@@ -860,8 +860,8 @@ smid
 smte
 smtes
 softcy
-solbar
 solb
+solbar
 sopf
 spadesuit
 sqcap
@@ -902,8 +902,8 @@ subsetneqq
 subsim
 subsub
 subsup
-succapprox
 succ
+succapprox
 succcurlyeq
 succeq
 succnapprox
@@ -945,8 +945,8 @@ thicksim
 thinsp
 thkap
 thksim
-timesbar
 timesb
+timesbar
 timesd
 topbot
 topcir

@@ -2,9 +2,8 @@ import { clean } from './clean.ts';
 
 /**
  * Options for the {@link sortOrder} function
- *
  * @group String
- * @category Sorting
+ * @category Operations
  */
 export type SortOrderOptions = {
   /** Ignore a leading quote (") */
@@ -15,13 +14,12 @@ export type SortOrderOptions = {
 
 /**
  * Convert a string into a sortable string
- *
  * @remarks for example "The Beatles" becomes "Beatles, The"
  * @param text - string to convert
  * @param options - see {@link SortOrderOptions}
  * @returns sortable string
  * @group String
- * @category Sorting
+ * @category Operations
  */
 export function sortOrder(
   text: string,

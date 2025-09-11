@@ -35,11 +35,11 @@ describe('toDegrees', () => {
   });
 
   test('accepts units', () => {
-    expect(toDegrees(90, 'degrees')).toBeCloseTo(90);
-    expect(toDegrees(Math.PI / 2, 'radians')).toBeCloseTo(90);
-    expect(toDegrees(Math.PI / 2, 'rads')).toBeCloseTo(90);
-    expect(toDegrees(100, 'gradians')).toBeCloseTo(90);
-    expect(toDegrees(100, 'grads')).toBeCloseTo(90);
-    expect(toDegrees(1 / 4, 'turns')).toBeCloseTo(90);
+    expect(toDegrees(90, { unit: 'degrees' })).toBeCloseTo(90);
+    expect(toDegrees(Math.PI / 2, { unit: 'radians' })).toBeCloseTo(90);
+    expect(toDegrees(Math.PI / 2, { unit: 'rad' })).toBeCloseTo(90);
+    expect(toDegrees(100, { unit: 'gradians' })).toBeCloseTo(90);
+    expect(toDegrees(100, { unit: 'grad' })).toBeCloseTo(90);
+    expect(toDegrees(1 / 4, { unit: 'turns' })).toBeCloseTo(90);
   });
 });

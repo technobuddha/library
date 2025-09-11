@@ -1,21 +1,28 @@
-import { type Polygon } from './@types/geometry.ts';
+import { type Cartesian, type Polygon } from './@types/geometry.ts';
 import { crossProduct } from './cross-product.ts';
 
 /**
  * Computes the convex hull of a set of 2D points using the Monotone Chain algorithm.
  * @see {@link https://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain#JavaScript| Monotone Chain}
- *
- * @param vertices - An array of points representing the polygon vertices. Each point should have `x` and `y` properties.
+ * @param vertices - An array of points.
  * @returns The convex hull as an array of points in counterclockwise order, or `undefined` if there are fewer than 3 vertices.
- *
+ * @example
+ * ```typescript
+ * convexHull([
+ *   { x: 0, y: 0 },
+ *   { x: 1, y: 1 },
+ *   { x: 2, y: 0 },
+ *   { x: 1, y: -1 }
+ * ]);
+ * // hull is now the convex hull of the points
+ * ```
  * @remarks
  * - The returned array does not repeat the starting point at the end.
  * - Points on the edge of the hull may be included or excluded depending on their order.
- *
  * @group Geometry
  * @category Polygon
  */
-export function convexHull(vertices: Polygon): Polygon | undefined {
+export function convexHull(vertices: Cartesian[]): Polygon | undefined {
   if (vertices.length < 3) {
     return undefined;
   }

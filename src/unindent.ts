@@ -1,14 +1,13 @@
-import { empty, space } from './constants.ts';
 import { getIndent } from './get-indent.ts';
 import { type IndentOptions } from './indent.ts';
+import { empty, space } from './unicode.ts';
 
 /**
  * Remove indentation from text
- *
  * @param input - The indented text
  * @param pattern - (space)
  * @group String
- * @category Indentation
+ * @category Operations
  */
 export function unindent(input: string, { indenter = space }: IndentOptions = {}): string {
   const indent = getIndent(input, { indenter });

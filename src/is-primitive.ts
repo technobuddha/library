@@ -1,10 +1,19 @@
 /**
  * Check to see if an object is a primitive
- *
  * @param input - object to test
  * @returns true, if the object is a primitive
- * @group Primitive
- * @category Testing
+ * @group Object
+ * @category Type Guards
+ * @example
+ * ```typescript
+ * isPrimitive(42); // true
+ * isPrimitive('hello'); // true
+ * isPrimitive(null); // true
+ * isPrimitive(undefined); // true
+ * isPrimitive(Symbol('s')); // true
+ * isPrimitive({}); // false
+ * isPrimitive([]); // false
+ * ```
  */
 export function isPrimitive(
   input: unknown,

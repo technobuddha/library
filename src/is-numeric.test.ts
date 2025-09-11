@@ -1,5 +1,6 @@
-import { empty, negativeZero, space } from './constants.ts';
+import { negativeZero } from './constants.ts';
 import { isNumeric } from './is-numeric.ts';
+import { empty, space } from './unicode.ts';
 
 describe('isNumeric', () => {
   test('should handle numbers', () => {

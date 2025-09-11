@@ -1,14 +1,17 @@
 import { clean } from './clean.ts';
 import { collapseWhitespace } from './collapse-whitespace.ts';
-import { empty } from './constants.ts';
+import { empty } from './unicode.ts';
 
+/**
+ * Regular expression matching one or more invalid filename characters.
+ * @internal
+ */
 const badChars = /[/\\:*?<>|.]+/gu;
 
 /**
  * Options for the {@link toFilename} function
- *
  * @group String
- * @category Conversion
+ * @category Operations
  */
 export type FilenameOptions = {
   /** the file name will be truncated to this length */
@@ -23,12 +26,11 @@ export type FilenameOptions = {
 
 /**
  * Convert a string so that it can be used as a filename
- *
  * @param input - The string to escape
  * @param options - see {@link FilenameOptions}
  * @returns the file name
  * @group String
- * @category Conversion
+ * @category Operations
  */
 export function toFilename(
   input: string,

@@ -5,10 +5,13 @@ import { type Cartesian } from './@types/geometry.ts';
  *
  * A value is considered a Cartesian point if it is a non-null object
  * that contains numeric `x` and `y` properties.
- *
  * @param point - The value to test for Cartesian structure.
  * @returns `true` if the value is a Cartesian point, otherwise `false`.
- *
+ * @example
+ * ```typescript
+ * isCartesian({ x: 10, y: 20 }); // true
+ * isCartesian({ r: 10, φ: 20 }); // false
+ * ```
  * @group Geometry
  * @category Coordinates
  */

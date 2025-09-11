@@ -3,9 +3,8 @@ import { isWhitespace } from './is-whitespace.ts';
 
 /**
  * Options for the {@link splitWords} function
- *
  * @group String
- * @category Split
+ * @category Deconstruction
  */
 export type SplitWordsOptions = {
   /** The delimiter between words */
@@ -14,13 +13,12 @@ export type SplitWordsOptions = {
 
 /**
  * Split a string into an array of words
- *
  * @param input - The string to split
  * @param options - see {@link SplitWordsOptions}
  * @defaultValue delimiter whitespace
  * @returns array of words
  * @group String
- * @category Split
+ * @category Deconstruction
  */
 export function splitWords(
   input: string,

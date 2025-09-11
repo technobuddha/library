@@ -1,8 +1,7 @@
-import { create2DArray } from './create-2d-array.ts';
+import { create2dArray } from './create2d-array.ts';
 
 /**
  * Options for configuring the longest common substring calculation.
- *
  * @group String
  * @category Fuzzy Match
  */
@@ -15,12 +14,10 @@ export type LongestCommonSubstringOptions = {
  * Implementation of [Longest Common Substring](https://en.wikipedia.org/wiki/Longest_common_substring_problem) algorithm.
  *
  * Returns the longest possible substring that is substring of both of given strings.
- *
  * @param string1 - First string.
  * @param string2 - Second string.
  * @returns A string that is common to both strings such that there is no
  * common substring with size greater than the length of the string.
- *
  * @group String
  * @category Fuzzy Match
  */
@@ -32,7 +29,7 @@ export function longestCommonSubstring(
   const ci1 = caseInsensitive ? string1.toLocaleLowerCase() : string1;
   const ci2 = caseInsensitive ? string2.toLocaleLowerCase() : string2;
 
-  const comparisons = create2DArray(ci1.length + 1, ci2.length + 1, 0);
+  const comparisons = create2dArray(ci1.length + 1, ci2.length + 1, 0);
   let maxSubStrLength = 0;
   let lastMaxSubStrIndex = -1;
 

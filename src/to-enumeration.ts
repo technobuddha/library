@@ -2,12 +2,11 @@ import { matches } from './matches.ts';
 
 /**
  * Convert a string to a numeric value
- *
  * @param input - The string to convert
  * @param tests - Array of tests (string value or regular expressions)
  * @returns The index of the first test to match the input string
  * @group String
- * @category Conversion
+ * @category Operations
  */
 export function toEnumeration(
   input: string,

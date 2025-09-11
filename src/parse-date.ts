@@ -1,8 +1,20 @@
 import { build } from './build.ts';
 import { collapse } from './collapse.ts';
-import { month } from './constants.ts';
+import { month } from './date.ts';
 import { zipperMerge } from './zipper-merge.ts';
 
+/**
+ * Constructs a new `RegExp` object by interpolating regular expressions into a template string.
+ *
+ * This function allows you to build complex regular expressions by combining template literals
+ * with embedded `RegExp` objects. The sources of the provided regular expressions are merged
+ * with the template string parts, and the resulting pattern is compiled with the Unicode (`u`) flag.
+ * @param template - The template string array containing the literal parts of the regular expression.
+ * @param args - The regular expressions to interpolate into the template.
+ * @returns A new `RegExp` object representing the combined pattern.
+ * @group RegExp
+ * @category Construction
+ */
 function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   return new RegExp(
     build(
@@ -46,10 +58,8 @@ const yNumeric = re`${yyyy}`;
 
 /**
  * Parse a string into a Date object
- *
  * @remarks this is a little more generous about what formats it will take for a date, and if it can't match the input to one of it's supported formats it falls
  * back to new Date(text)
- *
  * @param input - The string containing a date
  * @returns new Date object
  * @group Time

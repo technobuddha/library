@@ -1,5 +1,5 @@
-import { empty, space } from './constants.ts';
 import { isWhitespace } from './is-whitespace.ts';
+import { empty, space } from './unicode.ts';
 
 describe('isWhitespace', () => {
   test('should handle empty strings', () => {

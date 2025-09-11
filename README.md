@@ -1,38 +1,81 @@
+<!--
+  🚨
+  🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+  🚨
+-->
 <!-- markdownlint-disable -->
 
-# @technobuddha/library
-
-![image](./doc/coverage.svg)
-![image](https://img.shields.io/npm/last-update/@technobuddha/library)
+![image](https://img.shields.io/github/last-commit/technobuddha/library)
+![image](https://img.shields.io/npm/d18m/%40technobuddha%2Flibrary.svg)
+![image](https://img.shields.io/github/license/technobuddha/library)
+![image](https://img.shields.io/npm/v/%40technobuddha%2Flibrary)
 ![image](https://img.shields.io/badge/code%20coverage-100%-4fc921)
+![image](https://snyk.io/test/npm/@technobuddha/library/badge.svg)
 
-<div style="text-align: center; font-size: large;">13 classes, 49 constants, 223 functions, and 80 type aliases</div>
-<div style="text-align: center; font-size: x-large; color: #4fc921">0 dependencies</div>
+<center>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="72"
+    height="36"
+    viewBox="0 0 360 180"
+    version="1.1"
+  >
+      <g>
+          <rect x="170" y="0"   width="20"  height="10" fill="#d0f2fa" />
+          <rect x="160" y="10"  width="40"  height="10" fill="#d0f2fa" />
+          <rect x="150" y="20"  width="60"  height="10" fill="#a3e1f6" />
+          <rect x="140" y="30"  width="80"  height="10" fill="#a3e1f6" />
+          <rect x="130" y="40"  width="100" height="10" fill="#70c0e4" />
+          <rect x="120" y="50"  width="120" height="10" fill="#70c0e4" />
+          <rect x="110" y="60"  width="140" height="10" fill="#4b98ca" />
+          <rect x="100" y="70"  width="160" height="10" fill="#4b98ca" />
+          <rect x="90"  y="80"  width="180" height="10" fill="#1b5ca8" />
+          <rect x="80"  y="90"  width="200" height="10" fill="#1b5ca8" />
+          <rect x="70"  y="100" width="220" height="10" fill="#135490" />
+          <rect x="60"  y="110" width="240" height="10" fill="#135490" />
+          <rect x="50"  y="120" width="260" height="10" fill="#0d3f78" />
+          <rect x="40"  y="130" width="280" height="10" fill="#0d3f78" />
+          <rect x="30"  y="140" width="300" height="10" fill="#082c61" />
+          <rect x="20"  y="150" width="320" height="10" fill="#082c61" />
+          <rect x="10"  y="160" width="340" height="10" fill="#051f50" />
+          <rect x="0"   y="170" width="360" height="10" fill="#051f50" />
+    </g>
+  </svg>
+  <font size="6">Technobuddha Library</font>
+  <br/>
+  <font size="4">13 Classes, 50 Constants, 244 Functions, and 77 Types</font>
+  <br/>
+  <font color="#4fc921" size="5">0 dependencies</font>
+</center>
 
 ## Introduction
 
 This is a large library of many things that the
 [Technobuddha](https://technobuddha.com)
-has found useful over the years.
+has found useful over the years. There is a plethora of functions and classes for working with
+arrays, strings, numbers, dates, objects, and more. Ranging from the simple
+([clamp](https://doc.technobuddha.com/library/clamp.html))
+to the complex
+([largestInscribedRectangle](https://doc.technobuddha.com/library/largestInscribedRectangle.html)),
+this library has something for everyone.
 
-|Group|Contents|
-|---|---|
-|[Functions](doc/Functions/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[clamp](doc/Functions/clamp.md)</div><div style="flex-basis: 200px;">[constructNumber](doc/Functions/constructNumber.md)</div><div style="flex-basis: 200px;">[startCase](doc/Functions/startCase.md)</div><div style="flex-basis: 200px;">[tokenize](doc/Functions/tokenize.md)</div><div style="flex-basis: 200px;">[toString](doc/Functions/toString.md)</div></div>|
-|[Array](doc/Array/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[collapse](doc/Array/collapse.md)</div><div style="flex-basis: 200px;">[create2DArray](doc/Array/create2DArray.md)</div><div style="flex-basis: 200px;">[lookAhead](doc/Array/lookAhead.md)</div><div style="flex-basis: 200px;">[longestCommonSubsequence](doc/Array/longestCommonSubsequence.md)</div><div style="flex-basis: 200px;">[zipperMerge](doc/Array/zipperMerge.md)</div><div style="flex-basis: 200px;">[isArrayLike](doc/Array/isArrayLike.md)</div></div>|
-|[Encoding](doc/Encoding/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[Crc32](doc/Encoding/Crc32.md)</div><div style="flex-basis: 200px;">[HashBase](doc/Encoding/HashBase.md)</div><div style="flex-basis: 200px;">[Sha1](doc/Encoding/Sha1.md)</div><div style="flex-basis: 200px;">[Sha224](doc/Encoding/Sha224.md)</div><div style="flex-basis: 200px;">[Sha256](doc/Encoding/Sha256.md)</div><div style="flex-basis: 200px;">[Sha384](doc/Encoding/Sha384.md)</div><div style="flex-basis: 200px;">[Sha512](doc/Encoding/Sha512.md)</div><div style="flex-basis: 200px;">[ShaBase](doc/Encoding/ShaBase.md)</div><div style="flex-basis: 200px;">[dataURL](doc/Encoding/dataURL.md)</div><div style="flex-basis: 200px;">[decodeBase64](doc/Encoding/decodeBase64.md)</div><div style="flex-basis: 200px;">[decodeBase64Url](doc/Encoding/decodeBase64Url.md)</div><div style="flex-basis: 200px;">[decodeBinary](doc/Encoding/decodeBinary.md)</div><div style="flex-basis: 200px;">[encodeBase64](doc/Encoding/encodeBase64.md)</div><div style="flex-basis: 200px;">[encodeBase64Url](doc/Encoding/encodeBase64Url.md)</div><div style="flex-basis: 200px;">[encodeBinary](doc/Encoding/encodeBinary.md)</div><div style="flex-basis: 200px;">[escapeC](doc/Encoding/escapeC.md)</div><div style="flex-basis: 200px;">[escapeGraphQL](doc/Encoding/escapeGraphQL.md)</div><div style="flex-basis: 200px;">[escapeHTML](doc/Encoding/escapeHTML.md)</div><div style="flex-basis: 200px;">[escapeJava](doc/Encoding/escapeJava.md)</div><div style="flex-basis: 200px;">[escapeJS](doc/Encoding/escapeJS.md)</div><div style="flex-basis: 200px;">[escapePython](doc/Encoding/escapePython.md)</div><div style="flex-basis: 200px;">[unescapeC](doc/Encoding/unescapeC.md)</div><div style="flex-basis: 200px;">[unescapeHTML](doc/Encoding/unescapeHTML.md)</div><div style="flex-basis: 200px;">[unescapeJava](doc/Encoding/unescapeJava.md)</div><div style="flex-basis: 200px;">[unescapeJS](doc/Encoding/unescapeJS.md)</div><div style="flex-basis: 200px;">[unescapePython](doc/Encoding/unescapePython.md)</div></div>|
-|[English](doc/English/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[conjoin](doc/English/conjoin.md)</div><div style="flex-basis: 200px;">[indefiniteArticle](doc/English/indefiniteArticle.md)</div><div style="flex-basis: 200px;">[plural](doc/English/plural.md)</div><div style="flex-basis: 200px;">[possessive](doc/English/possessive.md)</div><div style="flex-basis: 200px;">[syllables](doc/English/syllables.md)</div></div>|
-|[Geometry](doc/Geometry/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[angleBetweenPoints](doc/Geometry/angleBetweenPoints.md)</div><div style="flex-basis: 200px;">[angleDifference](doc/Geometry/angleDifference.md)</div><div style="flex-basis: 200px;">[angleOfLine](doc/Geometry/angleOfLine.md)</div><div style="flex-basis: 200px;">[angleReflection](doc/Geometry/angleReflection.md)</div><div style="flex-basis: 200px;">[normalizeAngle](doc/Geometry/normalizeAngle.md)</div><div style="flex-basis: 200px;">[toAngle](doc/Geometry/toAngle.md)</div><div style="flex-basis: 200px;">[toDegrees](doc/Geometry/toDegrees.md)</div><div style="flex-basis: 200px;">[toRadians](doc/Geometry/toRadians.md)</div><div style="flex-basis: 200px;">[isCartesian](doc/Geometry/isCartesian.md)</div><div style="flex-basis: 200px;">[isPolar](doc/Geometry/isPolar.md)</div><div style="flex-basis: 200px;">[toCartesian](doc/Geometry/toCartesian.md)</div><div style="flex-basis: 200px;">[toPolar](doc/Geometry/toPolar.md)</div><div style="flex-basis: 200px;">[angleOfLine](doc/Geometry/angleOfLine.md)</div><div style="flex-basis: 200px;">[isIntersecting](doc/Geometry/isIntersecting.md)</div><div style="flex-basis: 200px;">[isLeftOfLine](doc/Geometry/isLeftOfLine.md)</div><div style="flex-basis: 200px;">[isOnLine](doc/Geometry/isOnLine.md)</div><div style="flex-basis: 200px;">[isWithLine](doc/Geometry/isWithLine.md)</div><div style="flex-basis: 200px;">[lineIntersection](doc/Geometry/lineIntersection.md)</div><div style="flex-basis: 200px;">[lineLength](doc/Geometry/lineLength.md)</div><div style="flex-basis: 200px;">[midpoint](doc/Geometry/midpoint.md)</div><div style="flex-basis: 200px;">[normalizeLineSegment](doc/Geometry/normalizeLineSegment.md)</div><div style="flex-basis: 200px;">[isInPolygon](doc/Geometry/isInPolygon.md)</div><div style="flex-basis: 200px;">[isLeftOfLine](doc/Geometry/isLeftOfLine.md)</div><div style="flex-basis: 200px;">[isOnLine](doc/Geometry/isOnLine.md)</div><div style="flex-basis: 200px;">[isWithLine](doc/Geometry/isWithLine.md)</div><div style="flex-basis: 200px;">[manhattanDistance](doc/Geometry/manhattanDistance.md)</div><div style="flex-basis: 200px;">[rotate](doc/Geometry/rotate.md)</div><div style="flex-basis: 200px;">[scale](doc/Geometry/scale.md)</div><div style="flex-basis: 200px;">[translate](doc/Geometry/translate.md)</div><div style="flex-basis: 200px;">[area](doc/Geometry/area.md)</div><div style="flex-basis: 200px;">[bounds](doc/Geometry/bounds.md)</div><div style="flex-basis: 200px;">[centroid](doc/Geometry/centroid.md)</div><div style="flex-basis: 200px;">[convexHull](doc/Geometry/convexHull.md)</div><div style="flex-basis: 200px;">[edgeAngles](doc/Geometry/edgeAngles.md)</div><div style="flex-basis: 200px;">[isInPolygon](doc/Geometry/isInPolygon.md)</div><div style="flex-basis: 200px;">[isIntersecting](doc/Geometry/isIntersecting.md)</div><div style="flex-basis: 200px;">[largestInscribedRectangle](doc/Geometry/largestInscribedRectangle.md)</div><div style="flex-basis: 200px;">[perimeter](doc/Geometry/perimeter.md)</div><div style="flex-basis: 200px;">[regularPolygon](doc/Geometry/regularPolygon.md)</div><div style="flex-basis: 200px;">[rotate](doc/Geometry/rotate.md)</div><div style="flex-basis: 200px;">[scale](doc/Geometry/scale.md)</div><div style="flex-basis: 200px;">[star](doc/Geometry/star.md)</div><div style="flex-basis: 200px;">[toPolygon](doc/Geometry/toPolygon.md)</div><div style="flex-basis: 200px;">[translate](doc/Geometry/translate.md)</div><div style="flex-basis: 200px;">[isRect](doc/Geometry/isRect.md)</div><div style="flex-basis: 200px;">[largestInscribedRectangle](doc/Geometry/largestInscribedRectangle.md)</div><div style="flex-basis: 200px;">[toSquare](doc/Geometry/toSquare.md)</div></div>|
-|[JSON](doc/JSON/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[JSONMap](doc/JSON/JSONMap.md)</div><div style="flex-basis: 200px;">[JSONSet](doc/JSON/JSONSet.md)</div><div style="flex-basis: 200px;">[replacer](doc/JSON/replacer.md)</div><div style="flex-basis: 200px;">[reviver](doc/JSON/reviver.md)</div></div>|
-|[Math](doc/Math/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[ceil](doc/Math/ceil.md)</div><div style="flex-basis: 200px;">[crossProduct](doc/Math/crossProduct.md)</div><div style="flex-basis: 200px;">[floor](doc/Math/floor.md)</div><div style="flex-basis: 200px;">[lerp](doc/Math/lerp.md)</div><div style="flex-basis: 200px;">[modulo](doc/Math/modulo.md)</div><div style="flex-basis: 200px;">[round](doc/Math/round.md)</div><div style="flex-basis: 200px;">[approximatelyEquals](doc/Math/approximatelyEquals.md)</div><div style="flex-basis: 200px;">[compareNumbers](doc/Math/compareNumbers.md)</div><div style="flex-basis: 200px;">[isNegativeZero](doc/Math/isNegativeZero.md)</div><div style="flex-basis: 200px;">[cardinal](doc/Math/cardinal.md)</div><div style="flex-basis: 200px;">[deconstructNumber](doc/Math/deconstructNumber.md)</div><div style="flex-basis: 200px;">[formatNumber](doc/Math/formatNumber.md)</div><div style="flex-basis: 200px;">[fraction](doc/Math/fraction.md)</div><div style="flex-basis: 200px;">[orderOfMagnitude](doc/Math/orderOfMagnitude.md)</div><div style="flex-basis: 200px;">[ordinal](doc/Math/ordinal.md)</div><div style="flex-basis: 200px;">[padNumber](doc/Math/padNumber.md)</div><div style="flex-basis: 200px;">[parseRoman](doc/Math/parseRoman.md)</div><div style="flex-basis: 200px;">[summarize](doc/Math/summarize.md)</div><div style="flex-basis: 200px;">[toRoman](doc/Math/toRoman.md)</div><div style="flex-basis: 200px;">[isEven](doc/Math/isEven.md)</div><div style="flex-basis: 200px;">[isMultipleOf](doc/Math/isMultipleOf.md)</div><div style="flex-basis: 200px;">[isOdd](doc/Math/isOdd.md)</div><div style="flex-basis: 200px;">[mean](doc/Math/mean.md)</div><div style="flex-basis: 200px;">[median](doc/Math/median.md)</div><div style="flex-basis: 200px;">[mode](doc/Math/mode.md)</div><div style="flex-basis: 200px;">[standardDeviation](doc/Math/standardDeviation.md)</div><div style="flex-basis: 200px;">[sum](doc/Math/sum.md)</div><div style="flex-basis: 200px;">[variance](doc/Math/variance.md)</div></div>|
-|[Object](doc/Object/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[clearObject](doc/Object/clearObject.md)</div><div style="flex-basis: 200px;">[compare](doc/Object/compare.md)</div><div style="flex-basis: 200px;">[shallowEquals](doc/Object/shallowEquals.md)</div><div style="flex-basis: 200px;">[sortKeys](doc/Object/sortKeys.md)</div></div>|
-|[Primitive](doc/Primitive/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[toError](doc/Primitive/toError.md)</div><div style="flex-basis: 200px;">[toInteger](doc/Primitive/toInteger.md)</div><div style="flex-basis: 200px;">[toNumber](doc/Primitive/toNumber.md)</div><div style="flex-basis: 200px;">[toPrimitive](doc/Primitive/toPrimitive.md)</div><div style="flex-basis: 200px;">[isPrimitive](doc/Primitive/isPrimitive.md)</div></div>|
-|[Random](doc/Random/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[MersenneTwister](doc/Random/MersenneTwister.md)</div><div style="flex-basis: 200px;">[randomDraw](doc/Random/randomDraw.md)</div><div style="flex-basis: 200px;">[randomPick](doc/Random/randomPick.md)</div><div style="flex-basis: 200px;">[randomWeightedPick](doc/Random/randomWeightedPick.md)</div><div style="flex-basis: 200px;">[randomShuffle](doc/Random/randomShuffle.md)</div></div>|
-|[RegExp](doc/RegExp/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[matches](doc/RegExp/matches.md)</div><div style="flex-basis: 200px;">[re](doc/RegExp/re.md)</div></div>|
-|[String](doc/String/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[ensurePrefix](doc/String/ensurePrefix.md)</div><div style="flex-basis: 200px;">[ensureSuffix](doc/String/ensureSuffix.md)</div><div style="flex-basis: 200px;">[root](doc/String/root.md)</div><div style="flex-basis: 200px;">[build](doc/String/build.md)</div><div style="flex-basis: 200px;">[camelCase](doc/String/camelCase.md)</div><div style="flex-basis: 200px;">[capitalize](doc/String/capitalize.md)</div><div style="flex-basis: 200px;">[dotCase](doc/String/dotCase.md)</div><div style="flex-basis: 200px;">[humanCase](doc/String/humanCase.md)</div><div style="flex-basis: 200px;">[kebabCase](doc/String/kebabCase.md)</div><div style="flex-basis: 200px;">[macroCase](doc/String/macroCase.md)</div><div style="flex-basis: 200px;">[matchCase](doc/String/matchCase.md)</div><div style="flex-basis: 200px;">[pascalCase](doc/String/pascalCase.md)</div><div style="flex-basis: 200px;">[snakeCase](doc/String/snakeCase.md)</div><div style="flex-basis: 200px;">[title](doc/String/title.md)</div><div style="flex-basis: 200px;">[uncapitalize](doc/String/uncapitalize.md)</div><div style="flex-basis: 200px;">[isAlpha](doc/String/isAlpha.md)</div><div style="flex-basis: 200px;">[isAlphaNumeric](doc/String/isAlphaNumeric.md)</div><div style="flex-basis: 200px;">[isLowerCase](doc/String/isLowerCase.md)</div><div style="flex-basis: 200px;">[isNumeric](doc/String/isNumeric.md)</div><div style="flex-basis: 200px;">[isPunctuation](doc/String/isPunctuation.md)</div><div style="flex-basis: 200px;">[isUpperCase](doc/String/isUpperCase.md)</div><div style="flex-basis: 200px;">[isWhitespace](doc/String/isWhitespace.md)</div><div style="flex-basis: 200px;">[chop](doc/String/chop.md)</div><div style="flex-basis: 200px;">[clean](doc/String/clean.md)</div><div style="flex-basis: 200px;">[collapseBreakingSpace](doc/String/collapseBreakingSpace.md)</div><div style="flex-basis: 200px;">[collapseWhitespace](doc/String/collapseWhitespace.md)</div><div style="flex-basis: 200px;">[compareStrings](doc/String/compareStrings.md)</div><div style="flex-basis: 200px;">[toBoolean](doc/String/toBoolean.md)</div><div style="flex-basis: 200px;">[toEnumeration](doc/String/toEnumeration.md)</div><div style="flex-basis: 200px;">[toFilename](doc/String/toFilename.md)</div><div style="flex-basis: 200px;">[correctMSWord](doc/String/correctMSWord.md)</div><div style="flex-basis: 200px;">[count](doc/String/count.md)</div><div style="flex-basis: 200px;">[delimited](doc/String/delimited.md)</div><div style="flex-basis: 200px;">[extractDigits](doc/String/extractDigits.md)</div><div style="flex-basis: 200px;">[toASCII](doc/String/toASCII.md)</div><div style="flex-basis: 200px;">[diceCoefficient](doc/String/diceCoefficient.md)</div><div style="flex-basis: 200px;">[fuzzyMatch](doc/String/fuzzyMatch.md)</div><div style="flex-basis: 200px;">[levenshteinDistance](doc/String/levenshteinDistance.md)</div><div style="flex-basis: 200px;">[longestCommonSubstring](doc/String/longestCommonSubstring.md)</div><div style="flex-basis: 200px;">[tag](doc/String/tag.md)</div><div style="flex-basis: 200px;">[getIndent](doc/String/getIndent.md)</div><div style="flex-basis: 200px;">[indent](doc/String/indent.md)</div><div style="flex-basis: 200px;">[unindent](doc/String/unindent.md)</div><div style="flex-basis: 200px;">[mask](doc/String/mask.md)</div><div style="flex-basis: 200px;">[quote](doc/String/quote.md)</div><div style="flex-basis: 200px;">[unquote](doc/String/unquote.md)</div><div style="flex-basis: 200px;">[groupCode](doc/String/groupCode.md)</div><div style="flex-basis: 200px;">[numberToLetter](doc/String/numberToLetter.md)</div><div style="flex-basis: 200px;">[sortOrder](doc/String/sortOrder.md)</div><div style="flex-basis: 200px;">[splitChars](doc/String/splitChars.md)</div><div style="flex-basis: 200px;">[splitLines](doc/String/splitLines.md)</div><div style="flex-basis: 200px;">[splitWords](doc/String/splitWords.md)</div><div style="flex-basis: 200px;">[fillTemplate](doc/String/fillTemplate.md)</div><div style="flex-basis: 200px;">[binaryUnits](doc/String/binaryUnits.md)</div><div style="flex-basis: 200px;">[metricUnits](doc/String/metricUnits.md)</div><div style="flex-basis: 200px;">[wordwrap](doc/String/wordwrap.md)</div></div>|
-|[Template](doc/Template/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[graphQL](doc/Template/graphQL.md)</div><div style="flex-basis: 200px;">[singleLine](doc/Template/singleLine.md)</div></div>|
-|[Time](doc/Time/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[TimeSpan](doc/Time/TimeSpan.md)</div><div style="flex-basis: 200px;">[addTime](doc/Time/addTime.md)</div><div style="flex-basis: 200px;">[toDate](doc/Time/toDate.md)</div><div style="flex-basis: 200px;">[beginningOfDay](doc/Time/beginningOfDay.md)</div><div style="flex-basis: 200px;">[isMidnight](doc/Time/isMidnight.md)</div><div style="flex-basis: 200px;">[isSameDay](doc/Time/isSameDay.md)</div><div style="flex-basis: 200px;">[occurrenceInMonth](doc/Time/occurrenceInMonth.md)</div><div style="flex-basis: 200px;">[formatDate](doc/Time/formatDate.md)</div><div style="flex-basis: 200px;">[julian](doc/Time/julian.md)</div><div style="flex-basis: 200px;">[beginningOfMonth](doc/Time/beginningOfMonth.md)</div><div style="flex-basis: 200px;">[daysInMonth](doc/Time/daysInMonth.md)</div><div style="flex-basis: 200px;">[endOfMonth](doc/Time/endOfMonth.md)</div><div style="flex-basis: 200px;">[isSameMonth](doc/Time/isSameMonth.md)</div><div style="flex-basis: 200px;">[isValidDate](doc/Time/isValidDate.md)</div><div style="flex-basis: 200px;">[parseDate](doc/Time/parseDate.md)</div><div style="flex-basis: 200px;">[relativeTime](doc/Time/relativeTime.md)</div><div style="flex-basis: 200px;">[timezone](doc/Time/timezone.md)</div><div style="flex-basis: 200px;">[isDate](doc/Time/isDate.md)</div><div style="flex-basis: 200px;">[beginningOfWeek](doc/Time/beginningOfWeek.md)</div><div style="flex-basis: 200px;">[dayOfWeek](doc/Time/dayOfWeek-1.md)</div><div style="flex-basis: 200px;">[endOfWeek](doc/Time/endOfWeek.md)</div><div style="flex-basis: 200px;">[isoWeekOfYear](doc/Time/isoWeekOfYear.md)</div><div style="flex-basis: 200px;">[isoWeeksInYear](doc/Time/isoWeeksInYear.md)</div><div style="flex-basis: 200px;">[isSameWeek](doc/Time/isSameWeek.md)</div><div style="flex-basis: 200px;">[beginningOfYear](doc/Time/beginningOfYear.md)</div><div style="flex-basis: 200px;">[dayOfYear](doc/Time/dayOfYear.md)</div><div style="flex-basis: 200px;">[endOfYear](doc/Time/endOfYear.md)</div><div style="flex-basis: 200px;">[isLeapYear](doc/Time/isLeapYear.md)</div><div style="flex-basis: 200px;">[isSameYear](doc/Time/isSameYear.md)</div></div>|
-|[Unicode](doc/Unicode/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[decodeText](doc/Unicode/decodeText.md)</div><div style="flex-basis: 200px;">[encodeText](doc/Unicode/encodeText.md)</div><div style="flex-basis: 200px;">[isSurrogate](doc/Unicode/isSurrogate.md)</div><div style="flex-basis: 200px;">[removeDiacritics](doc/Unicode/removeDiacritics.md)</div><div style="flex-basis: 200px;">[unicodeLength](doc/Unicode/unicodeLength.md)</div></div>|
-|[Utility](doc/Utility/index.md)|<div style="width: 600px; display: flex; flex-direction: row; flex-wrap: wrap"><div style="flex-basis: 200px;">[PriorityQueue](doc/Utility/PriorityQueue.md)</div><div style="flex-basis: 200px;">[isBoolean](doc/Utility/isBoolean.md)</div><div style="flex-basis: 200px;">[isFunction](doc/Utility/isFunction.md)</div><div style="flex-basis: 200px;">[isNumber](doc/Utility/isNumber.md)</div><div style="flex-basis: 200px;">[isObject](doc/Utility/isObject.md)</div><div style="flex-basis: 200px;">[isRegExp](doc/Utility/isRegExp.md)</div><div style="flex-basis: 200px;">[isString](doc/Utility/isString.md)</div></div>|
+## Contents
+
+| Group | Entities |
+| ----- | -------- |
+| [Array](https://doc.technobuddha.com//library/index_array.html) | 7 Functions and 6 Types |
+| [Binary](https://doc.technobuddha.com//library/index_binary.html) | 8 Classes, 13 Functions, and 2 Types |
+| [Geometry](https://doc.technobuddha.com//library/index_geometry.html) | 2 Constants, 43 Functions, and 12 Types |
+| [JSON](https://doc.technobuddha.com//library/index_json.html) | 2 Classes, 2 Constants, 2 Functions, and 4 Types |
+| [Math](https://doc.technobuddha.com//library/index_math.html) | 5 Constants, 32 Functions, and 12 Types |
+| [Object](https://doc.technobuddha.com//library/index_object.html) | 25 Functions and 1 Type |
+| [Programming](https://doc.technobuddha.com//library/index_programming.html) | 20 Functions and 4 Types |
+| [Random](https://doc.technobuddha.com//library/index_random.html) | 1 Class, 4 Functions, and 1 Type |
+| [RegExp](https://doc.technobuddha.com//library/index_regExp.html) | 8 Constants and 7 Functions |
+| [String](https://doc.technobuddha.com//library/index_string.html) | 58 Functions and 21 Types |
+| [Time](https://doc.technobuddha.com//library/index_time.html) | 1 Class, 17 Constants, 28 Functions, and 12 Types |
+| [Unicode](https://doc.technobuddha.com//library/index_unicode.html) | 16 Constants, 5 Functions, and 2 Types |
+| [Utility](https://doc.technobuddha.com//library/index_utility.html) | 1 Class |
 
 ## Installation
 
@@ -47,31 +90,22 @@ npm install @technobuddha/library
 Most modern build systems will now do proper tree-shaking, so you can import only the functions you need:
 
 ```ts
-import { plural } from '@technobuddha/library';
+import { plural, summarize } from '@technobuddha/library';
 
-console.log(plural('mouse'));
-// mice
-```
-
-In the event you are seeing this library taking up excessive bundle space, you can import directly from the individual modules:
-
-```ts
-import { median } from '@technobuddha/library/dist/median.js';
-
-console.log(median([1, 5, 3, 2, 4]));
-// 3
+plural('mouse'); // 'mice'
+summarize(Number.MAX_SAFE_INTEGER); // '9.01 quadrillion'
 ```
 
 ## License
 
-The technobuddha library is released under the [MIT license](LICENSE).
+The Technobuddha Library is released under the [MIT license](LICENSE).
 
 ## Documentation
 
-Documentation is generated by [TypeDoc](https:/typedoc.org).
+[Dive into the Technobuddha Library documentation](https://doc.technobuddha.com/library.html)
 
-[Modules](https://github.com/technobuddha/hill.software/tree/main/packages/library/doc/index.md)
+The documentation is written by the `Technobuddha` assisted by AI. Some of what the AI has written is good, some not so much. If you find something that is incorrect or could be improved, please [raise an issue](https://github.com/technobuddha/library/issues) or [make a pull request](https://github.com/technobuddha/library/pulls).
 
 ## History
 
-In one form or another, this library has been around since the later part of the 20th century. This is the latest (as of 2021) incarnation of the library, this time ported to Typescript.
+In one form or another, this library has been around since the later part of the 20th century. I ported my library to `Typescript` in 2021, version 2 brings many improvements and new features, as well as a complete rewrite of the documentation.

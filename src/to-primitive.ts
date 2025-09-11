@@ -3,12 +3,20 @@ import { isPrimitive } from './is-primitive.ts';
 
 /**
  * Convert an object into its primitive (string, number, etc.) value
- *
  * @param input - the object
  * @param hint - A "hint" as to what the type should be.  "string", "number" or "default"
  * @returns primitive value
- * @group Primitive
+ * @group Object
  * @category Conversion
+ * @example
+ * ```typescript
+ * toPrimitive(42); // 42
+ * toPrimitive('hello'); // 'hello'
+ * toPrimitive(new Number(42)); // 42
+ * toPrimitive(new String('abc')); // 'abc'
+ * toPrimitive({ valueOf() { return 7; } }); // 7
+ * toPrimitive({ toString() { return 'x'; } }, 'string'); // 'x'
+ * ```
  */
 export function toPrimitive(
   input: unknown,

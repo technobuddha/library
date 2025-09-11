@@ -1,5 +1,5 @@
-import { empty, space } from './constants.ts';
 import { isPunctuation } from './is-punctuation.ts';
+import { empty, space } from './unicode.ts';
 
 describe('isPunctuation', () => {
   test('should detect punctuation', () => {

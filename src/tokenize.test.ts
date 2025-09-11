@@ -1,5 +1,5 @@
-import { hyphen, nbHyphen } from './constants.ts';
 import { tokenize } from './tokenize.ts';
+import { hyphen, nonBreakingHyphen } from './unicode.ts';
 
 describe('tokenize', () => {
   test('splits a simple sentence into words', () => {
@@ -16,7 +16,7 @@ describe('tokenize', () => {
 
   test('handles string with hyphens', () => {
     expect(tokenize(`well-known break${hyphen}ing`)).toEqual(['well', 'known', 'break', 'ing']);
-    expect(tokenize(`well-known non${nbHyphen}breaking`)).toEqual([
+    expect(tokenize(`well-known non${nonBreakingHyphen}breaking`)).toEqual([
       'well',
       'known',
       'non',
@@ -37,7 +37,8 @@ describe('tokenize', () => {
   });
 
   test('handles string with numbers', () => {
-    expect(tokenize('abc123 456def')).toEqual(['abc', '123', '456', 'def']);
+    expect(tokenize('abc123 456def')).toEqual(['abc123', '456', 'def']);
+    expect(tokenize('isIPV4Local')).toEqual(['is', 'IPV4', 'Local']);
   });
 
   test('handles unicode letters', () => {
