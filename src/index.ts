@@ -1,3 +1,4 @@
+// eslint-disable-next-line technobuddha/no-ignore-file
 /* v8 ignore file */
 
 export * from './@types/binary-encoding.ts';

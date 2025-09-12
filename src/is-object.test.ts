@@ -14,7 +14,7 @@ describe('isObject', () => {
     expect(isObject('string')).toBeFalse();
     expect(isObject(true)).toBeFalse();
     expect(isObject(Symbol('sym'))).toBeFalse();
-    expect(isObject(BigInt(10))).toBeFalse();
+    expect(isObject(10n)).toBeFalse();
   });
 
   test('returns true for plain objects', () => {

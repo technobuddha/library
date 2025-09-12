@@ -47,4 +47,60 @@ describe('manhattanDistance', () => {
     const b = { x: 4.2, y: 6.1 };
     expect(manhattanDistance(a, b)).toBeCloseTo(Math.abs(1.5 - 4.2) + Math.abs(2.5 - 6.1));
   });
+
+  test('wraps horizontally', () => {
+    const a = { x: 0, y: 2 };
+    const b = { x: 4, y: 2 };
+    expect(
+      manhattanDistance(a, b, { width: 5, height: 5, wrapHorizontal: true, wrapVertical: false }),
+    ).toBe(1);
+  });
+
+  test('wraps vertically', () => {
+    const a = { x: 3, y: 0 };
+    const b = { x: 3, y: 4 };
+    expect(
+      manhattanDistance(a, b, { width: 5, height: 5, wrapHorizontal: false, wrapVertical: true }),
+    ).toBe(1);
+  });
+
+  test('wraps both horizontally and vertically', () => {
+    const a = { x: 0, y: 0 };
+    const b = { x: 4, y: 4 };
+    expect(
+      manhattanDistance(a, b, { width: 5, height: 5, wrapHorizontal: true, wrapVertical: true }),
+    ).toBe(2);
+  });
+
+  test('no wrap if not enabled', () => {
+    const a = { x: 0, y: 0 };
+    const b = { x: 4, y: 4 };
+    expect(
+      manhattanDistance(a, b, {
+        width: 5,
+        height: 5,
+        wrapHorizontal: false,
+        wrapVertical: false,
+      }),
+    ).toBe(8);
+  });
+
+  test('works with partial wrapping', () => {
+    const a = { x: 0, y: 4 };
+    const b = { x: 4, y: 1 };
+    expect(
+      manhattanDistance(a, b, { width: 5, height: 5, wrapHorizontal: true, wrapVertical: false }),
+    ).toBe(4);
+    expect(
+      manhattanDistance(a, b, { width: 5, height: 5, wrapHorizontal: false, wrapVertical: true }),
+    ).toBe(6);
+  });
+
+  test('works with decimal values and wrapping', () => {
+    const a = { x: 0.5, y: 0.5 };
+    const b = { x: 4.5, y: 4.5 };
+    expect(
+      manhattanDistance(a, b, { width: 5, height: 5, wrapHorizontal: true, wrapVertical: true }),
+    ).toBeCloseTo(2);
+  });
 });

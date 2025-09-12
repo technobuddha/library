@@ -29,7 +29,7 @@ describe('replacer', () => {
   });
 
   test('should encode bigint', () => {
-    expect(JSON.stringify({ bigint: BigInt('123456789') }, replacer)).toBe(
+    expect(JSON.stringify({ bigint: 123456789n }, replacer)).toBe(
       `{"bigint":"${specialBegin}BigInt:123456789${specialFinish}"}`,
     );
   });
