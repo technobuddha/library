@@ -1,5 +1,7 @@
 node_modules/
+.cspell/
 .vscode/
+scripts/
 .editorconfig
 .gitattributes
 .prettierignore
@@ -9,3 +11,5 @@ node_modules/
 *.setup.ts
 tsconfig.*
 typedoc-markdown-plugin.js
+TODO
+cspell.json

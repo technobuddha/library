@@ -31,7 +31,7 @@ describe('reviver', () => {
   test('should decode bigint', () => {
     expect(
       JSON.parse(`{"bigint":"${specialBegin}BigInt:123456789${specialFinish}"}`, reviver),
-    ).toEqual({ bigint: BigInt('123456789') });
+    ).toEqual({ bigint: 123456789n });
   });
 
   test('should decode badly encoded input', () => {

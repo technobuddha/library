@@ -10,5 +10,3 @@ declare module 'vitest' {
       JestMatcherDeepCloseTo<T> {}
   interface ExpectStatic extends JestExtended, JestMatcherDeepCloseTo {}
 }
-
-export {};
