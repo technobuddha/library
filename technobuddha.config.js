@@ -1,8 +1,11 @@
 //@ts-check
-
-// eslint-disable-next-line tsdoc/syntax
-/** @type {import("@technobuddha/project").TechnobuddhaConfig} */
+/** @type import("@technobuddha/project").TechnobuddhaConfig */
 const config = {
+  lint: {
+    rules: {
+      'unicorn/prefer-code-point': { rule: 'off' },
+    }
+  },
   directories: {
     src: {
       environment: 'universal',
@@ -13,6 +16,9 @@ const config = {
         references: ['./src/tsconfig.code.json'],
       }
     }
+  },
+  npm: {
+    ignore: ['doc'],
   },
 };
 

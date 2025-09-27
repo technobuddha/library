@@ -3,9 +3,8 @@
 // 🚨
 {
   "extends": "../tsconfig.base.json",
-  "noEmit": true,
   "compilerOptions": { "composite": true, "types": ["node"], "lib": ["esnext"] },
-  "include": ["*.ts", "*.js"],
+  "include": ["*.ts"],
   "exclude": [],
   "references": [{ "path": "../src/tsconfig.code.json" }]
 }

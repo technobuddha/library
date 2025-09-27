@@ -11,9 +11,11 @@
 
 ## Introduction
 
-This is a large library of many things that the
+This is a part of the large library of many things that the
 [Technobuddha](https://technobuddha.com)
-has found useful over the years. There is a plethora of functions and classes for working with
+has found useful over the years.
+
+There is a plethora of functions and classes for working with
 arrays, strings, numbers, dates, objects, and more. Ranging from the simple
 ([clamp](https://doc.technobuddha.com/library/clamp.html))
 to the complex

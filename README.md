@@ -16,9 +16,11 @@
 
 ## Introduction
 
-This is a large library of many things that the
+This is a part of the large library of many things that the
 [Technobuddha](https://technobuddha.com)
-has found useful over the years. There is a plethora of functions and classes for working with
+has found useful over the years.
+
+There is a plethora of functions and classes for working with
 arrays, strings, numbers, dates, objects, and more. Ranging from the simple
 ([clamp](https://doc.technobuddha.com/library/clamp.html))
 to the complex
@@ -29,7 +31,7 @@ this library has something for everyone.
 
 | Group | Entities |
 | ----- | -------- |
-| [Array](https://doc.technobuddha.com/library/index_array.html) | 7 Functions and 6 Types |
+| [Array](https://doc.technobuddha.com/library/index_array.html) | 9 Functions and 6 Types |
 | [Binary](https://doc.technobuddha.com/library/index_binary.html) | 8 Classes, 13 Functions, and 2 Types |
 | [Geometry](https://doc.technobuddha.com/library/index_geometry.html) | 2 Constants, 43 Functions, and 12 Types |
 | [JSON](https://doc.technobuddha.com/library/index_json.html) | 2 Classes, 2 Constants, 2 Functions, and 4 Types |
@@ -38,9 +40,9 @@ this library has something for everyone.
 | [Programming](https://doc.technobuddha.com/library/index_programming.html) | 20 Functions and 4 Types |
 | [Random](https://doc.technobuddha.com/library/index_random.html) | 1 Class, 4 Functions, and 1 Type |
 | [RegExp](https://doc.technobuddha.com/library/index_regExp.html) | 8 Constants and 7 Functions |
-| [String](https://doc.technobuddha.com/library/index_string.html) | 58 Functions and 21 Types |
+| [String](https://doc.technobuddha.com/library/index_string.html) | 3 Constants, 59 Functions, and 22 Types |
 | [Time](https://doc.technobuddha.com/library/index_time.html) | 1 Class, 17 Constants, 28 Functions, and 12 Types |
-| [Unicode](https://doc.technobuddha.com/library/index_unicode.html) | 16 Constants, 5 Functions, and 2 Types |
+| [Unicode](https://doc.technobuddha.com/library/index_unicode.html) | 16 Constants, 7 Functions, and 1 Type |
 | [Utility](https://doc.technobuddha.com/library/index_utility.html) | 1 Class |
 
 ## Installation

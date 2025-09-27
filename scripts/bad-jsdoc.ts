@@ -1,4 +1,3 @@
-// Converted from find-bad-jsdoc-ast.js to TypeScript
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
@@ -6,42 +5,35 @@ import ts from 'typescript';
 
 // Helper to recursively get all .ts files in a directory
 async function getAllTSFiles(dir: string): Promise<string[]> {
-  let results: string[] = [];
-  const list = await fs.readdir(dir);
-  for (const file of list) {
-    const filePath = path.join(dir, file);
-    const stat = await fs.stat(filePath);
-    if (stat?.isDirectory()) {
-      results = results.concat(await getAllTSFiles(filePath));
-    } else if (file.endsWith('.ts') && !file.endsWith('.d.ts')) {
-      results.push(filePath);
+  return fs.readdir(dir, { recursive: true, withFileTypes: true }).then(async (files) => {
+    const results: string[] = [];
+    for (const file of files) {
+      if (file.isFile() && file.name.endsWith('.ts') && !file.name.endsWith('.d.ts')) {
+        results.push(path.join(file.parentPath, file.name));
+      }
     }
-  }
-  return results;
+    return results;
+  });
 }
 
 // Check for bad JSDoc comments in a TypeScript file using the AST
 async function findBadJsdocInFile(filePath: string): Promise<void> {
-  const sourceText = await fs.readFile(filePath, 'utf8');
-  const sourceFile = ts.createSourceFile(filePath, sourceText, ts.ScriptTarget.Latest, true);
+  return fs.readFile(filePath, 'utf8').then((sourceText) => {
+    const sourceFile = ts.createSourceFile(filePath, sourceText, ts.ScriptTarget.Latest, true);
 
-  function checkNode(node: ts.Node): void {
-    // Use the public API to get JSDoc nodes, avoid 'any'.
-    const jsDocNodes = ts.getJSDocCommentsAndTags(node).filter(ts.isJSDoc);
-    if (jsDocNodes.length > 0) {
-      for (const jsDoc of jsDocNodes) {
-        // Example: check for empty JSDoc or missing description
+    function checkNode(node: ts.Node): void {
+      // Get JSDoc nodes
+      for (const jsDoc of ts.getJSDocCommentsAndTags(node).filter(ts.isJSDoc)) {
         if (!jsDoc.comment || jsDoc.comment.toString().trim() === '') {
           const { line, character } = sourceFile.getLineAndCharacterOfPosition(jsDoc.pos);
-          // Instead of console.log, collect results for reporting
-          reportBadJsdoc({ filePath, line: line + 1, character: character + 1 });
+          reportBadJsdoc({ filePath, line, character });
         }
       }
+      ts.forEachChild(node, checkNode);
     }
-    ts.forEachChild(node, checkNode);
-  }
 
-  checkNode(sourceFile);
+    return checkNode(sourceFile);
+  });
 }
 
 // Collect bad JSDoc results for reporting
@@ -54,7 +46,6 @@ function reportBadJsdoc(result: BadJsdoc): void {
 
 // Main execution
 async function main(): Promise<void> {
-  // Avoid __dirname: use import.meta.url to get the current file location
   const currentFileUrl = import.meta.url;
   const currentFilePath = path.dirname(new URL(currentFileUrl).pathname);
   const srcDir = path.resolve(currentFilePath, '../src');
@@ -69,7 +60,9 @@ async function main(): Promise<void> {
       // Show path relative to current working directory
       const relPath = path.relative(cwd, filePath);
       // eslint-disable-next-line no-console
-      console.log(`${relPath}:${line}:${character} - Bad JSDoc: Empty or missing description`);
+      console.log(
+        `${relPath}:${line + 1}:${character + 1} - Bad JSDoc: Empty or missing description`,
+      );
     }
   }
 }
@@ -77,6 +70,5 @@ async function main(): Promise<void> {
 main().catch((err) => {
   // eslint-disable-next-line no-console
   console.error(err);
-  // Avoid process.exit for better testability
-  // process.exit(1);
+  process.exit(1);
 });
