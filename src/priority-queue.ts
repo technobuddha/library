@@ -4,6 +4,10 @@
  * @category Classes
  */
 export class PriorityQueue<T> {
+  private comparator: (a: T, b: T) => number;
+  private readonly contents: T[];
+  private sorted: boolean;
+
   /**
    * Creates a new PriorityQueue.
    *
@@ -11,19 +15,16 @@ export class PriorityQueue<T> {
    * then or equal to zero.
    * @param contents - Initial contents of the queue
    */
-  public constructor(
-    private comparator: (a: T, b: T) => number,
-    contents?: Iterable<T>,
-  ) {
+  public constructor(comparator: (a: T, b: T) => number, contents?: Iterable<T>) {
+    this.comparator = comparator;
     this.contents = Array.from<T>(contents ?? []);
     this.sorted = false;
   }
 
-  private readonly contents: T[];
-  private sorted: boolean;
-
   private sort(): void {
-    this.contents.sort(this.comparator);
+    if (!this.sorted) {
+      this.contents.sort(this.comparator);
+    }
     this.sorted = true;
   }
 
@@ -31,7 +32,7 @@ export class PriorityQueue<T> {
    * Add an element to the queue
    * @param o - element to be added
    */
-  public push(...o: T[]): void {
+  public enqueue(...o: T[]): void {
     this.contents.push(...o);
     this.sorted = false;
   }
@@ -41,10 +42,8 @@ export class PriorityQueue<T> {
    *
    * @returns queue element
    */
-  public pop(): T | undefined {
-    if (!this.sorted) {
-      this.sort();
-    }
+  public dequeue(): T | undefined {
+    this.sort();
     return this.contents.shift();
   }
 
@@ -54,9 +53,7 @@ export class PriorityQueue<T> {
    * @returns generator function
    */
   public *[Symbol.iterator](): Iterator<T> {
-    if (!this.sorted) {
-      this.sort();
-    }
+    this.sort();
     yield* this.contents;
   }
 
@@ -76,9 +73,7 @@ export class PriorityQueue<T> {
    * @returns array of transformed queue elements
    */
   public map<S>(f: (value: T, index: number, array: T[]) => S): S[] {
-    if (!this.sorted) {
-      this.sort();
-    }
+    this.sort();
     return this.contents.map(f);
   }
 

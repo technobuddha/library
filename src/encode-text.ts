@@ -14,7 +14,6 @@ export function encodeText(input: string, _encoding?: TextEncoding): Uint8Array 
   const result: number[] = [];
 
   for (let i = 0; i < input.length; ++i) {
-    // eslint-disable-next-line unicorn/prefer-code-point
     let c0 = input.charCodeAt(i);
 
     if (c0 < 0x0080) {
@@ -25,7 +24,6 @@ export function encodeText(input: string, _encoding?: TextEncoding): Uint8Array 
       if (++i >= input.length) {
         result.push(...REPLACEMENT);
       } else {
-        // eslint-disable-next-line unicorn/prefer-code-point
         const c1 = input.charCodeAt(i);
         if (c1 < 0xdc00 || c1 > 0xdfff) {
           result.push(...REPLACEMENT);

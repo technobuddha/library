@@ -1,18 +1,6 @@
 /**
- * Options for {@link isSurrogate}
- * @group Unicode
- * @category Is Surrogate
- */
-export type IsSurrogateOptions = {
-  /** test for high surrogates (D800-DBFF) */
-  high?: boolean;
-  /** test for low surrogates (DC00-DFFF) */
-  low?: boolean;
-};
-
-/**
  * Determine is a character is a surrogate
- * @param input - the character to test
+ * @param input - the character to test, or the character code
  * @param options - see {@link IsSurrogateOptions}
  * @defaultValue high true
  * @defaultValue low true
@@ -20,12 +8,35 @@ export type IsSurrogateOptions = {
  * @group Unicode
  * @category Is Surrogate
  */
-export function isSurrogate(
-  input: string,
-  { high = true, low = true }: IsSurrogateOptions = {},
-): boolean {
-  // eslint-disable-next-line unicorn/prefer-code-point
-  const cc = input.charCodeAt(0);
+export function isSurrogate(input: string | number): boolean {
+  return isSurrogateHigh(input) || isSurrogateLow(input);
+}
 
-  return (high && cc >= 0xd800 && cc <= 0xdbff) || (low && cc >= 0xdc00 && cc <= 0xdfff);
+/**
+ * Determine is a character is a surrogate
+ * @param input - the character to test, or the character code
+ * @param options - see {@link IsSurrogateOptions}
+ * @defaultValue high true
+ * @defaultValue low true
+ * @returns true if the specified character is a unicode surrogate
+ * @group Unicode
+ * @category Is Surrogate
+ */
+export function isSurrogateLow(input: string | number): boolean {
+  const cc = typeof input === 'string' ? input.charCodeAt(0) : input;
+
+  return cc >= 0xdc00 && cc <= 0xdfff;
+}
+
+/**
+ * Determine is a character is a high surrogate
+ * @param input - the character to test, or the character code
+ * @returns true if the specified character is a unicode high surrogate
+ * @group Unicode
+ * @category Is Surrogate
+ */
+export function isSurrogateHigh(input: string | number): boolean {
+  const cc = typeof input === 'string' ? input.charCodeAt(0) : input;
+
+  return cc >= 0xd800 && cc <= 0xdbff;
 }

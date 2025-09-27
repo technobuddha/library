@@ -1,7 +1,7 @@
 import { isDate } from './is-date.ts';
 import { isPrimitive } from './is-primitive.ts';
 import { isRegExp } from './is-reg-exp.ts';
-import { type TBJsonValue } from './json.ts';
+import { type JSONValue } from './json.ts';
 
 /**
  * Recursively sorts the keys of an object in lexicographical order.
@@ -21,7 +21,7 @@ import { type TBJsonValue } from './json.ts';
  * sortKeys(42); // returns 42
  * ```
  */
-export function sortKeys<T extends TBJsonValue>(object: T): T {
+export function sortKeys<T extends JSONValue>(object: T): T {
   if (isPrimitive(object) || isDate(object) || isRegExp(object)) {
     return object;
   }

@@ -1,3 +1,5 @@
+import { type Primitive } from './primitive.ts';
+
 /**
  * Check to see if an object is a primitive
  * @param input - object to test
@@ -15,9 +17,7 @@
  * isPrimitive([]); // false
  * ```
  */
-export function isPrimitive(
-  input: unknown,
-): input is null | undefined | string | number | bigint | boolean | symbol {
+export function isPrimitive(input: unknown): input is Primitive {
   return (
     input === null ||
     input === undefined ||

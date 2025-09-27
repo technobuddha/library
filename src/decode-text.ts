@@ -74,7 +74,6 @@ export function decodeText(
     }
   }
 
-  // eslint-disable-next-line unicorn/prefer-code-point
   return String.fromCharCode(...result);
 }
 /* eslint-enable no-bitwise */

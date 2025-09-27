@@ -1,6 +1,4 @@
-import { type JsonValue } from 'type-fest';
-
-import { type TBJsonValue } from './json.ts';
+import { type JSONValue } from './json.ts';
 import { reviver } from './reviver.ts';
 
 /**
@@ -14,10 +12,10 @@ import { reviver } from './reviver.ts';
  *          or the original value cast as `JsonValue` otherwise.
  * @internal
  */
-export function jsonDeserialize(value: unknown): TBJsonValue {
+export function jsonDeserialize(value: unknown): JSONValue {
   if (typeof value === 'string' && value.startsWith('⁅') && value.endsWith('⁆')) {
     return JSON.parse(value.slice(1, -1), reviver);
   }
 
-  return value as JsonValue;
+  return value as JSONValue;
 }

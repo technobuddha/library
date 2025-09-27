@@ -55,18 +55,16 @@ export function unescapeJS(input: string): string {
         return '\v';
       }
       if (c >= '0' && c <= '7') {
-        // eslint-disable-next-line unicorn/prefer-code-point
         return String.fromCharCode(Number.parseInt(escape.slice(1), 8));
       }
       if (c === 'x') {
-        // eslint-disable-next-line unicorn/prefer-code-point
         return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
       }
       if (c === 'u') {
         if (escape.charAt(2) === '{') {
           return String.fromCodePoint(Number.parseInt(escape.slice(3, -1), 16));
         }
-        // eslint-disable-next-line unicorn/prefer-code-point
+
         return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
       }
 

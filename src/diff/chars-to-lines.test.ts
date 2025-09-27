@@ -1,0 +1,49 @@
+import { empty } from '../unicode.ts';
+
+import { charsToLines } from './chars-to-lines.ts';
+import { type Diff, DIFF_DELETE, DIFF_EQUAL, DIFF_INSERT } from './difference.ts';
+import { linesToChars } from './lines-to-chars.ts';
+
+describe('charsToLines', () => {
+  test('Convert chars up to lines.', () => {
+    const diffs: Diff[] = [
+      { op: DIFF_EQUAL, text: '\u0001\u0002\u0001' },
+      { op: DIFF_INSERT, text: '\u0002\u0001\u0002' },
+    ];
+    charsToLines(diffs, [empty, 'alpha\n', 'beta\n']);
+    expect(diffs).toStrictEqual([
+      { op: DIFF_EQUAL, text: 'alpha\nbeta\nalpha\n' },
+      { op: DIFF_INSERT, text: 'beta\nalpha\nbeta\n' },
+    ]);
+  });
+
+  test('More than 256 to reveal any 8-bit limitations.', () => {
+    const n = 300;
+    const lineList = [];
+    const charList = [];
+    for (let i = 1; i < n + 1; i++) {
+      lineList[i - 1] = `${i}\n`;
+      charList[i - 1] = String.fromCharCode(i);
+    }
+    expect(lineList).toHaveLength(n);
+    const lines = lineList.join(empty);
+    const chars = charList.join(empty);
+    expect(chars).toHaveLength(n);
+    lineList.unshift(empty);
+    const diffs: Diff[] = [{ op: DIFF_DELETE, text: chars }];
+    charsToLines(diffs, lineList);
+    expect(diffs).toStrictEqual([{ op: DIFF_DELETE, text: lines }]);
+  });
+
+  test('More than 65536 to verify any 16-bit limitation.', () => {
+    const lineList: string[] = [];
+    for (let i = 0; i < 66000; i++) {
+      lineList[i] = `${i}\n`;
+    }
+    const chars = lineList.join(empty);
+    const results = linesToChars(chars, empty);
+    const diffs: Diff[] = [{ op: DIFF_INSERT, text: results.chars1 }];
+    charsToLines(diffs, results.lineArray);
+    expect(diffs[0].text).toBe(chars);
+  });
+});

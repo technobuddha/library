@@ -1,11 +1,9 @@
-import { type Primitive } from 'type-fest';
-
 import { isFunction } from './is-function.ts';
 import { isPrimitive } from './is-primitive.ts';
+import { type Primitive } from './primitive.ts';
 
 /**
  * Represents a primitive type that excludes `null` and `undefined`.
- * @see Primitive
  * @group Array
  * @category Operations
  */

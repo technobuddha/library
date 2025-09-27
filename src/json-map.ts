@@ -1,5 +1,4 @@
-import { type JsonObject } from 'type-fest';
-
+import { type JSONObject } from './json.ts';
 import { jsonDeserialize } from './json-deserialize.ts';
 import { jsonSerialize } from './json-serialize.ts';
 
@@ -23,7 +22,7 @@ import { jsonSerialize } from './json-serialize.ts';
  * @group JSON
  * @category Data Structures
  */
-export class JSONMap<K extends JsonObject, V> implements Map<K, V> {
+export class JSONMap<K extends JSONObject, V> implements Map<K, V> {
   protected map = new Map<string, V>();
 
   public constructor(values?: Iterable<[K, V]> | null) {

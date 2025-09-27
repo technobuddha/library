@@ -48,13 +48,11 @@ export function unescapeJava(input: string): string {
       return '\t';
     }
     if (c >= '0' && c <= '7') {
-      // eslint-disable-next-line unicorn/prefer-code-point
       return String.fromCharCode(Number.parseInt(escape.slice(1), 8));
     }
     if (c === 'u') {
       // Java allows multiple occurrences of 'u' in it's escape sequence
 
-      // eslint-disable-next-line unicorn/prefer-code-point
       return String.fromCharCode(Number.parseInt(escape.replace(/^u+/u, empty), 16));
     }
 

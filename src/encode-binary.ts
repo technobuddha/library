@@ -42,7 +42,6 @@ export function encodeBinary(input: Uint8Array, encoding: BinaryEncoding): strin
     }
 
     case 'binary': {
-      // eslint-disable-next-line unicorn/prefer-code-point
       return String.fromCharCode(...input);
     }
 

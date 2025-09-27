@@ -85,21 +85,18 @@ export function escapeJava(input: string): string {
           break;
         }
         default: {
-          // eslint-disable-next-line unicorn/prefer-code-point
           output.push(String.fromCharCode(u0));
         }
       }
     } else if (u0 < 0x000000a1) {
       output.push(u4(u0));
     } else if (u0 < 0x00000100) {
-      // eslint-disable-next-line unicorn/prefer-code-point
       output.push(String.fromCharCode(u0));
     } else if (u0 < 0x00010000) {
       output.push(u4(u0));
     } else {
-      // eslint-disable-next-line unicorn/prefer-code-point
       u0 = input.charCodeAt(i);
-      // eslint-disable-next-line unicorn/prefer-code-point
+
       u1 = input.charCodeAt(++i);
       output.push(u4(u0), u4(u1));
     }

@@ -40,7 +40,6 @@ export function decodeBinary(input: string, encoding: BinaryEncoding): Uint8Arra
     }
 
     case 'binary': {
-      // eslint-disable-next-line unicorn/prefer-code-point
       return Uint8Array.from(input, (char) => char.charCodeAt(0));
     }
 

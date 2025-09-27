@@ -1,4 +1,4 @@
-import { type TBJsonValue } from './json.ts';
+import { type JSONValue } from './json.ts';
 import { replacer } from './replacer.ts';
 import { sortKeys } from './sort-keys.ts';
 
@@ -10,6 +10,6 @@ import { sortKeys } from './sort-keys.ts';
  * @returns The serialized string with sorted keys and custom delimiters.
  * @internal
  */
-export function jsonSerialize(value: TBJsonValue): string {
+export function jsonSerialize(value: JSONValue): string {
   return `⁅${JSON.stringify(sortKeys(value), replacer)}⁆`;
 }

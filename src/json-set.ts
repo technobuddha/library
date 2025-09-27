@@ -1,5 +1,4 @@
-import { type JsonObject } from 'type-fest';
-
+import { type JSONObject } from './json.ts';
 import { jsonDeserialize } from './json-deserialize.ts';
 import { jsonSerialize } from './json-serialize.ts';
 
@@ -25,7 +24,7 @@ import { jsonSerialize } from './json-serialize.ts';
  * @group JSON
  * @category Data Structures
  */
-export class JSONSet<T extends JsonObject> implements Set<T> {
+export class JSONSet<T extends JSONObject> implements Set<T> {
   protected set = new Set<string>();
 
   public constructor(values?: Iterable<T> | null) {

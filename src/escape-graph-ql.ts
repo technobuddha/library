@@ -74,7 +74,6 @@ export function escapeGraphQL(input: string): string {
           break;
         }
         default: {
-          // eslint-disable-next-line unicorn/prefer-code-point
           output.push(String.fromCharCode(u));
         }
       }

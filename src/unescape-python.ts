@@ -76,15 +76,12 @@ export function unescapePython(input: string): string {
         throw new Error('N escape is not supported.');
       }
       if (c >= '0' && c <= '7') {
-        // eslint-disable-next-line unicorn/prefer-code-point
         return String.fromCharCode(Number.parseInt(escape, 8));
       }
       if (c === 'x') {
-        // eslint-disable-next-line unicorn/prefer-code-point
         return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
       }
       if (c === 'U' || c === 'u') {
-        // eslint-disable-next-line unicorn/prefer-code-point
         return String.fromCharCode(Number.parseInt(escape.slice(2), 16));
       }
 
