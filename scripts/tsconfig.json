@@ -2,9 +2,16 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../tsconfig.base.json",
   "compilerOptions": { "composite": true, "types": ["node"], "lib": ["esnext"] },
-  "include": ["*.ts"],
+  "include": ["**/*.ts", "**/*.d.ts"],
   "exclude": [],
-  "references": [{ "path": "../src/tsconfig.code.json" }]
+  "references": [
+    { "path": "../datasets" },
+    { "path": "../fixtures" },
+    { "path": "../src/esnext" },
+    { "path": "../src/helpers" },
+    { "path": "../standards" }
+  ]
 }

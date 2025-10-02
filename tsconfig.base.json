@@ -18,6 +18,7 @@
     "allowArbitraryExtensions": true,
     "declaration": true,
     "inlineSourceMap": true,
+    "removeComments": true,
     "noEmitOnError": true,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
@@ -39,6 +40,12 @@
     "noImplicitOverride": true,
     "allowUnusedLabels": false,
     "allowUnreachableCode": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@technobuddha/library": ["./src/esnext/index.ts"],
+      "@technobuddha/library/node": ["./src/node/index.ts"],
+      "@technobuddha/library/browser": ["./src/browser/index.ts"],
+      "@technobuddha/library/esnext": ["./src/esnext/index.ts"]
+    }
   }
 }

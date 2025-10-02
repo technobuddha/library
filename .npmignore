@@ -26,3 +26,11 @@ coverage
 
 # Project Ignore
 doc
+datasets
+reference
+fixtures
+standards
+documents
+public
+__tests__
+tsdoc.json

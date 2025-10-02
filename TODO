@@ -1,3 +1,5 @@
 ✔ Use BinaryObject instead of Typed array @done(25-09-04 11:08)
 ☐ Add a units argument to edge-angles
 ☐ Add the changes to .gitignore to tbproject
+☐ Remove the 're' function from parse-date and use the standard version
+☐ ToCodepoints and FromCodepoints function

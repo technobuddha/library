@@ -2,17 +2,16 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "target": "esnext",
-    "lib": ["esnext"],
     "composite": true,
-    "types": ["node", "jest"],
-    "noEmit": true,
-    "outDir": "../dist",
-    "rootDir": "."
+    "types": [],
+    "lib": ["esnext"],
+    "rootDir": ".",
+    "outDir": "../dist"
   },
-  "include": ["**/*.d.ts", "**/*.test.ts"],
-  "exclude": [],
-  "references": [{ "path": "./tsconfig.code.json" }]
+  "include": ["**/*.ts", "**/*.d.ts"],
+  "exclude": ["**/__tests__"],
+  "references": [{ "path": "browser" }, { "path": "common" }, { "path": "node" }]
 }

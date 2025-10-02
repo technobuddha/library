@@ -1,31 +1,57 @@
 //@ts-check
 
-/** @type {import('@technobuddha/builder').Builds} */
+/** @type import('\@technobuddha/project/build').Builds */
 const config = {
-  dev: {
+  default: {
     watch: true,
-    projects: [
+    steps: [
       {
         name: 'Clean',
-        steps: 'rm -rf ./dist'
+        command: ['rm -rf ./dist', 'rm -rf ./src/esnext/@data/moby*']
       },
+      {
+        name: 'Lorem',
+        command: 'npx tsx scripts/make-lorem-ipsum.ts',
+        directory: './reference/lorem',
+      },
+      {
+        name: 'Hyphen',
+        command: 'npx tsx scripts/make-hyphenation.ts',
+        directory: './reference/hyphen',
+      },
+      // {
+      //   name: 'Moby',
+      //   command: 'npx tsx scripts/make-moby.ts',
+      //   directory: './reference/moby',
+      // },
       {
         name: 'Library',
         directory: ['./src'],
-        steps: 'tsc -p ./src/tsconfig.code.json',
+        command: 'npx tsc --build src',
       },
+      {
+        name: 'Documentation',
+        directory: ['./src'],
+        command: 'npx typedoc',
+      }
     ],
   },
   prod: {
-    projects: [
+    steps: [
+      { build: 'default' },
+    ]
+  },
+  publish: {
+    steps: [
+      { build: 'default' },
       {
-        name: 'Clean',
-        steps: 'rm -rf ./dist',
+        name: 'Version',
+        command: 'yarn version prerelease',
       },
       {
-        name: 'Library',
-        steps: 'tsc -p ./src/tsconfig.code.json',
-      },
+        name: 'Publish',
+        command: 'yarn npm publish',
+      }
     ]
   }
 };

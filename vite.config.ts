@@ -1,11 +1,24 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig(() => ({
+  plugins: [tsconfigPaths()],
   test: {
+    setupFiles: ['./vitest.setup.ts'],
     root: './src',
     include: ['**/*.test.ts'],
     globals: true,
-    setupFiles: ['./vitest.setup.ts'],
+    environment: 'jsdom',
+    env: {
+      TZ: 'America/New_York',
+    },
+    cache: false as const,
+    typecheck: {
+      enabled: true,
+    },
     coverage: {
       reportsDirectory: '../coverage',
       skipFull: true,
@@ -16,7 +29,9 @@ export default defineConfig(() => ({
         'scripts/**/*.*',
         '**/index.ts',
         '**/@types',
+        '**/@data',
         ...coverageConfigDefaults.exclude,
+        'src/esnext/difference', 'src/esnext/patch', 'src/esnext/match', 'src/esnext/metaphone/metaphone3.ts'
       ],
     },
   },

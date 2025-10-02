@@ -1,0 +1,10 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "composite": true },
+  "include": ["**/*.ts", "../**/*.d.ts", "../common/unicode-trie-builder.ts"],
+  "exclude": ["**/__tests__"]
+}

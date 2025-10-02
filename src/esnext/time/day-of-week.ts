@@ -1,0 +1,23 @@
+import { modulo } from '../math/modulo.ts';
+
+import { type DateOptions, day, type DayOfWeek, daysPerWeek } from './constants.ts';
+
+/**
+ * Determine the day of the week for a specific date
+ * @param input - The date
+ * @param options - see {@link DateOptions}
+ * @defaultValue utc false
+ * @returns The date value for midnight on the first day of the specified year
+ * @group Time
+ * @category Week
+ */
+export function dayOfWeek(
+  input: Date,
+  { utc = false, firstDayOfWeek = day.sunday }: DateOptions = {},
+): DayOfWeek {
+  if (utc) {
+    return modulo(input.getUTCDay() + daysPerWeek - firstDayOfWeek, daysPerWeek) as DayOfWeek;
+  }
+
+  return modulo(input.getDay() + daysPerWeek - firstDayOfWeek, daysPerWeek) as DayOfWeek;
+}

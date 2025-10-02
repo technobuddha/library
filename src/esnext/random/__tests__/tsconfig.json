@@ -1,0 +1,16 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["node", "vitest/globals"],
+    "lib": ["esnext"],
+    "noEmit": true
+  },
+  "include": ["**/*.test.ts", "**/*.ts", "../../../**/*.d.ts"],
+  "exclude": [],
+  "references": [{ "path": "../.." }]
+}

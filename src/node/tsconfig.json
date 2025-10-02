@@ -1,0 +1,11 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../tsconfig.json",
+  "compilerOptions": { "composite": true, "types": ["node"], "lib": ["esnext"] },
+  "include": ["**/*.ts", "../**/*.d.ts"],
+  "exclude": ["**/__tests__"],
+  "references": [{ "path": "../esnext" }]
+}
