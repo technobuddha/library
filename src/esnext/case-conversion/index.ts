@@ -9,5 +9,5 @@ export { matchCase } from './match-case.ts';
 export { pascalCase } from './pascal-case.ts';
 export { snakeCase } from './snake-case.ts';
 export { startCase } from './start-case.ts';
-export { titleCase } from './title-case.ts';
+export { titleCase, type TitleCaseOptions } from './title-case.ts';
 export { uncapitalize } from './uncapitalize.ts';

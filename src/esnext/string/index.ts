@@ -29,6 +29,7 @@ export { isString } from './is-string.ts';
 export { isStringLike } from './is-string-like.ts';
 export { jaroDistance, type JaroOptions as JaroDistanceOptions } from './jaro-distance.ts';
 export { jaroWinklerDistance } from './jaro-winkler-distance.ts';
+export { keep, type KeepOptions } from './keep.ts';
 export { levenshteinDistance, type LevenshteinDistanceOptions } from './levenshtein-distance.ts';
 export { logo } from './logo.ts';
 export {

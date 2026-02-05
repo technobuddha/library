@@ -3,10 +3,31 @@ import { toString } from '../string/to-string.ts';
 
 import { empty } from './unicode.ts';
 
-type NormalizationForm = 'NFC' | 'NFD' | 'NFKC' | 'NFKD';
+/**
+ * Unicode normalization forms as defined by the ECMAScript String.prototype.normalize method.
+ *
+ * - 'NFC': Canonical Composition
+ * - 'NFD': Canonical Decomposition
+ * - 'NFKC': Compatibility Composition
+ * - 'NFKD': Compatibility Decomposition
+ *
+ * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
+ *
+ * @group Unicode
+ * @category Normalization
+ */
+export type NormalizationForm = 'NFC' | 'NFD' | 'NFKC' | 'NFKD';
 
-type RemoveDiacriticsOptions = {
+/**
+ * Options for removing diacritics from a string.
+ *
+ * @group Unicode
+ * @category Normalization
+ */
+export type RemoveDiacriticsOptions = {
+  /** The normalization form to use before removing diacritics (default: 'NFD'). */
   denormalize?: NormalizationForm;
+  /** The normalization form to use after removing diacritics (default: 'NFC'). */
   normalize?: NormalizationForm;
 };
 

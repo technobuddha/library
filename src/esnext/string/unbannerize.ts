@@ -4,6 +4,24 @@ import { bannerMarker } from './bannerize.ts';
 import { type StringLike } from './string-like.ts';
 import { toString } from './to-string.ts';
 
+/**
+ * Removes bannerized comment blocks (created by bannerize) from the start of a string.
+ *
+ * Supports removal of banners in shell, HTML, JSDoc, C-style, and other comment formats.
+ *
+ * @param text - The string (or string-like) value to unbannerize.
+ * @returns The input string with any leading bannerized comment block removed.
+ *
+ * @example
+ * ```typescript
+ * const input = `# =====================\n# Banner\n# =====================\nActual content`;
+ * const result = unbannerize(input);
+ * // result === 'Actual content'
+ * ```
+ *
+ * @group String
+ * @category Banner
+ */
 export function unbannerize(text: StringLike): string {
   const content = toString(text);
 

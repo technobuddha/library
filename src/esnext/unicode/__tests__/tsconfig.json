@@ -12,5 +12,5 @@
   },
   "include": ["**/*.test.ts", "../../../**/*.d.ts"],
   "exclude": [],
-  "references": [{ "path": "../.." }, { "path": "../../../../fixtures" }]
+  "references": [{ "path": "../.." }]
 }

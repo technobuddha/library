@@ -27,7 +27,7 @@ import { isOct, u4, u8, x2 } from './helpers.ts';
  *
  * [^1]: The sequence \\0 must not be followed by a octal digit (0-7) to avoid being interpreted
  * as a different character, \\000 will be used to avoid ambiguity.
- * @param text - The string to escape
+ * @param input - The string to escape
  * @param options - Escape options. The `quote` property controls which quote characters are escaped
  * (set to `'single'` or `'double'` to escape only that type). The `ascii` property, when `true`,
  * forces all non-ASCII characters (above U+007F) to be escaped using Unicode escape sequences

@@ -1,12 +1,17 @@
 export {
+  type BaseCompiledPhonetic,
   type BasePhonetic,
+  type BasePhoneticAlgorithm,
   type CompiledForkingPhonetic,
   type CompiledNonForkingPhonetic,
   type CompiledPhonetic,
   createAlgorithm,
+  type Forking,
   type ForkingPhoneticAlgorithm,
+  type NonForking,
   type NonForkingPhoneticAlgorithm,
   type PhoneticAlgorithm,
+  type Position,
   type Replacer,
   type Scanner,
 } from './algorithm.ts';

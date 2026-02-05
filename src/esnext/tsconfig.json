@@ -5,6 +5,6 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../tsconfig.json",
   "compilerOptions": { "composite": true },
-  "include": ["**/*.ts", "../**/*.d.ts", "../common/unicode-trie-builder.ts"],
+  "include": ["**/*.ts", "../**/*.d.ts"],
   "exclude": ["**/__tests__"]
 }

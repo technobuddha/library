@@ -10,6 +10,10 @@ const config = {
         command: ['rm -rf ./dist', 'rm -rf ./src/esnext/@data/moby*']
       },
       {
+        name: 'ASCII',
+        command: 'npx tsx scripts/make-ascii.ts',
+      },
+      {
         name: 'Lorem',
         command: 'npx tsx scripts/make-lorem-ipsum.ts',
         directory: './reference/lorem',

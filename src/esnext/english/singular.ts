@@ -61,7 +61,7 @@ const singularRules: [RegExp, string][] = [
  * Attempts to reverse pluralization rules and applies explicit exceptions only for truly ambiguous cases.
  * Most singular forms are derived generically via automated rule inversion and the irregulars map.
  *
- * @param input - The word to singularize
+ * @param word - The word to singularize
  * @returns The singular form of the input
  * @example
  * ```typescript

@@ -1922,10 +1922,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-62":
-  version: 2.1.0-62
-  resolution: "@technobuddha/library@npm:2.1.0-62"
-  checksum: 10c0/bd5a00360edf88903bbed2838be8315e0425e2e9196acaaf8a00f4cccda45251ce5c1b3e6057d7b9c85e59b3648b2d9183dd975e465df7cf0a021dc1e7bc9f93
+"@technobuddha/library@npm:2.1.0-63":
+  version: 2.1.0-63
+  resolution: "@technobuddha/library@npm:2.1.0-63"
+  checksum: 10c0/129c51ad70b39c5cd2f3ebb773769a1bdf1202ab8301625f5ea3660f99deeb4fe41b3da5b331fb7a2d8b0d2a47da2624f6df0be3cfb58f8e41b8e8c4d3a819be
   languageName: node
   linkType: hard
 
@@ -1933,7 +1933,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
-    "@technobuddha/project": "npm:0.1.0-293"
+    "@technobuddha/project": "npm:0.1.0-295"
     "@types/iconv": "npm:^3.0.4"
     "@types/long": "npm:5.0.0"
     get-current-line: "npm:7.4.0"
@@ -1942,14 +1942,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.1.0-293":
-  version: 0.1.0-293
-  resolution: "@technobuddha/project@npm:0.1.0-293"
+"@technobuddha/project@npm:0.1.0-295":
+  version: 0.1.0-295
+  resolution: "@technobuddha/project@npm:0.1.0-295"
   dependencies:
     "@dotenvx/dotenvx": "npm:1.51.4"
     "@eslint/js": "npm:9.39.2"
     "@inquirer/prompts": "npm:8.2.0"
-    "@technobuddha/library": "npm:2.1.0-62"
+    "@technobuddha/library": "npm:2.1.0-63"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
     "@types/jsdom": "npm:^27.0.0"
@@ -2016,7 +2016,7 @@ __metadata:
     find-unexported-files: dist/find-unexported-files/find-unexported-files.js
     sync: dist/sync/sync.js
     tb: dist/tb/tb.js
-  checksum: 10c0/226f6dda78b2106f7021c636d61126d1998926d2f9c5622265dad24affb46403ef8c80a5ab46b4eaf9bffe9b5d52937d6cc98ae9a12b4cd01a39553157984b55
+  checksum: 10c0/a043e235aa1b7069ba33c826813f6d387e13899d71f5922848b0469a8ba553770581b492dd6b800977217f0f30023ae6bfed0f3a8df9bfe5ced90e50ab6c333e
   languageName: node
   linkType: hard
 

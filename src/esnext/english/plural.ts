@@ -8,7 +8,7 @@ import { empty, space } from '../unicode/unicode.ts';
 
 /**
  * Return the plural version of the input string
- * @param input - The word to pluralize
+ * @param word - The word to pluralize
  * @param quantity - The quantity to prepend to the word.  If omitted nothing is prepended.  If quantity is one the singular form is returned.
  * @param include - If true and quantity is supplied, the quantity is prepended to the output.
  * @returns The plural form of the input, or if a quantity is supplied - the quantity and the singular/plural form of the input (whichever is appropriate)

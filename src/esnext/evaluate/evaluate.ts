@@ -22,7 +22,7 @@ const operators4 = new Set(['+', '-', '√']);
 /**
  * Evaluates a mathematical expression string and returns the numeric result.
  * Supports common arithmetic operators, parentheses, variables, mathematical constants, and built-in functions with proper order of operations.
- * @param text - The mathematical expression to evaluate.
+ * @param expression - The mathematical expression to evaluate.
  * @param variables - Optional record of variable names to their numeric values. Variables override built-in constants.
  * @returns The numeric result of the evaluated expression.
  * @throws If the expression is invalid or contains syntax errors.

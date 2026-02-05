@@ -7,7 +7,7 @@ import { type EscapeOptions } from './escape.ts';
 
 /**
  * Escape a string for use in HTML
- * @param text - The string to escape
+ * @param input - The string to escape
  * @param options - see {@link EscapeOptions}
  * @example
  * ```typescript

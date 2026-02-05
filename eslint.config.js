@@ -25,6 +25,13 @@ const config = [
     environment: 'node',
     tsConfig: 'fixtures/tsconfig.json',
   }),
+  // reference/knowledge
+  app.lint({
+    files: ['reference/knowledge/**/*.ts'],
+    ignores: [],
+    environment: 'node',
+    tsConfig: 'reference/knowledge/tsconfig.json',
+  }),
   // scripts
   app.lint({
     files: ['scripts/**/*.ts'],
@@ -429,6 +436,13 @@ const config = [
     environment: 'node',
     tsConfig: 'src/node/__tests__/tsconfig.json',
     jest: true,
+  }),
+  // src/node/__tests__
+  app.lint({
+    files: ['src/node/__tests__/**/*.ts'],
+    ignores: [],
+    environment: 'node',
+    tsConfig: 'src/node/__tests__/tsconfig.json',
   }),
   // src/node
   app.lint({

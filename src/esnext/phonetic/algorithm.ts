@@ -251,7 +251,7 @@ export type BasePhonetic = {
  * @group Phonetic
  * @category Algorithm
  */
-type BasePhoneticAlgorithm = BasePhonetic & {
+export type BasePhoneticAlgorithm = BasePhonetic & {
   /**
    * Array of scan rules for character/code translation.
    */
@@ -264,7 +264,7 @@ type BasePhoneticAlgorithm = BasePhonetic & {
  * @group Phonetic
  * @category Algorithm
  */
-type Forking = {
+export type Forking = {
   /**
    * If true or a number, enables forking (multiple possible encodings).
    */
@@ -277,7 +277,7 @@ type Forking = {
  * @group Phonetic
  * @category Algorithm
  */
-type NonForking = {
+export type NonForking = {
   /**
    * If false or omitted, disables forking (single encoding).
    */
@@ -314,7 +314,7 @@ export type PhoneticAlgorithm = ForkingPhoneticAlgorithm | NonForkingPhoneticAlg
  * @group Phonetic
  * @category Algorithm
  */
-type BaseCompiledPhonetic = BasePhonetic & {
+export type BaseCompiledPhonetic = BasePhonetic & {
   /**
    * Scan rules grouped by first character for efficient lookup.
    */

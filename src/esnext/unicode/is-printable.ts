@@ -4,6 +4,19 @@ import { isStringLike } from '../string/is-string-like.ts';
 import { type StringLike } from '../string/string-like.ts';
 import { toString } from '../string/to-string.ts';
 
+/**
+ * Determines if a character is considered printable (not a control, formatting, or non-printable Unicode character).
+ *
+ * @param char - The character to test (string or number-like)
+ * @returns True if the character is printable, otherwise false
+ *
+ * @example
+ * isPrintable('A') // returns true
+ * isPrintable('\\u200B') // returns false (zero width space)
+ *
+ * @group String
+ * @category Unicode
+ */
 export function isPrintable(char: StringLike | NumberLike): boolean {
   const codePoint = isStringLike(char) ? toString(char).codePointAt(0)! : toNumber(char);
 

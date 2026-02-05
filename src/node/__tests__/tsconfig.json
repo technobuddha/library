@@ -10,7 +10,7 @@
     "lib": ["esnext"],
     "noEmit": true
   },
-  "include": ["**/*.test.ts", "../../**/*.d.ts"],
+  "include": ["**/*.test.ts", "**/*.ts", "../../**/*.d.ts"],
   "exclude": [],
   "references": [{ "path": ".." }, { "path": "../../esnext" }]
 }
