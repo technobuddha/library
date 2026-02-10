@@ -437,13 +437,6 @@ const config = [
     tsConfig: 'src/node/__tests__/tsconfig.json',
     jest: true,
   }),
-  // src/node/__tests__
-  app.lint({
-    files: ['src/node/__tests__/**/*.ts'],
-    ignores: [],
-    environment: 'node',
-    tsConfig: 'src/node/__tests__/tsconfig.json',
-  }),
   // src/node
   app.lint({
     files: ['src/node/**/*.ts'],
