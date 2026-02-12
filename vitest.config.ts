@@ -28,8 +28,11 @@ export default defineConfig(() => ({
         '**/index.ts',
         '**/@types',
         '**/@data',
+        'src/esnext/difference',
+        'src/esnext/patch',
+        'src/esnext/match',
+        'src/esnext/metaphone/metaphone3.ts',
         ...coverageConfigDefaults.exclude,
-        'src/esnext/difference', 'src/esnext/patch', 'src/esnext/match', 'src/esnext/metaphone/metaphone3.ts'
       ],
     },
   },

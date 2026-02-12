@@ -8,10 +8,11 @@
   "include": ["**/*.ts", "**/*.d.ts"],
   "exclude": [],
   "references": [
+    { "path": "../src/esnext" },
+    { "path": "../src/node" },
     { "path": "../reference/knowledge" },
     { "path": "../datasets" },
     { "path": "../fixtures" },
-    { "path": "../src/esnext" },
     { "path": "../src/helpers" },
     { "path": "../standards" }
   ]

@@ -7,7 +7,6 @@ import {
 } from '../difference.ts';
 
 describe('cleanupEfficiency', () => {
-
   test('Covers else branch with two consecutive trivial equalities', () => {
     // This triggers the else branch and pointer is set to previous equality, then continues to process next candidate
     const diffs: Difference[] = [
@@ -49,85 +48,85 @@ describe('cleanupEfficiency', () => {
     ]);
   });
 
-      test('Covers else branch with pointer -1 after trivial equality', () => {
-        // This triggers the else branch where equalitiesLength becomes 0 and pointer is set to -1
-        // Setup: Only one equality candidate, so after removal, equalitiesLength-- becomes 0
-        const diffs: Difference[] = [
-          { op: DIFFERENCE_DELETE, text: 'A' },
-          { op: DIFFERENCE_EQUAL, text: 'x' },
-          { op: DIFFERENCE_INSERT, text: 'B' },
-        ];
-        cleanupEfficiency(diffs, 4); // editCost high enough to consider 'x' trivial
-        // After cleanupMerge, the trivial equality is split and merged
-        expect(diffs).toEqual([
-          { op: DIFFERENCE_DELETE, text: 'A' },
-          { op: DIFFERENCE_EQUAL, text: 'x' },
-          { op: DIFFERENCE_INSERT, text: 'B' },
-        ]);
-      });
-    test('Removes trivial equality with preIns && preDel', () => {
-      // This triggers the if (preIns && preDel) branch after removing equality
-      const diffs: Difference[] = [
-        { op: DIFFERENCE_INSERT, text: 'A' },
-        { op: DIFFERENCE_DELETE, text: 'B' },
-        { op: DIFFERENCE_EQUAL, text: 'x' },
-        { op: DIFFERENCE_INSERT, text: 'C' },
-        { op: DIFFERENCE_DELETE, text: 'D' },
-      ];
-      cleanupEfficiency(diffs, 4); // editCost high enough to consider 'x' trivial
-      // After cleanupMerge, adjacent deletes and inserts are merged
-      expect(diffs).toEqual([
-        { op: DIFFERENCE_DELETE, text: 'BxD' },
-        { op: DIFFERENCE_INSERT, text: 'AxC' },
-      ]);
-    });
+  test('Covers else branch with pointer -1 after trivial equality', () => {
+    // This triggers the else branch where equalitiesLength becomes 0 and pointer is set to -1
+    // Setup: Only one equality candidate, so after removal, equalitiesLength-- becomes 0
+    const diffs: Difference[] = [
+      { op: DIFFERENCE_DELETE, text: 'A' },
+      { op: DIFFERENCE_EQUAL, text: 'x' },
+      { op: DIFFERENCE_INSERT, text: 'B' },
+    ];
+    cleanupEfficiency(diffs, 4); // editCost high enough to consider 'x' trivial
+    // After cleanupMerge, the trivial equality is split and merged
+    expect(diffs).toEqual([
+      { op: DIFFERENCE_DELETE, text: 'A' },
+      { op: DIFFERENCE_EQUAL, text: 'x' },
+      { op: DIFFERENCE_INSERT, text: 'B' },
+    ]);
+  });
+  test('Removes trivial equality with preIns && preDel', () => {
+    // This triggers the if (preIns && preDel) branch after removing equality
+    const diffs: Difference[] = [
+      { op: DIFFERENCE_INSERT, text: 'A' },
+      { op: DIFFERENCE_DELETE, text: 'B' },
+      { op: DIFFERENCE_EQUAL, text: 'x' },
+      { op: DIFFERENCE_INSERT, text: 'C' },
+      { op: DIFFERENCE_DELETE, text: 'D' },
+    ];
+    cleanupEfficiency(diffs, 4); // editCost high enough to consider 'x' trivial
+    // After cleanupMerge, adjacent deletes and inserts are merged
+    expect(diffs).toEqual([
+      { op: DIFFERENCE_DELETE, text: 'BxD' },
+      { op: DIFFERENCE_INSERT, text: 'AxC' },
+    ]);
+  });
 
-    test('Removes trivial equality with else branch (preIns && preDel false)', () => {
-      // This triggers the else branch after removing equality
-      const diffs: Difference[] = [
-        { op: DIFFERENCE_DELETE, text: 'A' },
-        { op: DIFFERENCE_EQUAL, text: 'x' },
-        { op: DIFFERENCE_INSERT, text: 'B' },
-        { op: DIFFERENCE_EQUAL, text: 'y' },
-        { op: DIFFERENCE_INSERT, text: 'C' },
-      ];
-      cleanupEfficiency(diffs, 4); // editCost high enough to consider 'x' trivial
-      // After cleanupMerge, only the first equality is split, the rest are not merged
-      expect(diffs).toEqual([
-        { op: DIFFERENCE_DELETE, text: 'A' },
-        { op: DIFFERENCE_EQUAL, text: 'x' },
-        { op: DIFFERENCE_INSERT, text: 'B' },
-        { op: DIFFERENCE_EQUAL, text: 'y' },
-        { op: DIFFERENCE_INSERT, text: 'C' },
-      ]);
-    });
+  test('Removes trivial equality with else branch (preIns && preDel false)', () => {
+    // This triggers the else branch after removing equality
+    const diffs: Difference[] = [
+      { op: DIFFERENCE_DELETE, text: 'A' },
+      { op: DIFFERENCE_EQUAL, text: 'x' },
+      { op: DIFFERENCE_INSERT, text: 'B' },
+      { op: DIFFERENCE_EQUAL, text: 'y' },
+      { op: DIFFERENCE_INSERT, text: 'C' },
+    ];
+    cleanupEfficiency(diffs, 4); // editCost high enough to consider 'x' trivial
+    // After cleanupMerge, only the first equality is split, the rest are not merged
+    expect(diffs).toEqual([
+      { op: DIFFERENCE_DELETE, text: 'A' },
+      { op: DIFFERENCE_EQUAL, text: 'x' },
+      { op: DIFFERENCE_INSERT, text: 'B' },
+      { op: DIFFERENCE_EQUAL, text: 'y' },
+      { op: DIFFERENCE_INSERT, text: 'C' },
+    ]);
+  });
 
-    test('Does not call cleanupMerge if no changes', () => {
-      // Should not call cleanupMerge if no trivial equalities are found
-      const diffs: Difference[] = [
-        { op: DIFFERENCE_EQUAL, text: 'abc' },
-        { op: DIFFERENCE_DELETE, text: 'def' },
-        { op: DIFFERENCE_INSERT, text: 'ghi' },
-      ];
-      const original = JSON.stringify(diffs);
-      cleanupEfficiency(diffs, 1); // editCost low, so no equality is trivial
-      expect(JSON.stringify(diffs)).toBe(original);
-    });
+  test('Does not call cleanupMerge if no changes', () => {
+    // Should not call cleanupMerge if no trivial equalities are found
+    const diffs: Difference[] = [
+      { op: DIFFERENCE_EQUAL, text: 'abc' },
+      { op: DIFFERENCE_DELETE, text: 'def' },
+      { op: DIFFERENCE_INSERT, text: 'ghi' },
+    ];
+    const original = JSON.stringify(diffs);
+    cleanupEfficiency(diffs, 1); // editCost low, so no equality is trivial
+    expect(JSON.stringify(diffs)).toBe(original);
+  });
 
-    test('Handles empty string equalities and minimal editCost', () => {
-      const diffs: Difference[] = [
-        { op: DIFFERENCE_DELETE, text: 'A' },
-        { op: DIFFERENCE_EQUAL, text: '' },
-        { op: DIFFERENCE_INSERT, text: 'B' },
-      ];
-      cleanupEfficiency(diffs, 1); // editCost = 1, so empty string is trivial
-      // After cleanupMerge, empty equalities are retained
-      expect(diffs).toEqual([
-        { op: DIFFERENCE_DELETE, text: 'A' },
-        { op: DIFFERENCE_EQUAL, text: '' },
-        { op: DIFFERENCE_INSERT, text: 'B' },
-      ]);
-    });
+  test('Handles empty string equalities and minimal editCost', () => {
+    const diffs: Difference[] = [
+      { op: DIFFERENCE_DELETE, text: 'A' },
+      { op: DIFFERENCE_EQUAL, text: '' },
+      { op: DIFFERENCE_INSERT, text: 'B' },
+    ];
+    cleanupEfficiency(diffs, 1); // editCost = 1, so empty string is trivial
+    // After cleanupMerge, empty equalities are retained
+    expect(diffs).toEqual([
+      { op: DIFFERENCE_DELETE, text: 'A' },
+      { op: DIFFERENCE_EQUAL, text: '' },
+      { op: DIFFERENCE_INSERT, text: 'B' },
+    ]);
+  });
   test('Null case', () => {
     const diffs: Difference[] = [];
     cleanupEfficiency(diffs, 4);

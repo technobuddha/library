@@ -7,7 +7,7 @@ const config = {
     steps: [
       {
         name: 'Clean',
-        command: ['rm -rf ./dist', 'rm -rf ./src/esnext/@data/moby*']
+        command: ['rm -rf ./dist', 'rm -rf ./src/esnext/@data/moby*'],
       },
       {
         name: 'ASCII',
@@ -37,13 +37,11 @@ const config = {
         name: 'Documentation',
         directory: ['./src'],
         command: 'npx typedoc',
-      }
+      },
     ],
   },
   prod: {
-    steps: [
-      { build: 'default' },
-    ]
+    steps: [{ build: 'default' }],
   },
   publish: {
     steps: [
@@ -55,9 +53,9 @@ const config = {
       {
         name: 'Publish',
         command: 'yarn npm publish',
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
 
 export default config;
