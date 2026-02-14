@@ -41,7 +41,7 @@
   },
   "packageManager": "yarn@4.12.0",
   "devDependencies": {
-    "@technobuddha/project": "0.1.0-363",
+    "@technobuddha/project": "0.1.0-396",
     "@types/iconv": "^3.0.4",
     "@types/long": "5.0.0",
     "get-current-line": "7.4.0",

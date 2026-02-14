@@ -1,9 +1,11 @@
 // 🚨
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
+import tsconfigPaths from 'vite-tsconfig-paths';
 import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig(() => ({
+  plugins: [tsconfigPaths()],
   test: {
     setupFiles: ['./vitest.setup.ts'],
     root: './src',
@@ -22,17 +24,14 @@ export default defineConfig(() => ({
       skipFull: true,
       enabled: true,
       exclude: [
+        ...coverageConfigDefaults.exclude,
         '**/*.test.*',
         '**/*.config.*',
         'scripts/**/*.*',
         '**/index.ts',
         '**/@types',
         '**/@data',
-        'src/esnext/difference',
-        'src/esnext/patch',
-        'src/esnext/match',
-        'src/esnext/metaphone/metaphone3.ts',
-        ...coverageConfigDefaults.exclude,
+        'src/esnext/difference', 'src/esnext/patch', 'src/esnext/match', 'src/esnext/metaphone/metaphone3.ts'
       ],
     },
   },
