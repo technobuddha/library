@@ -32,7 +32,7 @@ export type TextualizationOptions = {
   and: string;
 
   /** Character to place between the tens and ones units. E.g., "twenty-one" vs. "twenty one" */
-  hyphen: string;
+  hyphen?: string;
 
   /** Maximum allowed difference between the actual and represented value. */
   tolerance: number;

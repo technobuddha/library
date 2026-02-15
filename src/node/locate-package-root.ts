@@ -15,7 +15,7 @@ import { searchParent, type SearchParentOptions } from './search-parent.ts';
  * @example
  * ```typescript
  * // Find project root from current directory
- * const rootDir = await locateRootDirectory();
+ * const rootDir = await locatePackageRoot();
  * if (rootDir) {
  *   console.log('Project root:', rootDir);
  * } else {
@@ -23,12 +23,12 @@ import { searchParent, type SearchParentOptions } from './search-parent.ts';
  * }
  *
  * // Find project root starting from specific directory
- * const rootDir = await locateRootDirectory({
+ * const rootDir = await locatePackageRoot({
  *   startDirectory: '/path/to/nested/folder'
  * });
  *
  * // Limit search with custom stop directory
- * const rootDir = await locateRootDirectory({
+ * const rootDir = await locatePackageRoot({
  *   startDirectory: '/project/src/components',
  *   stopDirectory: '/project'
  * });
@@ -36,7 +36,7 @@ import { searchParent, type SearchParentOptions } from './search-parent.ts';
  * @group File System
  * @category Location
  */
-export async function locateRootDirectory(options?: SearchParentOptions): Promise<string | null> {
+export async function locatePackageRoot(options?: SearchParentOptions): Promise<string | null> {
   const results = await searchParent('package.json', options);
   if (results.length > 0) {
     return results[0].dir;

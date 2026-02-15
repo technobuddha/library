@@ -2,10 +2,10 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 
-import { locateRootDirectory } from '../locate-root-directory.ts';
+import { locatePackageRoot } from '../locate-package-root.ts';
 import { type SearchParentOptions } from '../search-parent.ts';
 
-describe('locateRootDirectory', () => {
+describe('locatePackageRoot', () => {
   let tempDir: string;
   let originalCwd: string;
 
@@ -30,7 +30,7 @@ describe('locateRootDirectory', () => {
     // Change to project directory
     process.chdir(projectDir);
 
-    const result = await locateRootDirectory();
+    const result = await locatePackageRoot();
 
     expect(result).toBe(projectDir);
   });
@@ -46,7 +46,7 @@ describe('locateRootDirectory', () => {
     // Change to nested directory
     process.chdir(componentsDir);
 
-    const result = await locateRootDirectory();
+    const result = await locatePackageRoot();
 
     expect(result).toBe(projectDir);
   });
@@ -58,7 +58,7 @@ describe('locateRootDirectory', () => {
 
     process.chdir(emptyDir);
 
-    const result = await locateRootDirectory();
+    const result = await locatePackageRoot();
 
     expect(result).toBeNull();
   });
@@ -74,7 +74,7 @@ describe('locateRootDirectory', () => {
       startDirectory: srcDir,
     };
 
-    const result = await locateRootDirectory(options);
+    const result = await locatePackageRoot(options);
 
     expect(result).toBe(projectDir);
   });
@@ -91,7 +91,7 @@ describe('locateRootDirectory', () => {
       startDirectory: url,
     };
 
-    const result = await locateRootDirectory(options);
+    const result = await locatePackageRoot(options);
 
     expect(result).toBe(projectDir);
   });
@@ -112,7 +112,7 @@ describe('locateRootDirectory', () => {
       stopDirectory: projectDir,
     };
 
-    const result = await locateRootDirectory(options);
+    const result = await locatePackageRoot(options);
 
     // Should find the project-level package.json, not the root one
     expect(result).toBe(projectDir);
@@ -133,7 +133,7 @@ describe('locateRootDirectory', () => {
       startDirectory: srcDir,
     };
 
-    const result = await locateRootDirectory(options);
+    const result = await locatePackageRoot(options);
 
     // Should find the closest (inner) package.json first
     expect(result).toBe(projectDir);
@@ -147,7 +147,7 @@ describe('locateRootDirectory', () => {
 
     process.chdir(projectDir);
 
-    const result = await locateRootDirectory();
+    const result = await locatePackageRoot();
 
     expect(result).toBe(projectDir);
   });
@@ -163,7 +163,7 @@ describe('locateRootDirectory', () => {
       startDirectory: deepDir,
     };
 
-    const result = await locateRootDirectory(options);
+    const result = await locatePackageRoot(options);
 
     expect(result).toBe(projectDir);
   });

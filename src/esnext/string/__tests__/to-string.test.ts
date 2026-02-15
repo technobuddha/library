@@ -25,7 +25,7 @@ describe('toString', () => {
 
   test('converts bigints using BigInt.prototype.toString', () => {
     expect(toString(123n)).toBe('123');
-    expect(toString(BigInt(-456))).toBe('-456');
+    expect(toString(-456n)).toBe('-456');
   });
 
   test('returns function signature for functions', () => {

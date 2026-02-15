@@ -3,9 +3,9 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import { locateRootDirectorySync } from '../locate-root-directory-sync.ts';
+import { locatePackageRootSync } from '../locate-package-root-sync.ts';
 
-describe('locateRootDirectorySync', () => {
+describe('locatePackageRootSync', () => {
   let tempDir: string;
   let testStructure: string;
 
@@ -38,7 +38,7 @@ describe('locateRootDirectorySync', () => {
   });
 
   test('finds closest package.json from current directory', () => {
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: testStructure,
       stopDirectory: tempDir,
     });
@@ -47,7 +47,7 @@ describe('locateRootDirectorySync', () => {
   });
 
   test('finds package.json from project directory', () => {
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: path.join(tempDir, 'project'),
       stopDirectory: tempDir,
     });
@@ -59,7 +59,7 @@ describe('locateRootDirectorySync', () => {
     const emptyDir = path.join(tempDir, 'empty');
     fs.mkdirSync(emptyDir);
 
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: emptyDir,
       stopDirectory: tempDir,
     });
@@ -73,7 +73,7 @@ describe('locateRootDirectorySync', () => {
     process.chdir(path.join(tempDir, 'project', 'nested'));
 
     try {
-      const result = locateRootDirectorySync();
+      const result = locatePackageRootSync();
 
       expect(result).toEqual(path.join(tempDir, 'project', 'nested'));
     } finally {
@@ -83,7 +83,7 @@ describe('locateRootDirectorySync', () => {
   });
 
   test('respects custom start directory', () => {
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: path.join(tempDir, 'project', 'nested', 'deep'),
       stopDirectory: tempDir,
     });
@@ -92,7 +92,7 @@ describe('locateRootDirectorySync', () => {
   });
 
   test('respects custom stop directory', () => {
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: testStructure,
       stopDirectory: path.join(tempDir, 'project'),
     });
@@ -101,7 +101,7 @@ describe('locateRootDirectorySync', () => {
   });
 
   test('returns null when stop directory prevents finding package.json', () => {
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: testStructure,
       stopDirectory: testStructure,
     });
@@ -111,7 +111,7 @@ describe('locateRootDirectorySync', () => {
 
   test('handles URL start directory', () => {
     const startUrl = new URL(`file://${testStructure}`);
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: startUrl,
       stopDirectory: tempDir,
     });
@@ -121,7 +121,7 @@ describe('locateRootDirectorySync', () => {
 
   test('handles URL stop directory', () => {
     const stopUrl = new URL(`file://${path.join(tempDir, 'project')}`);
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: testStructure,
       stopDirectory: stopUrl,
     });
@@ -136,7 +136,7 @@ describe('locateRootDirectorySync', () => {
       JSON.stringify({ name: 'root-project', version: '1.0.0' }),
     );
 
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: testStructure,
       stopDirectory: tempDir,
     });
@@ -150,7 +150,7 @@ describe('locateRootDirectorySync', () => {
     const isolatedDir = path.join(tempDir, 'isolated', 'deep', 'folder');
     fs.mkdirSync(isolatedDir, { recursive: true });
 
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: isolatedDir,
       stopDirectory: tempDir,
     });
@@ -169,7 +169,7 @@ describe('locateRootDirectorySync', () => {
       JSON.stringify({ name: 'workspace', version: '1.0.0' }),
     );
 
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: complexDir,
       stopDirectory: tempDir,
     });
@@ -178,7 +178,7 @@ describe('locateRootDirectorySync', () => {
   });
 
   test('handles case when starting from directory containing package.json', () => {
-    const result = locateRootDirectorySync({
+    const result = locatePackageRootSync({
       startDirectory: path.join(tempDir, 'project', 'nested'),
       stopDirectory: tempDir,
     });

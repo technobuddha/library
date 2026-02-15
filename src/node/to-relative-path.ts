@@ -14,13 +14,13 @@ import path from 'node:path';
  *
  * @example
  * ```typescript
- * relativePath('documents/file.txt'); // './documents/file.txt'
- * relativePath('./documents/file.txt'); // './documents/file.txt'
- * relativePath('../documents/file.txt'); // '../documents/file.txt'
- * relativePath('/absolute/path'); // './absolute/path'
+ * toRelativePath('documents/file.txt'); // './documents/file.txt'
+ * toRelativePath('./documents/file.txt'); // './documents/file.txt'
+ * toRelativePath('../documents/file.txt'); // '../documents/file.txt'
+ * toRelativePath('/absolute/path'); // './absolute/path'
  * ```
  */
-export function relativePath(pathName: string): string {
+export function toRelativePath(pathName: string): string {
   if (
     path.isAbsolute(pathName) ||
     pathName.startsWith(`.${path.sep}`) ||

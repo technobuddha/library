@@ -1,12 +1,10 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { bannerize, empty, escapeJS, quote } from '@technobuddha/library';
-import { err, locateRootDirectory } from '@technobuddha/library/node';
+import { bannerize, empty, escapeJS, parseCsv, quote, unescapeJS } from '@technobuddha/library';
+import { err, locatePackageRoot } from '@technobuddha/library/node';
 
-import { asciiTransformation } from '../reference/knowledge/ascii-transformation.ts';
-
-const root = await locateRootDirectory();
+const root = await locatePackageRoot();
 if (!root) {
   err('Could not find root directory');
   process.exit(1);
@@ -22,24 +20,35 @@ const code: string[] = [
 let line = empty;
 let last = 0;
 
-for (const [from, to] of Object.entries(asciiTransformation).sort(
-  ([a], [b]) => Number(a) - Number(b),
-)) {
-  if (to !== undefined) {
-    const codePoint = Number(from);
-    while (last < codePoint) {
-      line += ',';
-      last++;
+await fs
+  .readFile(path.join(root, 'reference', 'knowledge', 'ascii-transformation.tsv'), 'utf-8')
+  .then((content) => parseCsv(content, { delimiter: '\t', comment: '#' }))
+  .then((rows) =>
+    rows.map((row) => ({
+      codePoint: Number.parseInt(row.codepoint),
+      ascii: unescapeJS(row.ascii),
+    })),
+  )
+  .then((data) => data.sort((a, b) => a.codePoint - b.codePoint))
+  .then((data) => {
+    for (const { codePoint, ascii } of data) {
+      if (!Number.isNaN(codePoint)) {
+        while (last < codePoint) {
+          line += ',';
+          last++;
+        }
+
+        line += quote(escapeJS(ascii).replace('\\u00', '\\x'));
+        last = codePoint;
+      }
     }
-    line += quote(escapeJS(to));
-    last = codePoint;
-  }
-}
+
+    return undefined;
+  });
 
 while (line.endsWith(',')) {
   line = line.slice(0, -1);
 }
-line = line.replaceAll('\\u00', '\\x');
 
 code.push(line, '];', empty);
 

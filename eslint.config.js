@@ -25,13 +25,6 @@ const config = [
     environment: 'node',
     tsConfig: 'fixtures/tsconfig.json',
   }),
-  // reference/knowledge
-  app.lint({
-    files: ['reference/knowledge/**/*.ts'],
-    ignores: [],
-    environment: 'node',
-    tsConfig: 'reference/knowledge/tsconfig.json',
-  }),
   // scripts
   app.lint({
     files: ['scripts/**/*.ts'],
@@ -264,6 +257,14 @@ const config = [
   // src/esnext/object/__tests__
   app.lint({
     files: ['src/esnext/object/__tests__/**/*.test.ts'],
+    ignores: [],
+    environment: 'node',
+    tsConfig: 'src/esnext/object/__tests__/tsconfig.json',
+    jest: true,
+  }),
+  // src/esnext/object/__tests__
+  app.lint({
+    files: ['src/esnext/object/__tests__/**/*.test-d.ts'],
     ignores: [],
     environment: 'node',
     tsConfig: 'src/esnext/object/__tests__/tsconfig.json',

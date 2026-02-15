@@ -109,7 +109,7 @@ describe('animate', () => {
     const callback = vi.fn();
 
     // Don't execute the callback immediately to test the setup
-    mockRequestAnimationFrame.mockImplementation(() => 1);
+    mockRequestAnimationFrame.mockReturnValue(1);
 
     void animate(callback);
 

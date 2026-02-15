@@ -10,9 +10,9 @@ import {
   splitLines,
   splitWords,
 } from '@technobuddha/library';
-import { err, locateRootDirectory } from '@technobuddha/library/node';
+import { err, locatePackageRoot } from '@technobuddha/library/node';
 
-const root = await locateRootDirectory();
+const root = await locatePackageRoot();
 if (!root) {
   err('Could not find root directory');
   process.exit(1);

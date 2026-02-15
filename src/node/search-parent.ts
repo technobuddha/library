@@ -1,5 +1,4 @@
 import fs from 'node:fs/promises';
-import os from 'node:os';
 import path from 'node:path';
 
 import { ensureArray } from '../esnext/array/ensure-array.ts';
@@ -64,16 +63,12 @@ export type SearchParentResult = {
  */
 export async function searchParent(
   pattern: Flexible<string>,
-  {
-    startDirectory = process.cwd(),
-    stopDirectory = os.homedir(),
-    limit = Infinity,
-  }: SearchParentOptions = {},
+  { startDirectory = process.cwd(), stopDirectory, limit = Infinity }: SearchParentOptions = {},
 ): Promise<SearchParentResult[]> {
   let directory = path.resolve(toPath(startDirectory));
 
   const { root } = path.parse(directory);
-  const stopAt = path.resolve(directory, toPath(stopDirectory));
+  const stopAt = path.resolve(directory, toPath(stopDirectory ?? root));
 
   const patterns = ensureArray(pattern);
 

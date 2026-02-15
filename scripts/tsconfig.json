@@ -10,7 +10,6 @@
   "references": [
     { "path": "../src/esnext" },
     { "path": "../src/node" },
-    { "path": "../reference/knowledge" },
     { "path": "../datasets" },
     { "path": "../fixtures" },
     { "path": "../src/helpers" },
