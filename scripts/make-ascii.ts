@@ -38,7 +38,9 @@ await fs
           last++;
         }
 
-        line += quote(escapeJS(ascii).replace('\\u00', '\\x'));
+        if (ascii !== '--null--') {
+          line += quote(escapeJS(ascii).replace('\\u00', '\\x'));
+        }
         last = codePoint;
       }
     }

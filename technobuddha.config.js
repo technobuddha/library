@@ -8,7 +8,7 @@ const config = {
       'unicorn/prefer-code-point': { rule: 'off' },
       'unicorn/prefer-math-trunc': { rule: 'off' },
     },
-    ignores: ['fixtures', 'datasets'],
+    ignores: ['fixtures'],
   },
   directories: {
     'src/browser': {
@@ -22,9 +22,6 @@ const config = {
     },
     'src/node': {
       environment: 'node',
-    },
-    'datasets': {
-      environment: 'esnext',
     },
     'standards': {
       environment: 'node',
@@ -45,7 +42,6 @@ const config = {
   npm: {
     ignore: [
       'doc',
-      'datasets',
       'reference',
       'fixtures',
       'standards',
@@ -65,6 +61,24 @@ const config = {
       ],
     },
   },
+  remotes: [
+    {
+      file: '../knowledge/dist/unicode-data.js',
+      local: 'reference/knowledge/unicode-data.js',
+    },
+    {
+      file: '../knowledge/dist/unicode-data.d.ts',
+      local: 'reference/knowledge/unicode-data.d.ts',
+    },
+    {
+      file: '../knowledge/dist/romanization.js',
+      local: 'reference/knowledge/romanization.js',
+    },
+    {
+      file: '../knowledge/dist/romanization.d.ts',
+      local: 'reference/knowledge/romanization.d.ts',
+    }
+  ],
 };
 
 export default config;

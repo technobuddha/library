@@ -6,7 +6,7 @@ import { app } from '@technobuddha/project';
 
 /** @type import('eslint').Linter.Config[] */
 const config = [
-  { ignores: ['coverage', 'dist', 'fixtures', 'datasets'] },
+  { ignores: ['coverage', 'dist', 'fixtures'] },
   // .
   app.lint({ files: ['*.config.js'], ignores: [], environment: 'node' }),
   // .
@@ -15,15 +15,6 @@ const config = [
     ignores: [],
     environment: 'node',
     tsConfig: 'tsconfig.json',
-  }),
-  // datasets
-  app.lint({ files: ['datasets/**/*.ts'], ignores: [], tsConfig: 'datasets/tsconfig.json' }),
-  // fixtures
-  app.lint({
-    files: ['fixtures/**/*.ts'],
-    ignores: [],
-    environment: 'node',
-    tsConfig: 'fixtures/tsconfig.json',
   }),
   // scripts
   app.lint({

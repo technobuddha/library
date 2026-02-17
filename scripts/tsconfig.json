@@ -7,12 +7,5 @@
   "compilerOptions": { "composite": true, "types": ["node"], "lib": ["esnext"] },
   "include": ["**/*.ts", "**/*.d.ts"],
   "exclude": [],
-  "references": [
-    { "path": "../src/esnext" },
-    { "path": "../src/node" },
-    { "path": "../datasets" },
-    { "path": "../fixtures" },
-    { "path": "../src/helpers" },
-    { "path": "../standards" }
-  ]
+  "references": [{ "path": "../src/esnext" }, { "path": "../src/node" }]
 }
