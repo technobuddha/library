@@ -10,8 +10,8 @@ const config = {
         command: ['rm -rf ./dist', 'rm -rf ./src/esnext/@data/moby*'],
       },
       {
-        name: 'ASCII',
-        command: 'npx tsx scripts/make-ascii.ts',
+        name: 'Transcriptions',
+        command: 'npx tsx scripts/make-transcriptions.ts',
       },
       {
         name: 'Lorem',
@@ -23,11 +23,6 @@ const config = {
         command: 'npx tsx scripts/make-hyphenation.ts',
         directory: './reference/hyphen',
       },
-      // {
-      //   name: 'Moby',
-      //   command: 'npx tsx scripts/make-moby.ts',
-      //   directory: './reference/moby',
-      // },
       {
         name: 'Library',
         directory: ['./src'],

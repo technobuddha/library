@@ -2,13 +2,6 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 // cspell:disable
-/*
- * Copyright (C) 1990, 2004, 2005 Gerard D.C. Kuiken.
- * Copying and distribution of this file, with or without modification,
- * are permitted in any medium without royalty provided the copyright
- * notice and this notice are preserved.
- */
-
 type Points = { points: number[] };
 interface Tree {
   [key: string]: Tree | Points;

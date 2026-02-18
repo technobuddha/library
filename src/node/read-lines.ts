@@ -31,14 +31,11 @@ export async function* readLines(
 
   while (true) {
     const { bytesRead, buffer } = await handle.read();
-    if (bytesRead === 0) {
-      break;
-    }
 
     let text = previous + buffer.toString(encoding, 0, bytesRead);
     while (true) {
-      let pos = text.search(/\r\n|\n\r|\n|\r/v);
-      if (pos === -1) {
+      let pos = text.search(/\r|\n/v);
+      if (pos === -1 || (pos === text.length - 1 && bytesRead > 0)) {
         previous = text;
         break;
       }
@@ -46,9 +43,13 @@ export async function* readLines(
       yield text.slice(0, pos);
 
       const c2 = text.slice(pos, pos + 2);
-      pos += c2 === '\r\n' || c2 === '\n\r' ? 2 : 1;
+      pos += c2 === '\r\n' ? 2 : 1;
 
       text = text.slice(pos);
+    }
+
+    if (bytesRead === 0) {
+      break;
     }
   }
 

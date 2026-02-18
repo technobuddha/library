@@ -1947,29 +1947,30 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-77, @technobuddha/library@workspace:.":
+"@technobuddha/library@npm:2.1.0-81, @technobuddha/library@workspace:.":
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
-    "@technobuddha/project": "npm:0.1.0-407"
+    "@technobuddha/project": "npm:0.1.0-412"
     "@types/iconv": "npm:^3.0.4"
     "@types/long": "npm:5.0.0"
     get-current-line: "npm:7.4.0"
     iconv: "npm:3.0.1"
     long: "npm:5.3.2"
+    romanization: "npm:0.0.1"
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.1.0-407":
-  version: 0.1.0-407
-  resolution: "@technobuddha/project@npm:0.1.0-407"
+"@technobuddha/project@npm:0.1.0-412":
+  version: 0.1.0-412
+  resolution: "@technobuddha/project@npm:0.1.0-412"
   dependencies:
     "@dotenvx/dotenvx": "npm:1.52.0"
     "@eslint/js": "npm:9.39.2"
     "@inquirer/prompts": "npm:8.2.0"
     "@microsoft/tsdoc": "npm:0.16.0"
     "@microsoft/tsdoc-config": "npm:0.18.0"
-    "@technobuddha/library": "npm:2.1.0-77"
+    "@technobuddha/library": "npm:2.1.0-81"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
     "@types/jsdom": "npm:^27.0.0"
@@ -2035,7 +2036,7 @@ __metadata:
     find-unexported-files: dist/find-unexported-files/find-unexported-files.js
     sync: dist/sync/sync.js
     tb: dist/tb/tb.js
-  checksum: 10c0/3f3346810d307aab12108a1ed7fd82e3dcabfe75a2ecb65e273c51538839b7dfc60e3940266e83da8db4193b83bb2db465e8b45647f371b4d06111ce79d53311
+  checksum: 10c0/8f9dbf543cb3b3175f85b25cfb4783163e7cb799017484043b173750c9e77ce8d7a1e22395cef7f50d9afa2c3399634bf071e226d3172e30b358d6ec7525a786
   languageName: node
   linkType: hard
 
@@ -7138,6 +7139,13 @@ __metadata:
   bin:
     rollup: dist/bin/rollup
   checksum: 10c0/a90aaf1166fc495920e44e52dced0b12283aaceb0924abd6f863102128dd428bbcbf85970f792c06bc63d2a2168e7f073b73e05f6f8d76fdae17b7ac6cacba06
+  languageName: node
+  linkType: hard
+
+"romanization@npm:0.0.1":
+  version: 0.0.1
+  resolution: "romanization@npm:0.0.1"
+  checksum: 10c0/fe14e70f7225322ed17241528dcca22a558e6d7a99641d4e3d84c9b2a9a4ced6d158328fd2adcdc178710d370610963367a603b094d71839389b1aef754d3d5b
   languageName: node
   linkType: hard
 

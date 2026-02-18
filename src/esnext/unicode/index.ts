@@ -20,6 +20,7 @@ export {
 } from './remove-diacritics.ts';
 export { type TextEncoding } from './text-encoding.ts';
 export { toASCII } from './to-ascii.ts';
+export { transliterate } from './transliterate.ts';
 export {
   emDash,
   empty,

@@ -16,6 +16,13 @@ const config = [
     environment: 'node',
     tsConfig: 'tsconfig.json',
   }),
+  // reference
+  app.lint({
+    files: ['reference/**/*.ts'],
+    ignores: [],
+    environment: 'node',
+    tsConfig: 'reference/tsconfig.json',
+  }),
   // scripts
   app.lint({
     files: ['scripts/**/*.ts'],

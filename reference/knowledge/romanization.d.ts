@@ -1,5 +1,5 @@
 // 🚨
-// 🚨 Source: ../knowledge/dist/romanization.d.ts
+// 🚨 Source: ../knowledge/dist/@data/romanization.d.ts
 // 🚨
 /**
 * Loosely based on concepts and portions of https://github.com/anyascii/anyascii

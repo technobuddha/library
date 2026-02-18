@@ -1,5 +1,5 @@
 // 🚨
-// 🚨 Source: ../knowledge/dist/unicode-data.d.ts
+// 🚨 Source: ../knowledge/dist/@data/unicode-data.d.ts
 // 🚨
 /**
 * Loosely based on concepts and portions of https://www.unicode.org/Public

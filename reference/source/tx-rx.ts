@@ -3,8 +3,8 @@ import path from 'node:path';
 
 import { asciiMapping } from '../../src/esnext/@data/ascii-mapping.ts';
 import { transcriptions } from './transcriptions.ts';
-import { unicodeData } from '../unicode-data.js';
-import { romanization } from '../romanization.js';
+import { unicodeData } from '../knowledge/unicode-data.js';
+import { romanization } from '../knowledge/romanization.js';
 
 import { empty, escapeJS, quote, space } from '@technobuddha/library';
 

@@ -1,0 +1,18 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": true,
+    "types": ["node"],
+    "lib": ["esnext"],
+    "allowJs": true,
+    "checkJs": true
+  },
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.js"],
+  "exclude": [],
+  "references": [{ "path": "../src/esnext" }]
+}
