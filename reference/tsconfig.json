@@ -6,6 +6,7 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true,
+    "rewriteRelativeImportExtensions": false,
     "composite": true,
     "types": ["node"],
     "lib": ["esnext"],

@@ -1,8 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { bannerize, empty, escapeJS, quote } from '@technobuddha/library';
-import { err, locatePackageRoot } from '@technobuddha/library/node';
+import { bannerize } from '../src/esnext/string/bannerize.ts';
+import { empty } from '../src/esnext/unicode/unicode.ts';
+import { escapeJS} from '../src/esnext/escape/escape-js.ts';
+import { quote } from '../src/esnext/string/quote.ts';
+import { err } from '../src/node/err.ts';
+import { locatePackageRoot } from '../src/node/locate-package-root.ts';
 
 import { transcriptions } from '../reference/source/transcriptions.ts';
 

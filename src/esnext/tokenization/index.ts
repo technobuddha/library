@@ -1,10 +1,10 @@
 export { chain } from './chain.ts';
 export { chunk, type ChunkOptions } from './chunk.ts';
 export { delimited } from './delimited.ts';
+export { extractSentences } from './extract-sentences.ts';
+export { extractWords, type ExtractWordsOptions } from './extract-words.ts';
 export { initials } from './initials.ts';
 export { sortOrder, type SortOrderOptions } from './sort-order.ts';
 export { splitChars } from './split-chars.ts';
 export { splitLines } from './split-lines.ts';
-export { splitSentences } from './split-sentences.ts';
 export { splitTokens } from './split-tokens.ts';
-export { splitWords, type SplitWordsOptions } from './split-words.ts';

@@ -1,16 +1,14 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import {
-  bannerize,
-  empty,
-  kebabCase,
-  quote,
-  space,
-  splitLines,
-  splitWords,
-} from '@technobuddha/library';
-import { err, locatePackageRoot } from '@technobuddha/library/node';
+import { bannerize } from '../src/esnext/string/bannerize.ts';
+import { empty, space } from '../src/esnext/unicode/unicode.ts';
+import { extractWords } from '../src/esnext/tokenization/extract-words.ts';
+import { kebabCase } from '../src/esnext/case-conversion/kebab-case.ts';
+import { quote } from '../src/esnext/string/quote.ts';
+import { splitLines } from '../src/esnext/tokenization/split-lines.ts';
+import { err } from '../src/node/err.ts';
+import { locatePackageRoot } from '../src/node/locate-package-root.ts';
 
 const root = await locatePackageRoot();
 if (!root) {
@@ -55,7 +53,7 @@ await fs.readdir(path.join(root, 'reference', 'lorem')).then(async (files) => {
         if (line.startsWith('#')) {
           inText = line.split(space)[1].toLowerCase() === 'text';
         } else if (inText) {
-          words.push(...splitWords(line).filter((w) => w !== '-'));
+          words.push(...extractWords(line).filter((w) => w !== '-'));
         }
       }
 

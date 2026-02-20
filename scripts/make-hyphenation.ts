@@ -1,9 +1,11 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { bannerize, empty } from '@technobuddha/library';
-import { err, locatePackageRoot } from '@technobuddha/library/node';
 import { hyphenation } from '../reference/knowledge/hyphenation.js';
+import { bannerize } from '../src/esnext/string/bannerize.ts';
+import { empty } from '../src/esnext/unicode/unicode.ts';
+import { err } from '../src/node/err.ts';
+import { locatePackageRoot } from '../src/node/locate-package-root.ts';
 
 const root = await locatePackageRoot();
 if (!root) {

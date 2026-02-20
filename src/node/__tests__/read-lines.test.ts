@@ -118,4 +118,18 @@ describe('readLines', () => {
     }
     expect(lines).toEqual(['α', 'β', 'γ']);
   });
+
+  test('handles line ending at buffer boundary', async () => {
+    // Default buffer size is typically 16384 bytes
+    // Create content that ends with \r at position 16383 (buffer boundary - 1)
+    // followed by \n at position 16384 (start of next buffer)
+    const bufferSize = 16384;
+    const content = `${'a'.repeat(bufferSize - 1)}\r\n${'b'.repeat(100)}`;
+    await fs.writeFile(testFile, content);
+    const lines = [];
+    for await (const line of readLines(testFile)) {
+      lines.push(line);
+    }
+    expect(lines).toEqual(['a'.repeat(bufferSize - 1), 'b'.repeat(100)]);
+  });
 });

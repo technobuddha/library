@@ -1,7 +1,7 @@
 import { singular } from '../english/singular.ts';
 import { sum } from '../math/sum.ts';
 import { re, reArray } from '../regexp/re.ts';
-import { splitWords } from '../tokenization/split-words.ts';
+import { extractWords } from '../tokenization/extract-words.ts';
 import { removeDiacritics } from '../unicode/remove-diacritics.ts';
 import { empty } from '../unicode/unicode.ts';
 
@@ -283,7 +283,7 @@ const problematic: Record<string, number> = {
  * @category Syllables
  */
 export function syllables(word: StringLike): number {
-  const words = splitWords(
+  const words = extractWords(
     removeDiacritics(toString(word))
       .toLowerCase()
       .replaceAll(/[^a-z\s]/gv, empty),

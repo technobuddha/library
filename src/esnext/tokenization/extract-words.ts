@@ -7,17 +7,17 @@ import { emDash, enDash } from '../unicode/unicode.ts';
 const defaultDelimiter = new RegExp(`\\s+|[${enDash}${emDash},:;!?\\(\\)]+`, 'v');
 
 /**
- * Options for the {@link splitWords} function.
+ * Options for the {@link extractWords} function.
  *
  * @example
  * ```typescript
- * splitWords('a,b,c', { delimiter: ',' }); // [ 'a', 'b', 'c' ]
+ * extractWords('a,b,c', { delimiter: ',' }); // [ 'a', 'b', 'c' ]
  * ```
  *
  * @group String
  * @category Tokenization
  */
-export type SplitWordsOptions = {
+export type ExtractWordsOptions = {
   /**
    * The delimiter between words.
    *
@@ -30,22 +30,22 @@ export type SplitWordsOptions = {
  * Split a string into an array of words.
  *
  * @param text - The string to split into words.
- * @param options - Options for splitting. See {@link SplitWordsOptions}.
+ * @param options - Options for splitting. See {@link ExtractWordsOptions}.
  * @returns An array of words from the input string.
  *
  * @example
  * ```typescript
- * splitWords('Hello, world!'); // [ 'Hello', 'world' ]
- * splitWords('a-b—c', { delimiter: /-|—/ }); // [ 'a', 'b', 'c' ]
+ * extractWords('Hello, world!'); // [ 'Hello', 'world' ]
+ * extractWords('a-b—c', { delimiter: /-|—/ }); // [ 'a', 'b', 'c' ]
  * ```
  *
  * @defaultValue delimiter whitespace and punctuation
  * @group String
  * @category Tokenization
  */
-export function splitWords(
+export function extractWords(
   text: StringLike,
-  { delimiter = defaultDelimiter }: SplitWordsOptions = {},
+  { delimiter = defaultDelimiter }: ExtractWordsOptions = {},
 ): string[] {
   const input = toString(text);
   if (input.length === 0 || isWhitespace(input)) {

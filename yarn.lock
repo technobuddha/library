@@ -1947,11 +1947,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-81, @technobuddha/library@workspace:.":
+"@technobuddha/library@npm:2.1.0-83, @technobuddha/library@workspace:.":
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
-    "@technobuddha/project": "npm:0.1.0-412"
+    "@technobuddha/project": "npm:0.1.0-416"
     "@types/iconv": "npm:^3.0.4"
     "@types/long": "npm:5.0.0"
     get-current-line: "npm:7.4.0"
@@ -1961,16 +1961,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:0.1.0-412":
-  version: 0.1.0-412
-  resolution: "@technobuddha/project@npm:0.1.0-412"
+"@technobuddha/project@npm:0.1.0-416":
+  version: 0.1.0-416
+  resolution: "@technobuddha/project@npm:0.1.0-416"
   dependencies:
     "@dotenvx/dotenvx": "npm:1.52.0"
     "@eslint/js": "npm:9.39.2"
     "@inquirer/prompts": "npm:8.2.0"
     "@microsoft/tsdoc": "npm:0.16.0"
     "@microsoft/tsdoc-config": "npm:0.18.0"
-    "@technobuddha/library": "npm:2.1.0-81"
+    "@technobuddha/library": "npm:2.1.0-83"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
     "@types/jsdom": "npm:^27.0.0"
@@ -2036,7 +2036,7 @@ __metadata:
     find-unexported-files: dist/find-unexported-files/find-unexported-files.js
     sync: dist/sync/sync.js
     tb: dist/tb/tb.js
-  checksum: 10c0/8f9dbf543cb3b3175f85b25cfb4783163e7cb799017484043b173750c9e77ce8d7a1e22395cef7f50d9afa2c3399634bf071e226d3172e30b358d6ec7525a786
+  checksum: 10c0/71927a0f7089b681c3ead58c32dcc97088c4300b9fbb98a519f7adeee9e5cea92ce1badf70116aedb351f94aa5869f9bb187126a2223a05210b7580913edf12c
   languageName: node
   linkType: hard
 

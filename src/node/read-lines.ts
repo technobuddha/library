@@ -30,20 +30,25 @@ export async function* readLines(
   let previous = empty;
 
   while (true) {
-    const { bytesRead, buffer } = await handle.read();
+    let { bytesRead, buffer } = await handle.read();
 
     let text = previous + buffer.toString(encoding, 0, bytesRead);
     while (true) {
       let pos = text.search(/\r|\n/v);
-      if (pos === -1 || (pos === text.length - 1 && bytesRead > 0)) {
+      if (pos === -1) {
         previous = text;
         break;
+      }
+
+      if (pos === text.length - 1 && bytesRead > 0) {
+        ({ bytesRead, buffer } = await handle.read());
+        text += buffer.toString(encoding, 0, bytesRead);
       }
 
       yield text.slice(0, pos);
 
       const c2 = text.slice(pos, pos + 2);
-      pos += c2 === '\r\n' ? 2 : 1;
+      pos += c2 === '\r\n' || c2 === '\n\r' ? 2 : 1;
 
       text = text.slice(pos);
     }

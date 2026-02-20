@@ -40,12 +40,12 @@ const splitter = /(.*?(?:[.!?‼‽⁇⁈⁉:…]|\.\.\.)["'”’]?)(?:[\s\r\n]
  * @returns An array of non-empty, trimmed sentences.
  * @example
  * ```ts
- * splitSentences("Hello! How are you? I'm 'OK.'"); // ["Hello!", "How are you?", "I'm 'OK.'"]
+ * extractSentences("Hello! How are you? I'm 'OK.'"); // ["Hello!", "How are you?", "I'm 'OK.'"]
  * ```
  * @group String
  * @category Deconstruction
  */
-export function splitSentences(input: StringLike): string[] {
+export function extractSentences(input: StringLike): string[] {
   return toString(input)
     .split(splitter)
     .filter((s) => s.trim().length > 0);
