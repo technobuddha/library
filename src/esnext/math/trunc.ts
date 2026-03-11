@@ -25,16 +25,16 @@ import { type Precision, type Tolerance } from './options.ts';
  * @category Number
  */
 export function trunc(
-  input: NumberLike,
+  value: NumberLike,
   { tolerance = 0, precision = 0 }: Tolerance & Precision = {},
 ): number {
-  const value = toNumber(input);
+  const input = toNumber(value);
 
-  if (Number.isNaN(value) || !Number.isFinite(value)) {
-    return value;
+  if (Number.isNaN(input) || !Number.isFinite(input)) {
+    return input;
   }
 
-  let { sign, mantissa, exponent } = deconstructNumber(value + Math.sign(value) * tolerance, 15);
+  let { sign, mantissa, exponent } = deconstructNumber(input + Math.sign(input) * tolerance, 15);
   exponent += precision;
   ({ sign, mantissa, exponent } = deconstructNumber(
     Math.trunc(constructNumber({ sign, mantissa, exponent })),

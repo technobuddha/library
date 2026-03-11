@@ -1,12 +1,12 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { bannerize } from '../src/esnext/string/bannerize.ts';
-import { empty, space } from '../src/esnext/unicode/unicode.ts';
-import { extractWords } from '../src/esnext/tokenization/extract-words.ts';
 import { kebabCase } from '../src/esnext/case-conversion/kebab-case.ts';
+import { bannerize } from '../src/esnext/string/bannerize.ts';
 import { quote } from '../src/esnext/string/quote.ts';
+import { extractWords } from '../src/esnext/tokenization/extract-words.ts';
 import { splitLines } from '../src/esnext/tokenization/split-lines.ts';
+import { empty, space } from '../src/esnext/unicode/unicode.ts';
 import { err } from '../src/node/err.ts';
 import { locatePackageRoot } from '../src/node/locate-package-root.ts';
 

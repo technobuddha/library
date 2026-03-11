@@ -450,6 +450,8 @@ const config = [
     environment: 'node',
     tsConfig: 'standards/tsconfig.json',
   }),
+  // wip
+  app.lint({ files: ['wip/**/*.ts'], ignores: [], tsConfig: 'wip/tsconfig.json' }),
   // src/esnext
   app.lint({ files: ['src/esnext/**/*.ts'], ignores: [], tsConfig: 'src/esnext/tsconfig.json' }),
   // src/helpers

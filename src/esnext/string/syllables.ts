@@ -295,10 +295,6 @@ export function syllables(word: StringLike): number {
 function countSyllables(word: string): number {
   let value = word;
 
-  if (value.length === 0) {
-    return 0;
-  }
-
   if (value.length < 3) {
     return 1;
   }

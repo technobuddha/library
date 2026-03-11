@@ -39,10 +39,14 @@ export {
 export { mask, type MaskOptions } from './mask.ts';
 export { quote, type QuoteOptions } from './quote.ts';
 export { readability } from './readability.ts';
+export { removeANSIEscapes } from './remove-ansi-escapes.ts';
+export {
+  removeComments as strip,
+  type RemoveCommentsOptions as StripOptions,
+} from './remove-comments.ts';
 export { root, type RootOptions } from './root.ts';
 export { singleLine } from './single-line.ts';
 export { type StringLike } from './string-like.ts';
-export { strip, type StripOptions } from './strip.ts';
 export { syllables } from './syllables.ts';
 export { tag } from './tag.ts';
 export { toString } from './to-string.ts';

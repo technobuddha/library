@@ -26,6 +26,15 @@ const config = {
     'standards': {
       environment: 'node',
     },
+    'wip': {
+      environment: 'esnext',
+      tsconfig: {
+        compilerOptions: {
+          noEmit: true,
+          rewriteRelativeImportExtensions: false,
+        },
+      }
+    }
   },
   tsconfig: {
     base: {

@@ -3,7 +3,6 @@ import { type NumberLike } from '../number/number-like.ts';
 import { isMultipleOf } from './is-multiple-of.ts';
 
 /**
-/**
  * Tests to see if the specified value is an odd integer
  * @param input - The number to test
  * @returns true if the number is an odd integer
