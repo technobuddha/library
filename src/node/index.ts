@@ -2,6 +2,7 @@ export * from './err.ts';
 export * from './exec-promise.ts';
 export * from './file-exists.ts';
 export * from './file-exists-sync.ts';
+export * from './is-child.ts';
 export * from './is-subdirectory.ts';
 export * from './is-within-directory.ts';
 export * from './locate-nearest.ts';
