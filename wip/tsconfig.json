@@ -11,6 +11,6 @@
     "types": [],
     "lib": ["esnext"]
   },
-  "include": ["**/*.ts"],
+  "include": ["*.ts"],
   "exclude": []
 }

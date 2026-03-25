@@ -11,7 +11,12 @@
     "rootDir": ".",
     "outDir": "../dist"
   },
-  "include": ["**/*.ts", "**/*.d.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["**/__tests__"],
-  "references": [{ "path": "browser" }, { "path": "common" }, { "path": "node" }]
+  "references": [
+    { "path": "browser" },
+    { "path": "common" },
+    { "path": "esnext" },
+    { "path": "node" }
+  ]
 }

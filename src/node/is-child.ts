@@ -26,6 +26,9 @@ import { empty } from '../esnext/unicode/unicode.ts';
  * @category Relativity
  */
 export function isChild(parent: string, child: string): boolean {
-  const relative = path.relative(parent, child);
-  return relative !== empty && !relative.startsWith('..') && !relative.includes(path.sep);
+  if (parent !== empty && child !== empty && parent !== child) {
+    const relative = path.relative(parent, child);
+    return !relative.startsWith('..') && !relative.includes(path.sep);
+  }
+  return false;
 }

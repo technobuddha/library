@@ -13,7 +13,7 @@
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["**/*.ts", "**/*.d.ts", "**/*.js"],
+  "include": ["*.ts", "*.d.ts", "*.js"],
   "exclude": [],
   "references": [{ "path": "../src/esnext" }]
 }

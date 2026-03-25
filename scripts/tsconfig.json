@@ -11,7 +11,7 @@
     "types": ["node"],
     "lib": ["esnext"]
   },
-  "include": ["**/*.ts"],
+  "include": ["*.ts"],
   "exclude": [],
   "references": [{ "path": "../reference" }, { "path": "../src/esnext" }, { "path": "../src/node" }]
 }
