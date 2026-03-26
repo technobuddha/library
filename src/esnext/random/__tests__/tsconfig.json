@@ -11,6 +11,6 @@
     "noEmit": true
   },
   "include": ["*.test.ts", "*.ts", "../../../@types/*.d.ts"],
-  "exclude": [],
+  "exclude": ["eslint.config.js"],
   "references": [{ "path": "../.." }]
 }

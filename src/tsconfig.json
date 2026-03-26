@@ -12,7 +12,7 @@
     "outDir": "../dist"
   },
   "include": ["**/*.ts"],
-  "exclude": ["**/__tests__"],
+  "exclude": ["eslint.config.js", "**/__tests__"],
   "references": [
     { "path": "browser" },
     { "path": "common" },
