@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "2.1.0-88",
+  "version": "2.1.0-93",
   "description": "A large library of useful functions",
   "author": {
     "name": "Phil Hill",
@@ -41,7 +41,7 @@
   },
   "packageManager": "yarn@4.12.0",
   "devDependencies": {
-    "@technobuddha/project": "0.1.0-435",
+    "@technobuddha/project": "0.1.0-442",
     "@types/iconv": "^3.0.4",
     "@types/long": "5.0.0",
     "get-current-line": "7.4.0",

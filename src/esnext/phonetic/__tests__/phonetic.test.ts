@@ -124,22 +124,6 @@ describe('phonetic', () => {
     });
   });
 
-  // describe('fork logic for algorithms with multiple encodings', () => {
-  //   test('handles Daitch-Mokotoff fork logic', () => {
-  //     // Daitch-Mokotoff has fork rules for certain character combinations
-  //     const result = phonetic('Chaya', { algorithm: 'daitch-mokotoff' }, true);
-  //     expect(Array.isArray(result)).toBeTrue();
-  //     expect(result.length).toBeGreaterThan(0);
-  //   });
-
-  //   test('handles Alpha-SIS fork logic', () => {
-  //     // Alpha-SIS also has fork rules
-  //     const result = phonetic('Charles', { algorithm: 'alpha-sis' }, true);
-  //     expect(Array.isArray(result)).toBeTrue();
-  //     expect(result.length).toBeGreaterThan(0);
-  //   });
-  // });
-
   describe('diacritics and non-alphabetic removal', () => {
     test('removes diacritics', () => {
       const options = createAlgorithm({});
@@ -343,8 +327,8 @@ describe('phonetic', () => {
       // This will hit the code path where forking is not boolean
       const result = phonetic('CA', options);
       // Should produce two results, one for each fork
-      expect(Array.isArray(result)).toBeTrue();
-      expect(result.length).toBe(2);
+      expect(result).toBeArray();
+      expect(result).toHaveLength(2);
       expect(result).toContain('X1');
       expect(result).toContain('Y1');
     });
@@ -372,8 +356,8 @@ describe('phonetic', () => {
       });
       // Should produce two results, one for each fork path
       const result = phonetic('CA', options);
-      expect(Array.isArray(result)).toBeTrue();
-      expect(result.length).toBe(2);
+      expect(result).toBeArray();
+      expect(result).toHaveLength(2);
       expect(result).toContain('X1');
       expect(result).toContain('Y2');
     });
@@ -706,7 +690,7 @@ describe('phonetic', () => {
 
       const results = phonetic('XA', forkOptions);
       // '-' means skip
-      expect(Array.isArray(results)).toBeTrue();
+      expect(results).toBeArray();
       expect(results.length).toBeGreaterThan(0);
     });
 
@@ -721,7 +705,7 @@ describe('phonetic', () => {
       });
 
       const results = phonetic('CA', forkOptions);
-      expect(Array.isArray(results)).toBeTrue();
+      expect(results).toBeArray();
     });
 
     test('scan rule without output or fork', () => {

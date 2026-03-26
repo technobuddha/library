@@ -30,7 +30,7 @@ describe('patch', () => {
 
     // Deserialize
     const parsedPatches = patchesFromText(patchText);
-    expect(parsedPatches.length).toBe(patches.length);
+    expect(parsedPatches).toHaveLength(patches.length);
 
     // Apply deserialized patches
     const result = applyPatches(parsedPatches, text1);

@@ -73,13 +73,13 @@ describe('doubleMetaphone', () => {
   test('international and accented characters', () => {
     // Ensure function handles unicode without throwing and returns two strings
     const res1 = doubleMetaphone('Žižek');
-    expect(Array.isArray(res1)).toBeTrue();
-    expect(res1.length).toBe(2);
+    expect(res1).toBeArray();
+    expect(res1).toHaveLength(2);
     expect(typeof res1[0]).toBe('string');
 
     const res2 = doubleMetaphone('Łukasz');
-    expect(Array.isArray(res2)).toBeTrue();
-    expect(res2[0]).toBeDefined();
+    expect(res2).toBeArray();
+    expect(res2.length).toBeGreaterThan(0);
   });
 
   test('exercise many rules/branches (smoke)', () => {
@@ -194,7 +194,7 @@ describe('doubleMetaphone', () => {
 
     for (const w of words) {
       const res = doubleMetaphone(w);
-      expect(Array.isArray(res)).toBeTrue();
+      expect(res).toBeArray();
       expect(typeof res[0]).toBe('string');
       expect(typeof res[1]).toBe('string');
     }
@@ -333,7 +333,7 @@ describe('doubleMetaphone', () => {
     for (const w of cases) {
       const res = doubleMetaphone(w);
       // Ensure function executes and returns an array of two strings.
-      expect(Array.isArray(res)).toBeTrue();
+      expect(res).toBeArray();
       expect(typeof res[0]).toBe('string');
       expect(typeof res[1]).toBe('string');
     }
@@ -374,7 +374,7 @@ describe('doubleMetaphone', () => {
 
     for (const w of cases) {
       const res = doubleMetaphone(w);
-      expect(Array.isArray(res)).toBeTrue();
+      expect(res).toBeArray();
       expect(typeof res[0]).toBe('string');
       expect(typeof res[1]).toBe('string');
     }
@@ -402,7 +402,7 @@ describe('doubleMetaphone', () => {
 
     for (const w of words) {
       const res = doubleMetaphone(w);
-      expect(Array.isArray(res)).toBeTrue();
+      expect(res).toBeArray();
       expect(typeof res[0]).toBe('string');
       expect(typeof res[1]).toBe('string');
     }

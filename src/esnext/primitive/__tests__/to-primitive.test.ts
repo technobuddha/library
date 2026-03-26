@@ -96,7 +96,7 @@ describe('toPrimitive', () => {
     expect(toPrimitive(new String('abc'))).toBe('abc');
     expect(toPrimitive(new Number(42))).toBe(42);
     expect(toPrimitive(Object(42n))).toBe(42n);
-    expect(toPrimitive(new Boolean(true))).toBe(true);
+    expect(toPrimitive(new Boolean(true))).toBeTrue();
     const sym = Symbol('x');
     expect(toPrimitive(Object(sym))).toBe(sym);
   });

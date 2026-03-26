@@ -305,14 +305,6 @@ const config = [
     tsConfig: 'src/esnext/object/__tests__/tsconfig.json',
     jest: true,
   }),
-  // src/esnext/object/__tests__
-  app.lint({
-    files: ['src/esnext/object/__tests__/**/*.test-d.ts'],
-    ignores: [],
-    environment: 'node',
-    tsConfig: 'src/esnext/object/__tests__/tsconfig.json',
-    jest: true,
-  }),
   // src/esnext/patch/__tests__
   app.lint({
     files: ['src/esnext/patch/__tests__/**/*.test.ts'],

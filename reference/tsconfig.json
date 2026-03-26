@@ -5,15 +5,13 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
-    "noEmit": true,
-    "rewriteRelativeImportExtensions": false,
     "composite": true,
-    "types": ["node"],
+    "types": [],
     "lib": ["esnext"],
     "allowJs": true,
     "checkJs": true
   },
-  "include": ["*.ts", "*.d.ts", "*.js"],
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.js"],
   "exclude": [],
   "references": [{ "path": "../src/esnext" }]
 }

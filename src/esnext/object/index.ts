@@ -1,5 +1,4 @@
 export { changed } from './changed.ts';
-export { clear } from './clear.ts';
 export { deepCopy } from './deep-copy.ts';
 export { deepEquals } from './deep-equals.ts';
 export { deepMerge } from './deep-merge.ts';

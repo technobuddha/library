@@ -1,14 +1,13 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { transcriptions } from '../reference/source/transcriptions.ts';
+import { escapeJS } from '../src/esnext/escape/escape-js.ts';
 import { bannerize } from '../src/esnext/string/bannerize.ts';
-import { empty } from '../src/esnext/unicode/unicode.ts';
-import { escapeJS} from '../src/esnext/escape/escape-js.ts';
 import { quote } from '../src/esnext/string/quote.ts';
+import { empty } from '../src/esnext/unicode/unicode.ts';
 import { err } from '../src/node/err.ts';
 import { locatePackageRoot } from '../src/node/locate-package-root.ts';
-
-import { transcriptions } from '../reference/source/transcriptions.ts';
 
 const root = await locatePackageRoot();
 if (!root) {
@@ -20,7 +19,7 @@ const code1: string[] = [
   empty,
   '// prettier-ignore',
   'export const asciiMapping: (string | undefined)[] = [',
-  '// eslint-disable-next-line no-sparse-arrays, unicorn/no-hex-escape',
+  '// eslint-disable-next-line no-sparse-arrays',
 ];
 
 const code2: string[] = [

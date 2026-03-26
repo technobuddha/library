@@ -112,7 +112,7 @@ describe('difference', () => {
     ]);
   });
 
-  test.skip('timeout', () => {
+  test.todo('timeout', () => {
     const a =
       `Twas brillig, and the slithy toves\nDid gyre and gimble in the wabe:\nAll mimsy were the borogoves,\nAnd the mome raths outgrabe.\n`.repeat(
         1024,

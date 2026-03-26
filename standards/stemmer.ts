@@ -4,10 +4,8 @@
 /* eslint-disable @typescript-eslint/no-unnecessary-type-conversion */
 /* eslint-disable require-unicode-regexp */
 /* eslint-disable prefer-template */
-/* eslint-disable tsdoc/syntax */
 // Standard suffix manipulations.
-/** @type {Record<string, string>} */
-const step2list = {
+const step2list: Record<string, string> = {
   ational: 'ate',
   tional: 'tion',
   enci: 'ence',
@@ -31,8 +29,7 @@ const step2list = {
   logi: 'log',
 };
 
-/** @type {Record<string, string>} */
-const step3list = {
+const step3list: Record<string, string> = {
   icate: 'ic',
   ative: '',
   alize: 'al',
@@ -73,10 +70,8 @@ const step4 = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate
 /**
  * Get the stem from a given value.
  *
- * @param {string} value
- *   Value to stem.
- * @returns {string}
- *   Stem for `value`
+ * @param value - Value to stem.
+ * @returns Stem for `value`
  */
 export function stemmer(value: string): string {
   let result = String(value).toLowerCase();
@@ -86,7 +81,6 @@ export function stemmer(value: string): string {
     return result;
   }
 
-  /** @type {boolean} */
   let firstCharacterWasLowerCaseY = false;
 
   // Detect initial `y`, make sure it never matches.
@@ -106,8 +100,7 @@ export function stemmer(value: string): string {
     result = result.slice(0, -1);
   }
 
-  /** @type {RegExpMatchArray|null} */
-  let match;
+  let match: RegExpMatchArray | null;
 
   // Step 1b.
   if ((match = sfxEED.exec(result))) {
@@ -138,13 +131,11 @@ export function stemmer(value: string): string {
 
   // Step 2.
   if ((match = step2.exec(result)) && gt0.test(match[1])) {
-    // @ts-expect-error - any type implied
     result = match[1] + step2list[match[2]];
   }
 
   // Step 3.
   if ((match = step3.exec(result)) && gt0.test(match[1])) {
-    // @ts-expect-error - any type implied
     result = match[1] + step3list[match[2]];
   }
 

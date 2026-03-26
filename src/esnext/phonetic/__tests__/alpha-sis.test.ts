@@ -36,7 +36,7 @@ describe('alphaSis', () => {
   test('handles empty string', () => {
     const result = alphaSis('');
     expect(result).toBeArray();
-    expect(result.length).toBe(0);
+    expect(result).toHaveLength(0);
   });
 
   test('handles single characters', () => {

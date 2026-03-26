@@ -40,11 +40,11 @@ describe('eudex', () => {
   );
 
   test('should produce same hash for same input', () => {
-    expect(eudex('test').eq(eudex('test'))).toBe(true);
+    expect(eudex('test').eq(eudex('test'))).toBeTrue();
   });
 
   test('should produce different hashes for different words', () => {
-    expect(eudex('cat').eq(eudex('dog'))).toBe(false);
+    expect(eudex('cat').eq(eudex('dog'))).toBeFalse();
   });
 
   test('should handle empty string', () => {

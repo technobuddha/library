@@ -7,7 +7,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable unicorn/prefer-structured-clone */
 /* eslint-disable require-unicode-regexp */
-/* eslint-disable tsdoc/syntax */
+/* eslint-disable technobuddha/tsdoc-syntax */
 
 type Options = { style?: 'c' | 'paper' | null };
 type RuleCollection = Record<string, Array<RuleSet>>;

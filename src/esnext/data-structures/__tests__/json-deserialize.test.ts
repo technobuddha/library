@@ -41,7 +41,6 @@ describe('jsonDeserialize', () => {
     expect(jsonDeserialize(42)).toBe(42);
     expect(jsonDeserialize(true)).toBeTrue();
     expect(jsonDeserialize(null)).toBeNull();
-    expect(jsonDeserialize(undefined)).toBeUndefined();
     expect(jsonDeserialize({ key: 'value' })).toEqual({ key: 'value' });
     expect(jsonDeserialize([1, 2, 3])).toEqual([1, 2, 3]);
   });

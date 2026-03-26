@@ -34,7 +34,7 @@ describe('patchAddPadding', () => {
   test('adds padding to empty patch', () => {
     const patch = makePatch(0, 0, 0, 0, []);
     const padding = patchAddPadding([patch], options);
-    expect(padding.length).toBe(options.margin);
+    expect(padding).toHaveLength(options.margin);
     expect(patch.diffs[0]).toEqual({ op: DIFFERENCE_EQUAL, text: padding });
     expect(patch.diffs.at(-1)).toEqual({ op: DIFFERENCE_EQUAL, text: padding });
   });

@@ -3,8 +3,7 @@ import { hyphenate } from '../hyphenate.ts';
 
 describe('hyphenate', () => {
   test('hyphenates a truly unique non-exception word', () => {
-    expect(hyphenate('technobuddha')).toBeDefined(); // Just check it runs
-    expect(Array.isArray(hyphenate('technobuddha'))).toBeTrue();
+    expect(hyphenate('technobuddha')).toBeArray();
     expect(hyphenate('technobuddha').join('-').length).toBeGreaterThan(0);
   });
   test('hyphenates a non-exception word', () => {

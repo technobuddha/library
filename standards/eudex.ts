@@ -1,6 +1,6 @@
 // cspell:disable
 /* eslint-disable curly */
-/* eslint-disable tsdoc/syntax */
+/* eslint-disable technobuddha/tsdoc-syntax */
 /* eslint-disable unicorn/prefer-number-properties */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable one-var */
