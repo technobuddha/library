@@ -3,17 +3,8 @@
 // 🚨
 // @ts-check
 import { app } from '@technobuddha/project';
+import { defineConfig } from 'eslint/config';
 
-/** @type import('eslint').Linter.Config[] */
-const config = [
-  // src/esnext/escape/__tests__
-  app.lint({
-    files: ['**/*.test.ts'],
-    ignores: [],
-    environment: 'node',
-    tsConfig: 'tsconfig.json',
-    jest: true,
-  }),
-];
-
-export default config;
+export default defineConfig([
+  app.lint({ files: ['**/*.test.ts'], environment: 'test', typescript: true }),
+]);

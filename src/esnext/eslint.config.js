@@ -3,10 +3,9 @@
 // 🚨
 // @ts-check
 import { app } from '@technobuddha/project';
+import { defineConfig } from 'eslint/config';
 
-/** @type import('eslint').Linter.Config[] */
-const config = [
-  // src/esnext
+export default defineConfig([
   app.lint({
     files: ['**/*.ts'],
     ignores: [
@@ -49,8 +48,6 @@ const config = [
       'tokenization/__tests__/**/*',
       'unicode/__tests__/**/*',
     ],
-    tsConfig: 'tsconfig.json',
+    typescript: true,
   }),
-];
-
-export default config;
+]);

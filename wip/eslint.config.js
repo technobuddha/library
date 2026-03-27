@@ -3,11 +3,6 @@
 // 🚨
 // @ts-check
 import { app } from '@technobuddha/project';
+import { defineConfig } from 'eslint/config';
 
-/** @type import('eslint').Linter.Config[] */
-const config = [
-  // wip
-  app.lint({ files: ['**/*.ts'], ignores: [], tsConfig: 'tsconfig.json' }),
-];
-
-export default config;
+export default defineConfig([app.lint({ files: ['**/*.ts'], typescript: true })]);

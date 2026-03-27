@@ -3,16 +3,13 @@
 // 🚨
 // @ts-check
 import { app } from '@technobuddha/project';
+import { defineConfig } from 'eslint/config';
 
-/** @type import('eslint').Linter.Config[] */
-const config = [
-  // src/node
+export default defineConfig([
   app.lint({
     files: ['**/*.ts'],
     ignores: ['__tests__/**/*'],
     environment: 'node',
-    tsConfig: 'tsconfig.json',
+    typescript: true,
   }),
-];
-
-export default config;
+]);
