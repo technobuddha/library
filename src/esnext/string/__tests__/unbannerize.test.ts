@@ -5,7 +5,7 @@ describe('unbannerize', () => {
   const content = 'console.log("Hello, world!");';
   const styles = ['#', '<!->', '/**/', '//', '%', ';', 'md'] as const;
 
-  test.each(styles)('removes banner for style %s', (style) => {
+  test.for(styles)('removes banner for style %s', (style) => {
     const bannered = bannerize(content, style);
     const result = unbannerize(bannered);
     expect(result).toContain(content);

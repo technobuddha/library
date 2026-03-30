@@ -216,7 +216,7 @@ describe('convexHull', () => {
     expect(result).toBeDefined();
     expect(result).toHaveLength(3);
     // First and last points should be different
-    expect(result![0]).not.toEqual(result![result!.length - 1]);
+    expect(result![0]).not.toEqual(result!.at(-1));
   });
 
   test('should handle very small coordinate differences', () => {

@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { transcriptions } from '../reference/source/transcriptions.ts';
+import { transcriptions } from '../reference/source/transcriptions.js';
 import { escapeJS } from '../src/esnext/escape/escape-js.ts';
 import { bannerize } from '../src/esnext/string/bannerize.ts';
 import { quote } from '../src/esnext/string/quote.ts';
@@ -19,14 +19,14 @@ const code1: string[] = [
   empty,
   '// prettier-ignore',
   'export const asciiMapping: (string | undefined)[] = [',
-  '// eslint-disable-next-line no-sparse-arrays',
+  '// eslint-disable-next-line no-sparse-arrays, unicorn/no-hex-escape',
 ];
 
 const code2: string[] = [
   empty,
   '// prettier-ignore',
   'export const romanization: (string | undefined)[] = [',
-  '// eslint-disable-next-line no-sparse-arrays, unicorn/no-hex-escape',
+  '// eslint-disable-next-line no-sparse-arrays',
 ];
 
 let line1 = empty;

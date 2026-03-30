@@ -2,10 +2,10 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 // @ts-check
-import { app } from '@technobuddha/project';
+import { lint } from '@technobuddha/project';
 import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  app.lint({ files: ['**/*.test.ts'], environment: 'test', typescript: true }),
-  app.lint({ files: ['**/*.ts'], environment: 'node', typescript: true }),
+  lint({ files: ['**/*.test.ts'], environment: 'test', typescript: true }),
+  lint({ files: ['**/*.ts'], environment: 'node', typescript: true }),
 ]);

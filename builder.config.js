@@ -3,11 +3,14 @@
 /** @type import('\@technobuddha/project/build').Builds */
 const config = {
   default: {
-    watch: true,
     steps: [
       {
         name: 'Clean',
-        command: ['rm -rf ./dist', 'rm -rf ./src/esnext/@data/moby*'],
+        command: ['rm -rf ./dist'],
+      },
+      {
+        name: 'Library',
+        command: 'npx tsc --build src',
       },
       {
         name: 'Transcriptions',
@@ -16,27 +19,20 @@ const config = {
       {
         name: 'Lorem',
         command: 'npx tsx scripts/make-lorem-ipsum.ts',
-        directory: './reference/lorem',
       },
       {
         name: 'Hyphen',
         command: 'npx tsx scripts/make-hyphenation.ts',
-        directory: './reference/hyphen',
       },
       {
         name: 'Library',
-        directory: ['./src'],
         command: 'npx tsc --build src',
       },
       {
         name: 'Documentation',
-        directory: ['./src'],
         command: 'npx typedoc',
       },
     ],
-  },
-  prod: {
-    steps: [{ build: 'default' }],
   },
   publish: {
     steps: [

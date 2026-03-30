@@ -76,7 +76,7 @@ describe('jsonDeserialize', () => {
     },
   ];
 
-  test.each(testCases)('round trip: $name', ({ value }) => {
+  test.for(testCases)('round trip: $name', ({ value }) => {
     const serialized = jsonSerialize(value);
     const jsonDeserialized = jsonDeserialize(serialized);
     expect(jsonDeserialized).toEqual(value);

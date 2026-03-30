@@ -1,7 +1,8 @@
 // cspell:disable
+// prettier-disable
 
 // prettier-ignore
-export const transcriptions: [number, string|null, string|null][] = [
+export const transcriptions = [
   [0x000000, '\0',        null                            ], // <control>                                          ◌
   [0x000001, '\u0001',    null                            ], // <control>                                          ◌
   [0x000002, '\u0002',    null                            ], // <control>                                          ◌
@@ -34,7 +35,7 @@ export const transcriptions: [number, string|null, string|null][] = [
   [0x00001d, '\u001d',    null                            ], // <control>                                          ◌
   [0x00001e, '\u001e',    null                            ], // <control>                                          ◌
   [0x00001f, '\u001f',    null                            ], // <control>                                          ◌
-  [0x000020, ' ',         ' '                             ], // SPACE                                               
+  [0x000020, ' ',         ' '                             ], // SPACE
   [0x000021, '!',         '!'                             ], // EXCLAMATION MARK                                   !
   [0x000022, '"',         '"'                             ], // QUOTATION MARK                                     "
   [0x000023, '#',         '#'                             ], // NUMBER SIGN                                        #

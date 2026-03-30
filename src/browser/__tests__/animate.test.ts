@@ -113,8 +113,7 @@ describe('animate', () => {
 
     void animate(callback);
 
-    expect(mockRequestAnimationFrame).toHaveBeenCalledOnce();
-    expect(mockRequestAnimationFrame).toHaveBeenCalledWith(expect.any(Function));
+    expect(mockRequestAnimationFrame).toHaveBeenCalledExactlyOnceWith(expect.any(Function));
   });
 
   test('callback is not executed until animation frame', async () => {

@@ -1,12 +1,11 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { asciiMapping } from '../../src/esnext/@data/ascii-mapping.ts';
-import { transcriptions } from './transcriptions.ts';
-import { unicodeData } from '../knowledge/unicode-data.js';
-import { romanization } from '../knowledge/romanization.js';
-
 import { empty, escapeJS, quote, space } from '@technobuddha/library';
+
+import { romanization } from '../reference/knowledge/romanization.js';
+import { unicodeData } from '../reference/knowledge/unicode-data.js';
+import { asciiMapping } from '../src/esnext/@data/ascii-mapping.ts';
 
 const unicode: Map<number, string> = new Map();
 
@@ -35,7 +34,7 @@ const code = [
 for (const codePoint of Array.from(unicode.keys()).sort((a, b) => a - b)) {
   const ascii = asciiMapping[codePoint];
   const cp = `0x${codePoint.toString(16).padStart(6, '0')}`;
-  const asc = (ascii == null ? 'null,' : quote(escapeJS(ascii)) + ',').padEnd(12, space);
+  const asc = (ascii == null ? 'null,' : `${quote(escapeJS(ascii))},`).padEnd(12, space);
 
   const roman = romanization[String.fromCodePoint(codePoint)];
   const rom = (roman == null ? 'null' : quote(escapeJS(roman))).padEnd(32, space);
