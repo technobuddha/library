@@ -31,6 +31,7 @@ describe('eudex', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(eudex(word).value.toString(16), word).toStrictEqual(
           std(prepare(word, true, false)).toString(16),
         );

@@ -23,7 +23,6 @@ const ROOT_FILE = 'package.json';
  * @category Config
  */
 export function locateNearestSync(start: string, name: string): string | null {
-  // eslint-disable-next-line n/no-sync
   const results = searchParentSync([name, ROOT_FILE], { startDirectory: start, limit: 1 });
   if (results.length > 0) {
     const [result] = results;

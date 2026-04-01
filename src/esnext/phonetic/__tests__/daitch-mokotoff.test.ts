@@ -9,6 +9,7 @@ describe('daitchMokotoff', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(daitchMokotoff(word).sort(), word).toStrictEqual(std(prepare(word)));
       }
     },

@@ -1,4 +1,3 @@
-/* eslint-disable n/no-sync */
 import fs from 'node:fs';
 
 import { toPath } from './to-path.ts';

@@ -33,7 +33,6 @@ import { searchParentSync } from './search-parent-sync.ts';
  * @category Location
  */
 export function locatePackageRootSync(options?: SearchParentOptions): string | null {
-  // eslint-disable-next-line n/no-sync
   const results = searchParentSync('package.json', options);
   if (results.length > 0) {
     return results[0].dir;

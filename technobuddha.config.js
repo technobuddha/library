@@ -70,32 +70,6 @@ const config = {
       ],
     },
   },
-  remotes: [
-    {
-      file: '../knowledge/dist/@data/unicode-data.js',
-      local: 'reference/knowledge/unicode-data.js',
-    },
-    {
-      file: '../knowledge/dist/@data/unicode-data.d.ts',
-      local: 'reference/knowledge/unicode-data.d.ts',
-    },
-    {
-      file: '../knowledge/dist/@data/romanization.js',
-      local: 'reference/knowledge/romanization.js',
-    },
-    {
-      file: '../knowledge/dist/@data/romanization.d.ts',
-      local: 'reference/knowledge/romanization.d.ts',
-    },
-    {
-      file: '../knowledge/dist/@data/hyphenation.js',
-      local: 'reference/knowledge/hyphenation.js',
-    },
-    {
-      file: '../knowledge/dist/@data/hyphenation.d.ts',
-      local: 'reference/knowledge/hyphenation.d.ts',
-    }
-  ],
 };
 
 export default config;

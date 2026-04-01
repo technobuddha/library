@@ -27,7 +27,7 @@ export { hammingDistance } from './hamming-distance.ts';
 export { indent, type IndentOptions } from './indent.ts';
 export { isString } from './is-string.ts';
 export { isStringLike } from './is-string-like.ts';
-export { jaroDistance, type JaroOptions as JaroDistanceOptions } from './jaro-distance.ts';
+export { jaroDistance, type JaroDistanceOptions } from './jaro-distance.ts';
 export { jaroWinklerDistance } from './jaro-winkler-distance.ts';
 export { keep, type KeepOptions } from './keep.ts';
 export { levenshteinDistance, type LevenshteinDistanceOptions } from './levenshtein-distance.ts';
@@ -40,10 +40,7 @@ export { mask, type MaskOptions } from './mask.ts';
 export { quote, type QuoteOptions } from './quote.ts';
 export { readability } from './readability.ts';
 export { removeANSIEscapes } from './remove-ansi-escapes.ts';
-export {
-  removeComments as strip,
-  type RemoveCommentsOptions as StripOptions,
-} from './remove-comments.ts';
+export { removeComments, type RemoveCommentsOptions } from './remove-comments.ts';
 export { root, type RootOptions } from './root.ts';
 export { singleLine } from './single-line.ts';
 export { type StringLike } from './string-like.ts';

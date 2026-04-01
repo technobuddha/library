@@ -11,6 +11,7 @@ describe('soundex p123', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(soundexP123(word), word).toStrictEqual(std(prepare(word)));
       }
     },

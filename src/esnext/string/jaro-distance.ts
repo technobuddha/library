@@ -9,7 +9,7 @@ import { toString } from './to-string.ts';
  * @group String
  * @category Similarity
  */
-export type JaroOptions = {
+export type JaroDistanceOptions = {
   /**
    * Whether the comparison should be case-sensitive. Defaults to false.
    */
@@ -39,7 +39,7 @@ export type JaroOptions = {
 export function jaroDistance(
   text1: StringLike,
   text2: StringLike,
-  { caseSensitive = false }: JaroOptions = {},
+  { caseSensitive = false }: JaroDistanceOptions = {},
 ): number {
   const str1 = caseSensitive ? toString(text1) : toString(text1).toUpperCase();
   const str2 = caseSensitive ? toString(text2) : toString(text2).toUpperCase();

@@ -4,7 +4,6 @@
 /* eslint-disable unicorn/prefer-number-properties */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable one-var */
-/* eslint no-confusing-arrow: 0 */
 /**
  * Talisman phonetics/eudex
  * =========================

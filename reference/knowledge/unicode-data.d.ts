@@ -57,7 +57,7 @@ export type UnicodeData = {
   decomposition?: string;
   decimalDigit?: number;
   digit?: number;
-  numeric?: number;
+  numeric?: string;
   mirrored?: boolean;
   unicode1Name?: string;
   comment?: string;

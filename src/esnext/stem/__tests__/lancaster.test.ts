@@ -12,6 +12,7 @@ describe('stemLancaster', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(lancasterC(word), word).toStrictEqual(stdC(word));
       }
     },
@@ -22,6 +23,7 @@ describe('stemLancaster', () => {
     'with master words (Paper)',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(lancasterPaper(word), word).toStrictEqual(stdPaper(word));
       }
     },

@@ -1,8 +1,8 @@
-import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { savePretty } from '@technobuddha/project';
+
 import { hyphenation } from '../reference/knowledge/hyphenation.js';
-import { bannerize } from '../src/esnext/string/bannerize.ts';
 import { empty } from '../src/esnext/unicode/unicode.ts';
 import { err } from '../src/node/err.ts';
 import { locatePackageRoot } from '../src/node/locate-package-root.ts';
@@ -41,20 +41,23 @@ for (const e of hyphenation.exceptions) {
   exceptions[syllables.join(empty)] = syllables;
 }
 
-const source = bannerize(
-  `// cspell:disable
-type Points = { points: number[] };
-interface Tree {
-  [key: string]: Tree | Points;
-};
+const code = [
+  `// cspell:disable`,
+  `type Points = { points: number[] };`,
+  `interface Tree {`,
+  `[key: string]: Tree | Points;`,
+  `};`,
+  empty,
+  `// prettier-ignore`,
+  `export const exceptions: Record<string, string[]> = ${JSON.stringify(exceptions)};`,
+  empty,
+  `// prettier-ignore`,
+  `export const tree: Tree = ${JSON.stringify(tree)};`,
+];
 
-// prettier-ignore
-export const exceptions: Record<string, string[]> = ${JSON.stringify(exceptions)};
-
-// prettier-ignore
-export const tree: Tree = ${JSON.stringify(tree)};
-`,
+await savePretty(
+  path.join(root, 'src', 'esnext', '@data', 'hyphenation.ts'),
+  code.join('\n'),
+  'typescript',
   '//',
 );
-
-await fs.writeFile(path.join(root, 'src', 'esnext', '@data', 'hyphenation.ts'), source);

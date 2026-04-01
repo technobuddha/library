@@ -93,7 +93,9 @@ export async function spawnPromise(
 ): Promise<SpawnReturn> {
   return new Promise((resolve, reject) => {
     const process =
-      options ? spawn(command, args as readonly string[], options) : spawn(command, options);
+      options ?
+        spawn(command, args as readonly string[], options)
+      : spawn(command, args as AllSpawnOptions);
 
     process.on('close', (code, signal) => {
       resolve({ code, signal, process });

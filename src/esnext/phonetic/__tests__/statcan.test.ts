@@ -9,6 +9,7 @@ describe('statcan', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(statcan(word), word).toStrictEqual(std(prepare(word)));
       }
     },

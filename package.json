@@ -1,6 +1,6 @@
 {
   "name": "@technobuddha/library",
-  "version": "2.1.0-97",
+  "version": "2.1.0-101",
   "description": "A large library of useful functions",
   "author": {
     "name": "Phil Hill",
@@ -37,7 +37,8 @@
     "lint": "npx eslint",
     "spell": "npx cspell lint src",
     "debug": "echo 'debugger'",
-    "preinstall": "git config core.hooksPath git-hooks"
+    "preinstall": "git config core.hooksPath git-hooks",
+    "add-project": "yarn add @technobuddha/project@file:../project"
   },
   "packageManager": "yarn@4.13.0",
   "devDependencies": {

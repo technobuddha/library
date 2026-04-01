@@ -1,4 +1,3 @@
-/* eslint-disable n/no-sync */
 import fs from 'node:fs';
 
 import { fileExistsSync } from '../file-exists-sync.ts';
