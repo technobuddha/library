@@ -12,22 +12,22 @@ const config = {
   },
   directories: {
     'src/browser': {
-      environment: 'browser',
+      platform: 'browser',
     },
     'src/common': {
-      environment: 'browser',
+      platform: 'browser',
     },
     'src/esnext': {
-      environment: 'esnext',
+      platform: 'esnext',
     },
     'src/node': {
-      environment: 'node',
+      platform: 'node',
     },
     'standards': {
-      environment: 'node',
+      platform: 'node',
     },
     'wip': {
-      environment: 'esnext',
+      platform: 'esnext',
       tsconfig: {
         compilerOptions: {
           noEmit: true,

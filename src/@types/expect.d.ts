@@ -1,5 +1,7 @@
-import type JestExtended from 'jest-extended';
-import type JestMatcherDeepCloseTo from 'jest-matcher-deep-close-to';
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
+import { type JestExtended, type JestMatcherDeepCloseTo } from '@technobuddha/project';
 
 declare module 'vitest' {
   interface Assertion<T = unknown> extends JestExtended<T>, JestMatcherDeepCloseTo<T> {
