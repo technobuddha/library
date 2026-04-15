@@ -1,12 +1,20 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
   "description": "A large library of useful functions",
-  "version": "2.1.0-102",
+  "version": "2.1.0-105",
   "stableVersion": "2.1.0-25",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/esnext/index.js",
+    "./node": "./dist/node/index.js",
+    "./browser": "./dist/browser/index.js",
+    "./common": "./dist/common/index.js",
+    "./esnext": "./dist/esnext/index.js"
+  },
   "author": {
     "name": "Phil Hill",
     "email": "phil@technobuddha.com"
@@ -15,10 +23,10 @@
     "type": "git",
     "url": "https://github.com/technobuddha/@technobuddha/library"
   },
+  "homepage": "https://github.com/technobuddha/@technobuddha/library#readme",
   "bugs": {
     "url": "https://github.com/technobuddha/@technobuddha/library/issues"
   },
-  "homepage": "https://github.com/technobuddha/@technobuddha/library#readme",
   "scripts": {
     "start": "build dev",
     "build": "build default",
@@ -31,22 +39,20 @@
     "spell": "npx cspell lint src",
     "debug": "echo 'debugger'",
     "preinstall": "git config core.hooksPath git-hooks",
-    "add-project": "yarn remove @technobuddha/project && yarn add -D @technobuddha/project@file:../project"
+    "add-project": "yarn add -D --mode=skip-build @technobuddha/project@file:../project"
   },
   "devDependencies": {
     "@technobuddha/project": "file:../project",
-    "@types/iconv": "^3.0.4",
     "@types/long": "5.0.0",
-    "get-current-line": "7.4.0",
-    "iconv": "3.0.1",
-    "long": "5.3.2"
-  },
-  "exports": {
-    ".": "./dist/esnext/index.js",
-    "./node": "./dist/node/index.js",
-    "./browser": "./dist/browser/index.js",
-    "./common": "./dist/common/index.js",
-    "./esnext": "./dist/esnext/index.js"
+    "@types/node": "25.6.0",
+    "@vitest/coverage-v8": "4.1.4",
+    "cspell": "10.0.0",
+    "jsdom": "29.0.2",
+    "long": "5.3.2",
+    "tsx": "4.21.0",
+    "type-fest": "5.5.0",
+    "typescript": "6.0.2",
+    "vitest": "4.1.4"
   },
   "engines": {
     "node": ">=25.0.0"
