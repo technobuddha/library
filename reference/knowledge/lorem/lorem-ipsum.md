@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/lorem-ipsum.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

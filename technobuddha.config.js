@@ -10,6 +10,9 @@ const config = {
     },
     ignores: ['fixtures'],
   },
+  prettier: {
+    ignore: ['reference/source/transcriptions.js'],
+  },
   directories: {
     'src/browser': {
       platform: 'browser',

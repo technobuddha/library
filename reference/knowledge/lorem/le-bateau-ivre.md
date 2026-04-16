@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/le-bateau-ivre.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

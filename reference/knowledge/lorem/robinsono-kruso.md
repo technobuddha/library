@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/robinsono-kruso.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

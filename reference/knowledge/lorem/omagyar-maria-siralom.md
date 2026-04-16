@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/omagyar-maria-siralom.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

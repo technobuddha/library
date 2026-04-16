@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/le-masque.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

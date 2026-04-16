@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/childe-harold.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

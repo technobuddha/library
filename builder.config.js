@@ -13,22 +13,6 @@ const config = {
         command: 'npx tsc --build src',
       },
       {
-        name: 'Transcriptions',
-        command: 'npx tsx scripts/make-transcriptions.ts',
-      },
-      {
-        name: 'Lorem',
-        command: 'npx tsx scripts/make-lorem-ipsum.ts',
-      },
-      {
-        name: 'Hyphen',
-        command: 'npx tsx scripts/make-hyphenation.ts',
-      },
-      {
-        name: 'Library',
-        command: 'npx tsc --build src',
-      },
-      {
         name: 'Documentation',
         command: 'npx typedoc',
       },

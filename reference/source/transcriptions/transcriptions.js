@@ -1,5 +1,7 @@
+// 🚨
+// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
+// 🚨
 // cspell:disable
-// prettier-disable
 
 // prettier-ignore
 export const transcriptions = [
@@ -35,7 +37,7 @@ export const transcriptions = [
   [0x00001d, '\u001d',    null                            ], // <control>                                          ◌
   [0x00001e, '\u001e',    null                            ], // <control>                                          ◌
   [0x00001f, '\u001f',    null                            ], // <control>                                          ◌
-  [0x000020, ' ',         ' '                             ], // SPACE
+  [0x000020, ' ',         ' '                             ], // SPACE                                               
   [0x000021, '!',         '!'                             ], // EXCLAMATION MARK                                   !
   [0x000022, '"',         '"'                             ], // QUOTATION MARK                                     "
   [0x000023, '#',         '#'                             ], // NUMBER SIGN                                        #
@@ -7434,8 +7436,8 @@ export const transcriptions = [
   [0x002025, '..',        '..'                            ], // TWO DOT LEADER                                     ‥
   [0x002026, '...',       '...'                           ], // HORIZONTAL ELLIPSIS                                …
   [0x002027, null,        '-'                             ], // HYPHENATION POINT                                  ‧
-  [0x002028, null,        ' '                             ], // LINE SEPARATOR                                      
-  [0x002029, null,        ' '                             ], // PARAGRAPH SEPARATOR                                 
+  [0x002028, null,        ' '                             ], // LINE SEPARATOR                                     ◌
+  [0x002029, null,        ' '                             ], // PARAGRAPH SEPARATOR                                ◌
   [0x00202a, null,        null                            ], // LEFT-TO-RIGHT EMBEDDING                            ◌
   [0x00202b, null,        null                            ], // RIGHT-TO-LEFT EMBEDDING                            ◌
   [0x00202c, null,        null                            ], // POP DIRECTIONAL FORMATTING                         ◌

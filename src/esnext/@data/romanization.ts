@@ -2,6 +2,7 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 
+// cspell:disable
 // prettier-ignore
 export const romanization: (string | undefined)[] = [
 // eslint-disable-next-line no-sparse-arrays

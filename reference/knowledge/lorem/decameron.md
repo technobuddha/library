@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/decameron.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

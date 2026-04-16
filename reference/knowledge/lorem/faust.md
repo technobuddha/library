@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/faust.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

@@ -2,6 +2,7 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 
+// cspell:disable
 // prettier-ignore
 export const asciiMapping: (string | undefined)[] = [
 // eslint-disable-next-line no-sparse-arrays, unicorn/no-hex-escape

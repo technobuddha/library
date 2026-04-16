@@ -19,6 +19,8 @@ for (const { codePoint, character, name, category, combining } of Object.values(
     : category.startsWith('C') ? '◌'
     : name.startsWith('VARIATION SELECTOR') ? `◌${character}`
     : name === 'COMBINING GRAPHEME JOINER' ? `◌${character}`
+    : name === 'LINE SEPARATOR' ? '⏎'
+    : name === 'PARAGRAPH SEPARATOR' ? '¶'
     : character;
 
   unicode.set(codePoint, `// ${name.padEnd(50)} ${display}`);

@@ -1,8 +1,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
+import { savePretty } from '@technobuddha/project/library';
+
 import { kebabCase } from '../src/esnext/case-conversion/kebab-case.ts';
-import { bannerize } from '../src/esnext/string/bannerize.ts';
 import { quote } from '../src/esnext/string/quote.ts';
 import { extractWords } from '../src/esnext/tokenization/extract-words.ts';
 import { splitLines } from '../src/esnext/tokenization/split-lines.ts';
@@ -16,7 +17,10 @@ if (!root) {
   process.exit(1);
 }
 
-const lorem: string[] = ['export const loremIpsumData: Record<LoremIpsumVersions, string[]> = {'];
+const lorem: string[] = [
+  '// prettier-ignore',
+  'export const loremIpsumData: Record<LoremIpsumVersions, string[]> = {',
+];
 const versions: string[] = [
   '/**',
   ' * Available Lorem Ipsum text variations from classic literature and poetry',
@@ -39,14 +43,14 @@ const versions: string[] = [
   'export type LoremIpsumVersions = ',
 ];
 
-await fs.readdir(path.join(root, 'reference', 'lorem')).then(async (files) => {
+await fs.readdir(path.join(root, 'reference', 'knowledge', 'lorem')).then(async (files) => {
   for (const file of files) {
     const words: string[] = [];
     const { name, ext } = path.parse(file);
 
     if (ext === '.md') {
       const lines = splitLines(
-        await fs.readFile(path.join(root, 'reference', 'lorem', file), 'utf-8'),
+        await fs.readFile(path.join(root, 'reference', 'knowledge', 'lorem', file), 'utf-8'),
       );
       let inText = false;
       for (const line of lines) {
@@ -66,9 +70,15 @@ await fs.readdir(path.join(root, 'reference', 'lorem')).then(async (files) => {
 lorem.push('};', empty);
 versions.push(';', empty);
 
-const file = ['// cspell:disable', empty, ...versions, empty, ...lorem, empty].join('\n');
+const file = ['// cspell:disable', empty, ...versions, ...lorem].join('\n');
 
-await fs.writeFile(
+// await fs.writeFile(
+//   path.join(root, 'src', 'esnext', '@data', 'lorem-ipsum.ts'),
+//   bannerize(file, '//'),
+// );
+await savePretty(
   path.join(root, 'src', 'esnext', '@data', 'lorem-ipsum.ts'),
-  bannerize(file, '//'),
+  file,
+  'typescript',
+  '//',
 );

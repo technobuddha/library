@@ -1,3 +1,6 @@
+// 🚨
+// 🚨 Source: ../knowledge/reference/source/lorem/nagyon-faj.md
+// 🚨
 <!-- cspell:disable -->
 
 # Title

@@ -1,11 +1,13 @@
-import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { transcriptions } from '../reference/source/transcriptions.js';
+import { saveFile, savePretty } from '@technobuddha/project/library';
+
+import { romanization } from '../reference/knowledge/romanization.js';
+import { unicodeData } from '../reference/knowledge/unicode-data.js';
+import { transcriptions } from '../reference/source/transcriptions/transcriptions.js';
 import { escapeJS } from '../src/esnext/escape/escape-js.ts';
-import { bannerize } from '../src/esnext/string/bannerize.ts';
 import { quote } from '../src/esnext/string/quote.ts';
-import { empty } from '../src/esnext/unicode/unicode.ts';
+import { empty, space } from '../src/esnext/unicode/unicode.ts';
 import { err } from '../src/node/err.ts';
 import { locatePackageRoot } from '../src/node/locate-package-root.ts';
 
@@ -15,8 +17,56 @@ if (!root) {
   process.exit(1);
 }
 
+type UnicodeTranscription = {
+  ascii: string | null;
+  romanization: string | null;
+  description: string;
+};
+
+const unicode: Map<number, UnicodeTranscription> = new Map();
+for (const { codePoint, character, name, category, combining } of Object.values(unicodeData)) {
+  const display =
+    combining ?
+      combining === 233 || combining === 234 ?
+        `o${character}o`
+      : `${character}o`
+    : category === 'Cs' ? 'surrogate'
+    : category.startsWith('C') ? '◌'
+    : name.startsWith('VARIATION SELECTOR') ? `◌${character}`
+    : name === 'COMBINING GRAPHEME JOINER' ? `◌${character}`
+    : name === 'LINE SEPARATOR' ? '◌'
+    : name === 'PARAGRAPH SEPARATOR' ? '◌'
+    : character;
+
+  unicode.set(codePoint, {
+    ascii: null,
+    romanization: null,
+    description: `${name.padEnd(50)} ${display}`,
+  });
+}
+
+for (const [char, roman] of Object.entries(romanization)) {
+  const codePoint = char.codePointAt(0);
+  if (codePoint != null) {
+    const entry = unicode.get(codePoint);
+    if (entry) {
+      entry.romanization ??= roman;
+    }
+  }
+}
+
+for (const [codePoint, ascii] of transcriptions) {
+  const entry = unicode.get(codePoint);
+  if (entry) {
+    entry.ascii ??= ascii;
+  }
+}
+
+const code0 = ['// cspell:disable', empty, '// prettier-ignore', 'export const transcriptions = ['];
+
 const code1: string[] = [
   empty,
+  '// cspell:disable',
   '// prettier-ignore',
   'export const asciiMapping: (string | undefined)[] = [',
   '// eslint-disable-next-line no-sparse-arrays, unicorn/no-hex-escape',
@@ -24,63 +74,39 @@ const code1: string[] = [
 
 const code2: string[] = [
   empty,
+  '// cspell:disable',
   '// prettier-ignore',
   'export const romanization: (string | undefined)[] = [',
   '// eslint-disable-next-line no-sparse-arrays',
 ];
 
 let line1 = empty;
-let last1 = 0;
 let line2 = empty;
-let last2 = 0;
+let last = 0;
 
-for (const [codePoint, ascii, romanization] of transcriptions) {
-  while (last1 < codePoint) {
+for (const [codePoint, { ascii, romanization, description }] of Array.from(unicode.entries()).sort(
+  ([a], [b]) => a - b,
+)) {
+  const cp = `0x${codePoint.toString(16).padStart(6, '0')}`;
+  const asc = (ascii == null ? 'null,' : `${quote(escapeJS(ascii))},`).padEnd(12, space);
+  const rom = (romanization == null ? 'null' : quote(escapeJS(romanization))).padEnd(32, space);
+  code0.push(`  [${cp}, ${asc} ${rom}], // ${description}`);
+
+  while (codePoint - last > 0) {
     line1 += ',';
-    last1++;
+    line2 += ',';
+    last++;
   }
 
   if (ascii != null) {
     line1 += quote(escapeJS(ascii).replace('\\u00', '\\x'));
   }
 
-  while (last2 < codePoint) {
-    line2 += ',';
-    last2++;
-  }
-
   if (romanization != null) {
     line2 += quote(escapeJS(romanization).replace('\\u00', '\\x'));
   }
 }
-
-// await fs
-//   .readFile(path.join(root, 'reference', 'knowledge', 'ascii-transformation.tsv'), 'utf-8')
-//   .then((content) => parseCsv(content, { delimiter: '\t', comment: '#' }))
-//   .then((rows) =>
-//     rows.map((row) => ({
-//       codePoint: Number.parseInt(row.codepoint),
-//       ascii: unescapeJS(row.ascii),
-//     })),
-//   )
-//   .then((data) => data.sort((a, b) => a.codePoint - b.codePoint))
-//   .then((data) => {
-//     for (const { codePoint, ascii } of data) {
-//       if (!Number.isNaN(codePoint)) {
-//         while (last < codePoint) {
-//           line += ',';
-//           last++;
-//         }
-
-//         if (ascii !== '--null--') {
-//           line += quote(escapeJS(ascii).replace('\\u00', '\\x'));
-//         }
-//         last = codePoint;
-//       }
-//     }
-
-//     return undefined;
-//   });
+code0.push('];', empty);
 
 while (line1.endsWith(',')) {
   line1 = line1.slice(0, -1);
@@ -92,11 +118,21 @@ while (line2.endsWith(',')) {
 code1.push(line1, '];', empty);
 code2.push(line2, '];', empty);
 
-await fs.writeFile(
-  path.join(root, 'src', 'esnext', '@data', 'ascii-mapping.ts'),
-  bannerize(code1.join('\n'), '//'),
+await saveFile(
+  path.join(root, 'reference', 'source', 'transcriptions', 'transcriptions.js'),
+  code0.join('\n'),
+  '//',
 );
-await fs.writeFile(
+
+await savePretty(
+  path.join(root, 'src', 'esnext', '@data', 'ascii-mapping.ts'),
+  code1.join('\n'),
+  'typescript',
+  '//',
+);
+await savePretty(
   path.join(root, 'src', 'esnext', '@data', 'romanization.ts'),
-  bannerize(code2.join('\n'), '//'),
+  code2.join('\n'),
+  'typescript',
+  '//',
 );
