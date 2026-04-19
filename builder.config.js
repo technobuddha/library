@@ -5,8 +5,11 @@ const config = {
   default: {
     steps: [
       {
-        name: 'Clean',
-        command: ['rm -rf ./dist'],
+        name: 'Prepare',
+        command: [
+          'tar -czf dist-backup.tgz --ignore-failed-read --warning=no-failed-read dist',
+          'rm -rf dist',
+        ],
       },
       {
         name: 'Library',
@@ -17,6 +20,13 @@ const config = {
         command: 'npx typedoc',
       },
     ],
+    onError: {
+      name: 'Rollback',
+      command: [
+        'rm -rf dist',
+        'tar -xzf dist-backup.tgz'
+      ],
+    }
   },
   publish: {
     steps: [
