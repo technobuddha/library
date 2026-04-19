@@ -103,6 +103,24 @@ export function re(
   return reTemplate(new Set(['v']), first, rest);
 }
 
+/**
+ * Builds a single regular expression that matches any pattern in the provided array.
+ *
+ * Each expression is normalized the same way as template interpolation in {@link re}:
+ * anchored expressions have outer `^...$` removed and most patterns are wrapped in
+ * non-capturing groups before being joined with alternation.
+ *
+ * @param array - The regular expressions to combine.
+ * @returns A regular expression matching any input pattern in the array.
+ * @example
+ * ```typescript
+ * const regex = reArray([/foo/v, /^bar$/iv]);
+ * // regex.source = '(?:(?:foo)|(?:bar))'
+ * // regex.flags includes 'i' and 'v'
+ * ```
+ * @group RegExp
+ * @category Construction
+ */
 export function reArray(array: RegExp[]): RegExp {
   const flags = new Set<string>('v');
   for (const reg of array) {

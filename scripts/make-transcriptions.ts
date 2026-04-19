@@ -1,6 +1,6 @@
 import path from 'node:path';
 
-import { saveFile, savePretty } from '@technobuddha/project/library';
+import { savePretty, saveRaw } from '@technobuddha/project';
 
 import { romanization } from '../reference/knowledge/romanization.js';
 import { unicodeData } from '../reference/knowledge/unicode-data.js';
@@ -24,20 +24,7 @@ type UnicodeTranscription = {
 };
 
 const unicode: Map<number, UnicodeTranscription> = new Map();
-for (const { codePoint, character, name, category, combining } of Object.values(unicodeData)) {
-  const display =
-    combining ?
-      combining === 233 || combining === 234 ?
-        `o${character}o`
-      : `${character}o`
-    : category === 'Cs' ? 'surrogate'
-    : category.startsWith('C') ? '◌'
-    : name.startsWith('VARIATION SELECTOR') ? `◌${character}`
-    : name === 'COMBINING GRAPHEME JOINER' ? `◌${character}`
-    : name === 'LINE SEPARATOR' ? '◌'
-    : name === 'PARAGRAPH SEPARATOR' ? '◌'
-    : character;
-
+for (const { codePoint, character, name, display, category, combining } of Object.values(unicodeData)) {
   unicode.set(codePoint, {
     ascii: null,
     romanization: null,
@@ -118,7 +105,7 @@ while (line2.endsWith(',')) {
 code1.push(line1, '];', empty);
 code2.push(line2, '];', empty);
 
-await saveFile(
+await saveRaw(
   path.join(root, 'reference', 'source', 'transcriptions', 'transcriptions.js'),
   code0.join('\n'),
   '//',

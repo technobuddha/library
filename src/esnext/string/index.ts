@@ -46,6 +46,7 @@ export { singleLine } from './single-line.ts';
 export { type StringLike } from './string-like.ts';
 export { syllables } from './syllables.ts';
 export { tag } from './tag.ts';
+export { toCodePoints } from './to-code-points.ts';
 export { toString } from './to-string.ts';
 export { unbannerize } from './unbannerize.ts';
 export { unindent } from './unindent.ts';

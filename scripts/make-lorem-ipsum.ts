@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import { savePretty } from '@technobuddha/project/library';
+import { savePretty } from '@technobuddha/project';
 
 import { kebabCase } from '../src/esnext/case-conversion/kebab-case.ts';
 import { quote } from '../src/esnext/string/quote.ts';

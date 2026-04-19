@@ -30,13 +30,7 @@ const config = {
       platform: 'node',
     },
     'wip': {
-      platform: 'esnext',
-      tsconfig: {
-        compilerOptions: {
-          noEmit: true,
-          rewriteRelativeImportExtensions: false,
-        },
-      }
+      platform: 'none',
     }
   },
   tsconfig: {

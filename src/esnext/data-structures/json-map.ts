@@ -103,8 +103,13 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
    * @category Map
    */
   public getOrInsert(key: K, defaultValue: V): V {
-    // TODO [engine:node@>25] - Nodejs is not supporting getOrInsert
     const serializedKey = jsonSerialize(key);
+
+    if (this.map.getOrInsert) {
+      return this.map.getOrInsert(serializedKey, defaultValue);
+    }
+
+    // TODO [engine:node@>25] - Nodejs is not supporting getOrInsert
     if (this.map.has(serializedKey)) {
       return this.map.get(serializedKey) as V;
     }
@@ -127,10 +132,16 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
    * @category Map
    */
   public getOrInsertComputed(key: K, defaultValueFn: (key: K) => V): V {
-    // TODO [engine:node@>25] - Nodejs is not supporting getOrInsertComputed
     const serializedKey = jsonSerialize(key);
+    if (this.map.getOrInsertComputed) {
+      return this.map.getOrInsertComputed(serializedKey, (k) =>
+        defaultValueFn(jsonDeserialize(k) as K),
+      );
+    }
+
+    // TODO [engine:node@>25] - Nodejs is not supporting getOrInsertComputed
     if (this.map.has(serializedKey)) {
-      return this.map.get(serializedKey) as V;
+      return this.map.get(serializedKey)!;
     }
     const computedValue = defaultValueFn(key);
     this.map.set(serializedKey, computedValue);

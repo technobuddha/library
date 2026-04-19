@@ -51,6 +51,7 @@ export type UnicodeData = {
   character: string;
   codePoint: number;
   name: string;
+  display: string;
   category: string;
   combining?: number;
   bidirectional: string;
@@ -65,5 +66,6 @@ export type UnicodeData = {
   lowerCase?: string;
   titleCase?: string;
 };
+
 
 export declare const unicodeData: Record<string, UnicodeData>;

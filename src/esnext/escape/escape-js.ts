@@ -21,8 +21,8 @@ import { isOct, u4, uu } from './helpers.ts';
  * | Single Quote       | 0x27                 | \\'                  |
  * | Backslash          | 0x5c                 | \\\\                 |
  * | Control Characters | 0x00-0x1f, 0x7f-0x9f | \\x··                |
- * | BMP                | 0x0100-0xffff    | \\u····              |
- * | Astral             | 0x10000-0x10ffff   | \\u\{···…\}        |
+ * | BMP                | 0x0100-0xffff        | \\u····              |
+ * | Astral             | 0x10000-0x10ffff     | \\u\{···…\}          |
  *
  * [^1]: The sequence \\0 must not be followed by a octal digit (0-7) to avoid being interpreted
  * as a different character, \\x00 will be used to avoid ambiguity.

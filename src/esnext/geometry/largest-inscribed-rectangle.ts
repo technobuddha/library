@@ -115,7 +115,7 @@ export function largestInscribedRotatedRectangle(
   let maxRectangle: RotatedRect = { x: 0, y: 0, width: 0, height: 0, area: 0, angle: 0 };
 
   // Use π/2 normalization since rectangles have 4-fold symmetry
-  for (const angle of edgeAngles(polygon, Math.PI / 2)) {
+  for (const angle of edgeAngles(polygon, { normalizeTo: Math.PI / 2 })) {
     const rotatedPolygon = rotate(polygon, -angle);
     const rect = findLargestAxisAlignedRectangle(rotatedPolygon, squareOnly);
 
