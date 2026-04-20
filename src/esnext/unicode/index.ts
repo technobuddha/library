@@ -13,9 +13,14 @@ export { isSurrogateHigh } from './is-surrogate-high.ts';
 export { isSurrogateLow } from './is-surrogate-low.ts';
 export { isUpperCase } from './is-upper-case.ts';
 export { isWhitespace } from './is-whitespace.ts';
-export { removeDiacritics } from './remove-diacritics.ts';
+export {
+  type NormalizationForm,
+  removeDiacritics,
+  type RemoveDiacriticsOptions,
+} from './remove-diacritics.ts';
 export { type TextEncoding } from './text-encoding.ts';
 export { toASCII } from './to-ascii.ts';
+export { transliterate } from './transliterate.ts';
 export {
   emDash,
   empty,

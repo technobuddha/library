@@ -35,7 +35,7 @@ import { isHex, isOct, u4, u8, x2 } from './helpers.ts';
  * (such as EBCDIC).
  * [^3]: The sequence \\xnn must not be followed by a hexadecimal digit (0-9, a-f, A-F) to avoid
  * being interpreted as a different character, \\u···· will be used to avoid ambiguity.
- * @param text - The string to escape
+ * @param input - The string to escape
  * @param options - Escape options. The `quote` property controls which quote characters are escaped
  * (set to `'single'` or `'double'` to escape only that type). The `ascii` property, when `true`,
  * forces all non-ASCII characters (above U+007F) to be escaped using Unicode escape sequences

@@ -45,6 +45,7 @@ export type LoremIpsumOptions = {
  * will always begin with the same 5 words for consistency across generations.
  *
  * @param options - Configuration object for text generation
+ * @param randomOptions - Optional configuration for random number generation
  * @returns Generated lorem ipsum text with paragraphs separated by newlines
  *
  * @example

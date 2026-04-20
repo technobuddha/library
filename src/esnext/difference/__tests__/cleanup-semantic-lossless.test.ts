@@ -7,7 +7,6 @@ import {
 } from '../difference.ts';
 
 describe('cleanupSemanticLossless', () => {
-
   test('Blank line boundary (score 5 branch)', () => {
     // This triggers the blank line branch in cleanupSemanticScore
     // The edit is at a blank line boundary
@@ -76,22 +75,22 @@ describe('cleanupSemanticLossless', () => {
     ]);
   });
 
-    test('No boundary score (return 0 branch)', () => {
-      // This triggers the final return 0 in cleanupSemanticScore
-      // Use two equalities and an edit with only alphanumeric, no whitespace or punctuation
-      const diffs: Difference[] = [
-        { op: DIFFERENCE_EQUAL, text: 'abc' },
-        { op: DIFFERENCE_INSERT, text: 'def' },
-        { op: DIFFERENCE_EQUAL, text: 'ghi' },
-      ];
-      cleanupSemanticLossless(diffs);
-      // No shifting should occur, as there are no boundaries
-      expect(diffs).toStrictEqual([
-        { op: DIFFERENCE_EQUAL, text: 'abc' },
-        { op: DIFFERENCE_INSERT, text: 'def' },
-        { op: DIFFERENCE_EQUAL, text: 'ghi' },
-      ]);
-    });
+  test('No boundary score (return 0 branch)', () => {
+    // This triggers the final return 0 in cleanupSemanticScore
+    // Use two equalities and an edit with only alphanumeric, no whitespace or punctuation
+    const diffs: Difference[] = [
+      { op: DIFFERENCE_EQUAL, text: 'abc' },
+      { op: DIFFERENCE_INSERT, text: 'def' },
+      { op: DIFFERENCE_EQUAL, text: 'ghi' },
+    ];
+    cleanupSemanticLossless(diffs);
+    // No shifting should occur, as there are no boundaries
+    expect(diffs).toStrictEqual([
+      { op: DIFFERENCE_EQUAL, text: 'abc' },
+      { op: DIFFERENCE_INSERT, text: 'def' },
+      { op: DIFFERENCE_EQUAL, text: 'ghi' },
+    ]);
+  });
   test('Null case.', () => {
     const diffs: Difference[] = [];
     cleanupSemanticLossless(diffs);

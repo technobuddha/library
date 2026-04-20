@@ -24,8 +24,12 @@ describe('replaceExtension', () => {
   });
 
   test('should handle complex file paths', () => {
-    expect(replaceExtension('/home/user/documents/report.docx', '.pdf')).toBe('/home/user/documents/report.pdf');
-    expect(replaceExtension('./src/components/Button.tsx', '.js')).toBe('./src/components/Button.js');
+    expect(replaceExtension('/home/user/documents/report.docx', '.pdf')).toBe(
+      '/home/user/documents/report.pdf',
+    );
+    expect(replaceExtension('./src/components/Button.tsx', '.js')).toBe(
+      './src/components/Button.js',
+    );
   });
 
   test('should handle files with multiple dots', () => {

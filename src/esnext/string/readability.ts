@@ -1,5 +1,5 @@
-import { splitSentences } from '../tokenization/split-sentences.ts';
-import { splitWords } from '../tokenization/split-words.ts';
+import { extractSentences } from '../tokenization/extract-sentences.ts';
+import { extractWords } from '../tokenization/extract-words.ts';
 
 import { type StringLike } from './string-like.ts';
 import { syllables } from './syllables.ts';
@@ -28,8 +28,8 @@ import { syllables } from './syllables.ts';
  * @category Analysis
  */
 export function readability(text: StringLike): number {
-  const words = splitWords(text);
-  const sentences = splitSentences(text);
+  const words = extractWords(text);
+  const sentences = extractSentences(text);
   const totalSyllables = words.reduce((acc, value) => acc + syllables(value), 0);
 
   const numWords = words.length;

@@ -4,7 +4,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../tsconfig.json",
-  "compilerOptions": { "composite": true },
-  "include": ["**/*.ts", "../**/*.d.ts", "../common/unicode-trie-builder.ts"],
-  "exclude": ["**/__tests__"]
+  "compilerOptions": { "composite": true, "lib": ["esnext"], "types": [] },
+  "include": ["**/*.ts", "../@types/*.d.ts"],
+  "exclude": ["eslint.config.js", "**/__tests__"]
 }

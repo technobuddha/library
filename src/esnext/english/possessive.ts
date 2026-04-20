@@ -5,7 +5,7 @@ import { removeDiacritics } from '../unicode/remove-diacritics.ts';
 
 /**
  * Determine the possessive form of a word
- * @param input - The word
+ * @param noun - The word
  * @returns The possessive form of the word
  * @example
  * ```typescript

@@ -13,10 +13,9 @@ import { month } from './constants.ts';
  * @param template - The template string array containing the literal parts of the regular expression.
  * @param args - The regular expressions to interpolate into the template.
  * @returns A new `RegExp` object representing the combined pattern.
- * @group RegExp
- * @category Construction
+ * @internal
  */
-function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
+function regexp(template: TemplateStringsArray, ...args: RegExp[]): RegExp {
   return new RegExp(
     build(
       pre.source,
@@ -45,19 +44,19 @@ const yyyy = /(\d{4})/v;
 const time =
   /(?:(?:\s+|\s*t\s*)(?:(\d{1,2}):(\d{2})(?:[:](\d{1,2})(?:[.,](\d+))?)?(?:\s*(a|p)(?:m)?)?))?/iv;
 const zone = /(?:\s*(?:(z|gmt)(?:([+\-]\d{1,2})(?:[:](\d{2}))?)?))?/iv;
-const mdyNumeric = re`${mm}${sep}${dd}${sep}${yyyy}${time}${zone}`;
-const ymdNumeric = re`${yyyy}${sep}${mm}${sep}${dd}${time}${zone}`;
-const mdyString = re`${mmm}${sep}${dd}${sep}${yyyy}${time}${zone}`;
-const dmyString = re`${dd}${sep}${mmm}${sep}${yyyy}${time}${zone}`;
-const ymdString = re`${yyyy}${sep}${mmm}${sep}${dd}${time}${zone}`;
-const ydmString = re`${yyyy}${sep}${dd}${sep}${mmm}${time}${zone}`;
-const mNumeric = re`${mm}`;
-const myNumeric = re`${mm}${sep}${yyyy}`;
-const ymNumeric = re`${yyyy}${sep}${mm}`;
-const mString = re`${mmm}`;
-const myString = re`${mmm}${sep}${yyyy}`;
-const ymString = re`${yyyy}${sep}${mmm}`;
-const yNumeric = re`${yyyy}`;
+const mdyNumeric = regexp`${mm}${sep}${dd}${sep}${yyyy}${time}${zone}`;
+const ymdNumeric = regexp`${yyyy}${sep}${mm}${sep}${dd}${time}${zone}`;
+const mdyString = regexp`${mmm}${sep}${dd}${sep}${yyyy}${time}${zone}`;
+const dmyString = regexp`${dd}${sep}${mmm}${sep}${yyyy}${time}${zone}`;
+const ymdString = regexp`${yyyy}${sep}${mmm}${sep}${dd}${time}${zone}`;
+const ydmString = regexp`${yyyy}${sep}${dd}${sep}${mmm}${time}${zone}`;
+const mNumeric = regexp`${mm}`;
+const myNumeric = regexp`${mm}${sep}${yyyy}`;
+const ymNumeric = regexp`${yyyy}${sep}${mm}`;
+const mString = regexp`${mmm}`;
+const myString = regexp`${mmm}${sep}${yyyy}`;
+const ymString = regexp`${yyyy}${sep}${mmm}`;
+const yNumeric = regexp`${yyyy}`;
 
 /**
  * Parse a string into a Date object

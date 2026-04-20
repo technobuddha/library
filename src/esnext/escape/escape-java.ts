@@ -25,7 +25,7 @@ import { isOct, u4 } from './helpers.ts';
  *
  * [^1]: Java does not support unicode escapes beyond 0xFFFF.  Astral characters must be
  * encoded as a two character surrogate pair.
- * @param text - The string to escape
+ * @param input - The string to escape
  * @param options - Escape options. The `quote` property controls which quote characters are escaped
  * (set to `'single'` or `'double'` to escape only that type). The `ascii` property, when `true`,
  * forces all non-ASCII characters (above U+007F) to be escaped using Unicode escape sequences

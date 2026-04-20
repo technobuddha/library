@@ -6,11 +6,11 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "types": ["node"],
     "lib": ["esnext", "dom"],
+    "types": ["node"],
     "noEmit": true
   },
-  "include": ["**/*.ts", "**/*.d.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["**/__tests__/**/*.*"],
   "references": []
 }

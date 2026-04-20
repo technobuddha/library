@@ -8,7 +8,7 @@ const reAlphaNumeric = /^(\p{L}|\p{N})+$/v;
 
 /**
  * Test a string for all alphanumeric characters
- * @param input - string to test
+ * @param char - string to test
  * @returns true, if all characters in the string are alphanumeric
  * @group Unicode
  * @category Categorization

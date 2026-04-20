@@ -27,8 +27,9 @@ export { hammingDistance } from './hamming-distance.ts';
 export { indent, type IndentOptions } from './indent.ts';
 export { isString } from './is-string.ts';
 export { isStringLike } from './is-string-like.ts';
-export { jaroDistance, type JaroOptions as JaroDistanceOptions } from './jaro-distance.ts';
+export { jaroDistance, type JaroDistanceOptions } from './jaro-distance.ts';
 export { jaroWinklerDistance } from './jaro-winkler-distance.ts';
+export { keep, type KeepOptions } from './keep.ts';
 export { levenshteinDistance, type LevenshteinDistanceOptions } from './levenshtein-distance.ts';
 export { logo } from './logo.ts';
 export {
@@ -38,12 +39,14 @@ export {
 export { mask, type MaskOptions } from './mask.ts';
 export { quote, type QuoteOptions } from './quote.ts';
 export { readability } from './readability.ts';
+export { removeANSIEscapes } from './remove-ansi-escapes.ts';
+export { removeComments, type RemoveCommentsOptions } from './remove-comments.ts';
 export { root, type RootOptions } from './root.ts';
 export { singleLine } from './single-line.ts';
 export { type StringLike } from './string-like.ts';
-export { strip, type StripOptions } from './strip.ts';
 export { syllables } from './syllables.ts';
 export { tag } from './tag.ts';
+export { toCodePoints } from './to-code-points.ts';
 export { toString } from './to-string.ts';
 export { unbannerize } from './unbannerize.ts';
 export { unindent } from './unindent.ts';

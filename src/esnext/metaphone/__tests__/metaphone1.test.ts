@@ -11,6 +11,7 @@ describe('metaphone1', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(metaphone1(word), prepare(word, true)).toStrictEqual(std(prepare(word, true)));
       }
     },

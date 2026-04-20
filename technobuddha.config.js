@@ -6,28 +6,31 @@ const config = {
     rules: {
       'no-bitwise': { rule: 'off' },
       'unicorn/prefer-code-point': { rule: 'off' },
-      'unicorn/prefer-math-trunc': { rule: 'off' }
+      'unicorn/prefer-math-trunc': { rule: 'off' },
     },
-    ignores: ['fixtures', 'datasets']
+    ignores: ['fixtures'],
+  },
+  prettier: {
+    ignore: ['reference/source/transcriptions.js'],
   },
   directories: {
     'src/browser': {
-      environment: 'browser',
+      platform: 'browser',
     },
     'src/common': {
-      environment: 'browser',
+      platform: 'browser',
     },
     'src/esnext': {
-      environment: 'esnext',
+      platform: 'esnext',
     },
     'src/node': {
-      environment: 'node',
-    },
-    'datasets': {
-      environment: 'esnext',
+      platform: 'node',
     },
     'standards': {
-      environment: 'node',
+      platform: 'node',
+    },
+    'wip': {
+      platform: 'none',
     }
   },
   tsconfig: {
@@ -38,28 +41,32 @@ const config = {
           '@technobuddha/library/node': ['./src/node/index.ts'],
           '@technobuddha/library/browser': ['./src/browser/index.ts'],
           '@technobuddha/library/esnext': ['./src/esnext/index.ts'],
-        }
-      }
-    }
+        },
+      },
+    },
   },
   npm: {
     ignore: [
       'doc',
-      'datasets',
       'reference',
       'fixtures',
       'standards',
       'documents',
       'public',
       '__tests__',
-      'tsdoc.json'
+      'tsdoc.json',
     ],
   },
   vitest: {
     coverage: {
-      exclude: ['src/esnext/difference', 'src/esnext/patch', 'src/esnext/match', 'src/esnext/metaphone/metaphone3.ts']
-    }
-  }
+      exclude: [
+        'src/esnext/difference',
+        'src/esnext/patch',
+        'src/esnext/match',
+        'src/esnext/metaphone/metaphone3.ts',
+      ],
+    },
+  },
 };
 
 export default config;

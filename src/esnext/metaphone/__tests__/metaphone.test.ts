@@ -9,7 +9,7 @@ describe('metaphone', () => {
 
   test('should return tuple for algorithm "2"', () => {
     const result = metaphone('Smith', '2');
-    expect(Array.isArray(result)).toBe(true);
+    expect(result).toBeArray();
     expect(result).toHaveLength(2);
     expect(result[0]).toBe('SM0');
     expect(result[1]).toBe('XMT');
@@ -17,7 +17,7 @@ describe('metaphone', () => {
 
   test('should return tuple for algorithm "double"', () => {
     const result = metaphone('Smith', 'double');
-    expect(Array.isArray(result)).toBe(true);
+    expect(result).toBeArray();
     expect(result).toHaveLength(2);
     expect(result[0]).toBe('SM0');
     expect(result[1]).toBe('XMT');
@@ -25,7 +25,7 @@ describe('metaphone', () => {
 
   test('should default to "double" algorithm', () => {
     const result = metaphone('Smith');
-    expect(Array.isArray(result)).toBe(true);
+    expect(result).toBeArray();
     expect(result).toHaveLength(2);
     expect(result[0]).toBe('SM0');
     expect(result[1]).toBe('XMT');

@@ -2,17 +2,10 @@
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
 // cspell:disable
-/*
- * Copyright (C) 1990, 2004, 2005 Gerard D.C. Kuiken.
- * Copying and distribution of this file, with or without modification,
- * are permitted in any medium without royalty provided the copyright
- * notice and this notice are preserved.
- */
-
 type Points = { points: number[] };
 interface Tree {
   [key: string]: Tree | Points;
-};
+}
 
 // prettier-ignore
 export const exceptions: Record<string, string[]> = {"associate":["as","so","ciate"],"associates":["as","so","ciates"],"declination":["dec","li","na","tion"],"obligatory":["oblig","a","tory"],"philanthropic":["phil","an","thropic"],"present":["present"],"presents":["presents"],"project":["project"],"projects":["projects"],"reciprocity":["reci","procity"],"recognizance":["re","cog","ni","zance"],"reformation":["ref","or","ma","tion"],"retribution":["ret","ri","bu","tion"],"table":["ta","ble"]};

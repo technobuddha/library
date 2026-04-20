@@ -20,8 +20,7 @@ describe('CustomEventTarget', () => {
     eventTarget.addEventListener('userLogin', listener);
     eventTarget.dispatchEvent('userLogin', { userId: '123', timestamp: new Date() });
 
-    expect(listener).toHaveBeenCalledOnce();
-    expect(listener).toHaveBeenCalledWith(
+    expect(listener).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         type: 'userLogin',
         detail: { userId: '123', timestamp: expect.any(Date) },
@@ -36,8 +35,7 @@ describe('CustomEventTarget', () => {
     eventTarget.addEventListener('userLogin', listener);
     eventTarget.dispatchEvent('userLogin', { userId: '456', timestamp: new Date() });
 
-    expect(listener.handleEvent).toHaveBeenCalledOnce();
-    expect(listener.handleEvent).toHaveBeenCalledWith(
+    expect(listener.handleEvent).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         type: 'userLogin',
         detail: { userId: '456', timestamp: expect.any(Date) },
@@ -109,8 +107,7 @@ describe('CustomEventTarget', () => {
     eventTarget.dispatchEvent('notification', { message: 'First', level: 'info' });
     eventTarget.dispatchEvent('notification', { message: 'Second', level: 'info' });
 
-    expect(listener).toHaveBeenCalledOnce();
-    expect(listener).toHaveBeenCalledWith(
+    expect(listener).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         detail: { message: 'First', level: 'info' },
       }),

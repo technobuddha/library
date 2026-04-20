@@ -6,12 +6,17 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
-    "types": [],
     "lib": ["esnext"],
+    "outDir": "../dist",
     "rootDir": ".",
-    "outDir": "../dist"
+    "types": []
   },
-  "include": ["**/*.ts", "**/*.d.ts"],
-  "exclude": ["**/__tests__"],
-  "references": [{ "path": "browser" }, { "path": "common" }, { "path": "node" }]
+  "include": ["**/*.ts"],
+  "exclude": ["eslint.config.js", "**/__tests__"],
+  "references": [
+    { "path": "browser" },
+    { "path": "common" },
+    { "path": "esnext" },
+    { "path": "node" }
+  ]
 }

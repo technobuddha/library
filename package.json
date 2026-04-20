@@ -1,58 +1,57 @@
 {
+  "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
-  "version": "2.1.0-63",
   "description": "A large library of useful functions",
+  "version": "2.1.0-111",
+  "stableVersion": "2.1.0-25",
+  "license": "MIT",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "author": {
     "name": "Phil Hill",
     "email": "phil@technobuddha.com"
   },
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/technobuddha/@technobuddha/library"
   },
+  "homepage": "https://github.com/technobuddha/@technobuddha/library#readme",
   "bugs": {
     "url": "https://github.com/technobuddha/@technobuddha/library/issues"
   },
-  "homepage": "https://github.com/technobuddha/@technobuddha/library#readme",
-  "tagline": "0 Dependencies",
-  "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": "./dist/esnext/index.js",
-    "./node": "./dist/node/index.js",
-    "./browser": "./dist/browser/index.js",
-    "./common": "./dist/common/index.js",
-    "./esnext": "./dist/esnext/index.js"
-  },
   "scripts": {
-    "start": "build default",
-    "build": "build prod",
+    "start": "build dev",
+    "build": "build default",
     "publish": "build publish",
     "test": "npx vitest --typecheck run",
     "test:watch": "npx vitest --typecheck --no-coverage watch",
     "test:cover": "npx vitest --typecheck watch",
-    "test:full": "npx vitest --mode=full --typecheck run",
-    "lint": "npx eslint",
+    "test:full": "npx vitest --typecheck --mode=full run",
+    "lint": "npx eslint src",
     "spell": "npx cspell lint src",
     "debug": "echo 'debugger'",
-    "preinstall": "git config core.hooksPath git-hooks"
+    "preinstall": "git config core.hooksPath git-hooks",
+    "add-project": "yarn add -D --mode=skip-build @technobuddha/project@file:../project"
   },
-  "packageManager": "yarn@4.12.0",
   "devDependencies": {
-    "@technobuddha/project": "0.1.0-293",
-    "@types/iconv": "^3.0.4",
+    "@technobuddha/project": "file:../project",
     "@types/long": "5.0.0",
-    "get-current-line": "7.4.0",
-    "iconv": "3.0.1",
-    "long": "5.3.2"
+    "@types/node": "25.6.0",
+    "@vitest/coverage-v8": "4.1.4",
+    "cspell": "10.0.0",
+    "jsdom": "29.0.2",
+    "long": "5.3.2",
+    "tsx": "4.21.0",
+    "type-fest": "5.6.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.4"
+  },
+  "engines": {
+    "node": ">=25.0.0"
   },
   "technobuddhaProject": {
     "created": "2020-04-01T04:20:42.694Z"
-  },
-  "engines": {
-    "node": ">=24.0.0"
   },
   "keywords": [
     "addTime",
@@ -343,8 +342,8 @@
     "soundexCompare",
     "splitChars",
     "splitLines",
-    "splitSentences",
-    "splitWords",
+    "extractSentences",
+    "extractWords",
     "standardDeviation",
     "star",
     "startCase",
@@ -398,5 +397,6 @@
     "wordwrap",
     "zipperMerge"
   ],
-  "stableVersion": "2.1.0-25"
+  "packageManager": "yarn@4.13.0",
+  "tagline": "0 Dependencies"
 }

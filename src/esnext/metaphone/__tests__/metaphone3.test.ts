@@ -9,6 +9,7 @@ describe('metaphone3', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(metaphone3(word), word).toStrictEqual(std(prepare(word, true, false)));
       }
     },
@@ -51,7 +52,7 @@ describe('metaphone3', () => {
 
     // Words with accents/unicode should not throw
     const acc = metaphone3('José');
-    expect(Array.isArray(acc)).toBeTrue();
+    expect(acc).toBeArray();
     expect(typeof acc[0]).toBe('string');
   });
 
@@ -182,7 +183,7 @@ describe('metaphone3', () => {
 
     for (const w of words) {
       const out = metaphone3(w, { encodeVowels: true, encodeExact: false });
-      expect(Array.isArray(out)).toBeTrue();
+      expect(out).toBeArray();
       expect(typeof out[0]).toBe('string');
       // alternate may be undefined
     }

@@ -8,7 +8,7 @@ const reAlpha = /^\p{L}+$/v;
 
 /**
  * Test a string for all alphabetic characters
- * @param input - string to test
+ * @param char - string to test
  * @returns true, if all characters in the string are alphabetic
  * @group Unicode
  * @category Categorization

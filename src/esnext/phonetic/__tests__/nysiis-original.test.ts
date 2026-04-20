@@ -11,6 +11,7 @@ describe('nysiisOriginal', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(nysiisOriginal(word), word).toStrictEqual(std(prepare(word)));
       }
     },

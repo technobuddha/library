@@ -1,6 +1,60 @@
 import { syllables } from '../syllables.ts';
 
 describe('syllables', () => {
+  // Try to cover line 299: countSyllables('')
+  test('returns 0 for input that normalizes to no words', () => {
+    expect(syllables('')).toBe(0);
+    expect(syllables(' ')).toBe(0);
+    expect(syllables('--==--')).toBe(0);
+  });
+
+  // Try to cover lines 325-326: triple-syllable suffixes
+  test('counts triple-syllable suffixes (biology, technology)', () => {
+    expect(syllables('biology')).toBe(4);
+    expect(syllables('technology')).toBe(4);
+  });
+
+  // Try to cover lines 349-350: double-syllabic four ([^s]ia)
+  test('counts double-syllabic four (media, pianist)', () => {
+    expect(syllables('media')).toBe(3);
+    expect(syllables('pianist')).toBe(3);
+  });
+
+  // Try to cover lines 357-358: fallback to 1 syllable
+  test('returns 1 for single consonant or no vowels', () => {
+    expect(syllables('q')).toBe(1);
+    expect(syllables('x')).toBe(1);
+  });
+  test('returns 0 for string with only non-letters', () => {
+    expect(syllables('---')).toBe(0);
+    expect(syllables(' ')).toBe(0);
+  });
+
+  test('counts triple-syllable suffixes (theology)', () => {
+    expect(syllables('theology')).toBe(4);
+  });
+
+  test('returns 1 for single consonant', () => {
+    expect(syllables('b')).toBe(1);
+  });
+  test('returns value from problematic dictionary', () => {
+    expect(syllables('queue')).toBe(1); // 'queue' is in problematic
+  });
+
+  test('returns value from problematic for singular', () => {
+    // 'people' is in problematic, so 'peoples' should match after singularization
+    expect(syllables('peoples')).toBe(2);
+  });
+
+  test('counts triple-syllable suffixes', () => {
+    expect(syllables('creation')).toBe(3); // 'creation' matches triple-syllable suffix
+    expect(syllables('psychology')).toBe(4); // 'psychology' matches triple-syllable suffix
+    expect(syllables('economist')).toBe(4); // 'economist' matches triple-syllable suffix
+  });
+
+  test('returns 1 for a word with no vowels', () => {
+    expect(syllables('zzz')).toBe(1);
+  });
   test('should count syllables in sentences', () => {
     expect(syllables('now is the time for all good men to come to the aid of their country')).toBe(
       17,

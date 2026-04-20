@@ -9,7 +9,7 @@ describe('JSONMap', () => {
     const map = new CartesianMap<string>();
 
     expect(map.size).toBe(0);
-    expect(map.has({ x: 0, y: 0 })).toBe(false);
+    expect(map.has({ x: 0, y: 0 })).toBeFalse();
   });
 
   test('creates map with initial data', () => {
@@ -36,7 +36,7 @@ describe('JSONMap', () => {
     map.set({ x: 5, y: 10 }, 'test value');
 
     expect(map.get({ x: 5, y: 10 })).toBe('test value');
-    expect(map.has({ x: 5, y: 10 })).toBe(true);
+    expect(map.has({ x: 5, y: 10 })).toBeTrue();
     expect(map.size).toBe(1);
   });
 
@@ -60,9 +60,9 @@ describe('JSONMap', () => {
     const map = new CartesianMap<string>();
     map.set({ x: 2, y: 3 }, 'exists');
 
-    expect(map.has({ x: 2, y: 3 })).toBe(true);
-    expect(map.has({ x: 2, y: 4 })).toBe(false);
-    expect(map.has({ x: 3, y: 3 })).toBe(false);
+    expect(map.has({ x: 2, y: 3 })).toBeTrue();
+    expect(map.has({ x: 2, y: 4 })).toBeFalse();
+    expect(map.has({ x: 3, y: 3 })).toBeFalse();
   });
 
   test('deletes entries correctly', () => {
@@ -70,16 +70,16 @@ describe('JSONMap', () => {
     map.set({ x: 1, y: 1 }, 'to delete');
     map.set({ x: 1, y: 2 }, 'to keep');
 
-    expect(map.delete({ x: 1, y: 1 })).toBe(true);
-    expect(map.has({ x: 1, y: 1 })).toBe(false);
-    expect(map.has({ x: 1, y: 2 })).toBe(true);
+    expect(map.delete({ x: 1, y: 1 })).toBeTrue();
+    expect(map.has({ x: 1, y: 1 })).toBeFalse();
+    expect(map.has({ x: 1, y: 2 })).toBeTrue();
     expect(map.size).toBe(1);
   });
 
   test('delete returns false for non-existent entries', () => {
     const map = new CartesianMap<string>();
 
-    expect(map.delete({ x: 999, y: 999 })).toBe(false);
+    expect(map.delete({ x: 999, y: 999 })).toBeFalse();
   });
 
   test('clear removes all entries', () => {
@@ -91,9 +91,9 @@ describe('JSONMap', () => {
     map.clear();
 
     expect(map.size).toBe(0);
-    expect(map.has({ x: 1, y: 1 })).toBe(false);
-    expect(map.has({ x: 2, y: 2 })).toBe(false);
-    expect(map.has({ x: 3, y: 3 })).toBe(false);
+    expect(map.has({ x: 1, y: 1 })).toBeFalse();
+    expect(map.has({ x: 2, y: 2 })).toBeFalse();
+    expect(map.has({ x: 3, y: 3 })).toBeFalse();
   });
 
   test('size property reflects current entry count', () => {
@@ -200,7 +200,7 @@ describe('JSONMap', () => {
       // eslint-disable-next-line unicorn/no-array-method-this-argument
     }, context);
 
-    expect(context.called).toBe(true);
+    expect(context.called).toBeTrue();
   });
 
   test('set method returns this for chaining', () => {
@@ -223,7 +223,7 @@ describe('JSONMap', () => {
 
     const booleanMap = new CartesianMap<boolean>();
     booleanMap.set({ x: 3, y: 3 }, true);
-    expect(booleanMap.get({ x: 3, y: 3 })).toBe(true);
+    expect(booleanMap.get({ x: 3, y: 3 })).toBeTrue();
   });
 
   test('has correct Symbol.toStringTag', () => {
@@ -261,8 +261,8 @@ describe('JSONMap', () => {
 
     expect(map.size).toBe(10000);
     expect(map.get({ x: 50, y: 75 })).toBe(5075);
-    expect(map.has({ x: 99, y: 99 })).toBe(true);
-    expect(map.has({ x: 100, y: 100 })).toBe(false);
+    expect(map.has({ x: 99, y: 99 })).toBeTrue();
+    expect(map.has({ x: 100, y: 100 })).toBeFalse();
   });
 
   test('empty map iterations work correctly', () => {
@@ -277,7 +277,7 @@ describe('JSONMap', () => {
     map.forEach(() => {
       forEachCalled = true;
     });
-    expect(forEachCalled).toBe(false);
+    expect(forEachCalled).toBeFalse();
   });
 
   test('coordinates with same x but different y are handled correctly', () => {
@@ -294,8 +294,88 @@ describe('JSONMap', () => {
 
     map.delete({ x: 5, y: 2 });
     expect(map.size).toBe(2);
-    expect(map.has({ x: 5, y: 2 })).toBe(false);
-    expect(map.has({ x: 5, y: 1 })).toBe(true);
-    expect(map.has({ x: 5, y: 3 })).toBe(true);
+    expect(map.has({ x: 5, y: 2 })).toBeFalse();
+    expect(map.has({ x: 5, y: 1 })).toBeTrue();
+    expect(map.has({ x: 5, y: 3 })).toBeTrue();
+  });
+
+  test('getOrInsert returns existing value when key exists', () => {
+    const map = new CartesianMap<string>();
+    map.set({ x: 1, y: 1 }, 'existing');
+
+    const result = map.getOrInsert({ x: 1, y: 1 }, 'default');
+
+    expect(result).toBe('existing');
+    expect(map.size).toBe(1);
+    expect(map.get({ x: 1, y: 1 })).toBe('existing');
+  });
+
+  test('getOrInsert inserts and returns default value when key does not exist', () => {
+    const map = new CartesianMap<string>();
+
+    const result = map.getOrInsert({ x: 2, y: 2 }, 'default');
+
+    expect(result).toBe('default');
+    expect(map.size).toBe(1);
+    expect(map.get({ x: 2, y: 2 })).toBe('default');
+  });
+
+  test('getOrInsert works with different value types', () => {
+    const numberMap = new CartesianMap<number>();
+    const result1 = numberMap.getOrInsert({ x: 1, y: 1 }, 42);
+    expect(result1).toBe(42);
+    expect(numberMap.get({ x: 1, y: 1 })).toBe(42);
+
+    const objectMap = new CartesianMap<{ name: string }>();
+    const obj = { name: 'test' };
+    const result2 = objectMap.getOrInsert({ x: 2, y: 2 }, obj);
+    expect(result2).toBe(obj);
+    expect(objectMap.get({ x: 2, y: 2 })).toBe(obj);
+  });
+
+  test('getOrInsertComputed returns existing value when key exists', () => {
+    const map = new CartesianMap<string>();
+    map.set({ x: 1, y: 1 }, 'existing');
+
+    const computeFn = vi.fn((key: Cartesian) => `computed-${key.x}-${key.y}`);
+    const result = map.getOrInsertComputed({ x: 1, y: 1 }, computeFn);
+
+    expect(result).toBe('existing');
+    expect(map.size).toBe(1);
+    expect(map.get({ x: 1, y: 1 })).toBe('existing');
+    expect(computeFn).not.toHaveBeenCalled();
+  });
+
+  test('getOrInsertComputed computes and inserts value when key does not exist', () => {
+    const map = new CartesianMap<string>();
+
+    const computeFn = vi.fn((key: Cartesian) => `value-${key.x}-${key.y}`);
+    const result = map.getOrInsertComputed({ x: 2, y: 3 }, computeFn);
+
+    expect(result).toBe('value-2-3');
+    expect(map.size).toBe(1);
+    expect(map.get({ x: 2, y: 3 })).toBe('value-2-3');
+    expect(computeFn).toHaveBeenCalledExactlyOnceWith({ x: 2, y: 3 });
+  });
+
+  test('getOrInsertComputed receives correct key parameter', () => {
+    const map = new CartesianMap<string>();
+
+    let receivedKey: Cartesian | undefined;
+    map.getOrInsertComputed({ x: 5, y: 7 }, (key) => {
+      receivedKey = key;
+      return 'computed';
+    });
+
+    expect(receivedKey).toEqual({ x: 5, y: 7 });
+  });
+
+  test('getOrInsertComputed works with complex computations', () => {
+    const map = new CartesianMap<number>();
+
+    const result = map.getOrInsertComputed({ x: 3, y: 4 }, (key) => key.x ** 2 + key.y ** 2);
+
+    expect(result).toBe(25); // 3^2 + 4^2 = 25
+    expect(map.get({ x: 3, y: 4 })).toBe(25);
   });
 });

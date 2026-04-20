@@ -196,7 +196,15 @@ export abstract class Random {
    * // result.draw contains all 3 items, result.list is empty
    * ```
    */
-  public randomSample<T>(list: T[], sampleSize: number): { draw: T[]; list: T[] } {
+  public randomSample<T>(
+    list: T[],
+    sampleSize: number,
+  ): {
+    /** The items that were randomly drawn from the list */
+    draw: T[];
+    /** The list with the drawn item removed */
+    list: T[];
+  } {
     return randomSample(list, sampleSize, { random: this.random });
   }
 }

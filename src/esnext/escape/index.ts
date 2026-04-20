@@ -1,13 +1,17 @@
 export { type EscapeOptions } from './escape.ts';
 export { escapeC } from './escape-c.ts';
+export { escapeCsv } from './escape-csv.ts';
 export { escapeHTML } from './escape-html.ts';
 export { escapeJava } from './escape-java.ts';
 export { escapeJS } from './escape-js.ts';
 export { escapePython } from './escape-python.ts';
 export { escapeRegExp } from './escape-regexp.ts';
 export { escapeRegExpCharacterClass } from './escape-regexp-character-class.ts';
+export { escapeTypedoc } from './escape-typedoc.ts';
 export { unescapeC } from './unescape-c.ts';
+export { unescapeCsv } from './unescape-csv.ts';
 export { unescapeHTML } from './unescape-html.ts';
 export { unescapeJava } from './unescape-java.ts';
 export { unescapeJS } from './unescape-js.ts';
 export { unescapePython } from './unescape-python.ts';
+export { unescapeTypedoc } from './unescape-typedoc.ts';

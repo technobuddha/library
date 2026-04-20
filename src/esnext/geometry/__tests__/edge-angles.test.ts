@@ -42,7 +42,7 @@ describe('edgeAngles', () => {
       { x: 0, y: 2 },
     ];
 
-    const angles = Array.from(edgeAngles(square, Math.PI / 2));
+    const angles = Array.from(edgeAngles(square, { normalizeTo: Math.PI / 2 }));
 
     expect(angles).toHaveLength(4);
     expect(angles[0]).toBeCloseTo(0, 5); // 0° stays 0°
@@ -59,7 +59,7 @@ describe('edgeAngles', () => {
       { x: 0, y: 2 },
     ];
 
-    const angles = Array.from(edgeAngles(square, Math.PI));
+    const angles = Array.from(edgeAngles(square, { normalizeTo: Math.PI }));
 
     expect(angles).toHaveLength(4);
     expect(angles[0]).toBeCloseTo(0, 5); // 0° stays 0°
@@ -76,7 +76,7 @@ describe('edgeAngles', () => {
     ];
 
     const defaultAngles = Array.from(edgeAngles(triangle));
-    const explicitAngles = Array.from(edgeAngles(triangle, Math.PI * 2));
+    const explicitAngles = Array.from(edgeAngles(triangle, { normalizeTo: Math.PI * 2 }));
 
     expect(defaultAngles).toEqual(explicitAngles);
     expect(defaultAngles).toHaveLength(3);
@@ -169,13 +169,31 @@ describe('edgeAngles', () => {
       { x: 0, y: 1 },
     ];
 
-    const angles = Array.from(edgeAngles(triangle, 0.1));
+    const angles = Array.from(edgeAngles(triangle, { normalizeTo: 0.1 }));
 
     expect(angles).toHaveLength(3);
     // All angles should be in [0, 0.1) range
     for (const angle of angles) {
       expect(angle).toBeGreaterThanOrEqual(0);
       expect(angle).toBeLessThan(0.1);
+    }
+  });
+
+  test('supports normalization and output in degrees', () => {
+    const square: Polygon = [
+      { x: 0, y: 0 },
+      { x: 2, y: 0 },
+      { x: 2, y: 2 },
+      { x: 0, y: 2 },
+    ];
+
+    const angles = Array.from(edgeAngles(square, { normalizeTo: 90, unit: 'degrees' }));
+
+    expect(angles).toHaveLength(4);
+    for (const angle of angles) {
+      expect(angle).toBeGreaterThanOrEqual(0);
+      expect(angle).toBeLessThan(90);
+      expect(angle).toBeCloseTo(0, 12);
     }
   });
 });

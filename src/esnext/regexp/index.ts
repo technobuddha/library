@@ -7,5 +7,5 @@ export { isRegExp } from './is-regexp.ts';
 export { isoDate } from './iso-date.ts';
 export { matches } from './matches.ts';
 export { numeric } from './numeric.ts';
-export { re } from './re.ts';
+export { re, reArray } from './re.ts';
 export { trimEquivalent } from './trim-equivalent.ts';

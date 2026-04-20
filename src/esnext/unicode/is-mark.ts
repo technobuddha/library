@@ -4,6 +4,8 @@ import { isStringLike } from '../string/is-string-like.ts';
 import { type StringLike } from '../string/string-like.ts';
 import { toString } from '../string/to-string.ts';
 
+const reMark = /^(\p{M})+$/v;
+
 /**
  * Determines if a character is a Unicode mark (combining diacritical mark).
  *
@@ -17,8 +19,6 @@ import { toString } from '../string/to-string.ts';
  * @group String
  * @category Unicode
  */
-const reMark = /^(\p{M})+$/v;
-
 export function isMark(char: StringLike | NumberLike): boolean {
   const unicode = isStringLike(char) ? toString(char) : String.fromCodePoint(toNumber(char));
   return reMark.test(unicode);

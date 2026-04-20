@@ -1,15 +1,11 @@
 // 🚨
 // 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
 // 🚨
-// 🚨
-// 🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN
-// 🚨
 /// <reference types="vite/client" />
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
-import jestExtended from 'jest-extended';
-import jestMatcherDeepCloseTo from 'jest-matcher-deep-close-to';
+import { jestExtended, jestMatcherDeepCloseTo } from '@technobuddha/project';
 import { beforeAll, expect } from 'vitest';
 
 expect.extend(jestExtended);

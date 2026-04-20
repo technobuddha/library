@@ -1,6 +1,6 @@
-import { keep } from "../esnext/string/keep.ts";
-import { removeDiacritics } from "../esnext/unicode/remove-diacritics.ts";
-import { space } from "../esnext/unicode/unicode.ts";
+import { keep } from '../esnext/string/keep.ts';
+import { removeDiacritics } from '../esnext/unicode/remove-diacritics.ts';
+import { space } from '../esnext/unicode/unicode.ts';
 
 export function prepare(input: string, whitespace = false, diacritics = true): string {
   let text = diacritics ? removeDiacritics(input) : input;

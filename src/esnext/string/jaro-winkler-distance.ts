@@ -1,4 +1,4 @@
-import { jaroDistance, type JaroOptions } from './jaro-distance.ts';
+import { jaroDistance, type JaroDistanceOptions } from './jaro-distance.ts';
 import { type StringLike } from './string-like.ts';
 import { toString } from './to-string.ts';
 
@@ -24,7 +24,7 @@ import { toString } from './to-string.ts';
 export function jaroWinklerDistance(
   text1: StringLike,
   text2: StringLike,
-  options?: JaroOptions,
+  options?: JaroDistanceOptions,
 ): number {
   const str1 = toString(text1);
   const str2 = toString(text2);

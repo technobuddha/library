@@ -28,41 +28,74 @@ export type SpawnReturn = {
   process: ReturnType<typeof spawn>;
 };
 
-
-type AllSpawnOptions = SpawnOptions | SpawnOptionsWithoutStdio | SpawnOptionsWithStdioTuple<
-  StdioPipe | StdioNull,
-  StdioPipe | StdioNull,
-  StdioPipe | StdioNull
->;
-
-
 /**
- * Spawns a child process and returns a promise that resolves or rejects based on the process outcome.
+ * Union type for all supported spawn options accepted by Node.js child_process.spawn.
  *
- * @param args - Arguments to pass to child_process.spawn (command, args, options)
- * @returns A promise that resolves with the process result
+ * This type allows passing any of the standard spawn options, including those with or without stdio configuration.
  *
- * @example
- * ```typescript
- * const result = await spawnPromise('ls', ['-l']);
- * ```
+ * - `SpawnOptions`: Basic options for spawning a process.
+ * - `SpawnOptionsWithoutStdio`: Options without stdio tuple.
+ * - `SpawnOptionsWithStdioTuple`: Options with explicit stdio tuple types.
  *
  * @group Node
  * @category Process
  */
+export type AllSpawnOptions =
+  | SpawnOptions
+  | SpawnOptionsWithoutStdio
+  | SpawnOptionsWithStdioTuple<StdioPipe | StdioNull, StdioPipe | StdioNull, StdioPipe | StdioNull>;
 
+/**
+ * @param command - The command to run (e.g., `'ls'` or `'node'`).
+ * @param options - (Optional) Options to pass to `child_process.spawn`.
+ * @returns A promise that resolves to a {@link SpawnReturn} object containing the exit code, signal, and process instance.
+ *
+ * @example
+ * ```typescript
+ * // Usage with only a command
+ * const result2 = await spawnPromise('node');
+ * ```
+ */
 export async function spawnPromise(
   command: string,
-  options?: AllSpawnOptions
+  options?: AllSpawnOptions,
 ): Promise<SpawnReturn>;
+/**
+ * @param command - The command to run (e.g., `'ls'` or `'node'`).
+ * @param args - (Optional) Array of string arguments to pass to the command.
+ * @param options - (Optional) Options to pass to `child_process.spawn`.
+ * @returns A promise that resolves to a {@link SpawnReturn} object containing the exit code, signal, and process instance.
+ *
+ * @example
+ * ```typescript
+ * // Usage with only a command
+ * const result2 = await spawnPromise('node');
+ *
+ * // Usage with options
+ * const result3 = await spawnPromise('ls', ['-a'], { cwd: '/home' });
+ * ```
+ */
 export async function spawnPromise(
   command: string,
   args?: readonly string[],
   options?: AllSpawnOptions,
 ): Promise<SpawnReturn>;
-export async function spawnPromise(command: string, args?: readonly string[] | AllSpawnOptions, options?: AllSpawnOptions): Promise<SpawnReturn> {
+/**
+ * Spawns a child process and returns a promise that resolves or rejects based on the process outcome.
+ *
+ * @group Node
+ * @category Process
+ */
+export async function spawnPromise(
+  command: string,
+  args?: readonly string[] | AllSpawnOptions,
+  options?: AllSpawnOptions,
+): Promise<SpawnReturn> {
   return new Promise((resolve, reject) => {
-    const process = options ? spawn(command, args as readonly string[], options) : spawn(command, options);
+    const process =
+      options ?
+        spawn(command, args as readonly string[], options)
+      : spawn(command, args as AllSpawnOptions);
 
     process.on('close', (code, signal) => {
       resolve({ code, signal, process });

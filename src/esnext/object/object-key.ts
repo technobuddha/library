@@ -21,4 +21,3 @@
  * @category Types
  */
 export type ObjectKey = string | number | symbol;
-

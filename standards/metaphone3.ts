@@ -24,7 +24,7 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/explicit-member-accessibility */
 /* eslint-disable @typescript-eslint/no-inferrable-types */
-/* eslint-disable tsdoc/syntax */
+/* eslint-disable technobuddha/tsdoc-syntax */
 // cspell:disable
 
 /**

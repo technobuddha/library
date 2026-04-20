@@ -2,14 +2,14 @@
 /* eslint-disable default-case */
 /* eslint-disable @typescript-eslint/no-unnecessary-type-conversion */
 /* eslint-disable no-param-reassign */
-const sh = "X";
-const th = "0";
+const sh = 'X';
+const th = '0';
 
 export function metaphone(value: string): string {
   // eslint-disable-next-line no-multi-assign, @typescript-eslint/no-explicit-any
   const stdTrace: string[] = ((globalThis as any).stdTrace = []);
 
-  let phonized = "";
+  let phonized = '';
   let index = 0;
   let skip;
   const next = atFactory(1);
@@ -29,67 +29,67 @@ export function metaphone(value: string): string {
     return () => at(offset);
   }
 
-  value = String(value || "");
+  value = String(value || '');
 
   if (!value) {
-    return "";
+    return '';
   }
 
   while (!alpha(current())) {
     if (!current()) {
-      return "";
+      return '';
     }
 
     index++;
   }
 
   switch (current()) {
-    case "A": {
-      if (next() === "E") {
-        phonize("E");
+    case 'A': {
+      if (next() === 'E') {
+        phonize('E');
         index += 2;
       } else {
-        phonize("A");
+        phonize('A');
         index++;
       }
 
       break;
     }
-    case "G":
-    case "K":
-    case "P": {
-      if (next() === "N") {
-        phonize("N");
+    case 'G':
+    case 'K':
+    case 'P': {
+      if (next() === 'N') {
+        phonize('N');
         index += 2;
       }
 
       break;
     }
 
-    case "W": {
-      if (next() === "R") {
+    case 'W': {
+      if (next() === 'R') {
         phonize(next());
         index += 2;
-      } else if (next() === "H") {
+      } else if (next() === 'H') {
         phonize(current());
         index += 2;
       } else if (vowel(next())) {
-        phonize("W");
+        phonize('W');
         index += 2;
       }
 
       break;
     }
-    case "X": {
-      phonize("S");
+    case 'X': {
+      phonize('S');
       index++;
 
       break;
     }
-    case "E":
-    case "I":
-    case "O":
-    case "U": {
+    case 'E':
+    case 'I':
+    case 'O':
+    case 'U': {
       phonize(current());
       index++;
       break;
@@ -102,147 +102,147 @@ export function metaphone(value: string): string {
   while (current()) {
     skip = 1;
 
-    if (!alpha(current()) || (current() === previous() && current() !== "C")) {
+    if (!alpha(current()) || (current() === previous() && current() !== 'C')) {
       index += skip;
       continue;
     }
 
     switch (current()) {
-      case "B": {
-        if (previous() !== "M") {
-          phonize("B");
+      case 'B': {
+        if (previous() !== 'M') {
+          phonize('B');
         }
 
         break;
       }
-      case "C": {
+      case 'C': {
         if (soft(next())) {
-          if (next() === "I" && at(2) === "A") {
+          if (next() === 'I' && at(2) === 'A') {
             phonize(sh);
-          } else if (previous() !== "S") {
-            phonize("S");
+          } else if (previous() !== 'S') {
+            phonize('S');
           }
-        } else if (next() === "H") {
+        } else if (next() === 'H') {
           phonize(sh);
           skip++;
         } else {
-          phonize("K");
+          phonize('K');
         }
 
         break;
       }
-      case "D": {
-        if (next() === "G" && soft(at(2))) {
-          phonize("J");
+      case 'D': {
+        if (next() === 'G' && soft(at(2))) {
+          phonize('J');
           skip++;
         } else {
-          phonize("T");
+          phonize('T');
         }
 
         break;
       }
-      case "G": {
-        if (next() === "H") {
-          if (!(noGhToF(at(-3)) || at(-4) === "H")) {
-            phonize("F");
+      case 'G': {
+        if (next() === 'H') {
+          if (!(noGhToF(at(-3)) || at(-4) === 'H')) {
+            phonize('F');
             skip++;
           }
-        } else if (next() === "N") {
-          if (!(!alpha(at(2)) || (at(2) === "E" && at(3) === "D"))) {
-            phonize("K");
+        } else if (next() === 'N') {
+          if (!(!alpha(at(2)) || (at(2) === 'E' && at(3) === 'D'))) {
+            phonize('K');
           }
-        } else if (soft(next()) && previous() !== "G") {
-          phonize("J");
+        } else if (soft(next()) && previous() !== 'G') {
+          phonize('J');
         } else {
-          phonize("K");
+          phonize('K');
         }
 
         break;
       }
 
-      case "H": {
+      case 'H': {
         if (vowel(next()) && !diphthongH(previous())) {
-          phonize("H");
+          phonize('H');
         }
 
         break;
       }
-      case "K": {
-        if (previous() !== "C") {
-          phonize("K");
+      case 'K': {
+        if (previous() !== 'C') {
+          phonize('K');
         }
 
         break;
       }
-      case "P": {
-        if (next() === "H") {
-          phonize("F");
+      case 'P': {
+        if (next() === 'H') {
+          phonize('F');
         } else {
-          phonize("P");
+          phonize('P');
         }
 
         break;
       }
-      case "Q": {
-        phonize("K");
+      case 'Q': {
+        phonize('K');
         break;
       }
-      case "S": {
-        if (next() === "I" && (at(2) === "O" || at(2) === "A")) {
+      case 'S': {
+        if (next() === 'I' && (at(2) === 'O' || at(2) === 'A')) {
           phonize(sh);
-        } else if (next() === "H") {
+        } else if (next() === 'H') {
           phonize(sh);
           skip++;
         } else {
-          phonize("S");
+          phonize('S');
         }
 
         break;
       }
-      case "T": {
-        if (next() === "I" && (at(2) === "O" || at(2) === "A")) {
+      case 'T': {
+        if (next() === 'I' && (at(2) === 'O' || at(2) === 'A')) {
           phonize(sh);
-        } else if (next() === "H") {
+        } else if (next() === 'H') {
           phonize(th);
           skip++;
-        } else if (!(next() === "C" && at(2) === "H")) {
-          phonize("T");
+        } else if (!(next() === 'C' && at(2) === 'H')) {
+          phonize('T');
         }
 
         break;
       }
-      case "V": {
-        phonize("F");
+      case 'V': {
+        phonize('F');
         break;
       }
-      case "W": {
+      case 'W': {
         if (vowel(next())) {
-          phonize("W");
+          phonize('W');
         }
 
         break;
       }
-      case "X": {
-        phonize("KS");
+      case 'X': {
+        phonize('KS');
         break;
       }
-      case "Y": {
+      case 'Y': {
         if (vowel(next())) {
-          phonize("Y");
+          phonize('Y');
         }
 
         break;
       }
-      case "Z": {
-        phonize("S");
+      case 'Z': {
+        phonize('S');
         break;
       }
-      case "F":
-      case "J":
-      case "L":
-      case "M":
-      case "N":
-      case "R": {
+      case 'F':
+      case 'J':
+      case 'L':
+      case 'M':
+      case 'N':
+      case 'R': {
         phonize(current());
         break;
       }
@@ -256,32 +256,32 @@ export function metaphone(value: string): string {
 function noGhToF(character: string): boolean {
   character = char(character);
 
-  return character === "B" || character === "D" || character === "H";
+  return character === 'B' || character === 'D' || character === 'H';
 }
 function soft(character: string): boolean {
   character = char(character);
-  return character === "E" || character === "I" || character === "Y";
+  return character === 'E' || character === 'I' || character === 'Y';
 }
 function vowel(character: string): boolean {
   character = char(character);
 
   return (
-    character === "A" ||
-    character === "E" ||
-    character === "I" ||
-    character === "O" ||
-    character === "U"
+    character === 'A' ||
+    character === 'E' ||
+    character === 'I' ||
+    character === 'O' ||
+    character === 'U'
   );
 }
 function diphthongH(character: string): boolean {
   character = char(character);
 
   return (
-    character === "C" ||
-    character === "G" ||
-    character === "P" ||
-    character === "S" ||
-    character === "T"
+    character === 'C' ||
+    character === 'G' ||
+    character === 'P' ||
+    character === 'S' ||
+    character === 'T'
   );
 }
 function alpha(character: string): boolean {

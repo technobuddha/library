@@ -109,12 +109,11 @@ describe('animate', () => {
     const callback = vi.fn();
 
     // Don't execute the callback immediately to test the setup
-    mockRequestAnimationFrame.mockImplementation(() => 1);
+    mockRequestAnimationFrame.mockReturnValue(1);
 
     void animate(callback);
 
-    expect(mockRequestAnimationFrame).toHaveBeenCalledOnce();
-    expect(mockRequestAnimationFrame).toHaveBeenCalledWith(expect.any(Function));
+    expect(mockRequestAnimationFrame).toHaveBeenCalledExactlyOnceWith(expect.any(Function));
   });
 
   test('callback is not executed until animation frame', async () => {

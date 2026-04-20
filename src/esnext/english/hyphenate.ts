@@ -7,7 +7,7 @@ import { toString } from '../string/to-string.ts';
  * Hyphenation algorithm for tokenizing words into hyphenated segments.
  *
  * Uses language-specific hyphenation patterns and exceptions to split words into hyphenated tokens.
- * @param text - The word to hyphenate.
+ * @param input - The word to hyphenate.
  * @returns An array of strings representing the hyphenated segments of the input word.
  *
  * @example

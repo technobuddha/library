@@ -4,14 +4,12 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../tsconfig.base.json",
-  "compilerOptions": { "composite": true, "types": ["node"], "lib": ["esnext"] },
-  "include": ["**/*.ts", "**/*.d.ts"],
-  "exclude": [],
-  "references": [
-    { "path": "../datasets" },
-    { "path": "../fixtures" },
-    { "path": "../src/esnext" },
-    { "path": "../src/helpers" },
-    { "path": "../standards" }
-  ]
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "noEmit": true,
+    "rewriteRelativeImportExtensions": false,
+    "types": ["node"]
+  },
+  "include": ["*.ts"],
+  "exclude": ["eslint.config.js"]
 }

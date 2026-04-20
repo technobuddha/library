@@ -8,7 +8,7 @@ const reLowerCase = /^(\p{Ll})+$/v;
 
 /**
  * Test a string for all lower case characters
- * @param input - string to test
+ * @param char - string to test
  * @returns true, if all characters in the string are lower case
  * @group Unicode
  * @category Categorization

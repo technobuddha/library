@@ -10,7 +10,16 @@ import { isWhitespace } from '../unicode/is-whitespace.ts';
 const defaults =
   /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|so|the|to|up|vs?\.?|via|yet)$/iv;
 
+/**
+ * Options for customizing the behavior of {@link titleCase}.
+ *
+ * @group Case Conversion
+ * @category Capitalization
+ */
 export type TitleCaseOptions = {
+  /**
+   * A regular expression matching words to keep lowercase (except at the start/end of the title). Defaults to common English articles, conjunctions, and prepositions.
+   */
   small?: RegExp;
 };
 

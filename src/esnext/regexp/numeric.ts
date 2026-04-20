@@ -15,7 +15,6 @@ const EXPONENT = re`[Ee]${SIGN}\d+`;
 
 /**
  * Validate a valid number
- * @category Constants
  * @example
  * ```typescript
  * numeric.test('123'); // true

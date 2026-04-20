@@ -31,6 +31,7 @@ describe('eudex', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(eudex(word).value.toString(16), word).toStrictEqual(
           std(prepare(word, true, false)).toString(16),
         );
@@ -40,11 +41,11 @@ describe('eudex', () => {
   );
 
   test('should produce same hash for same input', () => {
-    expect(eudex('test').eq(eudex('test'))).toBe(true);
+    expect(eudex('test').eq(eudex('test'))).toBeTrue();
   });
 
   test('should produce different hashes for different words', () => {
-    expect(eudex('cat').eq(eudex('dog'))).toBe(false);
+    expect(eudex('cat').eq(eudex('dog'))).toBeFalse();
   });
 
   test('should handle empty string', () => {

@@ -57,7 +57,6 @@ export function rotate(
 /**
  * Rotates a point or a polygon around a given origin by a specified angle.
  * @group Geometry
- * @category Point
  * @category Polygon
  */ export function rotate(
   point: Cartesian | Polygon,

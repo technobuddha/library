@@ -89,6 +89,66 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
   }
 
   /**
+   * Retrieves the value associated with the given key, or inserts and returns the default value if the key is not found.
+   * @param key - The key to look up
+   * @param defaultValue - The value to insert if the key doesn't exist
+   * @returns The value associated with the key (either existing or newly inserted)
+   * @example
+   * ```typescript
+   * const map = new JSONMap<{ id: number }, string>();
+   * map.getOrInsert({ id: 1 }, "default"); // "default" (inserted)
+   * map.getOrInsert({ id: 1 }, "other");   // "default" (existing)
+   * ```
+   * @group Data Structures
+   * @category Map
+   */
+  public getOrInsert(key: K, defaultValue: V): V {
+    const serializedKey = jsonSerialize(key);
+
+    if (this.map.getOrInsert) {
+      return this.map.getOrInsert(serializedKey, defaultValue);
+    }
+
+    // TODO [engine:node@>25] - Nodejs is not supporting getOrInsert
+    if (this.map.has(serializedKey)) {
+      return this.map.get(serializedKey) as V;
+    }
+    this.map.set(serializedKey, defaultValue);
+    return defaultValue;
+  }
+
+  /**
+   * Retrieves the value associated with the given key, or computes, inserts, and returns a new value if the key is not found.
+   * @param key - The key to look up
+   * @param defaultValueFn - A function that computes the default value if the key doesn't exist
+   * @returns The value associated with the key (either existing or newly computed)
+   * @example
+   * ```typescript
+   * const map = new JSONMap<{ id: number }, string>();
+   * map.getOrInsertComputed({ id: 1 }, (k) => `value-${k.id}`); // "value-1" (computed)
+   * map.getOrInsertComputed({ id: 1 }, (k) => `other-${k.id}`); // "value-1" (existing)
+   * ```
+   * @group Data Structures
+   * @category Map
+   */
+  public getOrInsertComputed(key: K, defaultValueFn: (key: K) => V): V {
+    const serializedKey = jsonSerialize(key);
+    if (this.map.getOrInsertComputed) {
+      return this.map.getOrInsertComputed(serializedKey, (k) =>
+        defaultValueFn(jsonDeserialize(k) as K),
+      );
+    }
+
+    // TODO [engine:node@>25] - Nodejs is not supporting getOrInsertComputed
+    if (this.map.has(serializedKey)) {
+      return this.map.get(serializedKey)!;
+    }
+    const computedValue = defaultValueFn(key);
+    this.map.set(serializedKey, computedValue);
+    return computedValue;
+  }
+
+  /**
    * Determines whether the specified key exists in the map.
    */
   public has(value: K): boolean {

@@ -11,6 +11,7 @@ describe('caverphone2', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(caverphone2(word), word).toStrictEqual(std(prepare(word)));
       }
     },

@@ -9,6 +9,7 @@ describe('rogerRoot', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(rogerRoot(word), word).toStrictEqual(std(prepare(word)));
       }
     },

@@ -40,7 +40,7 @@ export type IndefiniteArticleOptions = {
  * @remarks The answer is derived from a simple rules engine, it attempts to cover most exceptions
  * to the rules, but the English language has lots of quirks, and this rules engine can not cover them
  * all
- * @param word - The word
+ * @param input - The word
  * @param options - see {@link IndefiniteArticleOptions}
  * @returns The appropriate indefinite article ("a" or "an") combined with the input word.  If the only
  * option is used, only the indefinite article is returned.

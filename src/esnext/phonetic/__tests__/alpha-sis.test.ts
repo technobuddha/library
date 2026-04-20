@@ -9,6 +9,7 @@ describe('alphaSis', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(alphaSis(word).sort(), word).toStrictEqual(std(prepare(word)));
       }
     },
@@ -36,7 +37,7 @@ describe('alphaSis', () => {
   test('handles empty string', () => {
     const result = alphaSis('');
     expect(result).toBeArray();
-    expect(result.length).toBe(0);
+    expect(result).toHaveLength(0);
   });
 
   test('handles single characters', () => {

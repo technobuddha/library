@@ -33,14 +33,14 @@ describe('createAlgorithm', () => {
     const config = { pad: '0', length: 4 };
     const compiled = createAlgorithm(config);
     expect(compiled.pad).toBe('0');
-    expect(compiled.length).toBe(4);
+    expect(compiled).toHaveLength(4);
     expect(compiled.scan).toBeUndefined();
   });
 
   test('accepts forking true and number', () => {
     const compiledTrue = createAlgorithm({ scan: [...scanRules], forking: true });
     const compiledNum = createAlgorithm({ scan: [...scanRules], forking: 2 });
-    expect(compiledTrue.forking).toBe(true);
+    expect(compiledTrue.forking).toBeTrue();
     expect(compiledNum.forking).toBe(2);
     expect(compiledTrue.scan).toBeDefined();
     expect(compiledNum.scan).toBeDefined();
@@ -48,7 +48,7 @@ describe('createAlgorithm', () => {
 
   test('accepts non-forking config', () => {
     const compiled = createAlgorithm({ scan: [...scanRules], forking: false });
-    expect(compiled.forking).toBe(false);
+    expect(compiled.forking).toBeFalse();
     expect(compiled.scan).toBeDefined();
   });
 

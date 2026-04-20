@@ -26,7 +26,6 @@ coverage
 
 # Project Ignore
 doc
-datasets
 reference
 fixtures
 standards

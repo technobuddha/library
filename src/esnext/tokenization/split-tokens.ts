@@ -7,7 +7,7 @@ const delimiter = /(\s+|[\p{P}&&[^']])/v;
 /**
  * Split a string into an array of tokens separated by whitespace.
  *
- * Unlike {@link splitWords}, this function does not remove punctuation or special characters; it only splits on whitespace.
+ * Unlike {@link extractWords}, this function does not remove punctuation or special characters; it only splits on whitespace.
  *
  * @param text - The string to split into tokens.
  * @returns An array of tokens from the input string.

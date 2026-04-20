@@ -9,6 +9,7 @@ describe('mra', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(mra(word), word).toStrictEqual(std(prepare(word)));
       }
     },

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-import { type Difference,DIFFERENCE_DELETE } from './difference.ts';
+import { type Difference, DIFFERENCE_DELETE } from './difference.ts';
 
 /**
  * Compute and return the destination text (all equalities and insertions).

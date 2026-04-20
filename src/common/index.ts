@@ -1,1 +1,1 @@
-export { CustomEventTarget, type CustomEventListener as Listener } from './custom-event-target.ts';
+export { type CustomEventListener, CustomEventTarget } from './custom-event-target.ts';

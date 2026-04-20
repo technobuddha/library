@@ -36,6 +36,8 @@ export type Replacer = {
  * - 'ė': almost the end (next to last position)
  * - 'E': not at the end (anywhere but last possible position)
  * - '1': at index 1 (second character)
+ * @group Phonetic
+ * @category Algorithm
  */
 export type Position = 'b' | 'B' | 'm' | 'M' | 'e' | 'E' | 'ḃ' | 'ė';
 
@@ -251,7 +253,7 @@ export type BasePhonetic = {
  * @group Phonetic
  * @category Algorithm
  */
-type BasePhoneticAlgorithm = BasePhonetic & {
+export type BasePhoneticAlgorithm = BasePhonetic & {
   /**
    * Array of scan rules for character/code translation.
    */
@@ -264,7 +266,7 @@ type BasePhoneticAlgorithm = BasePhonetic & {
  * @group Phonetic
  * @category Algorithm
  */
-type Forking = {
+export type Forking = {
   /**
    * If true or a number, enables forking (multiple possible encodings).
    */
@@ -277,7 +279,7 @@ type Forking = {
  * @group Phonetic
  * @category Algorithm
  */
-type NonForking = {
+export type NonForking = {
   /**
    * If false or omitted, disables forking (single encoding).
    */
@@ -314,7 +316,7 @@ export type PhoneticAlgorithm = ForkingPhoneticAlgorithm | NonForkingPhoneticAlg
  * @group Phonetic
  * @category Algorithm
  */
-type BaseCompiledPhonetic = BasePhonetic & {
+export type BaseCompiledPhonetic = BasePhonetic & {
   /**
    * Scan rules grouped by first character for efficient lookup.
    */
@@ -345,8 +347,18 @@ export type CompiledForkingPhonetic = BaseCompiledPhonetic & Forking;
  */
 export type CompiledPhonetic = CompiledForkingPhonetic | CompiledNonForkingPhonetic;
 
+/**
+ * Compiles a forking phonetic algorithm configuration
+ * @param options - The phonetic algorithm configuration to process and group.
+ * @returns The compiled configuration object, with scan rules grouped for optimal matching.
+ *
+ * @example
+ * // Groups scan rules by first character
+ * const config = \{ forking: true, scan: [ \{ m: 'CH', i: 'b', o: 'X' \}, \{ m: 'C', o: 'K' \} ] \};
+ * const compiled = createAlgorithm(config);
+ * // compiled.scan['C'] contains both rules
+ */
 export function createAlgorithm(options: ForkingPhoneticAlgorithm): CompiledForkingPhonetic;
-export function createAlgorithm(options: NonForkingPhoneticAlgorithm): CompiledNonForkingPhonetic;
 /**
  * Compiles a phonetic algorithm configuration, grouping scan rules by their first character for efficient lookup.
  *
@@ -361,7 +373,13 @@ export function createAlgorithm(options: NonForkingPhoneticAlgorithm): CompiledN
  * const config = \{ scan: [ \{ m: 'CH', i: 'b', o: 'X' \}, \{ m: 'C', o: 'K' \} ] \};
  * const compiled = createAlgorithm(config);
  * // compiled.scan['C'] contains both rules
+ */
+export function createAlgorithm(options: NonForkingPhoneticAlgorithm): CompiledNonForkingPhonetic;
+/**
+ * Compiles a phonetic algorithm configuration.
  *
+ * If a `scan` array is present, it is transformed into an object where each key is the first character of a rule's `m` property,
+ * and the value is an array of all rules starting with that character. All other properties are preserved.
  * @group Phonetic
  * @category Algorithm
  */

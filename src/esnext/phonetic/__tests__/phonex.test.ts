@@ -9,6 +9,7 @@ describe('phonex', () => {
     'with master words',
     () => {
       for (const word of fixtures.master) {
+        // eslint-disable-next-line vitest/valid-expect
         expect(phonex(word), word).toStrictEqual(std(prepare(word)));
       }
     },
