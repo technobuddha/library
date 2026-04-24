@@ -1794,7 +1794,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-111, @technobuddha/library@workspace:.":
+"@technobuddha/library@npm:2.1.0-111":
+  version: 2.1.0-111
+  resolution: "@technobuddha/library@npm:2.1.0-111"
+  checksum: 10c0/0d8f9c0a8c8994630cb6bb9a18b04aedd7906e80080495cd7486fc1ba1f70e533947a055d3504dab2f97a76b972233d2bbe71e44a64dc14bc267ebb3741ee026
+  languageName: node
+  linkType: hard
+
+"@technobuddha/library@workspace:.":
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
@@ -1813,8 +1820,8 @@ __metadata:
   linkType: soft
 
 "@technobuddha/project@file:../project::locator=%40technobuddha%2Flibrary%40workspace%3A.":
-  version: 1.0.0-8
-  resolution: "@technobuddha/project@file:../project#../project::hash=9b223d&locator=%40technobuddha%2Flibrary%40workspace%3A."
+  version: 1.0.0-11
+  resolution: "@technobuddha/project@file:../project#../project::hash=8ca7ea&locator=%40technobuddha%2Flibrary%40workspace%3A."
   dependencies:
     "@commander-js/extra-typings": "npm:14.0.0"
     "@dotenvx/dotenvx": "npm:1.61.1"
@@ -1827,7 +1834,6 @@ __metadata:
     "@types/mustache": "npm:^4.2.6"
     "@types/node": "npm:25.6.0"
     "@types/semver": "npm:7.7.1"
-    "@types/terser": "npm:3.12.0"
     "@types/unzipper": "npm:^0.10.11"
     "@types/watch": "npm:^1.0.6"
     "@typescript-eslint/eslint-plugin": "npm:8.58.2"
@@ -1887,7 +1893,7 @@ __metadata:
     eslint-comments: dist/eslint-comments/eslint-comments.js
     tb: dist/tb/tb.js
     unexported-files: dist/unexported-files/unexported-files.js
-  checksum: 10c0/a750d6de0cfde933c2df98988b5dd352775582559493b78e7d01e58b42654bf59f2f640d2b30fe35cb7d3acdfd5ed5ac638da868c94ee62eb24a9fd80be81b16
+  checksum: 10c0/9bd11f1af7f008654bba338386db500c70ba67643aa2188017c5a88ff7b43adc2d0498e82a8e737420b86dac9e02cd5811194960ea5a2621306efc216fdaa736
   languageName: node
   linkType: hard
 
@@ -2014,15 +2020,6 @@ __metadata:
   version: 7.7.1
   resolution: "@types/semver@npm:7.7.1"
   checksum: 10c0/c938aef3bf79a73f0f3f6037c16e2e759ff40c54122ddf0b2583703393d8d3127130823facb880e694caa324eb6845628186aac1997ee8b31dc2d18fafe26268
-  languageName: node
-  linkType: hard
-
-"@types/terser@npm:3.12.0":
-  version: 3.12.0
-  resolution: "@types/terser@npm:3.12.0"
-  dependencies:
-    terser: "npm:*"
-  checksum: 10c0/53afc705dcd6cac25e2248984d8e03e39fa6a4877e684be4b1b0e3658dbd3853b2430af1c73ff87a029a7c96672af1f0d0466e3d0bf57e8dbbba64761ea7309c
   languageName: node
   linkType: hard
 
@@ -7423,7 +7420,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:*, terser@npm:5.46.1":
+"terser@npm:5.46.1":
   version: 5.46.1
   resolution: "terser@npm:5.46.1"
   dependencies:
