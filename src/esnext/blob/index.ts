@@ -3,5 +3,7 @@ export { type BinaryLike } from './binary-like.ts';
 export { type BinaryObject } from './binary-object.ts';
 export { dataURL } from './data-url.ts';
 export { decodeBinary } from './decode-binary.ts';
+export { decodeVLQ } from './decode-vlq.ts';
 export { encodeBinary } from './encode-binary.ts';
+export { encodeVLQ } from './encode-vlq.ts';
 export { toBinary } from './to-binary.ts';

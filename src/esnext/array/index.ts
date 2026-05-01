@@ -16,4 +16,5 @@ export { powerSet } from './power-set.ts';
 export { range } from './range.ts';
 export { toArray } from './to-array.ts';
 export { unique } from './unique.ts';
+export { withIndex } from './with-index.ts';
 export { zipperMerge } from './zipper-merge.ts';

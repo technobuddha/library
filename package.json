@@ -2,11 +2,11 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
   "description": "A large library of useful functions",
-  "version": "2.1.0-112",
+  "version": "2.1.0-117",
   "stableVersion": "2.1.0-25",
   "license": "MIT",
-  "main": "dist/index.js",
   "type": "module",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": {
     "name": "Phil Hill",
@@ -32,7 +32,7 @@
     "spell": "npx cspell lint src",
     "debug": "echo 'debugger'",
     "add-project": "yarn add -D --mode=skip-build @technobuddha/project@file:../project",
-    "prepare": "npx husky"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@technobuddha/project": "file:../project",

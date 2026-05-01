@@ -35,6 +35,7 @@ export default lint({
     'patch/__tests__/**/*',
     'phonetic/__tests__/**/*',
     'primitive/__tests__/**/*',
+    'programming/__tests__/**/*',
     'random/__tests__/**/*',
     'regexp/__tests__/**/*',
     'roman/__tests__/**/*',

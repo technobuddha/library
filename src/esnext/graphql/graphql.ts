@@ -72,7 +72,7 @@ export function graphQL(
   if (Array.isArray(template)) {
     return `[ ${template.map((a) => graphQL(a)).join(', ')} ]`;
   }
-  return `{ ${Object.entries(template as Record<string, GraphQLValue>)
+  return `{ ${Object.entries(template)
     .map(([key, value]) => `${key}: ${graphQL(value)}`)
     .join(', ')} }`;
 }

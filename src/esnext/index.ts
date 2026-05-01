@@ -27,6 +27,7 @@ export * from './object/index.ts';
 export * from './patch/index.ts';
 export * from './phonetic/index.ts';
 export * from './primitive/index.ts';
+export * from './programming/index.ts';
 export * from './random/index.ts';
 export * from './regexp/index.ts';
 export * from './roman/index.ts';

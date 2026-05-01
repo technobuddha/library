@@ -1,5 +1,5 @@
 export { toRegExp, type ToRegExpOptions } from '../regexp/to-reg-exp.ts';
-export { bannerize, bannerMarker, type BannerStyle } from './bannerize.ts';
+export { bannerize, bannerMarker, type BannerStyle, defaultBanner } from './bannerize.ts';
 export { build } from './build.ts';
 export { clean } from './clean.ts';
 export { cleanEnd } from './clean-end.ts';

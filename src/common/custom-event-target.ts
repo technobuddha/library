@@ -67,7 +67,7 @@ export class CustomEventTarget<
     listener: CustomEventListener<T, E>,
     options?: Parameters<EventTarget['addEventListener']>[2],
   ): void {
-    this.eventTarget.addEventListener(type as string, listener as Handler, options);
+    this.eventTarget.addEventListener(type, listener as Handler, options);
   }
 
   /**
@@ -106,6 +106,6 @@ export class CustomEventTarget<
     listener: CustomEventListener<T, E>,
     options?: Parameters<EventTarget['removeEventListener']>[2],
   ): void {
-    this.eventTarget.removeEventListener(type as string, listener as Handler, options);
+    this.eventTarget.removeEventListener(type, listener as Handler, options);
   }
 }

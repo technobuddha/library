@@ -177,7 +177,7 @@ export class JSONSet<T extends JSONValue> implements Set<T> {
 
     for (const value of other.keys() as SetIterator<U>) {
       if (!this.has(value as unknown as T)) {
-        result.add(value as T | U);
+        result.add(value);
       }
     }
     return result;

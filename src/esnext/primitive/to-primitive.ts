@@ -81,7 +81,7 @@ function makePrimitive(
 
     if (hint === 'string') {
       if ('toString' in wrapper && typeof wrapper.toString === 'function') {
-        return [true, (wrapper.toString as () => string).call(input)];
+        return [true, wrapper.toString.call(input)];
       }
 
       if ('valueOf' in wrapper && typeof wrapper.valueOf === 'function') {
@@ -93,7 +93,7 @@ function makePrimitive(
       }
 
       if ('toString' in wrapper && typeof wrapper.toString === 'function') {
-        return [true, (wrapper.toString as () => string).call(input)];
+        return [true, wrapper.toString.call(input)];
       }
     }
   }

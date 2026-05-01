@@ -13,9 +13,10 @@ export const bannerMarker = '🚨';
 /**
  * Default banner text used to warn about file modifications.
  *
- * @internal
+ * @group String
+ * @category Banner
  */
-const defaultBanner = [
+export const defaultBanner = [
   bannerMarker,
   `${bannerMarker} CHANGES TO THIS FILE WILL BE OVERRIDDEN`,
   bannerMarker,
