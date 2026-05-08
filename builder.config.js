@@ -5,23 +5,23 @@ const config = {
   default: {
     steps: [
       {
-        name: 'Prepare',
+        display: 'Prepare',
         command: [
           'tar -czf dist-backup.tgz --ignore-failed-read --warning=no-failed-read dist',
           'rm -rf dist',
         ],
       },
       {
-        name: 'Library',
+        display: 'Library',
         command: 'npx tsc --build src',
       },
       {
-        name: 'Documentation',
+        display: 'Documentation',
         command: 'npx typedoc',
       },
     ],
     onError: {
-      name: 'Rollback',
+      display: 'Rollback',
       command: [
         'rm -rf dist',
         'tar -xzf dist-backup.tgz'
@@ -32,11 +32,11 @@ const config = {
     steps: [
       { build: 'default' },
       {
-        name: 'Version',
+        display: 'Version',
         command: 'yarn version prerelease',
       },
       {
-        name: 'Publish',
+        display: 'Publish',
         command: 'yarn npm publish --access=public',
       },
     ],

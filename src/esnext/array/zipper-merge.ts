@@ -1,4 +1,3 @@
-import { type List } from './list.ts';
 import { toArray } from './to-array.ts';
 
 /**
@@ -21,12 +20,20 @@ import { toArray } from './to-array.ts';
  * @group Array
  * @category Merging
  */
-export function* zipperMerge<T extends List<unknown>[]>(
+export function* zipperMerge<T extends (readonly unknown[] | Iterable<unknown>)[]>(
   ...lists: T
-): Generator<{ [K in keyof T]: T[K] extends (infer V)[] ? V : never }> {
+): Generator<{
+  [K in keyof T]: T[K] extends (infer V)[] ? V
+  : T[K] extends Iterable<infer U> ? U
+  : never;
+}> {
   const arrays = lists.map((list) => toArray(list));
   const length = Math.max(...arrays.map((a) => a.length));
   for (let i = 0; i < length; i++) {
-    yield arrays.map((a) => a[i]) as { [K in keyof T]: T[K] extends (infer V)[] ? V : never };
+    yield arrays.map((a) => a[i]) as {
+      [K in keyof T]: T[K] extends (infer V)[] ? V
+      : T[K] extends Iterable<infer U> ? U
+      : never;
+    };
   }
 }

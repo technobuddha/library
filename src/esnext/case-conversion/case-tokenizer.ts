@@ -24,5 +24,5 @@ const reWord =
  * @category Tokenization
  */
 export function caseTokenizer(input: string): string[] {
-  return input.match(reWord) ?? [];
+  return input.match(reWord) ?? [input];
 }

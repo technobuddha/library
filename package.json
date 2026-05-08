@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
   "description": "A large library of useful functions",
-  "version": "2.1.0-117",
+  "version": "2.1.0-122",
   "stableVersion": "2.1.0-25",
   "license": "MIT",
   "type": "module",
@@ -10,7 +10,8 @@
   "types": "dist/index.d.ts",
   "author": {
     "name": "Phil Hill",
-    "email": "phil@technobuddha.com"
+    "email": "phil@technobuddha.com",
+    "url": "https://technobuddha.com"
   },
   "repository": {
     "type": "git",
@@ -35,13 +36,14 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@cspell/cspell-types": "10.0.0",
     "@technobuddha/project": "file:../project",
     "@types/long": "5.0.0",
-    "@types/node": "25.6.0",
+    "@types/node": "25.6.2",
     "@vitest/coverage-v8": "4.1.5",
     "cspell": "10.0.0",
     "husky": "9.1.7",
-    "jsdom": "29.0.2",
+    "jsdom": "29.1.1",
     "long": "5.3.2",
     "tsx": "4.21.0",
     "type-fest": "5.6.0",

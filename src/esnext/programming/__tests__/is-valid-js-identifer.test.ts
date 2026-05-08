@@ -1,4 +1,4 @@
-import { isValidJsIdentifier } from '../is-valid-js-identifer.ts';
+import { isValidJsIdentifier } from '../is-valid-js-identifier.ts';
 
 describe('isValidJsIdentifier', () => {
   test('accepts valid ASCII identifiers', () => {

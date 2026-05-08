@@ -8,11 +8,11 @@ describe('case-tokenizer', () => {
   });
 
   test('handles empty string', () => {
-    expect(caseTokenizer('')).toEqual([]);
+    expect(caseTokenizer('')).toEqual(['']);
   });
 
   test('handles string with only punctuation', () => {
-    expect(caseTokenizer('!@#$%^&*()')).toEqual([]);
+    expect(caseTokenizer('!@#$%^&*()')).toEqual(['!@#$%^&*()']);
   });
 
   test('handles string with hyphens', () => {
@@ -53,5 +53,9 @@ describe('case-tokenizer', () => {
 
   test('handles mixed content', () => {
     expect(caseTokenizer('foo-bar_baz 123!')).toEqual(['foo', 'bar', 'baz', '123']);
+  });
+
+  test('handles a single astral character', () => {
+    expect(caseTokenizer('👻')).toEqual(['👻']);
   });
 });
