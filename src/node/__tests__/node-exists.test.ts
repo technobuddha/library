@@ -1,7 +1,7 @@
 import { type Stats } from 'node:fs';
 import fs from 'node:fs/promises';
 
-import { fileExists } from '../file-exists.ts';
+import { nodeExists } from '../node-exists.ts';
 
 const mockStats: Stats = {
   isFile: () => true,
@@ -31,11 +31,11 @@ const mockStats: Stats = {
   birthtime: new Date(),
 };
 
-describe('fileExists', () => {
+describe('nodeExists', () => {
   test('returns true when file exists (string path)', async () => {
     const mockStat = vi.spyOn(fs, 'stat').mockResolvedValue(mockStats);
 
-    const result = await fileExists('/path/to/existing/file.txt');
+    const result = await nodeExists('/path/to/existing/file.txt');
 
     expect(result).toBeTrue();
     expect(mockStat).toHaveBeenCalledWith('/path/to/existing/file.txt');
@@ -46,7 +46,7 @@ describe('fileExists', () => {
   test('returns false when file does not exist (string path)', async () => {
     const mockStat = vi.spyOn(fs, 'stat').mockRejectedValue(new Error('ENOENT'));
 
-    const result = await fileExists('/path/to/nonexistent/file.txt');
+    const result = await nodeExists('/path/to/nonexistent/file.txt');
 
     expect(result).toBeFalse();
     expect(mockStat).toHaveBeenCalledWith('/path/to/nonexistent/file.txt');
@@ -58,7 +58,7 @@ describe('fileExists', () => {
     const mockStat = vi.spyOn(fs, 'stat').mockResolvedValue(mockStats);
     const url = new URL('file:///path/to/existing/file.txt');
 
-    const result = await fileExists(url);
+    const result = await nodeExists(url);
 
     expect(result).toBeTrue();
     expect(mockStat).toHaveBeenCalledWith('/path/to/existing/file.txt');
@@ -70,7 +70,7 @@ describe('fileExists', () => {
     const mockStat = vi.spyOn(fs, 'stat').mockRejectedValue(new Error('ENOENT'));
     const url = new URL('file:///path/to/nonexistent/file.txt');
 
-    const result = await fileExists(url);
+    const result = await nodeExists(url);
 
     expect(result).toBeFalse();
     expect(mockStat).toHaveBeenCalledWith('/path/to/nonexistent/file.txt');
@@ -81,7 +81,7 @@ describe('fileExists', () => {
   test('handles relative paths', async () => {
     const mockStat = vi.spyOn(fs, 'stat').mockResolvedValue(mockStats);
 
-    const result = await fileExists('./relative/path/file.txt');
+    const result = await nodeExists('./relative/path/file.txt');
 
     expect(result).toBeTrue();
     expect(mockStat).toHaveBeenCalledWith('./relative/path/file.txt');
@@ -92,7 +92,7 @@ describe('fileExists', () => {
   test('handles empty string path', async () => {
     const mockStat = vi.spyOn(fs, 'stat').mockRejectedValue(new Error('ENOENT'));
 
-    const result = await fileExists('');
+    const result = await nodeExists('');
 
     expect(result).toBeFalse();
     expect(mockStat).toHaveBeenCalledWith('');
@@ -103,7 +103,7 @@ describe('fileExists', () => {
   test('handles different error types gracefully', async () => {
     const mockStat = vi.spyOn(fs, 'stat').mockRejectedValue(new Error('Permission denied'));
 
-    const result = await fileExists('/restricted/file.txt');
+    const result = await nodeExists('/restricted/file.txt');
 
     expect(result).toBeFalse();
     expect(mockStat).toHaveBeenCalledWith('/restricted/file.txt');
@@ -114,7 +114,7 @@ describe('fileExists', () => {
   test('works with directory paths', async () => {
     const mockStat = vi.spyOn(fs, 'stat').mockResolvedValue(mockStats);
 
-    const result = await fileExists('/path/to/directory');
+    const result = await nodeExists('/path/to/directory');
 
     expect(result).toBeTrue();
     expect(mockStat).toHaveBeenCalledWith('/path/to/directory');

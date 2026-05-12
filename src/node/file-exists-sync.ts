@@ -3,13 +3,10 @@ import fs from 'node:fs';
 import { toPath } from './to-path.ts';
 
 /**
- * Synchronously checks if a file or directory exists at the specified path.
+ * Synchronously checks if a file exists at the specified path.
  *
  * @param filePath - The path to check for existence. Can be a string path or URL object.
- * @returns `true` if the file/directory exists, `false` otherwise.
- *
- * @group File System
- * @category Existence
+ * @returns `true` if a file exists at the path, `false` otherwise.
  *
  * @example
  * ```typescript
@@ -19,10 +16,16 @@ import { toPath } from './to-path.ts';
  *
  * // Check with URL
  * const url = new URL('file:///home/user/file.txt');
- * const urlExists = fileExistsSync(url);
+ * const fileExists = fileExistsSync(url);
  * ```
+ * @group File System
+ * @category Existence
  */
 export function fileExistsSync(filePath: string | URL): boolean {
   const pathName = toPath(filePath);
-  return fs.existsSync(pathName);
+  try {
+    return fs.statSync(pathName).isFile();
+  } catch {
+    return false;
+  }
 }
