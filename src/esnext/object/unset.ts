@@ -3,7 +3,6 @@ import { isArrayLike } from '../array/is-array-like.ts';
 
 import { isObject } from './is-object.ts';
 import { type ObjectKey } from './object-key.ts';
-import { type ObjectLike } from './object-like.ts';
 import { parsePath } from './parse-path.ts';
 
 /**
@@ -41,7 +40,7 @@ import { parsePath } from './parse-path.ts';
  * @group Object
  * @category Manipulation
  */
-export function unset(object: ObjectLike | ArrayLike<unknown>, path: Flexible<ObjectKey>): object {
+export function unset(object: object | ArrayLike<unknown>, path: Flexible<ObjectKey>): object {
   const keys = parsePath(path);
   let obj: object = object;
 

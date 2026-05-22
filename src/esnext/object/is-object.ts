@@ -1,5 +1,3 @@
-import { type ObjectLike } from './object-like.ts';
-
 /**
  * Determines whether the provided value is a non-null object.
  * @param value - The value to check.
@@ -15,6 +13,6 @@ import { type ObjectLike } from './object-like.ts';
  * @group Object
  * @category Type Checking
  */
-export function isObject(value: unknown): value is ObjectLike {
+export function isObject(value: unknown): value is object {
   return typeof value === 'object' && value != null;
 }

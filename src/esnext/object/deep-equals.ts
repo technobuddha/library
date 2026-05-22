@@ -1,7 +1,6 @@
 import { isPrimitive } from '../primitive/is-primitive.ts';
 import { type Primitive } from '../primitive/primitive.ts';
 
-import { type ObjectLike } from './object-like.ts';
 import { sameValue } from './same-value.ts';
 
 /**
@@ -41,8 +40,8 @@ import { sameValue } from './same-value.ts';
  * @category Comparison
  */
 export function deepEquals(
-  objA: ArrayLike<unknown> | ObjectLike | Primitive,
-  objB: ArrayLike<unknown> | ObjectLike | Primitive,
+  objA: ArrayLike<unknown> | object | Primitive,
+  objB: ArrayLike<unknown> | object | Primitive,
   exclude: (string | symbol)[] = [],
 ): boolean {
   if (isPrimitive(objA)) {

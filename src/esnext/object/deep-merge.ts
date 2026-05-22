@@ -1,5 +1,4 @@
 import { isObject } from './is-object.ts';
-import { type ObjectLike } from './object-like.ts';
 
 /**
  * Deeply merges multiple objects into a new object.
@@ -14,9 +13,9 @@ import { type ObjectLike } from './object-like.ts';
  * @group Object
  * @category Merging
  */
-export function deepMerge<T extends ObjectLike>(
+export function deepMerge<T extends object>(
   main: T | undefined,
-  ...obj: (ObjectLike | undefined)[]
+  ...obj: (object | undefined)[]
 ): T {
   const result = {} as T;
 
@@ -30,7 +29,7 @@ export function deepMerge<T extends ObjectLike>(
             isObject(result[key]) &&
             !Array.isArray(result[key])
           ) ?
-            (deepMerge(result[key] as ObjectLike, value as ObjectLike) as T[keyof T])
+            (deepMerge(result[key], value) as T[keyof T])
           : value;
       }
     }

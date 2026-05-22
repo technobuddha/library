@@ -2,7 +2,6 @@ import { type Flexible } from '../array/flexible.ts';
 
 import { isObject } from './is-object.ts';
 import { type ObjectKey } from './object-key.ts';
-import { type ObjectLike } from './object-like.ts';
 import { parsePath } from './parse-path.ts';
 
 /**
@@ -18,7 +17,7 @@ import { parsePath } from './parse-path.ts';
  * @group Object
  * @category Manipulation
  */
-export function get(object: ObjectLike | ArrayLike<unknown>, path: Flexible<ObjectKey>): unknown {
+export function get(object: object | ArrayLike<unknown>, path: Flexible<ObjectKey>): unknown {
   let obj: unknown = object;
   for (const key of parsePath(path)) {
     if (isObject(obj) || Array.isArray(obj)) {

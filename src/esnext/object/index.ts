@@ -6,7 +6,6 @@ export { get } from './get.ts';
 export { isEmpty } from './is-empty.ts';
 export { isObject } from './is-object.ts';
 export { type ObjectKey } from './object-key.ts';
-export { type ObjectLike } from './object-like.ts';
 export { sameType } from './same-type.ts';
 export { sameValue } from './same-value.ts';
 export { sameValueZero } from './same-value-zero.ts';
