@@ -1,5 +1,7 @@
 import { toString } from '../string/to-string.ts';
 
+import { isError } from './is-error.ts';
+
 /**
  * Convert the entity to an Error object.
  * @param entity - The entity to convert, if it is already an error ir will be returned
@@ -15,5 +17,5 @@ import { toString } from '../string/to-string.ts';
  * @category Conversion
  */
 export function toError(entity: unknown): Error {
-  return Error.isError(entity) ? entity : new Error(toString(entity));
+  return isError(entity) ? entity : new Error(toString(entity));
 }

@@ -11,16 +11,28 @@ import { toString } from './to-string.ts';
 export const bannerMarker = '🚨';
 
 /**
- * Default banner text used to warn about file modifications.
+ * Builds the standard three-line warning banner used by generators.
+ *
+ * The middle line includes the warning marker followed by the provided message.
+ *
+ * @param message - The warning message to place in the center line of the banner.
+ * @returns A three-line banner containing the top marker, message line, and bottom marker.
+ *
+ * @example
+ * ```typescript
+ * defaultBanner();
+ * // ['🚨', '🚨 CHANGES TO THIS FILE WILL BE OVERRIDDEN', '🚨']
+ *
+ * defaultBanner('AUTO-GENERATED FILE');
+ * // ['🚨', '🚨 AUTO-GENERATED FILE', '🚨']
+ * ```
  *
  * @group String
  * @category Banner
  */
-export const defaultBanner = [
-  bannerMarker,
-  `${bannerMarker} CHANGES TO THIS FILE WILL BE OVERRIDDEN`,
-  bannerMarker,
-];
+export function defaultBanner(message = 'CHANGES TO THIS FILE WILL BE OVERRIDDEN'): string[] {
+  return [bannerMarker, `${bannerMarker} ${message}`, bannerMarker];
+}
 
 /**
  * Available banner comment styles for different file types.
@@ -74,7 +86,7 @@ export type BannerStyle = '#' | '<!->' | '/**/' | '//' | '%' | ';' | 'md';
 export function bannerize(
   text: StringLike,
   style: BannerStyle = '//',
-  banner = defaultBanner,
+  banner = defaultBanner(),
 ): string {
   const content = toString(text);
 

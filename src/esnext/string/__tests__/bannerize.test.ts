@@ -1,4 +1,22 @@
-import { bannerize, type BannerStyle } from '../bannerize.ts';
+import { bannerMarker, bannerize, type BannerStyle, defaultBanner } from '../bannerize.ts';
+
+describe('defaultBanner', () => {
+  test('should return the default warning banner', () => {
+    expect(defaultBanner()).toEqual([
+      bannerMarker,
+      `${bannerMarker} CHANGES TO THIS FILE WILL BE OVERRIDDEN`,
+      bannerMarker,
+    ]);
+  });
+
+  test('should use the provided warning message', () => {
+    expect(defaultBanner('AUTO-GENERATED FILE')).toEqual([
+      bannerMarker,
+      `${bannerMarker} AUTO-GENERATED FILE`,
+      bannerMarker,
+    ]);
+  });
+});
 
 describe('bannerize', () => {
   test('should add banner with semicolon style (;)', () => {
