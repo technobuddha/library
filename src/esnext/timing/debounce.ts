@@ -1,4 +1,4 @@
-import { type AnyFunction } from './any-function.ts';
+import { type AnyFunction } from '../function/any-function.ts';
 
 /**
  * Options for configuring the debounce behavior.
@@ -45,8 +45,8 @@ type ClearTimeout = (timerId: Timer) => void;
  * @param options - Configuration options for leading/trailing invocation and max wait.
  * @returns A debounced version of `func` with `cancel` and `flush` methods.
  *
- * @group Function
- * @category Timing
+ * @group Timing
+ * @category Function
  */
 export function debounce<Args extends unknown[], Return, This = void>(
   func: AnyFunction<Args, Return, This>,

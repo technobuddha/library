@@ -1857,7 +1857,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-131, @technobuddha/library@workspace:.":
+"@technobuddha/library@npm:2.1.0-131":
+  version: 2.1.0-131
+  resolution: "@technobuddha/library@npm:2.1.0-131"
+  checksum: 10c0/30ce8b61ffd1009a5ecc73397745e20e097e05e7d30a362187edbc3ccf9543e8a056450ba54e4a9fe880c19f66c77428288f5e4a7a7516f8a590a9a65d4c6b02
+  languageName: node
+  linkType: hard
+
+"@technobuddha/library@workspace:.":
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
   dependencies:
@@ -1878,8 +1885,8 @@ __metadata:
   linkType: soft
 
 "@technobuddha/project@file:../project::locator=%40technobuddha%2Flibrary%40workspace%3A.":
-  version: 1.0.0-79
-  resolution: "@technobuddha/project@file:../project#../project::hash=87752f&locator=%40technobuddha%2Flibrary%40workspace%3A."
+  version: 1.0.0-80
+  resolution: "@technobuddha/project@file:../project#../project::hash=403e18&locator=%40technobuddha%2Flibrary%40workspace%3A."
   dependencies:
     "@commander-js/extra-typings": "npm:14.0.0"
     "@cspell/cspell-types": "npm:10.0.0"
@@ -1953,7 +1960,7 @@ __metadata:
     eslint-comments: dist/eslint-comments/eslint-comments.js
     tb: dist/tb/tb.js
     unexported-files: dist/unexported-files/unexported-files.js
-  checksum: 10c0/0518ef7adaebb8bbe945274d08cc653f936181e3d157deaa3399d4646cdfd834e7a0fe759d4d73bbd3c72e7751bed034405d3d3370ee24d4c74e0b32f179952e
+  checksum: 10c0/070dc705f537427a03b3f7d6245068e38057e0ff2bc08694ff97f2df9061495a29b05a19256504d4df6f3092009a6f5003db2ea9e9e58b269582c3c2dfb70df5
   languageName: node
   linkType: hard
 

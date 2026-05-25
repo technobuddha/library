@@ -44,6 +44,7 @@ export default lint({
     'string/__tests__/**/*',
     'textualization/__tests__/**/*',
     'time/__tests__/**/*',
+    'timing/__tests__/**/*',
     'tokenization/__tests__/**/*',
     'unicode/__tests__/**/*',
   ],

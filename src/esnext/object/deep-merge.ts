@@ -29,7 +29,7 @@ export function deepMerge<T extends object>(
             isObject(result[key]) &&
             !Array.isArray(result[key])
           ) ?
-            (deepMerge(result[key], value) as T[keyof T])
+            deepMerge(result[key], value)
           : value;
       }
     }

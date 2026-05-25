@@ -11,8 +11,8 @@ import { debounce, type DebouncedFunction, type DebounceOptions } from './deboun
  * @param options - Additional debounce options to control invocation timing.
  * @returns A throttled version of `func` with `cancel` and `flush` methods.
  *
- * @group Function
- * @category Timing
+ * @group Timing
+ * @category Function
  */
 export function throttle<Args extends unknown[], Return, This = void>(
   func: (this: This, ...args: Args) => Return,

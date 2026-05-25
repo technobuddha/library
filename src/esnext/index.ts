@@ -36,5 +36,6 @@ export * from './stem/index.ts';
 export * from './string/index.ts';
 export * from './textualization/index.ts';
 export * from './time/index.ts';
+export * from './timing/index.ts';
 export * from './tokenization/index.ts';
 export * from './unicode/index.ts';

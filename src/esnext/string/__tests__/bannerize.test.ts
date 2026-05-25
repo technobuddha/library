@@ -1,4 +1,4 @@
-import { bannerMarker, bannerize, type BannerStyle, defaultBanner } from '../bannerize.ts';
+import { bannerize, bannerMarker, type BannerStyle, defaultBanner } from '../bannerize.ts';
 
 describe('defaultBanner', () => {
   test('should return the default warning banner', () => {
