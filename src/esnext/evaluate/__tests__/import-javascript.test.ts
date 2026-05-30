@@ -1,7 +1,26 @@
-import { importJavascript } from '../import-javascript.ts';
+type ImportJavascript = <T = unknown>(sourceCode: string) => Promise<T>;
+
+async function loadImportJavascript(): Promise<ImportJavascript> {
+  const runtimeImport = async (modulePath: string): Promise<unknown> => import(modulePath);
+
+  function MockFunction(this: unknown): (modulePath: string) => Promise<unknown> {
+    return runtimeImport;
+  }
+
+  vi.stubGlobal('Function', MockFunction);
+  vi.resetModules();
+
+  try {
+    const module = await import('../import-javascript.ts');
+    return module.importJavascript;
+  } finally {
+    vi.unstubAllGlobals();
+  }
+}
 
 describe('importJavascript', () => {
   test('imports named exports', async () => {
+    const importJavascript = await loadImportJavascript();
     const module = await importJavascript<{
       answer: number;
       greet: (name: string) => string;
@@ -20,12 +39,14 @@ describe('importJavascript', () => {
   });
 
   test('imports default export', async () => {
-    const module = await importJavascript<{ default: string }>("export default 'ok';");
+    const importJavascript = await loadImportJavascript();
+    const module = await importJavascript<string>("export default 'ok';");
 
-    expect(module.default).toBe('ok');
+    expect(module).toBe('ok');
   });
 
   test('handles URL-sensitive and unicode characters', async () => {
+    const importJavascript = await loadImportJavascript();
     const expected = 'symbols: ?&=#%/+: こんにちは';
     const module = await importJavascript<{ text: string }>(
       `export const text = ${JSON.stringify(expected)};`,
@@ -35,6 +56,7 @@ describe('importJavascript', () => {
   });
 
   test('rejects invalid JavaScript source', async () => {
+    const importJavascript = await loadImportJavascript();
     await expect(importJavascript('export const = ;')).rejects.toThrow();
   });
 });

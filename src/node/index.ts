@@ -1,6 +1,7 @@
 export * from './directory-exists.ts';
 export * from './directory-exists-sync.ts';
 export * from './err.ts';
+export * from './errln.ts';
 export * from './exec-promise.ts';
 export * from './file-exists.ts';
 export * from './file-exists-sync.ts';
@@ -14,6 +15,7 @@ export * from './locate-package-root-sync.ts';
 export * from './node-exists.ts';
 export * from './node-exists-sync.ts';
 export * from './out.ts';
+export * from './outln.ts';
 export * from './path-depth.ts';
 export * from './purge-files.ts';
 export * from './read-lines.ts';
