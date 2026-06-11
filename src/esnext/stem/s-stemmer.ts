@@ -11,7 +11,7 @@ import { toString } from '../string/to-string.ts';
  *
  * @remarks
  * [Reference]:
- * http://citeseerx.ist.psu.edu/viewdoc/download?doi=
+ * https://citeseerx.ist.psu.edu/viewdoc/download?doi=
  * [Article]:
  * Donna Harman (1991) How effective is suffixing?
  * Journal of the American Society for Information Science (vol. 42 issue 1).

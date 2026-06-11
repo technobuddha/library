@@ -219,6 +219,7 @@ export function evaluate(expression: StringLike, variables?: Record<string, numb
       return Math.abs(value);
     }
 
+    // eslint-disable-next-line unicorn/prefer-includes-over-repeated-comparisons
     if (token === undefined || token === ')' || token === '|') {
       throw new Error('Unexpected end of expression');
     }

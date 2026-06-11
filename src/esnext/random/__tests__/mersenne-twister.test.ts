@@ -68,14 +68,14 @@ describe('MersenneTwister', () => {
   });
 
   test('should generate same random int32 from array seed', () => {
-    const mt = new MersenneTwister(Array.from({ length: 100 }).fill(0) as number[]);
+    const mt = new MersenneTwister(Array.from({ length: 100 }, () => 0));
 
     expect(mt.genrandInt32()).toBe(1434223582);
     expect(mt.genrandInt32()).toBe(1450191270);
   });
 
   test('should generate same random int31 from array seed', () => {
-    const mt = new MersenneTwister(Array.from({ length: 1000 }).fill(0) as number[]);
+    const mt = new MersenneTwister(Array.from({ length: 1000 }, () => 0));
 
     expect(mt.genrandInt32()).toBe(1914342825);
     expect(mt.genrandInt32()).toBe(305667567);

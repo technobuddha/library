@@ -1,3 +1,5 @@
+import { space } from '../../unicode/unicode.ts';
+
 import { nysiis } from '../nysiis.ts';
 
 describe('nysiis', () => {
@@ -88,7 +90,7 @@ describe('nysiis', () => {
   });
 
   test('handles empty whitespace', () => {
-    expect(nysiis('   ')).toBe('');
+    expect(nysiis(space.repeat(3))).toBe('');
     expect(nysiis('\t\n')).toBe('');
   });
 

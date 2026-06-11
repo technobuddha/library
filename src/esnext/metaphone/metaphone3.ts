@@ -483,42 +483,42 @@ class Metaphone3 {
   private isVowel(at: number): boolean;
   private isVowel(arg: string | number): boolean {
     if (typeof arg === 'string') {
-      return (
-        arg === 'A' ||
-        arg === 'E' ||
-        arg === 'I' ||
-        arg === 'O' ||
-        arg === 'U' ||
-        arg === 'Y' ||
-        arg === 'À' ||
-        arg === 'Á' ||
-        arg === 'Â' ||
-        arg === 'Ã' ||
-        arg === 'Ä' ||
-        arg === 'Å' ||
-        arg === 'Æ' ||
-        arg === 'È' ||
-        arg === 'É' ||
-        arg === 'Ê' ||
-        arg === 'Ë' ||
-        arg === 'Ì' ||
-        arg === 'Í' ||
-        arg === 'Î' ||
-        arg === 'Ï' ||
-        arg === 'Ò' ||
-        arg === 'Ó' ||
-        arg === 'Ô' ||
-        arg === 'Õ' ||
-        arg === 'Ö' ||
-        arg === '' ||
-        arg === 'Ø' ||
-        arg === 'Ù' ||
-        arg === 'Ú' ||
-        arg === 'Û' ||
-        arg === 'Ü' ||
-        arg === 'Ý' ||
-        arg === ''
-      );
+      return [
+        'A',
+        'E',
+        'I',
+        'O',
+        'U',
+        'Y',
+        'À',
+        'Á',
+        'Â',
+        'Ã',
+        'Ä',
+        'Å',
+        'Æ',
+        'È',
+        'É',
+        'Ê',
+        'Ë',
+        'Ì',
+        'Í',
+        'Î',
+        'Ï',
+        'Ò',
+        'Ó',
+        'Ô',
+        'Õ',
+        'Ö',
+        '',
+        'Ø',
+        'Ù',
+        'Ú',
+        'Û',
+        'Ü',
+        'Ý',
+        '',
+      ].includes(arg);
     }
 
     if (arg < 0 || arg >= this.length) {

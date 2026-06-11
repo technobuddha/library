@@ -303,10 +303,7 @@ export function illion(
           break;
         }
         case 3: {
-          word =
-            (s ? 'tres'
-            : x ? 'tres'
-            : 'tre') + word;
+          word = (s || x ? 'tres' : 'tre') + word;
           break;
         }
         case 4: {

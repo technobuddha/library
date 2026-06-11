@@ -1,4 +1,4 @@
-import { empty } from '../../unicode/unicode.ts';
+import { empty, space } from '../../unicode/unicode.ts';
 
 import { extractWords } from '../extract-words.ts';
 
@@ -7,7 +7,7 @@ describe('extractWords', () => {
     test('returns [] for empty input', () => {
       expect(extractWords(empty)).toEqual([]);
       expect(extractWords('')).toEqual([]);
-      expect(extractWords('     ')).toEqual([]);
+      expect(extractWords(space.repeat(5))).toEqual([]);
       expect(extractWords('\t\n\r')).toEqual([]);
     });
 
@@ -63,7 +63,7 @@ describe('extractWords', () => {
 
     test('string delimiter with empty input returns []', () => {
       expect(extractWords('', { delimiter: ',' })).toEqual([]);
-      expect(extractWords('   ', { delimiter: ',' })).toEqual([]);
+      expect(extractWords(space.repeat(3), { delimiter: ',' })).toEqual([]);
     });
   });
 });

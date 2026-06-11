@@ -2,6 +2,8 @@ import { nysiis1 as std } from '../../../../standards/nysiis1.ts';
 
 import { prepare } from '../../../helpers/prepare.ts';
 
+import { space } from '../../unicode/unicode.ts';
+
 import { nysiis } from '../nysiis.ts';
 
 const nysiisOriginal = (input: string): string => nysiis(input, 'original');
@@ -207,7 +209,7 @@ describe('nysiisOriginal', () => {
   });
 
   test('handles empty whitespace', () => {
-    expect(nysiisOriginal('   ')).toBe('');
+    expect(nysiisOriginal(space.repeat(3))).toBe('');
     expect(nysiisOriginal('\t\n')).toBe('');
   });
 

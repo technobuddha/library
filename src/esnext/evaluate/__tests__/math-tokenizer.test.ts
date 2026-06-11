@@ -1,3 +1,5 @@
+import { space } from '../../unicode/unicode.ts';
+
 import { mathTokenize } from '../math-tokenizer.ts';
 
 describe('tokenize', () => {
@@ -190,7 +192,7 @@ describe('tokenize', () => {
     });
 
     test('should tokenize whitespace only', () => {
-      expect(mathTokenize('   ')).toEqual([]);
+      expect(mathTokenize(space.repeat(3))).toEqual([]);
       expect(mathTokenize('\t\n\r')).toEqual([]);
     });
 

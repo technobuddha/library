@@ -2,6 +2,8 @@ import { soundexFuzzy as std } from '../../../../standards/soundex-fuzzy.ts';
 
 import { prepare } from '../../../helpers/prepare.ts';
 
+import { space } from '../../unicode/unicode.ts';
+
 import { soundex } from '../soundex.ts';
 
 const soundexFuzzy = (input: string): string => soundex(input, 'fuzzy');
@@ -25,7 +27,7 @@ describe('soundexFuzzy', () => {
 
   test('should handle empty and whitespace input', () => {
     expect(soundexFuzzy('')).toBe('');
-    expect(soundexFuzzy('   ')).toBe('');
+    expect(soundexFuzzy(space.repeat(3))).toBe('');
     expect(soundexFuzzy('\t\n')).toBe('');
   });
 

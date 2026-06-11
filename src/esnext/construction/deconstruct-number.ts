@@ -34,10 +34,7 @@ export function deconstructNumber(input: number, precision = 9): DeconstructedNu
 
   const prec = clamp(precision, 1, 15);
 
-  const sign =
-    isNegativeZero(input) ? -1
-    : Math.sign(input) < 0 ? -1
-    : 1;
+  const sign = isNegativeZero(input) || Math.sign(input) < 0 ? -1 : 1;
   const positive = Math.abs(input);
 
   const numeric = positive.toExponential(prec - 1);

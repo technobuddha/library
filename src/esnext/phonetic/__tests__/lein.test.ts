@@ -2,6 +2,8 @@ import { lein as std } from '../../../../standards/lein.ts';
 
 import { prepare } from '../../../helpers/prepare.ts';
 
+import { space } from '../../unicode/unicode.ts';
+
 import { lein } from '../lein.ts';
 
 describe('lein', () => {
@@ -223,7 +225,7 @@ describe('lein', () => {
   });
 
   test('handles empty result after processing', () => {
-    expect(lein('   ')).toBe('');
+    expect(lein(space.repeat(3))).toBe('');
     expect(lein('123')).toBe('');
     expect(lein('!@#$%')).toBe('');
   });

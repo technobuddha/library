@@ -1,3 +1,5 @@
+import { space } from '../../unicode/unicode.ts';
+
 import { createCsv } from '../create-csv.ts';
 import { parseCsv } from '../parse-csv.ts';
 
@@ -14,7 +16,7 @@ describe('parseCsv', () => {
   });
 
   test('should return empty array for whitespace-only string', () => {
-    expect(parseCsv('   ')).toEqual([]);
+    expect(parseCsv(space.repeat(3))).toEqual([]);
   });
 
   test('should return empty array for CSV with only line separators', () => {

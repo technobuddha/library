@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
-  "version": "2.1.0-135",
+  "version": "2.1.0-136",
   "description": "A large library of useful functions",
   "stableVersion": "2.1.0-25",
   "license": "MIT",
@@ -36,19 +36,19 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@cspell/cspell-types": "10.0.0",
+    "@cspell/cspell-types": "10.0.1",
     "@technobuddha/project": "file:../project",
     "@types/long": "5.0.0",
-    "@types/node": "25.9.1",
-    "@vitest/coverage-v8": "4.1.7",
-    "cspell": "10.0.0",
+    "@types/node": "25.9.3",
+    "@vitest/coverage-v8": "4.1.8",
+    "cspell": "10.0.1",
     "husky": "9.1.7",
     "jsdom": "29.1.1",
     "long": "5.3.2",
-    "tsx": "4.22.3",
-    "type-fest": "5.6.0",
+    "tsx": "4.22.4",
+    "type-fest": "5.7.0",
     "typescript": "6.0.3",
-    "vitest": "4.1.7"
+    "vitest": "4.1.8"
   },
   "engines": {
     "node": ">=25.0.0"

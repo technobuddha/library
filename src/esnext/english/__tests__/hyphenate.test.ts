@@ -1,4 +1,6 @@
 // Unit tests for hyphenate function
+import { space } from '../../unicode/index.ts';
+
 import { hyphenate } from '../hyphenate.ts';
 
 describe('hyphenate', () => {
@@ -43,7 +45,7 @@ describe('hyphenate', () => {
 
   test('returns correct tokens for edge cases', () => {
     expect(hyphenate('')).toEqual(['']);
-    expect(hyphenate('     ')).toEqual(['     ']);
+    expect(hyphenate(space.repeat(5))).toEqual([space.repeat(5)]);
   });
 
   test('handles characters that arewords that are not in the dictionary', () => {

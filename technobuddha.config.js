@@ -28,6 +28,11 @@ const config = {
     },
     'standards': {
       platform: 'node',
+      tsconfig: {
+        compilerOptions: {
+          composite: true,
+        },
+      },
     },
     'wip': {
       platform: 'none',

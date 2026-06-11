@@ -197,7 +197,7 @@ export function removeComments(
         }
       } else if (isWhitespace(char.value)) {
         result.push(char.value);
-      } else if (char.value === ')' || char.value === ']' || char.value === '}') {
+      } else if ([')', ']', '}'].includes(char.value)) {
         result[pos] = replacement;
         result.push(char.value);
         return;
