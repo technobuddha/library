@@ -53,7 +53,7 @@ export type LookAheadOptions<T> =
  * @category Look-Ahead
  */
 export function* lookAhead<T>(
-  list: List<T>,
+  list: T | List<T>,
   options?: LookAheadOptions<T>,
 ): Generator<[T, T, number]> {
   const array = toArray(list);

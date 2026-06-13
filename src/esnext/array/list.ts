@@ -19,4 +19,4 @@
  * @group Array
  * @category Types
  */
-export type List<T> = T | ArrayLike<T> | Iterable<T>;
+export type List<T> = ArrayLike<T> | Iterable<T>;

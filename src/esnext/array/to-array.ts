@@ -27,7 +27,7 @@ import { type List } from './list.ts';
  * @group Array
  * @category Conversion
  */
-export function toArray<T>(value: List<T>): T[] {
+export function toArray<T>(value: T | List<T>): T[] {
   return (
     typeof value === 'string' ? [value]
     : Array.isArray(value) ? value

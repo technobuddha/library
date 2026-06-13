@@ -45,7 +45,7 @@ export type ConjoinOptions = {
  * @category Conjunctions
  */
 export function conjoin(
-  list: List<StringLike>,
+  list: StringLike | List<StringLike>,
   { conjunction = 'and', oxford = true, separator = ',' }: ConjoinOptions = {},
 ): string {
   const array = toArray(list).map((item) => toString(item));

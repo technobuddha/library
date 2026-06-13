@@ -28,7 +28,7 @@ import { toArray } from './to-array.ts';
  * @group Array
  * @category Combinatorics
  */
-export function* permutations<T>(list: List<T>, length?: number): Generator<T[]> {
+export function* permutations<T>(list: T | List<T>, length?: number): Generator<T[]> {
   const array = toArray(list);
   const len = length ?? array.length;
   const n = array.length;

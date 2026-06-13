@@ -45,7 +45,7 @@ export class PriorityQueue<T> {
    *   - zero if they are equal priority
    * @param contents - Initial contents of the queue
    */
-  public constructor(comparator: Comparator<T>, contents?: List<T>) {
+  public constructor(comparator: Comparator<T>, contents?: T | List<T>) {
     this.comparator = comparator;
     this.contents = contents ? toArray(contents) : [];
     this.sorted = false;

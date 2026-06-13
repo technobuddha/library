@@ -65,7 +65,7 @@ import { type List } from './list.ts';
  * @group Array
  * @category Conversion
  */
-export function* toIterable<T>(value: List<T>): Generator<T> {
+export function* toIterable<T>(value: T | List<T>): Generator<T> {
   if (isString(value)) {
     yield value;
   } else if (isArrayLike(value)) {

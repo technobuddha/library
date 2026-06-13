@@ -47,7 +47,7 @@ import { toArray } from './to-array.ts';
  * @group Array
  * @category Combinatorics
  */
-export function* combinations<T>(data: List<T>, size?: number): Generator<T[]> {
+export function* combinations<T>(data: T | List<T>, size?: number): Generator<T[]> {
   const array = toArray(data);
   const r = size ?? array.length;
   const n = array.length;

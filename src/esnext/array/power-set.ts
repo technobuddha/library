@@ -18,7 +18,7 @@ import { toArray } from './to-array.ts';
  * @group Array
  * @category Combinatorics
  */
-export function* powerSet<T>(list: List<T>): Iterable<T[]> {
+export function* powerSet<T>(list: T | List<T>): Iterable<T[]> {
   const array = toArray(list);
   const n = array.length;
 

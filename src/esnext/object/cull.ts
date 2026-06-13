@@ -20,7 +20,7 @@ import { isIterable } from '../iteration/is-iterable.ts';
  * @group Array
  * @category Filtering
  */
-export function cull<T>(array: List<T | undefined | null>): T[];
+export function cull<L>(array: List<L | undefined | null>): L[];
 /**
  * @param obj - The object to cull.
  * @returns A new object with nullish, empty-array, and empty-object properties removed.
@@ -30,18 +30,17 @@ export function cull<T>(array: List<T | undefined | null>): T[];
  * //=> { a: 1, e: 'ok' }
  * ```
  */
-export function cull<K extends string | number | symbol, V>(
-  obj: Record<K, V>,
-): Partial<Record<K, V>>;
-export function cull<K extends string | number | symbol, V, T>(
-  obj: List<T | undefined | null> | Record<K, V>,
-): T[] | Partial<Record<K, V>> {
+export function cull<O extends object>(obj: O): O;
+
+export function cull<O extends Record<K, unknown>, K extends string | number | symbol, L>(
+  obj: List<L | undefined | null> | O,
+): L[] | O {
   if (Array.isArray(obj) || isIterable(obj)) {
-    return toArray(obj).filter((a) => a != null) as T[];
+    return toArray(obj).filter((a) => a != null) as L[];
   }
 
   return Object.fromEntries(
-    (Object.entries(obj as Record<K, V>) as [K, V][]).filter(
+    (Object.entries(obj as Record<string, O[keyof O]>) as [keyof O, O[keyof O]][]).filter(
       ([, value]) =>
         !(
           value == null ||
@@ -49,5 +48,5 @@ export function cull<K extends string | number | symbol, V, T>(
           (typeof value === 'object' && !Array.isArray(value) && Object.keys(value).length === 0)
         ),
     ),
-  ) as Partial<Record<K, V>>;
+  ) as O;
 }
