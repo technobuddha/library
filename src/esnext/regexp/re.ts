@@ -1,5 +1,5 @@
-import { cull } from '../array/cull.ts';
 import { zipperMerge } from '../array/zipper-merge.ts';
+import { cull } from '../object/cull.ts';
 import { build } from '../string/build.ts';
 import { splitChars } from '../tokenization/split-chars.ts';
 

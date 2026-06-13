@@ -5,7 +5,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.json",
   "compilerOptions": { "lib": ["esnext"], "noEmit": true, "types": ["node", "vitest/globals"] },
-  "include": ["*.test.ts", "../../../@types/*.d.ts"],
+  "include": ["*.test.ts", "../../../@types/*.d.ts", "../../object/__tests__/cull.test.ts"],
   "exclude": ["eslint.config.js"],
   "references": [{ "path": "../.." }]
 }

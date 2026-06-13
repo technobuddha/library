@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
-  "version": "2.1.0-136",
+  "version": "2.1.0-137",
   "description": "A large library of useful functions",
   "stableVersion": "2.1.0-25",
   "license": "MIT",
