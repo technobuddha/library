@@ -43,7 +43,7 @@ function isLength(value: unknown): value is number {
  * @group Array
  * @category Type Checking
  */
-export function isArrayLike(value: unknown): value is ArrayLike<unknown> {
+export function isArrayLike<T = unknown>(value: unknown): value is ArrayLike<T> {
   return (
     value != null &&
     (isString(value) ||

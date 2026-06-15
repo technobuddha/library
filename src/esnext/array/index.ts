@@ -2,7 +2,6 @@ export { combinations } from './combinations.ts';
 export { create1dArray } from './create1d-array.ts';
 export { create2dArray } from './create2d-array.ts';
 export { create3dArray } from './create3d-array.ts';
-export { cull } from './cull.ts';
 export { ensureArray } from './ensure-array.ts';
 export { type Flexible } from './flexible.ts';
 export { isArrayLike } from './is-array-like.ts';

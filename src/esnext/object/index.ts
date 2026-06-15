@@ -1,4 +1,5 @@
 export { changed } from './changed.ts';
+export { cull } from './cull.ts';
 export { deepCopy } from './deep-copy.ts';
 export { deepEquals } from './deep-equals.ts';
 export { deepMerge } from './deep-merge.ts';
@@ -6,7 +7,6 @@ export { get } from './get.ts';
 export { isEmpty } from './is-empty.ts';
 export { isObject } from './is-object.ts';
 export { type ObjectKey } from './object-key.ts';
-export { prune } from './prune.ts';
 export { sameType } from './same-type.ts';
 export { sameValue } from './same-value.ts';
 export { sameValueZero } from './same-value-zero.ts';
