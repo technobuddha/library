@@ -54,6 +54,33 @@ describe('cull', () => {
     });
   });
 
+  test('removes empty strings from nested arrays and objects when enabled', () => {
+    expect(
+      cull(
+        {
+          a: ['', 'ok'],
+          b: { c: '', d: 'ok' },
+          e: [[''], { f: '' }],
+        },
+        { emptyStrings: true },
+      ),
+    ).toEqual({
+      a: ['ok'],
+      b: { d: 'ok' },
+    });
+  });
+
+  test('preserves empty nested arrays when emptyArrays is false', () => {
+    expect(cull({ a: [null], b: { c: 1 } }, { emptyArrays: false })).toEqual({
+      a: [],
+      b: { c: 1 },
+    });
+  });
+
+  test('preserves empty nested objects when emptyObjects is false', () => {
+    expect(cull([{ a: null }], { emptyObjects: false })).toEqual([{}]);
+  });
+
   test('removes nested empty arrays and objects from arrays', () => {
     expect(cull([{ a: null }, { b: 2 }, [null, undefined], { c: null }])).toEqual([{ b: 2 }]);
   });
