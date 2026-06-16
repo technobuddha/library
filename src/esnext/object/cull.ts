@@ -1,12 +1,9 @@
 import { isArrayLike } from '../array/is-array-like.ts';
+import { isFunction } from '../function/is-function.ts';
 import { isPrimitive } from '../primitive/is-primitive.ts';
 
 function culler<O>(obj: O): O {
-  if (obj == null) {
-    return obj;
-  }
-
-  if (isPrimitive(obj)) {
+  if (obj == null || isPrimitive(obj) || isFunction(obj)) {
     return obj;
   }
 
@@ -29,8 +26,9 @@ function culler<O>(obj: O): O {
 /**
  * Recursively removes nullish values from arrays and objects.
  *
- * Nested arrays and objects that become empty after culling are removed as well.
- * Primitive values are returned unchanged.
+ * Nested arrays and objects are culled depth-first, and any nested array or object that becomes
+ * empty is removed from its parent.
+ * Primitive values and functions are returned unchanged.
  * @param obj - The value to cull.
  * @returns A copy of the value with null and undefined entries removed.
  * @example
@@ -42,11 +40,7 @@ function culler<O>(obj: O): O {
  * @category Transform
  */
 export function cull<O>(obj: O): O {
-  if (obj == null) {
-    return obj;
-  }
-
-  if (isPrimitive(obj)) {
+  if (obj == null || isPrimitive(obj) || isFunction(obj)) {
     return obj;
   }
 

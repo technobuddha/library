@@ -54,6 +54,22 @@ describe('cull', () => {
     });
   });
 
+  test('removes nested empty arrays and objects from arrays', () => {
+    expect(cull([{ a: null }, { b: 2 }, [null, undefined], { c: null }])).toEqual([{ b: 2 }]);
+  });
+
+  test('preserves empty top-level arrays and objects', () => {
+    expect(cull([null, undefined])).toEqual([]);
+    expect(cull({ a: null, b: undefined })).toEqual({});
+  });
+
+  test('preserves functions unchanged', () => {
+    // eslint-disable-next-line unicorn/consistent-function-scoping
+    const fn = (): string => 'ok';
+
+    expect(cull(fn)).toBe(fn);
+  });
+
   test('preserves falsy object values that are not nullish', () => {
     expect(cull({ a: 0, b: '', c: false, d: null, e: undefined })).toEqual({
       a: 0,
