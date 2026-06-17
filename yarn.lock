@@ -2,7 +2,7 @@
 # Manual changes might be lost - proceed with caution!
 
 __metadata:
-  version: 8
+  version: 10
   cacheKey: 10c0
 
 "@asamuzakjp/css-color@npm:^5.1.11":
@@ -1857,13 +1857,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-144":
-  version: 2.1.0-144
-  resolution: "@technobuddha/library@npm:2.1.0-144"
-  checksum: 10c0/fdae9730209b58cd83b32eab9033314ca87fd832bab699f3e7b8e415f99519167406bf48dfcfa7a8775ff5a291527c596cd519fb1928363759a83ea42e13607b
-  languageName: node
-  linkType: hard
-
 "@technobuddha/library@workspace:.":
   version: 0.0.0-use.local
   resolution: "@technobuddha/library@workspace:."
@@ -1885,15 +1878,15 @@ __metadata:
   linkType: soft
 
 "@technobuddha/project@file:../project::locator=%40technobuddha%2Flibrary%40workspace%3A.":
-  version: 1.0.0-94
-  resolution: "@technobuddha/project@file:../project#../project::hash=45a1a6&locator=%40technobuddha%2Flibrary%40workspace%3A."
+  version: 1.0.0-96
+  resolution: "@technobuddha/project@file:../project#../project::hash=7ae153&locator=%40technobuddha%2Flibrary%40workspace%3A."
   dependencies:
     "@commander-js/extra-typings": "npm:15.0.0"
     "@cspell/cspell-types": "npm:10.0.1"
     "@dotenvx/dotenvx": "npm:1.71.2"
     "@eslint-community/eslint-plugin-eslint-comments": "npm:4.7.2"
     "@eslint/config-helpers": "npm:0.6.0"
-    "@technobuddha/library": "npm:2.1.0-144"
+    "@technobuddha/library": "npm:2.1.0-143"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
     "@types/mustache": "npm:^4.2.6"
@@ -1959,7 +1952,7 @@ __metadata:
     eslint-comments: dist/eslint-comments/eslint-comments.js
     tb: dist/tb/tb.js
     unexported-files: dist/unexported-files/unexported-files.js
-  checksum: 10c0/40aaf5f24b4f0eba38b757a4abb7ae30e87121c0511856e24280b62eff39552576b764b17e1c17fa4f430f03f4858408fbdc1bade2c45b2ba055c8549d39fcc4
+  checksum: 10c0/f9ce05728e0b84b5f785ae9ffafea67e962eafa14bfd0ec55cc1fdf167c154d8ef7f3540a7fe9a0c96ac192775367e610e9702205a587cace577a2c614be45a5
   languageName: node
   linkType: hard
 
