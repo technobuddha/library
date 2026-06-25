@@ -16,6 +16,6 @@ import { isError } from './is-error.ts';
  * @group Error
  * @category Conversion
  */
-export function toError(entity: unknown): Error {
+export function toError(entity: unknown): Error & { code?: string } {
   return isError(entity) ? entity : new Error(toString(entity));
 }
