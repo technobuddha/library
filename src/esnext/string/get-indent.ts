@@ -1,4 +1,4 @@
-import { escapeRegExp } from '../escape/escape-regexp.ts';
+import { splitLines } from '../tokenization/split-lines.ts';
 import { space } from '../unicode/unicode.ts';
 
 import { type IndentOptions } from './indent.ts';
@@ -15,10 +15,22 @@ import { toString } from './to-string.ts';
  * @category Indentation
  */
 export function getIndent(input: StringLike, { indenter = space }: IndentOptions = {}): number {
-  const matches = new RegExp(`^(${escapeRegExp(indenter)})+`, 'vgm').exec(toString(input));
-  if (matches == null) {
-    return 0;
+  let indent = Infinity;
+
+  for (const line of splitLines(toString(input))) {
+    let lineIndent = 0;
+    for (let i = 0; i < line.length; i += indenter.length) {
+      if (line.slice(i, i + indenter.length) === indenter) {
+        lineIndent++;
+      } else {
+        break;
+      }
+    }
+
+    if (lineIndent * indenter.length < line.length) {
+      indent = Math.min(indent, lineIndent);
+    }
   }
 
-  return Math.min(...matches.map((m) => m.length)) / indenter.length;
+  return indent === Infinity ? 0 : indent;
 }
