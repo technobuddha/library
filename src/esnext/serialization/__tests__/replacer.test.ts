@@ -17,7 +17,7 @@ describe('replacer', () => {
   });
 
   test('should encode numbers', () => {
-    expect(JSON.stringify({ number: Number.NaN }, replacer)).toBe(
+    expect(JSON.stringify({ number: NaN }, replacer)).toBe(
       `{"number":"${specialBegin}Number:NaN${specialFinish}"}`,
     );
     expect(JSON.stringify({ number: Infinity }, replacer)).toBe(

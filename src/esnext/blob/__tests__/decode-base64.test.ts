@@ -8,7 +8,7 @@ describe('decodeBase64', () => {
   });
 
   test('should decode control characters', () => {
-    expect(decodeBase64('AAECA38=', 'utf-8')).toBe('\u0000\u0001\u0002\u0003\u007F');
+    expect(decodeBase64('AAECA38=', 'utf-8')).toBe('\u{0}\u{1}\u{2}\u{3}\u{7F}');
   });
 
   test('should decode 2 byte utf-8 sequences', () => {

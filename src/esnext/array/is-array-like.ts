@@ -21,7 +21,7 @@ import { isString } from '../string/is-string.ts';
  * @internal
  */
 function isLength(value: unknown): value is number {
-  return isNumber(value) && value >= 0 && value % 1 === 0 && value < Number.MAX_SAFE_INTEGER;
+  return isNumber(value) && value >= 0 && Number.isSafeInteger(value);
 }
 
 /**

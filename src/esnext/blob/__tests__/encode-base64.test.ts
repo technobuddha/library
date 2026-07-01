@@ -8,7 +8,7 @@ describe('encodeBase64', () => {
   });
 
   test('should encode control characters', () => {
-    expect(encodeBase64('\u0000\u0001\u0002\u0003\u007F', 'utf-8')).toBe('AAECA38=');
+    expect(encodeBase64('\u{0}\u{1}\u{2}\u{3}\u{7F}', 'utf-8')).toBe('AAECA38=');
   });
 
   test('should encode 2 byte utf-8 sequences', () => {
@@ -27,8 +27,8 @@ describe('encodeBase64', () => {
   });
 
   test('should trap bad surrogate pairs', () => {
-    expect(encodeBase64('\uD83D', 'utf-8')).toBe('74+9');
-    expect(encodeBase64('\uD83D\u0000', 'utf-8')).toBe('74+9');
+    expect(encodeBase64('\u{D83D}', 'utf-8')).toBe('74+9');
+    expect(encodeBase64('\u{D83D}\u{0}', 'utf-8')).toBe('74+9');
   });
 
   test('should handle empty string', () => {

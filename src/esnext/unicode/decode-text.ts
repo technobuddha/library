@@ -23,6 +23,7 @@ export function decodeText(input: BinaryLike, _encoding: TextEncoding = 'utf-8')
     let c0: number = buffer[i];
     let c1: number;
     let c2: number;
+    // eslint-disable-next-line unicorn/prefer-smaller-scope
     let c3: number;
 
     if (c0 > 0x7f) {

@@ -33,12 +33,12 @@ describe('cardinal', () => {
   });
 
   test('should handle unusual numbers', () => {
-    expect(cardinal(Number.POSITIVE_INFINITY)).toBe('infinity');
-    expect(cardinal(Number.POSITIVE_INFINITY, { output: 'numeric' })).toBe('∞');
-    expect(cardinal(Number.NEGATIVE_INFINITY)).toBe('negative infinity');
-    expect(cardinal(Number.NEGATIVE_INFINITY, { output: 'numeric' })).toBe(`${negativeSign}∞`);
-    expect(cardinal(Number.NaN)).toBe('not a number');
-    expect(cardinal(Number.NaN, { output: 'numeric' })).toBe('NaN');
+    expect(cardinal(Infinity)).toBe('infinity');
+    expect(cardinal(Infinity, { output: 'numeric' })).toBe('∞');
+    expect(cardinal(-Infinity)).toBe('negative infinity');
+    expect(cardinal(-Infinity, { output: 'numeric' })).toBe(`${negativeSign}∞`);
+    expect(cardinal(NaN)).toBe('not a number');
+    expect(cardinal(NaN, { output: 'numeric' })).toBe('NaN');
   });
 
   test('should handle negative numbers', () => {

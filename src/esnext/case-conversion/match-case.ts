@@ -25,7 +25,8 @@ export function matchCase(input: string, target: string): string {
 
   if (isUpperCase(target)) {
     return input.toLocaleUpperCase();
-  } else if (isUpperCase(target[0])) {
+  }
+  if (isUpperCase(target.at(0) ?? empty)) {
     return capitalize(input.toLocaleLowerCase());
   }
   return input.toLocaleLowerCase();

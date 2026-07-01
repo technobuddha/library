@@ -63,7 +63,8 @@ export function compareStrings(
     }
 
     return order || compareNumbers(v1.length, v2.length);
-  } else if (natural) {
+  }
+  if (natural) {
     const t1 = strA.match(/(\.\d+|\d+|\D+)/gv) ?? [];
     const t2 = strB.match(/(\.\d+|\d+|\D+)/gv) ?? [];
     const count = Math.min(t1.length, t2.length);
@@ -71,8 +72,8 @@ export function compareStrings(
 
     for (let i = 0; order === 0 && i < count; ++i) {
       if (t1[i] !== t2[i]) {
-        const n1 = Number.parseFloat(t1[i]);
-        const n2 = Number.parseFloat(t2[i]);
+        const n1 = Number(t1[i]);
+        const n2 = Number(t2[i]);
 
         order =
           Number.isNaN(n1) || Number.isNaN(n2) ?

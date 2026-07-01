@@ -12,8 +12,8 @@ import { linesToChars } from '../lines-to-chars.ts';
 describe('charsToLines', () => {
   test('Convert chars up to lines.', () => {
     const diffs: Difference[] = [
-      { op: DIFFERENCE_EQUAL, text: '\u0001\u0002\u0001' },
-      { op: DIFFERENCE_INSERT, text: '\u0002\u0001\u0002' },
+      { op: DIFFERENCE_EQUAL, text: '\u{1}\u{2}\u{1}' },
+      { op: DIFFERENCE_INSERT, text: '\u{2}\u{1}\u{2}' },
     ];
     charsToLines(diffs, [empty, 'alpha\n', 'beta\n']);
     expect(diffs).toStrictEqual([

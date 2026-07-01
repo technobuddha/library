@@ -20,7 +20,7 @@ import { type Polygon } from './geometry.ts';
  * @group Geometry
  * @category Polygon
  */
-export function area(vertices: Polygon, signed = false): number {
+export function area(vertices: Polygon, isSigned = false): number {
   let a = 0;
 
   for (const [index, vertex0] of vertices.entries()) {
@@ -29,5 +29,5 @@ export function area(vertices: Polygon, signed = false): number {
     a += (vertex1.x - vertex0.x) * (vertex1.y + vertex0.y);
   }
 
-  return signed ? a / 2 : Math.abs(a / 2);
+  return isSigned ? a / 2 : Math.abs(a / 2);
 }

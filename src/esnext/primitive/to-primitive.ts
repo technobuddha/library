@@ -48,7 +48,9 @@ export function toPrimitive(
   let wrapper = input;
   if (wrapper == null) {
     return wrapper;
-  } else if (typeof wrapper === 'string') {
+  }
+
+  if (typeof wrapper === 'string') {
     wrapper = String.prototype;
   } else if (typeof wrapper === 'number') {
     wrapper = Number.prototype;
@@ -75,6 +77,7 @@ function makePrimitive(
   hint: 'string' | 'number' | 'default',
 ): [boolean, Primitive] {
   if (typeof wrapper === 'object' && wrapper !== null) {
+    // eslint-disable-next-line unicorn/no-computed-property-existence-check
     if (Symbol.toPrimitive in wrapper && typeof wrapper[Symbol.toPrimitive] === 'function') {
       return [true, (wrapper[Symbol.toPrimitive] as (h: string) => Primitive).call(input, hint)];
     }

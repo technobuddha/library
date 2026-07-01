@@ -26,8 +26,8 @@ describe('floor', () => {
   });
 
   test('should handle NaN and Infinity', () => {
-    expect(floor(Number.NaN)).toBe(Number.NaN);
-    expect(floor(Number.POSITIVE_INFINITY)).toBe(Number.POSITIVE_INFINITY);
-    expect(floor(Number.NEGATIVE_INFINITY)).toBe(Number.NEGATIVE_INFINITY);
+    expect(floor(NaN)).toBeNaN();
+    expect(floor(Infinity)).toBe(Infinity);
+    expect(floor(-Infinity)).toBe(-Infinity);
   });
 });

@@ -3,8 +3,8 @@ import { isSurrogate } from '../is-surrogate.ts';
 describe('isSurrogate', () => {
   test('should detect surrogates', () => {
     expect(isSurrogate('a')).toBeFalse();
-    expect(isSurrogate('\uD800')).toBeTrue();
-    expect(isSurrogate('\uDC00')).toBeTrue();
+    expect(isSurrogate('\u{D800}')).toBeTrue();
+    expect(isSurrogate('\u{DC00}')).toBeTrue();
   });
 
   test('should detect surrogates char codes', () => {

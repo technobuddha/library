@@ -15,10 +15,10 @@ describe('escapeGraphQL', () => {
   });
 
   test('should escape non printables as \\unnnn', () => {
-    expect(escapeGraphQL('\u0001')).toBe('\\u0001');
-    expect(escapeGraphQL('\u001f')).toBe('\\u001f');
-    expect(escapeGraphQL('\u007f')).toBe('\\u007f');
-    expect(escapeGraphQL('\u00a0')).toBe('\\u00a0');
+    expect(escapeGraphQL('\u{1}')).toBe('\\u0001');
+    expect(escapeGraphQL('\u{1F}')).toBe('\\u001f');
+    expect(escapeGraphQL('\u{7F}')).toBe('\\u007f');
+    expect(escapeGraphQL('\u{A0}')).toBe('\\u00a0');
   });
 
   test('should not encode astral characters', () => {

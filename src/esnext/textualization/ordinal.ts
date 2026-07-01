@@ -87,9 +87,11 @@ export function ordinal(input: NumberLike, options: OrdinalOptions = {}): string
 
     if (whole.value % 10 === 1 && whole.value % 100 !== 11) {
       return 'st';
-    } else if (whole.value % 10 === 2 && whole.value % 100 !== 12) {
+    }
+    if (whole.value % 10 === 2 && whole.value % 100 !== 12) {
       return 'nd';
-    } else if (whole.value % 10 === 3 && whole.value % 100 !== 13) {
+    }
+    if (whole.value % 10 === 3 && whole.value % 100 !== 13) {
       return 'rd';
     }
 

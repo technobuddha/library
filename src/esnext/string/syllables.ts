@@ -299,12 +299,12 @@ function countSyllables(word: string): number {
     return 1;
   }
 
-  if (value in problematic) {
+  if (Object.hasOwn(problematic, value)) {
     return problematic[value];
   }
 
   const singularWord = singular(word);
-  if (singularWord in problematic) {
+  if (Object.hasOwn(problematic, singularWord)) {
     return problematic[singularWord];
   }
 
@@ -349,6 +349,7 @@ function countSyllables(word: string): number {
     count += 1;
     return x;
   });
+  // eslint-disable-next-line no-useless-assignment
   value = value.replaceAll(EXPRESSION_DOUBLE_SYLLABIC_FOUR, (x) => {
     count += 1;
     return x;

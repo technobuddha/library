@@ -452,8 +452,12 @@ function format(
  */
 class NumberFormatter {
   public sign: number;
+
   public mantissa: string[];
+
   public exponent: number;
+
+  public output: (string | readonly string[])[];
 
   public constructor(sign: number, mantissa: string[], exponent: number) {
     this.sign = sign;
@@ -461,8 +465,6 @@ class NumberFormatter {
     this.exponent = exponent;
     this.output = [];
   }
-
-  public output: (string | readonly string[])[];
 
   public minus(negative: string, positive = empty): this {
     this.output.push(this.sign < 0 ? negative : positive);
@@ -632,7 +634,7 @@ export function formatNumber(input: NumberLike, mask: string): string {
       case 'r': {
         return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
           .map((p) => value.toPrecision(p))
-          .find((n) => Number.parseFloat(n) === value)!;
+          .find((n) => Number(n) === value)!;
       }
 
       // no default
@@ -651,7 +653,7 @@ export function formatNumber(input: NumberLike, mask: string): string {
   const formats = mask.split(';');
 
   let fmt = parse(formats[0]);
-  if (Number.parseFloat((value * fmt.scale).toFixed(fmt.precision)) === 0) {
+  if (Number((value * fmt.scale).toFixed(fmt.precision)) === 0) {
     fmt = formats.length < 3 ? fmt : parse(formats[2]);
   } else if (value < 0) {
     fmt = formats.length < 2 ? parse(`-${formats[0]}`) : parse(formats[1]);

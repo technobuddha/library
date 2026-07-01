@@ -22,7 +22,8 @@ export function pad(input: NumberLike, length = 2): string {
 
   if (Number.isNaN(value) || !Number.isFinite(value)) {
     return value.toString().padStart(length, ' ');
-  } else if (value < 0) {
+  }
+  if (value < 0) {
     return `-${Math.abs(value)
       .toString()
       .padStart(length - 1, '0')}`;

@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/consistent-destructuring */
 import { U32 } from '../binary/u32.ts';
 
 import { ShaBase } from './sha-base.ts';

@@ -34,7 +34,7 @@ describe('shallowEquals', () => {
   });
 
   test('NaN equals NaN (SameValue)', () => {
-    expect(shallowEquals({ q: Number.NaN }, { q: Number.NaN })).toBeTrue();
+    expect(shallowEquals({ q: NaN }, { q: NaN })).toBeTrue();
   });
 
   test('-0 does not equal 0 (SameValue)', () => {

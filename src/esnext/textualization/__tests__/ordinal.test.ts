@@ -109,7 +109,7 @@ describe('ordinal', () => {
     const o = { output: 'numeric' as const };
 
     expect(ordinal(negativeZero, o)).toBe(`${negativeSign}0th`);
-    expect(ordinal(Number.NaN, o)).toBe('nth');
+    expect(ordinal(NaN, o)).toBe('nth');
     expect(ordinal(Infinity, o)).toBe('nth');
     expect(ordinal(-Infinity, o)).toBe('nth');
   });
@@ -196,7 +196,7 @@ describe('ordinal', () => {
     const o = { output: 'alphabetic' as const };
 
     expect(ordinal(negativeZero, o)).toBe('negative zeroth');
-    expect(ordinal(Number.NaN)).toBe('nth');
+    expect(ordinal(NaN)).toBe('nth');
     expect(ordinal(Infinity, o)).toBe('nth');
     expect(ordinal(-Infinity, o)).toBe('nth');
   });
@@ -276,7 +276,7 @@ describe('ordinal', () => {
     const o = { output: 'suffix' as const };
 
     expect(ordinal(negativeZero, o)).toBe('th');
-    expect(ordinal(Number.NaN, o)).toBe('th');
+    expect(ordinal(NaN, o)).toBe('th');
     expect(ordinal(Infinity, o)).toBe('th');
     expect(ordinal(-Infinity, o)).toBe('th');
   });

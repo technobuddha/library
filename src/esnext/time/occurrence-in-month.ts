@@ -29,7 +29,8 @@ export function occurrenceInMonth(
     return addTime(day, {
       days: jump + floor((daysInMonth(input, { utc }) - jump - 1) / daysPerWeek) * daysPerWeek,
     });
-  } else if (occurrence < 1 || occurrence > 5) {
+  }
+  if (occurrence < 1 || occurrence > 5) {
     return null;
   }
 

@@ -176,7 +176,7 @@ describe('JSONMap', () => {
 
     const results: { value: string; key: Cartesian; map: JSONMap<Cartesian, string> }[] = [];
 
-    // eslint-disable-next-line unicorn/no-array-for-each
+    // eslint-disable-next-line github/array-foreach
     map.forEach((value, key, mapRef) => {
       results.push({ value, key, map: mapRef });
     });
@@ -194,10 +194,9 @@ describe('JSONMap', () => {
 
     const context = { called: false };
 
-    // eslint-disable-next-line unicorn/no-array-for-each, func-names
-    map.forEach(function (this: typeof context) {
+    // eslint-disable-next-line github/array-foreach
+    map.forEach(function fn(this: typeof context) {
       this.called = true;
-      // eslint-disable-next-line unicorn/no-array-method-this-argument
     }, context);
 
     expect(context.called).toBeTrue();
@@ -273,7 +272,8 @@ describe('JSONMap', () => {
     expect(Array.from(map.entries())).toEqual([]);
 
     let forEachCalled = false;
-    // eslint-disable-next-line unicorn/no-array-for-each
+
+    // eslint-disable-next-line github/array-foreach
     map.forEach(() => {
       forEachCalled = true;
     });

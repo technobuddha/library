@@ -23,7 +23,7 @@ import { toNumber } from '../number/to-number.ts';
 export function factorial(num: NumberLike): number {
   const n = toNumber(num);
 
-  if (n < 0 || !Number.isInteger(n)) {
+  if (n < 0 || !Number.isSafeInteger(n)) {
     throw new Error('Factorial is only defined for non-negative integers');
   }
 

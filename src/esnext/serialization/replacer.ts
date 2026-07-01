@@ -14,11 +14,14 @@ export function replacer(this: Record<string, unknown>, key: string, value: unkn
   const raw = this[key];
   if (raw instanceof Date) {
     return `${specialBegin}Date:${raw.toISOString()}${specialFinish}`;
-  } else if (raw instanceof RegExp) {
+  }
+  if (raw instanceof RegExp) {
     return `${specialBegin}RegExp:/${raw.source}/${raw.flags}${specialFinish}`;
-  } else if (typeof raw === 'number' && (Number.isNaN(raw) || !Number.isFinite(raw))) {
+  }
+  if (typeof raw === 'number' && (Number.isNaN(raw) || !Number.isFinite(raw))) {
     return `${specialBegin}Number:${raw.toString()}${specialFinish}`;
-  } else if (typeof raw === 'bigint') {
+  }
+  if (typeof raw === 'bigint') {
     return `${specialBegin}BigInt:${raw.toString()}${specialFinish}`;
   }
 

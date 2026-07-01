@@ -9,16 +9,16 @@ describe('unescapeHTML', () => {
 
   test('should unescape control characters', () => {
     expect(unescapeHTML('&#0;')).toBe('\0');
-    expect(unescapeHTML('&#1;')).toBe('\u0001');
-    expect(unescapeHTML('&#127;')).toBe('\u007f');
-    expect(unescapeHTML('&#159;')).toBe('\u009f');
+    expect(unescapeHTML('&#1;')).toBe('\u{1}');
+    expect(unescapeHTML('&#127;')).toBe('\u{7F}');
+    expect(unescapeHTML('&#159;')).toBe('\u{9F}');
   });
 
   test('should unescape hex control characters', () => {
     expect(unescapeHTML('&#x0;')).toBe('\0');
-    expect(unescapeHTML('&#x1;')).toBe('\u0001');
-    expect(unescapeHTML('&#x7F;')).toBe('\u007f');
-    expect(unescapeHTML('&#x9f;')).toBe('\u009f');
+    expect(unescapeHTML('&#x1;')).toBe('\u{1}');
+    expect(unescapeHTML('&#x7F;')).toBe('\u{7F}');
+    expect(unescapeHTML('&#x9f;')).toBe('\u{9F}');
   });
 
   test('should not unescape most ascii', () => {

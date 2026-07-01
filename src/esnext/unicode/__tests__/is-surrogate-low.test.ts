@@ -2,8 +2,8 @@ import { isSurrogateLow } from '../is-surrogate-low.ts';
 
 describe('isSurrogateLow', () => {
   test('should detect low', () => {
-    expect(isSurrogateLow('\uD800')).toBeFalse();
-    expect(isSurrogateLow('\uDC00')).toBeTrue();
+    expect(isSurrogateLow('\u{D800}')).toBeFalse();
+    expect(isSurrogateLow('\u{DC00}')).toBeTrue();
   });
 
   test('should detect surrogates char codes', () => {

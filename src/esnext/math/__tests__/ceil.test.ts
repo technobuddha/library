@@ -26,8 +26,8 @@ describe('ceil', () => {
   });
 
   test('should handle NaN and Infinity', () => {
-    expect(ceil(Number.NaN)).toBe(Number.NaN);
-    expect(ceil(Number.POSITIVE_INFINITY)).toBe(Number.POSITIVE_INFINITY);
-    expect(ceil(Number.NEGATIVE_INFINITY)).toBe(Number.NEGATIVE_INFINITY);
+    expect(ceil(NaN)).toBeNaN();
+    expect(ceil(Infinity)).toBe(Infinity);
+    expect(ceil(-Infinity)).toBe(-Infinity);
   });
 });

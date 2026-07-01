@@ -23,7 +23,7 @@ import { isEven } from './is-even.ts';
  */
 export function median(numbers: NumberLike[]): number {
   if (numbers.length === 0) {
-    return Number.NaN;
+    return NaN;
   }
 
   const sorted = numbers.map((n) => toNumber(n)).sort((a, b) => a - b);

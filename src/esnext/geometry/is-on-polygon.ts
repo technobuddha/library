@@ -15,15 +15,15 @@ import { toLineSegment } from './to-line-segment.ts';
  * @category Polygon
  */
 export function isOnPolygon(point: Cartesian, polygon: Polygon, tolerance = 1e-10): boolean {
-  let on = false;
+  let isOwnPolygon = false;
   const closed = toClosed(polygon);
 
   for (let i = 0, l = closed.length - 1; i < l; i++) {
     if (isOnLine(point, toLineSegment(closed[i], closed[i + 1]), { tolerance })) {
-      on = true;
+      isOwnPolygon = true;
       break;
     }
   }
 
-  return on;
+  return isOwnPolygon;
 }

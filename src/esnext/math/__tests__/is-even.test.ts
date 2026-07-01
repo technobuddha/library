@@ -11,14 +11,14 @@ describe('isEven', () => {
     expect(isEven(2)).toBeTrue();
     expect(isEven(3)).toBeFalse();
     expect(isEven(negativeZero)).toBeTrue();
-    expect(isEven(Number.NaN)).toBeFalse();
+    expect(isEven(NaN)).toBeFalse();
     expect(isEven(Infinity)).toBeFalse();
     expect(isEven(-Infinity)).toBeFalse();
   });
 
   test('should work with special numbers', () => {
     expect(isEven(negativeZero)).toBeTrue();
-    expect(isEven(Number.NaN)).toBeFalse();
+    expect(isEven(NaN)).toBeFalse();
     expect(isEven(Infinity)).toBeFalse();
     expect(isEven(-Infinity)).toBeFalse();
   });

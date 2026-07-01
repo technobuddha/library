@@ -12,10 +12,7 @@ import { type Difference } from './difference.ts';
 export function charsToLines(diffs: readonly Difference[], lineArray: readonly string[]): void {
   for (const diff of diffs) {
     const chars = diff.text;
-    const text = [];
-    for (const char of chars) {
-      text.push(lineArray[char.charCodeAt(0)]);
-    }
+    const text = Array.from(chars, (char) => lineArray[char.charCodeAt(0)]);
     diff.text = text.join(empty);
   }
 }

@@ -26,6 +26,6 @@ export function toInteger(entity: unknown): number {
       entity ? 1
       : 0
     : isString(entity) ? Number.parseInt(entity)
-    : Number.NaN
+    : NaN
   );
 }

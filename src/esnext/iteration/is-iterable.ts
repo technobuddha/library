@@ -21,6 +21,7 @@ export function isIterable(obj: unknown): obj is Iterable<unknown> {
     typeof obj === 'string' ||
     (obj != null &&
       typeof obj === 'object' &&
+      // eslint-disable-next-line unicorn/no-computed-property-existence-check
       Symbol.iterator in obj &&
       typeof obj[Symbol.iterator] === 'function')
   );

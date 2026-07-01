@@ -245,6 +245,7 @@ function applyRules(value: string, isIntact: boolean, rules: RuleCollection): st
     }
 
     if (rule.type === cont || rule.type === contint) {
+      // eslint-disable-next-line unicorn/no-useless-recursion
       return applyRules(next, false, rules);
     }
 

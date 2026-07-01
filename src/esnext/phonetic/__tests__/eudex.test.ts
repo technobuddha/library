@@ -21,7 +21,7 @@ describe('eudex', () => {
   test('should skip unhandled codepoints (cover else branch)', () => {
     // U+200B ZERO WIDTH SPACE is not in PHONES or PHONES_C1
     // This will trigger the else branch in the loop
-    const input = 'a\u200Bz';
+    const input = 'a\u{200B}z';
     // Should still produce a valid hash, but the zero-width space is skipped
     const result = eudex(input).value;
     expect(typeof result).toBe('bigint');

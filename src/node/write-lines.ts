@@ -15,6 +15,22 @@ import { toArray } from '../esnext/array/to-array.ts';
  * @category FileSystem
  */
 export class WriteLines {
+  /**
+   * Open a file for writing lines, returning a WriteLines instance.
+   * @param filePath - Path to the file to write.
+   * @param flags - Write stream options (see Node.js fs.WriteStreamOptions).
+   * @returns Promise resolving to a WriteLines instance.
+   */
+  public static async open(filePath: string, flags: fs.WriteStreamOptions): Promise<WriteLines> {
+    const wl = new WriteLines(filePath, flags);
+
+    return new Promise((resolve) => {
+      wl.stream.once('ready', () => {
+        resolve(wl);
+      });
+    });
+  }
+
   private readonly stream: fs.WriteStream;
 
   private constructor(filePath: string, flags: fs.WriteStreamOptions) {
@@ -56,22 +72,6 @@ export class WriteLines {
     return new Promise((resolve) => {
       this.stream.end(() => {
         resolve();
-      });
-    });
-  }
-
-  /**
-   * Open a file for writing lines, returning a WriteLines instance.
-   * @param filePath - Path to the file to write.
-   * @param flags - Write stream options (see Node.js fs.WriteStreamOptions).
-   * @returns Promise resolving to a WriteLines instance.
-   */
-  public static async open(filePath: string, flags: fs.WriteStreamOptions): Promise<WriteLines> {
-    const wl = new WriteLines(filePath, flags);
-
-    return new Promise((resolve) => {
-      wl.stream.once('ready', () => {
-        resolve(wl);
       });
     });
   }

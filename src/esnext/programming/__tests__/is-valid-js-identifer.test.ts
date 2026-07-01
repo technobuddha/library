@@ -12,8 +12,8 @@ describe('isValidJsIdentifier', () => {
     expect(isValidJsIdentifier('éclair')).toBeTrue();
     expect(isValidJsIdentifier('π')).toBeTrue();
     expect(isValidJsIdentifier('अंक')).toBeTrue();
-    expect(isValidJsIdentifier('x\u200Cy')).toBeTrue();
-    expect(isValidJsIdentifier('x\u200Dy')).toBeTrue();
+    expect(isValidJsIdentifier('x\u{200C}y')).toBeTrue();
+    expect(isValidJsIdentifier('x\u{200D}y')).toBeTrue();
   });
 
   test('rejects invalid identifiers', () => {

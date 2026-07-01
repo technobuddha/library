@@ -6,5 +6,5 @@
  * @group RegExp
  * @category Constants
  */
-export const trimEquivalent = /[\s\uFEFF\u00A0]/v;
+export const trimEquivalent = /[\s\u{FEFF}\u{A0}]/v;
 //#endregion

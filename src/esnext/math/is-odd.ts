@@ -18,5 +18,5 @@ import { isMultipleOf } from './is-multiple-of.ts';
  * @category Comparison
  */
 export function isOdd(input: NumberLike): boolean {
-  return Number.isInteger(input) && !isMultipleOf(input, 2);
+  return Number.isSafeInteger(input) && !isMultipleOf(input, 2);
 }

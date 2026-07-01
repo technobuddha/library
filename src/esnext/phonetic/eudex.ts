@@ -213,7 +213,6 @@ const INJECTIVE_PHONES: Record<string, bigint> = {
 export function eudex(word: StringLike): U64 {
   const array = splitChars(keep(toString(word).toLowerCase(), { letters: true }));
 
-  let [entry] = array;
   const firstByte = new U64(INJECTIVE_PHONES[array[0]] ?? 0n);
 
   let res = new U64(0);
@@ -221,9 +220,9 @@ export function eudex(word: StringLike): U64 {
   let b = 1;
 
   while (n < 8 && b < array.length) {
-    entry = array[b];
+    const entry = array[b];
 
-    if (entry in PHONES) {
+    if (Object.hasOwn(PHONES, entry)) {
       const x = PHONES[entry];
       if (!res.and(0xfe).eq(x & 0xfen)) {
         res = res.shl(8).or(x);

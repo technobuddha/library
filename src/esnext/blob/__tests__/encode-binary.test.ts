@@ -14,6 +14,6 @@ describe('encodeBinary', () => {
   });
 
   test('binary', () => {
-    expect(encodeBinary(new Uint8Array([0, 1, 2, 3]), 'binary')).toBe('\u0000\u0001\u0002\u0003');
+    expect(encodeBinary(new Uint8Array([0, 1, 2, 3]), 'binary')).toBe('\u{0}\u{1}\u{2}\u{3}');
   });
 });

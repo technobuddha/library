@@ -7,7 +7,7 @@ describe('isValidJsVariable', () => {
     expect(isValidJsVariable('$value')).toBeTrue();
     expect(isValidJsVariable('value123')).toBeTrue();
     expect(isValidJsVariable('π')).toBeTrue();
-    expect(isValidJsVariable('x\u200Cy')).toBeTrue();
+    expect(isValidJsVariable('x\u{200C}y')).toBeTrue();
   });
 
   test('rejects invalid identifier syntax', () => {

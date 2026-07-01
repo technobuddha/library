@@ -30,7 +30,6 @@ export function generateSingularRulesFromPlural(): [RegExp, string][] {
         new RegExp(`(${groupMatch[1]})${replMatch[1]}$`, 'vi'),
         `$1${groupMatch[2]}`,
       ]);
-      continue;
     }
   }
   return invertible;
@@ -105,7 +104,7 @@ export function singular(word: StringLike): string {
   }
 
   // Reverse irregulars
-  if (!result && lc in irregularsReverse) {
+  if (!result && Object.hasOwn(irregularsReverse, lc)) {
     result = matchCase(prefix + irregularsReverse[lc] + suffix, input);
   }
 

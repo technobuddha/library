@@ -184,7 +184,7 @@ describe('Random', () => {
 
       for (let i = 0; i < 100; i++) {
         const result = random.randomInteger(0, 10);
-        expect(Number.isInteger(result)).toBeTrue();
+        expect(Number.isSafeInteger(result)).toBeTrue();
       }
     });
 
@@ -253,7 +253,7 @@ describe('Random', () => {
       const index = random.randomIndex([1, 2, 3, 4, 5]);
 
       expect(index).toBeDefined();
-      expect(Number.isInteger(index)).toBeTrue();
+      expect(Number.isSafeInteger(index)).toBeTrue();
     });
 
     test('should work with different array types', () => {

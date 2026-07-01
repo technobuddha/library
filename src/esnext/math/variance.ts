@@ -23,7 +23,7 @@ import { sum } from './sum.ts';
 export function variance(...dataPoints: NumberLike[]): number {
   const sampleSize = dataPoints.length;
   if (sampleSize < 2) {
-    return Number.NaN;
+    return NaN;
   }
 
   const average = mean(dataPoints);

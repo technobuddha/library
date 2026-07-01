@@ -24,7 +24,7 @@ export function escapeHTML(input: StringLike, { ascii = false }: EscapeOptions =
     splitChars(text).map(
       (c) =>
         entities[c] ??
-        (c < '\u0020' || (c > '\u007E' && c < '\u00a0') || (ascii && c > '\u007F') ?
+        (c < '\u{20}' || (c > '\u{7E}' && c < '\u{A0}') || (ascii && c > '\u{7F}') ?
           `&#${c.codePointAt(0)};`
         : c),
     ),

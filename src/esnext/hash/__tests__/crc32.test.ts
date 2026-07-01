@@ -22,7 +22,7 @@ describe('Crc32', () => {
   });
 
   test('binary encoding', () => {
-    expect(new Crc32().update('x').digest('binary')).toBe('\u008c\u00dc\u0016\u0083');
+    expect(new Crc32().update('x').digest('binary')).toBe('\u{8C}\u{DC}\u{16}\u{83}');
   });
 
   test('hash encoding', () => {

@@ -82,10 +82,11 @@ export function halfMatch(
   const hm1 = halfMatchI(long, short, ceil(long.length / 4));
   // Check again based on the third quarter.
   const hm2 = halfMatchI(long, short, ceil(long.length / 2));
-  let hm: string[] | null;
   if (!hm1 && !hm2) {
     return null;
-  } else if (!hm2) {
+  }
+  let hm: string[] | null;
+  if (!hm2) {
     hm = hm1;
   } else if (hm1) {
     // Both matched.  Select the longest.

@@ -38,7 +38,7 @@ export function deconstructNumber(input: number, precision = 9): DeconstructedNu
   const positive = Math.abs(input);
 
   const numeric = positive.toExponential(prec - 1);
-  const value = Number.parseFloat(numeric);
+  const value = Number(numeric);
   const [m, e] = numeric.split('e');
   const mantissa = cleanEnd(m.replace('.', empty), '0');
   const exponent = Number.parseInt(e);
@@ -68,8 +68,8 @@ export function deconstructNumber(input: number, precision = 9): DeconstructedNu
     const wholeMantissa = `${mantissa.slice(0, 1)}.${mantissa.slice(1, exponent + 1)}`;
     const fractionMantissa = mantissa.slice(exponent + 1);
 
-    const whole = Number.parseFloat(`${wholeMantissa}e${exponent}`);
-    const fraction = Number.parseFloat(`0.${fractionMantissa}e0`);
+    const whole = Number(`${wholeMantissa}e${exponent}`);
+    const fraction = Number(`0.${fractionMantissa}e0`);
 
     return {
       value,

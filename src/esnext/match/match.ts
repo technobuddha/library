@@ -38,10 +38,12 @@ export function match(text: StringLike, pattern: StringLike, location: number): 
   if (str === pat) {
     // Shortcut (potentially not guaranteed by the algorithm)
     return 0;
-  } else if (str.length === 0) {
+  }
+  if (str.length === 0) {
     // Nothing to match.
     return -1;
-  } else if (str.slice(loc, loc + pat.length) === pat) {
+  }
+  if (str.slice(loc, loc + pat.length) === pat) {
     // Perfect match at the perfect spot!  (Includes case of null pat)
     return loc;
   }

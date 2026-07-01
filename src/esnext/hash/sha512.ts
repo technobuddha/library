@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/consistent-destructuring */
 import { U64 } from '../binary/u64.ts';
 
 import { ShaBase } from './sha-base.ts';
@@ -92,9 +91,8 @@ export class Sha512 extends ShaBase {
         .add(w[i - 16]);
     }
 
-    let wi: U64;
     for (let j = 0; j < 80; j++) {
-      wi = w[j];
+      const wi: U64 = w[j];
 
       const m = a.maj(b, c);
       const s0 = a.sigma0();

@@ -205,8 +205,8 @@ describe('deconstructNumber', () => {
   });
 
   test('should handle special numbers', () => {
-    expect(() => deconstructNumber(Number.NaN)).toThrow(TypeError);
-    expect(() => deconstructNumber(Number.POSITIVE_INFINITY)).toThrow(TypeError);
-    expect(() => deconstructNumber(Number.NEGATIVE_INFINITY)).toThrow(TypeError);
+    expect(() => deconstructNumber(NaN)).toThrow(TypeError);
+    expect(() => deconstructNumber(Infinity)).toThrow(TypeError);
+    expect(() => deconstructNumber(-Infinity)).toThrow(TypeError);
   });
 });

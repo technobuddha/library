@@ -74,12 +74,12 @@ export function parseCsv(
       const nextLineIndex = content.indexOf(lineSeparator, i);
       if (nextLineIndex === -1) {
         break; // No more lines
-      } else {
-        i = nextLineIndex + lineSeparator.length;
-        isBeginningOfLine = true;
-        continue;
       }
-    } else if (content.startsWith(quote, i)) {
+      i = nextLineIndex + lineSeparator.length;
+      isBeginningOfLine = true;
+      continue;
+    }
+    if (content.startsWith(quote, i)) {
       // Check for quote at current position
       if (isInsideQuotes) {
         // Check if this is an escaped quote (doubled)

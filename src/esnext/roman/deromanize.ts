@@ -15,7 +15,7 @@ import { glyphValues, type RomanGlyph } from './roman-numeral.ts';
 export function deromanize(val: StringLike): number {
   const values = splitChars(toString(val)).map((g) => glyphValues[g as RomanGlyph]);
   if (values.some((g) => g === undefined)) {
-    return Number.NaN;
+    return NaN;
   }
 
   for (const [thisGlyph, nextGlyph, i] of lookAhead(values)) {

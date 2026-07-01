@@ -4,13 +4,13 @@ import { escapePython } from '../escape-python.ts';
 
 describe('escapePython', () => {
   test('should escape standard sequences', () => {
-    expect(escapePython('\u0007\b\f\n\r\t\v\\')).toBe('\\a\\b\\f\\n\\r\\t\\v\\\\');
+    expect(escapePython('\u{7}\b\f\n\r\t\v\\')).toBe('\\a\\b\\f\\n\\r\\t\\v\\\\');
   });
 
   test('should escape nul as \\0, unless followed by an octal digit', () => {
     expect(escapePython('\0')).toBe('\\0');
     expect(escapePython('\0X')).toBe('\\0X');
-    expect(escapePython('\u00000')).toBe('\\0000');
+    expect(escapePython('\u{0}0')).toBe('\\0000');
   });
 
   test('should not escape most ascii', () => {
@@ -20,9 +20,9 @@ describe('escapePython', () => {
 
   test('should escape non printables as \\xnn', () => {
     // C0 control characters use \xnn
-    expect(escapePython('\u0001')).toBe('\\x01');
+    expect(escapePython('\u{1}')).toBe('\\x01');
     // C1 control characters also use \xnn
-    expect(escapePython('\u0080')).toBe('\\x80');
+    expect(escapePython('\u{80}')).toBe('\\x80');
   });
 
   test('should not escape latin-1 characters', () => {

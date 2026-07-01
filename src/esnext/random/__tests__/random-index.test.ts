@@ -169,7 +169,7 @@ describe('randomIndex', () => {
     const index = randomIndex(list);
 
     expect(index).toBeDefined();
-    expect(Number.isInteger(index)).toBeTrue();
+    expect(Number.isSafeInteger(index)).toBeTrue();
   });
 
   test('should handle two-element array correctly', () => {

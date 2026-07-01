@@ -142,6 +142,7 @@ export function lancaster(input: StringLike): string {
       if (base.length >= (r.l ?? 0)) {
         if (!r.v || hasVowel(base)) {
           // Recursively stem again if further changes are possible.
+          // eslint-disable-next-line unicorn/no-useless-recursion
           return lancaster(base);
         }
       }

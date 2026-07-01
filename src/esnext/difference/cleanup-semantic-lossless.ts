@@ -51,16 +51,20 @@ export function cleanupSemanticLossless(diffs: Difference[]): void {
     if (blankLine1 || blankLine2) {
       // Five points for blank lines.
       return 5;
-    } else if (lineBreak1 || lineBreak2) {
+    }
+    if (lineBreak1 || lineBreak2) {
       // Four points for line breaks.
       return 4;
-    } else if (nonAlphaNumeric1 && !whitespace1 && whitespace2) {
+    }
+    if (nonAlphaNumeric1 && !whitespace1 && whitespace2) {
       // Three points for end of sentences.
       return 3;
-    } else if (whitespace1 || whitespace2) {
+    }
+    if (whitespace1 || whitespace2) {
       // Two points for whitespace.
       return 2;
-    } else if (nonAlphaNumeric1 || nonAlphaNumeric2) {
+    }
+    if (nonAlphaNumeric1 || nonAlphaNumeric2) {
       // One point for non-alphanumeric.
       return 1;
     }

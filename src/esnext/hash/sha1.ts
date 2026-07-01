@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/consistent-destructuring */
 //cspell:words Kepert Ydnar Lostinet
 
 /*!

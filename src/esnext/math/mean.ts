@@ -13,5 +13,5 @@ export function mean(numbers: NumberLike[]): number {
   if (numbers.length > 0) {
     return sum(numbers) / numbers.length;
   }
-  return Number.NaN;
+  return NaN;
 }

@@ -10,9 +10,5 @@
  * @category Transform
  */
 export function toCodePoints(str: string): number[] {
-  const codePoints: number[] = [];
-  for (const char of str) {
-    codePoints.push(char.codePointAt(0)!);
-  }
-  return codePoints;
+  return Array.from(str, (char) => char.codePointAt(0)!);
 }

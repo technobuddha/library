@@ -48,7 +48,7 @@ describe('patchApply', () => {
       { op: 1, text: 'Q' },
     ]);
     const result = patchApply([patch], 'abcdef', options);
-    expect(result.text).toBe('\u0004abcdef');
+    expect(result.text).toBe('\u{4}abcdef');
     expect(result.results).toEqual([true]);
   });
 

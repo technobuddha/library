@@ -18,10 +18,12 @@ import { isDate } from './is-date.ts';
  */
 export function toDate(entity: unknown): Date {
   if (entity === null || entity === undefined) {
-    return new Date(Number.NaN);
-  } else if (isDate(entity)) {
+    return new Date(NaN);
+  }
+  if (isDate(entity)) {
     return entity;
-  } else if (isString(entity) || isNumber(entity)) {
+  }
+  if (isString(entity) || isNumber(entity)) {
     return new Date(entity);
   }
   return new Date(toString(entity));

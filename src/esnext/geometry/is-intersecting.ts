@@ -33,27 +33,27 @@ import { toLineSegment } from './to-line-segment.ts';
  */
 export function isIntersecting(shape: LineSegment | Polygon, polygon: Polygon): boolean {
   if (isPolygon(shape)) {
-    let intersects = false;
+    let didIntersect = false;
     for (const [v0, v1] of lookAhead(toClosed(shape))) {
       if (isIntersecting(toLineSegment(v0, v1), polygon)) {
-        intersects = true;
+        didIntersect = true;
         break;
       }
     }
 
-    return intersects;
+    return didIntersect;
   }
 
-  let intersects = false;
+  let didIntersect = false;
   for (const [v0, v1] of lookAhead(toClosed(polygon))) {
     if (
       lineIntersection(shape, toLineSegment(v0, v1)) ||
       (isOnLine(v0, shape) && isOnLine(v1, shape))
     ) {
-      intersects = true;
+      didIntersect = true;
       break;
     }
   }
 
-  return intersects;
+  return didIntersect;
 }

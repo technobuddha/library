@@ -30,12 +30,12 @@ describe('pad', () => {
 
   test('should handle special numbers', () => {
     expect(pad(negativeZero)).toBe('00');
-    expect(pad(Number.NaN)).toBe('NaN');
+    expect(pad(NaN)).toBe('NaN');
     expect(pad(Infinity)).toBe('Infinity');
     expect(pad(-Infinity)).toBe('-Infinity');
 
     expect(pad(negativeZero, 10)).toBe('0000000000');
-    expect(pad(Number.NaN, 10)).toBe('       NaN');
+    expect(pad(NaN, 10)).toBe('       NaN');
     expect(pad(Infinity, 10)).toBe('  Infinity');
     expect(pad(-Infinity, 10)).toBe(' -Infinity');
   });

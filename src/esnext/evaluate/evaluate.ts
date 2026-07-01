@@ -180,6 +180,7 @@ export function evaluate(expression: StringLike, variables?: Record<string, numb
 
       switch (operator) {
         case '+': {
+          // eslint-disable-next-line unicorn/no-useless-recursion
           return parseUnary();
         }
 
@@ -203,6 +204,7 @@ export function evaluate(expression: StringLike, variables?: Record<string, numb
 
     if (token === '(') {
       consume();
+      // eslint-disable-next-line unicorn/no-declarations-before-early-exit
       const value = parseExpression();
       if (consume() !== ')') {
         throw new Error('Missing closing parenthesis');
@@ -212,6 +214,7 @@ export function evaluate(expression: StringLike, variables?: Record<string, numb
 
     if (token === '|') {
       consume();
+      // eslint-disable-next-line unicorn/no-declarations-before-early-exit
       const value = parseExpression();
       if (consume() !== '|') {
         throw new Error('Missing closing |');
@@ -225,7 +228,7 @@ export function evaluate(expression: StringLike, variables?: Record<string, numb
     }
 
     // Check for variables (includes built-in constants like π, pi, e)
-    if (token in allVariables) {
+    if (Object.hasOwn(allVariables, token)) {
       consume();
       return allVariables[token];
     }
@@ -238,6 +241,7 @@ export function evaluate(expression: StringLike, variables?: Record<string, numb
     return num;
   }
 
+  // eslint-disable-next-line unicorn/no-declarations-before-early-exit
   const result = parseExpression();
 
   if (position < tokens.length) {

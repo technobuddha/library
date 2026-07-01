@@ -145,7 +145,7 @@ export function parseDate(input: string): Date {
     tH = match[4] == null ? 0 : Number.parseInt(match[4]);
     tM = match[5] == null ? 0 : Number.parseInt(match[5]);
     tS = match[6] == null ? 0 : Number.parseInt(match[6]);
-    tF = match[7] == null ? 0 : Number.parseFloat(`0.${match[7]}`) * 1000;
+    tF = match[7] == null ? 0 : Number(`0.${match[7]}`) * 1000;
     if (match[8]?.toLocaleLowerCase() === 'p' && tH !== 12) {
       tH += 12;
     } else if (match[8]?.toLocaleLowerCase() === 'a' && tH === 12) {

@@ -13,9 +13,6 @@ import { isNumber } from './is-number.ts';
 export function isNumeric(input: unknown): boolean {
   return (
     (isNumber(input) && !Number.isNaN(input)) ||
-    (isString(input) &&
-      input.length > 0 &&
-      !isWhitespace(input) &&
-      !Number.isNaN(Number.parseFloat(input)))
+    (isString(input) && input.length > 0 && !isWhitespace(input) && !Number.isNaN(Number(input)))
   );
 }

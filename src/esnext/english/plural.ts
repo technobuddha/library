@@ -56,7 +56,7 @@ export function plural(word: StringLike, quantity?: NumberLike, include = false)
     result = matchCase(prefix + lc + suffix, input);
   }
 
-  if (!result && lc in database.irregulars) {
+  if (!result && Object.hasOwn(database.irregulars, lc)) {
     result = matchCase(prefix + database.irregulars[lc] + suffix, input);
   }
 

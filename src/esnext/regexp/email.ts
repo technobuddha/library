@@ -32,7 +32,7 @@ const EMAIL_USER = re`${EMAIL_GLYPH}+(?:\.${EMAIL_GLYPH}+)*`;
  *
  * @internal
  */
-const EMAIL_QUOTE = /[\u0001-\u0008\u000b\u000c\u000e-\u001f\u0021\u0023-\u005b\u005d-\u007f]/v;
+const EMAIL_QUOTE = /[\u{1}-\u{8}\u{B}\u{C}\u{E}-\u{1F}\u{21}\u{23}-\u{5B}\u{5D}-\u{7F}]/v;
 
 /**
  * Matches escaped characters within a quoted string.
@@ -42,7 +42,7 @@ const EMAIL_QUOTE = /[\u0001-\u0008\u000b\u000c\u000e-\u001f\u0021\u0023-\u005b\
  *
  * @internal
  */
-const EMAIL_ESCAPE = /\\[\u0001-\u0009\u000b\u000c\u000e-\u007f]/v;
+const EMAIL_ESCAPE = /\\[\u{1}-\u{9}\u{B}\u{C}\u{E}-\u{7F}]/v;
 
 /**
  * Matches a quoted local part of an email address (enclosed in double quotes).

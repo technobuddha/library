@@ -25,15 +25,15 @@ describe('encodeUTF32', () => {
 
   test('should handle lone surrogate pairs', () => {
     // High surrogate only
-    expect(Array.from(encodeUTF32('\uD83D'))).toEqual([0xd83d]);
+    expect(Array.from(encodeUTF32('\u{D83D}'))).toEqual([0xd83d]);
     // Low surrogate only
-    expect(Array.from(encodeUTF32('\uDC00'))).toEqual([0xdc00]);
+    expect(Array.from(encodeUTF32('\u{DC00}'))).toEqual([0xdc00]);
     // Invalid pair (high followed by non-low)
-    expect(Array.from(encodeUTF32('\uD83D\u0041'))).toEqual([0xd83d, 0x41]);
+    expect(Array.from(encodeUTF32('\u{D83D}\u{41}'))).toEqual([0xd83d, 0x41]);
   });
 
   test('should encode string with combining marks', () => {
     // e.g. "a" + combining acute accent
-    expect(Array.from(encodeUTF32('a\u0301'))).toEqual([0x61, 0x301]);
+    expect(Array.from(encodeUTF32('a\u{301}'))).toEqual([0x61, 0x301]);
   });
 });

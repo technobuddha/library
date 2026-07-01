@@ -10,7 +10,7 @@ describe('escapeJava', () => {
   test('should escape nul as \\0, unless followed by an octal digit', () => {
     expect(escapeJava('\0')).toBe('\\0');
     expect(escapeJava('\0X')).toBe('\\0X');
-    expect(escapeJava('\u00000')).toBe('\\0000');
+    expect(escapeJava('\u{0}0')).toBe('\\0000');
   });
 
   test('should not escape most ascii', () => {
@@ -19,11 +19,11 @@ describe('escapeJava', () => {
   });
 
   test('should escape non printables as \\unnnn', () => {
-    expect(escapeJava('\u0001')).toBe('\\u0001');
-    expect(escapeJava('\u001f')).toBe('\\u001f');
-    expect(escapeJava('\u007f')).toBe('\\u007f');
+    expect(escapeJava('\u{1}')).toBe('\\u0001');
+    expect(escapeJava('\u{1F}')).toBe('\\u001f');
+    expect(escapeJava('\u{7F}')).toBe('\\u007f');
     // Non-breaking space is considered non-printable whitespace, so it's escaped
-    expect(escapeJava('\u00a0')).toBe('\\u00a0');
+    expect(escapeJava('\u{A0}')).toBe('\\u00a0');
   });
 
   test('should not escape latin-1 characters', () => {

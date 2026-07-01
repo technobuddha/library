@@ -49,13 +49,13 @@ export function unescapeC(input: StringLike): string {
       const c = escape.charAt(1);
 
       if (c === 'a') {
-        return '\u0007';
+        return '\u{7}';
       }
       if (c === 'b') {
         return '\b';
       }
       if (c === 'e') {
-        return '\u001b';
+        return '\u{1B}';
       }
       if (c === 'f') {
         return '\f';

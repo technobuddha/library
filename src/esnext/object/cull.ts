@@ -29,9 +29,7 @@ function culler<O>(obj: O, options: CullOptions): O {
   }
 
   if (isArrayLike(obj)) {
-    const culled = Array.from(obj)
-      .map((item) => culler(item, options))
-      .filter((item) => item != null);
+    const culled = Array.from(obj, (item) => culler(item, options)).filter((item) => item != null);
     return (!emptyArrays || culled.length > 0 ? culled : null) as O;
   }
 
@@ -67,9 +65,7 @@ export function cull<O>(obj: O, options: CullOptions = {}): O {
   }
 
   if (isArrayLike(obj)) {
-    return Array.from(obj)
-      .map((item) => culler(item, options))
-      .filter((item) => item != null) as O;
+    return Array.from(obj, (item) => culler(item, options)).filter((item) => item != null) as O;
   }
 
   return Object.fromEntries(

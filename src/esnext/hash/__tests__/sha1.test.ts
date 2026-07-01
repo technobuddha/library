@@ -24,7 +24,7 @@ describe('Sha1', () => {
 
   test('binary encoding', () => {
     expect(new Sha1().update('x').digest('binary')).toBe(
-      '\u0011\u00f6\u00ad\u008e\u00c5\u002a\u0029\u0084\u00ab\u00aa\u00fd\u007c\u003b\u0051\u0065\u0003\u0078\u005c\u0020\u0072',
+      '\u{11}\u{F6}\u{AD}\u{8E}\u{C5}\u{2A}\u{29}\u{84}\u{AB}\u{AA}\u{FD}\u{7C}\u{3B}\u{51}\u{65}\u{3}\u{78}\u{5C}\u{20}\u{72}',
     );
   });
 

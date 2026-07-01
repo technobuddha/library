@@ -4,8 +4,6 @@ describe('isString', () => {
   test('returns true for primitive strings', () => {
     expect(isString('hello')).toBeTrue();
     expect(isString('')).toBeTrue();
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-conversion
-    expect(isString(String('test'))).toBeTrue();
   });
 
   test('returns true for String objects', () => {

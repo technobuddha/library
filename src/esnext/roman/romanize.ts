@@ -31,7 +31,7 @@ export type RomanizeOptions = {
 export function romanize(input: number, { format = 'standard' }: RomanizeOptions = {}): string {
   const vg = valueGlyphs[format];
 
-  if (input < 1 || input > vg.limit || !Number.isInteger(input)) {
+  if (input < 1 || input > vg.limit || !Number.isSafeInteger(input)) {
     throw new RangeError(`Input must be an integer between 1 and ${vg.limit}`);
   }
 

@@ -93,7 +93,8 @@ export function mathFunctions(expression: string, variables?: Record<string, num
     const numArgs = functions[name];
     if (numArgs >= 0 && args.length !== numArgs) {
       throw new Error(`${name}() takes ${plural('argument', numArgs, true)}`);
-    } else if (numArgs < 0 && args.length < -(numArgs + 1)) {
+    }
+    if (numArgs < 0 && args.length < -(numArgs + 1)) {
       throw new Error(`${name}() takes at least ${plural('argument', -(numArgs + 1), true)}`);
     }
 

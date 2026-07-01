@@ -19,7 +19,8 @@ export function groupCode(input: StringLike): string {
 
   if (group >= 'A' && group <= 'Z') {
     return group;
-  } else if (group === '[') {
+  }
+  if (group === '[') {
     return '[]';
   }
   return '#';

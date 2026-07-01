@@ -175,14 +175,14 @@ describe('tokenize', () => {
     });
 
     test('should handle non-breaking space', () => {
-      expect(mathTokenize('2\u00a0+\u00a03')).toEqual(['2', '+', '3']);
-      expect(mathTokenize('x\u00a0*\u00a0y')).toEqual(['x', '*', 'y']);
+      expect(mathTokenize('2\u{A0}+\u{A0}3')).toEqual(['2', '+', '3']);
+      expect(mathTokenize('x\u{A0}*\u{A0}y')).toEqual(['x', '*', 'y']);
     });
 
     test('should handle various Unicode whitespace characters', () => {
       // Em space (U+2003), Thin space (U+2009)
-      expect(mathTokenize('2\u2003+\u20093')).toEqual(['2', '+', '3']);
-      expect(mathTokenize('a\u2003*\u2009b')).toEqual(['a', '*', 'b']);
+      expect(mathTokenize('2\u{2003}+\u{2009}3')).toEqual(['2', '+', '3']);
+      expect(mathTokenize('a\u{2003}*\u{2009}b')).toEqual(['a', '*', 'b']);
     });
   });
 

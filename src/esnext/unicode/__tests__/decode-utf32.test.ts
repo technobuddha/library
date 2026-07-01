@@ -29,7 +29,7 @@ describe('decodeUTF32', () => {
 
   test('should decode control characters', () => {
     const arr = new Uint32Array([0x00, 0x01, 0x7f]);
-    expect(decodeUTF32(arr)).toBe('\u0000\u0001\u007F');
+    expect(decodeUTF32(arr)).toBe('\u{0}\u{1}\u{7F}');
   });
 
   test('should decode single code point', () => {

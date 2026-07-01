@@ -25,7 +25,7 @@ met:
 notice, this list of conditions and the following disclaimer.
     * Redistributions in binary form must reproduce the above
 copyright notice, this list of conditions and the following disclaimer
-in the documentation and/or other materials provided with the
+in the documentation and/or other matGerials provided with the
 distribution.
     * Neither the name of Google Inc. nor the names of its
 contributors may be used to endorse or promote products derived from
@@ -244,41 +244,6 @@ class Metaphone3 {
   }
 
   /**
-   * Sets word to be encoded.
-   *
-   * @param in - pointer to EXTERNALLY ALLOCATED char string of
-   * the word to be encoded.
-   *
-   */
-  public setWord(inp: string): void {
-    this.inWord = inp.toUpperCase();
-    this.length = this.inWord.length;
-  }
-
-  /**
-   * Sets length allocated for output keys.
-   * If incoming number is greater than maximum allowable
-   * length returned by GetMaximumKeyLength(), set key length
-   * to maximum key length and return false;  otherwise, set key
-   * length to parameter value and return true.
-   *
-   * @param inKeyLength - new length of key.
-   * @returns true if able to set key length to requested value.
-   *
-   */
-  public setKeyLength(inKeyLength: number): boolean {
-    const ikl = Math.max(inKeyLength, 1);
-
-    if (ikl > MAX_KEY_ALLOCATION) {
-      this.metaphLength = MAX_KEY_ALLOCATION;
-      return false;
-    }
-
-    this.metaphLength = ikl;
-    return true;
-  }
-
-  /**
    * Adds an encoding character to the encoded key value string
    *
    * @param main - primary encoding character to be added to encoded key string
@@ -361,79 +326,6 @@ class Metaphone3 {
   }
 
   /**
-   * Retrieves maximum number of characters currently allocated for encoded key.
-   *
-   * @returns short integer representing the length allowed for the key.
-   */
-  public getKeyLength(): number {
-    return this.metaphLength;
-  }
-
-  /**
-   * Retrieves maximum number of characters allowed for encoded key.
-   *
-   * @returns short integer representing the length of allocated storage for the key.
-   */
-  public getMaximumKeyLength(): number {
-    return MAX_KEY_ALLOCATION;
-  }
-
-  /** Sets flag that causes Metaphone3 to encode non-initial vowels. However, even
-   * if there are more than one vowel sound in a vowel sequence (i.e.
-   * vowel diphthong, etc.), only one 'A' will be encoded before the next consonant or the
-   * end of the word.
-   *
-   * @param inEncodeVowels - Non-initial vowels encoded if true, not if false.
-   */
-  public setEncodeVowels(inEncodeVowels: boolean): void {
-    this.encodeVowels = inEncodeVowels;
-  }
-
-  /** Retrieves setting determining whether or not non-initial vowels will be encoded.
-   *
-   * @returns true if the Metaphone3 object has been set to encode non-initial vowels, false if not.
-   */
-  public getEncodeVowels(): boolean {
-    return this.encodeVowels;
-  }
-
-  /** Sets flag that causes Metaphone3 to encode consonants as exactly as possible.
-   * This does not include 'S' vs. 'Z', since americans will pronounce 'S' at the
-   * at the end of many words as 'Z', nor does it include "CH" vs. "SH". It does cause
-   * a distinction to be made between 'B' and 'P', 'D' and 'T', 'G' and 'K', and 'V'
-   * and 'F'.
-   *
-   * @param inEncodeExact - consonants to be encoded "exactly" if true, not if false.
-   */
-  public setEncodeExact(inEncodeExact: boolean): void {
-    this.encodeExact = inEncodeExact;
-  }
-
-  /** Retrieves setting determining whether or not consonants will be encoded "exactly".
-   *
-   * @returns true if the Metaphone3 object has been set to encode "exactly", false if not.
-   */
-  public getEncodeExact(): boolean {
-    return this.encodeExact;
-  }
-
-  /** Retrieves primary encoded key.
-   *
-   * @returns a character pointer to the primary encoded key
-   */
-  public getMetaph(): string {
-    return this.primary;
-  }
-
-  /** Retrieves alternate encoded key, if any.
-   *
-   * @returns a character pointer to the alternate encoded key
-   */
-  public getAlternateMetaph(): string | null {
-    return this.secondary === '' ? null : this.secondary;
-  }
-
-  /**
    * Test for close front vowels
    *
    * @returns true if close front vowel
@@ -464,6 +356,7 @@ class Metaphone3 {
 
     return false;
   }
+
   /**
    * Tests if character is a vowel
    *
@@ -528,57 +421,6 @@ class Metaphone3 {
     const it = this.charAt(arg);
 
     return this.isVowel(it);
-  }
-
-  /**
-   * Skips over vowels in a string. Has exceptions for skipping consonants that
-   * will not be encoded.
-   *
-   * @param at - position, in string to be encoded, of character to start skipping from
-   *
-   * @returns position of next consonant in string to be encoded
-   */
-  private skipVowels(at: number): number {
-    if (at < 0) {
-      return 0;
-    }
-
-    if (at >= this.length) {
-      return this.length;
-    }
-
-    let it = this.charAt(at);
-
-    while (this.isVowel(it) || it === 'W') {
-      if (
-        this.stringAt(at, 'WICZ', 'WITZ', 'WIAK') ||
-        this.stringAt(at - 1, 'EWSKI', 'EWSKY', 'OWSKI', 'OWSKY') ||
-        (this.stringAt(at, 'WICKI', 'WACKI') && at + 4 === this.last)
-      ) {
-        break;
-      }
-
-      at++;
-      if (
-        this.charAt(at - 1) === 'W' &&
-        this.charAt(at) === 'H' &&
-        !(
-          this.stringAt(at, 'HOP') ||
-          this.stringAt(at, 'HIDE', 'HARD', 'HEAD', 'HAWK', 'HERD', 'HOOK', 'HAND', 'HOLE') ||
-          this.stringAt(at, 'HEART', 'HOUSE', 'HOUND') ||
-          this.stringAt(at, 'HAMMER')
-        )
-      ) {
-        at++;
-      }
-
-      if (at > this.length - 1) {
-        break;
-      }
-      it = this.charAt(at);
-    }
-
-    return at;
   }
 
   /**
@@ -678,191 +520,54 @@ class Metaphone3 {
   }
 
   /**
-   * Encodes input string to one or two key values according to Metaphone 3 rules.
+   * Skips over vowels in a string. Has exceptions for skipping consonants that
+   * will not be encoded.
    *
+   * @param at - position, in string to be encoded, of character to start skipping from
+   *
+   * @returns position of next consonant in string to be encoded
    */
-  public encode(): void {
-    this.flagALInversion = false;
-    this.current = 0;
-    this.primary = empty;
-    this.secondary = empty;
-
-    if (this.length < 1) {
-      return;
+  private skipVowels(at: number): number {
+    if (at < 0) {
+      return 0;
     }
 
-    //zero based index
-    this.last = this.length - 1;
+    if (at >= this.length) {
+      return this.length;
+    }
 
-    ///////////main loop//////////////////////////
-    while (
-      !(this.primary.length > this.metaphLength) &&
-      !(this.secondary.length > this.metaphLength)
-    ) {
-      if (this.current >= this.length) {
+    let it = this.charAt(at);
+
+    while (this.isVowel(it) || it === 'W') {
+      if (
+        this.stringAt(at, 'WICZ', 'WITZ', 'WIAK') ||
+        this.stringAt(at - 1, 'EWSKI', 'EWSKY', 'OWSKI', 'OWSKY') ||
+        (this.stringAt(at, 'WICKI', 'WACKI') && at + 4 === this.last)
+      ) {
         break;
       }
 
-      switch (this.charAt(this.current)) {
-        case 'B': {
-          this.encodeB();
-          break;
-        }
-
-        case 'ß':
-        case 'Ç': {
-          this.metaphAdd('S');
-          this.current++;
-          break;
-        }
-
-        case 'C': {
-          this.encodeC();
-          break;
-        }
-
-        case 'D': {
-          this.encodeD();
-          break;
-        }
-
-        case 'F': {
-          this.encodeF();
-          break;
-        }
-
-        case 'G': {
-          this.encodeG();
-          break;
-        }
-
-        case 'H': {
-          this.encodeH();
-          break;
-        }
-
-        case 'J': {
-          this.encodeJ();
-          break;
-        }
-
-        case 'K': {
-          this.encodeK();
-          break;
-        }
-
-        case 'L': {
-          this.encodeL();
-          break;
-        }
-
-        case 'M': {
-          this.encodeM();
-          break;
-        }
-
-        case 'N': {
-          this.encodeN();
-          break;
-        }
-
-        case 'Ñ': {
-          this.metaphAdd('N');
-          this.current++;
-          break;
-        }
-
-        case 'P': {
-          this.encodeP();
-          break;
-        }
-
-        case 'Q': {
-          this.encodeQ();
-          break;
-        }
-
-        case 'R': {
-          this.encodeR();
-          break;
-        }
-
-        case 'S': {
-          this.encodeS();
-          break;
-        }
-
-        case 'T': {
-          this.encodeT();
-          break;
-        }
-
-        case 'Ð': // eth
-        case 'Þ': {
-          // thorn
-
-          this.metaphAdd('0');
-          this.current++;
-          break;
-        }
-
-        case 'V': {
-          this.encodeV();
-          break;
-        }
-
-        case 'W': {
-          this.encodeW();
-          break;
-        }
-
-        case 'X': {
-          this.encodeX();
-          break;
-        }
-
-        case '': {
-          this.metaphAdd('X');
-          this.current++;
-          break;
-        }
-
-        case '': {
-          this.metaphAdd('S');
-          this.current++;
-          break;
-        }
-
-        case 'Z': {
-          this.encodeZ();
-          break;
-        }
-
-        default: {
-          if (this.isVowel(this.charAt(this.current))) {
-            this.encodeVowel();
-            break;
-          }
-
-          this.current++;
-        }
+      at++;
+      if (
+        this.charAt(at - 1) === 'W' &&
+        this.charAt(at) === 'H' &&
+        !(
+          this.stringAt(at, 'HOP') ||
+          this.stringAt(at, 'HIDE', 'HARD', 'HEAD', 'HAWK', 'HERD', 'HOOK', 'HAND', 'HOLE') ||
+          this.stringAt(at, 'HEART', 'HOUSE', 'HOUND') ||
+          this.stringAt(at, 'HAMMER')
+        )
+      ) {
+        at++;
       }
+
+      if (at > this.length - 1) {
+        break;
+      }
+      it = this.charAt(at);
     }
 
-    //only give back m_metaphLength number of chars in m_metaph
-    if (this.primary.length > this.metaphLength) {
-      this.primary = this.primary.slice(0, this.metaphLength);
-    }
-
-    if (this.secondary.length > this.metaphLength) {
-      this.secondary = this.secondary.slice(0, this.metaphLength);
-    }
-
-    // it is possible for the two metaphs to be the same
-    // after truncation. lose the second one if so
-    if (this.primary === this.secondary) {
-      this.secondary = empty;
-    }
+    return at;
   }
 
   /**
@@ -2089,7 +1794,7 @@ class Metaphone3 {
       this.stringAt(this.current - 1, 'ACHALASIA', 'ACHILLEAN', 'ACHIMENES') ||
       this.stringAt(this.current - 1, 'ACHIMELECH', 'ACHITOPHEL') ||
       // e.g. 'inchoate'
-      (this.current - 2 === 0 &&
+      (this.current === 2 &&
         (this.stringAt(this.current - 2, 'INCHOA') ||
           // e.g. 'ischemia'
           this.stringAt(0, 'ISCH'))) ||
@@ -2961,36 +2666,36 @@ class Metaphone3 {
    *
    */
   private encodeGhSpecialCases(): boolean {
-    let handled = false;
+    let isHandled = false;
 
     // special case: 'hiccough' == 'hiccup'
     if (this.stringAt(this.current - 6, 'HICCOUGH')) {
       this.metaphAdd('P');
-      handled = true;
+      isHandled = true;
     }
     // special case: 'lough' alt spelling for scots 'loch'
     else if (this.stringAt(0, 'LOUGH')) {
       this.metaphAdd('K');
-      handled = true;
+      isHandled = true;
     }
     // hungarian
     else if (this.stringAt(0, 'BALOGH')) {
       this.metaphAddExactApprox('G', '', 'K', '');
-      handled = true;
+      isHandled = true;
     }
     // "maclaughlin"
     else if (this.stringAt(this.current - 3, 'LAUGHLIN', 'COUGHLAN', 'LOUGHLIN')) {
       this.metaphAdd('K', 'F');
-      handled = true;
+      isHandled = true;
     } else if (
       this.stringAt(this.current - 3, 'GOUGH') ||
       this.stringAt(this.current - 7, 'COLCLOUGH')
     ) {
       this.metaphAdd('', 'F');
-      handled = true;
+      isHandled = true;
     }
 
-    if (handled) {
+    if (isHandled) {
       this.current += 2;
       return true;
     }
@@ -3610,7 +3315,7 @@ class Metaphone3 {
         !this.stringAt(this.current - 3, 'GINGIV')) ||
       // "gish" but not "largish"
       (this.stringAt(this.current + 1, 'ISH') && this.current > 0 && !this.stringAt(0, 'LARG')) ||
-      (this.stringAt(this.current - 2, 'MAGED', 'MEGID') && !(this.current + 2 === this.last)) ||
+      (this.stringAt(this.current - 2, 'MAGED', 'MEGID') && this.current + 2 !== this.last) ||
       this.stringAt(this.current, 'GEZ') ||
       this.stringAt(0, 'WEGE', 'HAGE') ||
       (this.stringAt(this.current - 2, 'ONGEST', 'UNGEST') &&
@@ -4119,9 +3824,9 @@ class Metaphone3 {
   private encodeSpanishJ2(): boolean {
     // spanish forms e.g. "brujo", "badajoz"
     if (
-      (this.current - 2 === 0 &&
+      (this.current === 2 &&
         this.stringAt(this.current - 2, 'BOJA', 'BAJA', 'BEJA', 'BOJO', 'MOJA', 'MOJI', 'MEJI')) ||
-      (this.current - 3 === 0 &&
+      (this.current === 3 &&
         this.stringAt(
           this.current - 3,
           'FRIJO',
@@ -8089,6 +7794,299 @@ class Metaphone3 {
     }
 
     return false;
+  }
+
+  /**
+   * Sets word to be encoded.
+   *
+   * @param in - pointer to EXTERNALLY ALLOCATED char string of
+   * the word to be encoded.
+   *
+   */
+  public setWord(inp: string): void {
+    this.inWord = inp.toUpperCase();
+    this.length = this.inWord.length;
+  }
+
+  /**
+   * Sets length allocated for output keys.
+   * If incoming number is greater than maximum allowable
+   * length returned by GetMaximumKeyLength(), set key length
+   * to maximum key length and return false;  otherwise, set key
+   * length to parameter value and return true.
+   *
+   * @param inKeyLength - new length of key.
+   * @returns true if able to set key length to requested value.
+   *
+   */
+  public setKeyLength(inKeyLength: number): boolean {
+    const ikl = Math.max(inKeyLength, 1);
+
+    if (ikl > MAX_KEY_ALLOCATION) {
+      this.metaphLength = MAX_KEY_ALLOCATION;
+      return false;
+    }
+
+    this.metaphLength = ikl;
+    return true;
+  }
+
+  /**
+   * Retrieves maximum number of characters currently allocated for encoded key.
+   *
+   * @returns short integer representing the length allowed for the key.
+   */
+  public getKeyLength(): number {
+    return this.metaphLength;
+  }
+
+  /**
+   * Retrieves maximum number of characters allowed for encoded key.
+   *
+   * @returns short integer representing the length of allocated storage for the key.
+   */
+  public getMaximumKeyLength(): number {
+    return MAX_KEY_ALLOCATION;
+  }
+
+  /** Sets flag that causes Metaphone3 to encode non-initial vowels. However, even
+   * if there are more than one vowel sound in a vowel sequence (i.e.
+   * vowel diphthong, etc.), only one 'A' will be encoded before the next consonant or the
+   * end of the word.
+   *
+   * @param willEncodeVowels - Non-initial vowels encoded if true, not if false.
+   */
+  public setEncodeVowels(willEncodeVowels: boolean): void {
+    this.encodeVowels = willEncodeVowels;
+  }
+
+  /** Retrieves setting determining whether or not non-initial vowels will be encoded.
+   *
+   * @returns true if the Metaphone3 object has been set to encode non-initial vowels, false if not.
+   */
+  public getEncodeVowels(): boolean {
+    return this.encodeVowels;
+  }
+
+  /** Sets flag that causes Metaphone3 to encode consonants as exactly as possible.
+   * This does not include 'S' vs. 'Z', since americans will pronounce 'S' at the
+   * at the end of many words as 'Z', nor does it include "CH" vs. "SH". It does cause
+   * a distinction to be made between 'B' and 'P', 'D' and 'T', 'G' and 'K', and 'V'
+   * and 'F'.
+   *
+   * @param willEncodeExact - consonants to be encoded "exactly" if true, not if false.
+   */
+  public setEncodeExact(willEncodeExact: boolean): void {
+    this.encodeExact = willEncodeExact;
+  }
+
+  /** Retrieves setting determining whether or not consonants will be encoded "exactly".
+   *
+   * @returns true if the Metaphone3 object has been set to encode "exactly", false if not.
+   */
+  public getEncodeExact(): boolean {
+    return this.encodeExact;
+  }
+
+  /** Retrieves primary encoded key.
+   *
+   * @returns a character pointer to the primary encoded key
+   */
+  public getMetaph(): string {
+    return this.primary;
+  }
+
+  /** Retrieves alternate encoded key, if any.
+   *
+   * @returns a character pointer to the alternate encoded key
+   */
+  public getAlternateMetaph(): string | null {
+    return this.secondary === '' ? null : this.secondary;
+  }
+
+  /**
+   * Encodes input string to one or two key values according to Metaphone 3 rules.
+   *
+   */
+  public encode(): void {
+    this.flagALInversion = false;
+    this.current = 0;
+    this.primary = empty;
+    this.secondary = empty;
+
+    if (this.length < 1) {
+      return;
+    }
+
+    //zero based index
+    this.last = this.length - 1;
+
+    ///////////main loop//////////////////////////
+    while (this.primary.length <= this.metaphLength && this.secondary.length <= this.metaphLength) {
+      if (this.current >= this.length) {
+        break;
+      }
+
+      switch (this.charAt(this.current)) {
+        case 'B': {
+          this.encodeB();
+          break;
+        }
+
+        case 'ß':
+        case 'Ç': {
+          this.metaphAdd('S');
+          this.current++;
+          break;
+        }
+
+        case 'C': {
+          this.encodeC();
+          break;
+        }
+
+        case 'D': {
+          this.encodeD();
+          break;
+        }
+
+        case 'F': {
+          this.encodeF();
+          break;
+        }
+
+        case 'G': {
+          this.encodeG();
+          break;
+        }
+
+        case 'H': {
+          this.encodeH();
+          break;
+        }
+
+        case 'J': {
+          this.encodeJ();
+          break;
+        }
+
+        case 'K': {
+          this.encodeK();
+          break;
+        }
+
+        case 'L': {
+          this.encodeL();
+          break;
+        }
+
+        case 'M': {
+          this.encodeM();
+          break;
+        }
+
+        case 'N': {
+          this.encodeN();
+          break;
+        }
+
+        case 'Ñ': {
+          this.metaphAdd('N');
+          this.current++;
+          break;
+        }
+
+        case 'P': {
+          this.encodeP();
+          break;
+        }
+
+        case 'Q': {
+          this.encodeQ();
+          break;
+        }
+
+        case 'R': {
+          this.encodeR();
+          break;
+        }
+
+        case 'S': {
+          this.encodeS();
+          break;
+        }
+
+        case 'T': {
+          this.encodeT();
+          break;
+        }
+
+        case 'Ð': // eth
+        case 'Þ': {
+          // thorn
+
+          this.metaphAdd('0');
+          this.current++;
+          break;
+        }
+
+        case 'V': {
+          this.encodeV();
+          break;
+        }
+
+        case 'W': {
+          this.encodeW();
+          break;
+        }
+
+        case 'X': {
+          this.encodeX();
+          break;
+        }
+
+        case '': {
+          this.metaphAdd('X');
+          this.current++;
+          break;
+        }
+
+        case '': {
+          this.metaphAdd('S');
+          this.current++;
+          break;
+        }
+
+        case 'Z': {
+          this.encodeZ();
+          break;
+        }
+
+        default: {
+          if (this.isVowel(this.charAt(this.current))) {
+            this.encodeVowel();
+            break;
+          }
+
+          this.current++;
+        }
+      }
+    }
+
+    //only give back m_metaphLength number of chars in m_metaph
+    if (this.primary.length > this.metaphLength) {
+      this.primary = this.primary.slice(0, this.metaphLength);
+    }
+
+    if (this.secondary.length > this.metaphLength) {
+      this.secondary = this.secondary.slice(0, this.metaphLength);
+    }
+
+    // it is possible for the two metaphs to be the same
+    // after truncation. lose the second one if so
+    if (this.primary === this.secondary) {
+      this.secondary = empty;
+    }
   }
 }
 

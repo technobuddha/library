@@ -105,8 +105,10 @@ describe('JSONSet', () => {
       { x: 3, y: 4 },
     ]);
     const results: Cartesian[] = [];
-    // eslint-disable-next-line unicorn/no-array-for-each
-    set.forEach((value) => results.push(value));
+    // eslint-disable-next-line github/array-foreach
+    set.forEach((value) => {
+      results.push(value);
+    });
     expect(results).toEqual([
       { x: 1, y: 2 },
       { x: 3, y: 4 },

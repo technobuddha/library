@@ -4,7 +4,7 @@ import { unescapePython } from '../unescape-python.ts';
 
 describe('unescapePython', () => {
   test('should unescape standard sequences', () => {
-    expect(unescapePython('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"')).toBe('\u0007\b\f\n\r\t\v\\\'"');
+    expect(unescapePython('\\a\\b\\f\\n\\r\\t\\v\\\\\\\'\\"')).toBe('\u{7}\b\f\n\r\t\v\\\'"');
   });
 
   test('should support non-standard sequences', () => {
@@ -15,24 +15,24 @@ describe('unescapePython', () => {
     expect(unescapePython('\\0')).toBe('\0');
     expect(unescapePython('\\00')).toBe('\0');
     expect(unescapePython('\\000')).toBe('\0');
-    expect(unescapePython('\\0000')).toBe('\u00000');
+    expect(unescapePython('\\0000')).toBe('\u{0}0');
   });
 
   test('should unescape hex', () => {
     expect(unescapePython('\\x00')).toBe('\0');
-    expect(unescapePython('\\x000')).toBe('\u00000');
-    expect(unescapePython('\\x0000')).toBe('\u000000');
+    expect(unescapePython('\\x000')).toBe('\u{0}0');
+    expect(unescapePython('\\x0000')).toBe('\u{0}00');
   });
 
   test('should unescape unicode', () => {
     expect(unescapePython('\\u0000')).toBe('\0');
-    expect(unescapePython('\\u00000')).toBe('\u00000');
+    expect(unescapePython('\\u00000')).toBe('\u{0}0');
     expect(unescapePython('\\u0000X')).toBe('\0X');
   });
 
   test('should unescape extended unicode', () => {
     expect(unescapePython('\\U00000000')).toBe('\0');
-    expect(unescapePython('\\U000000000')).toBe('\u00000');
+    expect(unescapePython('\\U000000000')).toBe('\u{0}0');
     expect(unescapePython('\\U00000000X')).toBe('\0X');
   });
 

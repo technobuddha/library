@@ -39,7 +39,8 @@ export function wordwrap(
   const text = toString(input);
   if (width <= 0) {
     return text;
-  } else if (cut) {
+  }
+  if (cut) {
     let result = empty;
 
     // walk through each character and add separators where appropriate

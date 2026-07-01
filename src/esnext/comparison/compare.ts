@@ -29,36 +29,47 @@ export function compare(a: unknown, b: unknown): number {
 
   if (pa === undefined && pb === undefined) {
     return 0;
-  } else if (pa === undefined) {
+  }
+  if (pa === undefined) {
     return -1;
-  } else if (pb === undefined) {
+  }
+  if (pb === undefined) {
     return 1;
-  } else if (pa === null && pb === null) {
+  }
+  if (pa === null && pb === null) {
     return 0;
-  } else if (pa === null) {
+  }
+  if (pa === null) {
     return -1;
-  } else if (pb === null) {
+  }
+  if (pb === null) {
     return 1;
-  } else if (typeof pa !== 'string' && typeof pb !== 'string') {
+  }
+  if (typeof pa !== 'string' && typeof pb !== 'string') {
     const na = Number(pa);
     const nb = Number(pb);
 
     if (Number.isNaN(na) && Number.isNaN(nb)) {
       return 0;
-    } else if (Number.isNaN(na)) {
+    }
+    if (Number.isNaN(na)) {
       return -1;
-    } else if (Number.isNaN(nb)) {
+    }
+    if (Number.isNaN(nb)) {
       return 1;
-    } else if (na === nb) {
+    }
+    if (na === nb) {
       return 0;
-    } else if (na < nb) {
+    }
+    if (na < nb) {
       return -1;
     }
     return 1;
   }
   if (pa === pb) {
     return 0;
-  } else if ((pa as number) < (pb as number)) {
+  }
+  if ((pa as number) < (pb as number)) {
     return -1;
   }
   return 1;

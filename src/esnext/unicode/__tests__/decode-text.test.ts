@@ -4,7 +4,7 @@ import { replacementCharacter } from '../unicode.ts';
 describe('decodeText', () => {
   test('should not change ASCII', () => {
     expect(decodeText([0x61, 0x62, 0x63, 0x64, 0x65, 0x66])).toBe('abcdef');
-    expect(decodeText([0x00, 0x01, 0x02, 0x03, 0x7f])).toBe('\u0000\u0001\u0002\u0003\u007F');
+    expect(decodeText([0x00, 0x01, 0x02, 0x03, 0x7f])).toBe('\u{0}\u{1}\u{2}\u{3}\u{7F}');
   });
 
   test('two byte ut8 sequences', () => {

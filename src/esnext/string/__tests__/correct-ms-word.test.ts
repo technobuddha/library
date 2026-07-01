@@ -2,7 +2,7 @@ import { correctMSWord } from '../correct-ms-word.ts';
 
 describe('correctMSWord', () => {
   test('should handle special characters', () => {
-    expect(correctMSWord('\u00A0')).toBe(' ');
+    expect(correctMSWord('\u{A0}')).toBe(' ');
     expect(correctMSWord('–—')).toBe('--');
     expect(correctMSWord('‘’')).toBe("''");
     expect(correctMSWord('‹›')).toBe('<>');

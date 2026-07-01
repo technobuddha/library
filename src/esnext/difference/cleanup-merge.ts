@@ -45,7 +45,7 @@ export function cleanupMerge(diffs: Difference[]): void {
             const prefix = commonPrefix(textInsert, textDelete);
             if (prefix.length > 0) {
               if (
-                pointer - countDelete - countInsert > 0 &&
+                pointer - countDelete > countInsert &&
                 diffs[pointer - countDelete - countInsert - 1].op === DIFFERENCE_EQUAL
               ) {
                 diffs[pointer - countDelete - countInsert - 1].text += textInsert.slice(
@@ -53,7 +53,7 @@ export function cleanupMerge(diffs: Difference[]): void {
                   prefix.length,
                 );
               } else {
-                diffs.splice(0, 0, {
+                diffs.unshift({
                   op: DIFFERENCE_EQUAL,
                   text: textInsert.slice(0, prefix.length),
                 });

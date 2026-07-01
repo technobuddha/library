@@ -13,6 +13,11 @@ import { HashBase } from './hash-base.ts';
  */
 export abstract class ShaBase extends HashBase {
   /**
+   * The current length of the data processed or stored.
+   * Used internally to track the number of bytes or elements handled by the hash algorithm.
+   */
+  private len: number;
+  /**
    * Internal buffer used to store a block of data for hashing operations.
    * This buffer is typically filled with input data and processed in chunks
    * according to the hash algorithm's block size.
@@ -30,11 +35,6 @@ export abstract class ShaBase extends HashBase {
    * @readonly
    */
   protected readonly finalSize: number;
-  /**
-   * The current length of the data processed or stored.
-   * Used internally to track the number of bytes or elements handled by the hash algorithm.
-   */
-  private len: number;
 
   /**
    * Creates a new instance of the hash base class.

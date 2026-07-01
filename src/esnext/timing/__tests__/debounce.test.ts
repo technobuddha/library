@@ -146,14 +146,18 @@ describe('debounce', () => {
   });
 
   test('throws if environment does not support setTimeout/clearTimeout', () => {
+    // eslint-disable-next-line unicorn/no-unnecessary-global-this
     const originalSetTimeout = globalThis.setTimeout;
+    // eslint-disable-next-line unicorn/no-unnecessary-global-this
     const originalClearTimeout = globalThis.clearTimeout;
     delete (globalThis as Record<string, unknown>).setTimeout;
     delete (globalThis as Record<string, unknown>).clearTimeout;
 
     expect(() => debounce(() => {}, 50)).toThrow(TypeError);
 
+    // eslint-disable-next-line unicorn/no-global-object-property-assignment
     globalThis.setTimeout = originalSetTimeout;
+    // eslint-disable-next-line unicorn/no-global-object-property-assignment
     globalThis.clearTimeout = originalClearTimeout;
   });
 

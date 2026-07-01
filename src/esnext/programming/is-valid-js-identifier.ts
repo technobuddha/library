@@ -1,4 +1,4 @@
-const VALID_IDENTIFIER = /^[$_\p{ID_Start}][$_\p{ID_Continue}\u200C\u200D]*$/v;
+const VALID_IDENTIFIER = /^[$_\p{ID_Start}][$_\p{ID_Continue}\u{200C}\u{200D}]*$/v;
 
 /**
  * Determines whether a string is a syntactically valid JavaScript identifier.

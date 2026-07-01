@@ -17,7 +17,7 @@ describe('toPrimitive', () => {
     expect(toPrimitive(1)).toBe(1);
     expect(toPrimitive(Infinity)).toBe(Infinity);
     expect(toPrimitive(-Infinity)).toBe(-Infinity);
-    expect(Number.isNaN(toPrimitive(Number.NaN))).toBeTrue();
+    expect(Number.isNaN(toPrimitive(NaN))).toBeTrue();
   });
 
   test('should handle booleans', () => {
@@ -104,9 +104,7 @@ describe('toPrimitive', () => {
   test('should handle regular objects with Symbol.toPrimitive', () => {
     // Regular objects (not Object.create(null)) that have Symbol.toPrimitive
     const obj = {
-      [Symbol.toPrimitive](hint: string) {
-        return `primitive-${hint}`;
-      },
+      [Symbol.toPrimitive]: (hint: string) => `primitive-${hint}`,
     };
 
     expect(toPrimitive(obj)).toBe('primitive-default');

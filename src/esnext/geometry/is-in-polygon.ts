@@ -32,7 +32,7 @@ export function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon
   }
 
   if (isPolygon(object)) {
-    let inside = true;
+    let isInside = true;
     const closed = toClosed(object);
 
     for (let i = 0, l = closed.length - 1; i < l; i++) {
@@ -40,18 +40,18 @@ export function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon
 
       // Points test
       if (!isInPolygon(v0, polygon)) {
-        inside = false;
+        isInside = false;
         break;
       }
 
       // Lines test
       if (isIntersecting(toLineSegment(v0, closed[i + 1]), polygon)) {
-        inside = false;
+        isInside = false;
         break;
       }
     }
 
-    return inside;
+    return isInside;
   }
 
   if (isRect(object)) {
@@ -78,7 +78,7 @@ export function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon
   }
 
   // Use ray-casting algorithm for interior points
-  let inside = false;
+  let isInside = false;
 
   for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
     const pi = polygon[i];
@@ -88,9 +88,9 @@ export function isInPolygon(object: Cartesian | Rect | Polygon, polygon: Polygon
       pi.y > object.y !== pj.y > object.y &&
       object.x < ((pj.x - pi.x) * (object.y - pi.y)) / (pj.y - pi.y) + pi.x
     ) {
-      inside = !inside;
+      isInside = !isInside;
     }
   }
 
-  return inside;
+  return isInside;
 }

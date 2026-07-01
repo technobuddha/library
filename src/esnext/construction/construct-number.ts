@@ -22,7 +22,7 @@ export function constructNumber(
 
   return (
     deconstructed.sign *
-    Number.parseFloat(
+    Number(
       `${deconstructed.mantissa.slice(0, 1)}.${deconstructed.mantissa.slice(1)}e${deconstructed.exponent}`,
     )
   );

@@ -24,7 +24,9 @@ type UnicodeTranscription = {
 };
 
 const unicode: Map<number, UnicodeTranscription> = new Map();
-for (const { codePoint, character, name, display, category, combining } of Object.values(unicodeData)) {
+for (const { codePoint, character, name, display, category, combining } of Object.values(
+  unicodeData,
+)) {
   unicode.set(codePoint, {
     ascii: null,
     romanization: null,
@@ -56,7 +58,7 @@ const code1: string[] = [
   '// cspell:disable',
   '// prettier-ignore',
   'export const asciiMapping: (string | undefined)[] = [',
-  '// eslint-disable-next-line no-sparse-arrays, unicorn/no-hex-escape',
+  '// eslint-disable-next-line no-sparse-arrays, prefer-unicode-code-point-escapes',
 ];
 
 const code2: string[] = [

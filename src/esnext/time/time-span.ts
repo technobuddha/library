@@ -20,6 +20,23 @@ import {
  */
 export class TimeSpan {
   /**
+   * Compare two TimeSpans
+   *
+   * @param t1 - First TimeSpan
+   * @param t2 - Second TimeSpan
+   * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
+   */
+  public static compare(t1: TimeSpan, t2: TimeSpan): number {
+    return (
+      t1.ticks === t2.ticks ? 0
+      : Math.abs(t1.ticks) > Math.abs(t2.ticks) ? 1
+      : -1
+    );
+  }
+
+  private readonly clicks: number;
+
+  /**
    * Create a new TimeSpan
    */
   public constructor();
@@ -59,11 +76,11 @@ export class TimeSpan {
   public constructor(text: string);
   public constructor(...args: unknown[]) {
     let sign = 1;
-    let d = 0;
-    let h = 0;
-    let m = 0;
-    let s = 0;
-    let ms = 0;
+    let d: number;
+    let h: number;
+    let m: number;
+    let s: number;
+    let ms: number;
 
     switch (args.length) {
       case 0: {
@@ -92,7 +109,7 @@ export class TimeSpan {
             h = Number(matches[2]);
             m = Number(matches[3]);
             s = Number(matches[4]);
-            ms = matches[5] ? floor(Number(`0.${matches[5]}`) * 1000) : Number.NaN;
+            ms = matches[5] ? floor(Number(`0.${matches[5]}`) * 1000) : NaN;
 
             while (Number.isNaN(s)) {
               s = m;
@@ -143,8 +160,6 @@ export class TimeSpan {
         (s ? s * ticksPerSecond : 0) +
         (ms || 0));
   }
-
-  private readonly clicks: number;
 
   /**
    * Get the days portion
@@ -254,7 +269,7 @@ export class TimeSpan {
       } as { [key: string]: string };
       // cspell:disable-next-line
       return mask.replaceAll(/[dmhsf]{1,2}|"[^"]*"|'[^']*'/gv, ($0) =>
-        $0 in flags ? flags[$0] : $0.slice(1, -1),
+        Object.hasOwn(flags, $0) ? flags[$0] : $0.slice(1, -1),
       );
     }
     const D = this.days;
@@ -294,20 +309,5 @@ export class TimeSpan {
    */
   public add(other: TimeSpan): TimeSpan {
     return new TimeSpan(this.ticks + other.ticks);
-  }
-
-  /**
-   * Compare two TimeSpans
-   *
-   * @param t1 - First TimeSpan
-   * @param t2 - Second TimeSpan
-   * @returns -1 if the first time span is less then the second, 0 if they are equal, 1 if the first is greater
-   */
-  public static compare(t1: TimeSpan, t2: TimeSpan): number {
-    return (
-      t1.ticks === t2.ticks ? 0
-      : Math.abs(t1.ticks) > Math.abs(t2.ticks) ? 1
-      : -1
-    );
   }
 }

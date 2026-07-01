@@ -12,31 +12,31 @@ describe('isPrintable', () => {
   });
 
   test('should return false for C0 control codes', () => {
-    expect(isPrintable('\u0000')).toBeFalse(); // NUL
-    expect(isPrintable('\u0001')).toBeFalse(); // SOH
-    expect(isPrintable('\u0007')).toBeFalse(); // Bell
+    expect(isPrintable('\u{0}')).toBeFalse(); // NUL
+    expect(isPrintable('\u{1}')).toBeFalse(); // SOH
+    expect(isPrintable('\u{7}')).toBeFalse(); // Bell
     expect(isPrintable('\b')).toBeFalse(); // Backspace (U+0008)
     expect(isPrintable('\t')).toBeFalse(); // Tab (U+0009)
     expect(isPrintable('\n')).toBeFalse(); // Newline (U+000A)
     expect(isPrintable('\v')).toBeFalse(); // Vertical tab (U+000B)
     expect(isPrintable('\f')).toBeFalse(); // Form feed (U+000C)
     expect(isPrintable('\r')).toBeFalse(); // Carriage return (U+000D)
-    expect(isPrintable('\u001f')).toBeFalse(); // Unit separator
+    expect(isPrintable('\u{1F}')).toBeFalse(); // Unit separator
   });
 
   test('should return false for DEL', () => {
-    expect(isPrintable('\u007f')).toBeFalse(); // DEL
+    expect(isPrintable('\u{7F}')).toBeFalse(); // DEL
   });
 
   test('should return false for C1 control codes', () => {
-    expect(isPrintable('\u0080')).toBeFalse(); // First C1 control
-    expect(isPrintable('\u0081')).toBeFalse();
-    expect(isPrintable('\u0090')).toBeFalse();
-    expect(isPrintable('\u009f')).toBeFalse(); // Last C1 control
+    expect(isPrintable('\u{80}')).toBeFalse(); // First C1 control
+    expect(isPrintable('\u{81}')).toBeFalse();
+    expect(isPrintable('\u{90}')).toBeFalse();
+    expect(isPrintable('\u{9F}')).toBeFalse(); // Last C1 control
   });
 
   test('should return false for non-breaking space', () => {
-    expect(isPrintable('\u00a0')).toBeFalse(); // Non-breaking space
+    expect(isPrintable('\u{A0}')).toBeFalse(); // Non-breaking space
   });
 
   test('should return true for printable Latin-1 characters', () => {
@@ -47,61 +47,61 @@ describe('isPrintable', () => {
   });
 
   test('should return false for soft hyphen', () => {
-    expect(isPrintable('\u00ad')).toBeFalse(); // Soft hyphen
+    expect(isPrintable('\u{AD}')).toBeFalse(); // Soft hyphen
   });
 
   test('should return false for format characters', () => {
-    expect(isPrintable('\u034f')).toBeFalse(); // Combining grapheme joiner
-    expect(isPrintable('\u061c')).toBeFalse(); // Arabic letter mark
+    expect(isPrintable('\u{34F}')).toBeFalse(); // Combining grapheme joiner
+    expect(isPrintable('\u{61C}')).toBeFalse(); // Arabic letter mark
   });
 
   test('should return false for whitespace characters', () => {
-    expect(isPrintable('\u1680')).toBeFalse(); // Ogham space mark
-    expect(isPrintable('\u180e')).toBeFalse(); // Mongolian vowel separator
-    expect(isPrintable('\u2000')).toBeFalse(); // En quad
-    expect(isPrintable('\u2001')).toBeFalse(); // Em quad
-    expect(isPrintable('\u2002')).toBeFalse(); // En space
-    expect(isPrintable('\u2003')).toBeFalse(); // Em space
-    expect(isPrintable('\u2004')).toBeFalse(); // Three-per-em space
-    expect(isPrintable('\u2005')).toBeFalse(); // Four-per-em space
-    expect(isPrintable('\u2006')).toBeFalse(); // Six-per-em space
-    expect(isPrintable('\u2007')).toBeFalse(); // Figure space
-    expect(isPrintable('\u2008')).toBeFalse(); // Punctuation space
-    expect(isPrintable('\u2009')).toBeFalse(); // Thin space
-    expect(isPrintable('\u200a')).toBeFalse(); // Hair space
-    expect(isPrintable('\u202f')).toBeFalse(); // Narrow no-break space
-    expect(isPrintable('\u205f')).toBeFalse(); // Medium mathematical space
-    expect(isPrintable('\u3000')).toBeFalse(); // Ideographic space
+    expect(isPrintable('\u{1680}')).toBeFalse(); // Ogham space mark
+    expect(isPrintable('\u{180E}')).toBeFalse(); // Mongolian vowel separator
+    expect(isPrintable('\u{2000}')).toBeFalse(); // En quad
+    expect(isPrintable('\u{2001}')).toBeFalse(); // Em quad
+    expect(isPrintable('\u{2002}')).toBeFalse(); // En space
+    expect(isPrintable('\u{2003}')).toBeFalse(); // Em space
+    expect(isPrintable('\u{2004}')).toBeFalse(); // Three-per-em space
+    expect(isPrintable('\u{2005}')).toBeFalse(); // Four-per-em space
+    expect(isPrintable('\u{2006}')).toBeFalse(); // Six-per-em space
+    expect(isPrintable('\u{2007}')).toBeFalse(); // Figure space
+    expect(isPrintable('\u{2008}')).toBeFalse(); // Punctuation space
+    expect(isPrintable('\u{2009}')).toBeFalse(); // Thin space
+    expect(isPrintable('\u{200A}')).toBeFalse(); // Hair space
+    expect(isPrintable('\u{202F}')).toBeFalse(); // Narrow no-break space
+    expect(isPrintable('\u{205F}')).toBeFalse(); // Medium mathematical space
+    expect(isPrintable('\u{3000}')).toBeFalse(); // Ideographic space
   });
 
   test('should return false for zero-width characters', () => {
-    expect(isPrintable('\u200b')).toBeFalse(); // Zero width space
-    expect(isPrintable('\u200c')).toBeFalse(); // Zero width non-joiner
-    expect(isPrintable('\u200d')).toBeFalse(); // Zero width joiner
-    expect(isPrintable('\ufeff')).toBeFalse(); // Zero width no-break space
+    expect(isPrintable('\u{200B}')).toBeFalse(); // Zero width space
+    expect(isPrintable('\u{200C}')).toBeFalse(); // Zero width non-joiner
+    expect(isPrintable('\u{200D}')).toBeFalse(); // Zero width joiner
+    expect(isPrintable('\u{FEFF}')).toBeFalse(); // Zero width no-break space
   });
 
   test('should return false for bidirectional formatting characters', () => {
-    expect(isPrintable('\u200e')).toBeFalse(); // Left-to-right mark
-    expect(isPrintable('\u200f')).toBeFalse(); // Right-to-left mark
-    expect(isPrintable('\u202a')).toBeFalse(); // Left-to-right embedding
-    expect(isPrintable('\u202b')).toBeFalse(); // Right-to-left embedding
-    expect(isPrintable('\u202c')).toBeFalse(); // Pop directional formatting
-    expect(isPrintable('\u202d')).toBeFalse(); // Left-to-right override
-    expect(isPrintable('\u202e')).toBeFalse(); // Right-to-left override
-    expect(isPrintable('\u2066')).toBeFalse(); // Left-to-right isolate
-    expect(isPrintable('\u2067')).toBeFalse(); // Right-to-left isolate
-    expect(isPrintable('\u2068')).toBeFalse(); // First strong isolate
-    expect(isPrintable('\u2069')).toBeFalse(); // Pop directional isolate
+    expect(isPrintable('\u{200E}')).toBeFalse(); // Left-to-right mark
+    expect(isPrintable('\u{200F}')).toBeFalse(); // Right-to-left mark
+    expect(isPrintable('\u{202A}')).toBeFalse(); // Left-to-right embedding
+    expect(isPrintable('\u{202B}')).toBeFalse(); // Right-to-left embedding
+    expect(isPrintable('\u{202C}')).toBeFalse(); // Pop directional formatting
+    expect(isPrintable('\u{202D}')).toBeFalse(); // Left-to-right override
+    expect(isPrintable('\u{202E}')).toBeFalse(); // Right-to-left override
+    expect(isPrintable('\u{2066}')).toBeFalse(); // Left-to-right isolate
+    expect(isPrintable('\u{2067}')).toBeFalse(); // Right-to-left isolate
+    expect(isPrintable('\u{2068}')).toBeFalse(); // First strong isolate
+    expect(isPrintable('\u{2069}')).toBeFalse(); // Pop directional isolate
   });
 
   test('should return false for line and paragraph separators', () => {
-    expect(isPrintable('\u2028')).toBeFalse(); // Line separator
-    expect(isPrintable('\u2029')).toBeFalse(); // Paragraph separator
+    expect(isPrintable('\u{2028}')).toBeFalse(); // Line separator
+    expect(isPrintable('\u{2029}')).toBeFalse(); // Paragraph separator
   });
 
   test('should return false for word joiner', () => {
-    expect(isPrintable('\u2060')).toBeFalse(); // Word joiner
+    expect(isPrintable('\u{2060}')).toBeFalse(); // Word joiner
   });
 
   test('should return true for printable BMP characters', () => {
@@ -113,15 +113,15 @@ describe('isPrintable', () => {
   });
 
   test('should return false for private use area', () => {
-    expect(isPrintable('\ue000')).toBeFalse(); // First private use
-    expect(isPrintable('\ue500')).toBeFalse(); // Middle private use
-    expect(isPrintable('\uf8ff')).toBeFalse(); // Last private use
+    expect(isPrintable('\u{E000}')).toBeFalse(); // First private use
+    expect(isPrintable('\u{E500}')).toBeFalse(); // Middle private use
+    expect(isPrintable('\u{F8FF}')).toBeFalse(); // Last private use
   });
 
   test('should return false for non-characters', () => {
-    expect(isPrintable('\ufdd0')).toBeFalse(); // First non-character
-    expect(isPrintable('\ufde0')).toBeFalse(); // Middle non-character
-    expect(isPrintable('\ufdef')).toBeFalse(); // Last non-character
+    expect(isPrintable('\u{FDD0}')).toBeFalse(); // First non-character
+    expect(isPrintable('\u{FDE0}')).toBeFalse(); // Middle non-character
+    expect(isPrintable('\u{FDEF}')).toBeFalse(); // Last non-character
   });
 
   test('should work with code points as numbers', () => {

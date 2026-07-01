@@ -26,6 +26,11 @@ import { jsonSerialize } from './json-serialize.ts';
 export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
   protected map = new Map<string, V>();
 
+  /**
+   * The string tag used when calling Object.prototype.toString on instances of this class.
+   */
+  public readonly [Symbol.toStringTag] = 'JSONMap';
+
   public constructor(values?: Iterable<[K, V]> | null) {
     if (values) {
       for (const [k, v] of values) {
@@ -33,11 +38,6 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
       }
     }
   }
-
-  /**
-   * The string tag used when calling Object.prototype.toString on instances of this class.
-   */
-  public readonly [Symbol.toStringTag] = 'JSONMap';
 
   /**
    * Returns the number of elements in the map.
@@ -64,7 +64,7 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
    * Returns an iterator over the deserialized key-value pairs in the map.
    */
   public *entries(): MapIterator<[K, V]> {
-    for (const [key, value] of this.map.entries()) {
+    for (const [key, value] of this.map) {
       yield [jsonDeserialize(key) as K, value];
     }
   }

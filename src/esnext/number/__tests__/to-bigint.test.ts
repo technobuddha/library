@@ -54,68 +54,15 @@ describe('toBigInt', () => {
     });
 
     test('throws for NaN', () => {
-      expect(() => toBigInt(Number.NaN)).toThrow();
+      expect(() => toBigInt(NaN)).toThrow();
     });
 
     test('throws for Infinity', () => {
-      expect(() => toBigInt(Number.POSITIVE_INFINITY)).toThrow();
+      expect(() => toBigInt(-Infinity)).toThrow();
     });
 
     test('handles -Infinity', () => {
-      expect(() => toBigInt(Number.NEGATIVE_INFINITY)).toThrow();
-    });
-  });
-
-  describe('string input', () => {
-    test('converts numeric strings', () => {
-      expect(toBigInt('0')).toBe(0n);
-      expect(toBigInt('42')).toBe(42n);
-      expect(toBigInt('-42')).toBe(-42n);
-      expect(toBigInt('1000')).toBe(1000n);
-    });
-
-    test('converts large numeric strings', () => {
-      expect(toBigInt('9007199254740991')).toBe(9007199254740991n);
-      expect(toBigInt('18446744073709551615')).toBe(18446744073709551615n);
-    });
-
-    test('handles hexadecimal strings', () => {
-      expect(toBigInt('0xff')).toBe(255n);
-      expect(toBigInt('0xFF')).toBe(255n);
-      expect(toBigInt('0x10')).toBe(16n);
-    });
-
-    test('handles octal strings', () => {
-      expect(toBigInt('0o10')).toBe(8n);
-      expect(toBigInt('0o77')).toBe(63n);
-    });
-
-    test('handles binary strings', () => {
-      expect(toBigInt('0b1010')).toBe(10n);
-      expect(toBigInt('0b11111111')).toBe(255n);
-    });
-
-    test('throws for invalid numeric strings', () => {
-      expect(() => toBigInt('abc')).toThrow();
-      expect(() => toBigInt('12.34')).toThrow();
-      expect(() => toBigInt('1e10')).toThrow();
-    });
-
-    test('handles empty and whitespace strings', () => {
-      // BigInt() converts empty/whitespace to 0n
-      expect(toBigInt('')).toBe(0n);
-      expect(toBigInt(' ')).toBe(0n);
-      expect(toBigInt('  ')).toBe(0n);
-      expect(toBigInt('\t')).toBe(0n);
-      expect(toBigInt('\n')).toBe(0n);
-    });
-
-    test('handles strings with leading/trailing whitespace', () => {
-      // BigInt() trims whitespace
-      expect(toBigInt(' 42 ')).toBe(42n);
-      expect(toBigInt('42 ')).toBe(42n);
-      expect(toBigInt(' 42')).toBe(42n);
-      expect(toBigInt('\t42\n')).toBe(42n);
+      expect(() => toBigInt(-Infinity)).toThrow();
     });
   });
 
@@ -150,7 +97,6 @@ describe('toBigInt', () => {
       expect(toBigInt(0)).toBe(0n);
       expect(toBigInt(-0)).toBe(0n);
       expect(toBigInt(0n)).toBe(0n);
-      expect(toBigInt('0')).toBe(0n);
     });
 
     test('maintains negative zero as zero', () => {

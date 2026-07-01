@@ -28,6 +28,11 @@ import { jsonSerialize } from './json-serialize.ts';
 export class JSONSet<T extends JSONValue> implements Set<T> {
   protected set = new Set<string>();
 
+  /**
+   * The string tag used by Object.prototype.toString for this class.
+   */
+  public readonly [Symbol.toStringTag] = 'JSONSet';
+
   public constructor(values?: Iterable<T> | null) {
     if (values) {
       for (const value of values) {
@@ -35,11 +40,6 @@ export class JSONSet<T extends JSONValue> implements Set<T> {
       }
     }
   }
-
-  /**
-   * The string tag used by Object.prototype.toString for this class.
-   */
-  public readonly [Symbol.toStringTag] = 'JSONSet';
 
   protected replicate<X = T>(values?: Iterable<X> | null): Set<X> {
     const Maker = this.constructor as new (values?: Iterable<X> | null) => Set<X>;

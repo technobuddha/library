@@ -14,7 +14,7 @@ describe('decodeBinary', () => {
   });
 
   test('binary', () => {
-    expect(Array.from(decodeBinary('\u0000\u0001\u0002\u0003', 'binary'))).toStrictEqual([
+    expect(Array.from(decodeBinary('\u{0}\u{1}\u{2}\u{3}', 'binary'))).toStrictEqual([
       0, 1, 2, 3,
     ]);
   });

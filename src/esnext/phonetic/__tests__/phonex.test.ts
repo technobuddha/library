@@ -157,7 +157,7 @@ describe('phonex', () => {
     const result = phonex(longWord);
 
     expect(result).toHaveLength(4);
-    expect(result[0]).toMatch(/[A-Z]/v); // First character should be a letter
+    expect(result.at(0)).toMatch(/[A-Z]/v); // First character should be a letter
     expect(result.slice(1)).toMatch(/^\d{3}$/v); // Remaining should be 3 digits
   });
 

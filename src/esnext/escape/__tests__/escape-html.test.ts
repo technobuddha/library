@@ -9,9 +9,9 @@ describe('escapeHTML', () => {
 
   test('should escape control characters', () => {
     expect(escapeHTML('\0')).toBe('&#0;');
-    expect(escapeHTML('\u0001')).toBe('&#1;');
-    expect(escapeHTML('\u007f')).toBe('&#127;');
-    expect(escapeHTML('\u009f')).toBe('&#159;');
+    expect(escapeHTML('\u{1}')).toBe('&#1;');
+    expect(escapeHTML('\u{7F}')).toBe('&#127;');
+    expect(escapeHTML('\u{9F}')).toBe('&#159;');
   });
 
   test('should not escape most ascii', () => {

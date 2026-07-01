@@ -18,7 +18,7 @@ describe('reviver', () => {
 
   test('should decode numbers', () => {
     expect(JSON.parse(`{"number":"${specialBegin}Number:NaN${specialFinish}"}`, reviver)).toEqual({
-      number: Number.NaN,
+      number: NaN,
     });
     expect(
       JSON.parse(`{"number":"${specialBegin}Number:Infinity${specialFinish}"}`, reviver),

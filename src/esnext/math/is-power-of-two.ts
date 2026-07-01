@@ -33,7 +33,7 @@ import { toNumber } from '../number/to-number.ts';
 export function isPowerOfTwo(x: NumberLike): boolean {
   const value = toNumber(x);
 
-  if (!Number.isInteger(value)) {
+  if (!Number.isSafeInteger(value)) {
     return false;
   }
 

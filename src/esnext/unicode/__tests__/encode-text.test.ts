@@ -8,7 +8,7 @@ function na(u: Uint8Array): number[] {
 describe('encodeText', () => {
   test('should not change ASCII', () => {
     expect(na(encodeText('abcdef'))).toStrictEqual([0x61, 0x62, 0x63, 0x64, 0x65, 0x66]);
-    expect(na(encodeText('\u0000\u0001\u0002\u0003\u007F'))).toStrictEqual([
+    expect(na(encodeText('\u{0}\u{1}\u{2}\u{3}\u{7F}'))).toStrictEqual([
       0x00, 0x01, 0x02, 0x03, 0x7f,
     ]);
   });
@@ -35,7 +35,7 @@ describe('encodeText', () => {
   });
 
   test('should trap bad surrogate pairs', () => {
-    expect(na(encodeText('\uD83D'))).toStrictEqual(REPLACEMENT);
-    expect(na(encodeText('\uD83D\u0000'))).toStrictEqual(REPLACEMENT);
+    expect(na(encodeText('\u{D83D}'))).toStrictEqual(REPLACEMENT);
+    expect(na(encodeText('\u{D83D}\u{0}'))).toStrictEqual(REPLACEMENT);
   });
 });

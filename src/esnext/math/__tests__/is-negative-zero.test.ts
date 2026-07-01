@@ -13,7 +13,7 @@ describe('isNegativeZero', () => {
     expect(isNegativeZero(3)).toBeFalse();
     expect(isNegativeZero(Number.MAX_VALUE)).toBeFalse();
     expect(isNegativeZero(Number.MIN_VALUE)).toBeFalse();
-    expect(isNegativeZero(Number.NaN)).toBeFalse();
+    expect(isNegativeZero(NaN)).toBeFalse();
     expect(isNegativeZero(Infinity)).toBeFalse();
     expect(isNegativeZero(-Infinity)).toBeFalse();
   });

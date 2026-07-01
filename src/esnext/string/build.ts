@@ -17,7 +17,8 @@ export function build(...args: (StringLike | Iterable<string> | null | undefined
   for (const arg of args) {
     if (arg == null) {
       continue;
-    } else if (isStringLike(arg)) {
+    }
+    if (isStringLike(arg)) {
       strings.push(toString(arg));
     } else {
       strings.push(...arg);

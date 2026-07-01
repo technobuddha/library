@@ -3,13 +3,13 @@ import { isSurrogateHigh } from '../is-surrogate-high.ts';
 describe('isSurrogateHigh', () => {
   test('should detect high', () => {
     expect(isSurrogateHigh('a')).toBeFalse();
-    expect(isSurrogateHigh('\uD800')).toBeTrue();
-    expect(isSurrogateHigh('\uDC00')).toBeFalse();
+    expect(isSurrogateHigh('\u{D800}')).toBeTrue();
+    expect(isSurrogateHigh('\u{DC00}')).toBeFalse();
   });
 
   test('should detect high and low', () => {
-    expect(isSurrogateHigh('\uD800')).toBeTrue();
-    expect(isSurrogateHigh('\uDC00')).toBeFalse();
+    expect(isSurrogateHigh('\u{D800}')).toBeTrue();
+    expect(isSurrogateHigh('\u{DC00}')).toBeFalse();
   });
 
   test('should detect surrogates char codes', () => {

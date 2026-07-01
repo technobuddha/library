@@ -13,9 +13,7 @@ export const cookies = {
    * @param name - The name of the cookie to retrieve.
    * @returns The value of the cookie, or `undefined` if it does not exist.
    */
-  get(name: string): string | undefined {
-    return yummy().get(name);
-  },
+  get: (name: string): string | undefined => yummy().get(name),
   /**
    * Sets the value of a cookie.
    * @param name - The name of the cookie to set.
@@ -59,9 +57,7 @@ export const cookies = {
    * Returns an array of all cookie names.
    * @returns An array of cookie names.
    */
-  names(): string[] {
-    return Array.from(yummy().keys());
-  },
+  names: (): string[] => Array.from(yummy().keys()),
 };
 
 function yummy(): Map<string, string> {

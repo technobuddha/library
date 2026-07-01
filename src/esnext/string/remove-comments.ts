@@ -46,6 +46,7 @@ export type RemoveCommentsOptions = {
  */
 export function removeComments(
   text: StringLike,
+  // eslint-disable-next-line unicorn/no-non-function-verb-prefix
   { replacement = empty, removeExtraCommas = true }: RemoveCommentsOptions = {},
 ): string {
   const str = toString(text);
@@ -60,14 +61,16 @@ export function removeComments(
     if (char.done) {
       result.push('/');
       return false;
-    } else if (char.value === '/') {
+    }
+    if (char.value === '/') {
       result.push(replacement, replacement);
 
       while (true) {
         char = chars.next();
         if (char.done) {
           return true;
-        } else if (char.value === '\n' || char.value === '\r') {
+        }
+        if (char.value === '\n' || char.value === '\r') {
           result.push(char.value);
           return true;
         }
@@ -87,7 +90,8 @@ export function removeComments(
           if (char.done) {
             result.push(replacement);
             return true;
-          } else if (char.value === '/') {
+          }
+          if (char.value === '/') {
             result.push(replacement, replacement);
             return true;
           }
@@ -109,7 +113,8 @@ export function removeComments(
       char = chars.next();
       if (char.done) {
         return;
-      } else if (char.value === '\\') {
+      }
+      if (char.value === '\\') {
         result.push(char.value);
         char = chars.next();
         if (char.done) {
@@ -132,7 +137,8 @@ export function removeComments(
       char = chars.next();
       if (char.done) {
         return;
-      } else if (char.value === '\\') {
+      }
+      if (char.value === '\\') {
         result.push(char.value);
         char = chars.next();
         if (char.done) {
@@ -191,7 +197,8 @@ export function removeComments(
       if (char.done) {
         result[pos] = replacement;
         return;
-      } else if (char.value === '/') {
+      }
+      if (char.value === '/') {
         if (!comment()) {
           return;
         }

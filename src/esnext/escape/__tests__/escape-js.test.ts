@@ -10,7 +10,7 @@ describe('escapeJS', () => {
   test('should escape nul as \\0, unless followed by an octal digit', () => {
     expect(escapeJS('\0')).toBe('\\0');
     expect(escapeJS('\0X')).toBe('\\0X');
-    expect(escapeJS('\u00000')).toBe('\\u00000');
+    expect(escapeJS('\u{0}0')).toBe('\\u00000');
   });
 
   test('should not escape most ascii', () => {
@@ -19,8 +19,8 @@ describe('escapeJS', () => {
   });
 
   test('should escape non printables as \\xnn', () => {
-    expect(escapeJS('\u0001')).toBe('\\u0001');
-    expect(escapeJS('\u0080')).toBe('\\u0080');
+    expect(escapeJS('\u{1}')).toBe('\\u0001');
+    expect(escapeJS('\u{80}')).toBe('\\u0080');
   });
 
   test('should not escape latin-1 characters', () => {

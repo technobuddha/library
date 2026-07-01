@@ -15,12 +15,12 @@ describe('unescapeJava', () => {
     expect(unescapeJava('\\0')).toBe('\0');
     expect(unescapeJava('\\00')).toBe('\0');
     expect(unescapeJava('\\000')).toBe('\0');
-    expect(unescapeJava('\\0000')).toBe('\u00000');
+    expect(unescapeJava('\\0000')).toBe('\u{0}0');
   });
 
   test('should unescape unicode', () => {
     expect(unescapeJava('\\u0000')).toBe('\0');
-    expect(unescapeJava('\\u00000')).toBe('\u00000');
+    expect(unescapeJava('\\u00000')).toBe('\u{0}0');
     expect(unescapeJava('\\u0000X')).toBe('\0X');
   });
 

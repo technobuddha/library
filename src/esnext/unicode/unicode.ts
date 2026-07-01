@@ -24,14 +24,14 @@ export const tab = '\t';
  * @group Unicode
  * @category Constants
  */
-export const nbsp = '\u00A0';
+export const nbsp = '\u{A0}';
 
 /**
  * Zero-width space
  * @group Unicode
  * @category Constants
  */
-export const zwsp = '\u200B';
+export const zwsp = '\u{200B}';
 
 /**
  * Fraction Slash
@@ -133,4 +133,4 @@ export const invisiblePlus = '⁤'; // U+2064 INVISIBLE PLUS
  * @group Unicode
  * @category Constants
  */
-export const replacementCharacter = '\uFFFD';
+export const replacementCharacter = '\u{FFFD}';

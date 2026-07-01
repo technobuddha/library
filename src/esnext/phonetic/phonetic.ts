@@ -154,6 +154,7 @@ export function phonetic(
     prepareRules,
     notFound = 'reset',
     silentLetters = ['A', 'E', 'I', 'O', 'U', 'H', 'W', 'Y'],
+    // eslint-disable-next-line unicorn/no-non-function-verb-prefix
     removeDuplicates = 'last',
     scan,
     pad,
@@ -162,12 +163,10 @@ export function phonetic(
     setQueries,
   }: CompiledPhonetic,
 ): string | readonly string[] {
-  // eslint-disable-next-line no-multi-assign, @typescript-eslint/no-explicit-any
-  const phoneticTrace: Scanner[] = ((globalThis as any).phoneticTrace = []);
-
   const queries: Set<string> = new Set();
   type PhoneticResult = { text: string; first?: string };
-  let results: PhoneticResult[] = [];
+  // eslint-disable-next-line unicorn/no-declarations-before-early-exit
+  let results: PhoneticResult[];
 
   let text = toString(word);
 
@@ -189,7 +188,6 @@ export function phonetic(
       queries.add(q);
     }
   }
-  phoneticTrace.push({ m: Array.from(queries).join('; ') });
 
   if (priorRules) {
     text = priorRules.reduce((t, { r, s }) => t.replaceAll(r, s), text);
@@ -262,9 +260,7 @@ export function phonetic(
           while (result.last && c.startsWith(result.last)) {
             c = c.slice(result.last.length);
           }
-        }
-
-        if (removeDuplicates === 'full') {
+        } else if (removeDuplicates === 'full') {
           while (result.last && c === result.last) {
             c = empty;
           }
@@ -292,7 +288,6 @@ export function phonetic(
         if (row(rule, i)) {
           found = true;
 
-          phoneticTrace.push(rule);
           const { m, l, o } = rule;
 
           if (o) {
@@ -317,7 +312,6 @@ export function phonetic(
         }
       }
       if (!found) {
-        phoneticTrace.push({ m: 'NOT FOUND' });
         if (notFound === 'reset') {
           appendToResults(scanResults, '-');
         }

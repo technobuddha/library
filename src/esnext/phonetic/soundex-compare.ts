@@ -30,6 +30,7 @@ import { soundex } from './soundex.ts';
  * @category Soundex
  */
 export function soundexCompare(data1: StringLike, data2: StringLike): number {
+  // eslint-disable-next-line unicorn/no-declarations-before-early-exit
   let result = 0;
 
   const soundex1 = soundex(data1);

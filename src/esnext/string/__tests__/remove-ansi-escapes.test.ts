@@ -6,17 +6,17 @@ describe('removeANSIEscapes', () => {
   });
 
   test('removes ANSI CSI color sequences', () => {
-    const input = '\u001b[31mred\u001b[39m';
+    const input = '\u{1B}[31mred\u{1B}[39m';
     expect(removeANSIEscapes(input)).toBe('red');
   });
 
   test('removes multiple ANSI sequences from one string', () => {
-    const input = '\u001b[1mBold\u001b[22m and \u001b[4munderlined\u001b[24m';
+    const input = '\u{1B}[1mBold\u{1B}[22m and \u{1B}[4munderlined\u{1B}[24m';
     expect(removeANSIEscapes(input)).toBe('Bold and underlined');
   });
 
   test('removes ANSI OSC sequences', () => {
-    const input = '\u001b]8;;https://example.com\u0007link\u001b]8;;\u0007';
+    const input = '\u{1B}]8;;https://example.com\u{7}link\u{1B}]8;;\u{7}';
     expect(removeANSIEscapes(input)).toBe('link');
   });
 

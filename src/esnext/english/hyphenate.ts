@@ -28,7 +28,7 @@ export function hyphenate(input: StringLike): readonly string[] {
   }
 
   // Handle language-specific hyphenation exceptions
-  if (word in exceptions) {
+  if (Object.hasOwn(exceptions, word)) {
     const exc = exceptions[word];
     // Map exception tokens to match input casing
     if (text === text.toUpperCase()) {
@@ -53,9 +53,7 @@ export function hyphenate(input: StringLike): readonly string[] {
         return token;
       }
       // Otherwise, preserve the casing of the input substring
-      return Array.from(token)
-        .map((_, i) => part[i])
-        .join('');
+      return Array.from(token, (_, i) => part[i]).join('');
     });
   }
 
@@ -70,7 +68,7 @@ export function hyphenate(input: StringLike): readonly string[] {
     for (let j = i; j < l; j++) {
       const character = code[j];
 
-      if (character in branch) {
+      if (Object.hasOwn(branch, character)) {
         const next = branch[character];
 
         branch = next as typeof tree;

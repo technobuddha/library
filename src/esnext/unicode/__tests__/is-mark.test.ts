@@ -2,12 +2,12 @@ import { isMark } from '../is-mark.ts';
 
 describe('isMark', () => {
   test('returns true for combining acute accent (U+0301)', () => {
-    expect(isMark('\u0301')).toBeTrue();
+    expect(isMark('\u{301}')).toBeTrue();
     expect(isMark(0x0301)).toBeTrue();
   });
 
   test('returns true for combining tilde (U+0303)', () => {
-    expect(isMark('\u0303')).toBeTrue();
+    expect(isMark('\u{303}')).toBeTrue();
     expect(isMark(0x0303)).toBeTrue();
   });
 
@@ -27,6 +27,6 @@ describe('isMark', () => {
   });
 
   test('returns true for multiple combining marks', () => {
-    expect(isMark('\u0301\u0303')).toBeTrue();
+    expect(isMark('\u{301}\u{303}')).toBeTrue();
   });
 });

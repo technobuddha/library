@@ -21,6 +21,7 @@ import {
   DIFFERENCE_EQUAL,
   DIFFERENCE_INSERT,
 } from '../difference/difference.ts';
+import { empty } from '../unicode/unicode.ts';
 
 import { type Patch } from './types.ts';
 
@@ -36,11 +37,7 @@ import { type Patch } from './types.ts';
  * @category Patch
  */
 export function patchToText(patches: Patch[]): string {
-  const text: string[] = [];
-  for (const patch of patches) {
-    text.push(patchToString(patch));
-  }
-  return text.join('');
+  return Array.from(patches, (patch) => patchToString(patch)).join(empty);
 }
 
 /**

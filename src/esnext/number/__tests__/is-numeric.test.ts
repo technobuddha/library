@@ -12,7 +12,7 @@ describe('isNumeric', () => {
 
   test('should handle special numbers', () => {
     expect(isNumeric(negativeZero)).toBeTrue();
-    expect(isNumeric(Number.NaN)).toBeFalse();
+    expect(isNumeric(NaN)).toBeFalse();
     expect(isNumeric(Infinity)).toBeTrue();
     expect(isNumeric(-Infinity)).toBeTrue();
   });

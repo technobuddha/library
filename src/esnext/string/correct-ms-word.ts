@@ -1,9 +1,9 @@
 import { type StringLike } from './string-like.ts';
 import { toString } from './to-string.ts';
 
-const find = /[\u00A0–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/gv;
+const find = /[\u{A0}–—‘’‹›“”«»©®¼½¾…€™←→⇐⇒⇔☹☺]/gv;
 const replace: Readonly<Record<string, string>> = Object.freeze({
-  '\u00A0': ' ',
+  '\u{A0}': ' ',
   '–': '-',
   '—': '-',
   '‘': "'",

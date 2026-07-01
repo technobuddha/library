@@ -28,7 +28,8 @@ export function toSquare(rect: Rect): Rect {
       width: rect.height,
       height: rect.height,
     };
-  } else if (rect.height > rect.width) {
+  }
+  if (rect.height > rect.width) {
     return {
       x: rect.x,
       y: rect.y + (rect.height - rect.width) / 2,

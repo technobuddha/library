@@ -38,9 +38,9 @@ describe('isMultipleOf', () => {
     expect(isMultipleOf(negativeZero, 1)).toBeTrue();
     expect(isMultipleOf(1, negativeZero)).toBeFalse();
     expect(isMultipleOf(negativeZero, negativeZero)).toBeTrue();
-    expect(isMultipleOf(Number.NaN, 1)).toBeFalse();
-    expect(isMultipleOf(1, Number.NaN)).toBeFalse();
-    expect(isMultipleOf(Number.NaN, Number.NaN)).toBeFalse();
+    expect(isMultipleOf(NaN, 1)).toBeFalse();
+    expect(isMultipleOf(1, NaN)).toBeFalse();
+    expect(isMultipleOf(NaN, NaN)).toBeFalse();
     expect(isMultipleOf(Infinity, 1)).toBeFalse();
     expect(isMultipleOf(1, Infinity)).toBeFalse();
     expect(isMultipleOf(Infinity, Infinity)).toBeFalse();
