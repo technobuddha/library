@@ -124,6 +124,7 @@ export function escapeC(input: StringLike, { ascii = false }: EscapeOptions = {}
       } else {
         output.push(String.fromCharCode(u0));
       }
+      // eslint-disable-next-line unicorn/no-duplicate-if-branches
     } else if (u0 < 0x010000) {
       if (ascii || !isPrintable(u0)) {
         output.push(u4(u0));

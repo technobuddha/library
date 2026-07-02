@@ -44,9 +44,5 @@ export function isPowerOfTwo(x: NumberLike): boolean {
     return false;
   }
 
-  if (value & (value - 1)) {
-    return false;
-  }
-
-  return true;
+  return !(value & (value - 1));
 }

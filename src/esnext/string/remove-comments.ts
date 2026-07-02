@@ -76,7 +76,8 @@ export function removeComments(
         }
         result.push(replacement);
       }
-    } else if (char.value === '*') {
+    }
+    if (char.value === '*') {
       result.push(replacement, replacement);
 
       while (true) {
@@ -100,10 +101,9 @@ export function removeComments(
           result.push(replacement);
         }
       }
-    } else {
-      result.push('/', char.value);
-      return false;
     }
+    result.push('/', char.value);
+    return false;
   }
 
   function quotes(quote: string): void {
@@ -182,9 +182,8 @@ export function removeComments(
             result.push(char.value);
           }
         }
-      } else {
-        result.push(char.value);
       }
+      result.push(char.value);
     }
   }
 

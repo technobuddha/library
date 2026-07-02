@@ -388,13 +388,14 @@ export function createAlgorithm(options: PhoneticAlgorithm): CompiledPhonetic {
   const compiled: CompiledPhonetic = rest;
 
   if (scan) {
-    compiled.scan = scan.reduce<Record<string, Scanner[]>>((acc, rule) => {
-      const key = rule.m.slice(0, 1);
+    const grouped = Object.groupBy(scan, ({ m }) => m.slice(0, 1));
+    compiled.scan = {};
 
-      acc[key] ??= [];
-      acc[key].push(rule);
-      return acc;
-    }, {});
+    for (const [key, rules] of Object.entries(grouped)) {
+      if (rules) {
+        compiled.scan[key] = rules;
+      }
+    }
   }
 
   return compiled;

@@ -1,4 +1,3 @@
-/* eslint-disable no-implicit-coercion */
 import { toAngle } from '../to-angle.ts';
 
 describe('toAngle', () => {

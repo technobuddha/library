@@ -61,7 +61,7 @@ export function levenshteinDistance(
       const above = matrix[i - 1][j];
       const left = matrix[i][j - 1];
       const diag = matrix[i - 1][j - 1];
-      let cell = Math.min(Math.min(above + 1, left + 1), diag + cost);
+      let cell = Math.min(above + 1, left + 1, diag + cost);
 
       //transposition
       if (i > 1 && j > 1) {

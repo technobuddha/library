@@ -17,6 +17,7 @@ export function constructNumber(
   deconstructed: Omit<DeconstructedNumber, 'value' | 'fractional' | 'whole'>,
 ): number {
   if (deconstructed.mantissa === '') {
+    // eslint-disable-next-line unicorn/no-constant-zero-expression
     return deconstructed.sign * 0;
   }
 

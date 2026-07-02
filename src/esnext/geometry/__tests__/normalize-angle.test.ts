@@ -1,4 +1,3 @@
-/* eslint-disable no-implicit-coercion */
 import { normalizeAngle } from '../normalize-angle.ts';
 
 describe('normalizeAngle', () => {

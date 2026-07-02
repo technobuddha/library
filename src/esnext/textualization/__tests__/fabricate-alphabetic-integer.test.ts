@@ -1,8 +1,8 @@
 import { fabricateAlphabeticInteger } from '../fabricate-alphabetic-integer.ts';
-import { type Numbering } from '../numbering.ts';
+import { type TextualizationOptions } from '../textualization.ts';
 
 describe('fabricateAlphabeticInteger', () => {
-  const baseOptions: Numbering = {
+  const baseOptions: TextualizationOptions = {
     output: { integer: 'alphabetic', fraction: 'alphabetic' },
     and: '',
     hyphen: '-',
@@ -52,7 +52,7 @@ describe('fabricateAlphabeticInteger', () => {
   });
 
   test('should handle hundreds with "and"', () => {
-    const optionsWithAnd: Numbering = { ...baseOptions, and: 'and' };
+    const optionsWithAnd: TextualizationOptions = { ...baseOptions, and: 'and' };
     expect(fabricateAlphabeticInteger(101, optionsWithAnd)).toBe('one hundred and one');
     expect(fabricateAlphabeticInteger(123, optionsWithAnd)).toBe('one hundred and twenty-three');
     expect(fabricateAlphabeticInteger(999, optionsWithAnd)).toBe('nine hundred and ninety-nine');
@@ -88,7 +88,7 @@ describe('fabricateAlphabeticInteger', () => {
   });
 
   test('should handle ordinal numbers', () => {
-    const ordinalOptions: Numbering = { ...baseOptions, ordinal: true };
+    const ordinalOptions: TextualizationOptions = { ...baseOptions, ordinal: true };
     expect(fabricateAlphabeticInteger(1, ordinalOptions)).toBe('first');
     expect(fabricateAlphabeticInteger(2, ordinalOptions)).toBe('second');
     expect(fabricateAlphabeticInteger(3, ordinalOptions)).toBe('third');
@@ -101,7 +101,7 @@ describe('fabricateAlphabeticInteger', () => {
   });
 
   test('should handle hybrid output for integers', () => {
-    const hybridOptions: Numbering = {
+    const hybridOptions: TextualizationOptions = {
       ...baseOptions,
       output: { integer: 'hybrid', fraction: 'alphabetic' },
     };
@@ -112,9 +112,10 @@ describe('fabricateAlphabeticInteger', () => {
   });
 
   test('should handle fractional values with decimal shift', () => {
-    const decimalOptions: Numbering = { ...baseOptions, shift: 'decimal' };
+    const decimalOptions: TextualizationOptions = { ...baseOptions, shift: 'decimal' };
+    const approximatePi = Number('3.14');
     expect(fabricateAlphabeticInteger(1.5, decimalOptions)).toBe('one point five');
-    expect(fabricateAlphabeticInteger(3.14, decimalOptions)).toBe('three point one four');
+    expect(fabricateAlphabeticInteger(approximatePi, decimalOptions)).toBe('three point one four');
   });
 
   test('should handle fractional values without decimal shift', () => {
@@ -131,7 +132,7 @@ describe('fabricateAlphabeticInteger', () => {
   });
 
   test('should handle space as hyphen', () => {
-    const spaceOptions: Numbering = { ...baseOptions, hyphen: ' ' };
+    const spaceOptions: TextualizationOptions = { ...baseOptions, hyphen: ' ' };
     expect(fabricateAlphabeticInteger(21, spaceOptions)).toBe('twenty one');
     expect(fabricateAlphabeticInteger(99, spaceOptions)).toBe('ninety nine');
   });

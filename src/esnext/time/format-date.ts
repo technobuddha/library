@@ -106,7 +106,7 @@ export function formatDate(
 ): string {
   const argMask =
     mask ?
-      mask in masks ?
+      Object.hasOwn(masks, mask) ?
         masks[mask]
       : mask
     : masks.default;

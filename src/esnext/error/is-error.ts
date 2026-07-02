@@ -12,5 +12,6 @@
  * @category Type Checking
  */
 export function isError(entity: unknown): entity is Error {
+  // eslint-disable-next-line unicorn/prefer-error-is-error
   return Object.prototype.toString.call(entity) === '[object Error]';
 }

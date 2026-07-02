@@ -331,11 +331,7 @@ class Metaphone3 {
    * @returns true if close front vowel
    */
   private frontVowel(at: number): boolean {
-    if (this.charAt(at) === 'E' || this.charAt(at) === 'I' || this.charAt(at) === 'Y') {
-      return true;
-    }
-
-    return false;
+    return this.charAt(at) === 'E' || this.charAt(at) === 'I' || this.charAt(at) === 'Y';
   }
 
   /**
@@ -345,16 +341,12 @@ class Metaphone3 {
    *
    */
   private slavoGermanic(): boolean {
-    if (
+    return (
       this.stringAt(0, 'SCH') ||
       this.stringAt(0, 'SW') ||
       this.charAt(0) === 'J' ||
       this.charAt(0) === 'W'
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -489,11 +481,7 @@ class Metaphone3 {
     }
 
     test = `${root}Y`;
-    if (inWord === test) {
-      return true;
-    }
-
-    return false;
+    return inWord === test;
   }
 
   /**
@@ -693,7 +681,7 @@ class Metaphone3 {
     }
 
     // 'e' silent when last letter, altho
-    if (
+    return (
       this.current === this.last ||
       // also silent if before plural 's'
       // or past tense or participle 'd', e.g.
@@ -716,11 +704,7 @@ class Metaphone3 {
       (this.stringAt(this.current + 1, 'LY') &&
         this.current + 2 === this.last &&
         !this.stringAt(0, 'CICELY'))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -739,7 +723,7 @@ class Metaphone3 {
    *
    */
   private ePronouncedAtEnd(): boolean {
-    if (
+    return (
       this.current === this.last &&
       (this.stringAt(this.current - 6, 'STROPHE') ||
         // if a vowel is before the 'E', vowel eater will have eaten it.
@@ -851,11 +835,7 @@ class Metaphone3 {
           this.length === 8) ||
         (this.stringAt(0, 'HYPERBOLE', 'GUACAMOLE', 'XANTHIPPE') && this.length === 9) ||
         (this.stringAt(0, 'SYNECDOCHE') && this.length === 10))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -865,7 +845,7 @@ class Metaphone3 {
    */
   private silentInternalE(): boolean {
     // 'olesen' but not 'olen'	RAKE BLAKE
-    if (
+    return (
       (this.stringAt(0, 'OLE') && this.eSilentSuffix(3) && !this.ePronouncingSuffix(3)) ||
       (this.stringAt(
         0,
@@ -923,11 +903,7 @@ class Metaphone3 {
         this.eSilentSuffix(6) &&
         !this.ePronouncingSuffix(6)) ||
       this.stringAt(this.current - 5, 'CHARLES')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -936,15 +912,11 @@ class Metaphone3 {
    *
    */
   private eSilentSuffix(at: number): boolean {
-    if (
+    return (
       this.current === at - 1 &&
       this.length > at + 1 &&
       (this.isVowel(at + 1) || (this.stringAt(at, 'ST', 'SL') && this.length > at + 2))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -978,11 +950,7 @@ class Metaphone3 {
     }
 
     // e.g. 'bridget'
-    if (this.length === at + 1 && this.stringAt(at, 'T', 'R')) {
-      return true;
-    }
-
-    return false;
+    return this.length === at + 1 && this.stringAt(at, 'T', 'R');
   }
 
   /**
@@ -996,7 +964,7 @@ class Metaphone3 {
    */
   private ePronouncedExceptions(): boolean {
     // greek names e.g. "herakles" or hispanic names e.g. "robles", where 'e' is pronounced, other exceptions
-    if (
+    return (
       (this.current + 1 === this.last &&
         (this.stringAt(this.current - 3, 'OCLES', 'ACLES', 'AKLES') ||
           this.stringAt(0, 'INES') ||
@@ -1103,11 +1071,7 @@ class Metaphone3 {
       this.stringAt(this.current - 5, 'PROBLEM', 'RESPLEN') ||
       this.stringAt(this.current - 4, 'REPLEN') ||
       this.stringAt(this.current - 3, 'SPLE')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -1941,14 +1905,10 @@ class Metaphone3 {
    */
   private encodeBritishSilentCe(): boolean {
     // english place names like e.g.'gloucester' pronounced glo-ster
-    if (
+    return (
       (this.stringAt(this.current + 1, 'ESTER') && this.current + 5 === this.last) ||
       this.stringAt(this.current + 1, 'ESTERSHIRE')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -2845,7 +2805,7 @@ class Metaphone3 {
    *
    */
   private initialGSoft(): boolean {
-    if (
+    return (
       ((this.stringAt(
         this.current + 1,
         'EL',
@@ -2934,11 +2894,7 @@ class Metaphone3 {
           ) ||
           this.stringAt(this.current + 1, 'IRAFFE', 'EEWHIZ') ||
           this.stringAt(this.current + 1, 'ILLETTE', 'IBRALTA')))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -3252,17 +3208,13 @@ class Metaphone3 {
    * @returns true if encoding handled in this routine, false if not
    */
   private hardGeAtEnd(): boolean {
-    if (
+    return (
       this.stringAt(0, 'RENEGE', 'STONGE', 'STANGE', 'PRANGE', 'KRESGE') ||
       this.stringAt(0, 'BYRGE', 'BIRGE', 'BERGE', 'HAUGE') ||
       this.stringAt(0, 'HAGE') ||
       this.stringAt(0, 'LANGE', 'SYNGE', 'BENGE', 'RUNGE', 'HELGE') ||
       this.stringAt(0, 'INGE', 'LAGE')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -3275,17 +3227,13 @@ class Metaphone3 {
    */
   private internalHardG(): boolean {
     // if not "-GE" at end
-    if (
+    return (
       !(this.current + 1 === this.last && this.charAt(this.current + 1) === 'E') &&
       (this.internalHardNg() ||
         this.internalHardGenGinGetGit() ||
         this.internalHardGOpenSyllable() ||
         this.internalHardGOther())
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -3296,7 +3244,7 @@ class Metaphone3 {
    *
    */
   private internalHardGOther(): boolean {
-    if (
+    return (
       (this.stringAt(
         this.current,
         'GETH',
@@ -3329,11 +3277,7 @@ class Metaphone3 {
       (this.stringAt(this.current, 'GILL') &&
         (this.current + 3 === this.last || this.current + 4 === this.last) &&
         !this.stringAt(0, 'STURGILL'))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -3345,7 +3289,7 @@ class Metaphone3 {
    *
    */
   private internalHardGOpenSyllable(): boolean {
-    if (
+    return (
       this.stringAt(this.current + 1, 'EYE') ||
       this.stringAt(this.current - 2, 'FOGY', 'POGY', 'YOGI') ||
       this.stringAt(this.current - 2, 'MAGEE', 'MCGEE', 'HAGIO') ||
@@ -3353,11 +3297,7 @@ class Metaphone3 {
       this.stringAt(this.current - 3, 'HOAGY', 'STOGY', 'PORGY') ||
       this.stringAt(this.current - 5, 'CARNEGIE') ||
       (this.stringAt(this.current - 1, 'OGEY', 'OGIE') && this.current + 2 === this.last)
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -3368,7 +3308,7 @@ class Metaphone3 {
    *
    */
   private internalHardGenGinGetGit(): boolean {
-    if (
+    return (
       (this.stringAt(
         this.current - 3,
         'FORGET',
@@ -3412,11 +3352,7 @@ class Metaphone3 {
         'WAGEN',
       ) &&
         !this.stringAt(this.current - 5, 'OSPHAGEN'))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
   /**
    * Detect a number of contexts of '-ng-' that will
@@ -3427,7 +3363,7 @@ class Metaphone3 {
    *
    */
   private internalHardNg(): boolean {
-    if (
+    return (
       (this.stringAt(this.current - 3, 'DANG', 'FANG', 'SING') &&
         // exception to exception
         !this.stringAt(this.current - 5, 'DISINGEN')) ||
@@ -3446,11 +3382,7 @@ class Metaphone3 {
           this.stringAt(this.current - 3, 'RANGY', 'MANGY', 'MINGY') ||
           this.stringAt(this.current - 4, 'SPONGY', 'STINGY')
         ))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -3877,7 +3809,7 @@ class Metaphone3 {
     }
 
     // e.g. "stijl", "sejm" - dutch, scandanavian, and eastern european spellings
-    if (
+    return (
       (this.stringAt(this.current + 1, 'L', 'T', 'K', 'S', 'N', 'M') &&
         // except words from hindi and arabic
         !this.stringAt(this.current + 2, 'A')) ||
@@ -3890,10 +3822,7 @@ class Metaphone3 {
       // e.g. 'rekjavik', 'blagojevic'
       this.stringAt(this.current, 'JAVIK', 'JEVIC') ||
       (this.current + 1 === this.last && this.stringAt(0, 'SONJA', 'TANJA', 'TONJA'))
-    ) {
-      return true;
-    }
-    return false;
+    );
   }
 
   /**
@@ -4332,13 +4261,9 @@ class Metaphone3 {
       !this.stringAt(saveCurrent, 'LESS', 'LESQ', 'LECT', 'LEDG', 'LETE', 'LETH', 'LETS', 'LETT') &&
       !this.stringAt(saveCurrent, 'LEG', 'LER', 'LEX') &&
       // e.g. "complement" !→ KAMPALMENT
-      !(
-        this.stringAt(saveCurrent, 'LEMENT') &&
-        !(
-          this.stringAt(this.current - 5, 'BATTLE', 'TANGLE', 'PUZZLE', 'RABBLE', 'BABBLE') ||
-          this.stringAt(this.current - 4, 'TABLE')
-        )
-      ) &&
+      (!this.stringAt(saveCurrent, 'LEMENT') ||
+        this.stringAt(this.current - 5, 'BATTLE', 'TANGLE', 'PUZZLE', 'RABBLE', 'BABBLE') ||
+        this.stringAt(this.current - 4, 'TABLE')) &&
       !(
         saveCurrent + 2 === this.last && this.stringAt(saveCurrent - 2, 'OCLES', 'ACLES', 'AKLES')
       ) &&
@@ -4542,15 +4467,11 @@ class Metaphone3 {
   private testSilentMb1(): boolean {
     // e.g. "LAMB", "COMB", "LIMB", "DUMB", "BOMB"
     // Handle combining roots first
-    if (
+    return (
       (this.current === 3 && this.stringAt(this.current - 3, 'THUMB')) ||
       (this.current === 2 &&
         this.stringAt(this.current - 2, 'DUMB', 'BOMB', 'DAMN', 'LAMB', 'NUMB', 'TOMB'))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -4560,16 +4481,12 @@ class Metaphone3 {
    *
    */
   private testPronouncedMb(): boolean {
-    if (
+    return (
       this.stringAt(this.current - 2, 'NUMBER') ||
       (this.stringAt(this.current + 2, 'A') && !this.stringAt(this.current - 2, 'DUMBASS')) ||
       this.stringAt(this.current + 2, 'O') ||
       this.stringAt(this.current - 2, 'LAMBEN', 'LAMBER', 'LAMBET', 'TOMBIG', 'LAMBRE')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -4580,7 +4497,7 @@ class Metaphone3 {
    */
   private testSilentMb2(): boolean {
     // 'M' is the current letter
-    if (
+    return (
       this.charAt(this.current + 1) === 'B' &&
       this.current > 1 &&
       (this.current + 1 === this.last ||
@@ -4600,11 +4517,7 @@ class Metaphone3 {
             !this.stringAt(this.current - 1, 'IMBER', 'AMBER', 'EMBER', 'UMBER')) &&
           // exceptions
           !this.stringAt(this.current - 2, 'CUMBER', 'SOMBER')))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -4615,14 +4528,10 @@ class Metaphone3 {
    */
   private testPronouncedMb2(): boolean {
     // e.g. "bombastic", "umbrage", "flamboyant"
-    if (
+    return (
       this.stringAt(this.current - 1, 'OMBAS', 'OMBAD', 'UMBRA') ||
       this.stringAt(this.current - 3, 'FLAM')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -4632,7 +4541,7 @@ class Metaphone3 {
    *
    */
   private testMn(): boolean {
-    if (
+    return (
       this.charAt(this.current + 1) === 'N' &&
       (this.current + 1 === this.last ||
         // or at the end of a word but followed by suffixes
@@ -4641,11 +4550,7 @@ class Metaphone3 {
         (this.stringAt(this.current + 2, 'LY', 'ER', 'ED') && this.current + 3 === this.last) ||
         this.stringAt(this.current - 2, 'DAMNEDEST') ||
         this.stringAt(this.current - 5, 'GODDAMNIT'))
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -5091,7 +4996,7 @@ class Metaphone3 {
     // test cases where 'R' is silent, either because the
     // word is from the french or because it is no longer pronounced.
     // e.g. "rogier", "monsieur", "surburban"
-    if (
+    return (
       (this.current === this.last &&
         // reliably french word ending
         this.stringAt(this.current - 2, 'IER') &&
@@ -5156,11 +5061,7 @@ class Metaphone3 {
       this.stringAt(this.current - 2, 'WORCESTER') ||
       this.stringAt(this.current - 7, 'MONSIEUR') ||
       this.stringAt(this.current - 6, 'POITIERS')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -7069,15 +6970,11 @@ class Metaphone3 {
    * @returns true if swedish, dutch, or slavic derived name
    */
   private namesBeginningWithSwThatGetAltSv(): boolean {
-    if (
+    return (
       this.stringAt(0, 'SWANSON', 'SWENSON', 'SWINSON', 'SWENSEN', 'SWOBODA') ||
       this.stringAt(0, 'SWIDERSKI', 'SWARTHOUT') ||
       this.stringAt(0, 'SWEARENGIN')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -7089,18 +6986,14 @@ class Metaphone3 {
    * @returns true if german derived name
    */
   private namesBeginningWithSwThatGetAltXv(): boolean {
-    if (
+    return (
       this.stringAt(0, 'SWART') ||
       this.stringAt(0, 'SWARTZ', 'SWARTS', 'SWIGER') ||
       this.stringAt(0, 'SWITZER', 'SWANGER', 'SWIGERT', 'SWIGART', 'SWIHART') ||
       this.stringAt(0, 'SWEITZER', 'SWATZELL', 'SWINDLER') ||
       this.stringAt(0, 'SWINEHART') ||
       this.stringAt(0, 'SWEARINGEN')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -7112,7 +7005,7 @@ class Metaphone3 {
    * @returns true if germanic or slavic name
    */
   private germanicOrSlavicNameBeginningWithW(): boolean {
-    if (
+    return (
       this.stringAt(0, 'WEE', 'WIX', 'WAX') ||
       this.stringAt(
         0,
@@ -7457,11 +7350,7 @@ class Metaphone3 {
       this.stringAt(0, 'WALDSCHMIDT', 'WEINGARTNER', 'WINEBRENNER') ||
       this.stringAt(0, 'WOLFENBARGER') ||
       this.stringAt(0, 'WOJCIECHOWSKI')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**
@@ -7478,7 +7367,7 @@ class Metaphone3 {
    * should get an alternate encoding as a vowel
    */
   private namesBeginningWithJThatGetAltY(): boolean {
-    if (
+    return (
       this.stringAt(0, 'JAN', 'JON', 'JAN', 'JIN', 'JEN') ||
       this.stringAt(
         0,
@@ -7789,11 +7678,7 @@ class Metaphone3 {
         'JOHANSSON',
       ) ||
       this.stringAt(0, 'JAKUBOWSKI')
-    ) {
-      return true;
-    }
-
-    return false;
+    );
   }
 
   /**

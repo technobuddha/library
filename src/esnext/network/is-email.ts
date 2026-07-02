@@ -20,15 +20,11 @@ export function isEmail(address: StringLike): boolean {
   const text = toString(address);
   const match = email.exec(text);
   if (match) {
-    if (
+    return !(
       (match.groups?.local?.length ?? 999) > 64 ||
       (match.groups?.domain?.length ?? 999) > 255 ||
       text.length > 320
-    ) {
-      return false;
-    }
-
-    return true;
+    );
   }
 
   return false;
