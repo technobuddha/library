@@ -23,6 +23,7 @@ describe('CustomEventTarget', () => {
     expect(listener).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         type: 'userLogin',
+        // eslint-disable-next-line vitest/valid-expect
         detail: { userId: '123', timestamp: expect.any(Date) },
       }),
     );
@@ -38,6 +39,7 @@ describe('CustomEventTarget', () => {
     expect(listener.handleEvent).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({
         type: 'userLogin',
+        // eslint-disable-next-line vitest/valid-expect
         detail: { userId: '456', timestamp: expect.any(Date) },
       }),
     );

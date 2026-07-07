@@ -1,5 +1,5 @@
+import { isJsIdentifier } from './is-js-identifier.ts';
 import { isJsReservedWord } from './is-js-reserved-word.ts';
-import { isValidJsIdentifier } from './is-valid-js-identifier.ts';
 
 /**
  * Determines whether a string is a valid JavaScript variable identifier.
@@ -11,15 +11,15 @@ import { isValidJsIdentifier } from './is-valid-js-identifier.ts';
  * @returns `true` if the token can be used as a JavaScript variable name; otherwise, `false`.
  * @example
  * ```typescript
- * isValidJsVariable('myValue'); // true
- * isValidJsVariable('π'); // true
- * isValidJsVariable('class'); // false
- * isValidJsVariable('await'); // false
- * isValidJsVariable('1value'); // false
+ * isJsVariable('myValue'); // true
+ * isJsVariable('π'); // true
+ * isJsVariable('class'); // false
+ * isJsVariable('await'); // false
+ * isJsVariable('1value'); // false
  * ```
  * @group Programming
  * @category Validation
  */
-export function isValidJsVariable(token: string): boolean {
-  return isValidJsIdentifier(token) && !isJsReservedWord(token, { strict: true, top: true });
+export function isJsVariable(token: string): boolean {
+  return isJsIdentifier(token) && !isJsReservedWord(token, { strict: true, top: true });
 }

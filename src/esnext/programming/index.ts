@@ -1,3 +1,3 @@
+export { isJsIdentifier } from './is-js-identifier.ts';
 export { isJsReservedWord } from './is-js-reserved-word.ts';
-export { isValidJsIdentifier } from './is-valid-js-identifier.ts';
-export { isValidJsVariable } from './is-valid-js-variable.ts';
+export { isJsVariable } from './is-js-variable.ts';

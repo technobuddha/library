@@ -113,6 +113,7 @@ describe('animate', () => {
 
     void animate(callback);
 
+    // eslint-disable-next-line vitest/valid-expect
     expect(mockRequestAnimationFrame).toHaveBeenCalledExactlyOnceWith(expect.any(Function));
   });
 

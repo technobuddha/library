@@ -10,14 +10,14 @@ const VALID_IDENTIFIER = /^[$_\p{ID_Start}][$_\p{ID_Continue}\u{200C}\u{200D}]*$
  * @returns `true` if the token matches JavaScript identifier syntax; otherwise, `false`.
  * @example
  * ```typescript
- * isValidJsIdentifier('myValue'); // true
- * isValidJsIdentifier('éclair'); // true
- * isValidJsIdentifier('1value'); // false
- * isValidJsIdentifier('my-value'); // false
+ * isJsIdentifier('myValue'); // true
+ * isJsIdentifier('éclair'); // true
+ * isJsIdentifier('1value'); // false
+ * isJsIdentifier('my-value'); // false
  * ```
  * @group Programming
  * @category Validation
  */
-export function isValidJsIdentifier(token: string): boolean {
+export function isJsIdentifier(token: string): boolean {
   return VALID_IDENTIFIER.test(token);
 }
