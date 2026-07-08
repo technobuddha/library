@@ -400,6 +400,6 @@
     "wordwrap",
     "zipperMerge"
   ],
-  "packageManager": "yarn@4.17.0",
+  "packageManager": "yarn@4.17.1",
   "tagline": "0 Dependencies"
 }
