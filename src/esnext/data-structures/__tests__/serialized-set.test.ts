@@ -1,10 +1,10 @@
 import { type Cartesian } from '../../geometry/geometry.ts';
 
-import { JSONSet } from '../json-set.ts';
+import { SerializedSet } from '../serializaed-set.ts';
 
-class CartesianSet extends JSONSet<Cartesian> {}
+class CartesianSet extends SerializedSet<Cartesian> {}
 
-describe('JSONSet', () => {
+describe('SerializedSet', () => {
   test('constructor', () => {
     expect(new CartesianSet()).toBeInstanceOf(CartesianSet);
     expect(
@@ -248,7 +248,7 @@ describe('JSONSet', () => {
 
   test('[toStringTag]', () => {
     const set = new CartesianSet();
-    expect(set[Symbol.toStringTag]).toBe('JSONSet');
+    expect(set[Symbol.toStringTag]).toBe('SerializedSet');
   });
 
   test('iterator', () => {

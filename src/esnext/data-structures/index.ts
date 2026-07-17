@@ -1,3 +1,3 @@
-export { JSONMap } from './json-map.ts';
-export { JSONSet } from './json-set.ts';
 export { PriorityQueue } from './priority-queue.ts';
+export { SerializedSet } from './serializaed-set.ts';
+export { SerializedMap } from './serialized-map.ts';

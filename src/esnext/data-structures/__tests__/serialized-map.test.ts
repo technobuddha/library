@@ -1,10 +1,10 @@
 import { type Cartesian } from '../../geometry/geometry.ts';
 
-import { JSONMap } from '../json-map.ts';
+import { SerializedMap } from '../serialized-map.ts';
 
-class CartesianMap<T = unknown> extends JSONMap<Cartesian, T> {}
+class CartesianMap<T = unknown> extends SerializedMap<Cartesian, T> {}
 
-describe('JSONMap', () => {
+describe('SerializedMap', () => {
   test('creates empty map when no initial data provided', () => {
     const map = new CartesianMap<string>();
 
@@ -174,7 +174,7 @@ describe('JSONMap', () => {
     map.set({ x: 1, y: 1 }, 'first');
     map.set({ x: 2, y: 2 }, 'second');
 
-    const results: { value: string; key: Cartesian; map: JSONMap<Cartesian, string> }[] = [];
+    const results: { value: string; key: Cartesian; map: SerializedMap<Cartesian, string> }[] = [];
 
     // eslint-disable-next-line github/array-foreach
     map.forEach((value, key, mapRef) => {
@@ -228,8 +228,8 @@ describe('JSONMap', () => {
   test('has correct Symbol.toStringTag', () => {
     const map = new CartesianMap<string>();
 
-    expect(map[Symbol.toStringTag]).toBe('JSONMap');
-    expect(Object.prototype.toString.call(map)).toBe('[object JSONMap]');
+    expect(map[Symbol.toStringTag]).toBe('SerializedMap');
+    expect(Object.prototype.toString.call(map)).toBe('[object SerializedMap]');
   });
 
   test('maintains insertion order in iteration', () => {

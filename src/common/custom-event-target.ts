@@ -4,10 +4,10 @@
  * @category Events
  */
 export type CustomEventListener<T extends Record<string, unknown>, E extends keyof T = keyof T> =
-  | ((event: CustomEvent<T[E]>) => void)
+  | ((event: CustomEvent<T[E]>) => void | Promise<void>)
   | {
       /** Handles the custom event */
-      handleEvent(event: CustomEvent<T[E]>): void;
+      handleEvent(event: CustomEvent<T[E]>): void | Promise<void>;
     };
 
 /**

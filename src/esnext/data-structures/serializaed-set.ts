@@ -6,13 +6,13 @@ import { jsonSerialize } from './json-serialize.ts';
 /**
  * A Set-like collection for objects that can be serialized to JSON.
  *
- * `JSONSet` stores objects by serializing them to JSON strings, allowing for deep equality
+ * `SerializedSet` stores objects by serializing them to JSON strings, allowing for deep equality
  * comparison of objects rather than reference equality. This is useful for storing and comparing
  * objects with the same structure and values, regardless of their references.
  * @typeParam T - The type of objects stored in the set. Must extend `JSONValue`.
  * @example
  * ```typescript
- * const set = new JSONSet<{ a: number }>();
+ * const set = new SerializedSet<{ a: number }>();
  * set.add({ a: 1 });
  * set.has({ a: 1 }); // true
  * set.has({ a: 2 }); // false
@@ -25,13 +25,13 @@ import { jsonSerialize } from './json-serialize.ts';
  * @group Data Structures
  * @category Set
  */
-export class JSONSet<T extends JSONValue> implements Set<T> {
+export class SerializedSet<T extends JSONValue> implements Set<T> {
   protected set = new Set<string>();
 
   /**
    * The string tag used by Object.prototype.toString for this class.
    */
-  public readonly [Symbol.toStringTag] = 'JSONSet';
+  public readonly [Symbol.toStringTag] = 'SerializedSet';
 
   public constructor(values?: Iterable<T> | null) {
     if (values) {

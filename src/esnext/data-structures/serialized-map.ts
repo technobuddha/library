@@ -6,13 +6,13 @@ import { jsonSerialize } from './json-serialize.ts';
 /**
  * A `Map` that allows serializable objects keys.
  *
- * `JSONMap` serializes keys using JSON.serialize, enabling the use of complex objects as map keys,
+ * `SerializedMap` serializes keys using JSON.serialize, enabling the use of complex objects as map keys,
  * similar to how `Map` allows objects, but with value-based equality rather than reference-based.
  * @typeParam K - The type of the key, which must extend `JSONValue`.
  * @typeParam V - The type of the value.
  * @example
  * ```typescript
- * const map = new JSONMap<{ id: number }, string>();
+ * const map = new SerializedMap<{ id: number }, string>();
  * map.set({ id: 1 }, "one");
  * map.get({ id: 1 }); // "one"
  * ```
@@ -23,13 +23,13 @@ import { jsonSerialize } from './json-serialize.ts';
  * @group Data Structures
  * @category Map
  */
-export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
+export class SerializedMap<K extends JSONValue, V> implements Map<K, V> {
   protected map = new Map<string, V>();
 
   /**
    * The string tag used when calling Object.prototype.toString on instances of this class.
    */
-  public readonly [Symbol.toStringTag] = 'JSONMap';
+  public readonly [Symbol.toStringTag] = 'SerializedMap';
 
   public constructor(values?: Iterable<[K, V]> | null) {
     if (values) {
@@ -70,10 +70,10 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
   }
 
   /**
-   * Executes a provided function once for each key-value pair in the JSONMap.
+   * Executes a provided function once for each key-value pair in the SerializedMap.
    */
   public forEach(
-    callback: (value: V, key: K, map: JSONMap<K, V>) => void,
+    callback: (value: V, key: K, map: SerializedMap<K, V>) => void,
     thisArg?: unknown,
   ): void {
     for (const [key, value] of this.entries()) {
@@ -95,7 +95,7 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
    * @returns The value associated with the key (either existing or newly inserted)
    * @example
    * ```typescript
-   * const map = new JSONMap<{ id: number }, string>();
+   * const map = new SerializedMap<{ id: number }, string>();
    * map.getOrInsert({ id: 1 }, "default"); // "default" (inserted)
    * map.getOrInsert({ id: 1 }, "other");   // "default" (existing)
    * ```
@@ -124,7 +124,7 @@ export class JSONMap<K extends JSONValue, V> implements Map<K, V> {
    * @returns The value associated with the key (either existing or newly computed)
    * @example
    * ```typescript
-   * const map = new JSONMap<{ id: number }, string>();
+   * const map = new SerializedMap<{ id: number }, string>();
    * map.getOrInsertComputed({ id: 1 }, (k) => `value-${k.id}`); // "value-1" (computed)
    * map.getOrInsertComputed({ id: 1 }, (k) => `other-${k.id}`); // "value-1" (existing)
    * ```

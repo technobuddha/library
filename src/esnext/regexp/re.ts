@@ -1,7 +1,10 @@
 import { zipperMerge } from '../array/zipper-merge.ts';
+import { escapeRegExp } from '../escape/escape-regexp.ts';
 import { cull } from '../object/cull.ts';
 import { build } from '../string/build.ts';
 import { splitChars } from '../tokenization/split-chars.ts';
+
+import { isRegExp } from './is-regexp.ts';
 
 /**
  * Constructs a new `RegExp` object by interpolating regular expressions into a template string.
@@ -40,13 +43,17 @@ function process(a: RegExp, flags: Set<string>): string {
   return `(?:${source})`;
 }
 
-function reTemplate(flags: Set<string>, template: TemplateStringsArray, args: RegExp[]): RegExp {
+function reTemplate(
+  flags: Set<string>,
+  template: TemplateStringsArray,
+  args: (RegExp | string)[],
+): RegExp {
   const reText = build(
     cull(
       Array.from(
         zipperMerge(
           Array.from(template.raw),
-          args.map((reg) => process(reg, flags)),
+          args.map((reg) => (isRegExp(reg) ? process(reg, flags) : escapeRegExp(reg))),
         ),
       ).flat(),
     ),
@@ -66,7 +73,9 @@ function reTemplate(flags: Set<string>, template: TemplateStringsArray, args: Re
  * // regex is a RegExp with pattern 'foo(?:bar)baz(?:bar)qux' and flags 'giu'
  * ```
  */
-export function re(flags: string): (template: TemplateStringsArray, ...args: RegExp[]) => RegExp;
+export function re(
+  flags: string,
+): (template: TemplateStringsArray, ...args: (RegExp | string)[]) => RegExp;
 /**
  * @param template - The template string array containing the static parts of the regular expression.
  * @param args - The interpolated `RegExp` objects to be inserted between the template strings.
@@ -79,7 +88,7 @@ export function re(flags: string): (template: TemplateStringsArray, ...args: Reg
  * // regex is a RegExp with pattern 'foo(?:bar)baz(?:bar)qux' and flags 'u'
  * ```
  */
-export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
+export function re(template: TemplateStringsArray, ...args: (RegExp | string)[]): RegExp;
 /**
  * Creates a tagged template function for building regular expressions with optional specified flags.
  *
@@ -93,11 +102,12 @@ export function re(template: TemplateStringsArray, ...args: RegExp[]): RegExp;
  */
 export function re(
   first: string | TemplateStringsArray,
-  ...rest: RegExp[]
-): RegExp | ((template: TemplateStringsArray, ...args: RegExp[]) => RegExp) {
+  ...rest: (RegExp | string)[]
+): RegExp | ((template: TemplateStringsArray, ...args: (RegExp | string)[]) => RegExp) {
   if (typeof first === 'string') {
     const flags = new Set<string>([...splitChars(first), 'v']);
-    return (template: TemplateStringsArray, ...args: RegExp[]) => reTemplate(flags, template, args);
+    return (template: TemplateStringsArray, ...args: (RegExp | string)[]) =>
+      reTemplate(flags, template, args);
   }
 
   return reTemplate(new Set(['v']), first, rest);
