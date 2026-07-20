@@ -1,9 +1,18 @@
+import { re } from '../regexp/index.ts';
+
 /**
  * Regular expression to match words and numbers in a Unicode-aware manner.
  * @internal
  */
-const reWord =
-  /(?:\p{Lu}[\p{Ll}\p{N}]+)|(?:\p{Lu}[\p{Lu}\p{N}]*(?!\p{Ll}))|(?:\p{Ll}[\p{Ll}\p{N}]*)|(?:\p{N}+)/gv;
+
+const ncase = /[\p{N}\p{S}]/gv;
+const lcase = /[\p{Ll}\p{N}]/gv;
+const ucase = /[\p{Lu}\p{N}]/gv;
+
+// const reWord =
+//   /(?:\p{Lu}[\p{Ll}\p{N}]+)|(?:\p{Lu}[\p{Lu}\p{N}]*(?!\p{Ll}))|(?:\p{Ll}[\p{Ll}\p{N}]*)|(?:\p{N}+)/gv;
+
+const reWord = re`(?:\p{Lu}${lcase}+)|(?:\p{Lu}${ucase}*(?!\p{Ll}))|(?:\p{Ll}${lcase}*)|(?:${ncase}+)`;
 
 /**
  * Splits the input string into an array of words.

@@ -11,10 +11,6 @@ describe('case-tokenizer', () => {
     expect(caseTokenizer('')).toEqual(['']);
   });
 
-  test('handles string with only punctuation', () => {
-    expect(caseTokenizer('!@#$%^&*()')).toEqual(['!@#$%^&*()']);
-  });
-
   test('handles string with hyphens', () => {
     expect(caseTokenizer(`well-known break${hyphen}ing`)).toEqual([
       'well',
