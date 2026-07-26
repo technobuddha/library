@@ -64,7 +64,7 @@ function yummy(): Map<string, string> {
   const baked = new Map<string, string>();
   for (const cookie of document.cookie.split('; ')) {
     if (cookie) {
-      const [name, value] = cookie.split('=');
+      const [name, value] = cookie.split('=', 2);
       baked.set(name, decodeURIComponent(value.trim()));
     }
   }

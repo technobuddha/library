@@ -329,7 +329,7 @@ function format(
   { round, precision, scale, lead = 1, trim = 'none' }: FormatOptions,
 ): NumberFormatter {
   const sign = Math.sign(input);
-  const [m, e] = Math.abs(input).toExponential(15).split('e');
+  const [m, e] = Math.abs(input).toExponential(15).split('e', 2);
   let exponent = Number(e) + 1; // +1 because we store the number without the decimal point
   const mantissa = m.replace('.', empty).split(empty);
 
@@ -666,7 +666,7 @@ export function formatNumber(input: NumberLike, mask: string): string {
   if (fmt.exponent > 0) {
     const [m, e] = Math.abs(value)
       .toExponential(fmt.aDigits + fmt.bDigits - 1)
-      .split('e');
+      .split('e', 2);
     [w, f] = m.split('.').map((x) => x.split(empty));
 
     exp = Number(e);

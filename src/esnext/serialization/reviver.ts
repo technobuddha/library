@@ -15,7 +15,7 @@ export function reviver(this: unknown, _key: string, value: unknown): unknown {
     value.startsWith(specialBegin) &&
     value.endsWith(specialFinish)
   ) {
-    const [type, jsonValue] = value.slice(1, -1).split(/:(.+)/v);
+    const [type, jsonValue] = value.slice(1, -1).split(/:(.+)/v, 2);
     switch (type) {
       case 'Date': {
         return new Date(jsonValue);

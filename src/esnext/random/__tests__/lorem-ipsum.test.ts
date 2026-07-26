@@ -72,7 +72,7 @@ describe('loremIpsum', () => {
     expect(firstFiveWords1).toEqual(firstFiveWords2);
 
     // First sentence should have at least 6 words when preserved
-    const [firstSentence] = result1.split('.');
+    const [firstSentence] = result1.split('.', 1);
     const firstSentenceWords = firstSentence.split(' ').length;
     expect(firstSentenceWords).toBeGreaterThanOrEqual(6);
   });
@@ -156,7 +156,7 @@ describe('loremIpsum', () => {
 
   test('preserveFirstWords ensures minimum word count and preserves first 5 words', () => {
     const result = loremIpsum({ preserveFirstWords: true, size: 'short' });
-    const [firstSentence] = result.split('.');
+    const [firstSentence] = result.split('.', 1);
     const wordCount = firstSentence.split(' ').length;
 
     // When preserveFirstWords is true, first sentence should have at least 6 words

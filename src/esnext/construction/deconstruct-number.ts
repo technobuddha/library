@@ -39,7 +39,7 @@ export function deconstructNumber(input: number, precision = 9): DeconstructedNu
 
   const numeric = positive.toExponential(prec - 1);
   const value = Number(numeric);
-  const [m, e] = numeric.split('e');
+  const [m, e] = numeric.split('e', 2);
   const mantissa = cleanEnd(m.replace('.', empty), '0');
   const exponent = Number.parseInt(e);
 
