@@ -12,6 +12,6 @@
     "rewriteRelativeImportExtensions": false,
     "types": ["node"]
   },
-  "include": ["**/*.d.ts", "**/*.js", "**/*.ts"],
+  "include": ["**/*.d.ts", "**/*.ts"],
   "exclude": ["eslint.config.js"]
 }
