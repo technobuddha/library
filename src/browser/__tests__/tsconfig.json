@@ -9,7 +9,7 @@
     "noEmit": true,
     "types": ["node", "vitest/globals"]
   },
-  "include": ["*.test.ts", "../../@types/*.d.ts"],
+  "include": ["*.ts", "../../@types/*.d.ts"],
   "exclude": ["eslint.config.js"],
   "references": [{ "path": ".." }]
 }

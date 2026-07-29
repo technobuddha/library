@@ -1,9 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
-  "version": "2.1.0-167",
+  "version": "2.1.0-168",
   "description": "A large library of useful functions",
-  "stableVersion": "2.1.0-25",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
@@ -400,6 +399,6 @@
     "wordwrap",
     "zipperMerge"
   ],
-  "packageManager": "yarn@4.17.1",
+  "packageManager": "yarn@4.18.0",
   "tagline": "0 Dependencies"
 }
