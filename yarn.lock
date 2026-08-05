@@ -1754,10 +1754,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-169":
-  version: 2.1.0-169
-  resolution: "@technobuddha/library@npm:2.1.0-169"
-  checksum: 10c0/67bf1b02612d57c039798fb3b64ac52bf483279f6e2d5de5108247b8e3f9128f2b14561d8ab55e3f6e4e84a6eb8de69d742db508a87fcdcb588b241496fb1136
+"@technobuddha/library@npm:2.1.0-170":
+  version: 2.1.0-170
+  resolution: "@technobuddha/library@npm:2.1.0-170"
+  checksum: 10c0/f73541bdaa0c6630ed24292a923646a477995e2dcc523fb70a440e06ba9be42d7e0fce11c9feccecfea89124c077660ab51eb9aba1e0b78d8f5735471f4477fa
   languageName: node
   linkType: hard
 
@@ -1782,8 +1782,8 @@ __metadata:
   linkType: soft
 
 "@technobuddha/project@file:../project::locator=%40technobuddha%2Flibrary%40workspace%3A.":
-  version: 1.0.0-160
-  resolution: "@technobuddha/project@file:../project#../project::hash=c11836&locator=%40technobuddha%2Flibrary%40workspace%3A."
+  version: 1.0.0-164
+  resolution: "@technobuddha/project@file:../project#../project::hash=e84e6a&locator=%40technobuddha%2Flibrary%40workspace%3A."
   dependencies:
     "@commander-js/extra-typings": "npm:15.0.0"
     "@cspell/cspell-types": "npm:10.0.1"
@@ -1793,7 +1793,7 @@ __metadata:
     "@eslint/css": "npm:1.4.0"
     "@eslint/markdown": "npm:8.0.3"
     "@html-eslint/eslint-plugin": "npm:0.64.0"
-    "@technobuddha/library": "npm:2.1.0-169"
+    "@technobuddha/library": "npm:2.1.0-170"
     "@types/cli-progress": "npm:^3.11.6"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
@@ -1862,7 +1862,7 @@ __metadata:
     eslint-comments: dist/eslint-comments/eslint-comments.js
     tb: dist/tb/tb.js
     unexported-files: dist/unexported-files/unexported-files.js
-  checksum: 10c0/63034f016746d27459ca12845ae0faba2be1b6d139bcdf8d5fb39de4efb96cca02dd64249c4632b59f345d72162a13db93f8d0f9e960c9f5914980d9907e2c6d
+  checksum: 10c0/5ea0f3bb0b93b654c071622f8b83e2b54a90924e351aa338d89b1c408c5b0429c276b100a1ea1ae944c63cd3396c675a5b56a69af457fc979f711ddd1cd59a33
   languageName: node
   linkType: hard
 
