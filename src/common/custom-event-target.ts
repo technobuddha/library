@@ -4,7 +4,7 @@
  * @category Events
  */
 export type CustomEventListener<T extends Record<string, unknown>, E extends keyof T = keyof T> =
-  | ((event: CustomEvent<T[E]>) => void | Promise<void>)
+  | ((event: T[E]) => void | Promise<void>)
   | {
       /** Handles the custom event */
       handleEvent(event: CustomEvent<T[E]>): void | Promise<void>;
@@ -54,6 +54,10 @@ export class CustomEventTarget<
    * The underlying native EventTarget instance
    */
   private readonly eventTarget: EventTarget = new EventTarget();
+  /**
+   * Interceptor functions
+   */
+  private readonly interceptors: WeakMap<object, Handler> = new WeakMap();
 
   /**
    * Adds a type-safe event listener for the specified event type
@@ -67,7 +71,19 @@ export class CustomEventTarget<
     listener: CustomEventListener<T, E>,
     options?: Parameters<EventTarget['addEventListener']>[2],
   ): void {
-    this.eventTarget.addEventListener(type, listener as Handler, options);
+    const interceptor = (event: Event): void => {
+      (async (event: CustomEvent<T[E]>) => {
+        if (typeof listener === 'function') {
+          await listener(event.detail);
+        } else {
+          await listener.handleEvent(event);
+        }
+      })(event as CustomEvent<T[E]>);
+    };
+
+    this.interceptors.set(listener, interceptor);
+
+    this.eventTarget.addEventListener(type, interceptor, options);
   }
 
   /**
@@ -106,6 +122,10 @@ export class CustomEventTarget<
     listener: CustomEventListener<T, E>,
     options?: Parameters<EventTarget['removeEventListener']>[2],
   ): void {
-    this.eventTarget.removeEventListener(type, listener as Handler, options);
+    const interceptor = this.interceptors.get(listener);
+    if(interceptor) {
+      this.eventTarget.removeEventListener(type, interceptor, options);
+      this.interceptors.delete(listener);
+    }
   }
 }

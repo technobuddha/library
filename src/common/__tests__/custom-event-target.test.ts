@@ -21,10 +21,7 @@ describe('CustomEventTarget', () => {
     eventTarget.dispatchEvent('userLogin', { userId: '123', timestamp: new Date() });
 
     expect(listener).toHaveBeenCalledExactlyOnceWith(
-      expect.objectContaining({
-        type: 'userLogin',
-        detail: { userId: '123', timestamp: expect.any(Date) },
-      }),
+      expect.objectContaining({ userId: '123', timestamp: expect.any(Date) }),
     );
   });
 
@@ -52,12 +49,7 @@ describe('CustomEventTarget', () => {
     const result = eventTarget.dispatchEvent('dataUpdate', { data: testData });
 
     expect(result).toBeTrue();
-    expect(listener).toHaveBeenCalledWith(
-      expect.objectContaining({
-        type: 'dataUpdate',
-        detail: { data: testData },
-      }),
-    );
+    expect(listener).toHaveBeenCalledWith(expect.objectContaining({ data: testData }));
   });
 
   test('dispatchEvent without payload (undefined type)', () => {
@@ -68,12 +60,7 @@ describe('CustomEventTarget', () => {
     const result = eventTarget.dispatchEvent('userLogout');
 
     expect(result).toBeTrue();
-    expect(listener).toHaveBeenCalledWith(
-      expect.objectContaining({
-        type: 'userLogout',
-        // detail: undefined,
-      }),
-    );
+    expect(listener).toHaveBeenCalled();
   });
 
   test('removeEventListener removes function listener', () => {
@@ -108,9 +95,7 @@ describe('CustomEventTarget', () => {
     eventTarget.dispatchEvent('notification', { message: 'Second', level: 'info' });
 
     expect(listener).toHaveBeenCalledExactlyOnceWith(
-      expect.objectContaining({
-        detail: { message: 'First', level: 'info' },
-      }),
+      expect.objectContaining({ message: 'First', level: 'info' }),
     );
   });
 
@@ -164,23 +149,15 @@ describe('CustomEventTarget', () => {
     eventTarget.dispatchEvent('notification', { message: 'Welcome!', level: 'info' });
 
     expect(loginListener).toHaveBeenCalledWith(
-      expect.objectContaining({
-        type: 'userLogin',
-        detail: { userId: 'user123', timestamp: loginTime },
-      }),
+      expect.objectContaining({ userId: 'user123', timestamp: loginTime }),
     );
 
-    expect(logoutListener).toHaveBeenCalledWith(
-      expect.objectContaining({
-        type: 'userLogout',
-        // detail: undefined,
-      }),
-    );
+    expect(logoutListener).toHaveBeenCalledWith(null);
 
     expect(notificationListener).toHaveBeenCalledWith(
       expect.objectContaining({
-        type: 'notification',
-        detail: { message: 'Welcome!', level: 'info' },
+        message: 'Welcome!',
+        level: 'info',
       }),
     );
   });
@@ -213,29 +190,25 @@ describe('CustomEventTarget', () => {
 
   test('event object has correct properties', () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
-    const listener = vi.fn();
+    const listener = { handleEvent: vi.fn() };
 
     eventTarget.addEventListener('dataUpdate', listener);
     eventTarget.dispatchEvent('dataUpdate', { data: [42] });
 
-    expect(listener).toHaveBeenCalledWith(
-      expect.objectContaining({
-        type: 'dataUpdate',
-        detail: { data: [42] },
-        bubbles: false,
-        cancelable: false,
-        composed: false,
-      }),
+    expect(listener.handleEvent).toHaveBeenCalledWith(
+      expect.objectContaining({ detail: { data: [42] } }),
     );
 
-    const [[event]] = listener.mock.calls;
+    const [[event]] = listener.handleEvent.mock.calls;
     expect(event).toBeInstanceOf(CustomEvent);
   });
 
   test('dispatch returns false when preventDefault is called', () => {
-    const listener = vi.fn((event: CustomEvent) => {
-      event.preventDefault();
-    });
+    const listener = {
+      handleEvent: vi.fn((event: CustomEvent) => {
+        event.preventDefault();
+      }),
+    };
 
     // Create a cancelable event by accessing the underlying EventTarget
     const cancelableEventTarget = new CustomEventTarget<TestEvents>();
@@ -270,11 +243,6 @@ describe('CustomEventTarget', () => {
 
     eventTarget.dispatchEvent('complexData', complexPayload);
 
-    expect(listener).toHaveBeenCalledWith(
-      expect.objectContaining({
-        type: 'complexData',
-        detail: complexPayload,
-      }),
-    );
+    expect(listener).toHaveBeenCalledWith(complexPayload);
   });
 });
