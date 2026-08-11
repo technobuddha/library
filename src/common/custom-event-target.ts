@@ -123,7 +123,7 @@ export class CustomEventTarget<
     options?: Parameters<EventTarget['removeEventListener']>[2],
   ): void {
     const interceptor = this.interceptors.get(listener);
-    if(interceptor) {
+    if (interceptor) {
       this.eventTarget.removeEventListener(type, interceptor, options);
       this.interceptors.delete(listener);
     }
