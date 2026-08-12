@@ -71,15 +71,17 @@ export class CustomEventTarget<
     listener: CustomEventListener<T, E>,
     options?: Parameters<EventTarget['addEventListener']>[2],
   ): void {
-    const interceptor = (event: Event): void => {
-      (async (event: CustomEvent<T[E]>) => {
-        if (typeof listener === 'function') {
-          await listener(event.detail);
-        } else {
-          await listener.handleEvent(event);
-        }
-      })(event as CustomEvent<T[E]>);
-    };
+    const interceptor =
+      this.interceptors.get(listener) ??
+      ((event: Event): void => {
+        (async (event: CustomEvent<T[E]>) => {
+          if (typeof listener === 'function') {
+            await listener(event.detail);
+          } else {
+            await listener.handleEvent(event);
+          }
+        })(event as CustomEvent<T[E]>);
+      });
 
     this.interceptors.set(listener, interceptor);
 
@@ -125,7 +127,6 @@ export class CustomEventTarget<
     const interceptor = this.interceptors.get(listener);
     if (interceptor) {
       this.eventTarget.removeEventListener(type, interceptor, options);
-      this.interceptors.delete(listener);
     }
   }
 }
