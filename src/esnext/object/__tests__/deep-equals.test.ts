@@ -167,6 +167,24 @@ describe('deepEquals', () => {
     expect(deepEquals(objA, objB)).toBeTrue();
   });
 
+  test('compares maps with deep-equal entries', () => {
+    const mapA = new Map([
+      ['a', { value: 1 }],
+      ['b', [2, 3]],
+    ]);
+    const mapB = new Map([
+      ['a', { value: 1 }],
+      ['b', [2, 3]],
+    ]);
+    expect(deepEquals(mapA, mapB)).toBeTrue();
+  });
+
+  test('compares sets with deep-equal values', () => {
+    const setA = new Set([{ value: 1 }, { nested: { value: 2 } }]);
+    const setB = new Set([{ value: 1 }, { nested: { value: 2 } }]);
+    expect(deepEquals(setA, setB)).toBeTrue();
+  });
+
   test('returns false for different types', () => {
     expect(deepEquals(42, '42')).toBeFalse();
     expect(deepEquals(true, 1)).toBeFalse();

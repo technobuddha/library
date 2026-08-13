@@ -1,26 +1,32 @@
 import { isPrimitive } from '../primitive/is-primitive.ts';
-import { type Primitive } from '../primitive/primitive.ts';
 
+import { isMap } from './is-map.ts';
+import { isSet } from './is-set.ts';
 import { sameValue } from './same-value.ts';
 
 /**
  * Compares two values for deep equality.
  *
- * Performs a recursive deep comparison of objects, arrays, and primitives. For objects, all own properties
- * (including symbol keys) are compared. Primitives are compared using the SameValue algorithm.
+ * Performs a recursive deep comparison of objects, arrays, maps, sets, and primitives.
+ * For objects, all own properties (including symbol keys) are compared. Primitives are compared
+ * using the SameValue algorithm.
  *
- * @param objA - First value to compare
- * @param objB - Second value to compare
- * @param exclude - Array of property names (string or symbol) to exclude from the comparison
- * @returns `true` if the values are deeply equal, `false` otherwise
+ * @param objA - First value to compare.
+ * @param objB - Second value to compare.
+ * @param exclude - Array of property names (string or symbol) to exclude from the comparison.
+ * @returns `true` if the values are deeply equal; otherwise, `false`.
  *
  * @example
  * ```typescript
- * deepEquals(\{ a: 1, b: 2 \}, \{ a: 1, b: 2 \}); // true
- * deepEquals(\{ a: 1, b: 2 \}, \{ a: 1, b: 3 \}); // false
+ * deepEquals({ a: 1, b: 2 }, { a: 1, b: 2 }); // true
+ * deepEquals({ a: 1, b: 2 }, { a: 1, b: 3 }); // false
  *
  * // Works with nested objects
- * deepEquals(\{ a: \{ b: 1 \} \}, \{ a: \{ b: 1 \} \}); // true
+ * deepEquals({ a: { b: 1 } }, { a: { b: 1 } }); // true
+ *
+ * // Works with maps and sets
+ * deepEquals(new Map([['a', { value: 1 }]]), new Map([['a', { value: 1 }]])); // true
+ * deepEquals(new Set([{ value: 1 }]), new Set([{ value: 1 }])); // true
  *
  * // Works with primitives
  * deepEquals(42, 42); // true
@@ -30,7 +36,7 @@ import { sameValue } from './same-value.ts';
  * deepEquals([1, 2, 3], [1, 2, 3]); // true
  *
  * // Can exclude specific keys
- * deepEquals(\{ a: 1, b: 2 \}, \{ a: 1, b: 3 \}, ['b']); // true
+ * deepEquals({ a: 1, b: 2 }, { a: 1, b: 3 }, ['b']); // true
  * ```
  *
  * @remarks
@@ -40,8 +46,8 @@ import { sameValue } from './same-value.ts';
  * @category Comparison
  */
 export function deepEquals(
-  objA: ArrayLike<unknown> | object | Primitive,
-  objB: ArrayLike<unknown> | object | Primitive,
+  objA: unknown,
+  objB: unknown,
   exclude: (string | symbol)[] = [],
 ): boolean {
   if (isPrimitive(objA)) {
@@ -53,6 +59,68 @@ export function deepEquals(
 
   if (isPrimitive(objB)) {
     return false;
+  }
+
+  if (isMap(objA)) {
+    if (!isMap(objB) || objA.size !== objB.size) {
+      return false;
+    }
+
+    const matchedEntries = new Set<number>();
+    const entriesB = Array.from(objB);
+
+    for (const [keyA, valueA] of objA) {
+      let foundMatch = false;
+
+      for (const [index, [keyB, valueB]] of entriesB.entries()) {
+        if (matchedEntries.has(index)) {
+          continue;
+        }
+
+        if (deepEquals(keyA, keyB, exclude) && deepEquals(valueA, valueB, exclude)) {
+          matchedEntries.add(index);
+          foundMatch = true;
+          break;
+        }
+      }
+
+      if (!foundMatch) {
+        return false;
+      }
+    }
+
+    return true;
+  }
+
+  if (isSet(objA)) {
+    if (!isSet(objB) || objA.size !== objB.size) {
+      return false;
+    }
+
+    const matchedEntries = new Set<number>();
+    const valuesB = Array.from(objB);
+
+    for (const valueA of objA) {
+      let foundMatch = false;
+
+      for (const [index, valueB] of valuesB.entries()) {
+        if (matchedEntries.has(index)) {
+          continue;
+        }
+
+        if (deepEquals(valueA, valueB, exclude)) {
+          matchedEntries.add(index);
+          foundMatch = true;
+          break;
+        }
+      }
+
+      if (!foundMatch) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   const hash = new Set<string | symbol>(exclude);
