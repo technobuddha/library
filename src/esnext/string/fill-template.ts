@@ -34,11 +34,14 @@ export function fillTemplate(
 ): string {
   let argInput = toString(input);
 
-  for (const match of argInput.match(
+  const matches = argInput.match(
     new RegExp(`${escapeRegExp(open)}(.+?)${escapeRegExp(close)}`, 'vg'),
-  ) ?? []) {
-    const key = match.slice(open.length, -close.length).trim();
-    argInput = argInput.replace(match, toString(values[key] ?? empty));
+  );
+  if (matches) {
+    for (const match of matches) {
+      const key = match.slice(open.length, -close.length).trim();
+      argInput = argInput.replace(match, toString(values[key] ?? empty));
+    }
   }
   return argInput;
 }

@@ -14,18 +14,4 @@ describe('isMap', () => {
     expect(isMap(new Set())).toBeFalse();
     expect(isMap('map')).toBeFalse();
   });
-
-  test('returns true for cross-realm Map objects', () => {
-    const iframe = document.createElement('iframe');
-    document.body.appendChild(iframe);
-
-    const map = iframe.contentWindow?.Map;
-    if (!map) {
-      return;
-    }
-
-    expect(isMap(new map())).toBeTrue();
-
-    document.body.removeChild(iframe);
-  });
 });

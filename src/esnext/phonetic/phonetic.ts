@@ -154,7 +154,6 @@ export function phonetic(
     prepareRules,
     notFound = 'reset',
     silentLetters = ['A', 'E', 'I', 'O', 'U', 'H', 'W', 'Y'],
-    // eslint-disable-next-line unicorn/no-non-function-verb-prefix
     removeDuplicates = 'last',
     scan,
     pad,
@@ -284,31 +283,34 @@ export function phonetic(
       }
 
       let found = false;
-      for (const rule of scan[text.at(i)!] ?? []) {
-        if (row(rule, i)) {
-          found = true;
+      const scanRules = scan[text.at(i)!];
+      if (scanRules) {
+        for (const rule of scanRules) {
+          if (row(rule, i)) {
+            found = true;
 
-          const { m, l, o } = rule;
+            const { m, l, o } = rule;
 
-          if (o) {
-            if (isString(o)) {
-              appendToResults(scanResults, o);
-            } else if (typeof forking === 'boolean') {
-              const base = scanResults;
-              const final: typeof scanResults = [];
+            if (o) {
+              if (isString(o)) {
+                appendToResults(scanResults, o);
+              } else if (typeof forking === 'boolean') {
+                const base = scanResults;
+                const final: typeof scanResults = [];
 
-              for (const oo of o) {
-                final.push(...appendToResults(deepCopy(base), oo));
-              }
-              scanResults = final;
-            } else {
-              for (let i = 0; i < o.length; i++) {
-                appendToResults([scanResults[i]], o[i]);
+                for (const oo of o) {
+                  final.push(...appendToResults(deepCopy(base), oo));
+                }
+                scanResults = final;
+              } else {
+                for (let i = 0; i < o.length; i++) {
+                  appendToResults([scanResults[i]], o[i]);
+                }
               }
             }
+            i += (l ?? m.length) - 1;
+            break;
           }
-          i += (l ?? m.length) - 1;
-          break;
         }
       }
       if (!found) {

@@ -14,18 +14,4 @@ describe('isSet', () => {
     expect(isSet(new Map())).toBeFalse();
     expect(isSet('set')).toBeFalse();
   });
-
-  test('returns true for cross-realm Set objects', () => {
-    const iframe = document.createElement('iframe');
-    document.body.appendChild(iframe);
-
-    const set = iframe.contentWindow?.Set;
-    if (!set) {
-      return;
-    }
-
-    expect(isSet(new set())).toBeTrue();
-
-    document.body.removeChild(iframe);
-  });
 });

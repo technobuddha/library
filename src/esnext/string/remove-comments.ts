@@ -46,7 +46,6 @@ export type RemoveCommentsOptions = {
  */
 export function removeComments(
   text: StringLike,
-  // eslint-disable-next-line unicorn/no-non-function-verb-prefix
   { replacement = empty, removeExtraCommas = true }: RemoveCommentsOptions = {},
 ): string {
   const str = toString(text);
