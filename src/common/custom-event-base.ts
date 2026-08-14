@@ -35,8 +35,9 @@ export class CustomEventBase<
   public on<E extends Extract<keyof T, string>>(
     event: E,
     listener: (payload: T[E]) => void | Promise<void>,
-  ): void {
+  ): this {
     this.eventTarget.addEventListener(event, listener);
+    return this;
   }
 
   /**
@@ -50,8 +51,9 @@ export class CustomEventBase<
   public off<E extends Extract<keyof T, string>>(
     event: E,
     listener: (payload: T[E]) => void | Promise<void>,
-  ): void {
+  ): this {
     this.eventTarget.removeEventListener(event, listener);
+    return this;
   }
 
   /**
@@ -73,11 +75,12 @@ export class CustomEventBase<
    * @group Data Structures
    * @category Events
    */
-  public fire<E extends Extract<keyof T, string>>(event: E, payload?: T[E]): void {
+  public fire<E extends Extract<keyof T, string>>(event: E, payload?: T[E]): this {
     this.eventTarget.dispatchEvent(
       event,
       ...((payload === undefined ? [] : [payload]) as T[E] extends undefined ? []
       : [payload: T[E]]),
     );
+    return this;
   }
 }

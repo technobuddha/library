@@ -1865,10 +1865,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-175":
-  version: 2.1.0-175
-  resolution: "@technobuddha/library@npm:2.1.0-175"
-  checksum: 10c0/072bb8d4339302c5fd3ac311c4582ebcbf17d1ce884a073cca2caf04464f1f6739f254e979f1662047aae2995178002cc2de97f7c93d82ce6ea062581fde930d
+"@technobuddha/library@npm:2.1.0-176":
+  version: 2.1.0-176
+  resolution: "@technobuddha/library@npm:2.1.0-176"
+  checksum: 10c0/85fbf266a0f674bbd2537307629c70b55bf0ec1a5f80b4d6d794cf647b4421873d657e56d60b079cf603a61124e3ba5dea1f6d730d50c56cadbd9afd31812ead
   languageName: node
   linkType: hard
 
@@ -1893,8 +1893,8 @@ __metadata:
   linkType: soft
 
 "@technobuddha/project@file:../project::locator=%40technobuddha%2Flibrary%40workspace%3A.":
-  version: 1.0.0-174
-  resolution: "@technobuddha/project@file:../project#../project::hash=b5cf3d&locator=%40technobuddha%2Flibrary%40workspace%3A."
+  version: 1.0.0-175
+  resolution: "@technobuddha/project@file:../project#../project::hash=c9c917&locator=%40technobuddha%2Flibrary%40workspace%3A."
   dependencies:
     "@commander-js/extra-typings": "npm:15.0.0"
     "@cspell/cspell-types": "npm:10.0.1"
@@ -1904,7 +1904,7 @@ __metadata:
     "@eslint/css": "npm:1.4.0"
     "@eslint/markdown": "npm:8.0.3"
     "@html-eslint/eslint-plugin": "npm:0.64.0"
-    "@technobuddha/library": "npm:2.1.0-175"
+    "@technobuddha/library": "npm:2.1.0-176"
     "@types/cli-progress": "npm:^3.11.6"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
@@ -1942,7 +1942,7 @@ __metadata:
     eslint-plugin-react-web-api: "npm:5.18.6"
     eslint-plugin-react-x: "npm:5.18.6"
     eslint-plugin-simple-import-sort: "npm:14.0.0"
-    eslint-plugin-technobuddha: "npm:2.0.0-56"
+    eslint-plugin-technobuddha: "npm:2.0.0-57"
     eslint-plugin-unicorn: "npm:73.0.0"
     globals: "npm:17.11.0"
     husky: "npm:9.1.7"
@@ -1973,7 +1973,7 @@ __metadata:
     eslint-comments: dist/eslint-comments/eslint-comments.js
     tb: dist/tb/tb.js
     unexported-files: dist/unexported-files/unexported-files.js
-  checksum: 10c0/c0ad74ffb2cecb46e2d5b1901427dcf81a576af9128e112ffc6c7b6d00ab3e5edcd5df7dc9401876625a9b8825e0970eed1adc9524f0383f898fe4cab07b6594
+  checksum: 10c0/063bfb02c2974854d1d735ca64af041a4c471fa9d2875004818f5aac8657eb9ac6197d2b1b926f477f3ac8278e9b6874c5cd610b285567316c81da86e3305f45
   languageName: node
   linkType: hard
 
@@ -4428,17 +4428,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-technobuddha@npm:2.0.0-56":
-  version: 2.0.0-56
-  resolution: "eslint-plugin-technobuddha@npm:2.0.0-56"
+"eslint-plugin-technobuddha@npm:2.0.0-57":
+  version: 2.0.0-57
+  resolution: "eslint-plugin-technobuddha@npm:2.0.0-57"
   dependencies:
     "@microsoft/tsdoc": "npm:0.16.0"
     "@microsoft/tsdoc-config": "npm:0.18.1"
-    "@technobuddha/library": "npm:2.1.0-175"
-    eslint: "npm:10.8.0"
+    "@technobuddha/library": "npm:2.1.0-176"
+    eslint: "npm:10.8.1"
     eslint-vitest-rule-tester: "npm:3.1.0"
     get-tsconfig: "npm:4.14.0"
-  checksum: 10c0/aed386565cfd9e5b50c9db9d50bb75d5e455a3d0fd79d1776d230e37aa11df426339c1b32d2e66d28982094271591c273bc4d1a6365453ae48c00b8edaccf69e
+  checksum: 10c0/7473388fead61addeb9bca71480e485a1462becf36920ac371faaedb2f7336d2c1b38db47cd60b414fca7faadd28065d55ce6d2271fb82e4f5a8cefa1730c7b5
   languageName: node
   linkType: hard
 
@@ -4521,51 +4521,6 @@ __metadata:
     eslint: ^9.10.0 || ^10.0.0
     vitest: ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
   checksum: 10c0/54a946f90e815082cba6ec11b2771a9a25366838c2fe1faf2349876b94d8556da42656d55f86feb3f20bfce7ef47b5d98e568fc40bbbc6ba1993ffe9806fffc5
-  languageName: node
-  linkType: hard
-
-"eslint@npm:10.8.0":
-  version: 10.8.0
-  resolution: "eslint@npm:10.8.0"
-  dependencies:
-    "@eslint-community/eslint-utils": "npm:^4.8.0"
-    "@eslint-community/regexpp": "npm:^4.12.2"
-    "@eslint/config-array": "npm:^0.23.5"
-    "@eslint/config-helpers": "npm:^0.7.0"
-    "@eslint/core": "npm:^1.2.1"
-    "@eslint/plugin-kit": "npm:^0.7.2"
-    "@humanfs/node": "npm:^0.16.6"
-    "@humanwhocodes/module-importer": "npm:^1.0.1"
-    "@humanwhocodes/retry": "npm:^0.4.2"
-    "@types/estree": "npm:^1.0.6"
-    ajv: "npm:^6.14.0"
-    cross-spawn: "npm:^7.0.6"
-    debug: "npm:^4.3.2"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^9.1.2"
-    eslint-visitor-keys: "npm:^5.0.1"
-    espree: "npm:^11.2.0"
-    esquery: "npm:^1.7.0"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^8.0.0"
-    find-up: "npm:^5.0.0"
-    glob-parent: "npm:^6.0.2"
-    ignore: "npm:^5.2.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    minimatch: "npm:^10.2.5"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.3"
-  peerDependencies:
-    jiti: "*"
-  peerDependenciesMeta:
-    jiti:
-      optional: true
-  bin:
-    eslint: bin/eslint.js
-  checksum: 10c0/2dbc523578834088615f388e08418d2620b25655f7a398f6d415765fa2a3a25d6b8b43bd3293d40f977e12752323a841d52654a2648697a00c0102c9794bb3dc
   languageName: node
   linkType: hard
 
