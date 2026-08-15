@@ -10,6 +10,6 @@
  * @group Function
  * @category Utilities
  */
-export function noop(): void {
-  //
+export function noop(): undefined {
+  return undefined;
 }
