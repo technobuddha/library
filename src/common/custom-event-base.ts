@@ -1,4 +1,4 @@
-import { CustomEventTarget } from './custom-event-target.ts';
+import { type CustomEventListener, CustomEventTarget } from './custom-event-target.ts';
 
 /**
  * A simple event bus for typed custom events.
@@ -7,8 +7,8 @@ import { CustomEventTarget } from './custom-event-target.ts';
  * @category Events
  */
 export class CustomEventBase<
-  T extends Record<EventName, unknown>,
-  EventName extends string & keyof T = Extract<keyof T, string>,
+   T extends Record<EventName, unknown>,
+  EventName extends string & keyof T = Extract<keyof T, string>
 > {
   /**
    * Underlying typed event target instance.
@@ -34,7 +34,7 @@ export class CustomEventBase<
    */
   public on<E extends Extract<keyof T, string>>(
     event: E,
-    listener: (payload: T[E]) => void | Promise<void>,
+    listener: CustomEventListener<T, E>,
   ): this {
     this.eventTarget.addEventListener(event, listener);
     return this;
@@ -50,7 +50,7 @@ export class CustomEventBase<
    */
   public off<E extends Extract<keyof T, string>>(
     event: E,
-    listener: (payload: T[E]) => void | Promise<void>,
+    listener: CustomEventListener<T, E>,
   ): this {
     this.eventTarget.removeEventListener(event, listener);
     return this;
@@ -75,12 +75,14 @@ export class CustomEventBase<
    * @group Data Structures
    * @category Events
    */
-  public fire<E extends Extract<keyof T, string>>(event: E, payload?: T[E]): this {
-    this.eventTarget.dispatchEvent(
+  public async fire<E extends Extract<keyof T, string>>(
+    event: E,
+    payload?: T[E],
+  ): Promise<void> {
+    return this.eventTarget.dispatchEvent(
       event,
       ...((payload === undefined ? [] : [payload]) as T[E] extends undefined ? []
       : [payload: T[E]]),
     );
-    return this;
   }
 }

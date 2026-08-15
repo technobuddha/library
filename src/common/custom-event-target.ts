@@ -1,48 +1,21 @@
 /**
- * Event listener function or object that can handle custom events
+ * Listener signature for a typed custom event.
+ *
+ * Events with an undefined payload are treated as no-argument listeners.
+ *
+ * @typeParam T - Event map whose keys are event names and values are their payload types.
+ * @typeParam E - The specific event name being listened to.
  * @group Data Structures
  * @category Events
  */
 export type CustomEventListener<T extends Record<string, unknown>, E extends keyof T = keyof T> =
-  | ((event: T[E]) => void | Promise<void>)
-  | {
-      /** Handles the custom event */
-      handleEvent(event: CustomEvent<T[E]>): void | Promise<void>;
-    };
+  T[E] extends undefined ? () => void | Promise<void> : (event: T[E]) => void | Promise<void>;
 
 /**
- * Generic event handler for the underlying EventTarget
- * @internal
- */
-type Handler = ((event: Event) => void) | { handleEvent(event: Event): void };
-
-/**
- * A type-safe wrapper around the native EventTarget that provides strongly-typed custom events
+ * A lightweight, type-safe custom event target.
  *
- * @example
- * ```typescript
- * interface MyEvents {
- *   userLogin: { userId: string; timestamp: Date };
- *   userLogout: undefined;
- *   dataUpdate: { data: any[] };
- * }
- *
- * const eventTarget = new CustomEventTarget<MyEvents>();
- *
- * // Type-safe event listening
- * eventTarget.addEventListener('userLogin', (event) => {
- *   console.log(event.detail.userId); // TypeScript knows this exists
- * });
- *
- * // Type-safe event dispatching
- * eventTarget.dispatchEvent('userLogin', { userId: '123', timestamp: new Date() });
- * eventTarget.dispatchEvent('userLogout'); // No payload required
- * eventTarget.dispatchEvent('userLogin', { userId: '456', timestamp: new Date() }, { bubbles: true });
- * ```
- *
- * @typeParam T - Record type defining the event names as keys and their payload types as values
- * @typeParam K - String union type of event names, extracted from T's keys
- *
+ * @typeParam T - Record of event names to payload types.
+ * @typeParam EventName - The concrete string event names derived from T.
  * @group Data Structures
  * @category Events
  */
@@ -50,81 +23,67 @@ export class CustomEventTarget<
   T extends Record<EventName, unknown>,
   EventName extends string & keyof T = Extract<keyof T, string>,
 > {
-  /**
-   * The underlying native EventTarget instance
-   */
-  private readonly eventTarget: EventTarget = new EventTarget();
-  /**
-   * Interceptor functions
-   */
-  private readonly interceptors: WeakMap<object, Handler> = new WeakMap();
+  private readonly eventListeners: Map<EventName, Set<CustomEventListener<T, EventName>>> =
+    new Map();
+
+  private listeners<E extends EventName>(event: E): Set<CustomEventListener<T, E>> {
+    const listeners = this.eventListeners.get(event);
+    if (listeners) {
+      return listeners;
+    }
+
+    const set = new Set<CustomEventListener<T, EventName>>();
+    this.eventListeners.set(event, set);
+    return set;
+  }
 
   /**
-   * Adds a type-safe event listener for the specified event type
+   * Registers a listener for a specific event.
    *
-   * @param type - The event type to listen for
-   * @param listener - The listener function or object to handle the event
-   * @param options - Optional event listener options (passive, once, signal, etc.)
+   * @param event - Event name to observe.
+   * @param listener - Callback to invoke when the event is dispatched.
+   * @group Data Structures
+   * @category Events
    */
   public addEventListener<E extends EventName>(
-    type: E,
+    event: E,
     listener: CustomEventListener<T, E>,
-    options?: Parameters<EventTarget['addEventListener']>[2],
   ): void {
-    const interceptor = this.interceptors.getOrInsertComputed(listener, () =>
-      typeof listener === 'function' ?
-        async (e: Event) => {
-          const event = e as CustomEvent<T[E]>;
-          await listener(event.detail);
-        }
-      : async (e: Event) => {
-          const event = e as CustomEvent<T[E]>;
-          await listener.handleEvent(event);
-        },
-    );
-
-    this.eventTarget.addEventListener(type, interceptor, options);
+    this.listeners(event).add(listener);
   }
 
   /**
-   * Dispatches a type-safe custom event with optional payload and event options
+   * Dispatches a typed custom event.
    *
-   * @param event - The event type or event configuration object
-   * @param args - The event payload (required only if T[E] is not undefined)
-   * @returns Boolean indicating whether the event was successfully dispatched
+   * @param event - Event name to emit.
+   * @param args - Optional payload for the event.
+   * @returns Resolves once all listeners have finished handling the event.
+   * @group Data Structures
+   * @category Events
    */
-  public dispatchEvent<E extends EventName>(
-    event: E | { type: E; bubbles?: boolean; cancelable?: boolean; composed?: boolean },
-    ...args: T[E] extends undefined ? [] : [payload: T[E]]
-  ): boolean {
-    const payload = args.length === 0 ? undefined : args[0];
-    const { bubbles, cancelable, composed } = typeof event === 'string' ? {} : event;
-    const type = typeof event === 'string' ? event : event.type;
+  public async dispatchEvent<E extends EventName>(
+    event: E,
+    ...args: T[E] extends undefined ? [] : [T[E]]
+  ): Promise<void> {
+    const payload: T[E] | undefined = args.length === 0 ? undefined : args[0];
 
-    const customEvent = new CustomEvent(type, {
-      detail: payload,
-      bubbles,
-      cancelable,
-      composed,
-    });
-    return this.eventTarget.dispatchEvent(customEvent);
+    for (const listener of this.listeners(event)) {
+      await listener(payload!);
+    }
   }
 
   /**
-   * Removes a previously added event listener
+   * Removes a previously added event listener.
    *
-   * @param type - The event type to stop listening for
-   * @param listener - The listener function or object to remove
-   * @param options - Optional event listener options that match those used when adding
+   * @param event - The event type to stop listening for.
+   * @param listener - The previously registered listener to remove.
+   * @group Data Structures
+   * @category Events
    */
   public removeEventListener<E extends EventName>(
-    type: E,
+    event: E,
     listener: CustomEventListener<T, E>,
-    options?: Parameters<EventTarget['removeEventListener']>[2],
   ): void {
-    const interceptor = this.interceptors.get(listener);
-    if (interceptor) {
-      this.eventTarget.removeEventListener(type, interceptor, options);
-    }
+    this.listeners(event).delete(listener);
   }
 }

@@ -13,127 +13,68 @@ describe('CustomEventTarget', () => {
     expect(eventTarget).toBeInstanceOf(CustomEventTarget);
   });
 
-  test('addEventListener with function listener', () => {
+  test('addEventListener with function listener', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener = vi.fn();
 
     eventTarget.addEventListener('userLogin', listener);
-    eventTarget.dispatchEvent('userLogin', { userId: '123', timestamp: new Date() });
+    await eventTarget.dispatchEvent('userLogin', { userId: '123', timestamp: new Date() });
 
     expect(listener).toHaveBeenCalledExactlyOnceWith(
       expect.objectContaining({ userId: '123', timestamp: expect.any(Date) }),
     );
   });
 
-  test('addEventListener with object listener (handleEvent)', () => {
-    const eventTarget = new CustomEventTarget<TestEvents>();
-    const listener = { handleEvent: vi.fn() };
-
-    eventTarget.addEventListener('userLogin', listener);
-    eventTarget.dispatchEvent('userLogin', { userId: '456', timestamp: new Date() });
-
-    expect(listener.handleEvent).toHaveBeenCalledExactlyOnceWith(
-      expect.objectContaining({
-        type: 'userLogin',
-        detail: { userId: '456', timestamp: expect.any(Date) },
-      }),
-    );
-  });
-
-  test('dispatchEvent with payload', () => {
+  test('dispatchEvent with payload', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener = vi.fn();
     const testData = [1, 2, 3, 4, 5];
 
     eventTarget.addEventListener('dataUpdate', listener);
-    const result = eventTarget.dispatchEvent('dataUpdate', { data: testData });
+    await eventTarget.dispatchEvent('dataUpdate', { data: testData });
 
-    expect(result).toBeTrue();
     expect(listener).toHaveBeenCalledWith(expect.objectContaining({ data: testData }));
   });
 
-  test('dispatchEvent without payload (undefined type)', () => {
+  test('dispatchEvent without payload (undefined type)', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener = vi.fn();
 
     eventTarget.addEventListener('userLogout', listener);
-    const result = eventTarget.dispatchEvent('userLogout');
+    await eventTarget.dispatchEvent('userLogout');
 
-    expect(result).toBeTrue();
     expect(listener).toHaveBeenCalled();
   });
 
-  test('removeEventListener removes function listener', () => {
+  test('removeEventListener removes function listener', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener = vi.fn();
 
     eventTarget.addEventListener('userLogin', listener);
     eventTarget.removeEventListener('userLogin', listener);
-    eventTarget.dispatchEvent('userLogin', { userId: '789', timestamp: new Date() });
+    await eventTarget.dispatchEvent('userLogin', { userId: '789', timestamp: new Date() });
 
     expect(listener).not.toHaveBeenCalled();
   });
 
-  test('removeEventListener removes object listener', () => {
-    const eventTarget = new CustomEventTarget<TestEvents>();
-    const listener = { handleEvent: vi.fn() };
-
-    eventTarget.addEventListener('userLogin', listener);
-    eventTarget.removeEventListener('userLogin', listener);
-    eventTarget.dispatchEvent('userLogin', { userId: '789', timestamp: new Date() });
-
-    expect(listener.handleEvent).not.toHaveBeenCalled();
-  });
-
-  test('addEventListener with options (once)', () => {
-    const eventTarget = new CustomEventTarget<TestEvents>();
-    const listener = vi.fn();
-
-    eventTarget.addEventListener('notification', listener, { once: true });
-
-    eventTarget.dispatchEvent('notification', { message: 'First', level: 'info' });
-    eventTarget.dispatchEvent('notification', { message: 'Second', level: 'info' });
-
-    expect(listener).toHaveBeenCalledExactlyOnceWith(
-      expect.objectContaining({ message: 'First', level: 'info' }),
-    );
-  });
-
-  test('addEventListener with AbortController signal', () => {
-    const eventTarget = new CustomEventTarget<TestEvents>();
-    const listener = vi.fn();
-    const controller = new AbortController();
-
-    eventTarget.addEventListener('userLogout', listener, { signal: controller.signal });
-
-    eventTarget.dispatchEvent('userLogout');
-    expect(listener).toHaveBeenCalledOnce();
-
-    controller.abort();
-    listener.mockClear();
-
-    eventTarget.dispatchEvent('userLogout');
-    expect(listener).not.toHaveBeenCalled();
-  });
-
-  test('multiple listeners for same event', () => {
+  test('multiple listeners for same event', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener1 = vi.fn();
     const listener2 = vi.fn();
-    const listener3 = { handleEvent: vi.fn() };
+    const listener3 = vi.fn();
 
     eventTarget.addEventListener('userLogout', listener1);
     eventTarget.addEventListener('userLogout', listener2);
     eventTarget.addEventListener('userLogout', listener3);
 
-    eventTarget.dispatchEvent('userLogout');
+    await eventTarget.dispatchEvent('userLogout');
 
     expect(listener1).toHaveBeenCalledOnce();
     expect(listener2).toHaveBeenCalledOnce();
-    expect(listener3.handleEvent).toHaveBeenCalledOnce();
+    expect(listener3).toHaveBeenCalledOnce();
   });
 
-  test('different event types with different payloads', () => {
+  test('different event types with different payloads', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const loginListener = vi.fn();
     const logoutListener = vi.fn();
@@ -144,15 +85,15 @@ describe('CustomEventTarget', () => {
     eventTarget.addEventListener('notification', notificationListener);
 
     const loginTime = new Date();
-    eventTarget.dispatchEvent('userLogin', { userId: 'user123', timestamp: loginTime });
-    eventTarget.dispatchEvent('userLogout');
-    eventTarget.dispatchEvent('notification', { message: 'Welcome!', level: 'info' });
+    await eventTarget.dispatchEvent('userLogin', { userId: 'user123', timestamp: loginTime });
+    await eventTarget.dispatchEvent('userLogout');
+    await eventTarget.dispatchEvent('notification', { message: 'Welcome!', level: 'info' });
 
     expect(loginListener).toHaveBeenCalledWith(
       expect.objectContaining({ userId: 'user123', timestamp: loginTime }),
     );
 
-    expect(logoutListener).toHaveBeenCalledWith(null);
+    expect(logoutListener).toHaveBeenCalledWith(undefined);
 
     expect(notificationListener).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -162,7 +103,7 @@ describe('CustomEventTarget', () => {
     );
   });
 
-  test('removeEventListener with non-existent listener does nothing', () => {
+  test('removeEventListener with non-existent listener does nothing', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener1 = vi.fn();
     const listener2 = vi.fn();
@@ -170,56 +111,25 @@ describe('CustomEventTarget', () => {
     eventTarget.addEventListener('userLogin', listener1);
     eventTarget.removeEventListener('userLogin', listener2); // Different listener
 
-    eventTarget.dispatchEvent('userLogin', { userId: 'test', timestamp: new Date() });
+    await eventTarget.dispatchEvent('userLogin', { userId: 'test', timestamp: new Date() });
 
     expect(listener1).toHaveBeenCalledOnce();
     expect(listener2).not.toHaveBeenCalled();
   });
 
-  test('removeEventListener with matching options', () => {
+  test('removeEventListener with matching options', async () => {
     const eventTarget = new CustomEventTarget<TestEvents>();
     const listener = vi.fn();
 
-    eventTarget.addEventListener('userLogout', listener, { capture: true });
-    eventTarget.removeEventListener('userLogout', listener, { capture: true });
+    eventTarget.addEventListener('userLogout', listener);
+    eventTarget.removeEventListener('userLogout', listener);
 
-    eventTarget.dispatchEvent('userLogout');
+    await eventTarget.dispatchEvent('userLogout');
 
     expect(listener).not.toHaveBeenCalled();
   });
 
-  test('event object has correct properties', () => {
-    const eventTarget = new CustomEventTarget<TestEvents>();
-    const listener = { handleEvent: vi.fn() };
-
-    eventTarget.addEventListener('dataUpdate', listener);
-    eventTarget.dispatchEvent('dataUpdate', { data: [42] });
-
-    expect(listener.handleEvent).toHaveBeenCalledWith(
-      expect.objectContaining({ detail: { data: [42] } }),
-    );
-
-    const [[event]] = listener.handleEvent.mock.calls;
-    expect(event).toBeInstanceOf(CustomEvent);
-  });
-
-  test('dispatch returns false when preventDefault is called', () => {
-    const listener = {
-      handleEvent: vi.fn((event: CustomEvent) => {
-        event.preventDefault();
-      }),
-    };
-
-    // Create a cancelable event by accessing the underlying EventTarget
-    const cancelableEventTarget = new CustomEventTarget<TestEvents>();
-    cancelableEventTarget.addEventListener('userLogout', listener);
-
-    const result = cancelableEventTarget.dispatchEvent({ type: 'userLogout', cancelable: true });
-
-    expect(result).toBeFalse();
-  });
-
-  test('handles complex payload types', () => {
+  test('handles complex payload types', async () => {
     interface ComplexEvents {
       complexData: {
         nested: { value: number };
@@ -241,7 +151,7 @@ describe('CustomEventTarget', () => {
       optional: true,
     };
 
-    eventTarget.dispatchEvent('complexData', complexPayload);
+    await eventTarget.dispatchEvent('complexData', complexPayload);
 
     expect(listener).toHaveBeenCalledWith(complexPayload);
   });

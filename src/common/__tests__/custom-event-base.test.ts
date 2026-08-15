@@ -7,34 +7,34 @@ interface TestEvents {
 }
 
 describe('CustomEventBase', () => {
-  test('on and fire pass typed payloads to listeners', () => {
+  test('on and fire pass typed payloads to listeners', async () => {
     const bus = new CustomEventBase<TestEvents>();
     const listener = vi.fn();
     const timestamp = new Date('2025-01-01T00:00:00.000Z');
 
     bus.on('userLogin', listener);
-    bus.fire('userLogin', { userId: 'user-42', timestamp });
+    await bus.fire('userLogin', { userId: 'user-42', timestamp });
 
     expect(listener).toHaveBeenCalledExactlyOnceWith({ userId: 'user-42', timestamp });
   });
 
-  test('fire can dispatch an event without a payload', () => {
+  test('fire can dispatch an event without a payload', async () => {
     const bus = new CustomEventBase<TestEvents>();
     const listener = vi.fn();
 
     bus.on('userLogout', listener);
-    bus.fire('userLogout');
+    await bus.fire('userLogout');
 
-    expect(listener).toHaveBeenCalledExactlyOnceWith(null);
+    expect(listener).toHaveBeenCalledExactlyOnceWith(undefined);
   });
 
-  test('off removes a listener', () => {
+  test('off removes a listener', async () => {
     const bus = new CustomEventBase<TestEvents>();
     const listener = vi.fn();
 
     bus.on('dataUpdate', listener);
     bus.off('dataUpdate', listener);
-    bus.fire('dataUpdate', { value: 7 });
+    await bus.fire('dataUpdate', { value: 7 });
 
     expect(listener).not.toHaveBeenCalled();
   });
