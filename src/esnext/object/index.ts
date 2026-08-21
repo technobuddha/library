@@ -1,6 +1,7 @@
 export { changed } from './changed.ts';
 export { cull } from './cull.ts';
 export { deepCopy } from './deep-copy.ts';
+export { deepDifference } from './deep-difference.ts';
 export { deepEquals } from './deep-equals.ts';
 export { deepMerge } from './deep-merge.ts';
 export { get } from './get.ts';
