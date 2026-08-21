@@ -24,12 +24,6 @@ describe('deepEquals', () => {
     expect(deepEquals(objA, objB)).toBeFalse();
   });
 
-  test('returns true for objects with excluded keys', () => {
-    const objA = { a: 1, b: 2, c: 3 };
-    const objB = { a: 1, b: 2, c: 4 };
-    expect(deepEquals(objA, objB, ['c'])).toBeTrue();
-  });
-
   test('returns false for null and object', () => {
     // eslint-disable-next-line jest-extended/prefer-to-be-false
     expect(deepEquals(null, { a: 1 })).toBe(false);
@@ -82,12 +76,6 @@ describe('deepEquals', () => {
     expect(deepEquals(objA, objB)).toBeFalse();
   });
 
-  test('returns true for objects with excluded nested keys', () => {
-    const objA = { a: { b: 1, c: 2 } };
-    const objB = { a: { b: 1, c: 3 } };
-    expect(deepEquals(objA, objB, ['c'])).toBeTrue();
-  });
-
   test('compares primitive strings', () => {
     expect(deepEquals('hello', 'hello')).toBeTrue();
     expect(deepEquals('hello', 'world')).toBeFalse();
@@ -124,13 +112,6 @@ describe('deepEquals', () => {
     const objA = { [sym]: 1, a: 2 };
     const objB = { [sym]: 2, a: 2 };
     expect(deepEquals(objA, objB)).toBeFalse();
-  });
-
-  test('excludes symbol keys when specified', () => {
-    const sym = Symbol('test');
-    const objA = { [sym]: 1, a: 2 };
-    const objB = { [sym]: 2, a: 2 };
-    expect(deepEquals(objA, objB, [sym])).toBeTrue();
   });
 
   test('compares nested arrays', () => {
@@ -189,11 +170,5 @@ describe('deepEquals', () => {
     expect(deepEquals(42, '42')).toBeFalse();
     expect(deepEquals(true, 1)).toBeFalse();
     expect(deepEquals([], {})).toBeFalse();
-  });
-
-  test('handles objects with many excluded keys', () => {
-    const objA = { a: 1, b: 2, c: 3, d: 4 };
-    const objB = { a: 1, b: 5, c: 6, d: 7 };
-    expect(deepEquals(objA, objB, ['b', 'c', 'd'])).toBeTrue();
   });
 });

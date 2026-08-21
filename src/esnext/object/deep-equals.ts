@@ -13,7 +13,6 @@ import { sameValue } from './same-value.ts';
  *
  * @param objA - First value to compare.
  * @param objB - Second value to compare.
- * @param exclude - Array of property names (string or symbol) to exclude from the comparison.
  * @returns `true` if the values are deeply equal; otherwise, `false`.
  *
  * @example
@@ -34,9 +33,6 @@ import { sameValue } from './same-value.ts';
  *
  * // Works with arrays
  * deepEquals([1, 2, 3], [1, 2, 3]); // true
- *
- * // Can exclude specific keys
- * deepEquals({ a: 1, b: 2 }, { a: 1, b: 3 }, ['b']); // true
  * ```
  *
  * @remarks
@@ -45,11 +41,7 @@ import { sameValue } from './same-value.ts';
  * @group Object
  * @category Comparison
  */
-export function deepEquals(
-  objA: unknown,
-  objB: unknown,
-  exclude: (string | symbol)[] = [],
-): boolean {
+export function deepEquals(objA: unknown, objB: unknown): boolean {
   if (isPrimitive(objA)) {
     if (isPrimitive(objB)) {
       return sameValue(objA, objB);
@@ -77,7 +69,7 @@ export function deepEquals(
           continue;
         }
 
-        if (deepEquals(keyA, keyB, exclude) && deepEquals(valueA, valueB, exclude)) {
+        if (deepEquals(keyA, keyB) && deepEquals(valueA, valueB)) {
           matchedEntries.add(index);
           foundMatch = true;
           break;
@@ -108,7 +100,7 @@ export function deepEquals(
           continue;
         }
 
-        if (deepEquals(valueA, valueB, exclude)) {
+        if (deepEquals(valueA, valueB)) {
           matchedEntries.add(index);
           foundMatch = true;
           break;
@@ -123,19 +115,15 @@ export function deepEquals(
     return true;
   }
 
-  const hash = new Set<string | symbol>(exclude);
-  const keysA = Reflect.ownKeys(objA).filter((key) => !hash.has(key));
-  const keysB = Reflect.ownKeys(objB).filter((key) => !hash.has(key));
+  const keysA = Reflect.ownKeys(objA);
+  const keysB = Reflect.ownKeys(objB);
 
   if (keysA.length !== keysB.length) {
     return false;
   }
 
   for (const key of keysA) {
-    if (
-      !Object.hasOwn(objB, key) ||
-      !deepEquals(Reflect.get(objA, key), Reflect.get(objB, key), exclude)
-    ) {
+    if (!Object.hasOwn(objB, key) || !deepEquals(Reflect.get(objA, key), Reflect.get(objB, key))) {
       return false;
     }
   }
