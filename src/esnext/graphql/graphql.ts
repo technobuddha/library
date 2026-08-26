@@ -1,3 +1,4 @@
+import { isArray } from '../array/is-array.ts';
 import { isArrayLike } from '../array/is-array-like.ts';
 import { zipperMerge } from '../array/zipper-merge.ts';
 import { isBoolean } from '../boolean/is-boolean.ts';
@@ -69,7 +70,7 @@ export function graphQL(
   if (isBoolean(template)) {
     return template ? 'true' : 'false';
   }
-  if (Array.isArray(template)) {
+  if (isArray(template)) {
     return `[ ${template.map((a) => graphQL(a)).join(', ')} ]`;
   }
   return `{ ${Object.entries(template)

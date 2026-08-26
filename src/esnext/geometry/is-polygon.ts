@@ -1,3 +1,5 @@
+import { isArray } from '../array/is-array.ts';
+
 import { type Polygon } from './geometry.ts';
 import { isCartesian } from './is-cartesian.ts';
 
@@ -11,5 +13,5 @@ import { isCartesian } from './is-cartesian.ts';
  * @category Polygon
  */
 export function isPolygon(object: unknown): object is Polygon {
-  return Array.isArray(object) && object.every((o) => isCartesian(o));
+  return isArray(object) && object.every((o) => isCartesian(o));
 }

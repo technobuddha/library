@@ -1,3 +1,4 @@
+import { isArray } from '../array/is-array.ts';
 import { countOnes } from '../binary/count-ones.ts';
 import { type NumberLike } from '../number/number-like.ts';
 import { toNumber } from '../number/to-number.ts';
@@ -67,7 +68,7 @@ export function hammingDistance<T>(a: T[], b: T[]): number;
  * @category Distance
  */
 export function hammingDistance<T>(a: StringLike | NumberLike | T[], b: typeof a): number {
-  if ((isStringLike(a) || Array.isArray(a)) && (isStringLike(b) || Array.isArray(b))) {
+  if ((isStringLike(a) || isArray(a)) && (isStringLike(b) || isArray(b))) {
     const len = Math.max(a.length, b.length);
 
     let distance = 0;

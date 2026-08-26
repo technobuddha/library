@@ -1,5 +1,6 @@
 import { exceptions, tree } from '../@data/hyphenation.ts';
 import { create1dArray } from '../array/create1d-array.ts';
+import { isArray } from '../array/is-array.ts';
 import { type StringLike } from '../string/string-like.ts';
 import { toString } from '../string/to-string.ts';
 
@@ -73,7 +74,7 @@ export function hyphenate(input: StringLike): readonly string[] {
 
         branch = next as typeof tree;
 
-        if ('points' in branch && Array.isArray(branch.points)) {
+        if ('points' in branch && isArray(branch.points)) {
           const pointsArray = branch.points as number[];
           for (let k = 0, n = pointsArray.length; k < n; k++) {
             points[i + k] = Math.max(points[i + k], pointsArray[k]);

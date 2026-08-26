@@ -1,6 +1,7 @@
 import { isIterable } from '../iteration/is-iterable.ts';
 import { isString } from '../string/is-string.ts';
 
+import { isArray } from './is-array.ts';
 import { isArrayLike } from './is-array-like.ts';
 import { type List } from './list.ts';
 
@@ -73,7 +74,7 @@ export function* toIterable<T>(value: T | List<T>): Generator<T> {
     for (let i = 0; i < value.length; ++i) {
       yield value[i];
     }
-  } else if (Array.isArray(value) || isIterable(value)) {
+  } else if (isArray<T>(value) || isIterable(value)) {
     yield* value;
   } else {
     yield value;

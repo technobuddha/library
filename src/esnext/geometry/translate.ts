@@ -1,3 +1,5 @@
+import { isArray } from '../array/is-array.ts';
+
 import { type Cartesian, type Polygon, type XY } from './geometry.ts';
 
 /**
@@ -40,7 +42,7 @@ export function translate(polygon: Polygon, amount: Cartesian): Polygon;
  * @category Transformation
  */
 export function translate(point: Cartesian | Polygon, amount: Cartesian): Cartesian | Polygon {
-  if (Array.isArray(point)) {
+  if (isArray(point)) {
     return point.map((p) => translatePoint(p, amount));
   }
   return translatePoint(point, amount);

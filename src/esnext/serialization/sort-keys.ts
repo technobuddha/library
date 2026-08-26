@@ -1,3 +1,4 @@
+import { isArray } from '../array/is-array.ts';
 import { isPrimitive } from '../primitive/is-primitive.ts';
 import { isRegExp } from '../regexp/is-regexp.ts';
 import { isDate } from '../time/is-date.ts';
@@ -27,7 +28,7 @@ export function sortKeys<T extends JSONValue>(object: T): T {
     return object;
   }
 
-  if (Array.isArray(object)) {
+  if (isArray(object)) {
     return object.map(sortKeys) as T;
   }
 

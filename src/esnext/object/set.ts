@@ -1,4 +1,5 @@
 import { type Flexible } from '../array/flexible.ts';
+import { isArray } from '../array/is-array.ts';
 import { lookAhead } from '../iteration/look-ahead.ts';
 import { isNumeric } from '../number/is-numeric.ts';
 
@@ -34,7 +35,7 @@ export function set(
     for (const [key, next] of lookAhead(keys)) {
       if (Reflect.has(obj, key)) {
         const sub = Reflect.get(obj, key);
-        if (isObject(sub) || Array.isArray(sub)) {
+        if (isObject(sub) || isArray(sub)) {
           obj = sub;
           continue;
         }

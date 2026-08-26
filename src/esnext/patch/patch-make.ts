@@ -16,6 +16,7 @@
  * limitations under the License.
  */
 
+import { isArray } from '../array/is-array.ts';
 import { cleanupEfficiency } from '../difference/cleanup-efficiency.ts';
 import { cleanupSemantic } from '../difference/cleanup-semantic.ts';
 import {
@@ -67,12 +68,12 @@ export function patchMake(
       cleanupSemantic(diffs);
       cleanupEfficiency(diffs, options.editCost);
     }
-  } else if (text1 === undefined && Array.isArray(text2OrDiffs)) {
+  } else if (text1 === undefined && isArray(text2OrDiffs)) {
     // Method 2: diffs only
     // Compute text1 from diffs.
     diffs = text2OrDiffs;
     sourceText = diffText1(diffs);
-  } else if (typeof text1 === 'string' && Array.isArray(text2OrDiffs)) {
+  } else if (typeof text1 === 'string' && isArray(text2OrDiffs)) {
     // Method 3: text1, diffs (optimal)
     sourceText = text1;
     diffs = text2OrDiffs;

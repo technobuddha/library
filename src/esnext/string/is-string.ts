@@ -1,3 +1,4 @@
+import { isArray } from '../array/is-array.ts';
 import { isObject } from '../object/is-object.ts';
 
 /**
@@ -20,7 +21,7 @@ import { isObject } from '../object/is-object.ts';
 export function isString(value: unknown): value is string {
   return (
     typeof value === 'string' ||
-    (!Array.isArray(value) &&
+    (!isArray(value) &&
       isObject(value) &&
       Object.prototype.toString.call(value) === '[object String]')
   );

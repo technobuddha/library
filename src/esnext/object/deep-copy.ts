@@ -1,3 +1,5 @@
+import { isArray } from '../array/is-array.ts';
+
 import { isObject } from './is-object.ts';
 
 /**
@@ -19,7 +21,7 @@ import { isObject } from './is-object.ts';
  * @category Copy
  */
 export function deepCopy<T>(main: T): T {
-  if (Array.isArray(main)) {
+  if (isArray(main)) {
     const result = Array.from({ length: main.length });
 
     for (const key of Reflect.ownKeys(main)) {

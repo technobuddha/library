@@ -1,3 +1,5 @@
+import { isArray } from '../array/is-array.ts';
+
 import { isObject } from './is-object.ts';
 
 /**
@@ -23,12 +25,7 @@ export function deepMerge<T extends object>(
     if (o != null) {
       for (const [key, value] of Object.entries(o) as [keyof T, T[keyof T]][]) {
         result[key] =
-          (
-            isObject(value) &&
-            !Array.isArray(value) &&
-            isObject(result[key]) &&
-            !Array.isArray(result[key])
-          ) ?
+          isObject(value) && !isArray(value) && isObject(result[key]) && !isArray(result[key]) ?
             deepMerge(result[key], value)
           : value;
       }

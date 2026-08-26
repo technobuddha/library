@@ -1,3 +1,5 @@
+import { isArray } from '../array/is-array.ts';
+
 import { type Cartesian, type OriginOptions, type Polygon, type XY } from './geometry.ts';
 
 /**
@@ -54,7 +56,7 @@ export function scale(
   amount: number | XY,
   { origin = { x: 0, y: 0 } }: OriginOptions = {},
 ): Cartesian | Polygon {
-  if (Array.isArray(point)) {
+  if (isArray(point)) {
     return point.map((p) => scalePoint(p, amount, origin));
   }
   return scalePoint(point, amount, origin);

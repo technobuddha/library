@@ -1,5 +1,6 @@
 import { isIterable } from '../iteration/is-iterable.ts';
 
+import { isArray } from './is-array.ts';
 import { isArrayLike } from './is-array-like.ts';
 import { type List } from './list.ts';
 
@@ -30,7 +31,7 @@ import { type List } from './list.ts';
 export function toArray<T>(value: T | List<T>): T[] {
   return (
     typeof value === 'string' ? [value]
-    : Array.isArray(value) ? value
+    : isArray<T>(value) ? value
     : isIterable(value) || isArrayLike(value) ? Array.from(value)
     : [value]
   );

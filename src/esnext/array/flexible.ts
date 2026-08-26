@@ -7,7 +7,7 @@
  * @example
  * ```typescript
  * function process(input: Flexible<number>): number[] {
- *   return Array.isArray(input) ? input : [input];
+ *   return isArray(input) ? input : [input];
  * }
  *
  * process(5);           // [5]

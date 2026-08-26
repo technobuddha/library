@@ -1,6 +1,7 @@
 import { isString } from '../string/is-string.ts';
 
 import { type Flexible } from './flexible.ts';
+import { isArray } from './is-array.ts';
 import { isArrayLike } from './is-array-like.ts';
 
 /**
@@ -24,7 +25,7 @@ import { isArrayLike } from './is-array-like.ts';
  */
 export function ensureArray<T>(value: Flexible<T>): readonly T[] {
   return (
-    Array.isArray(value) ? value
+    isArray(value) ? value
     : isString(value) ? [value]
     : isArrayLike(value) ? value
     : [value]

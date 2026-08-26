@@ -1,4 +1,5 @@
 import { type Flexible } from '../array/flexible.ts';
+import { isArray } from '../array/is-array.ts';
 
 import { isObject } from './is-object.ts';
 import { type ObjectKey } from './object-key.ts';
@@ -20,7 +21,7 @@ import { parsePath } from './parse-path.ts';
 export function get(object: object | ArrayLike<unknown>, path: Flexible<ObjectKey>): unknown {
   let obj: unknown = object;
   for (const key of parsePath(path)) {
-    if (isObject(obj) || Array.isArray(obj)) {
+    if (isObject(obj) || isArray(obj)) {
       obj = Reflect.get(obj, key);
     } else {
       obj = undefined;

@@ -1,3 +1,5 @@
+import { isArray } from '../array/is-array.ts';
+
 import { type UnitOptions } from './angle.ts';
 import { type Cartesian, type OriginOptions, type Polygon } from './geometry.ts';
 import { normalizeAngle } from './normalize-angle.ts';
@@ -65,7 +67,7 @@ export function rotate(
 ): Cartesian | Polygon {
   const angleInRadians = normalizeAngle(angle, { unit });
 
-  if (Array.isArray(point)) {
+  if (isArray(point)) {
     return point.map((p) => rotatePoint(p, angleInRadians, origin));
   }
   return rotatePoint(point, angleInRadians, origin);

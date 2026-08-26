@@ -4,6 +4,7 @@ export { create2dArray } from './create2d-array.ts';
 export { create3dArray } from './create3d-array.ts';
 export { ensureArray } from './ensure-array.ts';
 export { type Flexible } from './flexible.ts';
+export { isArray } from './is-array.ts';
 export { isArrayLike } from './is-array-like.ts';
 export { type List } from './list.ts';
 export {

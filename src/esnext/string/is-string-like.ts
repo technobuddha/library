@@ -1,3 +1,4 @@
+import { isArray } from '../array/is-array.ts';
 import { isObject } from '../object/is-object.ts';
 
 import { type StringLike } from './string-like.ts';
@@ -28,7 +29,7 @@ import { type StringLike } from './string-like.ts';
 export function isStringLike(value: unknown): value is StringLike {
   return (
     typeof value === 'string' ||
-    (!Array.isArray(value) &&
+    (!isArray(value) &&
       isObject(value) &&
       Object.prototype.toString.call(value) === '[object String]')
   );
