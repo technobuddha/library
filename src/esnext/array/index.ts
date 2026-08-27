@@ -15,6 +15,7 @@ export { permutations } from './permutations.ts';
 export { powerSet } from './power-set.ts';
 export { range } from './range.ts';
 export { toArray } from './to-array.ts';
+export { toIterable } from './to-iterable.ts';
 export { unique } from './unique.ts';
 export { withIndex } from './with-index.ts';
 export { zipperMerge } from './zipper-merge.ts';
