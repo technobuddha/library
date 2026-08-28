@@ -1,7 +1,6 @@
-//@ts-check
+import { defineBuilds } from '@technobuddha/project/build';
 
-/** @type import('\@technobuddha/project/build').Builds */
-const config = {
+export default defineBuilds({
   default: {
     steps: [
       {
@@ -22,11 +21,8 @@ const config = {
     ],
     onError: {
       display: 'Rollback',
-      command: [
-        'rm -rf dist',
-        'tar -xzf dist-backup.tgz'
-      ],
-    }
+      command: ['rm -rf dist', 'tar -xzf dist-backup.tgz'],
+    },
   },
   publish: {
     steps: [
@@ -41,6 +37,4 @@ const config = {
       },
     ],
   },
-};
-
-export default config;
+});
