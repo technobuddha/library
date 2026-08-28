@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@technobuddha/library",
-  "version": "2.1.0-192",
+  "version": "2.1.0-193",
   "description": "A large library of useful functions",
   "license": "MIT",
   "type": "module",
@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@cspell/cspell-types": "10.1.1",
-    "@technobuddha/project": "1.0.0-198",
+    "@technobuddha/project": "1.0.0-199",
     "@types/long": "5.0.0",
     "@types/node": "26.3.0",
     "@vitest/coverage-v8": "4.1.11",
