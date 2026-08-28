@@ -349,7 +349,6 @@ function countSyllables(word: string): number {
     count += 1;
     return x;
   });
-  // eslint-disable-next-line no-useless-assignment
   value = value.replaceAll(EXPRESSION_DOUBLE_SYLLABIC_FOUR, (x) => {
     count += 1;
     return x;

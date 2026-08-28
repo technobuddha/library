@@ -1,7 +1,6 @@
-//@ts-check
+import { defineConfig } from '@technobuddha/project/config';
 
-/** @type import("\@technobuddha/project").TechnobuddhaConfig */
-const config = {
+export default defineConfig({
   lint: {
     rules: {
       'no-bitwise': { rule: 'off' },
@@ -39,7 +38,7 @@ const config = {
     },
     'wip': {
       platform: 'none',
-    }
+    },
   },
   tsconfig: {
     base: {
@@ -75,6 +74,4 @@ const config = {
       ],
     },
   },
-};
-
-export default config;
+});
