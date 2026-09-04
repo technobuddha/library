@@ -10,6 +10,8 @@ export { isMap } from './is-map.ts';
 export { isObject } from './is-object.ts';
 export { isSet } from './is-set.ts';
 export { type ObjectKey } from './object-key.ts';
+export { omitProperties } from './omit-properties.ts';
+export { pickProperties } from './pick-properties.ts';
 export { sameType } from './same-type.ts';
 export { sameValue } from './same-value.ts';
 export { sameValueZero } from './same-value-zero.ts';
