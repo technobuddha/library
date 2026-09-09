@@ -7,9 +7,9 @@ import { toEnumeration } from '../number/to-enumeration.ts';
  */
 export type ToBooleanOptions = {
   /** An iterable list of values that are "true" */
-  trueValues?: Iterable<string | RegExp>;
+  trueValues?: Iterable<string | RegExp> | undefined;
   /** An iterable list of values that are "false" */
-  falseValues?: Iterable<string | RegExp>;
+  falseValues?: Iterable<string | RegExp> | undefined;
 };
 
 /**

@@ -7,11 +7,11 @@ import { compareNumbers } from './compare-numbers.ts';
  */
 export type CompareStringsOptions = {
   /** if true, strings are to be compared case insensitive */
-  caseInsensitive?: boolean;
+  caseInsensitive?: boolean | undefined;
   /** if true, compare numeric portions of the string as numbers */
-  natural?: boolean;
+  natural?: boolean | undefined;
   /** if true, compare strings as version numbers */
-  version?: boolean;
+  version?: boolean | undefined;
 };
 
 /**

@@ -26,7 +26,7 @@ export type OriginOptions = {
   /**
    * The origin for this operation
    */
-  origin?: Cartesian;
+  origin?: Cartesian | undefined;
 };
 
 /**

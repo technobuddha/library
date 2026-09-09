@@ -11,7 +11,7 @@ export type LongestCommonSubsequenceOptions<T> = {
    * Function that acts as a custom comparator
    * for the array objects. Function should return true if objects are equal, otherwise false.
    */
-  compare?: (this: void, a: T, b: T) => boolean;
+  compare?: ((this: void, a: T, b: T) => boolean) | undefined;
 
   /**
    * Function used to decide what to return
@@ -19,7 +19,7 @@ export type LongestCommonSubsequenceOptions<T> = {
    * in the first array and index in the second. The default function returns
    * element from the first array.
    */
-  collect?: (this: void, i1: number, i2: number) => T;
+  collect?: ((this: void, i1: number, i2: number) => T) | undefined;
 };
 
 /**

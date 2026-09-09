@@ -19,13 +19,13 @@ export type ParagraphSize = 'short' | 'middle' | 'long';
  */
 export type LoremIpsumOptions = {
   /** Number of paragraphs to generate */
-  paragraphs?: number;
+  paragraphs?: number | undefined;
   /** Size category determining sentence count per paragraph */
-  size?: ParagraphSize;
+  size?: ParagraphSize | undefined;
   /** Whether to preserve the first 5 words for consistency */
-  preserveFirstWords?: boolean;
+  preserveFirstWords?: boolean | undefined;
   /** Source text collection to use for word generation */
-  source?: LoremIpsumVersions;
+  source?: LoremIpsumVersions | undefined;
 };
 
 /**

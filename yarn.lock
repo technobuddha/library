@@ -1872,17 +1872,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@technobuddha/library@npm:2.1.0-197":
-  version: 2.1.0-197
-  resolution: "@technobuddha/library@npm:2.1.0-197"
-  checksum: 10c0/b58025862b33167e7efa1379cc5d5fbe3c31fc8a7276fe0d3456e2b6b03dddfe0f45d95b10e66897cca23f4ce7b6846405ff055018bbb70480bc37d7b4a72cf2
-  languageName: node
-  linkType: hard
-
-"@technobuddha/library@npm:2.1.0-198":
-  version: 2.1.0-198
-  resolution: "@technobuddha/library@npm:2.1.0-198"
-  checksum: 10c0/734e681304649810a6c66f1951003392f2dcb34c113206c2210322e0cbbc405c60ac44c007dc9899e48e0949b6d5adfe07c60e56b14f3dc5f4cb02ab7a1398a1
+"@technobuddha/library@npm:2.1.0-199":
+  version: 2.1.0-199
+  resolution: "@technobuddha/library@npm:2.1.0-199"
+  checksum: 10c0/48d60cc5226fe1af9a64ddc3e808847f4ad01cacff1ca74af9938b72ef4d658bd0dddbeca4caf95ad07a2e514237a10ff215640f67c2567dda9512290edeb21e
   languageName: node
   linkType: hard
 
@@ -1891,7 +1884,7 @@ __metadata:
   resolution: "@technobuddha/library@workspace:."
   dependencies:
     "@cspell/cspell-types": "npm:10.1.1"
-    "@technobuddha/project": "npm:1.0.0-212"
+    "@technobuddha/project": "npm:1.0.0-215"
     "@types/long": "npm:5.0.0"
     "@types/node": "npm:26.4.0"
     "@vitest/coverage-v8": "npm:4.1.11"
@@ -1906,9 +1899,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@technobuddha/project@npm:1.0.0-212":
-  version: 1.0.0-212
-  resolution: "@technobuddha/project@npm:1.0.0-212"
+"@technobuddha/project@npm:1.0.0-215":
+  version: 1.0.0-215
+  resolution: "@technobuddha/project@npm:1.0.0-215"
   dependencies:
     "@commander-js/extra-typings": "npm:15.0.0"
     "@cspell/cspell-types": "npm:10.1.1"
@@ -1918,7 +1911,7 @@ __metadata:
     "@eslint/css": "npm:1.4.0"
     "@eslint/markdown": "npm:8.0.3"
     "@html-eslint/eslint-plugin": "npm:0.65.0"
-    "@technobuddha/library": "npm:2.1.0-198"
+    "@technobuddha/library": "npm:2.1.0-199"
     "@types/cli-progress": "npm:^3.11.6"
     "@types/eslint": "npm:9.6.1"
     "@types/ignore-walk": "npm:4.0.3"
@@ -1956,7 +1949,7 @@ __metadata:
     eslint-plugin-react-web-api: "npm:5.18.6"
     eslint-plugin-react-x: "npm:5.18.6"
     eslint-plugin-simple-import-sort: "npm:14.0.0"
-    eslint-plugin-technobuddha: "npm:2.0.0-78"
+    eslint-plugin-technobuddha: "npm:2.0.0-79"
     eslint-plugin-unicorn: "npm:73.0.0"
     globals: "npm:17.11.0"
     husky: "npm:9.1.7"
@@ -1987,7 +1980,7 @@ __metadata:
     eslint-comments: dist/eslint-comments/eslint-comments.js
     tb: dist/tb/tb.js
     unexported-files: dist/unexported-files/unexported-files.js
-  checksum: 10c0/b8097cf0a21786bcf8ffaed96ae071d7d39517aac89e04a962e3ee5e102f9bbb6a3d4d2a823e91779d64591ae69f2a386b647e2046a751a53f87161d3b96777e
+  checksum: 10c0/b05a2b89894495a88923c3dcbd1a728c35b5a4d6a42ef1e13e659d476298274d66a5be5cba65ea03f6192bca055b67da4fce08852603ef8e39a8d86906101d72
   languageName: node
   linkType: hard
 
@@ -4444,17 +4437,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-technobuddha@npm:2.0.0-78":
-  version: 2.0.0-78
-  resolution: "eslint-plugin-technobuddha@npm:2.0.0-78"
+"eslint-plugin-technobuddha@npm:2.0.0-79":
+  version: 2.0.0-79
+  resolution: "eslint-plugin-technobuddha@npm:2.0.0-79"
   dependencies:
     "@microsoft/tsdoc": "npm:0.16.0"
     "@microsoft/tsdoc-config": "npm:0.18.1"
-    "@technobuddha/library": "npm:2.1.0-197"
+    "@technobuddha/library": "npm:2.1.0-199"
     eslint: "npm:10.9.1"
     eslint-vitest-rule-tester: "npm:3.1.0"
     get-tsconfig: "npm:4.14.0"
-  checksum: 10c0/1c7baafedd9a13998260b485a3a57f4bc80c33189a93f8ad8b9c0d0b2ee2c0d5b421d5bf8ff9dfdf0d829b261efc90629d16dbab578180ebef370152e996d029
+  checksum: 10c0/c62f1e4bbdd0bf853131065ac5b12084f1d3ca2e1a9a2b50c866cb8f78298c0403577a3523bcd4b02950606c76eb81d3cde464ac215d9f91609b8356415ec0b9
   languageName: node
   linkType: hard
 

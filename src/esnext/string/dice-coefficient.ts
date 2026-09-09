@@ -11,7 +11,7 @@ import { toString } from './to-string.ts';
  */
 export type DiceCoefficientOptions = {
   /** compare the two strings in case insensitive mode */
-  caseInsensitive?: boolean;
+  caseInsensitive?: boolean | undefined;
 };
 
 /**

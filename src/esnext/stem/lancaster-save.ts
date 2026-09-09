@@ -11,9 +11,9 @@ interface LSRule {
   /** Replacement string. */
   r: string;
   /** Minimum length of the stemmed word. */
-  l?: number;
+  l?: number | undefined;
   /** Check if the stemmed word contains a vowel. */
-  v?: boolean;
+  v?: boolean | undefined;
 }
 
 /** Replace rules for the Lancaster stemmer. */

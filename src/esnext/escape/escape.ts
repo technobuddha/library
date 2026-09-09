@@ -17,5 +17,5 @@ export type EscapeOptions = {
   /**
    * If true, non-ASCII (0x00-0x7F) printable characters will be escaped.
    */
-  ascii?: boolean;
+  ascii?: boolean | undefined;
 };

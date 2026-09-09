@@ -56,27 +56,27 @@ export type MetricUnitsOptions = {
   /**
    * format specification to pass to {@link formatNumber}
    */
-  format?: string;
+  format?: string | undefined;
   /**
    * left padding to apply to numeric value
    */
-  pad?: number;
+  pad?: number | undefined;
   /**
    * Array of suffixes to use for large values (default: ['K', 'M', 'B', 'T', 'P', 'E', 'Z', 'Y'])
    */
-  macro?: ArrayLike<string>;
+  macro?: ArrayLike<string> | undefined;
   /**
    * Array of suffixed to use for small values (default: ['m', 'µ', 'n', 'p', 'f', 'a', 'z', 'y'])
    */
-  micro?: ArrayLike<string>;
+  micro?: ArrayLike<string> | undefined;
   /**
    * Multiplier for each level of suffixes (default: 1000)
    */
-  unit?: number;
+  unit?: number | undefined;
   /**
    * Number of digits after the decimal point to display
    */
-  precision?: number;
+  precision?: number | undefined;
 };
 
 /**

@@ -32,7 +32,7 @@ export type IndefiniteArticleOptions = {
    * Only return the indefinite article, do not combine with the input
    * @defaultValue false
    */
-  only?: boolean;
+  only?: boolean | undefined;
 };
 
 /**

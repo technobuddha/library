@@ -11,7 +11,7 @@ import { toString } from './to-string.ts';
  */
 export type CollapseBreakingSpaceOptions = {
   /** If true, trim leading and trailing whitespace */
-  trim?: boolean;
+  trim?: boolean | undefined;
 };
 
 /**

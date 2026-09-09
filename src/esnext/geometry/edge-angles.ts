@@ -14,7 +14,7 @@ export type EdgeAngleOptions = UnitOptions & {
    * Angle to normalize to (e.g., Math.PI * 2 for full rotation, Math.PI / 2 for quadrant).
    * Interpreted in the selected {@link UnitOptions.unit}.
    */
-  normalizeTo?: number;
+  normalizeTo?: number | undefined;
 };
 
 /**

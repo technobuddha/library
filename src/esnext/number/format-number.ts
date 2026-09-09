@@ -286,13 +286,13 @@ function parse(mask: string): ParseReturn {
  */
 type FormatOptions = {
   /** The number of decimal places to round the number to. If undefined, no rounding is applied. */
-  round?: number;
+  round?: number | undefined;
   /** The total number of significant digits to display. If undefined, precision is not enforced. */
-  precision?: number;
+  precision?: number | undefined;
   /** A multiplier to scale the number before formatting. For example, a scale of 100 will convert 1.23 to 123. */
-  scale?: number;
+  scale?: number | undefined;
   /** The minimum number of integer digits to display, padding with leading zeros if necessary. */
-  lead?: number;
+  lead?: number | undefined;
   /**
    * Specifies which zeros to trim from the formatted number:
    * - 'none': Do not trim any zeros.
@@ -300,7 +300,7 @@ type FormatOptions = {
    * - 'back': Trim trailing zeros.
    * - 'all': Trim both leading and trailing zeros.
    */
-  trim?: 'none' | 'front' | 'back' | 'all';
+  trim?: 'none' | 'front' | 'back' | 'all' | undefined;
 };
 
 /**

@@ -135,7 +135,7 @@ describe('CustomEventTarget', () => {
         nested: { value: number };
         array: string[];
         date: Date;
-        optional?: boolean;
+        optional?: boolean | undefined;
       };
     }
 

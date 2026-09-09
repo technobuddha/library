@@ -10,7 +10,7 @@ import { valueGlyphs } from './roman-numeral.ts';
  */
 export type RomanizeOptions = {
   /** Specifies the output format for the Roman numeral. */
-  format?: 'standard' | 'apostrophus' | 'vinculum';
+  format?: 'standard' | 'apostrophus' | 'vinculum' | undefined;
 };
 /**
  * Convert a number into a roman numeral string

@@ -14,7 +14,7 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
  */
 export type NumberToLetterOptions = {
   /** The alphabet to use */
-  alphabet?: string;
+  alphabet?: string | undefined;
 };
 
 /**

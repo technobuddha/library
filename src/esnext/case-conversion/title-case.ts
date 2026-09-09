@@ -20,7 +20,7 @@ export type TitleCaseOptions = {
   /**
    * A regular expression matching words to keep lowercase (except at the start/end of the title). Defaults to common English articles, conjunctions, and prepositions.
    */
-  small?: RegExp;
+  small?: RegExp | undefined;
 };
 
 function simpleCapitalize(word: string): string {

@@ -3881,12 +3881,9 @@ class Metaphone3 {
   private encodeSilentK(): boolean {
     //skip this except for special cases
     if (this.current === 0 && this.stringAt(this.current, 'KN')) {
-      if (
-        !(
-          this.stringAt(this.current + 2, 'ESSET', 'IEVEL') ||
-          this.stringAt(this.current + 2, 'ISH')
-        )
-      ) {
+      if (!(
+        this.stringAt(this.current + 2, 'ESSET', 'IEVEL') || this.stringAt(this.current + 2, 'ISH')
+      )) {
         this.current += 1;
         return true;
       }
@@ -6808,13 +6805,11 @@ class Metaphone3 {
    */
   private encodeFrenchXFinal(): boolean {
     //french e.g. "breaux", "paix"
-    if (
-      !(
-        this.current === this.last &&
-        (this.stringAt(this.current - 3, 'IAU', 'EAU', 'IEU') ||
-          this.stringAt(this.current - 2, 'AI', 'AU', 'OU', 'OI', 'EU'))
-      )
-    ) {
+    if (!(
+      this.current === this.last &&
+      (this.stringAt(this.current - 3, 'IAU', 'EAU', 'IEU') ||
+        this.stringAt(this.current - 2, 'AI', 'AU', 'OU', 'OI', 'EU'))
+    )) {
       this.metaphAdd('KS');
     }
 
@@ -7992,7 +7987,7 @@ export type Metaphone3Options = {
    *
    * @defaultValue false
    */
-  encodeExact?: boolean;
+  encodeExact?: boolean | undefined;
   /**
    * Encodes non-initial vowels. However, even if there are more than one vowel sound
    * in a vowel sequence (i.e. vowel diphthong, etc.), only one 'A' will be encoded
@@ -8000,7 +7995,7 @@ export type Metaphone3Options = {
    *
    * @defaultValue false
    */
-  encodeVowels?: boolean;
+  encodeVowels?: boolean | undefined;
 };
 
 /**

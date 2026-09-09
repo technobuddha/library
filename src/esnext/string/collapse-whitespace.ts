@@ -11,7 +11,7 @@ import { toString } from './to-string.ts';
  */
 export type CollapseWhitespaceOptions = {
   /** If true, trim  */
-  trim?: boolean;
+  trim?: boolean | undefined;
 };
 
 /**

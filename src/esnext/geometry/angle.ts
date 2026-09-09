@@ -70,5 +70,5 @@ export type UnitOptions = {
   /**
    * The unit of the angle (e.g., degrees, radians).
    */
-  unit?: AngleUnit;
+  unit?: AngleUnit | undefined;
 };

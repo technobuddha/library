@@ -66,86 +66,86 @@ export type Scanner = {
    * Length of the match to consume from the input string. If not specified, defaults to m.length.
    * Useful for multi-character matches or when the rule should consume a different number of characters than the pattern length.
    */
-  l?: number;
+  l?: number | undefined;
   /**
    * Position indicator for the match. Restricts the rule to certain positions in the input string:
    */
-  i?: Position;
+  i?: Position | undefined;
   /**
    * Beginning-of-string character(s) required for the match to apply (positive lookahead at start).
    * Example: b: 'A' means the string must start with 'A'.
    */
-  b?: Flexible<string>;
+  b?: Flexible<string> | undefined;
   /**
    * Beginning-of-string character(s) that must NOT be present for the match to apply (negative lookahead at start).
    * Example: ḃ: 'A' means the string must NOT start with 'A'.
    */
-  ḃ?: Flexible<string>;
+  ḃ?: Flexible<string> | undefined;
   /**
    * End-of-string character(s) required for the match to apply (positive lookahead at end).
    * Example: e: 'Z' means the string must end with 'Z'.
    */
-  e?: Flexible<string>;
+  e?: Flexible<string> | undefined;
   /**
    * End-of-string character(s) that must NOT be present for the match to apply (negative lookahead at end).
    * Example: ė: 'Z' means the string must NOT end with 'Z'.
    */
-  ė?: Flexible<string>;
+  ė?: Flexible<string> | undefined;
   /**
    * Next character(s) required for the match to apply (positive lookahead).
    * Example: n: 'A' means the next character must be 'A'.
    */
-  n?: Flexible<string>;
+  n?: Flexible<string> | undefined;
   /**
    * Next character(s) that must NOT be present for the match to apply (negative lookahead).
    * Example: ṅ: 'A' means the next character must NOT be 'A'.
    */
-  ṅ?: Flexible<string>;
+  ṅ?: Flexible<string> | undefined;
   /**
    * Previous character(s) required at the current position (offset 0) for the match to apply.
    * Example: p: 'A' means the character immediately before must be 'A'.
    */
-  p?: Flexible<string>;
+  p?: Flexible<string> | undefined;
   /**
    * Previous character(s) required at offset -1 for the match to apply.
    */
-  p1?: Flexible<string>;
+  p1?: Flexible<string> | undefined;
   /**
    * Previous character(s) required at offset -2 for the match to apply.
    */
-  p2?: Flexible<string>;
+  p2?: Flexible<string> | undefined;
   /**
    * Previous character(s) required at offset -3 for the match to apply.
    */
-  p3?: Flexible<string>;
+  p3?: Flexible<string> | undefined;
   /**
    * Previous character(s) that must NOT be present at the current position (offset 0) for the match to apply (negative lookbehind).
    * Example: ṗ: 'A' means the character immediately before must NOT be 'A'.
    */
-  ṗ?: Flexible<string>;
+  ṗ?: Flexible<string> | undefined;
   /**
    * Previous character(s) that must NOT be present at offset -1 for the match to apply.
    */
-  ṗ1?: Flexible<string>;
+  ṗ1?: Flexible<string> | undefined;
   /**
    * Previous character(s) that must NOT be present at offset -2 for the match to apply.
    */
-  ṗ2?: Flexible<string>;
+  ṗ2?: Flexible<string> | undefined;
   /**
    * Previous character(s) that must NOT be present at offset -3 for the match to apply.
    */
-  ṗ3?: Flexible<string>;
+  ṗ3?: Flexible<string> | undefined;
   /**
    * The output value for the match (may override x).
    */
-  o?: Flexible<string>;
+  o?: Flexible<string> | undefined;
   /**
    * Query condition: restricts the rule to apply only if a certain context query is present (or absent) in the current set of queries.
    * If q starts with '!', the rule applies only if the query is NOT present. Otherwise, applies only if the query IS present.
    * Used for context-dependent or stateful phonetic rules.
    * Example: q: 'vowel' applies only if 'vowel' is in the current query set; q: '!start' applies only if 'start' is NOT in the query set.
    */
-  q?: string;
+  q?: string | undefined;
 };
 
 /**
@@ -168,7 +168,7 @@ export type BasePhonetic = {
   /**
    * Case conversion to apply to the input ('upper' or 'lower').
    */
-  convertCase?: 'upper' | 'lower';
+  convertCase?: 'upper' | 'lower' | undefined;
   /**
    * Character set normalization to apply before scanning.
    *
@@ -185,55 +185,55 @@ export type BasePhonetic = {
    * phonetic('café', \{ charSet: 'basic-latin' \}); // 'CAFE'
    * phonetic('café', \{ charSet: 'full-unicode' \}); // 'CAFÉ'
    */
-  charSet?: 'basic-latin' | 'full-unicode';
+  charSet?: 'basic-latin' | 'full-unicode' | undefined;
   /**
    * Strip all non-alphabetic characters
    */
-  keep?: KeepOptions;
+  keep?: KeepOptions | undefined;
   /**
    * Strategy for removing duplicate characters ('last', 'metaphone', or 'none').
    */
-  removeDuplicates?: 'last' | 'metaphone' | 'none' | 'full';
+  removeDuplicates?: 'last' | 'metaphone' | 'none' | 'full' | undefined;
   /**
    * How to handle characters not found in the scan rules ('ignore' or 'notFound').
    */
-  notFound?: 'ignore' | 'reset';
+  notFound?: 'ignore' | 'reset' | undefined;
   /**
    * Padding
    */
-  padding?: boolean;
+  padding?: boolean | undefined;
   /**
    * How to preserve the first letter ('prefix', 'replace', 'separate', or 'vowel').
    */
-  firstLetter?: 'prefix' | 'replace' | 'separate' | 'vowel';
+  firstLetter?: 'prefix' | 'replace' | 'separate' | 'vowel' | undefined;
   /**
    * Silent letters (used by firstLetter = 'replace').
    */
-  silentLetters?: string[];
+  silentLetters?: string[] | undefined;
   /**
    * Character used for padding output to specified length.
    */
-  pad?: string;
+  pad?: string | undefined;
   /**
    * Desired output length (0 = no padding).
    */
-  length?: number;
+  length?: number | undefined;
   /**
    * Replacement rules applied before any processing (see {@link Replacer}).
    */
-  preprocessRules?: Replacer[];
+  preprocessRules?: Replacer[] | undefined;
   /**
    * Replacement rules applied before translation (see {@link Replacer}).
    */
-  priorRules?: Replacer[];
+  priorRules?: Replacer[] | undefined;
   /**
    * Get rules that run before scanning and after first letter separation
    */
-  prepareRules?: Replacer[];
+  prepareRules?: Replacer[] | undefined;
   /**
    * Replacement rules applied after translation (see {@link Replacer}).
    */
-  laterRules?: Replacer[];
+  laterRules?: Replacer[] | undefined;
   /**
    * Get the values for queries (q)
    */
@@ -257,7 +257,7 @@ export type BasePhoneticAlgorithm = BasePhonetic & {
   /**
    * Array of scan rules for character/code translation.
    */
-  scan?: Scanner[];
+  scan?: Scanner[] | undefined;
 };
 
 /**
@@ -283,7 +283,7 @@ export type NonForking = {
   /**
    * If false or omitted, disables forking (single encoding).
    */
-  forking?: false;
+  forking?: false | undefined;
 };
 
 /**
@@ -320,7 +320,7 @@ export type BaseCompiledPhonetic = BasePhonetic & {
   /**
    * Scan rules grouped by first character for efficient lookup.
    */
-  scan?: Record<string, Scanner[]>;
+  scan?: Record<string, Scanner[]> | undefined;
 };
 
 /**

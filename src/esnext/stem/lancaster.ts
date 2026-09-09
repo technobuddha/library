@@ -5,7 +5,7 @@ import { empty } from '../unicode/unicode.ts';
 /** Configuration */
 type Options = {
   /** Style of algorithm (default: `'c'`). */
-  style?: Style;
+  style?: Style | undefined;
 };
 
 type RuleCollection = Record<string, RuleSet[]>;

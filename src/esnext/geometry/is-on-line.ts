@@ -12,12 +12,12 @@ export type IsOnLineOptions = {
    * Optional tolerance for floating-point comparison.
    * @defaultValue 1e-10
    */
-  tolerance?: number;
+  tolerance?: number | undefined;
   /**
    * If true, treats the segments as infinite lines; if false, only considers the actual segments.
    * @defaultValue false
    */
-  extend?: boolean;
+  extend?: boolean | undefined;
 };
 
 /**

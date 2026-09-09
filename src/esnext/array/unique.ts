@@ -23,8 +23,7 @@ import { toArray } from './to-array.ts';
  * @group Array
  * @category Filtering
  */
-// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
-export function unique<T, R>(list: T| List<T>, transform?: (item: T) => R): T[] {
+export function unique<T, R>(list: T | List<T>, transform?: (item: T) => R): T[] {
   const array = toArray(list);
   if (transform) {
     return Array.from(new Map(array.map((item) => [transform(item), item])).values());

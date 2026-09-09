@@ -11,13 +11,13 @@ import { toString } from './to-string.ts';
  */
 export type FuzzyMatchOptions = {
   /** The comparison will ignore case */
-  caseInsensitive?: boolean;
+  caseInsensitive?: boolean | undefined;
   /** Weight of levenshtein distance */
-  weightLevenshteinDistance?: number;
+  weightLevenshteinDistance?: number | undefined;
   /** Weight of diceCoefficient */
-  weightDiceCoefficient?: number;
+  weightDiceCoefficient?: number | undefined;
   /** Weight of longestCommonSubstring */
-  weightLongestCommonSubstring?: number;
+  weightLongestCommonSubstring?: number | undefined;
 };
 
 /**

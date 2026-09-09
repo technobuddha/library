@@ -14,17 +14,17 @@ export type ConjoinOptions = {
    * Conjunction to insert in the last position
    * @defaultValue 'and'
    */
-  conjunction?: string;
+  conjunction?: string | undefined;
   /**
    * If true, use the oxford comma
    * @defaultValue true
    */
-  oxford?: boolean;
+  oxford?: boolean | undefined;
   /**
    * String used to separate values
    * @defaultValue ','
    */
-  separator?: string;
+  separator?: string | undefined;
 };
 /**
  * Create a list from an array, separating values and inserting a conjunction

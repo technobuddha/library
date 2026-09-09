@@ -10,11 +10,11 @@ import { isStringLike } from '../string/is-string-like.ts';
  */
 export type CullOptions = {
   /** Remove empty arrays that appear in nested arrays or objects. */
-  emptyArrays?: boolean;
+  emptyArrays?: boolean | undefined;
   /** Remove empty objects that appear in nested arrays or objects. */
-  emptyObjects?: boolean;
+  emptyObjects?: boolean | undefined;
   /** Remove empty string values from nested arrays and objects. */
-  emptyStrings?: boolean;
+  emptyStrings?: boolean | undefined;
 };
 
 function culler<O>(obj: O, options: CullOptions): O {

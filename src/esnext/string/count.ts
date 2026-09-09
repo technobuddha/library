@@ -8,7 +8,7 @@ import { toString } from './to-string.ts';
  */
 export type CountOptions = {
   /** if true, counts overlapping strings */
-  overlap?: boolean;
+  overlap?: boolean | undefined;
 };
 
 /**

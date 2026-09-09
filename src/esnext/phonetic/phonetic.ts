@@ -207,7 +207,7 @@ export function phonetic(
   }
 
   if (scan) {
-    type ScanResult = { text: string; last?: string };
+    type ScanResult = { text: string; last?: string | undefined };
     let scanResults: ScanResult[] = [];
 
     for (let i = 0; i < (typeof forking === 'boolean' ? 1 : forking); i++) {

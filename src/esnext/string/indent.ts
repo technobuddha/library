@@ -10,7 +10,7 @@ import { toString } from './to-string.ts';
  */
 export type IndentOptions = {
   /** The indentation character */
-  indenter?: string;
+  indenter?: string | undefined;
 };
 
 /**

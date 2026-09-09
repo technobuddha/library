@@ -13,21 +13,21 @@ import { toString } from './to-string.ts';
  */
 export type EnclosedOptions = {
   /** The starting delimiter (default: '(') */
-  start?: string | RegExp;
+  start?: string | RegExp | undefined;
   /** The closing delimiter (default: ')') */
-  close?: string | RegExp;
+  close?: string | RegExp | undefined;
   /** The escape character (default: '\\') */
-  escape?: string | RegExp;
+  escape?: string | RegExp | undefined;
   /** Quote characters to skip (default: /['"]/v) */
-  quote?: string | RegExp;
+  quote?: string | RegExp | undefined;
   /** Single-line comment marker (default: '//') */
-  commentLine?: string | RegExp;
+  commentLine?: string | RegExp | undefined;
   /** Multi-line comment start marker (default: '/\*') */
-  commentStart?: string | RegExp;
+  commentStart?: string | RegExp | undefined;
   /** Multi-line comment end marker (default: '\*\/') */
-  commentEnd?: string | RegExp;
+  commentEnd?: string | RegExp | undefined;
   /** Arguments separator (default: ',')  */
-  argumentsSeparator?: string | RegExp;
+  argumentsSeparator?: string | RegExp | undefined;
 };
 
 /**
@@ -120,7 +120,7 @@ export function enclosed(
   let p1 = 0;
   let argStart = 0;
   let encloserStart = empty;
-  for (let i = 0; i < str.length; ) {
+  for (let i = 0; i < str.length;) {
     const prev = str.slice(0, i);
     const next = str.slice(i);
 

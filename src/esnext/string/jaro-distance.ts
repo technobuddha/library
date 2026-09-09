@@ -13,7 +13,7 @@ export type JaroDistanceOptions = {
   /**
    * Whether the comparison should be case-sensitive. Defaults to false.
    */
-  caseSensitive?: boolean;
+  caseSensitive?: boolean | undefined;
 };
 
 /**

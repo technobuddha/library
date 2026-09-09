@@ -13,11 +13,11 @@ import { isRegExp } from './is-regexp.ts';
  */
 export type ToRegExpOptions = {
   /** Regular expression flags to apply (e.g., 'i', 'g', 'gi') */
-  flags?: string;
+  flags?: string | undefined;
   /** String to prepend to the pattern */
-  prefix?: string;
+  prefix?: string | undefined;
   /** String to append to the pattern */
-  suffix?: string;
+  suffix?: string | undefined;
 };
 
 /**

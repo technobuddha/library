@@ -68,9 +68,9 @@ const TOP_LEVEL_RESERVED_WORDS = new Set(['await']);
 
 type IsJsReservedWordOptions = {
   /** Include words reserved only in strict mode. */
-  strict?: boolean;
+  strict?: boolean | undefined;
   /** Include words reserved only in top-level module or async contexts. */
-  top?: boolean;
+  top?: boolean | undefined;
 };
 
 /**

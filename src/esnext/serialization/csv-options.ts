@@ -5,13 +5,13 @@
  */
 export type CSVOptions = {
   /** The delimiter to separate values (default: ',') */
-  delimiter?: string;
+  delimiter?: string | undefined;
   /** The quote character to wrap/unwrap values containing special characters (default: '"') */
-  quote?: string;
+  quote?: string | undefined;
   /** The line separator to separate rows (default: '\\r\\n'). Must be either '\\n' or '\\r\\n'. */
-  lineSeparator?: '\n' | '\r\n';
+  lineSeparator?: '\n' | '\r\n' | undefined;
   /** Whether to include/expect headers in the CSV (default: true) */
-  hasHeaders?: boolean;
+  hasHeaders?: boolean | undefined;
   /** The character used to indicate a comment line */
-  comment?: string;
+  comment?: string | undefined;
 };

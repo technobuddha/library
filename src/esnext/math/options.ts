@@ -5,7 +5,7 @@
  */
 export type Precision = {
   /** The number of decimal places to consider when applying the ceiling. Defaults to 0. */
-  precision?: number;
+  precision?: number | undefined;
 };
 
 /**
@@ -15,5 +15,5 @@ export type Precision = {
  */
 export type Tolerance = {
   /** A small value to add to the input before applying the floor, useful for floating-point tolerance. Defaults to 0. */
-  tolerance?: number;
+  tolerance?: number | undefined;
 };

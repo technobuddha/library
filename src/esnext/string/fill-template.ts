@@ -11,9 +11,9 @@ import { toString } from './to-string.ts';
  */
 export type FillTemplateOptions = {
   /** The opening field delimiter */
-  open?: string;
+  open?: string | undefined;
   /** The closing field delimiter */
-  close?: string;
+  close?: string | undefined;
 };
 
 /**

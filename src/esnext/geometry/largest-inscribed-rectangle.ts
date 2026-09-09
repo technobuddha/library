@@ -33,7 +33,7 @@ export type LargestInscribedRectangleOptions = {
    * If false, considers rectangles of any aspect ratio.
    * @defaultValue false
    */
-  squareOnly?: boolean;
+  squareOnly?: boolean | undefined;
 };
 
 /**

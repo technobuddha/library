@@ -21,27 +21,27 @@ export type KeepOptions = {
   /**
    * If true, all digit (0-9) characters will be kept in the string.
    */
-  digits?: boolean;
+  digits?: boolean | undefined;
 
   /**
    * If true, all basic Latin alphabetic (A-Z, a-z) characters will be kept.
    */
-  alphabetic?: boolean;
+  alphabetic?: boolean | undefined;
 
   /**
    * If true, all Unicode letter characters p-L will be kept.
    */
-  letters?: boolean;
+  letters?: boolean | undefined;
 
   /**
    * If true, all whitespace characters s will be kept.
    */
-  whitespace?: boolean;
+  whitespace?: boolean | undefined;
 
   /**
    * If true, all Unicode punctuation characters p-P will be kept.
    */
-  punctuation?: boolean;
+  punctuation?: boolean | undefined;
 };
 
 /**
