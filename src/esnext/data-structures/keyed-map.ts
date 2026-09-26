@@ -1,4 +1,4 @@
-interface ReadonlyKeyedMap<K, V> {
+export interface ReadonlyKeyedMap<K, V> {
   readonly size: number;
   get(key: K): V | undefined;
   has(value: K): boolean;
@@ -8,7 +8,7 @@ interface ReadonlyKeyedMap<K, V> {
   [Symbol.iterator](): MapIterator<[K, V]>;
 }
 
-interface KeyedMap<K, V> extends ReadonlyKeyedMap<K, V> {
+export interface KeyedMap<K, V> extends ReadonlyKeyedMap<K, V> {
   set(key: K, value: V): KeyedMap<K, V>;
   clear(): void;
   delete(key: K): boolean;

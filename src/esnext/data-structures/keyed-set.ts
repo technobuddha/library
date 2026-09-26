@@ -1,6 +1,6 @@
 import { isIterable } from '../iteration/is-iterable.ts';
 
-interface ReadonlyKeyedSet<T> {
+export interface ReadonlyKeyedSet<T> {
   readonly size: number;
   has(value: T): boolean;
   some(predicate: (value: T) => boolean): boolean;
@@ -14,7 +14,7 @@ interface ReadonlyKeyedSet<T> {
   [Symbol.iterator](): SetIterator<T>;
 }
 
-interface KeyedSet<T> extends ReadonlyKeyedSet<T> {
+export interface KeyedSet<T> extends ReadonlyKeyedSet<T> {
   add(value: T): KeyedSet<T>;
   clear(): void;
   delete(value: T): boolean;
