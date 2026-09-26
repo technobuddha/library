@@ -1,6 +1,6 @@
 import { type Cartesian } from '../../geometry/geometry.ts';
 
-import { SerializedSet } from '../serializaed-set.ts';
+import { SerializedSet } from '../serialized-set.ts';
 
 class CartesianSet extends SerializedSet<Cartesian> {}
 
