@@ -1,118 +1,133 @@
-export interface ReadonlyKeyedMap<K, V> {
-  readonly size: number;
-  get(key: K): V | undefined;
-  has(value: K): boolean;
-  values(): MapIterator<V>;
-  keys(): MapIterator<K>;
-  entries(): MapIterator<[K, V]>;
-  [Symbol.iterator](): MapIterator<[K, V]>;
-}
-
-export interface KeyedMap<K, V> extends ReadonlyKeyedMap<K, V> {
-  set(key: K, value: V): KeyedMap<K, V>;
-  clear(): void;
-  delete(key: K): boolean;
-}
-
 /**
- * Creates a keyed Map implementation that compares keys by a derived string instead of object identity.
+ * A Map-like base class that compares keys by a derived string representation.
  *
- * This is useful when map keys are objects or other complex values whose equality should be based on
- * a stable serialized form rather than their in-memory reference.
- * @typeParam K - The key type for the map.
- * @typeParam V - The value type stored for each key.
- * @param encodeKey - Converts a key into a unique string used for hashing and lookup.
- * @param decodeKey - Reconstructs a key from its serialized form when iterating.
- * @returns A tuple containing the mutable map class and the readonly map class.
+ * Extend this class and implement {@link KeyedMap.encodeKey} and {@link KeyedMap.decodeKey}
+ * to control how keys are serialized for lookup and reconstructed for iteration.
+ * @typeParam K - The logical key type.
+ * @typeParam V - The value type.
  * @example
  * ```typescript
  * type Cartesian = { x: number; y: number };
  *
- * const [CartesianMap, ReadonlyCartesianMap] = keyedMap<Cartesian>(
- *   ({ x, y }) => `${x},${y}`,
- *   (key) => {
- *     const [x, y] = key.split(',').map(Number);
- *     return { x, y };
- *   },
- * );
+ * class CartesianMap<T = unknown> extends KeyedMap<Cartesian, T> {
+ *   protected encodeKey(value: Cartesian): string {
+ *     return `${value.x}:${value.y}`;
+ *   }
  *
- * const map = new CartesianMap<string>([[{ x: 1, y: 2 }, 'first']]);
- * map.get({ x: 1, y: 2 }); // 'first'
+ *   protected decodeKey(value: string): Cartesian {
+ *     const [x, y] = value.split(':').map(Number);
+ *     return { x, y };
+ *   }
+ * }
+ *
+ * const map = new CartesianMap<string>([[{ x: 1, y: 2 }, 'value']]);
+ * map.get({ x: 1, y: 2 }); // 'value'
  * ```
  * @group Data Structures
  * @category Map
  */
-export function keyedMap<K>(
-  encodeKey: (value: K) => string,
-  decodeKey: (value: string) => K,
-): [
-  new <T>(...inits: Iterable<[K, T]>[]) => KeyedMap<K, T>,
-  new <T>(...inits: Iterable<[K, T]>[]) => ReadonlyKeyedMap<K, T>,
-] {
-  class RO<T> implements ReadonlyKeyedMap<K, T> {
-    protected readonly keyedMap: Map<string, T>;
+export abstract class KeyedMap<K = unknown, V = unknown> implements Iterable<[K, V]> {
+  protected readonly keyedMap: Map<string, V>;
 
-    public readonly [Symbol.toStringTag] = 'KeyedMap';
+  public readonly [Symbol.toStringTag] = 'KeyedMap';
 
-    public constructor(...inits: Iterable<[K, T]>[]) {
-      this.keyedMap = new Map<string, T>();
+  public constructor(...inits: Iterable<[K, V]>[]) {
+    this.keyedMap = new Map<string, V>();
 
-      for (const init of inits) {
-        for (const [key, value] of init) {
-          this.keyedMap.set(encodeKey(key), value);
-        }
+    for (const init of inits) {
+      for (const [key, value] of init) {
+        this.keyedMap.set(this.encodeKey(key), value);
       }
-    }
-
-    public get(key: K): T | undefined {
-      return this.keyedMap.get(encodeKey(key));
-    }
-
-    public has(key: K): boolean {
-      return this.keyedMap.has(encodeKey(key));
-    }
-
-    public get size(): number {
-      return this.keyedMap.size;
-    }
-
-    public *values(): Generator<T> {
-      for (const value of this.keyedMap.values()) {
-        yield value;
-      }
-    }
-
-    public *keys(): Generator<K> {
-      for (const key of this.keyedMap.keys()) {
-        yield decodeKey(key);
-      }
-    }
-
-    public *entries(): Generator<[K, T]> {
-      for (const [key, value] of this.keyedMap) {
-        yield [decodeKey(key), value];
-      }
-    }
-
-    public [Symbol.iterator](): Generator<[K, T]> {
-      return this.entries();
     }
   }
 
-  class RW<T> extends RO<T> implements KeyedMap<K, T> {
-    public set(key: K, value: T): this {
-      this.keyedMap.set(encodeKey(key), value);
-      return this;
-    }
+  protected abstract encodeKey(value: K): string;
+  protected abstract decodeKey(value: string): K;
 
-    public clear(): void {
-      this.keyedMap.clear();
-    }
+  public get(key: K): V | undefined {
+    return this.keyedMap.get(this.encodeKey(key));
+  }
 
-    public delete(key: K): boolean {
-      return this.keyedMap.delete(encodeKey(key));
+  /**
+   * Gets the value for a key, inserting and returning a default when absent.
+   * @param key - The logical key.
+   * @param defaultValue - The value to insert when the key does not exist.
+   * @returns The existing or inserted value.
+   */
+  public getOrInsert(key: K, defaultValue: V): V {
+    const encodedKey = this.encodeKey(key);
+    if (!this.keyedMap.has(encodedKey)) {
+      this.keyedMap.set(encodedKey, defaultValue);
+    }
+    return this.keyedMap.get(encodedKey)!;
+  }
+
+  /**
+   * Gets the value for a key, computing and inserting one when absent.
+   * @param key - The logical key.
+   * @param computeValue - Computes the value when the key does not exist.
+   * @returns The existing or computed value.
+   */
+  public getOrInsertComputed(key: K, computeValue: () => V): V {
+    const encodedKey = this.encodeKey(key);
+    if (!this.keyedMap.has(encodedKey)) {
+      this.keyedMap.set(encodedKey, computeValue());
+    }
+    return this.keyedMap.get(encodedKey)!;
+  }
+
+  public has(key: K): boolean {
+    return this.keyedMap.has(this.encodeKey(key));
+  }
+
+  public get size(): number {
+    return this.keyedMap.size;
+  }
+
+  public *values(): Generator<V> {
+    for (const value of this.keyedMap.values()) {
+      yield value;
     }
   }
 
-  return [RW, RO];
+  public *keys(): Generator<K> {
+    for (const key of this.keyedMap.keys()) {
+      yield this.decodeKey(key);
+    }
+  }
+
+  public *entries(): Generator<[K, V]> {
+    for (const [key, value] of this.keyedMap) {
+      yield [this.decodeKey(key), value];
+    }
+  }
+
+  public [Symbol.iterator](): Generator<[K, V]> {
+    return this.entries();
+  }
+  public set(key: K, value: V): this {
+    this.keyedMap.set(this.encodeKey(key), value);
+    return this;
+  }
+
+  public clear(): void {
+    this.keyedMap.clear();
+  }
+
+  public delete(key: K): boolean {
+    return this.keyedMap.delete(this.encodeKey(key));
+  }
 }
+
+/**
+ * A readonly view of a {@link KeyedMap} subtype.
+ *
+ * Mutating members (`set`, `clear`, `delete`, `getOrInsert`, and `getOrInsertComputed`) are omitted.
+ * @typeParam KM - A concrete {@link KeyedMap} subtype.
+ * @group Data Structures
+ * @category Map
+ */
+export type ReadonlyKeyedMap<KM extends KeyedMap> = Omit<
+  KM,
+  'set' | 'clear' | 'delete' | 'getOrInsert' | 'getOrInsertComputed'
+>;

@@ -1,17 +1,20 @@
-import { keyedSet } from '../keyed-set.ts';
+import { KeyedSet, type ReadonlyKeyedSet } from '../keyed-set.ts';
 
 type Cartesian = { x: number; y: number };
 
-describe('keyedSet', () => {
-  test('stores unique values by derived key', () => {
-    const [CartesianSet] = keyedSet<Cartesian>(
-      ({ x, y }) => `${x}:${y}`,
-      (key) => {
-        const [x, y] = key.split(':').map(Number);
-        return { x, y };
-      },
-    );
+class CartesianSet extends KeyedSet<Cartesian> {
+  protected encodeKey(value: Cartesian): string {
+    return `${value.x}:${value.y}`;
+  }
 
+  protected decodeKey(value: string): Cartesian {
+    const [x, y] = value.split(':').map(Number);
+    return { x, y };
+  }
+}
+
+describe('KeyedSet', () => {
+  test('stores unique values by derived key', () => {
     const set = new CartesianSet([
       { x: 1, y: 2 },
       { x: 3, y: 4 },
@@ -25,14 +28,6 @@ describe('keyedSet', () => {
   });
 
   test('supports add, delete, clear, and iteration', () => {
-    const [CartesianSet] = keyedSet<Cartesian>(
-      ({ x, y }) => `${x}:${y}`,
-      (key) => {
-        const [x, y] = key.split(':').map(Number);
-        return { x, y };
-      },
-    );
-
     const set = new CartesianSet();
     set.add({ x: 1, y: 2 });
     set.add({ x: 1, y: 2 });
@@ -49,14 +44,6 @@ describe('keyedSet', () => {
   });
 
   test('iterators decode values back to the original type', () => {
-    const [CartesianSet] = keyedSet<Cartesian>(
-      ({ x, y }) => `${x}:${y}`,
-      (key) => {
-        const [x, y] = key.split(':').map(Number);
-        return { x, y };
-      },
-    );
-
     const set = new CartesianSet([
       { x: 1, y: 2 },
       { x: 3, y: 4 },
@@ -83,14 +70,6 @@ describe('keyedSet', () => {
   });
 
   test('supports predicate helpers', () => {
-    const [CartesianSet] = keyedSet<Cartesian>(
-      ({ x, y }) => `${x}:${y}`,
-      (key) => {
-        const [x, y] = key.split(':').map(Number);
-        return { x, y };
-      },
-    );
-
     const set = new CartesianSet([
       { x: 1, y: 2 },
       { x: 3, y: 4 },
@@ -113,5 +92,13 @@ describe('keyedSet', () => {
       { x: 3, y: 4 },
       { x: 4, y: 5 },
     ]);
+  });
+
+  test('supports readonly type views', () => {
+    const set = new CartesianSet([{ x: 1, y: 2 }]);
+    const readonlySet: ReadonlyKeyedSet<CartesianSet> = set;
+
+    expect(readonlySet.has({ x: 1, y: 2 })).toBeTrue();
+    expect(readonlySet.size).toBe(1);
   });
 });
